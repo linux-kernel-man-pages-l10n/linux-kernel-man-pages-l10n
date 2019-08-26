@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
-"POT-Creation-Date: 2019-04-01 18:52+0300\n"
-"PO-Revision-Date: 2019-04-02 15:54+0000\n"
+"POT-Creation-Date: 2019-08-26 09:25+0300\n"
+"PO-Revision-Date: 2019-08-26 06:20+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Persian (http://www.transifex.com/kruvalig/man-pages/language/fa/)\n"
 "MIME-Version: 1.0\n"
@@ -4356,19 +4356,25 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/getgroups.2:74
+#: man-pages/man2/getgroups.2:69
 msgid ""
 "B<getgroups>()  returns the supplementary group IDs of the calling process "
 "in I<list>.  The argument I<size> should be set to the maximum number of "
 "items that can be stored in the buffer pointed to by I<list>.  If the "
 "calling process is a member of more than I<size> supplementary groups, then "
-"an error results.  It is unspecified whether the effective group ID of the "
-"calling process is included in the returned list.  (Thus, an application "
-"should also call B<getegid>(2)  and add or remove the resulting value.)"
+"an error results."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/getgroups.2:85
+#: man-pages/man2/getgroups.2:75
+msgid ""
+"It is unspecified whether the effective group ID of the calling process is "
+"included in the returned list.  (Thus, an application should also call "
+"B<getegid>(2)  and add or remove the resulting value.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/getgroups.2:86
 msgid ""
 "If I<size> is zero, I<list> is not modified, but the total number of "
 "supplementary group IDs for the process is returned.  This allows the caller"
@@ -4377,7 +4383,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/getgroups.2:97
+#: man-pages/man2/getgroups.2:98
 msgid ""
 "B<setgroups>()  sets the supplementary group IDs for the calling process.  "
 "Appropriate privileges are required (see the description of the B<EPERM> "
@@ -4387,98 +4393,98 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/getgroups.2:101
+#: man-pages/man2/getgroups.2:102
 #, no-wrap
 msgid "setgroups(0, NULL);\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/getgroups.2:110
+#: man-pages/man2/getgroups.2:111
 msgid ""
 "On success, B<getgroups>()  returns the number of supplementary group IDs.  "
 "On error, -1 is returned, and I<errno> is set appropriately."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/getgroups.2:117
+#: man-pages/man2/getgroups.2:118
 msgid ""
 "On success, B<setgroups>()  returns 0.  On error, -1 is returned, and "
 "I<errno> is set appropriately."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/getgroups.2:122
+#: man-pages/man2/getgroups.2:123
 msgid "I<list> has an invalid address."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/getgroups.2:125
+#: man-pages/man2/getgroups.2:126
 msgid "B<getgroups>()  can additionally fail with the following error:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/getgroups.2:129
+#: man-pages/man2/getgroups.2:130
 msgid ""
 "I<size> is less than the number of supplementary group IDs, but is not zero."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/getgroups.2:132
+#: man-pages/man2/getgroups.2:133
 msgid "B<setgroups>()  can additionally fail with the following errors:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/getgroups.2:138
+#: man-pages/man2/getgroups.2:139
 msgid ""
 "I<size> is greater than B<NGROUPS_MAX> (32 before Linux 2.6.4; 65536 since "
 "Linux 2.6.4)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/getgroups.2:138
+#: man-pages/man2/getgroups.2:139
 #, no-wrap
 msgid "B<ENOMEM>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/getgroups.2:141
+#: man-pages/man2/getgroups.2:142
 msgid "Out of memory."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/getgroups.2:147
+#: man-pages/man2/getgroups.2:148
 msgid ""
 "The calling process has insufficient privilege (the caller does not have the"
 " B<CAP_SETGID> capability in the user namespace in which it resides)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/getgroups.2:147
+#: man-pages/man2/getgroups.2:148
 #, no-wrap
 msgid "B<EPERM> (since Linux 3.19)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/getgroups.2:156
+#: man-pages/man2/getgroups.2:157
 msgid ""
 "The use of B<setgroups>()  is denied in this user namespace.  See the "
 "description of I</proc/[pid]/setgroups> in B<user_namespaces>(7)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/getgroups.2:159
+#: man-pages/man2/getgroups.2:160
 msgid "B<getgroups>(): SVr4, 4.3BSD, POSIX.1-2001, POSIX.1-2008."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/getgroups.2:165
+#: man-pages/man2/getgroups.2:166
 msgid ""
 "B<setgroups>(): SVr4, 4.3BSD.  Since B<setgroups>()  requires privilege, it "
 "is not covered by POSIX.1."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/getgroups.2:177
+#: man-pages/man2/getgroups.2:178
 msgid ""
 "A process can have up to B<NGROUPS_MAX> supplementary group IDs in addition "
 "to the effective group ID.  The constant B<NGROUPS_MAX> is defined in "
@@ -4487,14 +4493,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/getgroups.2:180
+#: man-pages/man2/getgroups.2:181
 msgid ""
 "The maximum number of supplementary group IDs can be found at run time using"
 " B<sysconf>(3):"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/getgroups.2:185
+#: man-pages/man2/getgroups.2:186
 #, no-wrap
 msgid ""
 "long ngroups_max;\n"
@@ -4502,7 +4508,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/getgroups.2:194
+#: man-pages/man2/getgroups.2:195
 msgid ""
 "The maximum return value of B<getgroups>()  cannot be larger than one more "
 "than this value.  Since Linux 2.6.4, the maximum number of supplementary "
@@ -4511,7 +4517,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/getgroups.2:205
+#: man-pages/man2/getgroups.2:206
 msgid ""
 "The original Linux B<getgroups>()  system call supported only 16-bit group "
 "IDs.  Subsequently, Linux 2.4 added B<getgroups32>(), supporting 32-bit IDs."
@@ -4520,7 +4526,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/getgroups.2:219
+#: man-pages/man2/getgroups.2:220
 msgid ""
 "At the kernel level, user IDs and group IDs are a per-thread attribute.  "
 "However, POSIX requires that all threads in a process share the same "
@@ -4533,7 +4539,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/getgroups.2:226
+#: man-pages/man2/getgroups.2:227
 msgid ""
 "B<getgid>(2), B<setgid>(2), B<getgrouplist>(3), B<group_member>(3), "
 "B<initgroups>(3), B<capabilities>(7), B<credentials>(7)"
@@ -9563,8 +9569,8 @@ msgstr ""
 #: man-pages/man3/getauxval.3:222
 msgid ""
 "The primary consumer of the information in the auxiliary vector is the "
-"dynamic linker B<ld-linux.so>(8).  The auxiliary vector is a convenient and "
-"efficient shortcut that allows the kernel to communicate a certain set of "
+"dynamic linker, B<ld-linux.so>(8).  The auxiliary vector is a convenient and"
+" efficient shortcut that allows the kernel to communicate a certain set of "
 "standard information that the dynamic linker usually or always needs.  In "
 "some cases, the same information could be obtained by system calls, but "
 "using the auxiliary vector is cheaper."
@@ -12184,6 +12190,12 @@ msgstr ""
 msgid "GETUTENT"
 msgstr ""
 
+#. type: TH
+#: man-pages/man3/getutent.3:31
+#, no-wrap
+msgid "2019-08-02"
+msgstr ""
+
 #. type: Plain text
 #: man-pages/man3/getutent.3:35
 msgid ""
@@ -12583,7 +12595,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getutent.3:325
+#: man-pages/man3/getutent.3:326
 #, no-wrap
 msgid ""
 "#include E<lt>string.hE<gt>\n"
@@ -12591,10 +12603,11 @@ msgid ""
 "#include E<lt>pwd.hE<gt>\n"
 "#include E<lt>unistd.hE<gt>\n"
 "#include E<lt>utmp.hE<gt>\n"
+"#include E<lt>time.hE<gt>\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getutent.3:330
+#: man-pages/man3/getutent.3:331
 #, no-wrap
 msgid ""
 "int\n"
@@ -12604,13 +12617,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getutent.3:332
+#: man-pages/man3/getutent.3:333
 #, no-wrap
 msgid "    system(\"echo before adding entry:;who\");\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getutent.3:344
+#: man-pages/man3/getutent.3:345
 #, no-wrap
 msgid ""
 "    entry.ut_type = USER_PROCESS;\n"
@@ -12627,13 +12640,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getutent.3:346
+#: man-pages/man3/getutent.3:347
 #, no-wrap
 msgid "    system(\"echo after adding entry:;who\");\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getutent.3:353
+#: man-pages/man3/getutent.3:354
 #, no-wrap
 msgid ""
 "    entry.ut_type = DEAD_PROCESS;\n"
@@ -12645,13 +12658,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getutent.3:355
+#: man-pages/man3/getutent.3:356
 #, no-wrap
 msgid "    system(\"echo after removing entry:;who\");\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getutent.3:359
+#: man-pages/man3/getutent.3:360
 #, no-wrap
 msgid ""
 "    endutent();\n"
@@ -12660,7 +12673,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getutent.3:362
+#: man-pages/man3/getutent.3:363
 msgid "B<getutmp>(3), B<utmp>(5)"
 msgstr ""
 
@@ -12951,8 +12964,8 @@ msgid ""
 "B<sigsetjmp>(3)/B<siglongjmp>(3)  pair.  The present mechanism gives much "
 "more control.  On the other hand, there is no easy way to detect whether a "
 "return from B<getcontext>()  is from the first call, or via a "
-"B<setcontext>()  call.  The user has to invent her own bookkeeping device, "
-"and a register variable won't do since registers are restored."
+"B<setcontext>()  call.  The user has to invent their own bookkeeping device,"
+" and a register variable won't do since registers are restored."
 msgstr ""
 
 #. type: Plain text
@@ -18797,7 +18810,7 @@ msgstr ""
 #. type: Plain text
 #: man-pages/man3/getpt.3:25
 #, no-wrap
-msgid "open(/dev/ptmx, O_RDWR | O_NOCTTY);\n"
+msgid "open(\"/dev/ptmx\", O_RDWR | O_NOCTTY);\n"
 msgstr ""
 
 #. type: Plain text

@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
-"POT-Creation-Date: 2017-09-05 08:20+0300\n"
-"PO-Revision-Date: 2019-04-02 15:55+0000\n"
+"POT-Creation-Date: 2019-08-26 09:26+0300\n"
+"PO-Revision-Date: 2019-08-26 06:21+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Bengali (India) (http://www.transifex.com/kruvalig/man-pages/language/bn_IN/)\n"
 "MIME-Version: 1.0\n"
@@ -2499,7 +2499,7 @@ msgstr ""
 #. type: TH
 #: man-pages/man7/namespaces.7:27
 #, no-wrap
-msgid "2019-03-06"
+msgid "2019-08-02"
 msgstr ""
 
 #. type: Plain text
@@ -3163,7 +3163,7 @@ msgstr ""
 #: man-pages/man7/namespaces.7:344
 msgid ""
 "IPC namespaces isolate certain IPC resources, namely, System V IPC objects "
-"(see B<svipc>(7))  and (since Linux 2.6.30)  POSIX message queues (see "
+"(see B<sysvipc>(7))  and (since Linux 2.6.30)  POSIX message queues (see "
 "B<mq_overview>(7)).  The common characteristic of these IPC mechanisms is "
 "that IPC objects are identified by mechanisms other than filesystem "
 "pathnames."
@@ -3281,20 +3281,29 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:425
+#: man-pages/man7/namespaces.7:430
+msgid ""
+"When a process creates a new UTS namespace using B<clone>(2)  or "
+"B<unshare>(2)  with the B<CLONE_NEWUTS> flag, the hostname and domain of the"
+" new UTS namespace are copied from the corresponding values in the caller's "
+"UTS namespace."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:435
 msgid ""
 "Use of UTS namespaces requires a kernel that is configured with the "
 "B<CONFIG_UTS_NS> option."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/namespaces.7:425
+#: man-pages/man7/namespaces.7:435
 #, no-wrap
 msgid "Namespace lifetime"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:432
+#: man-pages/man7/namespaces.7:442
 msgid ""
 "Absent any other factors, a namespace is automatically torn down when the "
 "last process in the namespace terminates or leaves the namespace.  However, "
@@ -3304,52 +3313,52 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:436
+#: man-pages/man7/namespaces.7:446
 msgid ""
 "An open file descriptor or a bind mount exists for the corresponding "
 "I</proc/[pid]/ns/*> file."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:439
+#: man-pages/man7/namespaces.7:449
 msgid ""
 "The namespace is hierarchical (i.e., a PID or user namespace), and has a "
 "child namespace."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:441
+#: man-pages/man7/namespaces.7:451
 msgid "It is a user namespace that owns one or more nonuser namespaces."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:446
+#: man-pages/man7/namespaces.7:456
 msgid ""
 "It is a PID namespace, and there is a process that refers to the namespace "
 "via a I</proc/[pid]/ns/pid_for_children> symbolic link."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:452
+#: man-pages/man7/namespaces.7:462
 msgid ""
 "It is an IPC namespace, and a corresponding mount of an I<mqueue> filesystem"
 " (see B<mq_overview>(7))  refers to this namespace."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:456
+#: man-pages/man7/namespaces.7:466
 msgid ""
 "It is a PID namespace, and a corresponding mount of a B<proc>(5)  filesystem"
 " refers to this namespace."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:461
+#: man-pages/man7/namespaces.7:471
 msgid "See B<clone>(2)  and B<user_namespaces>(7)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:479
+#: man-pages/man7/namespaces.7:489
 msgid ""
 "B<nsenter>(1), B<readlink>(1), B<unshare>(1), B<clone>(2), B<ioctl_ns>(2), "
 "B<setns>(2), B<unshare>(2), B<proc>(5), B<capabilities>(7), "
@@ -3667,6 +3676,12 @@ msgstr ""
 #: man-pages/man2/nfsservctl.2:5
 #, no-wrap
 msgid "NFSSERVCTL"
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/nfsservctl.2:5
+#, no-wrap
+msgid "2019-03-06"
 msgstr ""
 
 #. type: Plain text

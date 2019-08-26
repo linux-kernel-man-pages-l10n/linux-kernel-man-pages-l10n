@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
-"POT-Creation-Date: 2017-09-05 08:20+0300\n"
-"PO-Revision-Date: 2019-04-02 15:54+0000\n"
+"POT-Creation-Date: 2019-08-26 09:25+0300\n"
+"PO-Revision-Date: 2019-08-26 06:21+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Vietnamese (Viet Nam) (http://www.transifex.com/kruvalig/man-pages/language/vi_VN/)\n"
 "MIME-Version: 1.0\n"
@@ -944,7 +944,7 @@ msgstr ""
 msgid ""
 "One types commands to the I<shell>, the command interpreter.  It is not "
 "built-in, but is just a program and you can change your shell.  Everybody "
-"has her own favorite one.  The standard one is called I<sh>.  See also "
+"has their own favorite one.  The standard one is called I<sh>.  See also "
 "B<ash>(1), B<bash>(1), B<chsh>(1), B<csh>(1), B<dash>(1), B<ksh>(1), "
 "B<zsh>(1)."
 msgstr ""
@@ -5644,6 +5644,12 @@ msgstr ""
 #: man-pages/man7/inode.7:26
 #, no-wrap
 msgid "INODE"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/inode.7:26
+#, no-wrap
+msgid "2019-05-09"
 msgstr ""
 
 #. type: Plain text
@@ -17559,7 +17565,7 @@ msgstr ""
 #: man-pages/man2/io_getevents.2:45
 msgid ""
 "The specified time will be rounded up to the system clock granularity and is"
-" guaranteed not to expire\tearly."
+" guaranteed not to expire early."
 msgstr ""
 
 #. type: Plain text
@@ -20675,6 +20681,12 @@ msgstr ""
 msgid "B<inotify_add_watch>(2), B<inotify_init>(2), B<inotify>(7)"
 msgstr ""
 
+#. type: TH
+#: man-pages/man2/intro.2:29
+#, no-wrap
+msgid "2019-08-02"
+msgstr ""
+
 #. type: Plain text
 #: man-pages/man2/intro.2:32
 msgid "intro - introduction to system calls"
@@ -20794,7 +20806,7 @@ msgid ""
 "B<capabilities>(7), B<credentials>(7), B<feature_test_macros>(7), "
 "B<mq_overview>(7), B<path_resolution>(7), B<pipe>(7), B<pty>(7), "
 "B<sem_overview>(7), B<shm_overview>(7), B<signal>(7), B<socket>(7), "
-"B<standards>(7), B<svipc>(7), B<symlink>(7), B<time>(7)"
+"B<standards>(7), B<symlink>(7), B<sysvipc>(7), B<time>(7)"
 msgstr ""
 
 #. type: TH
@@ -22433,7 +22445,7 @@ msgstr ""
 msgid ""
 "B<msgctl>(2), B<msgget>(2), B<msgrcv>(2), B<msgsnd>(2), B<semctl>(2), "
 "B<semget>(2), B<semop>(2), B<semtimedop>(2), B<shmat>(2), B<shmctl>(2), "
-"B<shmdt>(2), B<shmget>(2), B<svipc>(7)"
+"B<shmdt>(2), B<shmget>(2), B<sysvipc>(7)"
 msgstr ""
 
 #. type: TH

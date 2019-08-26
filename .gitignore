@@ -1,0 +1,4 @@
+*.swp
+*.po~
+man-pages/
+po/

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-10-19 18:56+0300\n"
+"POT-Creation-Date: 2019-08-26 09:25+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2062,7 +2062,7 @@ msgstr ""
 #. type: TH
 #: man-pages/man2/execve.2:37
 #, no-wrap
-msgid "2018-04-30"
+msgid "2019-05-09"
 msgstr ""
 
 #. type: Plain text
@@ -2099,7 +2099,7 @@ msgstr ""
 #. type: Plain text
 #: man-pages/man2/execve.2:59 man-pages/man2/execve.2:305
 #, no-wrap
-msgid "B<#!> I<interpreter >[optional-arg]\n"
+msgid "B<#!>I<interpreter >[optional-arg]\n"
 msgstr ""
 
 #. type: Plain text
@@ -2418,7 +2418,7 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/execve.2:298 man-pages/man2/execve.2:611
+#: man-pages/man2/execve.2:298 man-pages/man2/execve.2:628
 #, no-wrap
 msgid "Interpreter scripts"
 msgstr ""
@@ -2431,28 +2431,38 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:318
-msgid ""
-"The I<interpreter> must be a valid pathname for an executable file.  If the "
-"I<pathname> argument of B<execve>()  specifies an interpreter script, then "
-"I<interpreter> will be invoked with the following arguments:"
+#: man-pages/man2/execve.2:311
+msgid "The I<interpreter> must be a valid pathname for an executable file."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:322
+#: man-pages/man2/execve.2:319
+msgid ""
+"If the I<pathname> argument of B<execve>()  specifies an interpreter script, "
+"then I<interpreter> will be invoked with the following arguments:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/execve.2:323
 #, no-wrap
 msgid "I<interpreter> [optional-arg] I<pathname> arg...\n"
 msgstr ""
 
+#.  See the P - preserve-argv[0] option.
+#.  Documentation/admin-guide/binfmt-misc.rst
+#.  https://www.kernel.org/doc/html/latest/admin-guide/binfmt-misc.html
 #. type: Plain text
-#: man-pages/man2/execve.2:333
+#: man-pages/man2/execve.2:346
 msgid ""
-"where I<arg...> is the series of words pointed to by the I<argv> argument of "
-"B<execve>(), starting at I<argv>[1]."
+"where I<pathname> is the absolute pathname of the file specified as the "
+"first argument of B<execve>(), and I<arg...> is the series of words pointed "
+"to by the I<argv> argument of B<execve>(), starting at I<argv>[1].  Note "
+"that there is no way to get the I<argv[0]> that was passed to the "
+"B<execve>()  call."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:338
+#: man-pages/man2/execve.2:351
 msgid ""
 "For portable use, I<optional-arg> should either be absent, or be specified "
 "as a single word (i.e., it should not contain white space); see NOTES below."
@@ -2460,7 +2470,7 @@ msgstr ""
 
 #.  commit bf2a9a39639b8b51377905397a5005f444e9a892
 #. type: Plain text
-#: man-pages/man2/execve.2:345
+#: man-pages/man2/execve.2:358
 msgid ""
 "Since Linux 2.6.28, the kernel permits the interpreter of a script to itself "
 "be a script.  This permission is recursive, up to a limit of four "
@@ -2469,13 +2479,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/execve.2:345
+#: man-pages/man2/execve.2:358
 #, no-wrap
 msgid "Limits on size of arguments and environment"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:358
+#: man-pages/man2/execve.2:371
 msgid ""
 "Most UNIX implementations impose some limit on the total size of the command-"
 "line argument (I<argv>)  and environment (I<envp>)  strings that may be "
@@ -2485,7 +2495,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:365
+#: man-pages/man2/execve.2:378
 msgid ""
 "On Linux prior to kernel 2.6.23, the memory used to store the environment "
 "and argument strings was limited to 32 pages (defined by the kernel constant "
@@ -2502,7 +2512,7 @@ msgstr ""
 #.  Ollie: That doesn't include the lists of pointers, though,
 #.  so the actual usage is a bit higher (1 pointer per argument).
 #. type: Plain text
-#: man-pages/man2/execve.2:401
+#: man-pages/man2/execve.2:418
 msgid ""
 "On kernel 2.6.23 and later, most architectures support a size limit derived "
 "from the soft B<RLIMIT_STACK> resource limit (see B<getrlimit>(2))  that is "
@@ -2511,74 +2521,76 @@ msgid ""
 "effect before kernel 2.6.23.)  This change allows programs to have a much "
 "larger argument and/or environment list.  For these architectures, the total "
 "size is limited to 1/4 of the allowed stack size.  (Imposing the 1/4-limit "
-"ensures that the new program always has some stack space.)  Since Linux "
-"2.6.25, the kernel places a floor of 32 pages on this size limit, so that, "
-"even when B<RLIMIT_STACK> is set very low, applications are guaranteed to "
-"have at least as much argument and environment space as was provided by "
-"Linux 2.6.23 and earlier.  (This guarantee was not provided in Linux 2.6.23 "
-"and 2.6.24.)  Additionally, the limit per string is 32 pages (the kernel "
-"constant B<MAX_ARG_STRLEN>), and the maximum number of strings is 0x7FFFFFFF."
+"ensures that the new program always has some stack space.)  Additionally, "
+"the total size is limited to 3/4 of the value of the kernel constant "
+"B<_STK_LIM> (8 Mibibytes).  Since Linux 2.6.25, the kernel also places a "
+"floor of 32 pages on this size limit, so that, even when B<RLIMIT_STACK> is "
+"set very low, applications are guaranteed to have at least as much argument "
+"and environment space as was provided by Linux 2.6.23 and earlier.  (This "
+"guarantee was not provided in Linux 2.6.23 and 2.6.24.)  Additionally, the "
+"limit per string is 32 pages (the kernel constant B<MAX_ARG_STRLEN>), and "
+"the maximum number of strings is 0x7FFFFFFF."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:407
+#: man-pages/man2/execve.2:424
 msgid ""
 "On success, B<execve>()  does not return, on error -1 is returned, and "
 "I<errno> is set appropriately."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/execve.2:408
+#: man-pages/man2/execve.2:425
 #, no-wrap
 msgid "B<E2BIG>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:415
+#: man-pages/man2/execve.2:432
 msgid ""
 "The total number of bytes in the environment (I<envp>)  and argument list "
 "(I<argv>)  is too large."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/execve.2:415 man-pages/man2/execve.2:422
-#: man-pages/man2/execve.2:425 man-pages/man2/execve.2:428
+#: man-pages/man2/execve.2:432 man-pages/man2/execve.2:439
+#: man-pages/man2/execve.2:442 man-pages/man2/execve.2:445
 #, no-wrap
 msgid "B<EACCES>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:422
+#: man-pages/man2/execve.2:439
 msgid ""
 "Search permission is denied on a component of the path prefix of I<pathname> "
 "or the name of a script interpreter.  (See also B<path_resolution>(7).)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:425
+#: man-pages/man2/execve.2:442
 msgid "The file or a script interpreter is not a regular file."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:428
+#: man-pages/man2/execve.2:445
 msgid ""
 "Execute permission is denied for the file or a script or ELF interpreter."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:432
+#: man-pages/man2/execve.2:449
 msgid "The filesystem is mounted I<noexec>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/execve.2:432
+#: man-pages/man2/execve.2:449
 #, no-wrap
 msgid "B<EAGAIN> (since Linux 3.1)"
 msgstr ""
 
 #.  commit 72fa59970f8698023045ab0713d66f3f4f96945c
 #. type: Plain text
-#: man-pages/man2/execve.2:442
+#: man-pages/man2/execve.2:459
 msgid ""
 "Having changed its real UID using one of the B<set*uid>()  calls, the caller "
 "was\\(emand is now still\\(emabove its B<RLIMIT_NPROC> resource limit (see "
@@ -2586,60 +2598,60 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/execve.2:442
+#: man-pages/man2/execve.2:459
 #, no-wrap
 msgid "B<EFAULT>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:450
+#: man-pages/man2/execve.2:467
 msgid ""
 "I<pathname> or one of the pointers in the vectors I<argv> or I<envp> points "
 "outside your accessible address space."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:454
+#: man-pages/man2/execve.2:471
 msgid ""
 "An ELF executable had more than one PT_INTERP segment (i.e., tried to name "
 "more than one interpreter)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/execve.2:454
+#: man-pages/man2/execve.2:471
 #, no-wrap
 msgid "B<EIO>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:457
+#: man-pages/man2/execve.2:474
 msgid "An I/O error occurred."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/execve.2:457
+#: man-pages/man2/execve.2:474
 #, no-wrap
 msgid "B<EISDIR>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:460
+#: man-pages/man2/execve.2:477
 msgid "An ELF interpreter was a directory."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/execve.2:460
+#: man-pages/man2/execve.2:477
 #, no-wrap
 msgid "B<ELIBBAD>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:463
+#: man-pages/man2/execve.2:480
 msgid "An ELF interpreter was not in a recognized format."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:468
+#: man-pages/man2/execve.2:485
 msgid ""
 "Too many symbolic links were encountered in resolving I<pathname> or the "
 "name of a script or ELF interpreter."
@@ -2647,7 +2659,7 @@ msgstr ""
 
 #.  commit d740269867021faf4ce38a449353d2b986c34a67
 #. type: Plain text
-#: man-pages/man2/execve.2:476
+#: man-pages/man2/execve.2:493
 msgid ""
 "The maximum recursion limit was reached during recursive script "
 "interpretation (see \"Interpreter scripts\", above).  Before Linux 3.8, the "
@@ -2655,72 +2667,72 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/execve.2:479
+#: man-pages/man2/execve.2:496
 #, no-wrap
 msgid "B<ENAMETOOLONG>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:483
+#: man-pages/man2/execve.2:500
 msgid "I<pathname> is too long."
 msgstr ""
 
 #.  FIXME but see http://sourceware.org/bugzilla/show_bug.cgi?id=12241
 #. type: Plain text
-#: man-pages/man2/execve.2:493
+#: man-pages/man2/execve.2:510
 msgid ""
 "The file I<pathname> or a script or ELF interpreter does not exist, or a "
 "shared library needed for the file or interpreter cannot be found."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/execve.2:493
+#: man-pages/man2/execve.2:510
 #, no-wrap
 msgid "B<ENOEXEC>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:498
+#: man-pages/man2/execve.2:515
 msgid ""
 "An executable is not in a recognized format, is for the wrong architecture, "
 "or has some other format error that means it cannot be executed."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:501
+#: man-pages/man2/execve.2:518
 msgid "Insufficient kernel memory was available."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:506
+#: man-pages/man2/execve.2:523
 msgid ""
 "A component of the path prefix of I<pathname> or a script or ELF interpreter "
 "is not a directory."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/execve.2:506 man-pages/man2/execve.2:512
-#: man-pages/man2/execve.2:516
+#: man-pages/man2/execve.2:523 man-pages/man2/execve.2:529
+#: man-pages/man2/execve.2:533
 #, no-wrap
 msgid "B<EPERM>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:512
+#: man-pages/man2/execve.2:529
 msgid ""
 "The filesystem is mounted I<nosuid>, the user is not the superuser, and the "
 "file has the set-user-ID or set-group-ID bit set."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:516
+#: man-pages/man2/execve.2:533
 msgid ""
 "The process is being traced, the user is not the superuser and the file has "
 "the set-user-ID or set-group-ID bit set."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:522
+#: man-pages/man2/execve.2:539
 msgid ""
 "A \"capability-dumb\" applications would not obtain the full set of "
 "permitted capabilities granted by the executable file.  See "
@@ -2728,13 +2740,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/execve.2:522
+#: man-pages/man2/execve.2:539
 #, no-wrap
 msgid "B<ETXTBSY>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:525
+#: man-pages/man2/execve.2:542
 msgid "The specified executable was open for writing by one or more processes."
 msgstr ""
 
@@ -2743,14 +2755,14 @@ msgstr ""
 #.  document ETXTBSY, EPERM, EFAULT, ELOOP, EIO, ENFILE, EMFILE, EINVAL,
 #.  EISDIR or ELIBBAD error conditions.
 #. type: Plain text
-#: man-pages/man2/execve.2:533
+#: man-pages/man2/execve.2:550
 msgid ""
 "POSIX.1-2001, POSIX.1-2008, SVr4, 4.3BSD.  POSIX does not document the #! "
 "behavior, but it exists (with some variations) on other UNIX systems."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:549
+#: man-pages/man2/execve.2:566
 msgid ""
 "One sometimes sees B<execve>()  (and the related functions described in "
 "B<exec>(3))  described as \"executing a I<new> process\" (or similar).  This "
@@ -2761,16 +2773,16 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:552
+#: man-pages/man2/execve.2:569
 msgid "Set-user-ID and set-group-ID processes can not be B<ptrace>(2)d."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:563
+#: man-pages/man2/execve.2:580
 msgid ""
 "The result of mounting a filesystem I<nosuid> varies across Linux kernel "
 "versions: some will refuse execution of set-user-ID and set-group-ID "
-"executables when this would give the user powers she did not have already "
+"executables when this would give the user powers they did not have already "
 "(and return B<EPERM>), some will just ignore the set-user-ID and set-group-"
 "ID bits and B<exec>()  successfully."
 msgstr ""
@@ -2780,7 +2792,7 @@ msgstr ""
 #.  Bug filed 30 Apr 2007: http://bugzilla.kernel.org/show_bug.cgi?id=8408
 #.  Bug rejected (because fix would constitute an ABI change).
 #. type: Plain text
-#: man-pages/man2/execve.2:585
+#: man-pages/man2/execve.2:602
 msgid ""
 "On Linux, I<argv> and I<envp> can be specified as NULL.  In both cases, this "
 "has the same effect as specifying the argument as a pointer to a list "
@@ -2791,7 +2803,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:596
+#: man-pages/man2/execve.2:613
 msgid ""
 "POSIX.1 says that values returned by B<sysconf>(3)  should be invariant over "
 "the lifetime of a process.  However, since Linux 2.6.23, if the "
@@ -2801,7 +2813,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:611
+#: man-pages/man2/execve.2:628
 msgid ""
 "In most cases where B<execve>()  fails, control returns to the original "
 "executable image, and the caller of B<execve>()  can then handle the error.  "
@@ -2811,17 +2823,20 @@ msgid ""
 "cases, the kernel kills the process with a B<SIGKILL> signal."
 msgstr ""
 
+#.  commit 6eb3c3d0a52dca337e327ae8868ca1f44a712e02
 #. type: Plain text
-#: man-pages/man2/execve.2:614
+#: man-pages/man2/execve.2:636
 msgid ""
-"A maximum line length of 127 characters is allowed for the first line in an "
-"interpreter script."
+"The kernel imposes a maximum length on the text that follows the \"#!\" "
+"characters at the start of a script; characters beyond the limit are "
+"ignored.  Before Linux 5.1, the limit is 127 characters.  Since Linux 5.1, "
+"the limit is 255 characters."
 msgstr ""
 
 #.  e.g., Solaris 8
 #.  e.g., FreeBSD before 6.0, but not FreeBSD 6.0 onward
 #. type: Plain text
-#: man-pages/man2/execve.2:633
+#: man-pages/man2/execve.2:655
 msgid ""
 "The semantics of the I<optional-arg> argument of an interpreter script vary "
 "across implementations.  On Linux, the entire string following the "
@@ -2843,18 +2858,20 @@ msgstr ""
 #.  that could be exploited for denial of service by a suitably crafted
 #.  ELF binary. There are no known problems with 2.0.34 or 2.2.15.
 #. type: Plain text
-#: man-pages/man2/execve.2:644
-msgid "Linux ignores the set-user-ID and set-group-ID bits on scripts."
+#: man-pages/man2/execve.2:667
+msgid ""
+"Linux (like most other modern UNIX systems)  ignores the set-user-ID and set-"
+"group-ID bits on scripts."
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/execve.2:644
+#: man-pages/man2/execve.2:667
 #, no-wrap
 msgid "execve() and EAGAIN"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:650
+#: man-pages/man2/execve.2:673
 msgid ""
 "A more detailed explanation of the B<EAGAIN> error that can occur (since "
 "Linux 3.1) when calling B<execve>()  is as follows."
@@ -2862,7 +2879,7 @@ msgstr ""
 
 #.  commit 909cc4ae86f3380152a18e2a3c44523893ee11c4
 #. type: Plain text
-#: man-pages/man2/execve.2:672
+#: man-pages/man2/execve.2:695
 msgid ""
 "The B<EAGAIN> error can occur when a I<preceding> call to B<setuid>(2), "
 "B<setreuid>(2), or B<setresuid>(2)  caused the real user ID of the process "
@@ -2874,7 +2891,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:703
+#: man-pages/man2/execve.2:726
 msgid ""
 "Since Linux 3.1, the scenario just described no longer causes the "
 "B<set*uid>()  call to fail, because it too often led to security holes where "
@@ -2891,7 +2908,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:719
+#: man-pages/man2/execve.2:742
 msgid ""
 "If the resource limit was not still exceeded at the time of the B<execve>()  "
 "call (because other processes belonging to this real UID terminated between "
@@ -2902,7 +2919,7 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/execve.2:719
+#: man-pages/man2/execve.2:742
 #, no-wrap
 msgid "Historical"
 msgstr ""
@@ -2917,7 +2934,7 @@ msgstr ""
 #.  that could be exploited for denial of service by a suitably crafted
 #.  ELF binary. There are no known problems with 2.0.34 or 2.2.15.
 #. type: Plain text
-#: man-pages/man2/execve.2:739
+#: man-pages/man2/execve.2:762
 msgid ""
 "With UNIX\\ V6, the argument list of an B<exec>()  call was ended by 0, "
 "while the argument list of I<main> was ended by -1.  Thus, this argument "
@@ -2926,20 +2943,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:742
+#: man-pages/man2/execve.2:765
 msgid ""
 "The following program is designed to be execed by the second program below.  "
 "It just echoes its command-line arguments, one per line."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:746
+#: man-pages/man2/execve.2:769
 #, no-wrap
 msgid "/* myecho.c */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:749
+#: man-pages/man2/execve.2:772
 #, no-wrap
 msgid ""
 "#include E<lt>stdio.hE<gt>\n"
@@ -2947,7 +2964,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:754
+#: man-pages/man2/execve.2:777
 #, no-wrap
 msgid ""
 "int\n"
@@ -2957,7 +2974,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:757
+#: man-pages/man2/execve.2:780
 #, no-wrap
 msgid ""
 "    for (j = 0; j E<lt> argc; j++)\n"
@@ -2965,7 +2982,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:760
+#: man-pages/man2/execve.2:783
 #, no-wrap
 msgid ""
 "    exit(EXIT_SUCCESS);\n"
@@ -2973,20 +2990,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:765
+#: man-pages/man2/execve.2:788
 msgid ""
 "This program can be used to exec the program named in its command-line "
 "argument:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:769
+#: man-pages/man2/execve.2:792
 #, no-wrap
 msgid "/* execve.c */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:773
+#: man-pages/man2/execve.2:796
 #, no-wrap
 msgid ""
 "#include E<lt>stdio.hE<gt>\n"
@@ -2995,7 +3012,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:779
+#: man-pages/man2/execve.2:802
 #, no-wrap
 msgid ""
 "int\n"
@@ -3006,7 +3023,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:784
+#: man-pages/man2/execve.2:807
 #, no-wrap
 msgid ""
 "    if (argc != 2) {\n"
@@ -3016,13 +3033,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:786
+#: man-pages/man2/execve.2:809
 #, no-wrap
 msgid "    newargv[0] = argv[1];\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:791
+#: man-pages/man2/execve.2:814
 #, no-wrap
 msgid ""
 "    execve(argv[1], newargv, newenviron);\n"
@@ -3032,12 +3049,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:795
+#: man-pages/man2/execve.2:818
 msgid "We can use the second program to exec the first as follows:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:804
+#: man-pages/man2/execve.2:827
 #, no-wrap
 msgid ""
 "$B< cc myecho.c -o myecho>\n"
@@ -3049,7 +3066,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:812
+#: man-pages/man2/execve.2:835
 msgid ""
 "We can also use these programs to demonstrate the use of a script "
 "interpreter.  To do this we create a script whose \"interpreter\" is our "
@@ -3057,7 +3074,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:819
+#: man-pages/man2/execve.2:842
 #, no-wrap
 msgid ""
 "$B< cat E<gt> script>\n"
@@ -3067,12 +3084,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:823
+#: man-pages/man2/execve.2:846
 msgid "We can then use our program to exec the script:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:832
+#: man-pages/man2/execve.2:855
 #, no-wrap
 msgid ""
 "$B< ./execve ./script>\n"
@@ -3084,7 +3101,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/execve.2:847
+#: man-pages/man2/execve.2:870
 msgid ""
 "B<chmod>(2), B<execveat>(2), B<fork>(2), B<get_robust_list>(2), "
 "B<ptrace>(2), B<exec>(3), B<fexecve>(3), B<getopt>(3), B<system>(3), "
@@ -5410,20 +5427,20 @@ msgid "A readable segment."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:793
+#: man-pages/man5/elf.5:792
 msgid ""
 "A text segment commonly has the flags B<PF_X> and B<PF_R>.  A data segment "
-"commonly has B<PF_X>, B<PF_W>, and B<PF_R>."
+"commonly has B<PF_W> and B<PF_R>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:793
+#: man-pages/man5/elf.5:792
 #, no-wrap
 msgid "I<p_align>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:812
+#: man-pages/man5/elf.5:811
 msgid ""
 "This member holds the value to which the segments are aligned in memory and "
 "in the file.  Loadable process segments must have congruent values for "
@@ -5434,13 +5451,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man5/elf.5:812
+#: man-pages/man5/elf.5:811
 #, no-wrap
 msgid "Section header (Shdr)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:829
+#: man-pages/man5/elf.5:828
 msgid ""
 "A file's section header table lets one locate all the file's sections.  The "
 "section header table is an array of I<Elf32_Shdr> or I<Elf64_Shdr> "
@@ -5451,7 +5468,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:845
+#: man-pages/man5/elf.5:844
 msgid ""
 "A section header table index is a subscript into this array.  Some section "
 "header table indices are reserved: the initial entry and the indices between "
@@ -5462,50 +5479,50 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:845
+#: man-pages/man5/elf.5:844
 #, no-wrap
 msgid "B<SHN_UNDEF>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:849
+#: man-pages/man5/elf.5:848
 msgid ""
 "This value marks an undefined, missing, irrelevant, or otherwise meaningless "
 "section reference."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:849
+#: man-pages/man5/elf.5:848
 #, no-wrap
 msgid "B<SHN_LORESERVE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:852
+#: man-pages/man5/elf.5:851
 msgid "This value specifies the lower bound of the range of reserved indices."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:852
+#: man-pages/man5/elf.5:851
 #, no-wrap
 msgid "B<SHN_LOPROC>, B<SHN_HIPROC>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:857
+#: man-pages/man5/elf.5:856
 msgid ""
 "Values greater in the inclusive range [B<SHN_LOPROC>, B<SHN_HIPROC>] are "
 "reserved for processor-specific semantics."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:857
+#: man-pages/man5/elf.5:856
 #, no-wrap
 msgid "B<SHN_ABS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:864
+#: man-pages/man5/elf.5:863
 msgid ""
 "This value specifies the absolute value for the corresponding reference.  "
 "For example, a symbol defined relative to section number B<SHN_ABS> has an "
@@ -5513,26 +5530,26 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:864
+#: man-pages/man5/elf.5:863
 #, no-wrap
 msgid "B<SHN_COMMON>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:868
+#: man-pages/man5/elf.5:867
 msgid ""
 "Symbols defined relative to this section are common symbols, such as FORTRAN "
 "COMMON or unallocated C external variables."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:868
+#: man-pages/man5/elf.5:867
 #, no-wrap
 msgid "B<SHN_HIRESERVE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:879
+#: man-pages/man5/elf.5:878
 msgid ""
 "This value specifies the upper bound of the range of reserved indices.  The "
 "system reserves indices between B<SHN_LORESERVE> and B<SHN_HIRESERVE>, "
@@ -5541,12 +5558,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:881
+#: man-pages/man5/elf.5:880
 msgid "The section header has the following structure:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:896
+#: man-pages/man5/elf.5:895
 #, no-wrap
 msgid ""
 "typedef struct {\n"
@@ -5564,7 +5581,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:913
+#: man-pages/man5/elf.5:912
 #, no-wrap
 msgid ""
 "typedef struct {\n"
@@ -5582,19 +5599,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:917
+#: man-pages/man5/elf.5:916
 msgid ""
 "No real differences exist between the 32-bit and 64-bit section headers."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:917
+#: man-pages/man5/elf.5:916
 #, no-wrap
 msgid "I<sh_name>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:923
+#: man-pages/man5/elf.5:922
 msgid ""
 "This member specifies the name of the section.  Its value is an index into "
 "the section header string table section, giving the location of a null-"
@@ -5602,24 +5619,24 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:923
+#: man-pages/man5/elf.5:922
 #, no-wrap
 msgid "I<sh_type>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:926
+#: man-pages/man5/elf.5:925
 msgid "This member categorizes the section's contents and semantics."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:927
+#: man-pages/man5/elf.5:926
 #, no-wrap
 msgid "B<SHT_NULL>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:934
+#: man-pages/man5/elf.5:933
 msgid ""
 "This value marks the section header as inactive.  It does not have an "
 "associated section.  Other members of the section header have undefined "
@@ -5627,26 +5644,26 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:934
+#: man-pages/man5/elf.5:933
 #, no-wrap
 msgid "B<SHT_PROGBITS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:938
+#: man-pages/man5/elf.5:937
 msgid ""
 "This section holds information defined by the program, whose format and "
 "meaning are determined solely by the program."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:938
+#: man-pages/man5/elf.5:937
 #, no-wrap
 msgid "B<SHT_SYMTAB>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:951
+#: man-pages/man5/elf.5:950
 msgid ""
 "This section holds a symbol table.  Typically, B<SHT_SYMTAB> provides "
 "symbols for link editing, though it may also be used for dynamic linking.  "
@@ -5655,26 +5672,26 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:951
+#: man-pages/man5/elf.5:950
 #, no-wrap
 msgid "B<SHT_STRTAB>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:956
+#: man-pages/man5/elf.5:955
 msgid ""
 "This section holds a string table.  An object file may have multiple string "
 "table sections."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:956
+#: man-pages/man5/elf.5:955
 #, no-wrap
 msgid "B<SHT_RELA>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:964
+#: man-pages/man5/elf.5:963
 msgid ""
 "This section holds relocation entries with explicit addends, such as type "
 "I<Elf32_Rela> for the 32-bit class of object files.  An object may have "
@@ -5682,13 +5699,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:964
+#: man-pages/man5/elf.5:963
 #, no-wrap
 msgid "B<SHT_HASH>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:971
+#: man-pages/man5/elf.5:970
 msgid ""
 "This section holds a symbol hash table.  An object participating in dynamic "
 "linking must contain a symbol hash table.  An object file may have only one "
@@ -5696,37 +5713,37 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:971
+#: man-pages/man5/elf.5:970
 #, no-wrap
 msgid "B<SHT_DYNAMIC>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:976
+#: man-pages/man5/elf.5:975
 msgid ""
 "This section holds information for dynamic linking.  An object file may have "
 "only one dynamic section."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:976
+#: man-pages/man5/elf.5:975
 #, no-wrap
 msgid "B<SHT_NOTE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:979
+#: man-pages/man5/elf.5:978
 msgid "This section holds notes (ElfN_Nhdr)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:979
+#: man-pages/man5/elf.5:978
 #, no-wrap
 msgid "B<SHT_NOBITS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:987
+#: man-pages/man5/elf.5:986
 msgid ""
 "A section of this type occupies no space in the file but otherwise resembles "
 "B<SHT_PROGBITS>.  Although this section contains no bytes, the I<sh_offset> "
@@ -5734,13 +5751,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:987
+#: man-pages/man5/elf.5:986
 #, no-wrap
 msgid "B<SHT_REL>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:995
+#: man-pages/man5/elf.5:994
 msgid ""
 "This section holds relocation offsets without explicit addends, such as type "
 "I<Elf32_Rel> for the 32-bit class of object files.  An object file may have "
@@ -5748,63 +5765,63 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:995
+#: man-pages/man5/elf.5:994
 #, no-wrap
 msgid "B<SHT_SHLIB>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:998
+#: man-pages/man5/elf.5:997
 msgid "This section is reserved but has unspecified semantics."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:998
+#: man-pages/man5/elf.5:997
 #, no-wrap
 msgid "B<SHT_DYNSYM>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1005
+#: man-pages/man5/elf.5:1004
 msgid ""
 "This section holds a minimal set of dynamic linking symbols.  An object file "
 "can also contain a B<SHT_SYMTAB> section."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1005
+#: man-pages/man5/elf.5:1004
 #, no-wrap
 msgid "B<SHT_LOPROC>, B<SHT_HIPROC>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1010
+#: man-pages/man5/elf.5:1009
 msgid ""
 "Values in the inclusive range [B<SHT_LOPROC>, B<SHT_HIPROC>] are reserved "
 "for processor-specific semantics."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1010
+#: man-pages/man5/elf.5:1009
 #, no-wrap
 msgid "B<SHT_LOUSER>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1014
+#: man-pages/man5/elf.5:1013
 msgid ""
 "This value specifies the lower bound of the range of indices reserved for "
 "application programs."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1014
+#: man-pages/man5/elf.5:1013
 #, no-wrap
 msgid "B<SHT_HIUSER>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1024
+#: man-pages/man5/elf.5:1023
 msgid ""
 "This value specifies the upper bound of the range of indices reserved for "
 "application programs.  Section types between B<SHT_LOUSER> and B<SHT_HIUSER> "
@@ -5813,13 +5830,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1025
+#: man-pages/man5/elf.5:1024
 #, no-wrap
 msgid "I<sh_flags>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1037
+#: man-pages/man5/elf.5:1036
 msgid ""
 "Sections support one-bit flags that describe miscellaneous attributes.  If a "
 "flag bit is set in I<sh_flags>, the attribute is \"on\" for the section.  "
@@ -5828,25 +5845,25 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1038
+#: man-pages/man5/elf.5:1037
 #, no-wrap
 msgid "B<SHF_WRITE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1042
+#: man-pages/man5/elf.5:1041
 msgid ""
 "This section contains data that should be writable during process execution."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1042
+#: man-pages/man5/elf.5:1041
 #, no-wrap
 msgid "B<SHF_ALLOC>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1049
+#: man-pages/man5/elf.5:1048
 msgid ""
 "This section occupies memory during process execution.  Some control "
 "sections do not reside in the memory image of an object file.  This "
@@ -5854,36 +5871,36 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1049
+#: man-pages/man5/elf.5:1048
 #, no-wrap
 msgid "B<SHF_EXECINSTR>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1052
+#: man-pages/man5/elf.5:1051
 msgid "This section contains executable machine instructions."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1052
+#: man-pages/man5/elf.5:1051
 #, no-wrap
 msgid "B<SHF_MASKPROC>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1056
+#: man-pages/man5/elf.5:1055
 msgid ""
 "All bits included in this mask are reserved for processor-specific semantics."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1057
+#: man-pages/man5/elf.5:1056
 #, no-wrap
 msgid "I<sh_addr>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1062
+#: man-pages/man5/elf.5:1061
 msgid ""
 "If this section appears in the memory image of a process, this member holds "
 "the address at which the section's first byte should reside.  Otherwise, the "
@@ -5891,13 +5908,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1062
+#: man-pages/man5/elf.5:1061
 #, no-wrap
 msgid "I<sh_offset>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1071
+#: man-pages/man5/elf.5:1070
 msgid ""
 "This member's value holds the byte offset from the beginning of the file to "
 "the first byte in the section.  One section type, B<SHT_NOBITS>, occupies no "
@@ -5906,13 +5923,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1071
+#: man-pages/man5/elf.5:1070
 #, no-wrap
 msgid "I<sh_size>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1083
+#: man-pages/man5/elf.5:1082
 msgid ""
 "This member holds the section's size in bytes.  Unless the section type is "
 "B<SHT_NOBITS>, the section occupies I<sh_size> bytes in the file.  A section "
@@ -5921,39 +5938,39 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1083
+#: man-pages/man5/elf.5:1082
 #, no-wrap
 msgid "I<sh_link>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1087
+#: man-pages/man5/elf.5:1086
 msgid ""
 "This member holds a section header table index link, whose interpretation "
 "depends on the section type."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1087
+#: man-pages/man5/elf.5:1086
 #, no-wrap
 msgid "I<sh_info>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1091
+#: man-pages/man5/elf.5:1090
 msgid ""
 "This member holds extra information, whose interpretation depends on the "
 "section type."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1091
+#: man-pages/man5/elf.5:1090
 #, no-wrap
 msgid "I<sh_addralign>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1103
+#: man-pages/man5/elf.5:1102
 msgid ""
 "Some sections have address alignment constraints.  If a section holds a "
 "doubleword, the system must ensure doubleword alignment for the entire "
@@ -5964,13 +5981,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1103
+#: man-pages/man5/elf.5:1102
 #, no-wrap
 msgid "I<sh_entsize>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1109
+#: man-pages/man5/elf.5:1108
 msgid ""
 "Some sections hold a table of fixed-sized entries, such as a symbol table.  "
 "For such a section, this member gives the size in bytes for each entry.  "
@@ -5979,18 +5996,18 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1111
+#: man-pages/man5/elf.5:1110
 msgid "Various sections hold program and control information:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1111
+#: man-pages/man5/elf.5:1110
 #, no-wrap
 msgid "I<.bss>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1123
+#: man-pages/man5/elf.5:1122
 msgid ""
 "This section holds uninitialized data that contributes to the program's "
 "memory image.  By definition, the system initializes the data with zeros "
@@ -5999,26 +6016,26 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1123
+#: man-pages/man5/elf.5:1122
 #, no-wrap
 msgid "I<.comment>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1129
+#: man-pages/man5/elf.5:1128
 msgid ""
 "This section holds version control information.  This section is of type "
 "B<SHT_PROGBITS>.  No attribute types are used."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1129
+#: man-pages/man5/elf.5:1128
 #, no-wrap
 msgid "I<.ctors>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1138
+#: man-pages/man5/elf.5:1137
 msgid ""
 "This section holds initialized pointers to the C++ constructor functions.  "
 "This section is of type B<SHT_PROGBITS>.  The attribute types are "
@@ -6026,13 +6043,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1138
+#: man-pages/man5/elf.5:1137
 #, no-wrap
 msgid "I<.data>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1148 man-pages/man5/elf.5:1158
+#: man-pages/man5/elf.5:1147 man-pages/man5/elf.5:1157
 msgid ""
 "This section holds initialized data that contribute to the program's memory "
 "image.  This section is of type B<SHT_PROGBITS>.  The attribute types are "
@@ -6040,19 +6057,19 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1148
+#: man-pages/man5/elf.5:1147
 #, no-wrap
 msgid "I<.data1>"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1158
+#: man-pages/man5/elf.5:1157
 #, no-wrap
 msgid "I<.debug>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1166
+#: man-pages/man5/elf.5:1165
 msgid ""
 "This section holds information for symbolic debugging.  The contents are "
 "unspecified.  This section is of type B<SHT_PROGBITS>.  No attribute types "
@@ -6060,13 +6077,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1166
+#: man-pages/man5/elf.5:1165
 #, no-wrap
 msgid "I<.dtors>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1175
+#: man-pages/man5/elf.5:1174
 msgid ""
 "This section holds initialized pointers to the C++ destructor functions.  "
 "This section is of type B<SHT_PROGBITS>.  The attribute types are "
@@ -6074,13 +6091,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1175
+#: man-pages/man5/elf.5:1174
 #, no-wrap
 msgid "I<.dynamic>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1188
+#: man-pages/man5/elf.5:1187
 msgid ""
 "This section holds dynamic linking information.  The section's attributes "
 "will include the B<SHF_ALLOC> bit.  Whether the B<SHF_WRITE> bit is set is "
@@ -6089,13 +6106,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1188
+#: man-pages/man5/elf.5:1187
 #, no-wrap
 msgid "I<.dynstr>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1196
+#: man-pages/man5/elf.5:1195
 msgid ""
 "This section holds strings needed for dynamic linking, most commonly the "
 "strings that represent the names associated with symbol table entries.  This "
@@ -6103,26 +6120,26 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1196
+#: man-pages/man5/elf.5:1195
 #, no-wrap
 msgid "I<.dynsym>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1203
+#: man-pages/man5/elf.5:1202
 msgid ""
 "This section holds the dynamic linking symbol table.  This section is of "
 "type B<SHT_DYNSYM>.  The attribute used is B<SHF_ALLOC>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1203
+#: man-pages/man5/elf.5:1202
 #, no-wrap
 msgid "I<.fini>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1215
+#: man-pages/man5/elf.5:1214
 msgid ""
 "This section holds executable instructions that contribute to the process "
 "termination code.  When a program exits normally the system arranges to "
@@ -6131,13 +6148,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1215
+#: man-pages/man5/elf.5:1214
 #, no-wrap
 msgid "I<.gnu.version>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1224
+#: man-pages/man5/elf.5:1223
 msgid ""
 "This section holds the version symbol table, an array of I<ElfN_Half> "
 "elements.  This section is of type B<SHT_GNU_versym>.  The attribute type "
@@ -6145,13 +6162,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1224
+#: man-pages/man5/elf.5:1223
 #, no-wrap
 msgid "I<.gnu.version_d>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1233
+#: man-pages/man5/elf.5:1232
 msgid ""
 "This section holds the version symbol definitions, a table of I<ElfN_Verdef> "
 "structures.  This section is of type B<SHT_GNU_verdef>.  The attribute type "
@@ -6159,13 +6176,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1233
+#: man-pages/man5/elf.5:1232
 #, no-wrap
 msgid "I<.gnu.version_r>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1243
+#: man-pages/man5/elf.5:1242
 msgid ""
 "This section holds the version symbol needed elements, a table of "
 "I<ElfN_Verneed> structures.  This section is of type B<SHT_GNU_versym>.  The "
@@ -6173,39 +6190,39 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1243
+#: man-pages/man5/elf.5:1242
 #, no-wrap
 msgid "I<.got>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1249
+#: man-pages/man5/elf.5:1248
 msgid ""
 "This section holds the global offset table.  This section is of type "
 "B<SHT_PROGBITS>.  The attributes are processor-specific."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1249
+#: man-pages/man5/elf.5:1248
 #, no-wrap
 msgid "I<.hash>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1256
+#: man-pages/man5/elf.5:1255
 msgid ""
 "This section holds a symbol hash table.  This section is of type "
 "B<SHT_HASH>.  The attribute used is B<SHF_ALLOC>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1256
+#: man-pages/man5/elf.5:1255
 #, no-wrap
 msgid "I<.init>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1268
+#: man-pages/man5/elf.5:1267
 msgid ""
 "This section holds executable instructions that contribute to the process "
 "initialization code.  When a program starts to run the system arranges to "
@@ -6215,13 +6232,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1268
+#: man-pages/man5/elf.5:1267
 #, no-wrap
 msgid "I<.interp>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1279
+#: man-pages/man5/elf.5:1278
 msgid ""
 "This section holds the pathname of a program interpreter.  If the file has a "
 "loadable segment that includes the section, the section's attributes will "
@@ -6230,13 +6247,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1279
+#: man-pages/man5/elf.5:1278
 #, no-wrap
 msgid "I<.line>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1288
+#: man-pages/man5/elf.5:1287
 msgid ""
 "This section holds line number information for symbolic debugging, which "
 "describes the correspondence between the program source and the machine "
@@ -6245,26 +6262,26 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1288
+#: man-pages/man5/elf.5:1287
 #, no-wrap
 msgid "I<.note>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1294
+#: man-pages/man5/elf.5:1293
 msgid ""
 "This section holds various notes.  This section is of type B<SHT_NOTE>.  No "
 "attribute types are used."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1294
+#: man-pages/man5/elf.5:1293
 #, no-wrap
 msgid "I<.note.ABI-tag>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1302
+#: man-pages/man5/elf.5:1301
 msgid ""
 "This section is used to declare the expected run-time ABI of the ELF image.  "
 "It may include the operating system name and its run-time versions.  This "
@@ -6272,13 +6289,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1302
+#: man-pages/man5/elf.5:1301
 #, no-wrap
 msgid "I<.note.gnu.build-id>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1315
+#: man-pages/man5/elf.5:1314
 msgid ""
 "This section is used to hold an ID that uniquely identifies the contents of "
 "the ELF image.  Different files with the same build ID should contain the "
@@ -6288,13 +6305,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1315
+#: man-pages/man5/elf.5:1314
 #, no-wrap
 msgid "I<.note.GNU-stack>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1324
+#: man-pages/man5/elf.5:1323
 msgid ""
 "This section is used in Linux object files for declaring stack attributes.  "
 "This section is of type B<SHT_PROGBITS>.  The only attribute used is "
@@ -6303,13 +6320,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1324
+#: man-pages/man5/elf.5:1323
 #, no-wrap
 msgid "I<.note.openbsd.ident>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1329
+#: man-pages/man5/elf.5:1328
 msgid ""
 "OpenBSD native executables usually contain this section to identify "
 "themselves so the kernel can bypass any compatibility ELF binary emulation "
@@ -6317,26 +6334,26 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1329
+#: man-pages/man5/elf.5:1328
 #, no-wrap
 msgid "I<.plt>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1335
+#: man-pages/man5/elf.5:1334
 msgid ""
 "This section holds the procedure linkage table.  This section is of type "
 "B<SHT_PROGBITS>.  The attributes are processor-specific."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1335
+#: man-pages/man5/elf.5:1334
 #, no-wrap
 msgid "I<.relNAME>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1354
+#: man-pages/man5/elf.5:1353
 msgid ""
 "This section holds relocation information as described below.  If the file "
 "has a loadable segment that includes relocation, the section's attributes "
@@ -6347,13 +6364,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1354
+#: man-pages/man5/elf.5:1353
 #, no-wrap
 msgid "I<.relaNAME>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1373
+#: man-pages/man5/elf.5:1372
 msgid ""
 "This section holds relocation information as described below.  If the file "
 "has a loadable segment that includes relocation, the section's attributes "
@@ -6364,13 +6381,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1373
+#: man-pages/man5/elf.5:1372
 #, no-wrap
 msgid "I<.rodata>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1381 man-pages/man5/elf.5:1389
+#: man-pages/man5/elf.5:1380 man-pages/man5/elf.5:1388
 msgid ""
 "This section holds read-only data that typically contributes to a "
 "nonwritable segment in the process image.  This section is of type "
@@ -6378,32 +6395,32 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1381
+#: man-pages/man5/elf.5:1380
 #, no-wrap
 msgid "I<.rodata1>"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1389
+#: man-pages/man5/elf.5:1388
 #, no-wrap
 msgid "I<.shstrtab>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1395
+#: man-pages/man5/elf.5:1394
 msgid ""
 "This section holds section names.  This section is of type B<SHT_STRTAB>.  "
 "No attribute types are used."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1395
+#: man-pages/man5/elf.5:1394
 #, no-wrap
 msgid "I<.strtab>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1407
+#: man-pages/man5/elf.5:1406
 msgid ""
 "This section holds strings, most commonly the strings that represent the "
 "names associated with symbol table entries.  If the file has a loadable "
@@ -6413,13 +6430,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1407
+#: man-pages/man5/elf.5:1406
 #, no-wrap
 msgid "I<.symtab>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1418
+#: man-pages/man5/elf.5:1417
 msgid ""
 "This section holds a symbol table.  If the file has a loadable segment that "
 "includes the symbol table, the section's attributes will include the "
@@ -6428,13 +6445,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1418
+#: man-pages/man5/elf.5:1417
 #, no-wrap
 msgid "I<.text>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1430
+#: man-pages/man5/elf.5:1429
 msgid ""
 "This section holds the \"text\", or executable instructions, of a program.  "
 "This section is of type B<SHT_PROGBITS>.  The attributes used are "
@@ -6442,13 +6459,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man5/elf.5:1430
+#: man-pages/man5/elf.5:1429
 #, no-wrap
 msgid "String and symbol tables"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1441
+#: man-pages/man5/elf.5:1440
 msgid ""
 "String table sections hold null-terminated character sequences, commonly "
 "called strings.  The object file uses these strings to represent symbol and "
@@ -6459,7 +6476,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1446
+#: man-pages/man5/elf.5:1445
 msgid ""
 "An object file's symbol table holds information needed to locate and "
 "relocate a program's symbolic definitions and references.  A symbol table "
@@ -6467,7 +6484,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1457
+#: man-pages/man5/elf.5:1456
 #, no-wrap
 msgid ""
 "typedef struct {\n"
@@ -6481,7 +6498,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1470
+#: man-pages/man5/elf.5:1469
 #, no-wrap
 msgid ""
 "typedef struct {\n"
@@ -6495,20 +6512,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1475
+#: man-pages/man5/elf.5:1474
 msgid ""
 "The 32-bit and 64-bit versions have the same members, just in a different "
 "order."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1475
+#: man-pages/man5/elf.5:1474
 #, no-wrap
 msgid "I<st_name>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1483
+#: man-pages/man5/elf.5:1482
 msgid ""
 "This member holds an index into the object file's symbol string table, which "
 "holds character representations of the symbol names.  If the value is "
@@ -6517,94 +6534,94 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1483
+#: man-pages/man5/elf.5:1482
 #, no-wrap
 msgid "I<st_value>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1486
+#: man-pages/man5/elf.5:1485
 msgid "This member gives the value of the associated symbol."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1486
+#: man-pages/man5/elf.5:1485
 #, no-wrap
 msgid "I<st_size>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1491
+#: man-pages/man5/elf.5:1490
 msgid ""
 "Many symbols have associated sizes.  This member holds zero if the symbol "
 "has no size or an unknown size."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1491
+#: man-pages/man5/elf.5:1490
 #, no-wrap
 msgid "I<st_info>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1494
+#: man-pages/man5/elf.5:1493
 msgid "This member specifies the symbol's type and binding attributes:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1495
+#: man-pages/man5/elf.5:1494
 #, no-wrap
 msgid "B<STT_NOTYPE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1498
+#: man-pages/man5/elf.5:1497
 msgid "The symbol's type is not defined."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1498
+#: man-pages/man5/elf.5:1497
 #, no-wrap
 msgid "B<STT_OBJECT>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1501
+#: man-pages/man5/elf.5:1500
 msgid "The symbol is associated with a data object."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1501
+#: man-pages/man5/elf.5:1500
 #, no-wrap
 msgid "B<STT_FUNC>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1504
+#: man-pages/man5/elf.5:1503
 msgid "The symbol is associated with a function or other executable code."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1504
+#: man-pages/man5/elf.5:1503
 #, no-wrap
 msgid "B<STT_SECTION>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1511
+#: man-pages/man5/elf.5:1510
 msgid ""
 "The symbol is associated with a section.  Symbol table entries of this type "
 "exist primarily for relocation and normally have B<STB_LOCAL> bindings."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1511
+#: man-pages/man5/elf.5:1510
 #, no-wrap
 msgid "B<STT_FILE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1522
+#: man-pages/man5/elf.5:1521
 msgid ""
 "By convention, the symbol's name gives the name of the source file "
 "associated with the object file.  A file symbol has B<STB_LOCAL> bindings, "
@@ -6613,26 +6630,26 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1522
+#: man-pages/man5/elf.5:1521
 #, no-wrap
 msgid "B<STT_LOPROC>, B<STT_HIPROC>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1527
+#: man-pages/man5/elf.5:1526
 msgid ""
 "Values in the inclusive range [B<STT_LOPROC>, B<STT_HIPROC>] are reserved "
 "for processor-specific semantics."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1527
+#: man-pages/man5/elf.5:1526
 #, no-wrap
 msgid "B<STB_LOCAL>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1533
+#: man-pages/man5/elf.5:1532
 msgid ""
 "Local symbols are not visible outside the object file containing their "
 "definition.  Local symbols of the same name may exist in multiple files "
@@ -6640,13 +6657,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1533
+#: man-pages/man5/elf.5:1532
 #, no-wrap
 msgid "B<STB_GLOBAL>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1539
+#: man-pages/man5/elf.5:1538
 msgid ""
 "Global symbols are visible to all object files being combined.  One file's "
 "definition of a global symbol will satisfy another file's undefined "
@@ -6654,88 +6671,88 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1539
+#: man-pages/man5/elf.5:1538
 #, no-wrap
 msgid "B<STB_WEAK>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1543
+#: man-pages/man5/elf.5:1542
 msgid ""
 "Weak symbols resemble global symbols, but their definitions have lower "
 "precedence."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1543
+#: man-pages/man5/elf.5:1542
 #, no-wrap
 msgid "B<STB_LOPROC>, B<STB_HIPROC>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1548
+#: man-pages/man5/elf.5:1547
 msgid ""
 "Values in the inclusive range [B<STB_LOPROC>, B<STB_HIPROC>] are reserved "
 "for processor-specific semantics."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1551
+#: man-pages/man5/elf.5:1550
 msgid "There are macros for packing and unpacking the binding and type fields:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1552
+#: man-pages/man5/elf.5:1551
 #, no-wrap
 msgid "B<ELF32_ST_BIND(>I<info>B<)>, B<ELF64_ST_BIND(>I<info>B<)>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1557
+#: man-pages/man5/elf.5:1556
 msgid "Extract a binding from an I<st_info> value."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1557
+#: man-pages/man5/elf.5:1556
 #, no-wrap
 msgid "B<ELF32_ST_TYPE(>I<info>B<)>, B<ELF64_ST_TYPE(>I<info>B<)>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1562
+#: man-pages/man5/elf.5:1561
 msgid "Extract a type from an I<st_info> value."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1562
+#: man-pages/man5/elf.5:1561
 #, no-wrap
 msgid "B<ELF32_ST_INFO(>I<bind>B<, >I<type>B<)>, B<ELF64_ST_INFO(>I<bind>B<, >I<type>B<)>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1568
+#: man-pages/man5/elf.5:1567
 msgid "Convert a binding and a type into an I<st_info> value."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1569
+#: man-pages/man5/elf.5:1568
 #, no-wrap
 msgid "I<st_other>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1572
+#: man-pages/man5/elf.5:1571
 msgid "This member defines the symbol visibility."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1573
+#: man-pages/man5/elf.5:1572
 #, no-wrap
 msgid "B<STV_DEFAULT>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1580
+#: man-pages/man5/elf.5:1579
 msgid ""
 "Default symbol visibility rules.  Global and weak symbols are available to "
 "other modules; references in the local module can be interposed by "
@@ -6743,24 +6760,24 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1580
+#: man-pages/man5/elf.5:1579
 #, no-wrap
 msgid "B<STV_INTERNAL>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1583
+#: man-pages/man5/elf.5:1582
 msgid "Processor-specific hidden class."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1583
+#: man-pages/man5/elf.5:1582
 #, no-wrap
 msgid "B<STV_HIDDEN>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1588
+#: man-pages/man5/elf.5:1587
 msgid ""
 "Symbol is unavailable to other modules; references in the local module "
 "always resolve to the local symbol (i.e., the symbol can't be interposed by "
@@ -6768,49 +6785,49 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1588
+#: man-pages/man5/elf.5:1587
 #, no-wrap
 msgid "B<STV_PROTECTED>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1592
+#: man-pages/man5/elf.5:1591
 msgid ""
 "Symbol is available to other modules, but references in the local module "
 "always resolve to the local symbol."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1595
+#: man-pages/man5/elf.5:1594
 msgid "There are macros for extracting the visibility type:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1599
+#: man-pages/man5/elf.5:1598
 msgid "B<ELF32_ST_VISIBILITY>(other)  or B<ELF64_ST_VISIBILITY>(other)"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1600
+#: man-pages/man5/elf.5:1599
 #, no-wrap
 msgid "I<st_shndx>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1608
+#: man-pages/man5/elf.5:1607
 msgid ""
 "Every symbol table entry is \"defined\" in relation to some section.  This "
 "member holds the relevant section header table index."
 msgstr ""
 
 #. type: SS
-#: man-pages/man5/elf.5:1608
+#: man-pages/man5/elf.5:1607
 #, no-wrap
 msgid "Relocation entries (Rel & Rela)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1616
+#: man-pages/man5/elf.5:1615
 msgid ""
 "Relocation is the process of connecting symbolic references with symbolic "
 "definitions.  Relocatable files must have information that describes how to "
@@ -6820,12 +6837,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1618
+#: man-pages/man5/elf.5:1617
 msgid "Relocation structures that do not need an addend:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1625
+#: man-pages/man5/elf.5:1624
 #, no-wrap
 msgid ""
 "typedef struct {\n"
@@ -6835,7 +6852,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1634
+#: man-pages/man5/elf.5:1633
 #, no-wrap
 msgid ""
 "typedef struct {\n"
@@ -6845,12 +6862,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1638
+#: man-pages/man5/elf.5:1637
 msgid "Relocation structures that need an addend:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1646
+#: man-pages/man5/elf.5:1645
 #, no-wrap
 msgid ""
 "typedef struct {\n"
@@ -6861,7 +6878,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1656
+#: man-pages/man5/elf.5:1655
 #, no-wrap
 msgid ""
 "typedef struct {\n"
@@ -6872,13 +6889,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1658
+#: man-pages/man5/elf.5:1657
 #, no-wrap
 msgid "I<r_offset>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1666
+#: man-pages/man5/elf.5:1665
 msgid ""
 "This member gives the location at which to apply the relocation action.  For "
 "a relocatable file, the value is the byte offset from the beginning of the "
@@ -6888,13 +6905,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1666
+#: man-pages/man5/elf.5:1665
 #, no-wrap
 msgid "I<r_info>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1681
+#: man-pages/man5/elf.5:1680
 msgid ""
 "This member gives both the symbol table index with respect to which the "
 "relocation must be made and the type of relocation to apply.  Relocation "
@@ -6905,26 +6922,26 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1681
+#: man-pages/man5/elf.5:1680
 #, no-wrap
 msgid "I<r_addend>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1686
+#: man-pages/man5/elf.5:1685
 msgid ""
 "This member specifies a constant addend used to compute the value to be "
 "stored into the relocatable field."
 msgstr ""
 
 #. type: SS
-#: man-pages/man5/elf.5:1686
+#: man-pages/man5/elf.5:1685
 #, no-wrap
 msgid "Dynamic tags (Dyn)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1696
+#: man-pages/man5/elf.5:1695
 msgid ""
 "The I<.dynamic> section contains a series of structures that hold relevant "
 "dynamic linking information.  The I<d_tag> member controls the "
@@ -6932,7 +6949,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1707
+#: man-pages/man5/elf.5:1706
 #, no-wrap
 msgid ""
 "typedef struct {\n"
@@ -6946,7 +6963,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1720
+#: man-pages/man5/elf.5:1719
 #, no-wrap
 msgid ""
 "typedef struct {\n"
@@ -6960,339 +6977,339 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1722
+#: man-pages/man5/elf.5:1721
 #, no-wrap
 msgid "I<d_tag>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1725
+#: man-pages/man5/elf.5:1724
 msgid "This member may have any of the following values:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1726
+#: man-pages/man5/elf.5:1725
 #, no-wrap
 msgid "B<DT_NULL>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1729
+#: man-pages/man5/elf.5:1728
 msgid "Marks end of dynamic section"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1729
+#: man-pages/man5/elf.5:1728
 #, no-wrap
 msgid "B<DT_NEEDED>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1732
+#: man-pages/man5/elf.5:1731
 msgid "String table offset to name of a needed library"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1732
+#: man-pages/man5/elf.5:1731
 #, no-wrap
 msgid "B<DT_PLTRELSZ>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1735
+#: man-pages/man5/elf.5:1734
 msgid "Size in bytes of PLT relocation entries"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1735
+#: man-pages/man5/elf.5:1734
 #, no-wrap
 msgid "B<DT_PLTGOT>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1738
+#: man-pages/man5/elf.5:1737
 msgid "Address of PLT and/or GOT"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1738
+#: man-pages/man5/elf.5:1737
 #, no-wrap
 msgid "B<DT_HASH>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1741
+#: man-pages/man5/elf.5:1740
 msgid "Address of symbol hash table"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1741
+#: man-pages/man5/elf.5:1740
 #, no-wrap
 msgid "B<DT_STRTAB>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1744
+#: man-pages/man5/elf.5:1743
 msgid "Address of string table"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1744
+#: man-pages/man5/elf.5:1743
 #, no-wrap
 msgid "B<DT_SYMTAB>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1747
+#: man-pages/man5/elf.5:1746
 msgid "Address of symbol table"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1747
+#: man-pages/man5/elf.5:1746
 #, no-wrap
 msgid "B<DT_RELA>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1750
+#: man-pages/man5/elf.5:1749
 msgid "Address of Rela relocation table"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1750
+#: man-pages/man5/elf.5:1749
 #, no-wrap
 msgid "B<DT_RELASZ>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1753
+#: man-pages/man5/elf.5:1752
 msgid "Size in bytes of the Rela relocation table"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1753
+#: man-pages/man5/elf.5:1752
 #, no-wrap
 msgid "B<DT_RELAENT>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1756
+#: man-pages/man5/elf.5:1755
 msgid "Size in bytes of a Rela relocation table entry"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1756
+#: man-pages/man5/elf.5:1755
 #, no-wrap
 msgid "B<DT_STRSZ>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1759
+#: man-pages/man5/elf.5:1758
 msgid "Size in bytes of string table"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1759
+#: man-pages/man5/elf.5:1758
 #, no-wrap
 msgid "B<DT_SYMENT>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1762
+#: man-pages/man5/elf.5:1761
 msgid "Size in bytes of a symbol table entry"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1762
+#: man-pages/man5/elf.5:1761
 #, no-wrap
 msgid "B<DT_INIT>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1765
+#: man-pages/man5/elf.5:1764
 msgid "Address of the initialization function"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1765
+#: man-pages/man5/elf.5:1764
 #, no-wrap
 msgid "B<DT_FINI>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1768
+#: man-pages/man5/elf.5:1767
 msgid "Address of the termination function"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1768
+#: man-pages/man5/elf.5:1767
 #, no-wrap
 msgid "B<DT_SONAME>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1771
+#: man-pages/man5/elf.5:1770
 msgid "String table offset to name of shared object"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1771
+#: man-pages/man5/elf.5:1770
 #, no-wrap
 msgid "B<DT_RPATH>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1774
+#: man-pages/man5/elf.5:1773
 msgid "String table offset to library search path (deprecated)"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1774
+#: man-pages/man5/elf.5:1773
 #, no-wrap
 msgid "B<DT_SYMBOLIC>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1777
+#: man-pages/man5/elf.5:1776
 msgid ""
 "Alert linker to search this shared object before the executable for symbols"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1777
+#: man-pages/man5/elf.5:1776
 #, no-wrap
 msgid "B<DT_REL>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1780
+#: man-pages/man5/elf.5:1779
 msgid "Address of Rel relocation table"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1780
+#: man-pages/man5/elf.5:1779
 #, no-wrap
 msgid "B<DT_RELSZ>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1783
+#: man-pages/man5/elf.5:1782
 msgid "Size in bytes of Rel relocation table"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1783
+#: man-pages/man5/elf.5:1782
 #, no-wrap
 msgid "B<DT_RELENT>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1786
+#: man-pages/man5/elf.5:1785
 msgid "Size in bytes of a Rel table entry"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1786
+#: man-pages/man5/elf.5:1785
 #, no-wrap
 msgid "B<DT_PLTREL>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1789
+#: man-pages/man5/elf.5:1788
 msgid "Type of relocation entry to which the PLT refers (Rela or Rel)"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1789
+#: man-pages/man5/elf.5:1788
 #, no-wrap
 msgid "B<DT_DEBUG>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1792
+#: man-pages/man5/elf.5:1791
 msgid "Undefined use for debugging"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1792
+#: man-pages/man5/elf.5:1791
 #, no-wrap
 msgid "B<DT_TEXTREL>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1796
+#: man-pages/man5/elf.5:1795
 msgid ""
 "Absence of this entry indicates that no relocation entries should apply to a "
 "nonwritable segment"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1796
+#: man-pages/man5/elf.5:1795
 #, no-wrap
 msgid "B<DT_JMPREL>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1799
+#: man-pages/man5/elf.5:1798
 msgid "Address of relocation entries associated solely with the PLT"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1799
+#: man-pages/man5/elf.5:1798
 #, no-wrap
 msgid "B<DT_BIND_NOW>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1803
+#: man-pages/man5/elf.5:1802
 msgid ""
 "Instruct dynamic linker to process all relocations before transferring "
 "control to the executable"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1803
+#: man-pages/man5/elf.5:1802
 #, no-wrap
 msgid "B<DT_RUNPATH>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1806
+#: man-pages/man5/elf.5:1805
 msgid "String table offset to library search path"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1806
+#: man-pages/man5/elf.5:1805
 #, no-wrap
 msgid "B<DT_LOPROC>, B<DT_HIPROC>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1811
+#: man-pages/man5/elf.5:1810
 msgid ""
 "Values in the inclusive range [B<DT_LOPROC>, B<DT_HIPROC>] are reserved for "
 "processor-specific semantics"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1812
+#: man-pages/man5/elf.5:1811
 #, no-wrap
 msgid "I<d_val>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1815
+#: man-pages/man5/elf.5:1814
 msgid "This member represents integer values with various interpretations."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1815
+#: man-pages/man5/elf.5:1814
 #, no-wrap
 msgid "I<d_ptr>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1823
+#: man-pages/man5/elf.5:1822
 msgid ""
 "This member represents program virtual addresses.  When interpreting these "
 "addresses, the actual address should be computed based on the original file "
@@ -7301,7 +7318,7 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1823
+#: man-pages/man5/elf.5:1822
 #, no-wrap
 msgid "I<_DYNAMIC>"
 msgstr ""
@@ -7322,20 +7339,20 @@ msgstr ""
 #.  NetBSD:   https://www.netbsd.org/docs/kernel/elf-notes.html
 #.  OpenBSD:  https://github.com/openbsd/src/blob/master/sys/sys/exec_elf.h#L533
 #. type: Plain text
-#: man-pages/man5/elf.5:1845
+#: man-pages/man5/elf.5:1844
 msgid ""
 "Array containing all the dynamic structures in the I<.dynamic> section.  "
 "This is automatically populated by the linker."
 msgstr ""
 
 #. type: SS
-#: man-pages/man5/elf.5:1845
+#: man-pages/man5/elf.5:1844
 #, no-wrap
 msgid "Notes (Nhdr)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1855
+#: man-pages/man5/elf.5:1854
 msgid ""
 "ELF notes allow for appending arbitrary information for the system to use.  "
 "They are largely used by core files (I<e_type> of B<ET_CORE>), but many "
@@ -7344,7 +7361,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1863
+#: man-pages/man5/elf.5:1862
 msgid ""
 "Note sections contain a series of notes (see the I<struct> definitions "
 "below).  Each note is followed by the name field (whose length is defined in "
@@ -7354,14 +7371,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1866
+#: man-pages/man5/elf.5:1865
 msgid ""
 "An example for parsing out two consecutive notes should clarify their layout "
 "in memory:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1871
+#: man-pages/man5/elf.5:1870
 #, no-wrap
 msgid ""
 "void *memory, *name, *desc;\n"
@@ -7369,7 +7386,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1874
+#: man-pages/man5/elf.5:1873
 #, no-wrap
 msgid ""
 "/* The buffer is pointing to the start of the section/segment */\n"
@@ -7377,7 +7394,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1877
+#: man-pages/man5/elf.5:1876
 #, no-wrap
 msgid ""
 "/* If the name is defined, it follows the note */\n"
@@ -7385,7 +7402,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1880
+#: man-pages/man5/elf.5:1879
 #, no-wrap
 msgid ""
 "/* If the descriptor is defined, it follows the name\n"
@@ -7393,7 +7410,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1883
+#: man-pages/man5/elf.5:1882
 #, no-wrap
 msgid ""
 "desc = note-E<gt>n_descsz == 0 ? NULL :\n"
@@ -7401,7 +7418,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1888
+#: man-pages/man5/elf.5:1887
 #, no-wrap
 msgid ""
 "/* The next note follows both (with alignment) */\n"
@@ -7411,7 +7428,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1902
+#: man-pages/man5/elf.5:1901
 msgid ""
 "Keep in mind that the interpretation of I<n_type> depends on the namespace "
 "defined by the I<n_namesz> field.  If the I<n_namesz> field is not set (e."
@@ -7421,7 +7438,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1910
+#: man-pages/man5/elf.5:1909
 #, no-wrap
 msgid ""
 "typedef struct {\n"
@@ -7432,7 +7449,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1920
+#: man-pages/man5/elf.5:1919
 #, no-wrap
 msgid ""
 "typedef struct {\n"
@@ -7443,13 +7460,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1922
+#: man-pages/man5/elf.5:1921
 #, no-wrap
 msgid "I<n_namesz>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1930
+#: man-pages/man5/elf.5:1929
 msgid ""
 "The length of the name field in bytes.  The contents will immediately follow "
 "this note in memory.  The name is null terminated.  For example, if the name "
@@ -7457,39 +7474,39 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1930
+#: man-pages/man5/elf.5:1929
 #, no-wrap
 msgid "I<n_descsz>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1934
+#: man-pages/man5/elf.5:1933
 msgid ""
 "The length of the descriptor field in bytes.  The contents will immediately "
 "follow the name field in memory."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1934
+#: man-pages/man5/elf.5:1933
 #, no-wrap
 msgid "I<n_type>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1938
+#: man-pages/man5/elf.5:1937
 msgid ""
 "Depending on the value of the name field, this member may have any of the "
 "following values:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1939
+#: man-pages/man5/elf.5:1938
 #, no-wrap
 msgid "B<Core files (e_type = ET_CORE)>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1947
+#: man-pages/man5/elf.5:1946
 msgid ""
 "Notes used by all core files.  These are highly operating system or "
 "architecture specific and often require close coordination with kernels, C "
@@ -7499,508 +7516,508 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1948
+#: man-pages/man5/elf.5:1947
 #, no-wrap
 msgid "B<NT_PRSTATUS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1952
+#: man-pages/man5/elf.5:1951
 msgid "prstatus struct"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1952
+#: man-pages/man5/elf.5:1951
 #, no-wrap
 msgid "B<NT_FPREGSET>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1955
+#: man-pages/man5/elf.5:1954
 msgid "fpregset struct"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1955
+#: man-pages/man5/elf.5:1954
 #, no-wrap
 msgid "B<NT_PRPSINFO>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1958
+#: man-pages/man5/elf.5:1957
 msgid "prpsinfo struct"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1958
+#: man-pages/man5/elf.5:1957
 #, no-wrap
 msgid "B<NT_PRXREG>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1961
+#: man-pages/man5/elf.5:1960
 msgid "prxregset struct"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1961
+#: man-pages/man5/elf.5:1960
 #, no-wrap
 msgid "B<NT_TASKSTRUCT>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1964
+#: man-pages/man5/elf.5:1963
 msgid "task structure"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1964
+#: man-pages/man5/elf.5:1963
 #, no-wrap
 msgid "B<NT_PLATFORM>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1967
+#: man-pages/man5/elf.5:1966
 msgid "String from sysinfo(SI_PLATFORM)"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1967
+#: man-pages/man5/elf.5:1966
 #, no-wrap
 msgid "B<NT_AUXV>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1970
+#: man-pages/man5/elf.5:1969
 msgid "auxv array"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1970
+#: man-pages/man5/elf.5:1969
 #, no-wrap
 msgid "B<NT_GWINDOWS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1973
+#: man-pages/man5/elf.5:1972
 msgid "gwindows struct"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1973
+#: man-pages/man5/elf.5:1972
 #, no-wrap
 msgid "B<NT_ASRS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1976
+#: man-pages/man5/elf.5:1975
 msgid "asrset struct"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1976
+#: man-pages/man5/elf.5:1975
 #, no-wrap
 msgid "B<NT_PSTATUS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1979
+#: man-pages/man5/elf.5:1978
 msgid "pstatus struct"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1979
+#: man-pages/man5/elf.5:1978
 #, no-wrap
 msgid "B<NT_PSINFO>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1982
+#: man-pages/man5/elf.5:1981
 msgid "psinfo struct"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1982
+#: man-pages/man5/elf.5:1981
 #, no-wrap
 msgid "B<NT_PRCRED>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1985
+#: man-pages/man5/elf.5:1984
 msgid "prcred struct"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1985
+#: man-pages/man5/elf.5:1984
 #, no-wrap
 msgid "B<NT_UTSNAME>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1988
+#: man-pages/man5/elf.5:1987
 msgid "utsname struct"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1988
+#: man-pages/man5/elf.5:1987
 #, no-wrap
 msgid "B<NT_LWPSTATUS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1991
+#: man-pages/man5/elf.5:1990
 msgid "lwpstatus struct"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1991
+#: man-pages/man5/elf.5:1990
 #, no-wrap
 msgid "B<NT_LWPSINFO>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1994
+#: man-pages/man5/elf.5:1993
 msgid "lwpinfo struct"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1994
+#: man-pages/man5/elf.5:1993
 #, no-wrap
 msgid "B<NT_PRFPXREG>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:1997
+#: man-pages/man5/elf.5:1996
 msgid "fprxregset struct"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:1997
+#: man-pages/man5/elf.5:1996
 #, no-wrap
 msgid "B<NT_SIGINFO>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2000
+#: man-pages/man5/elf.5:1999
 msgid "siginfo_t (size might increase over time)"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2000
+#: man-pages/man5/elf.5:1999
 #, no-wrap
 msgid "B<NT_FILE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2003
+#: man-pages/man5/elf.5:2002
 msgid "Contains information about mapped files"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2003
+#: man-pages/man5/elf.5:2002
 #, no-wrap
 msgid "B<NT_PRXFPREG>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2006
+#: man-pages/man5/elf.5:2005
 msgid "user_fxsr_struct"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2006
+#: man-pages/man5/elf.5:2005
 #, no-wrap
 msgid "B<NT_PPC_VMX>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2009
+#: man-pages/man5/elf.5:2008
 msgid "PowerPC Altivec/VMX registers"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2009
+#: man-pages/man5/elf.5:2008
 #, no-wrap
 msgid "B<NT_PPC_SPE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2012
+#: man-pages/man5/elf.5:2011
 msgid "PowerPC SPE/EVR registers"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2012
+#: man-pages/man5/elf.5:2011
 #, no-wrap
 msgid "B<NT_PPC_VSX>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2015
+#: man-pages/man5/elf.5:2014
 msgid "PowerPC VSX registers"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2015
+#: man-pages/man5/elf.5:2014
 #, no-wrap
 msgid "B<NT_386_TLS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2018
+#: man-pages/man5/elf.5:2017
 msgid "i386 TLS slots (struct user_desc)"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2018
+#: man-pages/man5/elf.5:2017
 #, no-wrap
 msgid "B<NT_386_IOPERM>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2021
+#: man-pages/man5/elf.5:2020
 msgid "x86 io permission bitmap (1=deny)"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2021
+#: man-pages/man5/elf.5:2020
 #, no-wrap
 msgid "B<NT_X86_XSTATE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2024
+#: man-pages/man5/elf.5:2023
 msgid "x86 extended state using xsave"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2024
+#: man-pages/man5/elf.5:2023
 #, no-wrap
 msgid "B<NT_S390_HIGH_GPRS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2027
+#: man-pages/man5/elf.5:2026
 msgid "s390 upper register halves"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2027
+#: man-pages/man5/elf.5:2026
 #, no-wrap
 msgid "B<NT_S390_TIMER>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2030
+#: man-pages/man5/elf.5:2029
 msgid "s390 timer register"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2030
+#: man-pages/man5/elf.5:2029
 #, no-wrap
 msgid "B<NT_S390_TODCMP>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2033
+#: man-pages/man5/elf.5:2032
 msgid "s390 time-of-day (TOD) clock comparator register"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2033
+#: man-pages/man5/elf.5:2032
 #, no-wrap
 msgid "B<NT_S390_TODPREG>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2036
+#: man-pages/man5/elf.5:2035
 msgid "s390 time-of-day (TOD) programmable register"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2036
+#: man-pages/man5/elf.5:2035
 #, no-wrap
 msgid "B<NT_S390_CTRS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2039
+#: man-pages/man5/elf.5:2038
 msgid "s390 control registers"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2039
+#: man-pages/man5/elf.5:2038
 #, no-wrap
 msgid "B<NT_S390_PREFIX>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2042
+#: man-pages/man5/elf.5:2041
 msgid "s390 prefix register"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2042
+#: man-pages/man5/elf.5:2041
 #, no-wrap
 msgid "B<NT_S390_LAST_BREAK>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2045
+#: man-pages/man5/elf.5:2044
 msgid "s390 breaking event address"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2045
+#: man-pages/man5/elf.5:2044
 #, no-wrap
 msgid "B<NT_S390_SYSTEM_CALL>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2048
+#: man-pages/man5/elf.5:2047
 msgid "s390 system call restart data"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2048
+#: man-pages/man5/elf.5:2047
 #, no-wrap
 msgid "B<NT_S390_TDB>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2051
+#: man-pages/man5/elf.5:2050
 msgid "s390 transaction diagnostic block"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2051
+#: man-pages/man5/elf.5:2050
 #, no-wrap
 msgid "B<NT_ARM_VFP>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2054
+#: man-pages/man5/elf.5:2053
 msgid "ARM VFP/NEON registers"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2054
+#: man-pages/man5/elf.5:2053
 #, no-wrap
 msgid "B<NT_ARM_TLS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2057
+#: man-pages/man5/elf.5:2056
 msgid "ARM TLS register"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2057
+#: man-pages/man5/elf.5:2056
 #, no-wrap
 msgid "B<NT_ARM_HW_BREAK>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2060
+#: man-pages/man5/elf.5:2059
 msgid "ARM hardware breakpoint registers"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2060
+#: man-pages/man5/elf.5:2059
 #, no-wrap
 msgid "B<NT_ARM_HW_WATCH>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2063
+#: man-pages/man5/elf.5:2062
 msgid "ARM hardware watchpoint registers"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2063
+#: man-pages/man5/elf.5:2062
 #, no-wrap
 msgid "B<NT_ARM_SYSTEM_CALL>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2066
+#: man-pages/man5/elf.5:2065
 msgid "ARM system call number"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2068
+#: man-pages/man5/elf.5:2067
 #, no-wrap
 msgid "B<n_name = GNU>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2071
+#: man-pages/man5/elf.5:2070
 msgid "Extensions used by the GNU tool chain."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2072
+#: man-pages/man5/elf.5:2071
 #, no-wrap
 msgid "B<NT_GNU_ABI_TAG>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2076
+#: man-pages/man5/elf.5:2075
 msgid "Operating system (OS) ABI information.  The desc field will be 4 words:"
 msgstr ""
 
 #. type: IP
-#: man-pages/man5/elf.5:2079 man-pages/man5/elf.5:2082
-#: man-pages/man5/elf.5:2084 man-pages/man5/elf.5:2086
-#: man-pages/man5/elf.5:2097 man-pages/man5/elf.5:2099
+#: man-pages/man5/elf.5:2078 man-pages/man5/elf.5:2081
+#: man-pages/man5/elf.5:2083 man-pages/man5/elf.5:2085
+#: man-pages/man5/elf.5:2096 man-pages/man5/elf.5:2098
 #, no-wrap
 msgid "\\(bu"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2082
+#: man-pages/man5/elf.5:2081
 msgid ""
 "word 0: OS descriptor (B<ELF_NOTE_OS_LINUX>, B<ELF_NOTE_OS_GNU>, and so on)`"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2084
+#: man-pages/man5/elf.5:2083
 msgid "word 1: major version of the ABI"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2086
+#: man-pages/man5/elf.5:2085
 msgid "word 2: minor version of the ABI"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2088
+#: man-pages/man5/elf.5:2087
 msgid "word 3: subminor version of the ABI"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2090
+#: man-pages/man5/elf.5:2089
 #, no-wrap
 msgid "B<NT_GNU_HWCAP>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2094
+#: man-pages/man5/elf.5:2093
 msgid "Synthetic hwcap information.  The desc field begins with two words:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2099
+#: man-pages/man5/elf.5:2098
 msgid "word 0: number of entries"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2101
+#: man-pages/man5/elf.5:2100
 msgid "word 1: bit mask of enabled entries"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2107
+#: man-pages/man5/elf.5:2106
 msgid ""
 "Then follow variable-length entries, one byte followed by a null-terminated "
 "hwcap name string.  The byte gives the bit number to test if enabled, (1U "
@@ -8008,61 +8025,61 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2107
+#: man-pages/man5/elf.5:2106
 #, no-wrap
 msgid "B<NT_GNU_BUILD_ID>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2114
+#: man-pages/man5/elf.5:2113
 msgid ""
 "Unique build ID as generated by the GNU B<ld>(1)  B<--build-id> option.  The "
 "desc consists of any nonzero number of bytes."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2114
+#: man-pages/man5/elf.5:2113
 #, no-wrap
 msgid "B<NT_GNU_GOLD_VERSION>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2117
+#: man-pages/man5/elf.5:2116
 msgid "The desc contains the GNU Gold linker version used."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2118
+#: man-pages/man5/elf.5:2117
 #, no-wrap
 msgid "B<Default/unknown namespace (e_type != ET_CORE)>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2123
+#: man-pages/man5/elf.5:2122
 msgid ""
 "These are used when the namespace is the default (i.e., I<n_namesz> will be "
 "set to 0), or a fallback when the namespace is unknown."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2124
+#: man-pages/man5/elf.5:2123
 #, no-wrap
 msgid "B<NT_VERSION>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2128
+#: man-pages/man5/elf.5:2127
 msgid "A version string of some sort."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/elf.5:2128
+#: man-pages/man5/elf.5:2127
 #, no-wrap
 msgid "B<NT_ARCH>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/elf.5:2131
+#: man-pages/man5/elf.5:2130
 msgid "Architecture information."
 msgstr ""
 
@@ -8072,7 +8089,7 @@ msgstr ""
 #.  although not all supported platforms use it as the native
 #.  binary file format.
 #. type: Plain text
-#: man-pages/man5/elf.5:2144
+#: man-pages/man5/elf.5:2143
 msgid "ELF first appeared in System V.  The ELF format is an adopted standard."
 msgstr ""
 
@@ -8085,7 +8102,7 @@ msgstr ""
 #.  .Nm elf
 #.  man page.
 #. type: Plain text
-#: man-pages/man5/elf.5:2162
+#: man-pages/man5/elf.5:2161
 msgid ""
 "The extensions for I<e_phnum>, I<e_shnum> and I<e_strndx> respectively are "
 "Linux extensions.  Sun, BSD and AMD64 also support them; for further "
@@ -8097,7 +8114,7 @@ msgstr ""
 msgid ""
 "B<as>(1), B<elfedit>(1), B<gdb>(1), B<ld>(1), B<nm>(1), B<objdump>(1), "
 "B<patchelf>(1), B<readelf>(1), B<size>(1), B<strings>(1), B<strip>(1), "
-"B<execve>(2), B<dl_iterate_phdr>(3), B<core>(5)"
+"B<execve>(2), B<dl_iterate_phdr>(3), B<core>(5), B<ld.so>(8)"
 msgstr ""
 
 #. type: Plain text
@@ -9152,6 +9169,12 @@ msgstr ""
 msgid "ENCRYPT"
 msgstr ""
 
+#. type: TH
+#: man-pages/man3/encrypt.3:30
+#, no-wrap
+msgid "2018-04-30"
+msgstr ""
+
 #. type: Plain text
 #: man-pages/man3/encrypt.3:33
 msgid "encrypt, setkey, encrypt_r, setkey_r - encrypt 64-bit messages"
@@ -9717,6 +9740,12 @@ msgstr ""
 msgid "EXEC"
 msgstr ""
 
+#. type: TH
+#: man-pages/man3/exec.3:41
+#, no-wrap
+msgid "2019-08-02"
+msgstr ""
+
 #. type: Plain text
 #: man-pages/man3/exec.3:44
 msgid "execl, execlp, execle, execv, execvp, execvpe - execute a file"
@@ -9772,12 +9801,24 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/exec.3:104
+#: man-pages/man3/exec.3:85
 msgid ""
-"The I<const char\\ *arg> and subsequent ellipses in the B<execl>(), "
-"B<execlp>(), and B<execle>()  functions can be thought of as I<arg0>, "
-"I<arg1>, \\&..., I<argn>.  Together they describe a list of one or more "
-"pointers to null-terminated strings that represent the argument list "
+"The functions can be grouped based on the letters following the \"exec\" "
+"prefix."
+msgstr ""
+
+#. type: SS
+#: man-pages/man3/exec.3:85
+#, no-wrap
+msgid "l - execl(), execlp(), execle()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/exec.3:103
+msgid ""
+"The I<const char\\ *arg> and subsequent ellipses can be thought of as "
+"I<arg0>, I<arg1>, \\&..., I<argn>.  Together they describe a list of one or "
+"more pointers to null-terminated strings that represent the argument list "
 "available to the executed program.  The first argument, by convention, "
 "should point to the filename associated with the file being executed.  The "
 "list of arguments I<must> be terminated by a null pointer, and, since these "
@@ -9785,60 +9826,83 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/exec.3:117
+#: man-pages/man3/exec.3:107
 msgid ""
-"The B<execv>(), B<execvp>(), and B<execvpe>()  functions provide an array of "
-"pointers to null-terminated strings that represent the argument list "
-"available to the new program.  The first argument, by convention, should "
-"point to the filename associated with the file being executed.  The array of "
-"pointers I<must> be terminated by a null pointer."
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man3/exec.3:134
-msgid ""
-"The B<execle>()  and B<execvpe>()  functions allow the caller to specify the "
-"environment of the executed program via the argument I<envp>.  The I<envp> "
-"argument is an array of pointers to null-terminated strings and I<must> be "
-"terminated by a null pointer.  The other functions take the environment for "
-"the new process image from the external variable I<environ> in the calling "
-"process."
+"By contrast with the 'l' functions, the 'v' functions (below) specify the "
+"command-line arguments of the executed program as a vector."
 msgstr ""
 
 #. type: SS
-#: man-pages/man3/exec.3:134
+#: man-pages/man3/exec.3:107
 #, no-wrap
-msgid "Special semantics for execlp(), execvp(), and execvpe()"
+msgid "v - execv(), execvp(), execvpe()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/exec.3:118
+msgid ""
+"The I<char\\ *const argv[]> argument is an array of pointers to null-"
+"terminated strings that represent the argument list available to the new "
+"program.  The first argument, by convention, should point to the filename "
+"associated with the file being executed.  The array of pointers I<must> be "
+"terminated by a null pointer."
+msgstr ""
+
+#. type: SS
+#: man-pages/man3/exec.3:118
+#, no-wrap
+msgid "e - execle(), execvpe()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/exec.3:127
+msgid ""
+"The environment of the caller is specified via the argument I<envp>.  The "
+"I<envp> argument is an array of pointers to null-terminated strings and "
+"I<must> be terminated by a null pointer."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/exec.3:135
+msgid ""
+"All other B<exec>()  functions (which do not include 'e' in the suffix)  "
+"take the environment for the new process image from the external variable "
+"I<environ> in the calling process."
+msgstr ""
+
+#. type: SS
+#: man-pages/man3/exec.3:135
+#, no-wrap
+msgid "p - execlp(), execvp(), execvpe()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/exec.3:150
+msgid ""
+"These functions duplicate the actions of the shell in searching for an "
+"executable file if the specified filename does not contain a slash (/) "
+"character.  The file is sought in the colon-separated list of directory "
+"pathnames specified in the B<PATH> environment variable.  If this variable "
+"isn't defined, the path list defaults to a list that includes the "
+"directories returned by I<confstr(_CS_PATH)> (which typically returns the "
+"value \"/bin:/usr/bin\")  and possibly also the current working directory; "
+"see NOTES for further details."
 msgstr ""
 
 #. type: Plain text
 #: man-pages/man3/exec.3:154
-msgid ""
-"The B<execlp>(), B<execvp>(), and B<execvpe>()  functions duplicate the "
-"actions of the shell in searching for an executable file if the specified "
-"filename does not contain a slash (/) character.  The file is sought in the "
-"colon-separated list of directory pathnames specified in the B<PATH> "
-"environment variable.  If this variable isn't defined, the path list "
-"defaults to a list that includes the directories returned by "
-"I<confstr(_CS_PATH)> (which typically returns the value \"/bin:/usr/bin\")  "
-"and possibly also the current working directory; see NOTES for further "
-"details."
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man3/exec.3:158
 msgid ""
 "If the specified filename includes a slash character, then B<PATH> is "
 "ignored, and the file at the specified pathname is executed."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/exec.3:160
+#: man-pages/man3/exec.3:156
 msgid "In addition, certain errors are treated specially."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/exec.3:171
+#: man-pages/man3/exec.3:167
 msgid ""
 "If permission is denied for a file (the attempted B<execve>(2)  failed with "
 "the error B<EACCES>), these functions will continue searching the rest of "
@@ -9847,7 +9911,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/exec.3:180
+#: man-pages/man3/exec.3:176
 msgid ""
 "If the header of a file isn't recognized (the attempted B<execve>(2)  failed "
 "with the error B<ENOEXEC>), these functions will execute the shell (I</bin/"
@@ -9856,26 +9920,34 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/exec.3:187
+#: man-pages/man3/exec.3:182
+msgid ""
+"All other B<exec>()  functions (which do not include 'p' in the suffix)  "
+"take as their first argument a (relative or absolute) pathname that "
+"identifies the program to be executed."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/exec.3:189
 msgid ""
 "The B<exec>()  functions return only if an error has occurred.  The return "
 "value is -1, and I<errno> is set to indicate the error."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/exec.3:192
+#: man-pages/man3/exec.3:194
 msgid ""
 "All of these functions may fail and set I<errno> for any of the errors "
 "specified for B<execve>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/exec.3:196
+#: man-pages/man3/exec.3:198
 msgid "The B<execvpe>()  function first appeared in glibc 2.11."
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/exec.3:208
+#: man-pages/man3/exec.3:210
 #, no-wrap
 msgid ""
 "B<execl>(),\n"
@@ -9884,7 +9956,7 @@ msgid ""
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/exec.3:213
+#: man-pages/man3/exec.3:215
 #, no-wrap
 msgid ""
 "B<execlp>(),\n"
@@ -9893,24 +9965,24 @@ msgid ""
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/exec.3:213
+#: man-pages/man3/exec.3:215
 #, no-wrap
 msgid "MT-Safe env"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/exec.3:217
+#: man-pages/man3/exec.3:219
 msgid "POSIX.1-2001, POSIX.1-2008."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/exec.3:221
+#: man-pages/man3/exec.3:223
 msgid "The B<execvpe>()  function is a GNU extension."
 msgstr ""
 
 #.  glibc commit 1eb8930608705702d5746e5491bab4e4429fcb83
 #. type: Plain text
-#: man-pages/man3/exec.3:243
+#: man-pages/man3/exec.3:245
 msgid ""
 "The default search path (used when the environment does not contain the "
 "variable B<PATH>)  shows some variation across systems.  It generally "
@@ -9926,7 +9998,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/exec.3:257
+#: man-pages/man3/exec.3:259
 msgid ""
 "The behavior of B<execlp>()  and B<execvp>()  when errors occur while "
 "attempting to execute the file is historic practice, but has not "
@@ -9937,7 +10009,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/exec.3:269
+#: man-pages/man3/exec.3:271
 msgid ""
 "Traditionally, the functions B<execlp>()  and B<execvp>()  ignored all "
 "errors except for the ones described above and B<ENOMEM> and B<E2BIG>, upon "
@@ -9947,7 +10019,7 @@ msgstr ""
 
 #.  https://sourceware.org/bugzilla/show_bug.cgi?id=19534
 #. type: Plain text
-#: man-pages/man3/exec.3:281
+#: man-pages/man3/exec.3:283
 msgid ""
 "Before glibc 2.24, B<execl>()  and B<execle>()  employed B<realloc>(3)  "
 "internally and were consequently not async-signal-safe, in violation of the "
@@ -9955,13 +10027,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man3/exec.3:281
+#: man-pages/man3/exec.3:283
 #, no-wrap
 msgid "Architecture-specific details"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/exec.3:292
+#: man-pages/man3/exec.3:294
 msgid ""
 "On sparc and sparc64, B<execv>()  is provided as a system call by the kernel "
 "(with the prototype shown above)  for compatibility with SunOS.  This "
@@ -9970,7 +10042,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/exec.3:300
+#: man-pages/man3/exec.3:302
 msgid ""
 "B<sh>(1), B<execve>(2), B<execveat>(2), B<fork>(2), B<ptrace>(2), "
 "B<fexecve>(3), B<system>(3), B<environ>(7)"

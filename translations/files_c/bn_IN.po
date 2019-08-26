@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
-"POT-Creation-Date: 2017-10-19 18:56+0300\n"
-"PO-Revision-Date: 2019-04-02 15:53+0000\n"
+"POT-Creation-Date: 2019-08-26 09:24+0300\n"
+"PO-Revision-Date: 2019-08-26 06:20+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Bengali (India) (http://www.transifex.com/kruvalig/man-pages/language/bn_IN/)\n"
 "MIME-Version: 1.0\n"
@@ -680,7 +680,7 @@ msgstr ""
 #. type: TH
 #: man-pages/man4/cpuid.4:26
 #, no-wrap
-msgid "2009-03-31"
+msgid "2019-08-02"
 msgstr ""
 
 #. type: Plain text
@@ -774,14 +774,19 @@ msgid "Very old x86 CPUs don't support CPUID."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man4/cpuid.4:97
+#: man-pages/man4/cpuid.4:95
+msgid "B<cpuid>(1)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/cpuid.4:99
 msgid ""
 "Intel Corporation, Intel 64 and IA-32 Architectures Software Developer's "
 "Manual Volume 2A: Instruction Set Reference, A-M, 3-180 CPUID reference."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man4/cpuid.4:99
+#: man-pages/man4/cpuid.4:101
 msgid ""
 "Intel Corporation, Intel Processor Identification and the CPUID Instruction,"
 " Application note 485."
@@ -2601,7 +2606,7 @@ msgid ""
 "The following sequences are neither ECMA-48 nor native VT102.  They are "
 "native to the Linux console driver.  Colors are in SGR parameters: 0 = "
 "black, 1 = red, 2 = green, 3 = brown, 4 = blue, 5 = magenta, 6 = cyan, 7 = "
-"white."
+"white; 8\\(en15 = bright versions of 0\\(en7."
 msgstr ""
 
 #. type: tbl table
@@ -2613,7 +2618,7 @@ msgstr ""
 #. type: tbl table
 #: man-pages/man4/console_codes.4:367
 #, no-wrap
-msgid "Set color I<n> as the underline color"
+msgid "Set color I<n> as the underline color."
 msgstr ""
 
 #. type: tbl table
@@ -2625,7 +2630,7 @@ msgstr ""
 #. type: tbl table
 #: man-pages/man4/console_codes.4:368
 #, no-wrap
-msgid "Set color I<n> as the dim color"
+msgid "Set color I<n> as the dim color."
 msgstr ""
 
 #. type: tbl table
@@ -2737,7 +2742,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "Set the cursor blink interval in milliseconds\n"
-"(since Linux 4.2)"
+"(since Linux 4.2)."
 msgstr ""
 
 #. type: SS
@@ -9347,18 +9352,18 @@ msgid ""
 "root directories are the base points for the relative locations displayed in"
 " the corresponding records in the I</proc/[pid]/cgroup> file.  When a "
 "process creates a new cgroup namespace using B<clone>(2)  or B<unshare>(2)  "
-"with the B<CLONE_NEWCGROUP> flag, it enters a new cgroup namespace in which "
-"its current cgroups directories become the cgroup root directories of the "
-"new namespace.  (This applies both for the cgroups version 1 hierarchies and"
-" the cgroups version 2 unified hierarchy.)"
+"with the B<CLONE_NEWCGROUP> flag, its current cgroups directories become the"
+" cgroup root directories of the new namespace.  (This applies both for the "
+"cgroups version 1 hierarchies and the cgroups version 2 unified hierarchy.)"
 msgstr ""
 
 #. type: Plain text
 #: man-pages/man7/cgroup_namespaces.7:67
 msgid ""
-"When viewing I</proc/[pid]/cgroup>, the pathname shown in the third field of"
-" each record will be relative to the reading process's root directory for "
-"the corresponding cgroup hierarchy.  If the cgroup directory of the target "
+"When reading the cgroup memberships of a \"target\" process from "
+"I</proc/[pid]/cgroup>, the pathname shown in the third field of each record "
+"will be relative to the reading process's root directory for the "
+"corresponding cgroup hierarchy.  If the cgroup directory of the target "
 "process lies outside the root directory of the reading process's cgroup "
 "namespace, then the pathname will show I<../> entries for each ancestor "
 "level in the cgroup hierarchy."
@@ -9372,15 +9377,15 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/cgroup_namespaces.7:75
+#: man-pages/man7/cgroup_namespaces.7:76
 msgid ""
-"First, (as superuser) we create a child cgroup in the I<freezer> hierarchy, "
-"and place a process in that cgroup that we will use as part of the "
-"demonstration below:"
+"First, (as superuser) in a shell in the initial cgroup namespace, we create "
+"a child cgroup in the I<freezer> hierarchy, and place a process in that "
+"cgroup that we will use as part of the demonstration below:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/cgroup_namespaces.7:82
+#: man-pages/man7/cgroup_namespaces.7:83
 #, no-wrap
 msgid ""
 "# B<mkdir -p /sys/fs/cgroup/freezer/sub2>\n"
@@ -9390,14 +9395,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/cgroup_namespaces.7:88
+#: man-pages/man7/cgroup_namespaces.7:89
 msgid ""
 "We then create another child cgroup in the I<freezer> hierarchy and put the "
 "shell into that cgroup:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/cgroup_namespaces.7:97
+#: man-pages/man7/cgroup_namespaces.7:98
 #, no-wrap
 msgid ""
 "# B<mkdir -p /sys/fs/cgroup/freezer/sub>\n"
@@ -9409,41 +9414,41 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/cgroup_namespaces.7:103
+#: man-pages/man7/cgroup_namespaces.7:104
 msgid ""
 "Next, we use B<unshare>(1)  to create a process running a new shell in new "
 "cgroup and mount namespaces:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/cgroup_namespaces.7:107
+#: man-pages/man7/cgroup_namespaces.7:108
 #, no-wrap
-msgid "# B<unshare -Cm bash>\n"
+msgid "# B<PS1=\"sh2# \" unshare -Cm bash>\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/cgroup_namespaces.7:118
+#: man-pages/man7/cgroup_namespaces.7:120
 msgid ""
-"We then inspect the I</proc/[pid]/cgroup> files of, respectively, the new "
-"shell process started by the B<unshare>(1)  command, a process that is in "
-"the original cgroup namespace (I<init>, with PID 1), and the process in the "
-"sibling cgroup (I<sub2>):"
+"From the new shell started by B<unshare>(1), we then inspect the "
+"I</proc/[pid]/cgroup> files of, respectively, the new shell, a process that "
+"is in the initial cgroup namespace (I<init>, with PID 1), and the process in"
+" the sibling cgroup (I<sub2>):"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/cgroup_namespaces.7:127
+#: man-pages/man7/cgroup_namespaces.7:129
 #, no-wrap
 msgid ""
-"$ B<cat /proc/self/cgroup | grep freezer>\n"
+"sh2# B<cat /proc/self/cgroup | grep freezer>\n"
 "7:freezer:/\n"
-"$ B<cat /proc/1/cgroup | grep freezer>\n"
+"sh2# B<cat /proc/1/cgroup | grep freezer>\n"
 "7:freezer:/..\n"
-"$ B<cat /proc/20124/cgroup | grep freezer>\n"
+"sh2# B<cat /proc/20124/cgroup | grep freezer>\n"
 "7:freezer:/../sub2\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/cgroup_namespaces.7:143
+#: man-pages/man7/cgroup_namespaces.7:145
 msgid ""
 "From the output of the first command, we see that the freezer cgroup "
 "membership of the new shell (which is in the same cgroup as the initial "
@@ -9456,73 +9461,74 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/cgroup_namespaces.7:147
+#: man-pages/man7/cgroup_namespaces.7:149
 msgid ""
 "However, when we look in I</proc/self/mountinfo> we see the following "
 "anomaly:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/cgroup_namespaces.7:152
+#: man-pages/man7/cgroup_namespaces.7:154
 #, no-wrap
 msgid ""
-"# B<cat /proc/self/mountinfo | grep freezer>\n"
+"sh2# B<cat /proc/self/mountinfo | grep freezer>\n"
 "155 145 0:32 /.. /sys/fs/cgroup/freezer ...\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/cgroup_namespaces.7:168
+#: man-pages/man7/cgroup_namespaces.7:171
 msgid ""
 "The fourth field of this line (I</..>)  should show the directory in the "
 "cgroup filesystem which forms the root of this mount.  Since by the "
 "definition of cgroup namespaces, the process's current freezer cgroup "
 "directory became its root freezer cgroup directory, we should see "
 "\\(aq/\\(aq in this field.  The problem here is that we are seeing a mount "
-"entry for the cgroup filesystem corresponding to our initial shell process's"
-" cgroup namespace (whose cgroup filesystem is indeed rooted in the parent "
-"directory of I<sub>).  We need to remount the freezer cgroup filesystem "
-"inside this cgroup namespace, after which we see the expected results:"
+"entry for the cgroup filesystem corresponding to the initial cgroup "
+"namespace (whose cgroup filesystem is indeed rooted at the parent directory "
+"of I<sub>).  To fix this problem, we must remount the freezer cgroup "
+"filesystem from the new shell (i.e., perform the mount from a process that "
+"is in the new cgroup namespace), after which we see the expected results:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/cgroup_namespaces.7:177
+#: man-pages/man7/cgroup_namespaces.7:180
 #, no-wrap
 msgid ""
-"# B<mount --make-rslave />     # Don't propagate mount events\n"
-"                            # to other namespaces\n"
-"# B<umount /sys/fs/cgroup/freezer>\n"
-"# B<mount -t cgroup -o freezer freezer /sys/fs/cgroup/freezer>\n"
-"# B<cat /proc/self/mountinfo | grep freezer>\n"
+"sh2# B<mount --make-rslave />     # Don't propagate mount events\n"
+"                               # to other namespaces\n"
+"sh2# B<umount /sys/fs/cgroup/freezer>\n"
+"sh2# B<mount -t cgroup -o freezer freezer /sys/fs/cgroup/freezer>\n"
+"sh2# B<cat /proc/self/mountinfo | grep freezer>\n"
 "155 145 0:32 / /sys/fs/cgroup/freezer rw,relatime ...\n"
 msgstr ""
 
 #. type: SH
-#: man-pages/man7/cgroup_namespaces.7:180
+#: man-pages/man7/cgroup_namespaces.7:183
 #, no-wrap
 msgid "CONFORMING TO"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/cgroup_namespaces.7:182
+#: man-pages/man7/cgroup_namespaces.7:185
 msgid "Namespaces are a Linux-specific feature."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/cgroup_namespaces.7:186
+#: man-pages/man7/cgroup_namespaces.7:189
 msgid ""
 "Use of cgroup namespaces requires a kernel that is configured with the "
 "B<CONFIG_CGROUPS> option."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/cgroup_namespaces.7:188
+#: man-pages/man7/cgroup_namespaces.7:191
 msgid ""
 "The virtualization provided by cgroup namespaces serves a number of "
 "purposes:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/cgroup_namespaces.7:194
+#: man-pages/man7/cgroup_namespaces.7:197
 msgid ""
 "It prevents information leaks whereby cgroup directory paths outside of a "
 "container would otherwise be visible to processes in the container.  Such "
@@ -9531,7 +9537,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/cgroup_namespaces.7:204
+#: man-pages/man7/cgroup_namespaces.7:207
 msgid ""
 "It eases tasks such as container migration.  The virtualization provided by "
 "cgroup namespaces allows containers to be isolated from knowledge of the "
@@ -9543,7 +9549,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/cgroup_namespaces.7:209
+#: man-pages/man7/cgroup_namespaces.7:212
 msgid ""
 "It allows better confinement of containerized processes, because it is "
 "possible to mount the container's cgroup filesystems such that the container"
@@ -9552,19 +9558,19 @@ msgid ""
 msgstr ""
 
 #. type: IP
-#: man-pages/man7/cgroup_namespaces.7:210
-#: man-pages/man7/cgroup_namespaces.7:214
+#: man-pages/man7/cgroup_namespaces.7:213
+#: man-pages/man7/cgroup_namespaces.7:217
 #, no-wrap
 msgid "\\(bu"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/cgroup_namespaces.7:214
+#: man-pages/man7/cgroup_namespaces.7:217
 msgid "We have a cgroup directory, I</cg/1>, that is owned by user ID 9000."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/cgroup_namespaces.7:229
+#: man-pages/man7/cgroup_namespaces.7:232
 msgid ""
 "We have a process, I<X>, also owned by user ID 9000, that is namespaced "
 "under the cgroup I</cg/1/2> (i.e., I<X> was placed in a new cgroup namespace"
@@ -9572,7 +9578,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/cgroup_namespaces.7:256
+#: man-pages/man7/cgroup_namespaces.7:259
 msgid ""
 "In the absence of cgroup namespacing, because the cgroup directory I</cg/1> "
 "is owned (and writable) by UID 9000 and process I<X> is also owned by user "
@@ -9588,7 +9594,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/cgroup_namespaces.7:265
+#: man-pages/man7/cgroup_namespaces.7:268
 msgid ""
 "B<unshare>(1), B<clone>(2), B<setns>(2), B<unshare>(2), B<proc>(5), "
 "B<cgroups>(7), B<credentials>(7), B<namespaces>(7), B<user_namespaces>(7)"
@@ -9598,12 +9604,6 @@ msgstr ""
 #: man-pages/man7/credentials.7:27
 #, no-wrap
 msgid "CREDENTIALS"
-msgstr ""
-
-#. type: TH
-#: man-pages/man7/credentials.7:27
-#, no-wrap
-msgid "2016-12-12"
 msgstr ""
 
 #. type: Plain text
@@ -9888,7 +9888,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/credentials.7:307
+#: man-pages/man7/credentials.7:300
+msgid ""
+"Various fields in the I</proc/[pid]/status> file show the process "
+"credentials described above.  See B<proc>(5)  for further information."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/credentials.7:314
 msgid ""
 "The POSIX threads specification requires that credentials are shared by all "
 "of the threads in a process.  However, at the kernel level, Linux maintains "
@@ -9900,7 +9907,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/credentials.7:356
+#: man-pages/man7/credentials.7:364
 msgid ""
 "B<bash>(1), B<csh>(1), B<groups>(1), B<id>(1), B<newgrp>(1), B<ps>(1), "
 "B<runuser>(1), B<setpriv>(1), B<sg>(1), B<su>(1), B<access>(2), "
@@ -9909,10 +9916,11 @@ msgid ""
 "B<seteuid>(2), B<setfsgid>(2), B<setfsuid>(2), B<setgid>(2), "
 "B<setgroups>(2), B<setpgid>(2), B<setresgid>(2), B<setresuid>(2), "
 "B<setsid>(2), B<setuid>(2), B<waitpid>(2), B<euidaccess>(3), "
-"B<initgroups>(3), B<killpg>(3), B<tcgetpgrp>(3), B<tcsetpgrp>(3), "
-"B<group>(5), B<passwd>(5), B<shadow>(5), B<capabilities>(7), "
-"B<namespaces>(7), B<path_resolution>(7), B<pid_namespaces>(7), "
-"B<pthreads>(7), B<signal>(7), B<unix>(7), B<user_namespaces>(7), B<sudo>(8)"
+"B<initgroups>(3), B<killpg>(3), B<tcgetpgrp>(3), B<tcgetsid>(3), "
+"B<tcsetpgrp>(3), B<group>(5), B<passwd>(5), B<shadow>(5), "
+"B<capabilities>(7), B<namespaces>(7), B<path_resolution>(7), "
+"B<pid_namespaces>(7), B<pthreads>(7), B<signal>(7), B<unix>(7), "
+"B<user_namespaces>(7), B<sudo>(8)"
 msgstr ""
 
 #. type: TH
@@ -11228,32 +11236,38 @@ msgid "ignore directory sticky bit on file deletion;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:146
+#: man-pages/man7/capabilities.7:143
+msgid ""
+"modify I<user> extended attributes on sticky directory owned by any user;"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/capabilities.7:150
 msgid ""
 "specify B<O_NOATIME> for arbitrary files in B<open>(2)  and B<fcntl>(2)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:148
+#: man-pages/man7/capabilities.7:152
 #, no-wrap
 msgid "B<CAP_FSETID>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:155
+#: man-pages/man7/capabilities.7:159
 msgid ""
 "Don't clear set-user-ID and set-group-ID mode bits when a file is modified;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:158
+#: man-pages/man7/capabilities.7:162
 msgid ""
 "set the set-group-ID bit for a file whose GID does not match the filesystem "
 "or any of the supplementary GIDs of the calling process."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:160
+#: man-pages/man7/capabilities.7:164
 #, no-wrap
 msgid "B<CAP_IPC_LOCK>"
 msgstr ""
@@ -11261,23 +11275,23 @@ msgstr ""
 #.  FIXME . As at Linux 3.2, there are some strange uses of this capability
 #.  in other places; they probably should be replaced with something else.
 #. type: Plain text
-#: man-pages/man7/capabilities.7:169
+#: man-pages/man7/capabilities.7:173
 msgid "Lock memory (B<mlock>(2), B<mlockall>(2), B<mmap>(2), B<shmctl>(2))."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:169
+#: man-pages/man7/capabilities.7:173
 #, no-wrap
 msgid "B<CAP_IPC_OWNER>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:172
+#: man-pages/man7/capabilities.7:176
 msgid "Bypass permission checks for operations on System V IPC objects."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:172
+#: man-pages/man7/capabilities.7:176
 #, no-wrap
 msgid "B<CAP_KILL>"
 msgstr ""
@@ -11288,125 +11302,125 @@ msgstr ""
 #.        if the child does an exec().  What is the rationale
 #.        for this?
 #. type: Plain text
-#: man-pages/man7/capabilities.7:185
+#: man-pages/man7/capabilities.7:189
 msgid ""
 "Bypass permission checks for sending signals (see B<kill>(2)).  This "
 "includes use of the B<ioctl>(2)  B<KDSIGACCEPT> operation."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:185
+#: man-pages/man7/capabilities.7:189
 #, no-wrap
 msgid "B<CAP_LEASE> (since Linux 2.4)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:189
+#: man-pages/man7/capabilities.7:193
 msgid "Establish leases on arbitrary files (see B<fcntl>(2))."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:189
+#: man-pages/man7/capabilities.7:193
 #, no-wrap
 msgid "B<CAP_LINUX_IMMUTABLE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:197
+#: man-pages/man7/capabilities.7:201
 msgid ""
 "Set the B<FS_APPEND_FL> and B<FS_IMMUTABLE_FL> inode flags (see "
 "B<ioctl_iflags>(2))."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:197
+#: man-pages/man7/capabilities.7:201
 #, no-wrap
 msgid "B<CAP_MAC_ADMIN> (since Linux 2.6.25)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:201
+#: man-pages/man7/capabilities.7:205
 msgid ""
 "Allow MAC configuration or state changes.  Implemented for the Smack Linux "
 "Security Module (LSM)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:201
+#: man-pages/man7/capabilities.7:205
 #, no-wrap
 msgid "B<CAP_MAC_OVERRIDE> (since Linux 2.6.25)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:205
+#: man-pages/man7/capabilities.7:209
 msgid ""
 "Override Mandatory Access Control (MAC).  Implemented for the Smack LSM."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:205
+#: man-pages/man7/capabilities.7:209
 #, no-wrap
 msgid "B<CAP_MKNOD> (since Linux 2.4)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:209
+#: man-pages/man7/capabilities.7:213
 msgid "Create special files using B<mknod>(2)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:209
+#: man-pages/man7/capabilities.7:213
 #, no-wrap
 msgid "B<CAP_NET_ADMIN>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:212
+#: man-pages/man7/capabilities.7:216
 msgid "Perform various network-related operations:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:216
+#: man-pages/man7/capabilities.7:220
 msgid "interface configuration;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:218
+#: man-pages/man7/capabilities.7:222
 msgid "administration of IP firewall, masquerading, and accounting;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:220
+#: man-pages/man7/capabilities.7:224
 msgid "modify routing tables;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:222
+#: man-pages/man7/capabilities.7:226
 msgid "bind to any address for transparent proxying;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:224
+#: man-pages/man7/capabilities.7:228
 msgid "set type-of-service (TOS)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:226
+#: man-pages/man7/capabilities.7:230
 msgid "clear driver statistics;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:228
+#: man-pages/man7/capabilities.7:232
 msgid "set promiscuous mode;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:230
+#: man-pages/man7/capabilities.7:234
 msgid "enabling multicasting;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:241
+#: man-pages/man7/capabilities.7:245
 msgid ""
 "use B<setsockopt>(2)  to set the following socket options: B<SO_DEBUG>, "
 "B<SO_MARK>, B<SO_PRIORITY> (for a priority outside the range 0 to 6), "
@@ -11414,20 +11428,20 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:243
+#: man-pages/man7/capabilities.7:247
 #, no-wrap
 msgid "B<CAP_NET_BIND_SERVICE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:247
+#: man-pages/man7/capabilities.7:251
 msgid ""
 "Bind a socket to Internet domain privileged ports (port numbers less than "
 "1024)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:247
+#: man-pages/man7/capabilities.7:251
 #, no-wrap
 msgid "B<CAP_NET_BROADCAST>"
 msgstr ""
@@ -11435,68 +11449,68 @@ msgstr ""
 #.  FIXME Since Linux 4.2, there are use cases for netlink sockets
 #.     commit 59324cf35aba5336b611074028777838a963d03b
 #. type: Plain text
-#: man-pages/man7/capabilities.7:252
+#: man-pages/man7/capabilities.7:256
 msgid "(Unused)  Make socket broadcasts, and listen to multicasts."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:252
+#: man-pages/man7/capabilities.7:256
 #, no-wrap
 msgid "B<CAP_NET_RAW>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:258
+#: man-pages/man7/capabilities.7:262
 msgid "Use RAW and PACKET sockets;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:260
+#: man-pages/man7/capabilities.7:264
 msgid "bind to any address for transparent proxying."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:263
+#: man-pages/man7/capabilities.7:267
 #, no-wrap
 msgid "B<CAP_SETGID>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:269
+#: man-pages/man7/capabilities.7:273
 msgid ""
 "Make arbitrary manipulations of process GIDs and supplementary GID list;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:271
+#: man-pages/man7/capabilities.7:275
 msgid "forge GID when passing socket credentials via UNIX domain sockets;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:274
+#: man-pages/man7/capabilities.7:278
 msgid ""
 "write a group ID mapping in a user namespace (see B<user_namespaces>(7))."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:276
+#: man-pages/man7/capabilities.7:280
 #, no-wrap
 msgid "B<CAP_SETFCAP> (since Linux 2.6.24)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:279
+#: man-pages/man7/capabilities.7:283
 msgid "Set arbitrary capabilities on a file."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:279
+#: man-pages/man7/capabilities.7:283
 #, no-wrap
 msgid "B<CAP_SETPCAP>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:290
+#: man-pages/man7/capabilities.7:294
 msgid ""
 "If file capabilities are supported (i.e., since Linux 2.6.24): add any "
 "capability from the calling thread's bounding set to its inheritable set; "
@@ -11505,7 +11519,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:300
+#: man-pages/man7/capabilities.7:304
 msgid ""
 "If file capabilities are not supported (i.e., kernels before Linux 2.6.24): "
 "grant or remove any capability in the caller's permitted capability set to "
@@ -11515,100 +11529,100 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:300
+#: man-pages/man7/capabilities.7:304
 #, no-wrap
 msgid "B<CAP_SETUID>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:310
+#: man-pages/man7/capabilities.7:314
 msgid ""
 "Make arbitrary manipulations of process UIDs (B<setuid>(2), B<setreuid>(2), "
 "B<setresuid>(2), B<setfsuid>(2));"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:312
+#: man-pages/man7/capabilities.7:316
 msgid "forge UID when passing socket credentials via UNIX domain sockets;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:315
+#: man-pages/man7/capabilities.7:319
 msgid ""
 "write a user ID mapping in a user namespace (see B<user_namespaces>(7))."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:318
+#: man-pages/man7/capabilities.7:322
 #, no-wrap
 msgid "B<CAP_SYS_ADMIN>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:324
+#: man-pages/man7/capabilities.7:328
 msgid ""
 "I<Note>: this capability is overloaded; see I<Notes to kernel developers>, "
 "below."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:337
+#: man-pages/man7/capabilities.7:342
 msgid ""
 "Perform a range of system administration operations including: "
-"B<quotactl>(2), B<mount>(2), B<umount>(2), B<swapon>(2), B<swapoff>(2), "
-"B<sethostname>(2), and B<setdomainname>(2);"
+"B<quotactl>(2), B<mount>(2), B<umount>(2), B<pivot_root>(2), B<swapon>(2), "
+"B<swapoff>(2), B<sethostname>(2), and B<setdomainname>(2);"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:343
+#: man-pages/man7/capabilities.7:348
 msgid ""
 "perform privileged B<syslog>(2)  operations (since Linux 2.6.37, "
 "B<CAP_SYSLOG> should be used to permit such operations);"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:348
+#: man-pages/man7/capabilities.7:353
 msgid "perform B<VM86_REQUEST_IRQ> B<vm86>(2)  command;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:354
+#: man-pages/man7/capabilities.7:359
 msgid ""
 "perform B<IPC_SET> and B<IPC_RMID> operations on arbitrary System V IPC "
 "objects;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:358 man-pages/man7/capabilities.7:650
+#: man-pages/man7/capabilities.7:363 man-pages/man7/capabilities.7:660
 msgid "override B<RLIMIT_NPROC> resource limit;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:365
+#: man-pages/man7/capabilities.7:370
 msgid ""
 "perform operations on I<trusted> and I<security> Extended Attributes (see "
 "B<xattr>(7));"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:368
+#: man-pages/man7/capabilities.7:373
 msgid "use B<lookup_dcookie>(2);"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:376
+#: man-pages/man7/capabilities.7:381
 msgid ""
 "use B<ioprio_set>(2)  to assign B<IOPRIO_CLASS_RT> and (before Linux 2.6.25)"
 "  B<IOPRIO_CLASS_IDLE> I/O scheduling classes;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:378
+#: man-pages/man7/capabilities.7:383
 msgid "forge PID when passing socket credentials via UNIX domain sockets;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:387
+#: man-pages/man7/capabilities.7:392
 msgid ""
 "exceed I</proc/sys/fs/file-max>, the system-wide limit on the number of open"
 " files, in system calls that open files (e.g., B<accept>(2), B<execve>(2), "
@@ -11616,7 +11630,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:396
+#: man-pages/man7/capabilities.7:401
 msgid ""
 "employ B<CLONE_*> flags that create new namespaces with B<clone>(2)  and "
 "B<unshare>(2)  (but, since Linux 3.8, creating user namespaces does not "
@@ -11624,170 +11638,177 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:399
+#: man-pages/man7/capabilities.7:404
 msgid "call B<perf_event_open>(2);"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:403
+#: man-pages/man7/capabilities.7:408
 msgid "access privileged I<perf> event information;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:411
+#: man-pages/man7/capabilities.7:416
 msgid ""
 "call B<setns>(2)  (requires B<CAP_SYS_ADMIN> in the I<target> namespace);"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:414
+#: man-pages/man7/capabilities.7:419
 msgid "call B<fanotify_init>(2);"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:417
+#: man-pages/man7/capabilities.7:422
 msgid "call B<bpf>(2);"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:424
+#: man-pages/man7/capabilities.7:429
 msgid ""
 "perform privileged B<KEYCTL_CHOWN> and B<KEYCTL_SETPERM> B<keyctl>(2)  "
 "operations;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:429
+#: man-pages/man7/capabilities.7:434
 msgid "perform B<madvise>(2)  B<MADV_HWPOISON> operation;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:435
+#: man-pages/man7/capabilities.7:440
 msgid ""
 "employ the B<TIOCSTI> B<ioctl>(2)  to insert characters into the input queue"
 " of a terminal other than the caller's controlling terminal;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:439
+#: man-pages/man7/capabilities.7:444
 msgid "employ the obsolete B<nfsservctl>(2)  system call;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:443
+#: man-pages/man7/capabilities.7:448
 msgid "employ the obsolete B<bdflush>(2)  system call;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:447
+#: man-pages/man7/capabilities.7:452
 msgid "perform various privileged block-device B<ioctl>(2)  operations;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:451
+#: man-pages/man7/capabilities.7:456
 msgid "perform various privileged filesystem B<ioctl>(2)  operations;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:458
+#: man-pages/man7/capabilities.7:463
 msgid ""
 "perform privileged B<ioctl>(2)  operations on the I</dev/random> device (see"
 " B<random>(4));"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:464
+#: man-pages/man7/capabilities.7:469
 msgid ""
 "install a B<seccomp>(2)  filter without first having to set the "
 "I<no_new_privs> thread attribute;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:466
+#: man-pages/man7/capabilities.7:471
 msgid "modify allow/deny rules for device control groups;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:471
+#: man-pages/man7/capabilities.7:476
 msgid ""
 "employ the B<ptrace>(2)  B<PTRACE_SECCOMP_GET_FILTER> operation to dump "
 "tracee's seccomp filters;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:478
+#: man-pages/man7/capabilities.7:483
 msgid ""
 "employ the B<ptrace>(2)  B<PTRACE_SETOPTIONS> operation to suspend the "
 "tracee's seccomp protections (i.e., the B<PTRACE_O_SUSPEND_SECCOMP> flag);"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:480
+#: man-pages/man7/capabilities.7:485
 msgid "perform administrative operations on many device drivers."
 msgstr ""
 
+#. type: Plain text
+#: man-pages/man7/capabilities.7:490
+msgid ""
+"Modify autogroup nice values by writing to I</proc/[pid]autogroup> (see "
+"B<sched>(7))."
+msgstr ""
+
 #. type: TP
-#: man-pages/man7/capabilities.7:482
+#: man-pages/man7/capabilities.7:492
 #, no-wrap
 msgid "B<CAP_SYS_BOOT>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:488
+#: man-pages/man7/capabilities.7:498
 msgid "Use B<reboot>(2)  and B<kexec_load>(2)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:488
+#: man-pages/man7/capabilities.7:498
 #, no-wrap
 msgid "B<CAP_SYS_CHROOT>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:495
+#: man-pages/man7/capabilities.7:505
 msgid "Use B<chroot>(2);"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:498
+#: man-pages/man7/capabilities.7:508
 msgid "change mount namespaces using B<setns>(2)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:500
+#: man-pages/man7/capabilities.7:510
 #, no-wrap
 msgid "B<CAP_SYS_MODULE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:510
+#: man-pages/man7/capabilities.7:520
 msgid ""
 "Load and unload kernel modules (see B<init_module>(2)  and "
 "B<delete_module>(2));"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:513
+#: man-pages/man7/capabilities.7:523
 msgid ""
 "in kernels before 2.6.25: drop capabilities from the system-wide capability "
 "bounding set."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:515
+#: man-pages/man7/capabilities.7:525
 #, no-wrap
 msgid "B<CAP_SYS_NICE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:524
+#: man-pages/man7/capabilities.7:534
 msgid ""
 "Raise process nice value (B<nice>(2), B<setpriority>(2))  and change the "
 "nice value for arbitrary processes;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:530
+#: man-pages/man7/capabilities.7:540
 msgid ""
 "set real-time scheduling policies for calling process, and set scheduling "
 "policies and priorities for arbitrary processes (B<sched_setscheduler>(2), "
@@ -11795,12 +11816,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:533
+#: man-pages/man7/capabilities.7:543
 msgid "set CPU affinity for arbitrary processes (B<sched_setaffinity>(2));"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:536
+#: man-pages/man7/capabilities.7:546
 msgid ""
 "set I/O scheduling class and priority for arbitrary processes "
 "(B<ioprio_set>(2));"
@@ -11812,177 +11833,177 @@ msgstr ""
 #.          capable(CAP_SYS_NICE) ? MPOL_MF_MOVE_ALL : MPOL_MF_MOVE);
 #.  Document this.
 #. type: Plain text
-#: man-pages/man7/capabilities.7:547
+#: man-pages/man7/capabilities.7:557
 msgid ""
 "apply B<migrate_pages>(2)  to arbitrary processes and allow processes to be "
 "migrated to arbitrary nodes;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:551
+#: man-pages/man7/capabilities.7:561
 msgid "apply B<move_pages>(2)  to arbitrary processes;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:558
+#: man-pages/man7/capabilities.7:568
 msgid ""
 "use the B<MPOL_MF_MOVE_ALL> flag with B<mbind>(2)  and B<move_pages>(2)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:560
+#: man-pages/man7/capabilities.7:570
 #, no-wrap
 msgid "B<CAP_SYS_PACCT>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:564
+#: man-pages/man7/capabilities.7:574
 msgid "Use B<acct>(2)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:564
+#: man-pages/man7/capabilities.7:574
 #, no-wrap
 msgid "B<CAP_SYS_PTRACE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:571
+#: man-pages/man7/capabilities.7:581
 msgid "Trace arbitrary processes using B<ptrace>(2);"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:575
+#: man-pages/man7/capabilities.7:585
 msgid "apply B<get_robust_list>(2)  to arbitrary processes;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:580
+#: man-pages/man7/capabilities.7:590
 msgid ""
 "transfer data to or from the memory of arbitrary processes using "
 "B<process_vm_readv>(2)  and B<process_vm_writev>(2);"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:583
+#: man-pages/man7/capabilities.7:593
 msgid "inspect processes using B<kcmp>(2)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:585
+#: man-pages/man7/capabilities.7:595
 #, no-wrap
 msgid "B<CAP_SYS_RAWIO>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:594
+#: man-pages/man7/capabilities.7:604
 msgid "Perform I/O port operations (B<iopl>(2)  and B<ioperm>(2));"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:597
+#: man-pages/man7/capabilities.7:607
 msgid "access I</proc/kcore>;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:602
+#: man-pages/man7/capabilities.7:612
 msgid "employ the B<FIBMAP> B<ioctl>(2)  operation;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:605
+#: man-pages/man7/capabilities.7:615
 msgid ""
 "open devices for accessing x86 model-specific registers (MSRs, see "
 "B<msr>(4));"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:608
+#: man-pages/man7/capabilities.7:618
 msgid "update I</proc/sys/vm/mmap_min_addr>;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:611
+#: man-pages/man7/capabilities.7:621
 msgid ""
 "create memory mappings at addresses below the value specified by "
 "I</proc/sys/vm/mmap_min_addr>;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:614
+#: man-pages/man7/capabilities.7:624
 msgid "map files in I</proc/bus/pci>;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:619
+#: man-pages/man7/capabilities.7:629
 msgid "open I</dev/mem> and I</dev/kmem>;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:621
+#: man-pages/man7/capabilities.7:631
 msgid "perform various SCSI device commands;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:627
+#: man-pages/man7/capabilities.7:637
 msgid "perform certain operations on B<hpsa>(4)  and B<cciss>(4)  devices;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:629
+#: man-pages/man7/capabilities.7:639
 msgid "perform a range of device-specific operations on other devices."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:631
+#: man-pages/man7/capabilities.7:641
 #, no-wrap
 msgid "B<CAP_SYS_RESOURCE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:637
+#: man-pages/man7/capabilities.7:647
 msgid "Use reserved space on ext2 filesystems;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:641
+#: man-pages/man7/capabilities.7:651
 msgid "make B<ioctl>(2)  calls controlling ext3 journaling;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:643
+#: man-pages/man7/capabilities.7:653
 msgid "override disk quota limits;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:646
+#: man-pages/man7/capabilities.7:656
 msgid "increase resource limits (see B<setrlimit>(2));"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:652
+#: man-pages/man7/capabilities.7:662
 msgid "override maximum number of consoles on console allocation;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:654
+#: man-pages/man7/capabilities.7:664
 msgid "override maximum number of keymaps;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:656
+#: man-pages/man7/capabilities.7:666
 msgid "allow more than 64hz interrupts from the real-time clock;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:665
+#: man-pages/man7/capabilities.7:675
 msgid ""
 "raise I<msg_qbytes> limit for a System V message queue above the limit in "
 "I</proc/sys/kernel/msgmnb> (see B<msgop>(2)  and B<msgctl>(2));"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:672
+#: man-pages/man7/capabilities.7:682
 msgid ""
 "allow the B<RLIMIT_NOFILE> resource limit on the number of \"in-flight\" "
 "file descriptors to be bypassed when passing file descriptors to another "
@@ -11990,79 +12011,79 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:679
+#: man-pages/man7/capabilities.7:689
 msgid ""
 "override the I</proc/sys/fs/pipe-size-max> limit when setting the capacity "
 "of a pipe using the B<F_SETPIPE_SZ> B<fcntl>(2)  command."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:684
+#: man-pages/man7/capabilities.7:694
 msgid ""
 "use B<F_SETPIPE_SZ> to increase the capacity of a pipe above the limit "
 "specified by I</proc/sys/fs/pipe-max-size>;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:689
+#: man-pages/man7/capabilities.7:699
 msgid ""
 "override I</proc/sys/fs/mqueue/queues_max> limit when creating POSIX message"
 " queues (see B<mq_overview>(7));"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:694
+#: man-pages/man7/capabilities.7:704
 msgid "employ the B<prctl>(2)  B<PR_SET_MM> operation;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:699
+#: man-pages/man7/capabilities.7:709
 msgid ""
 "set I</proc/[pid]/oom_score_adj> to a value lower than the value last set by"
 " a process with B<CAP_SYS_RESOURCE>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:701
+#: man-pages/man7/capabilities.7:711
 #, no-wrap
 msgid "B<CAP_SYS_TIME>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:708
+#: man-pages/man7/capabilities.7:718
 msgid ""
 "Set system clock (B<settimeofday>(2), B<stime>(2), B<adjtimex>(2)); set "
 "real-time (hardware) clock."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:708
+#: man-pages/man7/capabilities.7:718
 #, no-wrap
 msgid "B<CAP_SYS_TTY_CONFIG>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:715
+#: man-pages/man7/capabilities.7:725
 msgid ""
 "Use B<vhangup>(2); employ various privileged B<ioctl>(2)  operations on "
 "virtual terminals."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:715
+#: man-pages/man7/capabilities.7:725
 #, no-wrap
 msgid "B<CAP_SYSLOG> (since Linux 2.6.37)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:726
+#: man-pages/man7/capabilities.7:736
 msgid ""
 "Perform privileged B<syslog>(2)  operations.  See B<syslog>(2)  for "
 "information on which operations require privilege."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:736
+#: man-pages/man7/capabilities.7:746
 msgid ""
 "View kernel addresses exposed via I</proc> and other interfaces when "
 "I</proc/sys/kernel/kptr_restrict> has the value 1.  (See the discussion of "
@@ -12070,79 +12091,79 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:738
+#: man-pages/man7/capabilities.7:748
 #, no-wrap
 msgid "B<CAP_WAKE_ALARM> (since Linux 3.0)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:746
+#: man-pages/man7/capabilities.7:756
 msgid ""
 "Trigger something that will wake up the system (set B<CLOCK_REALTIME_ALARM> "
 "and B<CLOCK_BOOTTIME_ALARM> timers)."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/capabilities.7:746
+#: man-pages/man7/capabilities.7:756
 #, no-wrap
 msgid "Past and current implementation"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:748
+#: man-pages/man7/capabilities.7:758
 msgid "A full implementation of capabilities requires that:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:752
+#: man-pages/man7/capabilities.7:762
 msgid ""
 "For all privileged operations, the kernel must check whether the thread has "
 "the required capability in its effective set."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:755
+#: man-pages/man7/capabilities.7:765
 msgid ""
 "The kernel must provide system calls allowing a thread's capability sets to "
 "be changed and retrieved."
 msgstr ""
 
 #. type: IP
-#: man-pages/man7/capabilities.7:755 man-pages/man7/capabilities.7:1413
-#: man-pages/man7/capabilities.7:1467
+#: man-pages/man7/capabilities.7:765 man-pages/man7/capabilities.7:1423
+#: man-pages/man7/capabilities.7:1477
 #, no-wrap
 msgid "3."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:758
+#: man-pages/man7/capabilities.7:768
 msgid ""
 "The filesystem must support attaching capabilities to an executable file, so"
 " that a process gains those capabilities when the file is executed."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:762
+#: man-pages/man7/capabilities.7:772
 msgid ""
 "Before kernel 2.6.24, only the first two of these requirements are met; "
 "since kernel 2.6.24, all three requirements are met."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/capabilities.7:762
+#: man-pages/man7/capabilities.7:772
 #, no-wrap
 msgid "Notes to kernel developers"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:765
+#: man-pages/man7/capabilities.7:775
 msgid ""
 "When adding a new kernel feature that should be governed by a capability, "
 "consider the following points."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:770
+#: man-pages/man7/capabilities.7:780
 msgid ""
 "The goal of capabilities is divide the power of superuser into pieces, such "
 "that if a program that has one or more capabilities is compromised, its "
@@ -12151,7 +12172,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:778
+#: man-pages/man7/capabilities.7:788
 msgid ""
 "You have the choice of either creating a new capability for your new "
 "feature, or associating the feature with one of the existing capabilities.  "
@@ -12162,7 +12183,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:786
+#: man-pages/man7/capabilities.7:796
 msgid ""
 "To determine which existing capability might best be associated with your "
 "new feature, review the list of capabilities above in order to find a "
@@ -12174,7 +12195,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:804
+#: man-pages/man7/capabilities.7:814
 msgid ""
 "I<Don't> choose B<CAP_SYS_ADMIN> if you can possibly avoid it! A vast "
 "proportion of existing capability checks are associated with this capability"
@@ -12187,7 +12208,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:814
+#: man-pages/man7/capabilities.7:824
 msgid ""
 "If you have determined that it really is necessary to create a new "
 "capability for your feature, don't make or name it as a \"single-use\" "
@@ -12198,26 +12219,26 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/capabilities.7:814
+#: man-pages/man7/capabilities.7:824
 #, no-wrap
 msgid "Thread capability sets"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:817
+#: man-pages/man7/capabilities.7:827
 msgid ""
 "Each thread has the following capability sets containing zero or more of the"
 " above capabilities:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:817
+#: man-pages/man7/capabilities.7:827
 #, no-wrap
 msgid "I<Permitted>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:825
+#: man-pages/man7/capabilities.7:835
 msgid ""
 "This is a limiting superset for the effective capabilities that the thread "
 "may assume.  It is also a limiting superset for the capabilities that may be"
@@ -12226,7 +12247,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:831
+#: man-pages/man7/capabilities.7:841
 msgid ""
 "If a thread drops a capability from its permitted set, it can never "
 "reacquire that capability (unless it B<execve>(2)s either a set-user-ID-root"
@@ -12235,13 +12256,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:831
+#: man-pages/man7/capabilities.7:841
 #, no-wrap
 msgid "I<Inheritable>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:838
+#: man-pages/man7/capabilities.7:848
 msgid ""
 "This is a set of capabilities preserved across an B<execve>(2).  Inheritable"
 " capabilities remain inheritable when executing any program, and inheritable"
@@ -12250,7 +12271,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:844
+#: man-pages/man7/capabilities.7:854
 msgid ""
 "Because inheritable capabilities are not generally preserved across "
 "B<execve>(2)  when running as a non-root user, applications that wish to run"
@@ -12259,33 +12280,33 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:844
+#: man-pages/man7/capabilities.7:854
 #, no-wrap
 msgid "I<Effective>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:848
+#: man-pages/man7/capabilities.7:858
 msgid ""
 "This is the set of capabilities used by the kernel to perform permission "
 "checks for the thread."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:848
+#: man-pages/man7/capabilities.7:858
 #, no-wrap
 msgid "I<Bounding> (per-thread since Linux 2.6.25)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:853
+#: man-pages/man7/capabilities.7:863
 msgid ""
 "The capability bounding set is a mechanism that can be used to limit the "
 "capabilities that are gained during B<execve>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:857
+#: man-pages/man7/capabilities.7:867
 msgid ""
 "Since Linux 2.6.25, this is a per-thread capability set.  In older kernels, "
 "the capability bounding set was a system wide attribute shared by all "
@@ -12293,19 +12314,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:860
+#: man-pages/man7/capabilities.7:870
 msgid "For more details on the capability bounding set, see below."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:860
+#: man-pages/man7/capabilities.7:870
 #, no-wrap
 msgid "I<Ambient> (since Linux 4.3)"
 msgstr ""
 
 #.  commit 58319057b7847667f0c9585b9de0e8932b0fdb08
 #. type: Plain text
-#: man-pages/man7/capabilities.7:868
+#: man-pages/man7/capabilities.7:878
 msgid ""
 "This is a set of capabilities that are preserved across an B<execve>(2)  of "
 "a program that is not privileged.  The ambient capability set obeys the "
@@ -12314,7 +12335,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:873
+#: man-pages/man7/capabilities.7:883
 msgid ""
 "The ambient capability set can be directly modified using B<prctl>(2).  "
 "Ambient capabilities are automatically lowered if either of the "
@@ -12322,7 +12343,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:886
+#: man-pages/man7/capabilities.7:896
 msgid ""
 "Executing a program that changes UID or GID due to the set-user-ID or set-"
 "group-ID bits or executing a program that has any file capabilities set will"
@@ -12334,7 +12355,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:892
+#: man-pages/man7/capabilities.7:902
 msgid ""
 "A child created via B<fork>(2)  inherits copies of its parent's capability "
 "sets.  See below for a discussion of the treatment of capabilities during "
@@ -12342,7 +12363,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:896
+#: man-pages/man7/capabilities.7:906
 msgid ""
 "Using B<capset>(2), a thread may manipulate its own capability sets (see "
 "below)."
@@ -12350,7 +12371,7 @@ msgstr ""
 
 #.  commit 73efc0394e148d0e15583e13712637831f926720
 #. type: Plain text
-#: man-pages/man7/capabilities.7:905
+#: man-pages/man7/capabilities.7:915
 msgid ""
 "Since Linux 3.2, the file I</proc/sys/kernel/cap_last_cap> exposes the "
 "numerical value of the highest capability supported by the running kernel; "
@@ -12359,13 +12380,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/capabilities.7:905
+#: man-pages/man7/capabilities.7:915
 #, no-wrap
 msgid "File capabilities"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:922
+#: man-pages/man7/capabilities.7:932
 msgid ""
 "Since kernel 2.6.24, the kernel supports associating capability sets with an"
 " executable file using B<setcap>(8).  The file capability sets are stored in"
@@ -12377,31 +12398,31 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:924
+#: man-pages/man7/capabilities.7:934
 msgid "The three file capability sets are:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:924
+#: man-pages/man7/capabilities.7:934
 #, no-wrap
 msgid "I<Permitted> (formerly known as I<forced>):"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:928
+#: man-pages/man7/capabilities.7:938
 msgid ""
 "These capabilities are automatically permitted to the thread, regardless of "
 "the thread's inheritable capabilities."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:928
+#: man-pages/man7/capabilities.7:938
 #, no-wrap
 msgid "I<Inheritable> (formerly known as I<allowed>):"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:934
+#: man-pages/man7/capabilities.7:944
 msgid ""
 "This set is ANDed with the thread's inheritable set to determine which "
 "inheritable capabilities are enabled in the permitted set of the thread "
@@ -12409,13 +12430,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:934
+#: man-pages/man7/capabilities.7:944
 #, no-wrap
 msgid "I<Effective>:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:944
+#: man-pages/man7/capabilities.7:954
 msgid ""
 "This is not a set, but rather just a single bit.  If this bit is set, then "
 "during an B<execve>(2)  all of the new permitted capabilities for the thread"
@@ -12425,7 +12446,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:960
+#: man-pages/man7/capabilities.7:970
 msgid ""
 "Enabling the file effective capability bit implies that any file permitted "
 "or inheritable capability that causes a thread to acquire the corresponding "
@@ -12439,13 +12460,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/capabilities.7:960
+#: man-pages/man7/capabilities.7:970
 #, no-wrap
 msgid "File capability extended attribute versioning"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:968
+#: man-pages/man7/capabilities.7:978
 msgid ""
 "To allow extensibility, the kernel supports a scheme to encode a version "
 "number inside the I<security.capability> extended attribute that is used to "
@@ -12455,27 +12476,27 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:968
+#: man-pages/man7/capabilities.7:978
 #, no-wrap
 msgid "B<VFS_CAP_REVISION_1>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:972
+#: man-pages/man7/capabilities.7:982
 msgid ""
 "This was the original file capability implementation, which supported 32-bit"
 " masks for file capabilities."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:972
+#: man-pages/man7/capabilities.7:982
 #, no-wrap
 msgid "B<VFS_CAP_REVISION_2> (since Linux 2.6.25)"
 msgstr ""
 
 #.  commit e338d263a76af78fe8f38a72131188b58fceb591
 #. type: Plain text
-#: man-pages/man7/capabilities.7:983
+#: man-pages/man7/capabilities.7:993
 msgid ""
 "This version allows for file capability masks that are 64 bits in size, and "
 "was necessary as the number of supported capabilities grew beyond 32.  The "
@@ -12487,21 +12508,21 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:983
+#: man-pages/man7/capabilities.7:993
 #, no-wrap
 msgid "B<VFS_CAP_REVISION_3> (since Linux 4.14)"
 msgstr ""
 
 #.  commit 8db6c34f1dbc8e06aa016a9b829b06902c3e1340
 #. type: Plain text
-#: man-pages/man7/capabilities.7:988
+#: man-pages/man7/capabilities.7:998
 msgid ""
 "Version 3 file capabilities are provided to support namespaced file "
 "capabilities (described below)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:996
+#: man-pages/man7/capabilities.7:1006
 msgid ""
 "As with version 2 file capabilities, version 3 capability masks are 64 bits "
 "in size.  But in addition, the root user ID of namespace is encoded in the "
@@ -12511,7 +12532,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1002
+#: man-pages/man7/capabilities.7:1012
 msgid ""
 "Version 3 file capabilities are designed to coexist with version 2 "
 "capabilities; that is, on a modern Linux system, there may be some files "
@@ -12519,7 +12540,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1013
+#: man-pages/man7/capabilities.7:1023
 msgid ""
 "Before Linux 4.14, the only kind of file capability extended attribute that "
 "could be attached to a file was a B<VFS_CAP_REVISION_2> attribute.  Since "
@@ -12529,7 +12550,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1020
+#: man-pages/man7/capabilities.7:1030
 msgid ""
 "Starting with Linux 4.14, a I<security.capability> extended attribute is "
 "automatically created as (or converted to)  a version 3 "
@@ -12537,13 +12558,13 @@ msgid ""
 msgstr ""
 
 #. type: IP
-#: man-pages/man7/capabilities.7:1020
+#: man-pages/man7/capabilities.7:1030
 #, no-wrap
 msgid "(1)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1024
+#: man-pages/man7/capabilities.7:1034
 msgid ""
 "The thread writing the attribute resides in a noninitial user namespace.  "
 "(More precisely: the thread resides in a user namespace other than the one "
@@ -12551,13 +12572,13 @@ msgid ""
 msgstr ""
 
 #. type: IP
-#: man-pages/man7/capabilities.7:1024
+#: man-pages/man7/capabilities.7:1034
 #, no-wrap
 msgid "(2)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1033
+#: man-pages/man7/capabilities.7:1043
 msgid ""
 "The thread has the B<CAP_SETFCAP> capability over the file inode, meaning "
 "that (a) the thread has the B<CAP_SETFCAP> capability in its own user "
@@ -12566,7 +12587,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1039
+#: man-pages/man7/capabilities.7:1049
 msgid ""
 "When a B<VFS_CAP_REVISION_3> I<security.capability> extended attribute is "
 "created, the root user ID of the creating thread's user namespace is saved "
@@ -12574,7 +12595,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1050
+#: man-pages/man7/capabilities.7:1060
 msgid ""
 "By contrast, creating or modifying a I<security.capability> extended "
 "attribute from a privileged (B<CAP_SETFCAP>)  thread that resides in the "
@@ -12584,7 +12605,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1079
+#: man-pages/man7/capabilities.7:1089
 msgid ""
 "Note that the creation of a version 3 I<security.capability> extended "
 "attribute is automatic.  That is to say, when a user-space application "
@@ -12603,7 +12624,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1089
+#: man-pages/man7/capabilities.7:1099
 msgid ""
 "Note that a file can have either a version 2 or a version 3 "
 "I<security.capability> extended attribute associated with it, but not both: "
@@ -12613,26 +12634,26 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/capabilities.7:1089
+#: man-pages/man7/capabilities.7:1099
 #, no-wrap
 msgid "Transformation of capabilities during execve()"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1095
+#: man-pages/man7/capabilities.7:1105
 msgid ""
 "During an B<execve>(2), the kernel calculates the new capabilities of the "
 "process using the following algorithm:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1099
+#: man-pages/man7/capabilities.7:1109
 #, no-wrap
 msgid "P'(ambient)     = (file is privileged) ? 0 : P(ambient)\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1102
+#: man-pages/man7/capabilities.7:1112
 #, no-wrap
 msgid ""
 "P'(permitted)   = (P(inheritable) & F(inheritable)) |\n"
@@ -12640,70 +12661,70 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1104
+#: man-pages/man7/capabilities.7:1114
 #, no-wrap
 msgid "P'(effective)   = F(effective) ? P'(permitted) : P'(ambient)\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1106
+#: man-pages/man7/capabilities.7:1116
 #, no-wrap
 msgid "P'(inheritable) = P(inheritable)    [i.e., unchanged]\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1108
+#: man-pages/man7/capabilities.7:1118
 #, no-wrap
 msgid "P'(bounding)    = P(bounding)       [i.e., unchanged]\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1112
+#: man-pages/man7/capabilities.7:1122
 msgid "where:"
 msgstr ""
 
 #. type: IP
-#: man-pages/man7/capabilities.7:1113
+#: man-pages/man7/capabilities.7:1123
 #, no-wrap
 msgid "P()"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1116
+#: man-pages/man7/capabilities.7:1126
 msgid "denotes the value of a thread capability set before the B<execve>(2)"
 msgstr ""
 
 #. type: IP
-#: man-pages/man7/capabilities.7:1116
+#: man-pages/man7/capabilities.7:1126
 #, no-wrap
 msgid "P'()"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1119
+#: man-pages/man7/capabilities.7:1129
 msgid "denotes the value of a thread capability set after the B<execve>(2)"
 msgstr ""
 
 #. type: IP
-#: man-pages/man7/capabilities.7:1119
+#: man-pages/man7/capabilities.7:1129
 #, no-wrap
 msgid "F()"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1121
+#: man-pages/man7/capabilities.7:1131
 msgid "denotes a file capability set"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1125
+#: man-pages/man7/capabilities.7:1135
 msgid ""
 "Note the following details relating to the above capability transformation "
 "rules:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1131
+#: man-pages/man7/capabilities.7:1141
 msgid ""
 "The ambient capability set is present only since Linux 4.3.  When "
 "determining the transformation of the ambient set during B<execve>(2), a "
@@ -12712,7 +12733,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1138
+#: man-pages/man7/capabilities.7:1148
 msgid ""
 "Prior to Linux 2.6.25, the bounding set was a system-wide attribute shared "
 "by all threads.  That system-wide value was employed to calculate the new "
@@ -12721,7 +12742,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1147
+#: man-pages/man7/capabilities.7:1157
 msgid ""
 "I<Note>: during the capability transitions described above, file "
 "capabilities may be ignored (treated as empty) for the same reasons that the"
@@ -12731,7 +12752,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1160
+#: man-pages/man7/capabilities.7:1170
 msgid ""
 "I<Note>: according to the rules above, if a process with nonzero user IDs "
 "performs an B<execve>(2)  then any capabilities that are present in its "
@@ -12741,13 +12762,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/capabilities.7:1160
+#: man-pages/man7/capabilities.7:1170
 #, no-wrap
 msgid "Safety checking for capability-dumb binaries"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1174
+#: man-pages/man7/capabilities.7:1184
 msgid ""
 "A capability-dumb binary is an application that has been marked to have file"
 " capabilities, but has not been converted to use the B<libcap>(3)  API to "
@@ -12762,7 +12783,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1196
+#: man-pages/man7/capabilities.7:1206
 msgid ""
 "When executing a capability-dumb binary, the kernel checks if the process "
 "obtained all permitted capabilities that were specified in the file "
@@ -12778,7 +12799,7 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/capabilities.7:1196
+#: man-pages/man7/capabilities.7:1206
 #, no-wrap
 msgid "Capabilities and execution of programs by root"
 msgstr ""
@@ -12786,7 +12807,7 @@ msgstr ""
 #.  See cap_bprm_set_creds(), bprm_caps_from_vfs_cap() and
 #.  handle_privileged_root() in security/commoncap.c (Linux 5.0 source)
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1203
+#: man-pages/man7/capabilities.7:1213
 msgid ""
 "In order to mirror traditional UNIX semantics, the kernel performs special "
 "treatment of file capabilities when a process with UID 0 (root) executes a "
@@ -12794,7 +12815,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1209
+#: man-pages/man7/capabilities.7:1219
 msgid ""
 "After having performed any changes to the process effective ID that were "
 "triggered by the set-user-ID mode bit of the binary\\(eme.g., switching the "
@@ -12803,7 +12824,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1216
+#: man-pages/man7/capabilities.7:1226
 msgid ""
 "If the real or effective user ID of the process is 0 (root), then the file "
 "inheritable and permitted sets are ignored; instead they are notionally "
@@ -12813,7 +12834,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1220
+#: man-pages/man7/capabilities.7:1230
 msgid ""
 "If the effective user ID of the process is 0 (root) or the file effective "
 "bit is in fact enabled, then the file effective bit is notionally defined to"
@@ -12821,7 +12842,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1225
+#: man-pages/man7/capabilities.7:1235
 msgid ""
 "These notional values for the file's capability sets are then used as "
 "described above to calculate the transformation of the process's "
@@ -12829,7 +12850,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1233
+#: man-pages/man7/capabilities.7:1243
 msgid ""
 "Thus, when a process with nonzero UIDs B<execve>(2)s a set-user-ID-root "
 "program that does not have capabilities attached, or when a process whose "
@@ -12838,19 +12859,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1237
+#: man-pages/man7/capabilities.7:1247
 #, no-wrap
 msgid "P'(permitted)   = P(inheritable) | P(bounding)\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1239
+#: man-pages/man7/capabilities.7:1249
 #, no-wrap
 msgid "P'(effective)   = P'(permitted)\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1248
+#: man-pages/man7/capabilities.7:1258
 msgid ""
 "Consequently, the process gains all capabilities in its permitted and "
 "effective capability sets, except those masked out by the capability "
@@ -12860,20 +12881,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1253
+#: man-pages/man7/capabilities.7:1263
 msgid ""
 "The special treatments of user ID 0 (root) described in this subsection can "
 "be disabled using the securebits mechanism described below."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/capabilities.7:1253
+#: man-pages/man7/capabilities.7:1263
 #, no-wrap
 msgid "Set-user-ID-root programs that have file capabilities"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1271
+#: man-pages/man7/capabilities.7:1281
 msgid ""
 "There is one exception to the behavior described under I<Capabilities and "
 "execution of programs by root>.  If (a) the binary that is being executed "
@@ -12889,7 +12910,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1278
+#: man-pages/man7/capabilities.7:1288
 msgid ""
 "Note that one can assign empty capability sets to a program file, and thus "
 "it is possible to create a set-user-ID-root program that changes the "
@@ -12898,13 +12919,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/capabilities.7:1278
+#: man-pages/man7/capabilities.7:1288
 #, no-wrap
 msgid "Capability bounding set"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1283
+#: man-pages/man7/capabilities.7:1293
 msgid ""
 "The capability bounding set is a security mechanism that can be used to "
 "limit the capabilities that can be gained during an B<execve>(2).  The "
@@ -12912,7 +12933,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1291
+#: man-pages/man7/capabilities.7:1301
 msgid ""
 "During an B<execve>(2), the capability bounding set is ANDed with the file "
 "permitted capability set, and the result of this operation is assigned to "
@@ -12922,7 +12943,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1303
+#: man-pages/man7/capabilities.7:1313
 msgid ""
 "(Since Linux 2.6.25)  The capability bounding set acts as a limiting "
 "superset for the capabilities that a thread can add to its inheritable set "
@@ -12934,7 +12955,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1310
+#: man-pages/man7/capabilities.7:1320
 msgid ""
 "Note that the bounding set masks the file permitted capabilities, but not "
 "the inheritable capabilities.  If a thread maintains a capability in its "
@@ -12944,19 +12965,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1313
+#: man-pages/man7/capabilities.7:1323
 msgid ""
 "Depending on the kernel version, the capability bounding set is either a "
 "system-wide attribute, or a per-process attribute."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1315
+#: man-pages/man7/capabilities.7:1325
 msgid "B<Capability bounding set from Linux 2.6.25 onward>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1320
+#: man-pages/man7/capabilities.7:1330
 msgid ""
 "From Linux 2.6.25, the I<capability bounding set> is a per-thread attribute."
 "  (The system-wide capability bounding set described below no longer "
@@ -12964,14 +12985,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1325
+#: man-pages/man7/capabilities.7:1335
 msgid ""
 "The bounding set is inherited at B<fork>(2)  from the thread's parent, and "
 "is preserved across an B<execve>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1338
+#: man-pages/man7/capabilities.7:1348
 msgid ""
 "A thread may remove capabilities from its capability bounding set using the "
 "B<prctl>(2)  B<PR_CAPBSET_DROP> operation, provided it has the "
@@ -12983,7 +13004,7 @@ msgstr ""
 
 #.  commit b3a222e52e4d4be77cc4520a57af1a4a0d8222d1
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1358
+#: man-pages/man7/capabilities.7:1368
 msgid ""
 "Removing capabilities from the bounding set is supported only if file "
 "capabilities are compiled into the kernel.  In kernels before Linux 2.6.33, "
@@ -12998,7 +13019,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1363
+#: man-pages/man7/capabilities.7:1373
 msgid ""
 "Removing a capability from the bounding set does not remove it from the "
 "thread's inheritable set.  However it does prevent the capability from being"
@@ -13006,12 +13027,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1365
+#: man-pages/man7/capabilities.7:1375
 msgid "B<Capability bounding set prior to Linux 2.6.25>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1373
+#: man-pages/man7/capabilities.7:1383
 msgid ""
 "In kernels before 2.6.25, the capability bounding set is a system-wide "
 "attribute that affects all threads on the system.  The bounding set is "
@@ -13021,7 +13042,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1380
+#: man-pages/man7/capabilities.7:1390
 msgid ""
 "Only the B<init> process may set capabilities in the capability bounding "
 "set; other than that, the superuser (more precisely: a process with the "
@@ -13029,7 +13050,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1389
+#: man-pages/man7/capabilities.7:1399
 msgid ""
 "On a standard system the capability bounding set always masks out the "
 "B<CAP_SETPCAP> capability.  To remove this restriction (dangerous!), modify "
@@ -13038,20 +13059,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1395
+#: man-pages/man7/capabilities.7:1405
 msgid ""
 "The system-wide capability bounding set feature was added to Linux starting "
 "with kernel version 2.2.11."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/capabilities.7:1395
+#: man-pages/man7/capabilities.7:1405
 #, no-wrap
 msgid "Effect of user ID changes on capabilities"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1404
+#: man-pages/man7/capabilities.7:1414
 msgid ""
 "To preserve the traditional semantics for transitions between 0 and nonzero "
 "user IDs, the kernel makes the following changes to a thread's capability "
@@ -13060,7 +13081,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1410
+#: man-pages/man7/capabilities.7:1420
 msgid ""
 "If one or more of the real, effective or saved set user IDs was previously "
 "0, and as a result of the UID changes all of these IDs have a nonzero value,"
@@ -13069,27 +13090,27 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1413
+#: man-pages/man7/capabilities.7:1423
 msgid ""
 "If the effective user ID is changed from 0 to nonzero, then all capabilities"
 " are cleared from the effective set."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1416
+#: man-pages/man7/capabilities.7:1426
 msgid ""
 "If the effective user ID is changed from nonzero to 0, then the permitted "
 "set is copied to the effective set."
 msgstr ""
 
 #. type: IP
-#: man-pages/man7/capabilities.7:1416 man-pages/man7/capabilities.7:1471
+#: man-pages/man7/capabilities.7:1426 man-pages/man7/capabilities.7:1481
 #, no-wrap
 msgid "4."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1434
+#: man-pages/man7/capabilities.7:1444
 msgid ""
 "If the filesystem user ID is changed from 0 to nonzero (see B<setfsuid>(2)),"
 " then the following capabilities are cleared from the effective set: "
@@ -13101,7 +13122,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1441
+#: man-pages/man7/capabilities.7:1451
 msgid ""
 "If a thread that has a 0 value for one or more of its user IDs wants to "
 "prevent its permitted capability set being cleared when it resets all of its"
@@ -13110,13 +13131,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/capabilities.7:1441
+#: man-pages/man7/capabilities.7:1451
 #, no-wrap
 msgid "Programmatically adjusting capability sets"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1457
+#: man-pages/man7/capabilities.7:1467
 msgid ""
 "A thread can retrieve and change its permitted, effective, and inheritable "
 "capability sets using the B<capget>(2)  and B<capset>(2)  system calls.  "
@@ -13126,7 +13147,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1463
+#: man-pages/man7/capabilities.7:1473
 msgid ""
 "If the caller does not have the B<CAP_SETPCAP> capability, the new "
 "inheritable set must be a subset of the combination of the existing "
@@ -13134,14 +13155,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1467
+#: man-pages/man7/capabilities.7:1477
 msgid ""
 "(Since Linux 2.6.25)  The new inheritable set must be a subset of the "
 "combination of the existing inheritable set and the capability bounding set."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1471
+#: man-pages/man7/capabilities.7:1481
 msgid ""
 "The new permitted set must be a subset of the existing permitted set (i.e., "
 "it is not possible to acquire permitted capabilities that the thread does "
@@ -13149,12 +13170,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1473
+#: man-pages/man7/capabilities.7:1483
 msgid "The new effective set must be a subset of the new permitted set."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/capabilities.7:1473
+#: man-pages/man7/capabilities.7:1483
 #, no-wrap
 msgid "The securebits flags: establishing a capabilities-only environment"
 msgstr ""
@@ -13163,7 +13184,7 @@ msgstr ""
 #.        see http://lwn.net/Articles/280279/ and
 #.        http://article.gmane.org/gmane.linux.kernel.lsm/5476/
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1484
+#: man-pages/man7/capabilities.7:1494
 msgid ""
 "Starting with kernel 2.6.26, and with a kernel in which file capabilities "
 "are enabled, Linux implements a set of per-thread I<securebits> flags that "
@@ -13172,13 +13193,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:1484
+#: man-pages/man7/capabilities.7:1494
 #, no-wrap
 msgid "B<SECBIT_KEEP_CAPS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1493
+#: man-pages/man7/capabilities.7:1503
 msgid ""
 "Setting this flag allows a thread that has one or more 0 UIDs to retain "
 "capabilities in its permitted set when it switches all of its UIDs to "
@@ -13188,7 +13209,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1502
+#: man-pages/man7/capabilities.7:1512
 msgid ""
 "Note that even with the B<SECBIT_KEEP_CAPS> flag set, the effective "
 "capabilities of a thread are cleared when it switches its effective UID to a"
@@ -13198,7 +13219,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1509
+#: man-pages/man7/capabilities.7:1519
 msgid ""
 "The setting of the B<SECBIT_KEEP_CAPS> flag is ignored if the "
 "B<SECBIT_NO_SETUID_FIXUP> flag is set.  (The latter flag provides a superset"
@@ -13206,20 +13227,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1514
+#: man-pages/man7/capabilities.7:1524
 msgid ""
 "This flag provides the same functionality as the older B<prctl>(2)  "
 "B<PR_SET_KEEPCAPS> operation."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:1514
+#: man-pages/man7/capabilities.7:1524
 #, no-wrap
 msgid "B<SECBIT_NO_SETUID_FIXUP>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1522
+#: man-pages/man7/capabilities.7:1532
 msgid ""
 "Setting this flag stops the kernel from adjusting the process's permitted, "
 "effective, and ambient capability sets when the thread's effective and "
@@ -13228,13 +13249,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:1522
+#: man-pages/man7/capabilities.7:1532
 #, no-wrap
 msgid "B<SECBIT_NOROOT>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1530
+#: man-pages/man7/capabilities.7:1540
 msgid ""
 "If this bit is set, then the kernel does not grant capabilities when a set-"
 "user-ID-root program is executed, or when a process with an effective or "
@@ -13243,20 +13264,20 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/capabilities.7:1530
+#: man-pages/man7/capabilities.7:1540
 #, no-wrap
 msgid "B<SECBIT_NO_CAP_AMBIENT_RAISE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1536
+#: man-pages/man7/capabilities.7:1546
 msgid ""
 "Setting this flag disallows raising ambient capabilities via the B<prctl>(2)"
 "  B<PR_CAP_AMBIENT_RAISE> operation."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1547
+#: man-pages/man7/capabilities.7:1557
 msgid ""
 "Each of the above \"base\" flags has a companion \"locked\" flag.  Setting "
 "any of the \"locked\" flags is irreversible, and has the effect of "
@@ -13266,7 +13287,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1564
+#: man-pages/man7/capabilities.7:1574
 msgid ""
 "The I<securebits> flags can be modified and retrieved using the B<prctl>(2)"
 "  B<PR_SET_SECUREBITS> and B<PR_GET_SECUREBITS> operations.  The "
@@ -13276,7 +13297,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1573
+#: man-pages/man7/capabilities.7:1583
 msgid ""
 "The I<securebits> flags are inherited by child processes.  During an "
 "B<execve>(2), all of the flags are preserved, except B<SECBIT_KEEP_CAPS> "
@@ -13284,7 +13305,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1578
+#: man-pages/man7/capabilities.7:1588
 msgid ""
 "An application can use the following call to lock itself, and all of its "
 "descendants, into an environment where the only way of gaining capabilities "
@@ -13292,7 +13313,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1590
+#: man-pages/man7/capabilities.7:1600
 #, no-wrap
 msgid ""
 "prctl(PR_SET_SECUREBITS,\n"
@@ -13307,13 +13328,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/capabilities.7:1594
+#: man-pages/man7/capabilities.7:1604
 #, no-wrap
 msgid "Per-user-namespace \"set-user-ID-root\" programs"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1600
+#: man-pages/man7/capabilities.7:1610
 msgid ""
 "A set-user-ID program whose UID matches the UID that created a user "
 "namespace will confer capabilities in the process's permitted and effective "
@@ -13322,7 +13343,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1611
+#: man-pages/man7/capabilities.7:1621
 msgid ""
 "The rules about the transformation of the process's capabilities during the "
 "B<execve>(2)  are exactly as described in the subsections I<Transformation "
@@ -13332,14 +13353,14 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/capabilities.7:1611
+#: man-pages/man7/capabilities.7:1621
 #, no-wrap
 msgid "Namespaced file capabilities"
 msgstr ""
 
 #.  commit 8db6c34f1dbc8e06aa016a9b829b06902c3e1340
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1619
+#: man-pages/man7/capabilities.7:1629
 msgid ""
 "Traditional (i.e., version 2) file capabilities associate only a set of "
 "capability masks with a binary executable file.  When a process executes a "
@@ -13349,7 +13370,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1632
+#: man-pages/man7/capabilities.7:1642
 msgid ""
 "Because version 2 file capabilities confer capabilities to the executing "
 "process regardless of which user namespace it resides in, only privileged "
@@ -13364,7 +13385,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1646
+#: man-pages/man7/capabilities.7:1656
 msgid ""
 "Linux 4.14 added so-called namespaced file capabilities to support such use "
 "cases.  Namespaced file capabilities are recorded as version 3 (i.e., "
@@ -13377,7 +13398,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1659
+#: man-pages/man7/capabilities.7:1669
 msgid ""
 "As with a binary that has B<VFS_CAP_REVISION_2> file capabilities, a binary "
 "with B<VFS_CAP_REVISION_3> file capabilities confers capabilities to a "
@@ -13388,30 +13409,44 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/capabilities.7:1659
+#: man-pages/man7/capabilities.7:1669
 #, no-wrap
 msgid "Interaction with user namespaces"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1663
+#: man-pages/man7/capabilities.7:1673
 msgid ""
 "For further information on the interaction of capabilities and user "
 "namespaces, see B<user_namespaces>(7)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1669
+#: man-pages/man7/capabilities.7:1679
 msgid ""
 "No standards govern capabilities, but the Linux capability implementation is"
 " based on the withdrawn POSIX.1e draft standard; see E<.UR "
 "https://archive.org\\:/details\\:/posix_1003.1e-990310> E<.UE .>"
 msgstr ""
 
+#. type: Plain text
+#: man-pages/man7/capabilities.7:1687
+msgid ""
+"When attempting to B<strace>(1)  binaries that have capabilities (or set-"
+"user-ID-root binaries), you may find the I<-u E<lt>usernameE<gt>> option "
+"useful.  Something like:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/capabilities.7:1691
+#, no-wrap
+msgid "$ B<sudo strace -o trace.log -u ceci ./myprivprog>\n"
+msgstr ""
+
 #.  commit 5915eb53861c5776cfec33ca4fcc1fd20d66dd27 removed
 #.  CONFIG_SECURITY_CAPABILITIES
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1677
+#: man-pages/man7/capabilities.7:1701
 msgid ""
 "From kernel 2.5.27 to kernel 2.6.26, capabilities were an optional kernel "
 "component, and could be enabled/disabled via the "
@@ -13420,7 +13455,7 @@ msgstr ""
 
 #.  7b9a7ec565505699f503b4fcf61500dceb36e744
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1691
+#: man-pages/man7/capabilities.7:1715
 msgid ""
 "The I</proc/[pid]/task/TID/status> file can be used to view the capability "
 "sets of a thread.  The I</proc/[pid]/status> file shows the capability sets "
@@ -13430,7 +13465,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1706
+#: man-pages/man7/capabilities.7:1730
 msgid ""
 "The I<libcap> package provides a suite of routines for setting and getting "
 "capabilities that is more comfortable and less likely to change than the "
@@ -13439,7 +13474,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1709
+#: man-pages/man7/capabilities.7:1733
 msgid ""
 "E<.UR "
 "https://git.kernel.org\\:/pub\\:/scm\\:/libs\\:/libcap\\:/libcap.git\\:/refs/>"
@@ -13447,7 +13482,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1718
+#: man-pages/man7/capabilities.7:1742
 msgid ""
 "Before kernel 2.6.24, and from kernel 2.6.24 to kernel 2.6.32 if file "
 "capabilities are not enabled, a thread with the B<CAP_SETPCAP> capability "
@@ -13457,7 +13492,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1723
+#: man-pages/man7/capabilities.7:1747
 msgid ""
 "In the pre-2.6.25 implementation the system-wide capability bounding set, "
 "I</proc/sys/kernel/cap-bound>, always masks out this capability, and this "
@@ -13465,7 +13500,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1729
+#: man-pages/man7/capabilities.7:1753
 msgid ""
 "If file capabilities are disabled in the current implementation, then "
 "B<init> starts out with this capability removed from its per-process "
@@ -13478,7 +13513,7 @@ msgstr ""
 #.  from libcap-ng
 #.  from libcap-ng
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1753
+#: man-pages/man7/capabilities.7:1777
 msgid ""
 "B<capsh>(1), B<setpriv>(1), B<prctl>(2), B<setfsuid>(2), B<cap_clear>(3), "
 "B<cap_copy_ext>(3), B<cap_from_text>(3), B<cap_get_file>(3), "
@@ -13489,7 +13524,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/capabilities.7:1755
+#: man-pages/man7/capabilities.7:1779
 msgid "I<include/linux/capability.h> in the Linux kernel source tree"
 msgstr ""
 
@@ -17150,19 +17185,24 @@ msgid "I<fd> is not a valid file descriptor."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/chdir.2:129
+#: man-pages/man2/chdir.2:131
+msgid "I<fd> does not refer to a directory."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/chdir.2:133
 msgid "POSIX.1-2001, POSIX.1-2008, SVr4, 4.4BSD."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/chdir.2:132
+#: man-pages/man2/chdir.2:136
 msgid ""
 "The current working directory is the starting point for interpreting "
 "relative pathnames (those not starting with \\(aq/\\(aq)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/chdir.2:138
+#: man-pages/man2/chdir.2:142
 msgid ""
 "A child process created via B<fork>(2)  inherits its parent's current "
 "working directory.  The current working directory is left unchanged by "
@@ -17170,7 +17210,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/chdir.2:141
+#: man-pages/man2/chdir.2:145
 msgid "B<chroot>(2), B<getcwd>(3), B<path_resolution>(7)"
 msgstr ""
 
@@ -17355,19 +17395,21 @@ msgstr ""
 msgid "B<EINTR>"
 msgstr ""
 
+#.  Though, it's in doubt whether this error can ever occur; see
+#.  https://lwn.net/Articles/576478/ "Returning EINTR from close()"
 #. type: Plain text
-#: man-pages/man2/close.2:82
+#: man-pages/man2/close.2:84
 msgid "The B<close>()  call was interrupted by a signal; see B<signal>(7)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/close.2:85
+#: man-pages/man2/close.2:87
 #, no-wrap
 msgid "B<ENOSPC>, B<EDQUOT>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/close.2:94
+#: man-pages/man2/close.2:96
 msgid ""
 "On NFS, these errors are not normally reported against the first write which"
 " exceeds the available storage space, but instead against a subsequent "
@@ -17375,7 +17417,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/close.2:98
+#: man-pages/man2/close.2:100
 msgid ""
 "See NOTES for a discussion of why B<close>()  should not be retried after an"
 " error."
@@ -17383,12 +17425,12 @@ msgstr ""
 
 #.  SVr4 documents an additional ENOLINK error condition.
 #. type: Plain text
-#: man-pages/man2/close.2:101
+#: man-pages/man2/close.2:103
 msgid "POSIX.1-2001, POSIX.1-2008, SVr4, 4.3BSD."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/close.2:109
+#: man-pages/man2/close.2:111
 msgid ""
 "A successful close does not guarantee that the data has been successfully "
 "saved to disk, as the kernel uses the buffer cache to defer writes.  "
@@ -17398,7 +17440,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/close.2:116
+#: man-pages/man2/close.2:118
 msgid ""
 "The close-on-exec file descriptor flag can be used to ensure that a file "
 "descriptor is automatically closed upon a successful B<execve>(2); see "
@@ -17414,7 +17456,7 @@ msgstr ""
 #.  later restart with the reused file descriptor. This is most likely a
 #.  serious programming error.
 #. type: Plain text
-#: man-pages/man2/close.2:132
+#: man-pages/man2/close.2:134
 msgid ""
 "It is probably unwise to close file descriptors while they may be in use by "
 "system calls in other threads in the same process.  Since a file descriptor "
@@ -17423,13 +17465,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/close.2:132
+#: man-pages/man2/close.2:134
 #, no-wrap
 msgid "Dealing with error returns from close()"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/close.2:144
+#: man-pages/man2/close.2:146
 msgid ""
 "A careful programmer will check the return value of B<close>(), since it is "
 "quite possible that errors on a previous B<write>(2)  operation are reported"
@@ -17439,7 +17481,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/close.2:150
+#: man-pages/man2/close.2:152
 msgid ""
 "Note, however, that a failure return should be used only for diagnostic "
 "purposes (i.e., a warning to the application that there may still be I/O "
@@ -17455,7 +17497,7 @@ msgstr ""
 #.  cleared for re-use.
 #.  filp_close()
 #. type: Plain text
-#: man-pages/man2/close.2:171
+#: man-pages/man2/close.2:173
 msgid ""
 "Retrying the B<close>()  after a failure return is the wrong thing to do, "
 "since this may cause a reused file descriptor from another thread to be "
@@ -17469,7 +17511,7 @@ msgstr ""
 #.  SVR4, ancient SunOS, later Solaris, and AIX all do this.
 #.  Issue 8
 #. type: Plain text
-#: man-pages/man2/close.2:184
+#: man-pages/man2/close.2:186
 msgid ""
 "Many other implementations similarly always close the file descriptor "
 "(except in the case of B<EBADF>, meaning that the file descriptor was "
@@ -17479,21 +17521,21 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/close.2:189
+#: man-pages/man2/close.2:191
 msgid ""
 "A careful programmer who wants to know about I/O errors may precede "
 "B<close>()  with a call to B<fsync>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/close.2:196
+#: man-pages/man2/close.2:198
 msgid ""
 "The B<EINTR> error is a somewhat special case.  Regarding the B<EINTR> "
 "error, POSIX.1-2013 says:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/close.2:207
+#: man-pages/man2/close.2:209
 msgid ""
 "If B<close>()  is interrupted by a signal that is to be caught, it shall "
 "return -1 with I<errno> set to B<EINTR> and the state of I<fildes> is "
@@ -17508,7 +17550,7 @@ msgstr ""
 #.  Review the following glibc bug later
 #.  https://sourceware.org/bugzilla/show_bug.cgi?id=14627
 #. type: Plain text
-#: man-pages/man2/close.2:242
+#: man-pages/man2/close.2:244
 msgid ""
 "This permits the behavior that occurs on Linux and many other "
 "implementations, where, as with other errors that may be reported by "
@@ -17525,7 +17567,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/close.2:248
+#: man-pages/man2/close.2:250
 msgid ""
 "B<fcntl>(2), B<fsync>(2), B<open>(2), B<shutdown>(2), B<unlink>(2), "
 "B<fclose>(3)"
@@ -17675,21 +17717,23 @@ msgid "B<CLONE_CHILD_SETTID> (since Linux 2.5.49)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:167
+#: man-pages/man2/clone.2:172
 msgid ""
 "Store the child thread ID at the location I<ctid> in the child's memory.  "
 "The store operation completes before B<clone>()  returns control to user "
-"space."
+"space in the child process.  (Note that the store operation may not have "
+"completed before B<clone>()  returns in the parent process, which will be "
+"relevant if the B<CLONE_VM> flag is also employed.)"
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:167
+#: man-pages/man2/clone.2:172
 #, no-wrap
 msgid "B<CLONE_FILES> (since Linux 2.0)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:183
+#: man-pages/man2/clone.2:188
 msgid ""
 "If B<CLONE_FILES> is set, the calling process and the child process share "
 "the same file descriptor table.  Any file descriptor created by the calling "
@@ -17701,7 +17745,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:199
+#: man-pages/man2/clone.2:204
 msgid ""
 "If B<CLONE_FILES> is not set, the child process inherits a copy of all file "
 "descriptors opened in the calling process at the time of B<clone>().  "
@@ -17714,13 +17758,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:199
+#: man-pages/man2/clone.2:204
 #, no-wrap
 msgid "B<CLONE_FS> (since Linux 2.0)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:214
+#: man-pages/man2/clone.2:219
 msgid ""
 "If B<CLONE_FS> is set, the caller and the child process share the same "
 "filesystem information.  This includes the root of the filesystem, the "
@@ -17730,7 +17774,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:227
+#: man-pages/man2/clone.2:232
 msgid ""
 "If B<CLONE_FS> is not set, the child process works on a copy of the "
 "filesystem information of the calling process at the time of the B<clone>()"
@@ -17739,13 +17783,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:227
+#: man-pages/man2/clone.2:232
 #, no-wrap
 msgid "B<CLONE_IO> (since Linux 2.6.25)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:236
+#: man-pages/man2/clone.2:241
 msgid ""
 "If B<CLONE_IO> is set, then the new process shares an I/O context with the "
 "calling process.  If this flag is not set, then (as with B<fork>(2))  the "
@@ -17756,7 +17800,7 @@ msgstr ""
 #.  the anticipatory and CFQ scheduler
 #.  with CFQ and AS.
 #. type: Plain text
-#: man-pages/man2/clone.2:253
+#: man-pages/man2/clone.2:258
 msgid ""
 "The I/O context is the I/O scope of the disk scheduler (i.e., what the I/O "
 "scheduler uses to model scheduling of a process's I/O).  If processes share "
@@ -17769,20 +17813,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:257
+#: man-pages/man2/clone.2:262
 msgid ""
 "If the kernel is not configured with the B<CONFIG_BLOCK> option, this flag "
 "is a no-op."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:257
+#: man-pages/man2/clone.2:262
 #, no-wrap
 msgid "B<CLONE_NEWCGROUP> (since Linux 4.6)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:264
+#: man-pages/man2/clone.2:269
 msgid ""
 "Create the process in a new cgroup namespace.  If this flag is not set, then"
 " (as with B<fork>(2))  the process is created in the same cgroup namespaces "
@@ -17791,25 +17835,25 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:267
+#: man-pages/man2/clone.2:272
 msgid ""
 "For further information on cgroup namespaces, see B<cgroup_namespaces>(7)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:273
+#: man-pages/man2/clone.2:278
 msgid ""
 "Only a privileged process (B<CAP_SYS_ADMIN>)  can employ B<CLONE_NEWCGROUP>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:273
+#: man-pages/man2/clone.2:278
 #, no-wrap
 msgid "B<CLONE_NEWIPC> (since Linux 2.6.19)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:283
+#: man-pages/man2/clone.2:288
 msgid ""
 "If B<CLONE_NEWIPC> is set, then create the process in a new IPC namespace.  "
 "If this flag is not set, then (as with B<fork>(2)), the process is created "
@@ -17820,17 +17864,17 @@ msgstr ""
 #.  commit 7eafd7c74c3f2e67c27621b987b28397110d643f
 #.  https://lwn.net/Articles/312232/
 #. type: Plain text
-#: man-pages/man2/clone.2:295
+#: man-pages/man2/clone.2:300
 msgid ""
 "An IPC namespace provides an isolated view of System\\ V IPC objects (see "
-"B<svipc>(7))  and (since Linux 2.6.30)  POSIX message queues (see "
+"B<sysvipc>(7))  and (since Linux 2.6.30)  POSIX message queues (see "
 "B<mq_overview>(7)).  The common characteristic of these IPC mechanisms is "
 "that IPC objects are identified by mechanisms other than filesystem "
 "pathnames."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:299
+#: man-pages/man2/clone.2:304
 msgid ""
 "Objects created in an IPC namespace are visible to all other processes that "
 "are members of that namespace, but are not visible to processes in other IPC"
@@ -17838,7 +17882,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:303
+#: man-pages/man2/clone.2:308
 msgid ""
 "When an IPC namespace is destroyed (i.e., when the last process that is a "
 "member of the namespace terminates), all IPC objects in the namespace are "
@@ -17846,32 +17890,32 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:310
+#: man-pages/man2/clone.2:315
 msgid ""
 "Only a privileged process (B<CAP_SYS_ADMIN>)  can employ B<CLONE_NEWIPC>.  "
 "This flag can't be specified in conjunction with B<CLONE_SYSVSEM>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:313
+#: man-pages/man2/clone.2:318
 msgid "For further information on IPC namespaces, see B<namespaces>(7)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:313
+#: man-pages/man2/clone.2:318
 #, no-wrap
 msgid "B<CLONE_NEWNET> (since Linux 2.6.24)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:317
+#: man-pages/man2/clone.2:322
 msgid ""
 "(The implementation of this flag was completed only by about kernel version "
 "2.6.29.)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:326
+#: man-pages/man2/clone.2:331
 msgid ""
 "If B<CLONE_NEWNET> is set, then create the process in a new network "
 "namespace.  If this flag is not set, then (as with B<fork>(2))  the process "
@@ -17880,7 +17924,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:342
+#: man-pages/man2/clone.2:347
 msgid ""
 "A network namespace provides an isolated view of the networking stack "
 "(network device interfaces, IPv4 and IPv6 protocol stacks, IP routing "
@@ -17893,7 +17937,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:349
+#: man-pages/man2/clone.2:354
 msgid ""
 "When a network namespace is freed (i.e., when the last process in the "
 "namespace terminates), its physical network devices are moved back to the "
@@ -17902,19 +17946,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:354
+#: man-pages/man2/clone.2:359
 msgid ""
 "Only a privileged process (B<CAP_SYS_ADMIN>)  can employ B<CLONE_NEWNET>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:354
+#: man-pages/man2/clone.2:359
 #, no-wrap
 msgid "B<CLONE_NEWNS> (since Linux 2.4.19)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:364
+#: man-pages/man2/clone.2:369
 msgid ""
 "If B<CLONE_NEWNS> is set, the cloned child is started in a new mount "
 "namespace, initialized with a copy of the namespace of the parent.  If "
@@ -17924,7 +17968,7 @@ msgstr ""
 
 #.  See https://lwn.net/Articles/543273/
 #. type: Plain text
-#: man-pages/man2/clone.2:377
+#: man-pages/man2/clone.2:382
 msgid ""
 "Only a privileged process (B<CAP_SYS_ADMIN>)  can employ B<CLONE_NEWNS>.  It"
 " is not permitted to specify both B<CLONE_NEWNS> and B<CLONE_FS> in the same"
@@ -17932,14 +17976,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:382
+#: man-pages/man2/clone.2:387
 msgid ""
 "For further information on mount namespaces, see B<namespaces>(7)  and "
 "B<mount_namespaces>(7)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:382
+#: man-pages/man2/clone.2:387
 #, no-wrap
 msgid "B<CLONE_NEWPID> (since Linux 2.6.24)"
 msgstr ""
@@ -17951,7 +17995,7 @@ msgstr ""
 #.  The primary kernel commit is 30e49c263e36341b60b735cbef5ca37912549264
 #.  Author: Pavel Emelyanov <xemul@openvz.org>
 #. type: Plain text
-#: man-pages/man2/clone.2:399
+#: man-pages/man2/clone.2:404
 msgid ""
 "If B<CLONE_NEWPID> is set, then create the process in a new PID namespace.  "
 "If this flag is not set, then (as with B<fork>(2))  the process is created "
@@ -17960,14 +18004,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:404
+#: man-pages/man2/clone.2:409
 msgid ""
 "For further information on PID namespaces, see B<namespaces>(7)  and "
 "B<pid_namespaces>(7)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:413
+#: man-pages/man2/clone.2:418
 msgid ""
 "Only a privileged process (B<CAP_SYS_ADMIN>)  can employ B<CLONE_NEWPID>.  "
 "This flag can't be specified in conjunction with B<CLONE_THREAD> or "
@@ -17975,13 +18019,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:413
+#: man-pages/man2/clone.2:418
 #, no-wrap
 msgid "B<CLONE_NEWUSER>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:423
+#: man-pages/man2/clone.2:428
 msgid ""
 "(This flag first became meaningful for B<clone>()  in Linux 2.6.23, the "
 "current B<clone>()  semantics were merged in Linux 3.5, and the final pieces"
@@ -17989,7 +18033,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:430
+#: man-pages/man2/clone.2:435
 msgid ""
 "If B<CLONE_NEWUSER> is set, then create the process in a new user namespace."
 "  If this flag is not set, then (as with B<fork>(2))  the process is created"
@@ -17998,7 +18042,7 @@ msgstr ""
 
 #.  Before Linux 2.6.29, it appears that only CAP_SYS_ADMIN was needed
 #. type: Plain text
-#: man-pages/man2/clone.2:441
+#: man-pages/man2/clone.2:446
 msgid ""
 "Before Linux 3.8, use of B<CLONE_NEWUSER> required that the caller have "
 "three capabilities: B<CAP_SYS_ADMIN>, B<CAP_SETUID>, and B<CAP_SETGID>.  "
@@ -18012,7 +18056,7 @@ msgstr ""
 #.  were, for practical purposes, unusable in earlier 3.8.x because of the
 #.  various filesystems that didn't support userns.
 #. type: Plain text
-#: man-pages/man2/clone.2:455
+#: man-pages/man2/clone.2:460
 msgid ""
 "This flag can't be specified in conjunction with B<CLONE_THREAD> or "
 "B<CLONE_PARENT>.  For security reasons, B<CLONE_NEWUSER> cannot be specified"
@@ -18020,20 +18064,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:460
+#: man-pages/man2/clone.2:465
 msgid ""
 "For further information on user namespaces, see B<namespaces>(7)  and "
 "B<user_namespaces>(7)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:460
+#: man-pages/man2/clone.2:465
 #, no-wrap
 msgid "B<CLONE_NEWUTS> (since Linux 2.6.19)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:472
+#: man-pages/man2/clone.2:477
 msgid ""
 "If B<CLONE_NEWUTS> is set, then create the process in a new UTS namespace, "
 "whose identifiers are initialized by duplicating the identifiers from the "
@@ -18044,7 +18088,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:483
+#: man-pages/man2/clone.2:488
 msgid ""
 "A UTS namespace is the set of identifiers returned by B<uname>(2); among "
 "these, the domain name and the hostname can be modified by "
@@ -18054,38 +18098,38 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:488
+#: man-pages/man2/clone.2:493
 msgid ""
 "Only a privileged process (B<CAP_SYS_ADMIN>)  can employ B<CLONE_NEWUTS>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:491
+#: man-pages/man2/clone.2:496
 msgid "For further information on UTS namespaces, see B<namespaces>(7)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:491
+#: man-pages/man2/clone.2:496
 #, no-wrap
 msgid "B<CLONE_PARENT> (since Linux 2.3.12)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:498
+#: man-pages/man2/clone.2:503
 msgid ""
 "If B<CLONE_PARENT> is set, then the parent of the new child (as returned by "
 "B<getppid>(2))  will be the same as that of the calling process."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:504
+#: man-pages/man2/clone.2:509
 msgid ""
 "If B<CLONE_PARENT> is not set, then (as with B<fork>(2))  the child's parent"
 " is the calling process."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:512
+#: man-pages/man2/clone.2:517
 msgid ""
 "Note that it is the parent process, as returned by B<getppid>(2), which is "
 "signaled when the child terminates, so that if B<CLONE_PARENT> is set, then "
@@ -18094,13 +18138,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:512
+#: man-pages/man2/clone.2:517
 #, no-wrap
 msgid "B<CLONE_PARENT_SETTID> (since Linux 2.5.49)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:523
+#: man-pages/man2/clone.2:528
 msgid ""
 "Store the child thread ID at the location I<ptid> in the parent's memory.  "
 "(In Linux 2.5.32-2.5.48 there was a flag B<CLONE_SETTID> that did this.)  "
@@ -18109,13 +18153,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:523
+#: man-pages/man2/clone.2:528
 #, no-wrap
 msgid "B<CLONE_PID> (Linux 2.0 to 2.5.15)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:536
+#: man-pages/man2/clone.2:541
 msgid ""
 "If B<CLONE_PID> is set, the child process is created with the same process "
 "ID as the calling process.  This is good for hacking the system, but "
@@ -18126,31 +18170,31 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:536
+#: man-pages/man2/clone.2:541
 #, no-wrap
 msgid "B<CLONE_PTRACE> (since Linux 2.2)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:543
+#: man-pages/man2/clone.2:548
 msgid ""
 "If B<CLONE_PTRACE> is specified, and the calling process is being traced, "
 "then trace the child also (see B<ptrace>(2))."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:543
+#: man-pages/man2/clone.2:548
 #, no-wrap
 msgid "B<CLONE_SETTLS> (since Linux 2.5.32)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:547
+#: man-pages/man2/clone.2:552
 msgid "The TLS (Thread Local Storage) descriptor is set to I<newtls>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:564
+#: man-pages/man2/clone.2:569
 msgid ""
 "The interpretation of I<newtls> and the resulting effect is architecture "
 "dependent.  On x86, I<newtls> is interpreted as a I<struct user_desc\\ *> "
@@ -18161,13 +18205,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:564
+#: man-pages/man2/clone.2:569
 #, no-wrap
 msgid "B<CLONE_SIGHAND> (since Linux 2.0)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:580
+#: man-pages/man2/clone.2:585
 msgid ""
 "If B<CLONE_SIGHAND> is set, the calling process and the child process share "
 "the same table of signal handlers.  If the calling process or child process "
@@ -18179,7 +18223,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:591
+#: man-pages/man2/clone.2:596
 msgid ""
 "If B<CLONE_SIGHAND> is not set, the child process inherits a copy of the "
 "signal handlers of the calling process at the time B<clone>()  is called.  "
@@ -18189,21 +18233,21 @@ msgstr ""
 
 #.  Precisely: Linux 2.6.0-test6
 #. type: Plain text
-#: man-pages/man2/clone.2:600
+#: man-pages/man2/clone.2:605
 msgid ""
 "Since Linux 2.6.0, I<flags> must also include B<CLONE_VM> if "
 "B<CLONE_SIGHAND> is specified"
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:600
+#: man-pages/man2/clone.2:605
 #, no-wrap
 msgid "B<CLONE_STOPPED> (since Linux 2.6.0)"
 msgstr ""
 
 #.  Precisely: Linux 2.6.0-test2
 #. type: Plain text
-#: man-pages/man2/clone.2:610
+#: man-pages/man2/clone.2:615
 msgid ""
 "If B<CLONE_STOPPED> is set, then the child is initially stopped (as though "
 "it was sent a B<SIGSTOP> signal), and must be resumed by sending it a "
@@ -18212,7 +18256,7 @@ msgstr ""
 
 #.  glibc 2.8 removed this defn from bits/sched.h
 #. type: Plain text
-#: man-pages/man2/clone.2:622
+#: man-pages/man2/clone.2:627
 msgid ""
 "This flag was I<deprecated> from Linux 2.6.25 onward, and was I<removed> "
 "altogether in Linux 2.6.38.  Since then, the kernel silently ignores it "
@@ -18221,13 +18265,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:622
+#: man-pages/man2/clone.2:627
 #, no-wrap
 msgid "B<CLONE_SYSVSEM> (since Linux 2.5.10)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:640
+#: man-pages/man2/clone.2:645
 msgid ""
 "If B<CLONE_SYSVSEM> is set, then the child and the calling process share a "
 "single list of System V semaphore adjustment (I<semadj>)  values (see "
@@ -18239,14 +18283,14 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:640
+#: man-pages/man2/clone.2:645
 #, no-wrap
 msgid "B<CLONE_THREAD> (since Linux 2.4.0)"
 msgstr ""
 
 #.  Precisely: Linux 2.6.0-test8
 #. type: Plain text
-#: man-pages/man2/clone.2:650
+#: man-pages/man2/clone.2:655
 msgid ""
 "If B<CLONE_THREAD> is set, the child is placed in the same thread group as "
 "the calling process.  To make the remainder of the discussion of "
@@ -18255,7 +18299,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:658
+#: man-pages/man2/clone.2:663
 msgid ""
 "Thread groups were a feature added in Linux 2.4 to support the POSIX threads"
 " notion of a set of threads that share a single PID.  Internally, this "
@@ -18265,7 +18309,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:667
+#: man-pages/man2/clone.2:672
 msgid ""
 "The threads within a group can be distinguished by their (system-wide)  "
 "unique thread IDs (TID).  A new thread's TID is available as the function "
@@ -18274,7 +18318,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:677
+#: man-pages/man2/clone.2:682
 msgid ""
 "When a call is made to B<clone>()  without specifying B<CLONE_THREAD>, then "
 "the resulting thread is placed in a new thread group whose TGID is the same "
@@ -18282,7 +18326,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:699
+#: man-pages/man2/clone.2:704
 msgid ""
 "A new thread created with B<CLONE_THREAD> has the same parent process as the"
 " caller of B<clone>()  (i.e., like B<CLONE_PARENT>), so that calls to "
@@ -18294,14 +18338,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:704
+#: man-pages/man2/clone.2:709
 msgid ""
 "After all of the threads in a thread group terminate the parent process of "
 "the thread group is sent a B<SIGCHLD> (or other termination) signal."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:709
+#: man-pages/man2/clone.2:714
 msgid ""
 "If any of the threads in a thread group performs an B<execve>(2), then all "
 "threads other than the thread group leader are terminated, and the new "
@@ -18309,7 +18353,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:715
+#: man-pages/man2/clone.2:720
 msgid ""
 "If one of the threads in a thread group creates a child using B<fork>(2), "
 "then any thread in the group can B<wait>(2)  for that child."
@@ -18317,7 +18361,7 @@ msgstr ""
 
 #.  Precisely: Linux 2.6.0-test6
 #. type: Plain text
-#: man-pages/man2/clone.2:729
+#: man-pages/man2/clone.2:734
 msgid ""
 "Since Linux 2.5.35, I<flags> must also include B<CLONE_SIGHAND> if "
 "B<CLONE_THREAD> is specified (and note that, since Linux 2.6.0, "
@@ -18325,7 +18369,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:734
+#: man-pages/man2/clone.2:739
 msgid ""
 "Signal dispositions and actions are process-wide: if an unhandled signal is "
 "delivered to a thread, then it will affect (terminate, stop, continue, be "
@@ -18333,12 +18377,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:737
+#: man-pages/man2/clone.2:742
 msgid "Each thread has its own signal mask, as set by B<sigprocmask>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:759
+#: man-pages/man2/clone.2:764
 msgid ""
 "A signal may be process-directed or thread-directed.  A process-directed "
 "signal is targeted at a thread group (i.e., a TGID), and is delivered to an "
@@ -18354,7 +18398,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:764
+#: man-pages/man2/clone.2:769
 msgid ""
 "A call to B<sigpending>(2)  returns a signal set that is the union of the "
 "pending process-directed signals and the signals that are pending for the "
@@ -18362,7 +18406,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:773
+#: man-pages/man2/clone.2:778
 msgid ""
 "If a process-directed signal is delivered to a thread group, and the thread "
 "group has installed a handler for the signal, then the handler will be "
@@ -18373,26 +18417,26 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:773
+#: man-pages/man2/clone.2:778
 #, no-wrap
 msgid "B<CLONE_UNTRACED> (since Linux 2.5.46)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:780
+#: man-pages/man2/clone.2:785
 msgid ""
 "If B<CLONE_UNTRACED> is specified, then a tracing process cannot force "
 "B<CLONE_PTRACE> on this child process."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:780
+#: man-pages/man2/clone.2:785
 #, no-wrap
 msgid "B<CLONE_VFORK> (since Linux 2.2)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:792
+#: man-pages/man2/clone.2:797
 msgid ""
 "If B<CLONE_VFORK> is set, the execution of the calling process is suspended "
 "until the child releases its virtual memory resources via a call to "
@@ -18400,7 +18444,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:798
+#: man-pages/man2/clone.2:803
 msgid ""
 "If B<CLONE_VFORK> is not set, then both the calling process and the child "
 "are schedulable after the call, and an application should not rely on "
@@ -18408,13 +18452,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:798
+#: man-pages/man2/clone.2:803
 #, no-wrap
 msgid "B<CLONE_VM> (since Linux 2.0)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:811
+#: man-pages/man2/clone.2:816
 msgid ""
 "If B<CLONE_VM> is set, the calling process and the child process run in the "
 "same memory space.  In particular, memory writes performed by the calling "
@@ -18425,7 +18469,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:820
+#: man-pages/man2/clone.2:825
 msgid ""
 "If B<CLONE_VM> is not set, the child process runs in a separate copy of the "
 "memory space of the calling process at the time of B<clone>().  Memory "
@@ -18434,7 +18478,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:837
+#: man-pages/man2/clone.2:842
 msgid ""
 "Note that the glibc B<clone>()  wrapper function makes some changes in the "
 "memory pointed to by I<child_stack> (changes required to set the stack up "
@@ -18445,13 +18489,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/clone.2:837
+#: man-pages/man2/clone.2:842
 #, no-wrap
 msgid "C library/kernel differences"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:851
+#: man-pages/man2/clone.2:856
 msgid ""
 "The raw B<clone>()  system call corresponds more closely to B<fork>(2)  in "
 "that execution in the child continues from the point of the call.  As such, "
@@ -18460,7 +18504,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:869
+#: man-pages/man2/clone.2:874
 msgid ""
 "Another difference for the raw B<clone>()  system call is that the "
 "I<child_stack> argument may be NULL, in which case the child uses a "
@@ -18473,7 +18517,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:873
+#: man-pages/man2/clone.2:878
 msgid ""
 "The order of the arguments also differs in the raw system call, and there "
 "are variations in the arguments across architectures, as detailed in the "
@@ -18481,14 +18525,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:876
+#: man-pages/man2/clone.2:881
 msgid ""
 "The raw system call interface on x86-64 and some other architectures "
 "(including sh, tile, ia-64, and alpha) is:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:882
+#: man-pages/man2/clone.2:887
 #, no-wrap
 msgid ""
 "B<long clone(unsigned long >I<flags>B<, void *>I<child_stack>B<,>\n"
@@ -18498,7 +18542,7 @@ msgstr ""
 
 #.  CONFIG_CLONE_BACKWARDS
 #. type: Plain text
-#: man-pages/man2/clone.2:890
+#: man-pages/man2/clone.2:895
 msgid ""
 "On x86-32, and several other common architectures (including score, ARM, ARM"
 " 64, PA-RISC, arc, Power PC, xtensa, and MIPS), the order of the last two "
@@ -18506,7 +18550,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:896
+#: man-pages/man2/clone.2:901
 #, no-wrap
 msgid ""
 "B<long clone(unsigned long >I<flags>B<, void *>I<child_stack>B<,>\n"
@@ -18516,14 +18560,14 @@ msgstr ""
 
 #.  CONFIG_CLONE_BACKWARDS2
 #. type: Plain text
-#: man-pages/man2/clone.2:902
+#: man-pages/man2/clone.2:907
 msgid ""
 "On the cris and s390 architectures, the order of the first two arguments is "
 "reversed:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:908
+#: man-pages/man2/clone.2:913
 #, no-wrap
 msgid ""
 "B<long clone(void *>I<child_stack>B<, unsigned long >I<flags>B<,>\n"
@@ -18533,12 +18577,12 @@ msgstr ""
 
 #.  CONFIG_CLONE_BACKWARDS3
 #. type: Plain text
-#: man-pages/man2/clone.2:914
+#: man-pages/man2/clone.2:919
 msgid "On the microblaze architecture, an additional argument is supplied:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:921
+#: man-pages/man2/clone.2:926
 #, no-wrap
 msgid ""
 "B<long clone(unsigned long >I<flags>B<, void *>I<child_stack>B<,>\n"
@@ -18548,7 +18592,7 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/clone.2:924
+#: man-pages/man2/clone.2:929
 #, no-wrap
 msgid "blackfin, m68k, and sparc"
 msgstr ""
@@ -18557,7 +18601,7 @@ msgstr ""
 #.      these arches don't define __ARCH_WANT_SYS_CLONE:
 #.      blackfin ia64 m68k sparc
 #. type: Plain text
-#: man-pages/man2/clone.2:931
+#: man-pages/man2/clone.2:936
 msgid ""
 "The argument-passing conventions on blackfin, m68k, and sparc are different "
 "from the descriptions above.  For details, see the kernel (and glibc) "
@@ -18565,18 +18609,18 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/clone.2:931
+#: man-pages/man2/clone.2:936
 #, no-wrap
 msgid "ia64"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:933
+#: man-pages/man2/clone.2:938
 msgid "On ia64, a different interface is used:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:941
+#: man-pages/man2/clone.2:946
 #, no-wrap
 msgid ""
 "B<int __clone2(int (*>I<fn>B<)(void *), >\n"
@@ -18586,7 +18630,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:949
+#: man-pages/man2/clone.2:954
 msgid ""
 "The prototype shown above is for the glibc wrapper function; for the system "
 "call itself, the prototype can be described as follows (it is identical to "
@@ -18594,7 +18638,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:956
+#: man-pages/man2/clone.2:961
 #, no-wrap
 msgid ""
 "B<long clone2(unsigned long >I<flags>B<, void *>I<child_stack_base>B<,>\n"
@@ -18604,7 +18648,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:969
+#: man-pages/man2/clone.2:974
 msgid ""
 "B<__clone2>()  operates in the same way as B<clone>(), except that "
 "I<child_stack_base> points to the lowest address of the child's stack area, "
@@ -18613,13 +18657,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/clone.2:969
+#: man-pages/man2/clone.2:974
 #, no-wrap
 msgid "Linux 2.4 and earlier"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:977
+#: man-pages/man2/clone.2:982
 msgid ""
 "In Linux 2.4 and earlier, B<clone>()  does not take arguments I<ptid>, "
 "I<tls>, and I<ctid>."
@@ -18628,7 +18672,7 @@ msgstr ""
 #.  gettid(2) returns current->pid;
 #.  getpid(2) returns current->tgid;
 #. type: Plain text
-#: man-pages/man2/clone.2:986
+#: man-pages/man2/clone.2:991
 msgid ""
 "On success, the thread ID of the child process is returned in the caller's "
 "thread of execution.  On failure, -1 is returned in the caller's context, no"
@@ -18636,19 +18680,19 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:987
+#: man-pages/man2/clone.2:992
 #, no-wrap
 msgid "B<EAGAIN>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:991
+#: man-pages/man2/clone.2:996
 msgid "Too many processes are already running; see B<fork>(2)."
 msgstr ""
 
 #.  Precisely: Linux 2.6.0-test6
 #. type: Plain text
-#: man-pages/man2/clone.2:999
+#: man-pages/man2/clone.2:1004
 msgid ""
 "B<CLONE_SIGHAND> was specified, but B<CLONE_VM> was not.  (Since Linux "
 "2.6.0.)"
@@ -18663,14 +18707,14 @@ msgstr ""
 #.  was specified.
 #.  (Since Linux 2.6.0-test6.)
 #. type: Plain text
-#: man-pages/man2/clone.2:1014
+#: man-pages/man2/clone.2:1019
 msgid ""
 "B<CLONE_THREAD> was specified, but B<CLONE_SIGHAND> was not.  (Since Linux "
 "2.5.35.)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1024
+#: man-pages/man2/clone.2:1029
 msgid ""
 "B<CLONE_THREAD> was specified, but the current process previously called "
 "B<unshare>(2)  with the B<CLONE_NEWPID> flag or used B<setns>(2)  to "
@@ -18679,84 +18723,84 @@ msgstr ""
 
 #.  commit e66eded8309ebf679d3d3c1f5820d1f2ca332c71
 #. type: Plain text
-#: man-pages/man2/clone.2:1033
+#: man-pages/man2/clone.2:1038
 msgid "Both B<CLONE_FS> and B<CLONE_NEWNS> were specified in I<flags>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:1033
+#: man-pages/man2/clone.2:1038
 #, no-wrap
 msgid "B<EINVAL> (since Linux 3.9)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1041
+#: man-pages/man2/clone.2:1046
 msgid "Both B<CLONE_NEWUSER> and B<CLONE_FS> were specified in I<flags>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1049
+#: man-pages/man2/clone.2:1054
 msgid "Both B<CLONE_NEWIPC> and B<CLONE_SYSVSEM> were specified in I<flags>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1061
+#: man-pages/man2/clone.2:1066
 msgid ""
 "One (or both) of B<CLONE_NEWPID> or B<CLONE_NEWUSER> and one (or both) of "
 "B<CLONE_THREAD> or B<CLONE_PARENT> were specified in I<flags>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1070
+#: man-pages/man2/clone.2:1075
 msgid ""
 "Returned by the glibc B<clone>()  wrapper function when I<fn> or "
 "I<child_stack> is specified as NULL."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1080
+#: man-pages/man2/clone.2:1085
 msgid ""
 "B<CLONE_NEWIPC> was specified in I<flags>, but the kernel was not configured"
 " with the B<CONFIG_SYSVIPC> and B<CONFIG_IPC_NS> options."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1088
+#: man-pages/man2/clone.2:1093
 msgid ""
 "B<CLONE_NEWNET> was specified in I<flags>, but the kernel was not configured"
 " with the B<CONFIG_NET_NS> option."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1096
+#: man-pages/man2/clone.2:1101
 msgid ""
 "B<CLONE_NEWPID> was specified in I<flags>, but the kernel was not configured"
 " with the B<CONFIG_PID_NS> option."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1104
+#: man-pages/man2/clone.2:1109
 msgid ""
 "B<CLONE_NEWUSER> was specified in I<flags>, but the kernel was not "
 "configured with the B<CONFIG_USER_NS> option."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1112
+#: man-pages/man2/clone.2:1117
 msgid ""
 "B<CLONE_NEWUTS> was specified in I<flags>, but the kernel was not configured"
 " with the B<CONFIG_UTS_NS> option."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1119
+#: man-pages/man2/clone.2:1124
 msgid ""
 "I<child_stack> is not aligned to a suitable boundary for this architecture."
 "  For example, on aarch64, I<child_stack> must be a multiple of 16."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1124
+#: man-pages/man2/clone.2:1129
 msgid ""
 "Cannot allocate sufficient memory to allocate a task structure for the "
 "child, or to copy those parts of the caller's context that need to be "
@@ -18764,27 +18808,27 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:1124
+#: man-pages/man2/clone.2:1129
 #, no-wrap
 msgid "B<ENOSPC> (since Linux 3.7)"
 msgstr ""
 
 #.  commit f2302505775fd13ba93f034206f1e2a587017929
 #. type: Plain text
-#: man-pages/man2/clone.2:1132
+#: man-pages/man2/clone.2:1137
 msgid ""
 "B<CLONE_NEWPID> was specified in flags, but the limit on the nesting depth "
 "of PID namespaces would have been exceeded; see B<pid_namespaces>(7)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:1132
+#: man-pages/man2/clone.2:1137
 #, no-wrap
 msgid "B<ENOSPC> (since Linux 4.9; beforehand B<EUSERS>)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1141
+#: man-pages/man2/clone.2:1146
 msgid ""
 "B<CLONE_NEWUSER> was specified in I<flags>, and the call would cause the "
 "limit on the number of nested user namespaces to be exceeded.  See "
@@ -18792,20 +18836,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1144
+#: man-pages/man2/clone.2:1149
 msgid ""
 "From Linux 3.11 to Linux 4.8, the error diagnosed in this case was "
 "B<EUSERS>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:1144
+#: man-pages/man2/clone.2:1149
 #, no-wrap
 msgid "B<ENOSPC> (since Linux 4.9)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1154
+#: man-pages/man2/clone.2:1159
 msgid ""
 "One of the values in I<flags> specified the creation of a new user "
 "namespace, but doing so would have caused the limit defined by the "
@@ -18814,7 +18858,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1164
+#: man-pages/man2/clone.2:1169
 msgid ""
 "B<CLONE_NEWCGROUP>, B<CLONE_NEWIPC>, B<CLONE_NEWNET>, B<CLONE_NEWNS>, "
 "B<CLONE_NEWPID>, or B<CLONE_NEWUTS> was specified by an unprivileged process"
@@ -18822,14 +18866,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1169
+#: man-pages/man2/clone.2:1174
 msgid ""
 "B<CLONE_PID> was specified by a process other than process 0.  (This error "
 "occurs only on Linux 2.5.15 and earlier.)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1177
+#: man-pages/man2/clone.2:1182
 msgid ""
 "B<CLONE_NEWUSER> was specified in I<flags>, but either the effective user ID"
 " or the effective group ID of the caller does not have a mapping in the "
@@ -18837,7 +18881,7 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:1177
+#: man-pages/man2/clone.2:1182
 #, no-wrap
 msgid "B<EPERM> (since Linux 3.9)"
 msgstr ""
@@ -18845,7 +18889,7 @@ msgstr ""
 #.  commit 3151527ee007b73a0ebd296010f1c0454a919c7d
 #.  FIXME What is the rationale for this restriction?
 #. type: Plain text
-#: man-pages/man2/clone.2:1187
+#: man-pages/man2/clone.2:1192
 msgid ""
 "B<CLONE_NEWUSER> was specified in I<flags> and the caller is in a chroot "
 "environment (i.e., the caller's root directory does not match the root "
@@ -18853,21 +18897,21 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:1187
+#: man-pages/man2/clone.2:1192
 #, no-wrap
 msgid "B<ERESTARTNOINTR> (since Linux 2.6.17)"
 msgstr ""
 
 #.  commit 4a2c7a7837da1b91468e50426066d988050e4d56
 #. type: Plain text
-#: man-pages/man2/clone.2:1192
+#: man-pages/man2/clone.2:1197
 msgid ""
 "System call was interrupted by a signal and will be restarted.  (This can be"
 " seen only during a trace.)"
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:1192
+#: man-pages/man2/clone.2:1197
 #, no-wrap
 msgid "B<EUSERS> (Linux 3.11 to Linux 4.8)"
 msgstr ""
@@ -18880,7 +18924,7 @@ msgstr ""
 #.  .BR clone ()
 #.  as described in this manual page.
 #. type: Plain text
-#: man-pages/man2/clone.2:1208
+#: man-pages/man2/clone.2:1213
 msgid ""
 "B<CLONE_NEWUSER> was specified in I<flags>, and the limit on the number of "
 "nested user namespaces would be exceeded.  See the discussion of the "
@@ -18888,14 +18932,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1212
+#: man-pages/man2/clone.2:1217
 msgid ""
 "B<clone>()  is Linux-specific and should not be used in programs intended to"
 " be portable."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1218
+#: man-pages/man2/clone.2:1223
 msgid ""
 "The B<kcmp>(2)  system call can be used to test whether two processes share "
 "various resources such as a file descriptor table, System V semaphore undo "
@@ -18903,14 +18947,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1224
+#: man-pages/man2/clone.2:1229
 msgid ""
 "Handlers registered using B<pthread_atfork>(3)  are not executed during a "
 "call to B<clone>()."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1234
+#: man-pages/man2/clone.2:1239
 msgid ""
 "In the Linux 2.4.x series, B<CLONE_THREAD> generally does not make the "
 "parent of the new thread the same as the parent of the calling process.  "
@@ -18919,7 +18963,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1243
+#: man-pages/man2/clone.2:1248
 msgid ""
 "For a while there was B<CLONE_DETACHED> (introduced in 2.5.32): parent wants"
 " no child-exit signal.  In Linux 2.6.2, the need to give this flag together "
@@ -18928,14 +18972,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1248
+#: man-pages/man2/clone.2:1253
 msgid ""
 "On i386, B<clone>()  should not be called through vsyscall, but directly "
 "through I<int $0x80>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1279
+#: man-pages/man2/clone.2:1284
 msgid ""
 "GNU C library versions 2.3.4 up to and including 2.24 contained a wrapper "
 "function for B<getpid>(2)  that performed caching of PIDs.  This caching "
@@ -18954,32 +18998,32 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1283
+#: man-pages/man2/clone.2:1288
 #, no-wrap
 msgid "#include E<lt>syscall.hE<gt>\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1285
+#: man-pages/man2/clone.2:1290
 #, no-wrap
 msgid "pid_t mypid;\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1287
+#: man-pages/man2/clone.2:1292
 #, no-wrap
 msgid "mypid = syscall(SYS_getpid);\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1296
+#: man-pages/man2/clone.2:1301
 msgid ""
 "Because of the stale-cache problem, as well as other problems noted in "
 "B<getpid>(2), the PID caching feature was removed in glibc 2.25."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1306
+#: man-pages/man2/clone.2:1311
 msgid ""
 "The following program demonstrates the use of B<clone>()  to create a child "
 "process that executes in a separate UTS namespace.  The child changes the "
@@ -18990,13 +19034,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/clone.2:1306
+#: man-pages/man2/clone.2:1311
 #, no-wrap
 msgid "Program source"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1316
+#: man-pages/man2/clone.2:1321
 #, no-wrap
 msgid ""
 "#define _GNU_SOURCE\n"
@@ -19010,7 +19054,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1319
+#: man-pages/man2/clone.2:1324
 #, no-wrap
 msgid ""
 "#define errExit(msg)    do { perror(msg); exit(EXIT_FAILURE); \\e\n"
@@ -19018,7 +19062,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1324
+#: man-pages/man2/clone.2:1329
 #, no-wrap
 msgid ""
 "static int              /* Start function for cloned child */\n"
@@ -19028,13 +19072,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1326
+#: man-pages/man2/clone.2:1331
 #, no-wrap
 msgid "    /* Change hostname in UTS namespace of child */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1329
+#: man-pages/man2/clone.2:1334
 #, no-wrap
 msgid ""
 "    if (sethostname(arg, strlen(arg)) == -1)\n"
@@ -19042,13 +19086,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1331
+#: man-pages/man2/clone.2:1336
 #, no-wrap
 msgid "    /* Retrieve and display hostname */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1335
+#: man-pages/man2/clone.2:1340
 #, no-wrap
 msgid ""
 "    if (uname(&uts) == -1)\n"
@@ -19057,7 +19101,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1339
+#: man-pages/man2/clone.2:1344
 #, no-wrap
 msgid ""
 "    /* Keep the namespace open for a while, by sleeping.\n"
@@ -19066,13 +19110,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1341
+#: man-pages/man2/clone.2:1346
 #, no-wrap
 msgid "    sleep(200);\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1344
+#: man-pages/man2/clone.2:1349
 #, no-wrap
 msgid ""
 "    return 0;           /* Child terminates now */\n"
@@ -19080,13 +19124,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1346
+#: man-pages/man2/clone.2:1351
 #, no-wrap
 msgid "#define STACK_SIZE (1024 * 1024)    /* Stack size for cloned child */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1354
+#: man-pages/man2/clone.2:1359
 #, no-wrap
 msgid ""
 "int\n"
@@ -19099,7 +19143,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1359
+#: man-pages/man2/clone.2:1364
 #, no-wrap
 msgid ""
 "    if (argc E<lt> 2) {\n"
@@ -19109,13 +19153,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1361
+#: man-pages/man2/clone.2:1366
 #, no-wrap
 msgid "    /* Allocate stack for child */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1366
+#: man-pages/man2/clone.2:1371
 #, no-wrap
 msgid ""
 "    stack = malloc(STACK_SIZE);\n"
@@ -19125,7 +19169,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1369
+#: man-pages/man2/clone.2:1374
 #, no-wrap
 msgid ""
 "    /* Create child that has its own UTS namespace;\n"
@@ -19133,7 +19177,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1374
+#: man-pages/man2/clone.2:1379
 #, no-wrap
 msgid ""
 "    pid = clone(childFunc, stackTop, CLONE_NEWUTS | SIGCHLD, argv[1]);\n"
@@ -19143,19 +19187,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1376
+#: man-pages/man2/clone.2:1381
 #, no-wrap
 msgid "    /* Parent falls through to here */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1378
+#: man-pages/man2/clone.2:1383
 #, no-wrap
 msgid "    sleep(1);           /* Give child time to change its hostname */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1381
+#: man-pages/man2/clone.2:1386
 #, no-wrap
 msgid ""
 "    /* Display hostname in parent\\(aqs UTS namespace. This will be\n"
@@ -19163,7 +19207,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1385
+#: man-pages/man2/clone.2:1390
 #, no-wrap
 msgid ""
 "    if (uname(&uts) == -1)\n"
@@ -19172,7 +19216,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1389
+#: man-pages/man2/clone.2:1394
 #, no-wrap
 msgid ""
 "    if (waitpid(pid, NULL, 0) == -1)    /* Wait for child */\n"
@@ -19181,7 +19225,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1392
+#: man-pages/man2/clone.2:1397
 #, no-wrap
 msgid ""
 "    exit(EXIT_SUCCESS);\n"
@@ -19189,7 +19233,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1407
+#: man-pages/man2/clone.2:1412
 msgid ""
 "B<fork>(2), B<futex>(2), B<getpid>(2), B<gettid>(2), B<kcmp>(2), "
 "B<set_thread_area>(2), B<set_tid_address>(2), B<setns>(2), B<tkill>(2), "
@@ -26927,7 +26971,7 @@ msgstr ""
 #: man-pages/man3/CPU_SET.3:93
 msgid ""
 "The I<cpu_set_t> data type is implemented as a bit mask.  However, the data "
-"structure treated as considered opaque: all manipulation of CPU sets should "
+"structure should be treated as opaque: all manipulation of CPU sets should "
 "be done via the macros described in this page."
 msgstr ""
 

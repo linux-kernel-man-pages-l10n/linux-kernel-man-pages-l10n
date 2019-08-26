@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
-"POT-Creation-Date: 2019-04-02 18:52+0300\n"
-"PO-Revision-Date: 2019-04-02 15:53+0000\n"
+"POT-Creation-Date: 2019-08-26 09:24+0300\n"
+"PO-Revision-Date: 2019-08-26 06:20+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/kruvalig/man-pages/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -3219,7 +3219,7 @@ msgstr ""
 #. type: Plain text
 #: man-pages/man7/bpf-helpers.7:2256
 msgid ""
-"A user should care about the synchronization by himself.  For example, by "
+"A user should care about the synchronization by themself.  For example, by "
 "using the B<BPF_STX_XADD> instruction to alter the shared data."
 msgstr ""
 
@@ -5670,6 +5670,12 @@ msgstr ""
 msgid "BPF"
 msgstr ""
 
+#. type: TH
+#: man-pages/man2/bpf.2:26
+#, no-wrap
+msgid "2019-08-02"
+msgstr ""
+
 #. type: Plain text
 #: man-pages/man2/bpf.2:29
 msgid "bpf - perform a command on an extended BPF map or program"
@@ -5987,10 +5993,11 @@ msgstr ""
 #: man-pages/man2/bpf.2:662 man-pages/man2/bpf.2:768 man-pages/man2/bpf.2:773
 #: man-pages/man2/bpf.2:777 man-pages/man2/bpf.2:784 man-pages/man2/bpf.2:792
 #: man-pages/man2/bpf.2:801 man-pages/man2/bpf.2:1188
-#: man-pages/man2/bpf.2:1191 man-pages/man2/bpf.2:1193
-#: man-pages/man2/bpf.2:1195 man-pages/man2/bpf.2:1197
-#: man-pages/man2/bpf.2:1199 man-pages/man2/bpf.2:1201
-#: man-pages/man2/bpf.2:1203
+#: man-pages/man2/bpf.2:1192 man-pages/man2/bpf.2:1195
+#: man-pages/man2/bpf.2:1198 man-pages/man2/bpf.2:1201
+#: man-pages/man2/bpf.2:1204 man-pages/man2/bpf.2:1208
+#: man-pages/man2/bpf.2:1211 man-pages/man2/bpf.2:1214
+#: man-pages/man2/bpf.2:1218
 #, no-wrap
 msgid "*"
 msgstr ""
@@ -7191,53 +7198,75 @@ msgid ""
 "architectures:"
 msgstr ""
 
+#.  commit 0a14842f5a3c0e88a1e59fac5c3025db39721f74
 #. type: Plain text
-#: man-pages/man2/bpf.2:1190
-msgid "x86-64 (since Linux 3.18);"
+#: man-pages/man2/bpf.2:1191
+msgid "x86-64 (since Linux 3.18; cBPF since Linux 3.0);"
 msgstr ""
 
+#.  commit ddecdfcea0ae891f782ae853771c867ab51024c2
 #. type: Plain text
-#: man-pages/man2/bpf.2:1193
+#: man-pages/man2/bpf.2:1195
+msgid "ARM32 (since Linux 3.18; cBPF since Linux 3.4);"
+msgstr ""
+
+#.  commit 2809a2087cc44b55e4377d7b9be3f7f5d2569091
+#. type: Plain text
+#: man-pages/man2/bpf.2:1198
+msgid "SPARC 32 (since Linux 3.18; cBPF since Linux 3.5);"
+msgstr ""
+
+#.  commit e54bcde3d69d40023ae77727213d14f920eb264a
+#. type: Plain text
+#: man-pages/man2/bpf.2:1201
 msgid "ARM-64 (since Linux 3.18);"
 msgstr ""
 
+#.  commit c10302efe569bfd646b4c22df29577a4595b4580
 #. type: Plain text
-#: man-pages/man2/bpf.2:1195
-msgid "s390 (since Linux 4.1);"
+#: man-pages/man2/bpf.2:1204
+msgid "s390 (since Linux 4.1; cBPF since Linux 3.7);"
 msgstr ""
 
+#.  commit 0ca87f05ba8bdc6791c14878464efc901ad71e99
+#.  commit 156d0e290e969caba25f1851c52417c14d141b24
 #. type: Plain text
-#: man-pages/man2/bpf.2:1197
-msgid "PowerPC 64 (since Linux 4.8);"
+#: man-pages/man2/bpf.2:1208
+msgid "PowerPC 64 (since Linux 4.8; cBPF since Linux 3.1);"
 msgstr ""
 
+#.  commit 7a12b5031c6b947cc13918237ae652b536243b76
 #. type: Plain text
-#: man-pages/man2/bpf.2:1199
+#: man-pages/man2/bpf.2:1211
 msgid "SPARC 64 (since Linux 4.12);"
 msgstr ""
 
+#.  commit 03f5781be2c7b7e728d724ac70ba10799cc710d7
 #. type: Plain text
-#: man-pages/man2/bpf.2:1201
-msgid "MIPS 64 (since Linux 4.13);"
+#: man-pages/man2/bpf.2:1214
+msgid "x86-32 (since Linux 4.18);"
+msgstr ""
+
+#.  commit c6610de353da5ca6eee5b8960e838a87a90ead0c
+#.  commit f381bf6d82f032b7410185b35d000ea370ac706b
+#. type: Plain text
+#: man-pages/man2/bpf.2:1218
+msgid "MIPS 64 (since Linux 4.18; cBPF since Linux 3.16);"
+msgstr ""
+
+#.  commit 2353ecc6f91fd15b893fa01bf85a1c7a823ee4f2
+#. type: Plain text
+#: man-pages/man2/bpf.2:1221
+msgid "riscv (since Linux 5.1)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/bpf.2:1203
-msgid "ARM32 (since Linux 4.14)."
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man2/bpf.2:1205
-msgid "x86-32 (since Linux 4.18)."
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man2/bpf.2:1212
+#: man-pages/man2/bpf.2:1228
 msgid "B<seccomp>(2), B<bpf-helpers>(7), B<socket>(7), B<tc>(8), B<tc-bpf>(8)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/bpf.2:1214
+#: man-pages/man2/bpf.2:1230
 msgid ""
 "Both classic and extended BPF are explained in the kernel source file "
 "I<Documentation/networking/filter.txt>."

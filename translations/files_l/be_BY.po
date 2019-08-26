@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
-"POT-Creation-Date: 2019-04-01 18:52+0300\n"
-"PO-Revision-Date: 2019-04-02 15:55+0000\n"
+"POT-Creation-Date: 2019-08-26 09:26+0300\n"
+"PO-Revision-Date: 2019-08-26 06:21+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Belarusian (Belarus) (http://www.transifex.com/kruvalig/man-pages/language/be_BY/)\n"
 "MIME-Version: 1.0\n"
@@ -1802,7 +1802,7 @@ msgstr ""
 #. type: TH
 #: man-pages/man8/ld.so.8:5
 #, no-wrap
-msgid "2019-02-27"
+msgid "2019-08-02"
 msgstr ""
 
 #. type: Plain text
@@ -1843,11 +1843,11 @@ msgstr ""
 #. type: Plain text
 #: man-pages/man8/ld.so.8:47
 msgid ""
-"The program B<ld.so> handles a.out binaries, a format used long ago; B<ld-"
-"linux.so*> (I</lib/ld-linux.so.1> for libc5, I</lib/ld-linux.so.2> for "
-"glibc2)  handles ELF, which everybody has been using for years now.  "
-"Otherwise, both have the same behavior, and use the same support files and "
-"programs as B<ldd>(1), B<ldconfig>(8), and I</etc/ld.so.conf>."
+"The program B<ld.so> handles a.out binaries, a binary format used long ago."
+"  The program B<ld-linux.so*> (I</lib/ld-linux.so.1> for libc5, I</lib/ld-"
+"linux.so.2> for glibc2)  handles binaries that are in the more modern ELF "
+"format.  Both programs have the same behavior, and use the same support "
+"files and programs (B<ldd>(1), B<ldconfig>(8), and I</etc/ld.so.conf>)."
 msgstr ""
 
 #. type: Plain text
@@ -2117,19 +2117,29 @@ msgid "Secure-execution mode"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:231
+#: man-pages/man8/ld.so.8:242
 msgid ""
-"For security reasons, the effects of some environment variables are voided "
-"or modified if the dynamic linker determines that the binary should be run "
-"in secure-execution mode.  (For details, see the discussion of individual "
-"environment variables below.)  A binary is executed in secure-execution mode"
-" if the B<AT_SECURE> entry in the auxiliary vector (see B<getauxval>(3))  "
-"has a nonzero value.  This entry may have a nonzero value for various "
-"reasons, including:"
+"For security reasons, if the dynamic linker determines that a binary should "
+"be run in secure-execution mode, the effects of some environment variables "
+"are voided or modified, and furthermore those environment variables are "
+"stripped from the environment, so that the program does not even see the "
+"definitions.  Some of these environment variables affect the operation of "
+"the dynamic linker itself, and are described below.  Other environment "
+"variables treated in this way include: B<GCONV_PATH>, B<GETCONF_DIR>, "
+"B<HOSTALIASES>, B<LOCALDOMAIN>, B<LOCPATH>, B<MALLOC_TRACE>, B<NIS_PATH>, "
+"B<NLSPATH>, B<RESOLV_HOST_CONF>, B<RES_OPTIONS>, B<TMPDIR>, and B<TZDIR>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:236
+#: man-pages/man8/ld.so.8:249
+msgid ""
+"A binary is executed in secure-execution mode if the B<AT_SECURE> entry in "
+"the auxiliary vector (see B<getauxval>(3))  has a nonzero value.  This entry"
+" may have a nonzero value for various reasons, including:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:254
 msgid ""
 "The process's real and effective user IDs differ, or the real and effective "
 "group IDs differ.  This typically occurs as a result of executing a set-"
@@ -2137,36 +2147,36 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:239
+#: man-pages/man8/ld.so.8:257
 msgid ""
 "A process with a non-root user ID executed a binary that conferred "
 "capabilities to the process."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:242
+#: man-pages/man8/ld.so.8:260
 msgid "A nonzero value may have been set by a Linux Security Module."
 msgstr ""
 
 #. type: SS
-#: man-pages/man8/ld.so.8:242
+#: man-pages/man8/ld.so.8:260
 #, no-wrap
 msgid "Environment variables"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:244
+#: man-pages/man8/ld.so.8:262
 msgid "Among the more important environment variables are the following:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:244
+#: man-pages/man8/ld.so.8:262
 #, no-wrap
 msgid "B<LD_ASSUME_KERNEL> (since glibc 2.2.3)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:256
+#: man-pages/man8/ld.so.8:274
 msgid ""
 "Each shared object can inform the dynamic linker of the minimum kernel ABI "
 "version that it requires.  (This requirement is encoded in an ELF note "
@@ -2177,7 +2187,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:265
+#: man-pages/man8/ld.so.8:283
 msgid ""
 "B<LD_ASSUME_KERNEL> can be used to cause the dynamic linker to assume that "
 "it is running on a system with a different kernel ABI version.  For example,"
@@ -2187,13 +2197,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:269
+#: man-pages/man8/ld.so.8:287
 #, no-wrap
 msgid "$ B<LD_ASSUME_KERNEL=2.2.5 ./myprog>\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:278
+#: man-pages/man8/ld.so.8:296
 msgid ""
 "On systems that provide multiple versions of a shared object (in different "
 "directories in the search path) that have different minimum kernel ABI "
@@ -2202,7 +2212,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:287
+#: man-pages/man8/ld.so.8:305
 msgid ""
 "Historically, the most common use of the B<LD_ASSUME_KERNEL> feature was to "
 "manually select the older LinuxThreads POSIX threads implementation on "
@@ -2211,13 +2221,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:287
+#: man-pages/man8/ld.so.8:305
 #, no-wrap
 msgid "B<LD_BIND_NOW> (since glibc 2.1.1)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:294
+#: man-pages/man8/ld.so.8:312
 msgid ""
 "If set to a nonempty string, causes the dynamic linker to resolve all "
 "symbols at program startup instead of deferring function call resolution to "
@@ -2226,13 +2236,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:294
+#: man-pages/man8/ld.so.8:312
 #, no-wrap
 msgid "B<LD_LIBRARY_PATH>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:300
+#: man-pages/man8/ld.so.8:318
 msgid ""
 "A list of directories in which to search for ELF libraries at execution "
 "time.  The items in the list are separated by either colons or semicolons, "
@@ -2240,12 +2250,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:302
+#: man-pages/man8/ld.so.8:320
 msgid "This variable is ignored in secure-execution mode."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:319
+#: man-pages/man8/ld.so.8:337
 msgid ""
 "Within the pathnames specified in B<LD_LIBRARY_PATH>, the dynamic linker "
 "expands the tokens I<$ORIGIN>, I<$LIB>, and I<$PLATFORM> (or the versions "
@@ -2256,26 +2266,26 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:323
+#: man-pages/man8/ld.so.8:341
 #, no-wrap
 msgid "$ B<LD_LIBRARY_PATH='$ORIGIN/$LIB' prog>\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:331
+#: man-pages/man8/ld.so.8:349
 msgid ""
 "(Note the use of single quotes, which prevent expansion of I<$ORIGIN> and "
 "I<$LIB> as shell variables!)"
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:331
+#: man-pages/man8/ld.so.8:349
 #, no-wrap
 msgid "B<LD_PRELOAD>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:337
+#: man-pages/man8/ld.so.8:355
 msgid ""
 "A list of additional, user-specified, ELF shared objects to be loaded before"
 " all others.  This feature can be used to selectively override functions in "
@@ -2283,7 +2293,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:343
+#: man-pages/man8/ld.so.8:361
 msgid ""
 "The items of the list can be separated by spaces or colons, and there is no "
 "support for escaping either separator.  The objects are searched for using "
@@ -2292,7 +2302,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:349
+#: man-pages/man8/ld.so.8:367
 msgid ""
 "In secure-execution mode, preload pathnames containing slashes are ignored."
 "  Furthermore, shared objects are preloaded only from the standard search "
@@ -2305,7 +2315,7 @@ msgstr ""
 #.  which will preload the libmod.so in 'lib' or 'lib64', using it
 #.  in preference to the version in '.'.
 #. type: Plain text
-#: man-pages/man8/ld.so.8:368
+#: man-pages/man8/ld.so.8:386
 msgid ""
 "Within the names specified in the B<LD_PRELOAD> list, the dynamic linker "
 "understands the tokens I<$ORIGIN>, I<$LIB>, and I<$PLATFORM> (or the "
@@ -2315,90 +2325,90 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:371
+#: man-pages/man8/ld.so.8:389
 msgid ""
 "There are various methods of specifying libraries to be preloaded, and these"
 " are handled in the following order:"
 msgstr ""
 
 #. type: IP
-#: man-pages/man8/ld.so.8:372
+#: man-pages/man8/ld.so.8:390
 #, no-wrap
 msgid "(1)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:376
+#: man-pages/man8/ld.so.8:394
 msgid "The B<LD_PRELOAD> environment variable."
 msgstr ""
 
 #. type: IP
-#: man-pages/man8/ld.so.8:376
+#: man-pages/man8/ld.so.8:394
 #, no-wrap
 msgid "(2)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:380
+#: man-pages/man8/ld.so.8:398
 msgid ""
 "The B<--preload> command-line option when invoking the dynamic linker "
 "directly."
 msgstr ""
 
 #. type: IP
-#: man-pages/man8/ld.so.8:380
+#: man-pages/man8/ld.so.8:398
 #, no-wrap
 msgid "(3)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:384
+#: man-pages/man8/ld.so.8:402
 msgid "The I</etc/ld.so.preload> file (described below)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:385
+#: man-pages/man8/ld.so.8:403
 #, no-wrap
 msgid "B<LD_TRACE_LOADED_OBJECTS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:391
+#: man-pages/man8/ld.so.8:409
 msgid ""
 "If set (to any value), causes the program to list its dynamic dependencies, "
 "as if run by B<ldd>(1), instead of running normally."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:394
+#: man-pages/man8/ld.so.8:412
 msgid ""
 "Then there are lots of more or less obscure variables, many obsolete or only"
 " for internal use."
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:394
+#: man-pages/man8/ld.so.8:412
 #, no-wrap
 msgid "B<LD_AUDIT> (since glibc 2.4)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:402
+#: man-pages/man8/ld.so.8:421
 msgid ""
-"A colon-separated list of user-specified, ELF shared objects to be loaded "
-"before all others in a separate linker namespace (i.e., one that does not "
-"intrude upon the normal symbol bindings that would occur in the process)  "
-"and there is no support for escaping the separator.  These objects can be "
-"used to audit the operation of the dynamic linker."
+"A list of user-specified, ELF shared objects to be loaded before all others "
+"in a separate linker namespace (i.e., one that does not intrude upon the "
+"normal symbol bindings that would occur in the process)  These objects can "
+"be used to audit the operation of the dynamic linker.  The items in the list"
+" are colon-separated, and there is no support for escaping the separator."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:405
+#: man-pages/man8/ld.so.8:424
 msgid "B<LD_AUDIT> is ignored in secure-execution mode."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:418
+#: man-pages/man8/ld.so.8:437
 msgid ""
 "The dynamic linker will notify the audit shared objects at so-called "
 "auditing checkpoints\\(emfor example, loading a new shared object, resolving"
@@ -2410,7 +2420,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:431
+#: man-pages/man8/ld.so.8:450
 msgid ""
 "Within the names specified in the B<LD_AUDIT> list, the dynamic linker "
 "understands the tokens I<$ORIGIN>, I<$LIB>, and I<$PLATFORM> (or the "
@@ -2421,7 +2431,7 @@ msgstr ""
 
 #.  commit 8e9f92e9d5d7737afdacf79b76d98c4c42980508
 #. type: Plain text
-#: man-pages/man8/ld.so.8:438
+#: man-pages/man8/ld.so.8:457
 msgid ""
 "Since glibc 2.13, in secure-execution mode, names in the audit list that "
 "contain slashes are ignored, and only shared objects in the standard search "
@@ -2429,13 +2439,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:438
+#: man-pages/man8/ld.so.8:457
 #, no-wrap
 msgid "B<LD_BIND_NOT> (since glibc 2.1.95)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:450
+#: man-pages/man8/ld.so.8:469
 msgid ""
 "If this environment variable is set to a nonempty string, do not update the "
 "GOT (global offset table) and PLT (procedure linkage table)  after resolving"
@@ -2445,13 +2455,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:450
+#: man-pages/man8/ld.so.8:469
 #, no-wrap
 msgid "B<LD_DEBUG> (since glibc 2.1)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:455
+#: man-pages/man8/ld.so.8:474
 msgid ""
 "Output verbose debugging information about operation of the dynamic linker."
 "  The content of this variable is one of more of the following categories, "
@@ -2459,13 +2469,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:456
+#: man-pages/man8/ld.so.8:475
 #, no-wrap
 msgid "I<help>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:463
+#: man-pages/man8/ld.so.8:482
 msgid ""
 "Specifying I<help> in the value of this variable does not run the specified "
 "program, and displays a help message about which categories can be specified"
@@ -2473,132 +2483,132 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:463
+#: man-pages/man8/ld.so.8:482
 #, no-wrap
 msgid "I<all>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:470
+#: man-pages/man8/ld.so.8:489
 msgid ""
 "Print all debugging information (except I<statistics> and I<unused>; see "
 "below)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:470
+#: man-pages/man8/ld.so.8:489
 #, no-wrap
 msgid "I<bindings>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:473
+#: man-pages/man8/ld.so.8:492
 msgid "Display information about which definition each symbol is bound to."
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:473
+#: man-pages/man8/ld.so.8:492
 #, no-wrap
 msgid "I<files>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:476
+#: man-pages/man8/ld.so.8:495
 msgid "Display progress for input file."
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:476
+#: man-pages/man8/ld.so.8:495
 #, no-wrap
 msgid "I<libs>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:479
+#: man-pages/man8/ld.so.8:498
 msgid "Display library search paths."
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:479
+#: man-pages/man8/ld.so.8:498
 #, no-wrap
 msgid "I<reloc>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:482
+#: man-pages/man8/ld.so.8:501
 msgid "Display relocation processing."
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:482
+#: man-pages/man8/ld.so.8:501
 #, no-wrap
 msgid "I<scopes>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:485
+#: man-pages/man8/ld.so.8:504
 msgid "Display scope information."
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:485
+#: man-pages/man8/ld.so.8:504
 #, no-wrap
 msgid "I<statistics>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:488
+#: man-pages/man8/ld.so.8:507
 msgid "Display relocation statistics."
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:488
+#: man-pages/man8/ld.so.8:507
 #, no-wrap
 msgid "I<symbols>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:491
+#: man-pages/man8/ld.so.8:510
 msgid "Display search paths for each symbol look-up."
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:491
+#: man-pages/man8/ld.so.8:510
 #, no-wrap
 msgid "I<unused>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:494
+#: man-pages/man8/ld.so.8:513
 msgid "Determine unused DSOs."
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:494
+#: man-pages/man8/ld.so.8:513
 #, no-wrap
 msgid "I<versions>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:497
+#: man-pages/man8/ld.so.8:516
 msgid "Display version dependencies."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:504
+#: man-pages/man8/ld.so.8:523
 msgid ""
 "Since glibc 2.3.4, B<LD_DEBUG> is ignored in secure-execution mode, unless "
 "the file I</etc/suid-debug> exists (the content of the file is irrelevant)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:504
+#: man-pages/man8/ld.so.8:523
 #, no-wrap
 msgid "B<LD_DEBUG_OUTPUT> (since glibc 2.1)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:513
+#: man-pages/man8/ld.so.8:532
 msgid ""
 "By default, B<LD_DEBUG> output is written to standard error.  If "
 "B<LD_DEBUG_OUTPUT> is defined, then output is written to the pathname "
@@ -2607,25 +2617,25 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:516
+#: man-pages/man8/ld.so.8:535
 msgid "B<LD_DEBUG_OUTPUT> is ignored in secure-execution mode."
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:516
+#: man-pages/man8/ld.so.8:535
 #, no-wrap
 msgid "B<LD_DYNAMIC_WEAK> (since glibc 2.1.91)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:520
+#: man-pages/man8/ld.so.8:539
 msgid ""
 "By default, when searching shared libraries to resolve a symbol reference, "
 "the dynamic linker will resolve to the first definition it finds."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:529
+#: man-pages/man8/ld.so.8:548
 msgid ""
 "Old glibc versions (before 2.2), provided a different behavior: if the "
 "linker found a symbol that was weak, it would remember that symbol and keep "
@@ -2644,7 +2654,7 @@ msgstr ""
 #.      Date: 07 Jun 2000 20:08:12 -0700
 #.      Reply-To: drepper at cygnus dot com (Ulrich Drepper)
 #. type: Plain text
-#: man-pages/man8/ld.so.8:545
+#: man-pages/man8/ld.so.8:564
 msgid ""
 "The old glibc behavior was nonstandard.  (Standard practice is that the "
 "distinction between weak and strong symbols should have effect only at "
@@ -2654,7 +2664,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:555
+#: man-pages/man8/ld.so.8:574
 msgid ""
 "Defining the B<LD_DYNAMIC_WEAK> environment variable (with any value) "
 "provides the old (nonstandard) glibc behavior, whereby a weak symbol in one "
@@ -2665,24 +2675,24 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:559
+#: man-pages/man8/ld.so.8:578
 msgid ""
 "Since glibc 2.3.4, B<LD_DYNAMIC_WEAK> is ignored in secure-execution mode."
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:559
+#: man-pages/man8/ld.so.8:578
 #, no-wrap
 msgid "B<LD_HWCAP_MASK> (since glibc 2.1)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:562
+#: man-pages/man8/ld.so.8:581
 msgid "Mask for hardware capabilities."
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:562
+#: man-pages/man8/ld.so.8:581
 #, no-wrap
 msgid "B<LD_ORIGIN_PATH> (since glibc 2.1)"
 msgstr ""
@@ -2690,25 +2700,25 @@ msgstr ""
 #.  Used only if $ORIGIN can't be determined by normal means
 #.  (from the origin path saved at load time, or from /proc/self/exe)?
 #. type: Plain text
-#: man-pages/man8/ld.so.8:567
+#: man-pages/man8/ld.so.8:586
 msgid "Path where the binary is found."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:571
+#: man-pages/man8/ld.so.8:590
 msgid ""
 "Since glibc 2.4, B<LD_ORIGIN_PATH> is ignored in secure-execution mode."
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:571
+#: man-pages/man8/ld.so.8:590
 #, no-wrap
 msgid "B<LD_POINTER_GUARD> (glibc from 2.4 to 2.22)"
 msgstr ""
 
 #.  commit a014cecd82b71b70a6a843e250e06b541ad524f7
 #. type: Plain text
-#: man-pages/man8/ld.so.8:587
+#: man-pages/man8/ld.so.8:606
 msgid ""
 "Set to 0 to disable pointer guarding.  Any other value enables pointer "
 "guarding, which is also the default.  Pointer guarding is a security "
@@ -2721,13 +2731,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:587
+#: man-pages/man8/ld.so.8:606
 #, no-wrap
 msgid "B<LD_PROFILE> (since glibc 2.1)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:593
+#: man-pages/man8/ld.so.8:612
 msgid ""
 "The name of a (single) shared object to be profiled, specified either as a "
 "pathname or a soname.  Profiling output is appended to the file whose name "
@@ -2735,18 +2745,18 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:597
+#: man-pages/man8/ld.so.8:616
 msgid "Since glibc 2.2.5, B<LD_PROFILE> is ignored in secure-execution mode."
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:597
+#: man-pages/man8/ld.so.8:616
 #, no-wrap
 msgid "B<LD_PROFILE_OUTPUT> (since glibc 2.1)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:605
+#: man-pages/man8/ld.so.8:624
 msgid ""
 "Directory where B<LD_PROFILE> output should be written.  If this variable is"
 " not defined, or is defined as an empty string, then the default is "
@@ -2754,7 +2764,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:614
+#: man-pages/man8/ld.so.8:633
 msgid ""
 "B<LD_PROFILE_OUTPUT> is ignored in secure-execution mode; instead "
 "I</var/profile> is always used.  (This detail is relevant only before glibc "
@@ -2763,33 +2773,33 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:614
+#: man-pages/man8/ld.so.8:633
 #, no-wrap
 msgid "B<LD_SHOW_AUXV> (since glibc 2.1)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:619
+#: man-pages/man8/ld.so.8:638
 msgid ""
 "If this environment variable is defined (with any value), show the auxiliary"
 " array passed up from the kernel (see also B<getauxval>(3))."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:623
+#: man-pages/man8/ld.so.8:642
 msgid ""
 "Since glibc 2.3.4, B<LD_SHOW_AUXV> is ignored in secure-execution mode."
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:623
+#: man-pages/man8/ld.so.8:642
 #, no-wrap
 msgid "B<LD_TRACE_PRELINKING> (since glibc 2.4)"
 msgstr ""
 
 #.  (This is what seems to happen, from experimenting)
 #. type: Plain text
-#: man-pages/man8/ld.so.8:634
+#: man-pages/man8/ld.so.8:653
 msgid ""
 "If this environment variable is defined, trace prelinking of the object "
 "whose name is assigned to this environment variable.  (Use B<ldd>(1)  to get"
@@ -2798,7 +2808,7 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:634
+#: man-pages/man8/ld.so.8:653
 #, no-wrap
 msgid "B<LD_USE_LOAD_BIAS> (since glibc 2.3.3)"
 msgstr ""
@@ -2807,7 +2817,7 @@ msgstr ""
 #.  Subject: [PATCH] Support LD_USE_LOAD_BIAS
 #.  Jakub Jelinek
 #. type: Plain text
-#: man-pages/man8/ld.so.8:652
+#: man-pages/man8/ld.so.8:671
 msgid ""
 "By default (i.e., if this variable is not defined), executables and "
 "prelinked shared objects will honor base addresses of their dependent shared"
@@ -2819,42 +2829,42 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:654
+#: man-pages/man8/ld.so.8:673
 msgid "Since glibc 2.3.3, this variable is ignored in secure-execution mode."
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:654
+#: man-pages/man8/ld.so.8:673
 #, no-wrap
 msgid "B<LD_VERBOSE> (since glibc 2.1)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:661
+#: man-pages/man8/ld.so.8:680
 msgid ""
 "If set to a nonempty string, output symbol versioning information about the "
 "program if the B<LD_TRACE_LOADED_OBJECTS> environment variable has been set."
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:661
+#: man-pages/man8/ld.so.8:680
 #, no-wrap
 msgid "B<LD_WARN> (since glibc 2.1.3)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:664
+#: man-pages/man8/ld.so.8:683
 msgid "If set to a nonempty string, warn about unresolved symbols."
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:664
+#: man-pages/man8/ld.so.8:683
 #, no-wrap
 msgid "B<LD_PREFER_MAP_32BIT_EXEC> (x86-64 only; since glibc 2.23)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:676
+#: man-pages/man8/ld.so.8:695
 msgid ""
 "According to the Intel Silvermont software optimization guide, for 64-bit "
 "applications, branch prediction performance can be negatively impacted when "
@@ -2866,7 +2876,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:683
+#: man-pages/man8/ld.so.8:702
 msgid ""
 "Because B<MAP_32BIT> reduces the address range available for address space "
 "layout randomization (ASLR), B<LD_PREFER_MAP_32BIT_EXEC> is always disabled "
@@ -2874,23 +2884,23 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:688
+#: man-pages/man8/ld.so.8:707
 msgid "a.out dynamic linker/loader"
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:688
+#: man-pages/man8/ld.so.8:707
 #, no-wrap
 msgid "I</lib/ld-linux.so.>{I<1>,I<2>}"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:691
+#: man-pages/man8/ld.so.8:710
 msgid "ELF dynamic linker/loader"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:697
+#: man-pages/man8/ld.so.8:716
 msgid ""
 "File containing a compiled list of directories in which to search for shared"
 " objects and an ordered list of candidate shared objects.  See "
@@ -2898,13 +2908,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:697
+#: man-pages/man8/ld.so.8:716
 #, no-wrap
 msgid "I</etc/ld.so.preload>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:718
+#: man-pages/man8/ld.so.8:737
 msgid ""
 "File containing a whitespace-separated list of ELF shared objects to be "
 "loaded before the program.  See the discussion of B<LD_PRELOAD> above.  If "
@@ -2917,30 +2927,32 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:718
+#: man-pages/man8/ld.so.8:737
 #, no-wrap
 msgid "I<lib*.so*>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:721
+#: man-pages/man8/ld.so.8:740
 msgid "shared objects"
 msgstr ""
 
 #. type: SH
-#: man-pages/man8/ld.so.8:722
+#: man-pages/man8/ld.so.8:741
 #, no-wrap
 msgid "NOTES"
 msgstr ""
 
 #. type: SS
-#: man-pages/man8/ld.so.8:723
+#: man-pages/man8/ld.so.8:742
 #, no-wrap
 msgid "Hardware capabilities"
 msgstr ""
 
+#.  Presumably, this info comes from sysdeps/i386/dl-procinfo.c and
+#.  similar files
 #. type: Plain text
-#: man-pages/man8/ld.so.8:734
+#: man-pages/man8/ld.so.8:755
 msgid ""
 "Some shared objects are compiled using hardware-specific instructions which "
 "do not exist on every CPU.  Such objects should be installed in directories "
@@ -2953,35 +2965,35 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:734
+#: man-pages/man8/ld.so.8:755
 #, no-wrap
 msgid "B<Alpha>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:737
+#: man-pages/man8/ld.so.8:758
 msgid "ev4, ev5, ev56, ev6, ev67"
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:737
+#: man-pages/man8/ld.so.8:758
 #, no-wrap
 msgid "B<MIPS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:740
+#: man-pages/man8/ld.so.8:761
 msgid "loongson2e, loongson2f, octeon, octeon2"
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:740
+#: man-pages/man8/ld.so.8:761
 #, no-wrap
 msgid "B<PowerPC>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:745
+#: man-pages/man8/ld.so.8:766
 msgid ""
 "4xxmac, altivec, arch_2_05, arch_2_06, booke, cellbe, dfp, efpdouble, "
 "efpsingle, fpu, ic_snoop, mmu, notb, pa6t, power4, power5, power5+, power6x,"
@@ -2989,44 +3001,44 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:745
+#: man-pages/man8/ld.so.8:766
 #, no-wrap
 msgid "B<SPARC>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:748
+#: man-pages/man8/ld.so.8:769
 msgid "flush, muldiv, stbar, swap, ultra3, v9, v9v, v9v2"
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:748
+#: man-pages/man8/ld.so.8:769
 #, no-wrap
 msgid "B<s390>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:752
+#: man-pages/man8/ld.so.8:773
 msgid ""
 "dfp, eimm, esan3, etf3enh, g5, highgprs, hpage, ldisp, msa, stfle, z900, "
 "z990, z9-109, z10, zarch"
 msgstr ""
 
 #. type: TP
-#: man-pages/man8/ld.so.8:752
+#: man-pages/man8/ld.so.8:773
 #, no-wrap
 msgid "B<x86 (32-bit only)>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:756
+#: man-pages/man8/ld.so.8:777
 msgid ""
 "acpi, apic, clflush, cmov, cx8, dts, fxsr, ht, i386, i486, i586, i686, mca, "
 "mmx, mtrr, pat, pbe, pge, pn, pse36, sep, ss, sse, sse2, tm"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man8/ld.so.8:767
+#: man-pages/man8/ld.so.8:788
 msgid ""
 "B<ld>(1), B<ldd>(1), B<pldd>(1), B<sprof>(1), B<dlopen>(3), B<getauxval>(3),"
 " B<elf>(5), B<capabilities>(7), B<rtld-audit>(7), B<ldconfig>(8), B<sln>(8)"

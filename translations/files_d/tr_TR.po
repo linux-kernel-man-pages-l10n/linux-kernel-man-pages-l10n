@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
-"POT-Creation-Date: 2019-04-01 18:52+0300\n"
-"PO-Revision-Date: 2019-04-02 15:54+0000\n"
+"POT-Creation-Date: 2019-08-26 09:25+0300\n"
+"PO-Revision-Date: 2019-08-26 06:20+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Turkish (Turkey) (http://www.transifex.com/kruvalig/man-pages/language/tr_TR/)\n"
 "MIME-Version: 1.0\n"
@@ -5514,6 +5514,12 @@ msgstr ""
 msgid "DLOPEN"
 msgstr ""
 
+#. type: TH
+#: man-pages/man3/dlopen.3:35
+#, no-wrap
+msgid "2019-08-02"
+msgstr ""
+
 #. type: Plain text
 #: man-pages/man3/dlopen.3:39
 msgid "dlclose, dlopen, dlmopen - open and close a shared object"
@@ -5700,8 +5706,8 @@ msgstr ""
 #: man-pages/man3/dlopen.3:170
 msgid ""
 "Do not unload the shared object during B<dlclose>().  Consequently, the "
-"object's static variables are not reinitialized if the object is reloaded "
-"with B<dlopen>()  at a later time."
+"object's static and global variables are not reinitialized if the object is "
+"reloaded with B<dlopen>()  at a later time."
 msgstr ""
 
 #. type: TP
@@ -5748,42 +5754,63 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:214
+#: man-pages/man3/dlopen.3:216
 msgid ""
-"External references in the shared object are resolved using the shared "
-"objects in that object's dependency list and any other objects previously "
-"opened with the B<RTLD_GLOBAL> flag.  If the executable was linked with the "
-"flag \"-rdynamic\" (or, synonymously, \"--export-dynamic\"), then the global"
-" symbols in the executable will also be used to resolve references in a "
-"dynamically loaded shared object."
+"Symbol references in the shared object are resolved using (in order): "
+"symbols in the link map of objects loaded for the main program and its "
+"dependencies; symbols in shared objects (and their dependencies)  that were "
+"previously opened with B<dlopen>()  using the B<RTLD_GLOBAL> flag; and "
+"definitions in the shared object itself (and any dependencies that were "
+"loaded for that object)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:232
+#: man-pages/man3/dlopen.3:228
 msgid ""
-"If the same shared object is loaded again with B<dlopen>(), the same object "
+"Any global symbols in the executable that were placed into its dynamic "
+"symbol table by B<ld>(1)  can also be used to resolve references in a "
+"dynamically loaded shared object.  Symbols may be placed in the dynamic "
+"symbol table either because the executable was linked with the flag "
+"\"-rdynamic\" (or, synonymously, \"--export-dynamic\"), which causes all of "
+"the executable's global symbols to be placed in the dynamic symbol table, or"
+" because B<ld>(1)  noted a dependency on a symbol in another object during "
+"static linking."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:241
+msgid ""
+"If the same shared object is opened again with B<dlopen>(), the same object "
 "handle is returned.  The dynamic linker maintains reference counts for "
 "object handles, so a dynamically loaded shared object is not deallocated "
 "until B<dlclose>()  has been called on it as many times as B<dlopen>()  has "
-"succeeded on it.  Any initialization returns (see below) are called just "
-"once.  However, a subsequent B<dlopen>()  call that loads the same shared "
-"object with B<RTLD_NOW> may force symbol resolution for a shared object "
-"earlier loaded with B<RTLD_LAZY>."
+"succeeded on it.  Constructors (see below) are called only when the object "
+"is actually loaded into memory (i.e., when the reference count increases to "
+"1)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:237
+#: man-pages/man3/dlopen.3:254
+msgid ""
+"A subsequent B<dlopen>()  call that loads the same shared object with "
+"B<RTLD_NOW> may force symbol resolution for a shared object earlier loaded "
+"with B<RTLD_LAZY>.  Similarly, an object that was previously opened with "
+"B<RTLD_LOCAL> can be promoted to B<RTLD_GLOBAL> in a subsequent B<dlopen>()."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:259
 msgid "If B<dlopen>()  fails for any reason, it returns NULL."
 msgstr ""
 
 #. type: SS
-#: man-pages/man3/dlopen.3:237
+#: man-pages/man3/dlopen.3:259
 #, no-wrap
 msgid "dlmopen()"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:245
+#: man-pages/man3/dlopen.3:267
 msgid ""
 "This function performs the same task as B<dlopen>()\\(emthe I<filename> and "
 "I<flags> arguments, as well as the return value, are the same, except for "
@@ -5791,7 +5818,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:264
+#: man-pages/man3/dlopen.3:286
 msgid ""
 "The B<dlmopen>()  function differs from B<dlopen>()  primarily in that it "
 "accepts an additional argument, I<lmid>, that specifies the link-map list "
@@ -5804,7 +5831,7 @@ msgstr ""
 
 #.  FIXME: Is using dlinfo() RTLD_DI_LMID the right technique?
 #. type: Plain text
-#: man-pages/man3/dlopen.3:273
+#: man-pages/man3/dlopen.3:295
 msgid ""
 "The I<lmid> argument is either the ID of an existing namespace (which can be"
 " obtained using the B<dlinfo>(3)  B<RTLD_DI_LMID> request) or one of the "
@@ -5812,26 +5839,26 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/dlopen.3:273
+#: man-pages/man3/dlopen.3:295
 #, no-wrap
 msgid "B<LM_ID_BASE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:277
+#: man-pages/man3/dlopen.3:299
 msgid ""
 "Load the shared object in the initial namespace (i.e., the application's "
 "namespace)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/dlopen.3:277
+#: man-pages/man3/dlopen.3:299
 #, no-wrap
 msgid "B<LM_ID_NEWLM>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:283
+#: man-pages/man3/dlopen.3:305
 msgid ""
 "Create a new namespace and load the shared object in that namespace.  The "
 "object must have been correctly linked to reference all of the other shared "
@@ -5839,30 +5866,46 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:290
+#: man-pages/man3/dlopen.3:312
 msgid ""
 "If I<filename> is NULL, then the only permitted value for I<lmid> is "
 "B<LM_ID_BASE>."
 msgstr ""
 
 #. type: SS
-#: man-pages/man3/dlopen.3:290
+#: man-pages/man3/dlopen.3:312
 #, no-wrap
 msgid "dlclose()"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:303
+#: man-pages/man3/dlopen.3:318
 msgid ""
 "The function B<dlclose>()  decrements the reference count on the dynamically"
-" loaded shared object referred to by I<handle>.  If the reference count "
-"drops to zero, then the object is unloaded.  All shared objects that were "
-"automatically loaded when B<dlopen>()  was invoked on the object referred to"
-" by I<handle> are recursively closed in the same manner."
+" loaded shared object referred to by I<handle>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:315
+#: man-pages/man3/dlopen.3:327
+msgid ""
+"If the object's reference count drops to zero and no symbols in this object "
+"are required by other objects, then the object is unloaded after first "
+"calling any destructors defined for the object.  (Symbols in this object "
+"might be required in another object because this object was opened with the "
+"B<RTLD_GLOBAL> flag and one of its symbols satisfied a relocation in another"
+" object.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:333
+msgid ""
+"All shared objects that were automatically loaded when B<dlopen>()  was "
+"invoked on the object referred to by I<handle> are recursively closed in the"
+" same manner."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:345
 msgid ""
 "A successful return from B<dlclose>()  does not guarantee that the symbols "
 "associated with I<handle> are removed from the caller's address space.  In "
@@ -5873,34 +5916,34 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:325
+#: man-pages/man3/dlopen.3:355
 msgid ""
 "On success, B<dlopen>()  and B<dlmopen>()  return a non-NULL handle for the "
-"loaded library.  On error (file could not be found, was not readable, had "
-"the wrong format, or caused errors during loading), these functions return "
+"loaded object.  On error (file could not be found, was not readable, had the"
+" wrong format, or caused errors during loading), these functions return "
 "NULL."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:329
+#: man-pages/man3/dlopen.3:359
 msgid ""
 "On success, B<dlclose>()  returns 0; on error, it returns a nonzero value."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:332
+#: man-pages/man3/dlopen.3:362
 msgid "Errors from these functions can be diagnosed using B<dlerror>(3)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:339
+#: man-pages/man3/dlopen.3:369
 msgid ""
 "B<dlopen>()  and B<dlclose>()  are present in glibc 2.0 and later.  "
 "B<dlmopen>()  first appeared in glibc 2.3.4."
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/dlopen.3:351
+#: man-pages/man3/dlopen.3:381
 #, no-wrap
 msgid ""
 "B<dlopen>(),\n"
@@ -5909,27 +5952,27 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:361
+#: man-pages/man3/dlopen.3:391
 msgid ""
 "POSIX.1-2001 describes B<dlclose>()  and B<dlopen>().  The B<dlmopen>()  "
 "function is a GNU extension."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:369
+#: man-pages/man3/dlopen.3:399
 msgid ""
 "The B<RTLD_NOLOAD>, B<RTLD_NODELETE>, and B<RTLD_DEEPBIND> flags are GNU "
 "extensions; the first two of these flags are also present on Solaris."
 msgstr ""
 
 #. type: SS
-#: man-pages/man3/dlopen.3:370
+#: man-pages/man3/dlopen.3:400
 #, no-wrap
 msgid "dlmopen() and namespaces"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:378
+#: man-pages/man3/dlopen.3:408
 msgid ""
 "A link-map list defines an isolated namespace for the resolution of symbols "
 "by the dynamic linker.  Within a namespace, dependent shared objects are "
@@ -5940,7 +5983,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:398
+#: man-pages/man3/dlopen.3:428
 msgid ""
 "The B<dlmopen>()  function permits object-load isolation\\(emthe ability to "
 "load a shared object in a new namespace without exposing the rest of the "
@@ -5954,7 +5997,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:414
+#: man-pages/man3/dlopen.3:444
 msgid ""
 "The B<dlmopen>()  function also can be used to provide better isolation than"
 " the B<RTLD_LOCAL> flag.  In particular, shared objects loaded with "
@@ -5965,7 +6008,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:429
+#: man-pages/man3/dlopen.3:459
 msgid ""
 "Possible uses of B<dlmopen>()  are plugins where the author of the plugin-"
 "loading framework can't trust the plugin authors and does not wish any "
@@ -5978,19 +6021,19 @@ msgstr ""
 
 #.  DL_NNS
 #. type: Plain text
-#: man-pages/man3/dlopen.3:434
+#: man-pages/man3/dlopen.3:464
 msgid "The glibc implementation supports a maximum of 16 namespaces."
 msgstr ""
 
 #. type: SS
-#: man-pages/man3/dlopen.3:434
+#: man-pages/man3/dlopen.3:464
 #, no-wrap
 msgid "Initialization and finalization functions"
 msgstr ""
 
 #.  info gcc "C Extensions" "Function attributes"
 #. type: Plain text
-#: man-pages/man3/dlopen.3:453
+#: man-pages/man3/dlopen.3:483
 msgid ""
 "Shared objects may export functions using the "
 "B<__attribute__((constructor))> and B<__attribute__((destructor))> function "
@@ -6003,7 +6046,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:473
+#: man-pages/man3/dlopen.3:503
 msgid ""
 "An older method of (partially) achieving the same result is via the use of "
 "two special symbols recognized by the linker: B<_init> and B<_fini>.  If a "
@@ -6027,7 +6070,7 @@ msgstr ""
 #.  .\" void _init(void) __attribute__((constructor));
 #.  .\" void _fini(void) __attribute__((destructor));
 #. type: Plain text
-#: man-pages/man3/dlopen.3:494
+#: man-pages/man3/dlopen.3:524
 msgid ""
 "Use of B<_init> and B<_fini> is now deprecated in favor of the "
 "aforementioned constructors and destructors, which among other advantages, "
@@ -6035,20 +6078,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:499
+#: man-pages/man3/dlopen.3:529
 msgid ""
 "Since glibc 2.2.3, B<atexit>(3)  can be used to register an exit handler "
 "that is automatically called when a shared object is unloaded."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:501
+#: man-pages/man3/dlopen.3:531
 msgid "These functions are part of the dlopen API, derived from SunOS."
 msgstr ""
 
 #.  dlerror(): "invalid mode"
 #. type: Plain text
-#: man-pages/man3/dlopen.3:516
+#: man-pages/man3/dlopen.3:546
 msgid ""
 "As at glibc 2.24, specifying the B<RTLD_GLOBAL> flag when calling "
 "B<dlmopen>()  generates an error.  Furthermore, specifying B<RTLD_GLOBAL> "
@@ -6058,7 +6101,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:522
+#: man-pages/man3/dlopen.3:552
 msgid ""
 "The program below loads the (glibc) math library, looks up the address of "
 "the B<cos>(3)  function, and prints the cosine of 2.0.  The following is an "
@@ -6066,7 +6109,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:528
+#: man-pages/man3/dlopen.3:558
 #, no-wrap
 msgid ""
 "$ B<cc dlopen_demo.c -ldl>\n"
@@ -6075,7 +6118,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:544
+#: man-pages/man3/dlopen.3:574
 #, no-wrap
 msgid ""
 "#include E<lt>stdio.hE<gt>\n"
@@ -6092,7 +6135,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:550
+#: man-pages/man3/dlopen.3:580
 #, no-wrap
 msgid ""
 "    handle = dlopen(LIBM_SO, RTLD_LAZY);\n"
@@ -6103,19 +6146,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:552
+#: man-pages/man3/dlopen.3:582
 #, no-wrap
 msgid "    dlerror();    /* Clear any existing error */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:554
+#: man-pages/man3/dlopen.3:584
 #, no-wrap
 msgid "    cosine = (double (*)(double)) dlsym(handle, \"cos\");\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:559
+#: man-pages/man3/dlopen.3:589
 #, no-wrap
 msgid ""
 "    /* According to the ISO C standard, casting between function\n"
@@ -6125,13 +6168,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:561
+#: man-pages/man3/dlopen.3:591
 #, no-wrap
 msgid "           *(void **) (&cosine) = dlsym(handle, \"cos\");\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:564
+#: man-pages/man3/dlopen.3:594
 #, no-wrap
 msgid ""
 "       This (clumsy) cast conforms with the ISO C standard and will\n"
@@ -6142,7 +6185,7 @@ msgstr ""
 #. http://pubs.opengroup.org/onlinepubs/9699919799/functions/dlsym.html#tag_16_96_07
 #.  http://austingroupbugs.net/view.php?id=74
 #. type: Plain text
-#: man-pages/man3/dlopen.3:573
+#: man-pages/man3/dlopen.3:603
 #, no-wrap
 msgid ""
 "       The 2013 Technical Corrigendum to POSIX.1-2008 (a.k.a.\n"
@@ -6153,7 +6196,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:579
+#: man-pages/man3/dlopen.3:609
 #, no-wrap
 msgid ""
 "    error = dlerror();\n"
@@ -6164,7 +6207,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:584
+#: man-pages/man3/dlopen.3:614
 #, no-wrap
 msgid ""
 "    printf(\"%f\\en\", (*cosine)(2.0));\n"
@@ -6174,7 +6217,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:597
+#: man-pages/man3/dlopen.3:627
 msgid ""
 "B<ld>(1), B<ldd>(1), B<pldd>(1), B<dl_iterate_phdr>(3), B<dladdr>(3), "
 "B<dlerror>(3), B<dlinfo>(3), B<dlsym>(3), B<rtld-audit>(7), B<ld.so>(8), "
@@ -6182,7 +6225,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/dlopen.3:598
+#: man-pages/man3/dlopen.3:628
 msgid "gcc info pages, ld info pages"
 msgstr ""
 

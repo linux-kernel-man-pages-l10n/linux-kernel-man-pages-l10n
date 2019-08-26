@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
-"POT-Creation-Date: 2018-08-27 07:11+0300\n"
-"PO-Revision-Date: 2019-04-02 15:56+0000\n"
+"POT-Creation-Date: 2019-08-26 09:26+0300\n"
+"PO-Revision-Date: 2019-08-26 06:21+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Portuguese (http://www.transifex.com/kruvalig/man-pages/language/pt/)\n"
 "MIME-Version: 1.0\n"
@@ -3327,578 +3327,6 @@ msgid "B<gprof>(1), B<ldd>(1), B<ld.so>(8)"
 msgstr ""
 
 #. type: TH
-#: man-pages/man7/svipc.7:40
-#, no-wrap
-msgid "SVIPC"
-msgstr ""
-
-#. type: TH
-#: man-pages/man7/svipc.7:40
-#, no-wrap
-msgid "2016-03-15"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:43
-msgid "svipc - System V interprocess communication mechanisms"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:48
-#, no-wrap
-msgid ""
-"B<#include E<lt>sys/msg.hE<gt>>\n"
-"B<#include E<lt>sys/sem.hE<gt>>\n"
-"B<#include E<lt>sys/shm.hE<gt>>\n"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:56
-msgid ""
-"This manual page refers to the Linux implementation of the System V "
-"interprocess communication (IPC) mechanisms: message queues, semaphore sets,"
-" and shared memory segments.  In the following, the word I<resource> means "
-"an instantiation of one among such mechanisms."
-msgstr ""
-
-#. type: SS
-#: man-pages/man7/svipc.7:56
-#, no-wrap
-msgid "Resource access permissions"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:64
-msgid ""
-"For each resource, the system uses a common structure of type I<struct "
-"ipc_perm> to store information needed in determining permissions to perform "
-"an IPC operation.  The I<ipc_perm> structure includes the following members:"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:74
-#, no-wrap
-msgid ""
-"struct ipc_perm {\n"
-"    uid_t          cuid;   /* creator user ID */\n"
-"    gid_t          cgid;   /* creator group ID */\n"
-"    uid_t          uid;    /* owner user ID */\n"
-"    gid_t          gid;    /* owner group ID */\n"
-"    unsigned short mode;   /* r/w permissions */\n"
-"};\n"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:84
-msgid ""
-"The I<mode> member of the I<ipc_perm> structure defines, with its lower 9 "
-"bits, the access permissions to the resource for a process executing an IPC "
-"system call.  The permissions are interpreted as follows:"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:92
-#, no-wrap
-msgid ""
-"    0400    Read by user.\n"
-"    0200    Write by user.\n"
-"    0040    Read by group.\n"
-"    0020    Write by group.\n"
-"    0004    Read by others.\n"
-"    0002    Write by others.\n"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:100
-msgid ""
-"Bits 0100, 0010, and 0001 (the execute bits) are unused by the system.  "
-"Furthermore, \"write\" effectively means \"alter\" for a semaphore set."
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:103
-msgid ""
-"The same system header file also defines the following symbolic constants:"
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:103
-#, no-wrap
-msgid "B<IPC_CREAT>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:106
-msgid "Create entry if key doesn't exist."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:106
-#, no-wrap
-msgid "B<IPC_EXCL>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:109
-msgid "Fail if key exists."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:109
-#, no-wrap
-msgid "B<IPC_NOWAIT>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:112
-msgid "Error if request must wait."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:112
-#, no-wrap
-msgid "B<IPC_PRIVATE>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:115
-msgid "Private key."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:115
-#, no-wrap
-msgid "B<IPC_RMID>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:118
-msgid "Remove resource."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:118
-#, no-wrap
-msgid "B<IPC_SET>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:121
-msgid "Set resource options."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:121
-#, no-wrap
-msgid "B<IPC_STAT>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:124
-msgid "Get resource options."
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:133
-msgid ""
-"Note that B<IPC_PRIVATE> is a I<key_t> type, while all the other symbolic "
-"constants are flag fields and can be OR'ed into an I<int> type variable."
-msgstr ""
-
-#. type: SS
-#: man-pages/man7/svipc.7:133
-#, no-wrap
-msgid "Message queues"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:141
-msgid ""
-"A message queue is uniquely identified by a positive integer (its I<msqid>)"
-"  and has an associated data structure of type I<struct msqid_ds>, defined "
-"in I<E<lt>sys/msg.hE<gt>>, containing the following members:"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:154
-#, no-wrap
-msgid ""
-"struct msqid_ds {\n"
-"    struct ipc_perm msg_perm;\n"
-"    msgqnum_t       msg_qnum;    /* no of messages on queue */\n"
-"    msglen_t        msg_qbytes;  /* bytes max on a queue */\n"
-"    pid_t           msg_lspid;   /* PID of last msgsnd(2) call */\n"
-"    pid_t           msg_lrpid;   /* PID of last msgrcv(2) call */\n"
-"    time_t          msg_stime;   /* last msgsnd(2) time */\n"
-"    time_t          msg_rtime;   /* last msgrcv(2) time */\n"
-"    time_t          msg_ctime;   /* last change time */\n"
-"};\n"
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:156
-#, no-wrap
-msgid "I<msg_perm>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:161
-msgid ""
-"I<ipc_perm> structure that specifies the access permissions on the message "
-"queue."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:161
-#, no-wrap
-msgid "I<msg_qnum>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:164
-msgid "Number of messages currently on the message queue."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:164
-#, no-wrap
-msgid "I<msg_qbytes>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:168
-msgid "Maximum number of bytes of message text allowed on the message queue."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:168
-#, no-wrap
-msgid "I<msg_lspid>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:173
-msgid "ID of the process that performed the last B<msgsnd>(2)  system call."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:173
-#, no-wrap
-msgid "I<msg_lrpid>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:178
-msgid "ID of the process that performed the last B<msgrcv>(2)  system call."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:178
-#, no-wrap
-msgid "I<msg_stime>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:183
-msgid "Time of the last B<msgsnd>(2)  system call."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:183
-#, no-wrap
-msgid "I<msg_rtime>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:188
-msgid "Time of the last B<msgrcv>(2)  system call."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:188
-#, no-wrap
-msgid "I<msg_ctime>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:194
-msgid ""
-"Time of the last system call that changed a member of the I<msqid_ds> "
-"structure."
-msgstr ""
-
-#. type: SS
-#: man-pages/man7/svipc.7:194
-#, no-wrap
-msgid "Semaphore sets"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:202
-msgid ""
-"A semaphore set is uniquely identified by a positive integer (its I<semid>)"
-"  and has an associated data structure of type I<struct semid_ds>, defined "
-"in I<E<lt>sys/sem.hE<gt>>, containing the following members:"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:211
-#, no-wrap
-msgid ""
-"struct semid_ds {\n"
-"    struct ipc_perm sem_perm;\n"
-"    time_t          sem_otime;   /* last operation time */\n"
-"    time_t          sem_ctime;   /* last change time */\n"
-"    unsigned long   sem_nsems;   /* count of sems in set */\n"
-"};\n"
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:213
-#, no-wrap
-msgid "I<sem_perm>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:218
-msgid ""
-"I<ipc_perm> structure that specifies the access permissions on the semaphore"
-" set."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:218
-#, no-wrap
-msgid "I<sem_otime>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:223
-msgid "Time of last B<semop>(2)  system call."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:223
-#, no-wrap
-msgid "I<sem_ctime>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:229
-msgid ""
-"Time of last B<semctl>(2)  system call that changed a member of the above "
-"structure or of one semaphore belonging to the set."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:229
-#, no-wrap
-msgid "I<sem_nsems>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:237
-msgid ""
-"Number of semaphores in the set.  Each semaphore of the set is referenced by"
-" a nonnegative integer ranging from B<0> to I<sem_nsems-1>."
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:241
-msgid ""
-"A semaphore is a data structure of type I<struct sem> containing the "
-"following members:"
-msgstr ""
-
-#.     unsigned short semncnt; /* nr awaiting semval to increase */
-#.     unsigned short semzcnt; /* nr awaiting semval = 0 */
-#. type: Plain text
-#: man-pages/man7/svipc.7:250
-#, no-wrap
-msgid ""
-"struct sem {\n"
-"    int semval;  /* semaphore value */\n"
-"    int sempid;  /* PID of process that last modified */\n"
-"};\n"
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:252
-#, no-wrap
-msgid "I<semval>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:255
-msgid "Semaphore value: a nonnegative integer."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:255
-#, no-wrap
-msgid "I<sempid>"
-msgstr ""
-
-#. .TP
-#. .I semncnt
-#. Number of processes suspended awaiting for
-#. .I semval
-#. to increase.
-#. .TP
-#. .I semznt
-#. Number of processes suspended awaiting for
-#. .I semval
-#. to become zero.
-#. type: Plain text
-#: man-pages/man7/svipc.7:269
-msgid "PID of the last process that modified the value of this semaphore."
-msgstr ""
-
-#. type: SS
-#: man-pages/man7/svipc.7:269
-#, no-wrap
-msgid "Shared memory segments"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:277
-msgid ""
-"A shared memory segment is uniquely identified by a positive integer (its "
-"I<shmid>)  and has an associated data structure of type I<struct shmid_ds>, "
-"defined in I<E<lt>sys/shm.hE<gt>>, containing the following members:"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:290
-#, no-wrap
-msgid ""
-"struct shmid_ds {\n"
-"    struct ipc_perm shm_perm;\n"
-"    size_t          shm_segsz;   /* size of segment */\n"
-"    pid_t           shm_cpid;    /* PID of creator */\n"
-"    pid_t           shm_lpid;    /* PID, last operation */\n"
-"    shmatt_t        shm_nattch;  /* no. of current attaches */\n"
-"    time_t          shm_atime;   /* time of last attach */\n"
-"    time_t          shm_dtime;   /* time of last detach */\n"
-"    time_t          shm_ctime;   /* time of last change */\n"
-"};\n"
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:292
-#, no-wrap
-msgid "I<shm_perm>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:297
-msgid ""
-"I<ipc_perm> structure that specifies the access permissions on the shared "
-"memory segment."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:297
-#, no-wrap
-msgid "I<shm_segsz>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:300
-msgid "Size in bytes of the shared memory segment."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:300
-#, no-wrap
-msgid "I<shm_cpid>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:303
-msgid "ID of the process that created the shared memory segment."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:303
-#, no-wrap
-msgid "I<shm_lpid>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:310
-msgid ""
-"ID of the last process that executed a B<shmat>(2)  or B<shmdt>(2)  system "
-"call."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:310
-#, no-wrap
-msgid "I<shm_nattch>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:313
-msgid "Number of current alive attaches for this shared memory segment."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:313
-#, no-wrap
-msgid "I<shm_atime>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:318
-msgid "Time of the last B<shmat>(2)  system call."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:318
-#, no-wrap
-msgid "I<shm_dtime>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:323
-msgid "Time of the last B<shmdt>(2)  system call."
-msgstr ""
-
-#. type: TP
-#: man-pages/man7/svipc.7:323
-#, no-wrap
-msgid "I<shm_ctime>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:329
-msgid "Time of the last B<shmctl>(2)  system call that changed I<shmid_ds>."
-msgstr ""
-
-#. type: SS
-#: man-pages/man7/svipc.7:329
-#, no-wrap
-msgid "IPC namespaces"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:333
-msgid ""
-"For a discussion of the interaction of System V IPC objects and IPC "
-"namespaces, see B<namespaces>(7)."
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/svipc.7:351
-msgid ""
-"B<ipcmk>(1), B<ipcrm>(1), B<ipcs>(1), B<lsipc>(1), B<ipc>(2), B<msgctl>(2), "
-"B<msgget>(2), B<msgrcv>(2), B<msgsnd>(2), B<semctl>(2), B<semget>(2), "
-"B<semop>(2), B<shmat>(2), B<shmctl>(2), B<shmdt>(2), B<shmget>(2), "
-"B<ftok>(3), B<namespaces>(7)"
-msgstr ""
-
-#. type: TH
 #: man-pages/man7/sock_diag.7:24
 #, no-wrap
 msgid "SOCK_DIAG"
@@ -5422,6 +4850,12 @@ msgstr ""
 msgid "SIGNAL"
 msgstr ""
 
+#. type: TH
+#: man-pages/man7/signal.7:46
+#, no-wrap
+msgid "2019-08-02"
+msgstr ""
+
 #. type: Plain text
 #: man-pages/man7/signal.7:49
 msgid "signal - overview of signals"
@@ -5455,15 +4889,15 @@ msgid ""
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:60 man-pages/man7/signal.7:234
-#: man-pages/man7/signal.7:239 man-pages/man7/signal.7:241
-#: man-pages/man7/signal.7:245 man-pages/man7/signal.7:246
-#: man-pages/man7/signal.7:248 man-pages/man7/signal.7:249
-#: man-pages/man7/signal.7:250 man-pages/man7/signal.7:252
-#: man-pages/man7/signal.7:254 man-pages/man7/signal.7:255
-#: man-pages/man7/signal.7:258 man-pages/man7/signal.7:263
-#: man-pages/man7/signal.7:269 man-pages/man7/signal.7:270
-#: man-pages/man7/signal.7:271
+#: man-pages/man7/signal.7:60 man-pages/man7/signal.7:235
+#: man-pages/man7/signal.7:240 man-pages/man7/signal.7:242
+#: man-pages/man7/signal.7:246 man-pages/man7/signal.7:247
+#: man-pages/man7/signal.7:249 man-pages/man7/signal.7:250
+#: man-pages/man7/signal.7:251 man-pages/man7/signal.7:253
+#: man-pages/man7/signal.7:255 man-pages/man7/signal.7:256
+#: man-pages/man7/signal.7:259 man-pages/man7/signal.7:264
+#: man-pages/man7/signal.7:270 man-pages/man7/signal.7:271
+#: man-pages/man7/signal.7:272
 #, no-wrap
 msgid "Term"
 msgstr ""
@@ -5474,9 +4908,9 @@ msgid "Default action is to terminate the process."
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:62 man-pages/man7/signal.7:236
-#: man-pages/man7/signal.7:237 man-pages/man7/signal.7:268
-#: man-pages/man7/signal.7:276
+#: man-pages/man7/signal.7:62 man-pages/man7/signal.7:237
+#: man-pages/man7/signal.7:238 man-pages/man7/signal.7:269
+#: man-pages/man7/signal.7:277
 #, no-wrap
 msgid "Ign"
 msgstr ""
@@ -5487,13 +4921,13 @@ msgid "Default action is to ignore the signal."
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:64 man-pages/man7/signal.7:233
-#: man-pages/man7/signal.7:235 man-pages/man7/signal.7:240
-#: man-pages/man7/signal.7:243 man-pages/man7/signal.7:247
-#: man-pages/man7/signal.7:256 man-pages/man7/signal.7:257
-#: man-pages/man7/signal.7:261 man-pages/man7/signal.7:264
-#: man-pages/man7/signal.7:267 man-pages/man7/signal.7:272
-#: man-pages/man7/signal.7:274
+#: man-pages/man7/signal.7:64 man-pages/man7/signal.7:234
+#: man-pages/man7/signal.7:236 man-pages/man7/signal.7:241
+#: man-pages/man7/signal.7:244 man-pages/man7/signal.7:248
+#: man-pages/man7/signal.7:257 man-pages/man7/signal.7:258
+#: man-pages/man7/signal.7:262 man-pages/man7/signal.7:265
+#: man-pages/man7/signal.7:268 man-pages/man7/signal.7:273
+#: man-pages/man7/signal.7:275
 #, no-wrap
 msgid "Core"
 msgstr ""
@@ -5505,9 +4939,9 @@ msgid ""
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:67 man-pages/man7/signal.7:259
-#: man-pages/man7/signal.7:260 man-pages/man7/signal.7:265
-#: man-pages/man7/signal.7:266
+#: man-pages/man7/signal.7:67 man-pages/man7/signal.7:260
+#: man-pages/man7/signal.7:261 man-pages/man7/signal.7:266
+#: man-pages/man7/signal.7:267
 #, no-wrap
 msgid "Stop"
 msgstr ""
@@ -5518,7 +4952,7 @@ msgid "Default action is to stop the process."
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:69 man-pages/man7/signal.7:238
+#: man-pages/man7/signal.7:69 man-pages/man7/signal.7:239
 #, no-wrap
 msgid "Cont"
 msgstr ""
@@ -5529,7 +4963,7 @@ msgid "Default action is to continue the process if it is currently stopped."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:93
+#: man-pages/man7/signal.7:87
 msgid ""
 "A process can change the disposition of a signal using B<sigaction>(2)  or "
 "B<signal>(2).  (The latter is less portable when establishing a signal "
@@ -5537,14 +4971,20 @@ msgid ""
 "process can elect one of the following behaviors to occur on delivery of the"
 " signal: perform the default action; ignore the signal; or catch the signal "
 "with a I<signal handler>, a programmer-defined function that is "
-"automatically invoked when the signal is delivered.  (By default, the signal"
-" handler is invoked on the normal process stack.  It is possible to arrange "
-"that the signal handler uses an alternate stack; see B<sigaltstack>(2)  for "
-"a discussion of how to do this and when it might be useful.)"
+"automatically invoked when the signal is delivered."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:97
+#: man-pages/man7/signal.7:94
+msgid ""
+"By default, a signal handler is invoked on the normal process stack.  It is "
+"possible to arrange that the signal handler uses an alternate stack; see "
+"B<sigaltstack>(2)  for a discussion of how to do this and when it might be "
+"useful."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/signal.7:98
 msgid ""
 "The signal disposition is a per-process attribute: in a multithreaded "
 "application, the disposition of a particular signal is the same for all "
@@ -5552,7 +4992,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:105
+#: man-pages/man7/signal.7:106
 msgid ""
 "A child created via B<fork>(2)  inherits a copy of its parent's signal "
 "dispositions.  During an B<execve>(2), the dispositions of handled signals "
@@ -5561,136 +5001,136 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/signal.7:105
+#: man-pages/man7/signal.7:106
 #, no-wrap
 msgid "Sending a signal"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:108
+#: man-pages/man7/signal.7:109
 msgid ""
 "The following system calls and library functions allow the caller to send a "
 "signal:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/signal.7:108
+#: man-pages/man7/signal.7:109
 #, no-wrap
 msgid "B<raise>(3)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:111
+#: man-pages/man7/signal.7:112
 msgid "Sends a signal to the calling thread."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/signal.7:111
+#: man-pages/man7/signal.7:112
 #, no-wrap
 msgid "B<kill>(2)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:116
+#: man-pages/man7/signal.7:117
 msgid ""
 "Sends a signal to a specified process, to all members of a specified process"
 " group, or to all processes on the system."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/signal.7:116
+#: man-pages/man7/signal.7:117
 #, no-wrap
 msgid "B<killpg>(3)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:119
+#: man-pages/man7/signal.7:120
 msgid "Sends a signal to all of the members of a specified process group."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/signal.7:119
+#: man-pages/man7/signal.7:120
 #, no-wrap
 msgid "B<pthread_kill>(3)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:123
+#: man-pages/man7/signal.7:124
 msgid ""
 "Sends a signal to a specified POSIX thread in the same process as the "
 "caller."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/signal.7:123
+#: man-pages/man7/signal.7:124
 #, no-wrap
 msgid "B<tgkill>(2)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:128
+#: man-pages/man7/signal.7:129
 msgid ""
 "Sends a signal to a specified thread within a specific process.  (This is "
 "the system call used to implement B<pthread_kill>(3).)"
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/signal.7:128
+#: man-pages/man7/signal.7:129
 #, no-wrap
 msgid "B<sigqueue>(3)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:131
+#: man-pages/man7/signal.7:132
 msgid ""
 "Sends a real-time signal with accompanying data to a specified process."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/signal.7:131
+#: man-pages/man7/signal.7:132
 #, no-wrap
 msgid "Waiting for a signal to be caught"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:135
+#: man-pages/man7/signal.7:136
 msgid ""
 "The following system calls suspend execution of the calling thread until a "
 "signal is caught (or an unhandled signal terminates the process):"
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/signal.7:135
+#: man-pages/man7/signal.7:136
 #, no-wrap
 msgid "B<pause>(2)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:138
+#: man-pages/man7/signal.7:139
 msgid "Suspends execution until any signal is caught."
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:138 man-pages/man7/signal.7:502
+#: man-pages/man7/signal.7:139 man-pages/man7/signal.7:521
 #, no-wrap
 msgid "B<sigsuspend>(2)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:142
+#: man-pages/man7/signal.7:143
 msgid ""
 "Temporarily changes the signal mask (see below) and suspends execution until"
 " one of the unmasked signals is caught."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/signal.7:142
+#: man-pages/man7/signal.7:143
 #, no-wrap
 msgid "Synchronously accepting a signal"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:149
+#: man-pages/man7/signal.7:150
 msgid ""
 "Rather than asynchronously catching a signal via a signal handler, it is "
 "possible to synchronously accept the signal, that is, to block execution "
@@ -5699,29 +5139,29 @@ msgid ""
 msgstr ""
 
 #. type: IP
-#: man-pages/man7/signal.7:149 man-pages/man7/signal.7:157
-#: man-pages/man7/signal.7:368 man-pages/man7/signal.7:376
-#: man-pages/man7/signal.7:509 man-pages/man7/signal.7:511
-#: man-pages/man7/signal.7:531 man-pages/man7/signal.7:547
-#: man-pages/man7/signal.7:551 man-pages/man7/signal.7:558
-#: man-pages/man7/signal.7:576 man-pages/man7/signal.7:586
-#: man-pages/man7/signal.7:593 man-pages/man7/signal.7:600
-#: man-pages/man7/signal.7:602 man-pages/man7/signal.7:606
-#: man-pages/man7/signal.7:609 man-pages/man7/signal.7:618
-#: man-pages/man7/signal.7:637 man-pages/man7/signal.7:651
-#: man-pages/man7/signal.7:662 man-pages/man7/signal.7:669
-#: man-pages/man7/signal.7:678 man-pages/man7/signal.7:686
-#: man-pages/man7/signal.7:692 man-pages/man7/signal.7:710
-#: man-pages/man7/signal.7:724 man-pages/man7/signal.7:738
-#: man-pages/man7/signal.7:741 man-pages/man7/signal.7:744
-#: man-pages/man7/signal.7:747 man-pages/man7/signal.7:754
-#: man-pages/man7/signal.7:760 man-pages/man7/signal.7:764
+#: man-pages/man7/signal.7:150 man-pages/man7/signal.7:158
+#: man-pages/man7/signal.7:387 man-pages/man7/signal.7:395
+#: man-pages/man7/signal.7:528 man-pages/man7/signal.7:530
+#: man-pages/man7/signal.7:550 man-pages/man7/signal.7:566
+#: man-pages/man7/signal.7:570 man-pages/man7/signal.7:577
+#: man-pages/man7/signal.7:595 man-pages/man7/signal.7:605
+#: man-pages/man7/signal.7:612 man-pages/man7/signal.7:619
+#: man-pages/man7/signal.7:621 man-pages/man7/signal.7:625
+#: man-pages/man7/signal.7:628 man-pages/man7/signal.7:637
+#: man-pages/man7/signal.7:656 man-pages/man7/signal.7:670
+#: man-pages/man7/signal.7:681 man-pages/man7/signal.7:688
+#: man-pages/man7/signal.7:697 man-pages/man7/signal.7:705
+#: man-pages/man7/signal.7:711 man-pages/man7/signal.7:729
+#: man-pages/man7/signal.7:743 man-pages/man7/signal.7:757
+#: man-pages/man7/signal.7:760 man-pages/man7/signal.7:763
+#: man-pages/man7/signal.7:766 man-pages/man7/signal.7:773
+#: man-pages/man7/signal.7:779 man-pages/man7/signal.7:783
 #, no-wrap
 msgid "*"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:157
+#: man-pages/man7/signal.7:158
 msgid ""
 "B<sigwaitinfo>(2), B<sigtimedwait>(2), and B<sigwait>(3)  suspend execution "
 "until one of the signals in a specified set is delivered.  Each of these "
@@ -5729,7 +5169,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:170
+#: man-pages/man7/signal.7:171
 msgid ""
 "B<signalfd>(2)  returns a file descriptor that can be used to read "
 "information about signals that are delivered to the caller.  Each B<read>(2)"
@@ -5739,13 +5179,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/signal.7:170
+#: man-pages/man7/signal.7:171
 #, no-wrap
 msgid "Signal mask and pending signals"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:177
+#: man-pages/man7/signal.7:178
 msgid ""
 "A signal may be I<blocked>, which means that it will not be delivered until "
 "it is later unblocked.  Between the time when it is generated and when it is"
@@ -5753,7 +5193,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:186
+#: man-pages/man7/signal.7:187
 msgid ""
 "Each thread in a process has an independent I<signal mask>, which indicates "
 "the set of signals that the thread is currently blocking.  A thread can "
@@ -5763,14 +5203,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:192
+#: man-pages/man7/signal.7:193
 msgid ""
 "A child created via B<fork>(2)  inherits a copy of its parent's signal mask;"
 " the signal mask is preserved across B<execve>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:209
+#: man-pages/man7/signal.7:210
 msgid ""
 "A signal may be generated (and thus pending)  for a process as a whole "
 "(e.g., when sent using B<kill>(2))  or for a specific thread (e.g., certain "
@@ -5784,7 +5224,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:216
+#: man-pages/man7/signal.7:217
 msgid ""
 "A thread can obtain the set of signals that it currently has pending using "
 "B<sigpending>(2).  This set will consist of the union of the set of pending "
@@ -5793,20 +5233,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:222
+#: man-pages/man7/signal.7:223
 msgid ""
 "A child created via B<fork>(2)  initially has an empty pending signal set; "
 "the pending signal set is preserved across an B<execve>(2)."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/signal.7:222
+#: man-pages/man7/signal.7:223
 #, no-wrap
 msgid "Standard signals"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:228
+#: man-pages/man7/signal.7:229
 msgid ""
 "Linux supports the standard signals listed below.  The second column of the "
 "table indicates which standard (if any)  specified the signal: \"P1990\" "
@@ -5816,561 +5256,561 @@ msgid ""
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:232 man-pages/man7/signal.7:325
+#: man-pages/man7/signal.7:233 man-pages/man7/signal.7:344
 #, no-wrap
 msgid "Signal"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:232
+#: man-pages/man7/signal.7:233
 #, no-wrap
 msgid "Standard"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:232
+#: man-pages/man7/signal.7:233
 #, no-wrap
 msgid "Action"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:232
+#: man-pages/man7/signal.7:233
 #, no-wrap
 msgid "Comment"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:233 man-pages/man7/signal.7:332
+#: man-pages/man7/signal.7:234 man-pages/man7/signal.7:351
 #, no-wrap
 msgid "SIGABRT"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:233 man-pages/man7/signal.7:234
-#: man-pages/man7/signal.7:236 man-pages/man7/signal.7:238
-#: man-pages/man7/signal.7:240 man-pages/man7/signal.7:241
-#: man-pages/man7/signal.7:243 man-pages/man7/signal.7:245
-#: man-pages/man7/signal.7:248 man-pages/man7/signal.7:250
-#: man-pages/man7/signal.7:256 man-pages/man7/signal.7:257
-#: man-pages/man7/signal.7:259 man-pages/man7/signal.7:260
-#: man-pages/man7/signal.7:263 man-pages/man7/signal.7:265
-#: man-pages/man7/signal.7:266 man-pages/man7/signal.7:269
-#: man-pages/man7/signal.7:270
+#: man-pages/man7/signal.7:234 man-pages/man7/signal.7:235
+#: man-pages/man7/signal.7:237 man-pages/man7/signal.7:239
+#: man-pages/man7/signal.7:241 man-pages/man7/signal.7:242
+#: man-pages/man7/signal.7:244 man-pages/man7/signal.7:246
+#: man-pages/man7/signal.7:249 man-pages/man7/signal.7:251
+#: man-pages/man7/signal.7:257 man-pages/man7/signal.7:258
+#: man-pages/man7/signal.7:260 man-pages/man7/signal.7:261
+#: man-pages/man7/signal.7:264 man-pages/man7/signal.7:266
+#: man-pages/man7/signal.7:267 man-pages/man7/signal.7:270
+#: man-pages/man7/signal.7:271
 #, no-wrap
 msgid "P1990"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:233
+#: man-pages/man7/signal.7:234
 #, no-wrap
 msgid "Abort signal from B<abort>(3)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:234 man-pages/man7/signal.7:342
+#: man-pages/man7/signal.7:235 man-pages/man7/signal.7:361
 #, no-wrap
 msgid "SIGALRM"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:234
+#: man-pages/man7/signal.7:235
 #, no-wrap
 msgid "Timer signal from B<alarm>(2)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:235 man-pages/man7/signal.7:334
+#: man-pages/man7/signal.7:236 man-pages/man7/signal.7:353
 #, no-wrap
 msgid "SIGBUS"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:235 man-pages/man7/signal.7:252
-#: man-pages/man7/signal.7:254 man-pages/man7/signal.7:261
-#: man-pages/man7/signal.7:264 man-pages/man7/signal.7:268
-#: man-pages/man7/signal.7:271 man-pages/man7/signal.7:272
-#: man-pages/man7/signal.7:274
+#: man-pages/man7/signal.7:236 man-pages/man7/signal.7:253
+#: man-pages/man7/signal.7:255 man-pages/man7/signal.7:262
+#: man-pages/man7/signal.7:265 man-pages/man7/signal.7:269
+#: man-pages/man7/signal.7:272 man-pages/man7/signal.7:273
+#: man-pages/man7/signal.7:275
 #, no-wrap
 msgid "P2001"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:235
+#: man-pages/man7/signal.7:236
 #, no-wrap
 msgid "Bus error (bad memory access)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:236 man-pages/man7/signal.7:345
+#: man-pages/man7/signal.7:237 man-pages/man7/signal.7:364
 #, no-wrap
 msgid "SIGCHLD"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:236
+#: man-pages/man7/signal.7:237
 #, no-wrap
 msgid "Child stopped or terminated"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:237 man-pages/man7/signal.7:346
+#: man-pages/man7/signal.7:238 man-pages/man7/signal.7:365
 #, no-wrap
 msgid "SIGCLD"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:237 man-pages/man7/signal.7:239
-#: man-pages/man7/signal.7:244 man-pages/man7/signal.7:246
-#: man-pages/man7/signal.7:247 man-pages/man7/signal.7:249
-#: man-pages/man7/signal.7:255 man-pages/man7/signal.7:258
-#: man-pages/man7/signal.7:267 man-pages/man7/signal.7:276
-#: man-pages/man7/signal.7:335 man-pages/man7/signal.7:344
-#: man-pages/man7/signal.7:346 man-pages/man7/signal.7:361
-#: man-pages/man7/signal.7:362 man-pages/man7/signal.7:364
+#: man-pages/man7/signal.7:238 man-pages/man7/signal.7:240
+#: man-pages/man7/signal.7:245 man-pages/man7/signal.7:247
+#: man-pages/man7/signal.7:248 man-pages/man7/signal.7:250
+#: man-pages/man7/signal.7:256 man-pages/man7/signal.7:259
+#: man-pages/man7/signal.7:268 man-pages/man7/signal.7:277
+#: man-pages/man7/signal.7:354 man-pages/man7/signal.7:363
+#: man-pages/man7/signal.7:365 man-pages/man7/signal.7:380
+#: man-pages/man7/signal.7:381 man-pages/man7/signal.7:383
 #, no-wrap
 msgid "-"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:237
+#: man-pages/man7/signal.7:238
 #, no-wrap
 msgid "A synonym for B<SIGCHLD>"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:238 man-pages/man7/signal.7:347
+#: man-pages/man7/signal.7:239 man-pages/man7/signal.7:366
 #, no-wrap
 msgid "SIGCONT"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:238
+#: man-pages/man7/signal.7:239
 #, no-wrap
 msgid "Continue if stopped"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:239 man-pages/man7/signal.7:335
+#: man-pages/man7/signal.7:240 man-pages/man7/signal.7:354
 #, no-wrap
 msgid "SIGEMT"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:239
+#: man-pages/man7/signal.7:240
 #, no-wrap
 msgid "Emulator trap"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:240 man-pages/man7/signal.7:336
+#: man-pages/man7/signal.7:241 man-pages/man7/signal.7:355
 #, no-wrap
 msgid "SIGFPE"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:240
+#: man-pages/man7/signal.7:241
 #, no-wrap
 msgid "Floating-point exception"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:241 man-pages/man7/signal.7:327
+#: man-pages/man7/signal.7:242 man-pages/man7/signal.7:346
 #, no-wrap
 msgid "SIGHUP"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:241
+#: man-pages/man7/signal.7:242
 #, no-wrap
 msgid "Hangup detected on controlling terminal"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:242
+#: man-pages/man7/signal.7:243
 #, no-wrap
 msgid "or death of controlling process"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:243 man-pages/man7/signal.7:330
+#: man-pages/man7/signal.7:244 man-pages/man7/signal.7:349
 #, no-wrap
 msgid "SIGILL"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:243
+#: man-pages/man7/signal.7:244
 #, no-wrap
 msgid "Illegal Instruction"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:244 man-pages/man7/signal.7:361
+#: man-pages/man7/signal.7:245 man-pages/man7/signal.7:380
 #, no-wrap
 msgid "SIGINFO"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:244
+#: man-pages/man7/signal.7:245
 #, no-wrap
 msgid "A synonym for B<SIGPWR>"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:245 man-pages/man7/signal.7:328
+#: man-pages/man7/signal.7:246 man-pages/man7/signal.7:347
 #, no-wrap
 msgid "SIGINT"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:245
+#: man-pages/man7/signal.7:246
 #, no-wrap
 msgid "Interrupt from keyboard"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:246 man-pages/man7/signal.7:358
+#: man-pages/man7/signal.7:247 man-pages/man7/signal.7:377
 #, no-wrap
 msgid "SIGIO"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:246
+#: man-pages/man7/signal.7:247
 #, no-wrap
 msgid "I/O now possible (4.2BSD)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:247 man-pages/man7/signal.7:333
+#: man-pages/man7/signal.7:248 man-pages/man7/signal.7:352
 #, no-wrap
 msgid "SIGIOT"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:247
+#: man-pages/man7/signal.7:248
 #, no-wrap
 msgid "IOT trap. A synonym for B<SIGABRT>"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:248 man-pages/man7/signal.7:337
+#: man-pages/man7/signal.7:249 man-pages/man7/signal.7:356
 #, no-wrap
 msgid "SIGKILL"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:248
+#: man-pages/man7/signal.7:249
 #, no-wrap
 msgid "Kill signal"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:249 man-pages/man7/signal.7:362
+#: man-pages/man7/signal.7:250 man-pages/man7/signal.7:381
 #, no-wrap
 msgid "SIGLOST"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:249
+#: man-pages/man7/signal.7:250
 #, no-wrap
 msgid "File lock lost (unused)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:250 man-pages/man7/signal.7:341
+#: man-pages/man7/signal.7:251 man-pages/man7/signal.7:360
 #, no-wrap
 msgid "SIGPIPE"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:250
+#: man-pages/man7/signal.7:251
 #, no-wrap
 msgid "Broken pipe: write to pipe with no"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:251
+#: man-pages/man7/signal.7:252
 #, no-wrap
 msgid "readers; see B<pipe>(7)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:252 man-pages/man7/signal.7:359
+#: man-pages/man7/signal.7:253 man-pages/man7/signal.7:378
 #, no-wrap
 msgid "SIGPOLL"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:252
+#: man-pages/man7/signal.7:253
 #, no-wrap
 msgid "Pollable event (Sys V)."
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:253
+#: man-pages/man7/signal.7:254
 #, no-wrap
 msgid "Synonym for B<SIGIO>"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:254 man-pages/man7/signal.7:356
+#: man-pages/man7/signal.7:255 man-pages/man7/signal.7:375
 #, no-wrap
 msgid "SIGPROF"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:254
+#: man-pages/man7/signal.7:255
 #, no-wrap
 msgid "Profiling timer expired"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:255 man-pages/man7/signal.7:360
+#: man-pages/man7/signal.7:256 man-pages/man7/signal.7:379
 #, no-wrap
 msgid "SIGPWR"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:255
+#: man-pages/man7/signal.7:256
 #, no-wrap
 msgid "Power failure (System V)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:256 man-pages/man7/signal.7:329
+#: man-pages/man7/signal.7:257 man-pages/man7/signal.7:348
 #, no-wrap
 msgid "SIGQUIT"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:256
+#: man-pages/man7/signal.7:257
 #, no-wrap
 msgid "Quit from keyboard"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:257 man-pages/man7/signal.7:339
+#: man-pages/man7/signal.7:258 man-pages/man7/signal.7:358
 #, no-wrap
 msgid "SIGSEGV"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:257
+#: man-pages/man7/signal.7:258
 #, no-wrap
 msgid "Invalid memory reference"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:258 man-pages/man7/signal.7:344
+#: man-pages/man7/signal.7:259 man-pages/man7/signal.7:363
 #, no-wrap
 msgid "SIGSTKFLT"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:258
+#: man-pages/man7/signal.7:259
 #, no-wrap
 msgid "Stack fault on coprocessor (unused)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:259 man-pages/man7/signal.7:348
+#: man-pages/man7/signal.7:260 man-pages/man7/signal.7:367
 #, no-wrap
 msgid "SIGSTOP"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:259
+#: man-pages/man7/signal.7:260
 #, no-wrap
 msgid "Stop process"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:260 man-pages/man7/signal.7:349
+#: man-pages/man7/signal.7:261 man-pages/man7/signal.7:368
 #, no-wrap
 msgid "SIGTSTP"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:260
+#: man-pages/man7/signal.7:261
 #, no-wrap
 msgid "Stop typed at terminal"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:261 man-pages/man7/signal.7:363
+#: man-pages/man7/signal.7:262 man-pages/man7/signal.7:382
 #, no-wrap
 msgid "SIGSYS"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:261
+#: man-pages/man7/signal.7:262
 #, no-wrap
 msgid "Bad system call (SVr4);"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:262
+#: man-pages/man7/signal.7:263
 #, no-wrap
 msgid "see also B<seccomp>(2)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:263 man-pages/man7/signal.7:343
+#: man-pages/man7/signal.7:264 man-pages/man7/signal.7:362
 #, no-wrap
 msgid "SIGTERM"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:263
+#: man-pages/man7/signal.7:264
 #, no-wrap
 msgid "Termination signal"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:264 man-pages/man7/signal.7:331
+#: man-pages/man7/signal.7:265 man-pages/man7/signal.7:350
 #, no-wrap
 msgid "SIGTRAP"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:264
+#: man-pages/man7/signal.7:265
 #, no-wrap
 msgid "Trace/breakpoint trap"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:265 man-pages/man7/signal.7:350
+#: man-pages/man7/signal.7:266 man-pages/man7/signal.7:369
 #, no-wrap
 msgid "SIGTTIN"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:265
+#: man-pages/man7/signal.7:266
 #, no-wrap
 msgid "Terminal input for background process"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:266 man-pages/man7/signal.7:351
+#: man-pages/man7/signal.7:267 man-pages/man7/signal.7:370
 #, no-wrap
 msgid "SIGTTOU"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:266
+#: man-pages/man7/signal.7:267
 #, no-wrap
 msgid "Terminal output for background process"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:267 man-pages/man7/signal.7:364
+#: man-pages/man7/signal.7:268 man-pages/man7/signal.7:383
 #, no-wrap
 msgid "SIGUNUSED"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:267
+#: man-pages/man7/signal.7:268
 #, no-wrap
 msgid "Synonymous with B<SIGSYS>"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:268 man-pages/man7/signal.7:352
+#: man-pages/man7/signal.7:269 man-pages/man7/signal.7:371
 #, no-wrap
 msgid "SIGURG"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:268
+#: man-pages/man7/signal.7:269
 #, no-wrap
 msgid "Urgent condition on socket (4.2BSD)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:269 man-pages/man7/signal.7:338
+#: man-pages/man7/signal.7:270 man-pages/man7/signal.7:357
 #, no-wrap
 msgid "SIGUSR1"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:269
+#: man-pages/man7/signal.7:270
 #, no-wrap
 msgid "User-defined signal 1"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:270 man-pages/man7/signal.7:340
+#: man-pages/man7/signal.7:271 man-pages/man7/signal.7:359
 #, no-wrap
 msgid "SIGUSR2"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:270
+#: man-pages/man7/signal.7:271
 #, no-wrap
 msgid "User-defined signal 2"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:271 man-pages/man7/signal.7:355
+#: man-pages/man7/signal.7:272 man-pages/man7/signal.7:374
 #, no-wrap
 msgid "SIGVTALRM"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:271
+#: man-pages/man7/signal.7:272
 #, no-wrap
 msgid "Virtual alarm clock (4.2BSD)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:272 man-pages/man7/signal.7:353
+#: man-pages/man7/signal.7:273 man-pages/man7/signal.7:372
 #, no-wrap
 msgid "SIGXCPU"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:272
+#: man-pages/man7/signal.7:273
 #, no-wrap
 msgid "CPU time limit exceeded (4.2BSD);"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:273 man-pages/man7/signal.7:275
+#: man-pages/man7/signal.7:274 man-pages/man7/signal.7:276
 #, no-wrap
 msgid "see B<setrlimit>(2)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:274 man-pages/man7/signal.7:354
+#: man-pages/man7/signal.7:275 man-pages/man7/signal.7:373
 #, no-wrap
 msgid "SIGXFSZ"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:274
+#: man-pages/man7/signal.7:275
 #, no-wrap
 msgid "File size limit exceeded (4.2BSD);"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:276 man-pages/man7/signal.7:357
+#: man-pages/man7/signal.7:277 man-pages/man7/signal.7:376
 #, no-wrap
 msgid "SIGWINCH"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:276
+#: man-pages/man7/signal.7:277
 #, no-wrap
 msgid "Window resize signal (4.3BSD, Sun)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:284
+#: man-pages/man7/signal.7:285
 msgid ""
 "The signals B<SIGKILL> and B<SIGSTOP> cannot be caught, blocked, or ignored."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:295
+#: man-pages/man7/signal.7:296
 msgid ""
 "Up to and including Linux 2.2, the default behavior for B<SIGSYS>, "
 "B<SIGXCPU>, B<SIGXFSZ>, and (on architectures other than SPARC and MIPS)  "
@@ -6382,7 +5822,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:302
+#: man-pages/man7/signal.7:303
 msgid ""
 "B<SIGEMT> is not specified in POSIX.1-2001, but nevertheless appears on most"
 " other UNIX systems, where its default action is typically to terminate the "
@@ -6390,27 +5830,53 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:306
+#: man-pages/man7/signal.7:307
 msgid ""
 "B<SIGPWR> (which is not specified in POSIX.1-2001) is typically ignored by "
 "default on those other UNIX systems where it appears."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:311
+#: man-pages/man7/signal.7:312
 msgid ""
 "B<SIGIO> (which is not specified in POSIX.1-2001) is ignored by default on "
 "several other UNIX systems."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/signal.7:311
+#: man-pages/man7/signal.7:312
+#, no-wrap
+msgid "Queueing and delivery semantics for standard signals"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/signal.7:315
+msgid ""
+"If multiple standard signals are pending for a process, the order in which "
+"the signals are delivered is unspecified."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/signal.7:330
+msgid ""
+"Standard signals do not queue.  If multiple instances of a standard signal "
+"are generated while that signal is blocked, then only one instance of the "
+"signal is marked as pending (and the signal will be delivered just once when"
+" it is unblocked).  In the case where a standard signal is already pending, "
+"the I<siginfo_t> structure (see B<sigaction>(2))  associated with that "
+"signal is not overwritten on arrival of subsequent instances of the same "
+"signal.  Thus, the process will receive the information associated with the "
+"first instance of the signal."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/signal.7:330
 #, no-wrap
 msgid "Signal numbering for standard signals"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:320
+#: man-pages/man7/signal.7:339
 msgid ""
 "The numeric value for each signal is given in the table below.  As shown in "
 "the table, many signals have different numeric values on different "
@@ -6421,295 +5887,295 @@ msgid ""
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:325
+#: man-pages/man7/signal.7:344
 #, no-wrap
 msgid "x86/ARM"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:325
+#: man-pages/man7/signal.7:344
 #, no-wrap
 msgid "Alpha/"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:325
+#: man-pages/man7/signal.7:344
 #, no-wrap
 msgid "MIPS"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:325
+#: man-pages/man7/signal.7:344
 #, no-wrap
 msgid "PARISC"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:325
+#: man-pages/man7/signal.7:344
 #, no-wrap
 msgid "Notes"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:326
+#: man-pages/man7/signal.7:345
 #, no-wrap
 msgid "most others"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:326
+#: man-pages/man7/signal.7:345
 #, no-wrap
 msgid "SPARC"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:327
+#: man-pages/man7/signal.7:346
 #, no-wrap
 msgid "\\01"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:328
+#: man-pages/man7/signal.7:347
 #, no-wrap
 msgid "\\02"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:329
+#: man-pages/man7/signal.7:348
 #, no-wrap
 msgid "\\03"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:330
+#: man-pages/man7/signal.7:349
 #, no-wrap
 msgid "\\04"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:331
+#: man-pages/man7/signal.7:350
 #, no-wrap
 msgid "\\05"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:332 man-pages/man7/signal.7:333
+#: man-pages/man7/signal.7:351 man-pages/man7/signal.7:352
 #, no-wrap
 msgid "\\06"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:334 man-pages/man7/signal.7:335
-#: man-pages/man7/signal.7:344
+#: man-pages/man7/signal.7:353 man-pages/man7/signal.7:354
+#: man-pages/man7/signal.7:363
 #, no-wrap
 msgid "\\07"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:334 man-pages/man7/signal.7:338
+#: man-pages/man7/signal.7:353 man-pages/man7/signal.7:357
 #, no-wrap
 msgid "10"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:336
+#: man-pages/man7/signal.7:355
 #, no-wrap
 msgid "\\08"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:337
+#: man-pages/man7/signal.7:356
 #, no-wrap
 msgid "\\09"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:338 man-pages/man7/signal.7:353
-#: man-pages/man7/signal.7:354 man-pages/man7/signal.7:360
+#: man-pages/man7/signal.7:357 man-pages/man7/signal.7:372
+#: man-pages/man7/signal.7:373 man-pages/man7/signal.7:379
 #, no-wrap
 msgid "30"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:338 man-pages/man7/signal.7:344
-#: man-pages/man7/signal.7:352
+#: man-pages/man7/signal.7:357 man-pages/man7/signal.7:363
+#: man-pages/man7/signal.7:371
 #, no-wrap
 msgid "16"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:339
+#: man-pages/man7/signal.7:358
 #, no-wrap
 msgid "11"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:340 man-pages/man7/signal.7:353
-#: man-pages/man7/signal.7:363
+#: man-pages/man7/signal.7:359 man-pages/man7/signal.7:372
+#: man-pages/man7/signal.7:382
 #, no-wrap
 msgid "12"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:340 man-pages/man7/signal.7:354
-#: man-pages/man7/signal.7:363 man-pages/man7/signal.7:364
+#: man-pages/man7/signal.7:359 man-pages/man7/signal.7:373
+#: man-pages/man7/signal.7:382 man-pages/man7/signal.7:383
 #, no-wrap
 msgid "31"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:340 man-pages/man7/signal.7:345
-#: man-pages/man7/signal.7:348
+#: man-pages/man7/signal.7:359 man-pages/man7/signal.7:364
+#: man-pages/man7/signal.7:367
 #, no-wrap
 msgid "17"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:341
+#: man-pages/man7/signal.7:360
 #, no-wrap
 msgid "13"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:342
+#: man-pages/man7/signal.7:361
 #, no-wrap
 msgid "14"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:343
+#: man-pages/man7/signal.7:362
 #, no-wrap
 msgid "15"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:345 man-pages/man7/signal.7:349
-#: man-pages/man7/signal.7:355 man-pages/man7/signal.7:357
+#: man-pages/man7/signal.7:364 man-pages/man7/signal.7:368
+#: man-pages/man7/signal.7:374 man-pages/man7/signal.7:376
 #, no-wrap
 msgid "20"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:345 man-pages/man7/signal.7:346
-#: man-pages/man7/signal.7:347 man-pages/man7/signal.7:349
+#: man-pages/man7/signal.7:364 man-pages/man7/signal.7:365
+#: man-pages/man7/signal.7:366 man-pages/man7/signal.7:368
 #, no-wrap
 msgid "18"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:347 man-pages/man7/signal.7:348
-#: man-pages/man7/signal.7:360
+#: man-pages/man7/signal.7:366 man-pages/man7/signal.7:367
+#: man-pages/man7/signal.7:379
 #, no-wrap
 msgid "19"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:347 man-pages/man7/signal.7:349
-#: man-pages/man7/signal.7:354
+#: man-pages/man7/signal.7:366 man-pages/man7/signal.7:368
+#: man-pages/man7/signal.7:373
 #, no-wrap
 msgid "25"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:347 man-pages/man7/signal.7:350
-#: man-pages/man7/signal.7:355
+#: man-pages/man7/signal.7:366 man-pages/man7/signal.7:369
+#: man-pages/man7/signal.7:374
 #, no-wrap
 msgid "26"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:348 man-pages/man7/signal.7:352
-#: man-pages/man7/signal.7:357 man-pages/man7/signal.7:358
+#: man-pages/man7/signal.7:367 man-pages/man7/signal.7:371
+#: man-pages/man7/signal.7:376 man-pages/man7/signal.7:377
 #, no-wrap
 msgid "23"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:348 man-pages/man7/signal.7:349
-#: man-pages/man7/signal.7:353
+#: man-pages/man7/signal.7:367 man-pages/man7/signal.7:368
+#: man-pages/man7/signal.7:372
 #, no-wrap
 msgid "24"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:350 man-pages/man7/signal.7:352
-#: man-pages/man7/signal.7:356
+#: man-pages/man7/signal.7:369 man-pages/man7/signal.7:371
+#: man-pages/man7/signal.7:375
 #, no-wrap
 msgid "21"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:350 man-pages/man7/signal.7:351
-#: man-pages/man7/signal.7:356
+#: man-pages/man7/signal.7:369 man-pages/man7/signal.7:370
+#: man-pages/man7/signal.7:375
 #, no-wrap
 msgid "27"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:351 man-pages/man7/signal.7:358
+#: man-pages/man7/signal.7:370 man-pages/man7/signal.7:377
 #, no-wrap
 msgid "22"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:351 man-pages/man7/signal.7:355
-#: man-pages/man7/signal.7:357
+#: man-pages/man7/signal.7:370 man-pages/man7/signal.7:374
+#: man-pages/man7/signal.7:376
 #, no-wrap
 msgid "28"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:352 man-pages/man7/signal.7:356
-#: man-pages/man7/signal.7:358
+#: man-pages/man7/signal.7:371 man-pages/man7/signal.7:375
+#: man-pages/man7/signal.7:377
 #, no-wrap
 msgid "29"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:359
+#: man-pages/man7/signal.7:378
 #, no-wrap
 msgid "Same as SIGIO"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:360 man-pages/man7/signal.7:361
+#: man-pages/man7/signal.7:379 man-pages/man7/signal.7:380
 #, no-wrap
 msgid "29/-"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:362
+#: man-pages/man7/signal.7:381
 #, no-wrap
 msgid "-/29"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:368
+#: man-pages/man7/signal.7:387
 msgid "Note the following:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:376
+#: man-pages/man7/signal.7:395
 msgid ""
 "Where defined, B<SIGUNUSED> is synonymous with B<SIGSYS>.  Since glibc 2.26,"
 " B<SIGUNUSED> is no longer defined on any architecture."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:383
+#: man-pages/man7/signal.7:402
 msgid ""
 "Signal 29 is B<SIGINFO>/B<SIGPWR> (synonyms for the same value) on Alpha but"
 " B<SIGLOST> on SPARC."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/signal.7:383
+#: man-pages/man7/signal.7:402
 #, no-wrap
 msgid "Real-time signals"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:394
+#: man-pages/man7/signal.7:413
 msgid ""
 "Starting with version 2.2, Linux supports real-time signals as originally "
 "defined in the POSIX.1b real-time extensions (and now included in "
@@ -6719,7 +6185,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:416
+#: man-pages/man7/signal.7:435
 msgid ""
 "The Linux kernel supports a range of 33 different real-time signals, "
 "numbered 32 to 64.  However, the glibc POSIX threads implementation "
@@ -6735,7 +6201,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:420
+#: man-pages/man7/signal.7:439
 msgid ""
 "Unlike standard signals, real-time signals have no predefined meanings: the "
 "entire set of real-time signals can be used for application-defined "
@@ -6743,19 +6209,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:423
+#: man-pages/man7/signal.7:442
 msgid ""
 "The default action for an unhandled real-time signal is to terminate the "
 "receiving process."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:425
+#: man-pages/man7/signal.7:444
 msgid "Real-time signals are distinguished by the following:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:429
+#: man-pages/man7/signal.7:448
 msgid ""
 "Multiple instances of real-time signals can be queued.  By contrast, if "
 "multiple instances of a standard signal are delivered while that signal is "
@@ -6763,7 +6229,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:449
+#: man-pages/man7/signal.7:468
 msgid ""
 "If the signal is sent using B<sigqueue>(3), an accompanying value (either an"
 " integer or a pointer) can be sent with the signal.  If the receiving "
@@ -6775,7 +6241,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:458
+#: man-pages/man7/signal.7:477
 msgid ""
 "Real-time signals are delivered in a guaranteed order.  Multiple real-time "
 "signals of the same type are delivered in the order they were sent.  If "
@@ -6786,7 +6252,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:463
+#: man-pages/man7/signal.7:482
 msgid ""
 "If both standard and real-time signals are pending for a process, POSIX "
 "leaves it unspecified which is delivered first.  Linux, like many other "
@@ -6794,7 +6260,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:486
+#: man-pages/man7/signal.7:505
 msgid ""
 "According to POSIX, an implementation should permit at least "
 "B<_POSIX_SIGQUEUE_MAX> (32) real-time signals to be queued to a process.  "
@@ -6809,7 +6275,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:494
+#: man-pages/man7/signal.7:513
 msgid ""
 "The addition of real-time signals required the widening of the signal set "
 "structure (I<sigset_t>)  from 32 to 64 bits.  Consequently, various system "
@@ -6818,109 +6284,109 @@ msgid ""
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:497
+#: man-pages/man7/signal.7:516
 #, no-wrap
 msgid "Linux 2.0 and earlier"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:497
+#: man-pages/man7/signal.7:516
 #, no-wrap
 msgid "Linux 2.2 and later"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:498
+#: man-pages/man7/signal.7:517
 #, no-wrap
 msgid "B<sigaction>(2)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:498
+#: man-pages/man7/signal.7:517
 #, no-wrap
 msgid "B<rt_sigaction>(2)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:499
+#: man-pages/man7/signal.7:518
 #, no-wrap
 msgid "B<sigpending>(2)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:499
+#: man-pages/man7/signal.7:518
 #, no-wrap
 msgid "B<rt_sigpending>(2)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:500
+#: man-pages/man7/signal.7:519
 #, no-wrap
 msgid "B<sigprocmask>(2)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:500
+#: man-pages/man7/signal.7:519
 #, no-wrap
 msgid "B<rt_sigprocmask>(2)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:501
+#: man-pages/man7/signal.7:520
 #, no-wrap
 msgid "B<sigreturn>(2)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:501
+#: man-pages/man7/signal.7:520
 #, no-wrap
 msgid "B<rt_sigreturn>(2)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:502
+#: man-pages/man7/signal.7:521
 #, no-wrap
 msgid "B<rt_sigsuspend>(2)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:503
+#: man-pages/man7/signal.7:522
 #, no-wrap
 msgid "B<sigtimedwait>(2)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/signal.7:503
+#: man-pages/man7/signal.7:522
 #, no-wrap
 msgid "B<rt_sigtimedwait>(2)"
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/signal.7:506
+#: man-pages/man7/signal.7:525
 #, no-wrap
 msgid "Interruption of system calls and library functions by signal handlers"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:509
+#: man-pages/man7/signal.7:528
 msgid ""
 "If a signal handler is invoked while a system call or library function call "
 "is blocked, then either:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:511
+#: man-pages/man7/signal.7:530
 msgid ""
 "the call is automatically restarted after the signal handler returns; or"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:514
+#: man-pages/man7/signal.7:533
 msgid "the call fails with the error B<EINTR>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:522
+#: man-pages/man7/signal.7:541
 msgid ""
 "Which of these two behaviors occurs depends on the interface and whether or "
 "not the signal handler was established using the B<SA_RESTART> flag (see "
@@ -6931,7 +6397,7 @@ msgstr ""
 #.  The following system calls use ERESTARTSYS,
 #.  so that they are restartable
 #. type: Plain text
-#: man-pages/man7/signal.7:531
+#: man-pages/man7/signal.7:550
 msgid ""
 "If a blocked call to one of the following interfaces is interrupted by a "
 "signal handler, then the call is automatically restarted after the signal "
@@ -6940,7 +6406,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:547
+#: man-pages/man7/signal.7:566
 msgid ""
 "B<read>(2), B<readv>(2), B<write>(2), B<writev>(2), and B<ioctl>(2)  calls "
 "on \"slow\" devices.  A \"slow\" device is one where the I/O call may block "
@@ -6953,13 +6419,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:551
+#: man-pages/man7/signal.7:570
 msgid ""
 "B<open>(2), if it can block (e.g., when opening a FIFO; see B<fifo>(7))."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:558
+#: man-pages/man7/signal.7:577
 msgid "B<wait>(2), B<wait3>(2), B<wait4>(2), B<waitid>(2), and B<waitpid>(2)."
 msgstr ""
 
@@ -6969,7 +6435,7 @@ msgstr ""
 #.  described below.  (Verified from 2.6.26 source, and by experiment; mtk)
 #.  FIXME What about sendmmsg()?
 #. type: Plain text
-#: man-pages/man7/signal.7:576
+#: man-pages/man7/signal.7:595
 msgid ""
 "Socket interfaces: B<accept>(2), B<connect>(2), B<recv>(2), B<recvfrom>(2), "
 "B<recvmmsg>(2), B<recvmsg>(2), B<send>(2), B<sendto>(2), and B<sendmsg>(2), "
@@ -6977,14 +6443,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:586
+#: man-pages/man7/signal.7:605
 msgid ""
 "File locking interfaces: B<flock>(2)  and the B<F_SETLKW> and "
 "B<F_OFD_SETLKW> operations of B<fcntl>(2)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:593
+#: man-pages/man7/signal.7:612
 msgid ""
 "POSIX message queue interfaces: B<mq_receive>(3), B<mq_timedreceive>(3), "
 "B<mq_send>(3), and B<mq_timedsend>(3)."
@@ -6992,30 +6458,30 @@ msgstr ""
 
 #.  commit 72c1bbf308c75a136803d2d76d0e18258be14c7a
 #. type: Plain text
-#: man-pages/man7/signal.7:600
+#: man-pages/man7/signal.7:619
 msgid ""
 "B<futex>(2)  B<FUTEX_WAIT> (since Linux 2.6.22; beforehand, always failed "
 "with B<EINTR>)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:602
+#: man-pages/man7/signal.7:621
 msgid "B<getrandom>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:606
+#: man-pages/man7/signal.7:625
 msgid "B<pthread_mutex_lock>(3), B<pthread_cond_wait>(3), and related APIs."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:609
+#: man-pages/man7/signal.7:628
 msgid "B<futex>(2)  B<FUTEX_WAIT_BITSET>."
 msgstr ""
 
 #.  as a consequence of the 2.6.22 changes in the futex() implementation
 #. type: Plain text
-#: man-pages/man7/signal.7:618
+#: man-pages/man7/signal.7:637
 msgid ""
 "POSIX semaphore interfaces: B<sem_wait>(3)  and B<sem_timedwait>(3)  (since "
 "Linux 2.6.22; beforehand, always failed with B<EINTR>)."
@@ -7023,7 +6489,7 @@ msgstr ""
 
 #.  commit 1ca39ab9d21ac93f94b9e3eb364ea9a5cf2aba06
 #. type: Plain text
-#: man-pages/man7/signal.7:627
+#: man-pages/man7/signal.7:646
 msgid ""
 "B<read>(2)  from an B<inotify>(7)  file descriptor (since Linux 3.8; "
 "beforehand, always failed with B<EINTR>)."
@@ -7032,7 +6498,7 @@ msgstr ""
 #.  These are the system calls that give EINTR or ERESTARTNOHAND
 #.  on interruption by a signal handler.
 #. type: Plain text
-#: man-pages/man7/signal.7:637
+#: man-pages/man7/signal.7:656
 msgid ""
 "The following interfaces are never restarted after being interrupted by a "
 "signal handler, regardless of the use of B<SA_RESTART>; they always fail "
@@ -7040,7 +6506,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:651 man-pages/man7/signal.7:724
+#: man-pages/man7/signal.7:670 man-pages/man7/signal.7:743
 msgid ""
 "\"Input\" socket interfaces, when a timeout (B<SO_RCVTIMEO>)  has been set "
 "on the socket using B<setsockopt>(2): B<accept>(2), B<recv>(2), "
@@ -7050,7 +6516,7 @@ msgstr ""
 
 #.  FIXME What about sendmmsg()?
 #. type: Plain text
-#: man-pages/man7/signal.7:662
+#: man-pages/man7/signal.7:681
 msgid ""
 "\"Output\" socket interfaces, when a timeout (B<SO_RCVTIMEO>)  has been set "
 "on the socket using B<setsockopt>(2): B<connect>(2), B<send>(2), "
@@ -7058,14 +6524,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:669
+#: man-pages/man7/signal.7:688
 msgid ""
 "Interfaces used to wait for signals: B<pause>(2), B<sigsuspend>(2), "
 "B<sigtimedwait>(2), and B<sigwaitinfo>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:678
+#: man-pages/man7/signal.7:697
 msgid ""
 "File descriptor multiplexing interfaces: B<epoll_wait>(2), "
 "B<epoll_pwait>(2), B<poll>(2), B<ppoll>(2), B<select>(2), and B<pselect>(2)."
@@ -7073,25 +6539,25 @@ msgstr ""
 
 #.  On some other systems, SA_RESTART does restart these system calls
 #. type: Plain text
-#: man-pages/man7/signal.7:686
+#: man-pages/man7/signal.7:705
 msgid ""
 "System V IPC interfaces: B<msgrcv>(2), B<msgsnd>(2), B<semop>(2), and "
 "B<semtimedop>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:692
+#: man-pages/man7/signal.7:711
 msgid ""
 "Sleep interfaces: B<clock_nanosleep>(2), B<nanosleep>(2), and B<usleep>(3)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:694
+#: man-pages/man7/signal.7:713
 msgid "B<io_getevents>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:699
+#: man-pages/man7/signal.7:718
 msgid ""
 "The B<sleep>(3)  function is also never restarted if interrupted by a "
 "handler, but gives a success return: the number of seconds remaining to "
@@ -7099,13 +6565,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/signal.7:699
+#: man-pages/man7/signal.7:718
 #, no-wrap
 msgid "Interruption of system calls and library functions by stop signals"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:708
+#: man-pages/man7/signal.7:727
 msgid ""
 "On Linux, even in the absence of signal handlers, certain blocking "
 "interfaces can fail with the error B<EINTR> after the process is stopped by "
@@ -7114,13 +6580,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:710
+#: man-pages/man7/signal.7:729
 msgid "The Linux interfaces that display this behavior are:"
 msgstr ""
 
 #.  FIXME What about sendmmsg()?
 #. type: Plain text
-#: man-pages/man7/signal.7:738
+#: man-pages/man7/signal.7:757
 msgid ""
 "\"Output\" socket interfaces, when a timeout (B<SO_RCVTIMEO>)  has been set "
 "on the socket using B<setsockopt>(2): B<connect>(2), B<send>(2), "
@@ -7129,41 +6595,41 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:741
+#: man-pages/man7/signal.7:760
 msgid "B<epoll_wait>(2), B<epoll_pwait>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:744
+#: man-pages/man7/signal.7:763
 msgid "B<semop>(2), B<semtimedop>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:747
+#: man-pages/man7/signal.7:766
 msgid "B<sigtimedwait>(2), B<sigwaitinfo>(2)."
 msgstr ""
 
 #.  commit 1ca39ab9d21ac93f94b9e3eb364ea9a5cf2aba06
 #. type: Plain text
-#: man-pages/man7/signal.7:754
+#: man-pages/man7/signal.7:773
 msgid ""
 "Linux 3.7 and earlier: B<read>(2)  from an B<inotify>(7)  file descriptor"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:760
+#: man-pages/man7/signal.7:779
 msgid ""
 "Linux 2.6.21 and earlier: B<futex>(2)  B<FUTEX_WAIT>, B<sem_timedwait>(3), "
 "B<sem_wait>(3)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:764
+#: man-pages/man7/signal.7:783
 msgid "Linux 2.6.8 and earlier: B<msgrcv>(2), B<msgsnd>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:767
+#: man-pages/man7/signal.7:786
 msgid "Linux 2.4 and earlier: B<nanosleep>(2)."
 msgstr ""
 
@@ -7178,18 +6644,31 @@ msgstr ""
 #.  signal 29 is
 #.  .BR SIGLOST .
 #. type: Plain text
-#: man-pages/man7/signal.7:779
+#: man-pages/man7/signal.7:798
 msgid "POSIX.1, except as noted."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:782
+#: man-pages/man7/signal.7:801
 msgid ""
 "For a discussion of async-signal-safe functions, see B<signal-safety>(7)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:818
+#: man-pages/man7/signal.7:824
+msgid ""
+"The I</proc/[pid]/task/[tid]/status> file contains various fields that show "
+"the signals that a thread is blocking (I<SigBlk>), catching (I<SigCgt>), or "
+"ignoring (I<SigIgn>).  (The set of signals that are caught or ignored will "
+"be the same across all threads in a process.)  Other fields show the set of "
+"pending signals that are directed to the thread (I<SigPnd>)  as well as the "
+"set of pending signals that are directed to the process as a whole "
+"(I<ShdPnd>).  The corresponding fields in I</proc/[pid]/status> show the "
+"information for the main thread.  See B<proc>(5)  for further details."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/signal.7:860
 msgid ""
 "B<kill>(1), B<clone>(2), B<getrlimit>(2), B<kill>(2), B<restart_syscall>(2),"
 " B<rt_sigqueueinfo>(2), B<setitimer>(2), B<setrlimit>(2), B<sgetmask>(2), "
@@ -7200,6 +6679,578 @@ msgid ""
 "B<sigset>(3), B<sigsetops>(3), B<sigvec>(3), B<sigwait>(3), B<strsignal>(3),"
 " B<sysv_signal>(3), B<core>(5), B<proc>(5), B<nptl>(7), B<pthreads>(7), "
 "B<sigevent>(7)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/sysvipc.7:40
+#, no-wrap
+msgid "SVIPC"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/sysvipc.7:40
+#, no-wrap
+msgid "2016-03-15"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:43
+msgid "sysvipc - System V interprocess communication mechanisms"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:48
+#, no-wrap
+msgid ""
+"B<#include E<lt>sys/msg.hE<gt>>\n"
+"B<#include E<lt>sys/sem.hE<gt>>\n"
+"B<#include E<lt>sys/shm.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:56
+msgid ""
+"This manual page refers to the Linux implementation of the System V "
+"interprocess communication (IPC) mechanisms: message queues, semaphore sets,"
+" and shared memory segments.  In the following, the word I<resource> means "
+"an instantiation of one among such mechanisms."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/sysvipc.7:56
+#, no-wrap
+msgid "Resource access permissions"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:64
+msgid ""
+"For each resource, the system uses a common structure of type I<struct "
+"ipc_perm> to store information needed in determining permissions to perform "
+"an IPC operation.  The I<ipc_perm> structure includes the following members:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:74
+#, no-wrap
+msgid ""
+"struct ipc_perm {\n"
+"    uid_t          cuid;   /* creator user ID */\n"
+"    gid_t          cgid;   /* creator group ID */\n"
+"    uid_t          uid;    /* owner user ID */\n"
+"    gid_t          gid;    /* owner group ID */\n"
+"    unsigned short mode;   /* r/w permissions */\n"
+"};\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:84
+msgid ""
+"The I<mode> member of the I<ipc_perm> structure defines, with its lower 9 "
+"bits, the access permissions to the resource for a process executing an IPC "
+"system call.  The permissions are interpreted as follows:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:92
+#, no-wrap
+msgid ""
+"    0400    Read by user.\n"
+"    0200    Write by user.\n"
+"    0040    Read by group.\n"
+"    0020    Write by group.\n"
+"    0004    Read by others.\n"
+"    0002    Write by others.\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:100
+msgid ""
+"Bits 0100, 0010, and 0001 (the execute bits) are unused by the system.  "
+"Furthermore, \"write\" effectively means \"alter\" for a semaphore set."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:103
+msgid ""
+"The same system header file also defines the following symbolic constants:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:103
+#, no-wrap
+msgid "B<IPC_CREAT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:106
+msgid "Create entry if key doesn't exist."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:106
+#, no-wrap
+msgid "B<IPC_EXCL>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:109
+msgid "Fail if key exists."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:109
+#, no-wrap
+msgid "B<IPC_NOWAIT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:112
+msgid "Error if request must wait."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:112
+#, no-wrap
+msgid "B<IPC_PRIVATE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:115
+msgid "Private key."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:115
+#, no-wrap
+msgid "B<IPC_RMID>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:118
+msgid "Remove resource."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:118
+#, no-wrap
+msgid "B<IPC_SET>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:121
+msgid "Set resource options."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:121
+#, no-wrap
+msgid "B<IPC_STAT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:124
+msgid "Get resource options."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:133
+msgid ""
+"Note that B<IPC_PRIVATE> is a I<key_t> type, while all the other symbolic "
+"constants are flag fields and can be OR'ed into an I<int> type variable."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/sysvipc.7:133
+#, no-wrap
+msgid "Message queues"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:141
+msgid ""
+"A message queue is uniquely identified by a positive integer (its I<msqid>)"
+"  and has an associated data structure of type I<struct msqid_ds>, defined "
+"in I<E<lt>sys/msg.hE<gt>>, containing the following members:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:154
+#, no-wrap
+msgid ""
+"struct msqid_ds {\n"
+"    struct ipc_perm msg_perm;\n"
+"    msgqnum_t       msg_qnum;    /* no of messages on queue */\n"
+"    msglen_t        msg_qbytes;  /* bytes max on a queue */\n"
+"    pid_t           msg_lspid;   /* PID of last msgsnd(2) call */\n"
+"    pid_t           msg_lrpid;   /* PID of last msgrcv(2) call */\n"
+"    time_t          msg_stime;   /* last msgsnd(2) time */\n"
+"    time_t          msg_rtime;   /* last msgrcv(2) time */\n"
+"    time_t          msg_ctime;   /* last change time */\n"
+"};\n"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:156
+#, no-wrap
+msgid "I<msg_perm>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:161
+msgid ""
+"I<ipc_perm> structure that specifies the access permissions on the message "
+"queue."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:161
+#, no-wrap
+msgid "I<msg_qnum>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:164
+msgid "Number of messages currently on the message queue."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:164
+#, no-wrap
+msgid "I<msg_qbytes>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:168
+msgid "Maximum number of bytes of message text allowed on the message queue."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:168
+#, no-wrap
+msgid "I<msg_lspid>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:173
+msgid "ID of the process that performed the last B<msgsnd>(2)  system call."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:173
+#, no-wrap
+msgid "I<msg_lrpid>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:178
+msgid "ID of the process that performed the last B<msgrcv>(2)  system call."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:178
+#, no-wrap
+msgid "I<msg_stime>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:183
+msgid "Time of the last B<msgsnd>(2)  system call."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:183
+#, no-wrap
+msgid "I<msg_rtime>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:188
+msgid "Time of the last B<msgrcv>(2)  system call."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:188
+#, no-wrap
+msgid "I<msg_ctime>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:194
+msgid ""
+"Time of the last system call that changed a member of the I<msqid_ds> "
+"structure."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/sysvipc.7:194
+#, no-wrap
+msgid "Semaphore sets"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:202
+msgid ""
+"A semaphore set is uniquely identified by a positive integer (its I<semid>)"
+"  and has an associated data structure of type I<struct semid_ds>, defined "
+"in I<E<lt>sys/sem.hE<gt>>, containing the following members:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:211
+#, no-wrap
+msgid ""
+"struct semid_ds {\n"
+"    struct ipc_perm sem_perm;\n"
+"    time_t          sem_otime;   /* last operation time */\n"
+"    time_t          sem_ctime;   /* last change time */\n"
+"    unsigned long   sem_nsems;   /* count of sems in set */\n"
+"};\n"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:213
+#, no-wrap
+msgid "I<sem_perm>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:218
+msgid ""
+"I<ipc_perm> structure that specifies the access permissions on the semaphore"
+" set."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:218
+#, no-wrap
+msgid "I<sem_otime>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:223
+msgid "Time of last B<semop>(2)  system call."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:223
+#, no-wrap
+msgid "I<sem_ctime>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:229
+msgid ""
+"Time of last B<semctl>(2)  system call that changed a member of the above "
+"structure or of one semaphore belonging to the set."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:229
+#, no-wrap
+msgid "I<sem_nsems>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:237
+msgid ""
+"Number of semaphores in the set.  Each semaphore of the set is referenced by"
+" a nonnegative integer ranging from B<0> to I<sem_nsems-1>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:241
+msgid ""
+"A semaphore is a data structure of type I<struct sem> containing the "
+"following members:"
+msgstr ""
+
+#.     unsigned short semncnt; /* nr awaiting semval to increase */
+#.     unsigned short semzcnt; /* nr awaiting semval = 0 */
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:250
+#, no-wrap
+msgid ""
+"struct sem {\n"
+"    int semval;  /* semaphore value */\n"
+"    int sempid;  /* PID of process that last modified */\n"
+"};\n"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:252
+#, no-wrap
+msgid "I<semval>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:255
+msgid "Semaphore value: a nonnegative integer."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:255
+#, no-wrap
+msgid "I<sempid>"
+msgstr ""
+
+#. .TP
+#. .I semncnt
+#. Number of processes suspended awaiting for
+#. .I semval
+#. to increase.
+#. .TP
+#. .I semznt
+#. Number of processes suspended awaiting for
+#. .I semval
+#. to become zero.
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:269
+msgid "PID of the last process that modified the value of this semaphore."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/sysvipc.7:269
+#, no-wrap
+msgid "Shared memory segments"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:277
+msgid ""
+"A shared memory segment is uniquely identified by a positive integer (its "
+"I<shmid>)  and has an associated data structure of type I<struct shmid_ds>, "
+"defined in I<E<lt>sys/shm.hE<gt>>, containing the following members:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:290
+#, no-wrap
+msgid ""
+"struct shmid_ds {\n"
+"    struct ipc_perm shm_perm;\n"
+"    size_t          shm_segsz;   /* size of segment */\n"
+"    pid_t           shm_cpid;    /* PID of creator */\n"
+"    pid_t           shm_lpid;    /* PID, last operation */\n"
+"    shmatt_t        shm_nattch;  /* no. of current attaches */\n"
+"    time_t          shm_atime;   /* time of last attach */\n"
+"    time_t          shm_dtime;   /* time of last detach */\n"
+"    time_t          shm_ctime;   /* time of last change */\n"
+"};\n"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:292
+#, no-wrap
+msgid "I<shm_perm>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:297
+msgid ""
+"I<ipc_perm> structure that specifies the access permissions on the shared "
+"memory segment."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:297
+#, no-wrap
+msgid "I<shm_segsz>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:300
+msgid "Size in bytes of the shared memory segment."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:300
+#, no-wrap
+msgid "I<shm_cpid>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:303
+msgid "ID of the process that created the shared memory segment."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:303
+#, no-wrap
+msgid "I<shm_lpid>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:310
+msgid ""
+"ID of the last process that executed a B<shmat>(2)  or B<shmdt>(2)  system "
+"call."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:310
+#, no-wrap
+msgid "I<shm_nattch>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:313
+msgid "Number of current alive attaches for this shared memory segment."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:313
+#, no-wrap
+msgid "I<shm_atime>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:318
+msgid "Time of the last B<shmat>(2)  system call."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:318
+#, no-wrap
+msgid "I<shm_dtime>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:323
+msgid "Time of the last B<shmdt>(2)  system call."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/sysvipc.7:323
+#, no-wrap
+msgid "I<shm_ctime>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:329
+msgid "Time of the last B<shmctl>(2)  system call that changed I<shmid_ds>."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/sysvipc.7:329
+#, no-wrap
+msgid "IPC namespaces"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:333
+msgid ""
+"For a discussion of the interaction of System V IPC objects and IPC "
+"namespaces, see B<namespaces>(7)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/sysvipc.7:351
+msgid ""
+"B<ipcmk>(1), B<ipcrm>(1), B<ipcs>(1), B<lsipc>(1), B<ipc>(2), B<msgctl>(2), "
+"B<msgget>(2), B<msgrcv>(2), B<msgsnd>(2), B<semctl>(2), B<semget>(2), "
+"B<semop>(2), B<shmat>(2), B<shmctl>(2), B<shmdt>(2), B<shmget>(2), "
+"B<ftok>(3), B<namespaces>(7)"
 msgstr ""
 
 #. type: TH
@@ -14509,7 +14560,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/sched.7:997
+#: man-pages/man7/sched.7:998
 msgid ""
 "B<chcpu>(1), B<chrt>(1), B<lscpu>(1), B<ps>(1), B<taskset>(1), B<top>(1), "
 "B<getpriority>(2), B<mlock>(2), B<mlockall>(2), B<munlock>(2), "
@@ -14517,20 +14568,20 @@ msgid ""
 "B<sched_get_priority_min>(2), B<sched_getaffinity>(2), B<sched_getparam>(2),"
 " B<sched_getscheduler>(2), B<sched_rr_get_interval>(2), "
 "B<sched_setaffinity>(2), B<sched_setparam>(2), B<sched_setscheduler>(2), "
-"B<sched_yield>(2), B<setpriority>(2), B<pthread_getaffinity_np>(3), "
-"B<pthread_setaffinity_np>(3), B<sched_getcpu>(3), B<capabilities>(7), "
-"B<cpuset>(7)"
+"B<sched_yield>(2), B<setpriority>(2), B<pthread_getschedparam>(3), "
+"B<pthread_getaffinity_np>(3), B<pthread_setaffinity_np>(3), "
+"B<sched_getcpu>(3), B<capabilities>(7), B<cpuset>(7)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/sched.7:1001
+#: man-pages/man7/sched.7:1002
 msgid ""
 "I<Programming for the real world - POSIX.4> by Bill O.\\& Gallmeister, "
 "O'Reilly & Associates, Inc., ISBN 1-56592-074-0."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/sched.7:1007
+#: man-pages/man7/sched.7:1008
 msgid ""
 "The Linux kernel source files I<Documentation/scheduler/sched-deadline.txt>,"
 " I<Documentation/scheduler/sched-rt-group.txt>, I<Documentation/scheduler"
@@ -15518,24 +15569,30 @@ msgstr ""
 msgid "B<SO_RCVLOWAT> and B<SO_SNDLOWAT>"
 msgstr ""
 
-#.  See http://marc.theaimsgroup.com/?l=linux-kernel&m=111049368106984&w=2
-#.  Tested on kernel 2.6.14 -- mtk, 30 Nov 05
 #. type: Plain text
-#: man-pages/man7/socket.7:780
+#: man-pages/man7/socket.7:767
 msgid ""
 "Specify the minimum number of bytes in the buffer until the socket layer "
 "will pass the data to the protocol (B<SO_SNDLOWAT>)  or the user on "
 "receiving (B<SO_RCVLOWAT>).  These two values are initialized to 1.  "
 "B<SO_SNDLOWAT> is not changeable on Linux (B<setsockopt>(2)  fails with the "
-"error B<ENOPROTOOPT>).  B<SO_RCVLOWAT> is changeable only since Linux 2.4.  "
-"The B<select>(2)  and B<poll>(2)  system calls currently do not respect the "
-"B<SO_RCVLOWAT> setting on Linux, and mark a socket readable when even a "
-"single byte of data is available.  A subsequent read from the socket will "
-"block until B<SO_RCVLOWAT> bytes are available."
+"error B<ENOPROTOOPT>).  B<SO_RCVLOWAT> is changeable only since Linux 2.4."
+msgstr ""
+
+#.  commit c7004482e8dcb7c3c72666395cfa98a216a4fb70
+#.  See http://marc.theaimsgroup.com/?l=linux-kernel&m=111049368106984&w=2
+#.  Tested on kernel 2.6.14 -- mtk, 30 Nov 05
+#. type: Plain text
+#: man-pages/man7/socket.7:784
+msgid ""
+"Before Linux 2.6.28 B<select>(2), B<poll>(2), and B<epoll>(7)  did not "
+"respect the B<SO_RCVLOWAT> setting on Linux, and indicated a socket as "
+"readable when even a single byte of data was available.  A subsequent read "
+"from the socket would then block until B<SO_RCVLOWAT> bytes are available."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/socket.7:780
+#: man-pages/man7/socket.7:784
 #, no-wrap
 msgid "B<SO_RCVTIMEO> and B<SO_SNDTIMEO>"
 msgstr ""
@@ -15545,7 +15602,7 @@ msgstr ""
 #.  Implemented in 2.3.41 for setsockopt, and actually used.
 #.  in fact to EAGAIN
 #. type: Plain text
-#: man-pages/man7/socket.7:815
+#: man-pages/man7/socket.7:819
 msgid ""
 "Specify the receiving or sending timeouts until reporting an error.  The "
 "argument is a I<struct timeval>.  If an input or output function blocks for "
@@ -15561,7 +15618,7 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/socket.7:815
+#: man-pages/man7/socket.7:819
 #, no-wrap
 msgid "B<SO_REUSEADDR>"
 msgstr ""
@@ -15569,7 +15626,7 @@ msgstr ""
 #. 	commit c617f398edd4db2b8567a28e899a88f8f574798d
 #. 	https://lwn.net/Articles/542629/
 #. type: Plain text
-#: man-pages/man7/socket.7:832
+#: man-pages/man7/socket.7:836
 msgid ""
 "Indicates that the rules used in validating addresses supplied in a "
 "B<bind>(2)  call should allow reuse of local addresses.  For B<AF_INET> "
@@ -15580,13 +15637,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/socket.7:832
+#: man-pages/man7/socket.7:836
 #, no-wrap
 msgid "B<SO_REUSEPORT> (since Linux 3.9)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:847
+#: man-pages/man7/socket.7:851
 msgid ""
 "Permits multiple B<AF_INET> or B<AF_INET6> sockets to be bound to an "
 "identical socket address.  This option must be set on each socket (including"
@@ -15597,7 +15654,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:859
+#: man-pages/man7/socket.7:863
 msgid ""
 "For TCP sockets, this option allows B<accept>(2)  load distribution in a "
 "multi-threaded server to be improved by using a distinct listener socket for"
@@ -15608,7 +15665,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:865
+#: man-pages/man7/socket.7:869
 msgid ""
 "For UDP sockets, the use of this option can provide better distribution of "
 "incoming datagrams to multiple processes (or threads) as compared to the "
@@ -15617,14 +15674,14 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/socket.7:865
+#: man-pages/man7/socket.7:869
 #, no-wrap
 msgid "B<SO_RXQ_OVFL> (since Linux 2.6.33)"
 msgstr ""
 
 #.  commit 3b885787ea4112eaa80945999ea0901bf742707f
 #. type: Plain text
-#: man-pages/man7/socket.7:871
+#: man-pages/man7/socket.7:875
 msgid ""
 "Indicates that an unsigned 32-bit value ancillary message (cmsg)  should be "
 "attached to received skbs indicating the number of packets dropped by the "
@@ -15632,7 +15689,7 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/socket.7:871
+#: man-pages/man7/socket.7:875
 #, no-wrap
 msgid "B<SO_SNDBUF>"
 msgstr ""
@@ -15640,7 +15697,7 @@ msgstr ""
 #.  Most (all?) other implementations do not do this -- MTK, Dec 05
 #.  See also the comment to SO_RCVBUF (17 Jul 2012 LKML mail)
 #. type: Plain text
-#: man-pages/man7/socket.7:887
+#: man-pages/man7/socket.7:891
 msgid ""
 "Sets or gets the maximum socket send buffer in bytes.  The kernel doubles "
 "this value (to allow space for bookkeeping overhead)  when it is set using "
@@ -15651,13 +15708,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/socket.7:887
+#: man-pages/man7/socket.7:891
 #, no-wrap
 msgid "B<SO_SNDBUFFORCE> (since Linux 2.6.14)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:896
+#: man-pages/man7/socket.7:900
 msgid ""
 "Using this socket option, a privileged (B<CAP_NET_ADMIN>)  process can "
 "perform the same task as B<SO_SNDBUF>, but the I<wmem_max> limit can be "
@@ -15665,13 +15722,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/socket.7:896
+#: man-pages/man7/socket.7:900
 #, no-wrap
 msgid "B<SO_TIMESTAMP>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:912
+#: man-pages/man7/socket.7:916
 msgid ""
 "Enable or disable the receiving of the B<SO_TIMESTAMP> control message.  The"
 " timestamp control message is sent with level B<SOL_SOCKET> and the "
@@ -15681,26 +15738,26 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/socket.7:912
+#: man-pages/man7/socket.7:916
 #, no-wrap
 msgid "B<SO_TYPE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:917
+#: man-pages/man7/socket.7:921
 msgid ""
 "Gets the socket type as an integer (e.g., B<SOCK_STREAM>).  This socket "
 "option is read-only."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/socket.7:917
+#: man-pages/man7/socket.7:921
 #, no-wrap
 msgid "B<SO_BUSY_POLL> (since Linux 3.11)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:926
+#: man-pages/man7/socket.7:930
 msgid ""
 "Sets the approximate time in microseconds to busy poll on a blocking receive"
 " when there is no data.  Increasing this value requires B<CAP_NET_ADMIN>.  "
@@ -15709,7 +15766,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:936
+#: man-pages/man7/socket.7:940
 msgid ""
 "The value in the I</proc/sys/net/core/busy_poll> file determines how long "
 "B<select>(2)  and B<poll>(2)  will busy poll when they operate on sockets "
@@ -15717,14 +15774,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:940
+#: man-pages/man7/socket.7:944
 msgid ""
 "In both cases, busy polling will only be done when the socket last received "
 "data from a network device that supports this option."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:944
+#: man-pages/man7/socket.7:948
 msgid ""
 "While busy polling may improve latency of some applications, care must be "
 "taken when using it since this will increase both CPU utilization and power "
@@ -15732,13 +15789,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/socket.7:944
+#: man-pages/man7/socket.7:948
 #, no-wrap
 msgid "Signals"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:955
+#: man-pages/man7/socket.7:959
 msgid ""
 "When writing onto a connection-oriented socket that has been shut down (by "
 "the local or the remote end)  B<SIGPIPE> is sent to the writing process and "
@@ -15747,7 +15804,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:980
+#: man-pages/man7/socket.7:984
 msgid ""
 "When requested with the B<FIOSETOWN> B<fcntl>(2)  or B<SIOCSPGRP> "
 "B<ioctl>(2), B<SIGIO> is sent when an I/O event occurs.  It is possible to "
@@ -15760,7 +15817,7 @@ msgstr ""
 
 #.  .SS Ancillary messages
 #. type: Plain text
-#: man-pages/man7/socket.7:988
+#: man-pages/man7/socket.7:992
 msgid ""
 "Under some circumstances (e.g., multiple processes accessing a single "
 "socket), the condition that caused the B<SIGIO> may have already disappeared"
@@ -15769,111 +15826,111 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/socket.7:988
+#: man-pages/man7/socket.7:992
 #, no-wrap
 msgid "/proc interfaces"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:992
+#: man-pages/man7/socket.7:996
 msgid ""
 "The core socket networking parameters can be accessed via files in the "
 "directory I</proc/sys/net/core/>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/socket.7:992
+#: man-pages/man7/socket.7:996
 #, no-wrap
 msgid "I<rmem_default>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:995
+#: man-pages/man7/socket.7:999
 msgid "contains the default setting in bytes of the socket receive buffer."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/socket.7:995
+#: man-pages/man7/socket.7:999
 #, no-wrap
 msgid "I<rmem_max>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:1001
+#: man-pages/man7/socket.7:1005
 msgid ""
 "contains the maximum socket receive buffer size in bytes which a user may "
 "set by using the B<SO_RCVBUF> socket option."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/socket.7:1001
+#: man-pages/man7/socket.7:1005
 #, no-wrap
 msgid "I<wmem_default>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:1004
+#: man-pages/man7/socket.7:1008
 msgid "contains the default setting in bytes of the socket send buffer."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/socket.7:1004
+#: man-pages/man7/socket.7:1008
 #, no-wrap
 msgid "I<wmem_max>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:1010
+#: man-pages/man7/socket.7:1014
 msgid ""
 "contains the maximum socket send buffer size in bytes which a user may set "
 "by using the B<SO_SNDBUF> socket option."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/socket.7:1010
+#: man-pages/man7/socket.7:1014
 #, no-wrap
 msgid "I<message_cost> and I<message_burst>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:1014
+#: man-pages/man7/socket.7:1018
 msgid ""
 "configure the token bucket filter used to load limit warning messages caused"
 " by external network events."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/socket.7:1014
+#: man-pages/man7/socket.7:1018
 #, no-wrap
 msgid "I<netdev_max_backlog>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:1017
+#: man-pages/man7/socket.7:1021
 msgid "Maximum number of packets in the global input queue."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/socket.7:1017
+#: man-pages/man7/socket.7:1021
 #, no-wrap
 msgid "I<optmem_max>"
 msgstr ""
 
 #.  netdev_fastroute is not documented because it is experimental
 #. type: Plain text
-#: man-pages/man7/socket.7:1022
+#: man-pages/man7/socket.7:1026
 msgid ""
 "Maximum length of ancillary data and user control data like the iovecs per "
 "socket."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:1025
+#: man-pages/man7/socket.7:1029
 msgid "These operations can be accessed using B<ioctl>(2):"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:1029
+#: man-pages/man7/socket.7:1033
 #, no-wrap
 msgid ""
 "I<error>B< = ioctl(>I<ip_socket>B<, >I<ioctl_type>B<, "
@@ -15881,13 +15938,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/socket.7:1031
+#: man-pages/man7/socket.7:1035
 #, no-wrap
 msgid "B<SIOCGSTAMP>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:1055
+#: man-pages/man7/socket.7:1059
 msgid ""
 "Return a I<struct timeval> with the receive timestamp of the last packet "
 "passed to the user.  This is useful for accurate round trip time "
@@ -15900,13 +15957,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/socket.7:1055
+#: man-pages/man7/socket.7:1059
 #, no-wrap
 msgid "B<SIOCSPGRP>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:1068
+#: man-pages/man7/socket.7:1072
 msgid ""
 "Set the process or process group that is to receive B<SIGIO> or B<SIGURG> "
 "signals when I/O becomes possible or urgent data is available.  The argument"
@@ -15915,13 +15972,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/socket.7:1068
+#: man-pages/man7/socket.7:1072
 #, no-wrap
 msgid "B<FIOASYNC>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:1078
+#: man-pages/man7/socket.7:1082
 msgid ""
 "Change the B<O_ASYNC> flag to enable or disable asynchronous I/O mode of the"
 " socket.  Asynchronous I/O mode means that the B<SIGIO> signal or the signal"
@@ -15929,54 +15986,54 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:1086
+#: man-pages/man7/socket.7:1090
 msgid ""
 "Argument is an integer boolean flag.  (This operation is synonymous with the"
 " use of B<fcntl>(2)  to set the B<O_ASYNC> flag.)"
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/socket.7:1086
+#: man-pages/man7/socket.7:1090
 #, no-wrap
 msgid "B<SIOCGPGRP>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:1095
+#: man-pages/man7/socket.7:1099
 msgid ""
 "Get the current process or process group that receives B<SIGIO> or B<SIGURG>"
 " signals, or 0 when none is set."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:1099
+#: man-pages/man7/socket.7:1103
 msgid "Valid B<fcntl>(2)  operations:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/socket.7:1099
+#: man-pages/man7/socket.7:1103
 #, no-wrap
 msgid "B<FIOGETOWN>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:1104
+#: man-pages/man7/socket.7:1108
 msgid "The same as the B<SIOCGPGRP> B<ioctl>(2)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/socket.7:1104
+#: man-pages/man7/socket.7:1108
 #, no-wrap
 msgid "B<FIOSETOWN>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:1109
+#: man-pages/man7/socket.7:1113
 msgid "The same as the B<SIOCSPGRP> B<ioctl>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:1123
+#: man-pages/man7/socket.7:1127
 msgid ""
 "B<SO_BINDTODEVICE> was introduced in Linux 2.0.30.  B<SO_PASSCRED> is new in"
 " Linux 2.2.  The I</proc> interfaces were introduced in Linux 2.2.  "
@@ -15986,7 +16043,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:1128
+#: man-pages/man7/socket.7:1132
 msgid ""
 "Linux assumes that half of the send/receive buffer is used for internal "
 "kernel structures; thus the values in the corresponding I</proc> files are "
@@ -15996,7 +16053,7 @@ msgstr ""
 #.  .SH AUTHORS
 #.  This man page was written by Andi Kleen.
 #. type: Plain text
-#: man-pages/man7/socket.7:1143
+#: man-pages/man7/socket.7:1147
 msgid ""
 "Linux will allow port reuse only with the B<SO_REUSEADDR> option when this "
 "option was set both in the previous program that performed a B<bind>(2)  to "
@@ -16007,7 +16064,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/socket.7:1159
+#: man-pages/man7/socket.7:1163
 msgid ""
 "B<wireshark>(1), B<bpf>(2), B<connect>(2), B<getsockopt>(2), "
 "B<setsockopt>(2), B<socket>(2), B<pcap>(3), B<address_families>(7), "
@@ -17355,7 +17412,7 @@ msgstr ""
 #: man-pages/man2/shmctl.2:450
 msgid ""
 "B<mlock>(2), B<setrlimit>(2), B<shmget>(2), B<shmop>(2), B<capabilities>(7),"
-" B<svipc>(7)"
+" B<sysvipc>(7)"
 msgstr ""
 
 #. type: TH
@@ -17953,7 +18010,7 @@ msgstr ""
 #: man-pages/man2/semget.2:321
 msgid ""
 "B<semctl>(2), B<semop>(2), B<ftok>(3), B<capabilities>(7), "
-"B<sem_overview>(7), B<svipc>(7)"
+"B<sem_overview>(7), B<sysvipc>(7)"
 msgstr ""
 
 #. type: TH
@@ -19222,7 +19279,7 @@ msgstr ""
 #: man-pages/man2/shmop.2:302
 msgid ""
 "B<brk>(2), B<mmap>(2), B<shmctl>(2), B<shmget>(2), B<capabilities>(7), "
-"B<shm_overview>(7), B<svipc>(7)"
+"B<shm_overview>(7), B<sysvipc>(7)"
 msgstr ""
 
 #. type: TH
@@ -21310,19 +21367,25 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:247
+#: man-pages/man2/sched_setaffinity.2:241
 msgid ""
 "This manual page describes the glibc interface for the CPU affinity calls.  "
 "The actual system call interface is slightly different, with the I<mask> "
 "being typed as I<unsigned long\\ *>, reflecting the fact that the underlying"
-" implementation of CPU sets is a simple bit mask.  On success, the raw "
-"B<sched_getaffinity>()  system call returns the size (in bytes) of the "
-"I<cpumask_t> data type that is used internally by the kernel to represent "
-"the CPU set bit mask."
+" implementation of CPU sets is a simple bit mask."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/sched_setaffinity.2:253
+msgid ""
+"On success, the raw B<sched_getaffinity>()  system call returns the number "
+"of bytes placed copied into the I<mask> buffer; this will be the minimum of "
+"I<cpusetsize> and the size (in bytes) of the I<cpumask_t> data type that is "
+"used internally by the kernel to represent the CPU set bit mask."
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/sched_setaffinity.2:247
+#: man-pages/man2/sched_setaffinity.2:253
 #, no-wrap
 msgid "Handling systems with large CPU affinity masks"
 msgstr ""
@@ -21330,7 +21393,7 @@ msgstr ""
 #.  FIXME . See https://sourceware.org/bugzilla/show_bug.cgi?id=15630
 #.  and https://sourceware.org/ml/libc-alpha/2013-07/msg00288.html
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:259
+#: man-pages/man2/sched_setaffinity.2:265
 msgid ""
 "The underlying system calls (which represent CPU masks as bit masks of type "
 "I<unsigned long\\ *>)  impose no restriction on the size of the CPU mask.  "
@@ -21341,13 +21404,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:261
+#: man-pages/man2/sched_setaffinity.2:267
 #, no-wrap
 msgid "    sched_getaffinity(pid, sizeof(cpu_set_t), &mask);\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:271
+#: man-pages/man2/sched_setaffinity.2:277
 msgid ""
 "fail with the error B<EINVAL>, the error produced by the underlying system "
 "call for the case where the I<mask> size specified in I<cpusetsize> is "
@@ -21357,7 +21420,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:282
+#: man-pages/man2/sched_setaffinity.2:288
 msgid ""
 "When working on systems with large kernel CPU affinity masks, one must "
 "dynamically allocate the I<mask> argument (see B<CPU_ALLOC>(3)).  Currently,"
@@ -21367,7 +21430,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:297
+#: man-pages/man2/sched_setaffinity.2:303
 msgid ""
 "Be aware that B<CPU_ALLOC>(3)  may allocate a slightly larger CPU set than "
 "requested (because CPU sets are implemented as bit masks allocated in units "
@@ -21380,7 +21443,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:306
+#: man-pages/man2/sched_setaffinity.2:312
 msgid ""
 "The program below creates a child process.  The parent and child then each "
 "assign themselves to a specified CPU and execute identical loops that "
@@ -21391,7 +21454,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:310
+#: man-pages/man2/sched_setaffinity.2:316
 msgid ""
 "As the sample runs below demonstrate, the amount of real and CPU time "
 "consumed when running the program will depend on intra-core caching effects "
@@ -21399,14 +21462,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:315
+#: man-pages/man2/sched_setaffinity.2:321
 msgid ""
 "We first employ B<lscpu>(1)  to determine that this (x86)  system has two "
 "cores, each with two CPUs:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:322
+#: man-pages/man2/sched_setaffinity.2:328
 #, no-wrap
 msgid ""
 "$ B<lscpu | egrep -i 'core.*:|socket'>\n"
@@ -21416,7 +21479,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:329
+#: man-pages/man2/sched_setaffinity.2:335
 msgid ""
 "We then time the operation of the example program for three cases: both "
 "processes running on the same CPU; both processes running on different CPUs "
@@ -21425,7 +21488,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:344
+#: man-pages/man2/sched_setaffinity.2:350
 #, no-wrap
 msgid ""
 "$ B<time -p ./a.out 0 0 100000000>\n"
@@ -21443,13 +21506,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/sched_setaffinity.2:346
+#: man-pages/man2/sched_setaffinity.2:352
 #, no-wrap
 msgid "Program source"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:355
+#: man-pages/man2/sched_setaffinity.2:361
 #, no-wrap
 msgid ""
 "#define _GNU_SOURCE\n"
@@ -21461,7 +21524,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:358
+#: man-pages/man2/sched_setaffinity.2:364
 #, no-wrap
 msgid ""
 "#define errExit(msg)    do { perror(msg); exit(EXIT_FAILURE); \\e\n"
@@ -21469,7 +21532,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:365
+#: man-pages/man2/sched_setaffinity.2:371
 #, no-wrap
 msgid ""
 "int\n"
@@ -21481,7 +21544,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:371
+#: man-pages/man2/sched_setaffinity.2:377
 #, no-wrap
 msgid ""
 "    if (argc != 4) {\n"
@@ -21492,7 +21555,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:375
+#: man-pages/man2/sched_setaffinity.2:381
 #, no-wrap
 msgid ""
 "    parentCPU = atoi(argv[1]);\n"
@@ -21501,13 +21564,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:377
+#: man-pages/man2/sched_setaffinity.2:383
 #, no-wrap
 msgid "    CPU_ZERO(&set);\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:381
+#: man-pages/man2/sched_setaffinity.2:387
 #, no-wrap
 msgid ""
 "    switch (fork()) {\n"
@@ -21516,7 +21579,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:384
+#: man-pages/man2/sched_setaffinity.2:390
 #, no-wrap
 msgid ""
 "    case 0:             /* Child */\n"
@@ -21524,8 +21587,8 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:387
-#: man-pages/man2/sched_setaffinity.2:398
+#: man-pages/man2/sched_setaffinity.2:393
+#: man-pages/man2/sched_setaffinity.2:404
 #, no-wrap
 msgid ""
 "        if (sched_setaffinity(getpid(), sizeof(set), &set) == -1)\n"
@@ -21533,8 +21596,8 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:390
-#: man-pages/man2/sched_setaffinity.2:401
+#: man-pages/man2/sched_setaffinity.2:396
+#: man-pages/man2/sched_setaffinity.2:407
 #, no-wrap
 msgid ""
 "        for (j = 0; j E<lt> nloops; j++)\n"
@@ -21542,13 +21605,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:392
+#: man-pages/man2/sched_setaffinity.2:398
 #, no-wrap
 msgid "        exit(EXIT_SUCCESS);\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:395
+#: man-pages/man2/sched_setaffinity.2:401
 #, no-wrap
 msgid ""
 "    default:            /* Parent */\n"
@@ -21556,7 +21619,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:406
+#: man-pages/man2/sched_setaffinity.2:412
 #, no-wrap
 msgid ""
 "        wait(NULL);     /* Wait for child to terminate */\n"
@@ -21566,7 +21629,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:430
+#: man-pages/man2/sched_setaffinity.2:436
 msgid ""
 "B<lscpu>(1), B<nproc>(1), B<taskset>(1), B<clone>(2), B<getcpu>(2), "
 "B<getpriority>(2), B<gettid>(2), B<nice>(2), B<sched_get_priority_max>(2), "
@@ -22138,7 +22201,7 @@ msgstr ""
 #: man-pages/man2/shmget.2:422
 msgid ""
 "B<memfd_create>(2), B<shmat>(2), B<shmctl>(2), B<shmdt>(2), B<ftok>(3), "
-"B<capabilities>(7), B<shm_overview>(7), B<svipc>(7)"
+"B<capabilities>(7), B<shm_overview>(7), B<sysvipc>(7)"
 msgstr ""
 
 #. type: TH
@@ -22708,15 +22771,26 @@ msgstr ""
 msgid "In addition, the errors documented in B<stat>(2)  can also occur."
 msgstr ""
 
+#. type: TP
+#: man-pages/man2/setxattr.2:152
+#, no-wrap
+msgid "B<ERANGE>"
+msgstr ""
+
 #. type: Plain text
-#: man-pages/man2/setxattr.2:155
+#: man-pages/man2/setxattr.2:159
+msgid "The size of I<name> or I<value> exceeds a filesystem-specific limit."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/setxattr.2:162
 msgid ""
 "These system calls have been available on Linux since kernel 2.4; glibc "
 "support is provided since version 2.3."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setxattr.2:172
+#: man-pages/man2/setxattr.2:179
 msgid ""
 "B<getfattr>(1), B<setfattr>(1), B<getxattr>(2), B<listxattr>(2), B<open>(2),"
 " B<removexattr>(2), B<stat>(2), B<symlink>(7), B<xattr>(7)"
@@ -23159,6 +23233,12 @@ msgstr ""
 msgid "SETFSUID"
 msgstr ""
 
+#. type: TH
+#: man-pages/man2/setfsuid.2:32
+#, no-wrap
+msgid "2019-05-09"
+msgstr ""
+
 #. type: Plain text
 #: man-pages/man2/setfsuid.2:35
 msgid "setfsuid - set user identity used for filesystem checks"
@@ -23247,10 +23327,10 @@ msgid ""
 " user ID for the purposes of file permission checking without at the same "
 "time becoming vulnerable to receiving unwanted signals.  Since Linux 2.0, "
 "signal permission handling is different (see B<kill>(2)), with the result "
-"that a process change can change its effective user ID without being "
-"vulnerable to receiving signals from unwanted processes.  Thus, "
-"B<setfsuid>()  is nowadays unneeded and should be avoided in new "
-"applications (likewise for B<setfsgid>(2))."
+"that a process can change its effective user ID without being vulnerable to "
+"receiving signals from unwanted processes.  Thus, B<setfsuid>()  is nowadays"
+" unneeded and should be avoided in new applications (likewise for "
+"B<setfsgid>(2))."
 msgstr ""
 
 #. type: Plain text
@@ -23865,12 +23945,6 @@ msgid ""
 "capability."
 msgstr ""
 
-#. type: TP
-#: man-pages/man2/semctl.2:467
-#, no-wrap
-msgid "B<ERANGE>"
-msgstr ""
-
 #. type: Plain text
 #: man-pages/man2/semctl.2:480
 msgid ""
@@ -23983,7 +24057,7 @@ msgstr ""
 #: man-pages/man2/semctl.2:605
 msgid ""
 "B<ipc>(2), B<semget>(2), B<semop>(2), B<capabilities>(7), "
-"B<sem_overview>(7), B<svipc>(7)"
+"B<sem_overview>(7), B<sysvipc>(7)"
 msgstr ""
 
 #. type: TH
@@ -27356,8 +27430,10 @@ msgstr ""
 msgid "3.9"
 msgstr ""
 
+#.  91e040a79df73d371f70792f30380d4e44805250
 #. type: tbl table
 #: man-pages/man2/syscalls.2:174 man-pages/man2/syscalls.2:175
+#: man-pages/man2/syscalls.2:177
 #, no-wrap
 msgid "ARC only"
 msgstr ""
@@ -27380,13 +27456,6 @@ msgstr ""
 #: man-pages/man2/syscalls.2:177
 #, no-wrap
 msgid "4.9"
-msgstr ""
-
-#.  91e040a79df73d371f70792f30380d4e44805250
-#. type: tbl table
-#: man-pages/man2/syscalls.2:177
-#, no-wrap
-msgid "ARC onlt"
 msgstr ""
 
 #.  x86: 79170fda313ed5be2394f87aa2a00d597f8ed4a1
@@ -30327,21 +30396,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/syscalls.2:900
+#: man-pages/man2/syscalls.2:898
 msgid ""
 "Roughly speaking, the code belonging to the system call with number __NR_xxx"
 " defined in I</usr/include/asm/unistd.h> can be found in the Linux kernel "
-"source in the routine I<sys_xxx>().  (The dispatch table for i386 can be "
-"found in I</usr/src/linux/arch/i386/kernel/entry.S>.)  There are many "
-"exceptions, however, mostly because older system calls were superseded by "
-"newer ones, and this has been treated somewhat unsystematically.  On "
-"platforms with proprietary operating-system emulation, such as sparc, "
-"sparc64, and alpha, there are many additional system calls; mips64 also "
-"contains a full set of 32-bit system calls."
+"source in the routine I<sys_xxx>().  There are many exceptions, however, "
+"mostly because older system calls were superseded by newer ones, and this "
+"has been treated somewhat unsystematically.  On platforms with proprietary "
+"operating-system emulation, such as sparc, sparc64, and alpha, there are "
+"many additional system calls; mips64 also contains a full set of 32-bit "
+"system calls."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/syscalls.2:919
+#: man-pages/man2/syscalls.2:917
 msgid ""
 "Over time, changes to the interfaces of some system calls have been "
 "necessary.  One reason for such changes was the need to increase the size of"
@@ -30360,7 +30428,7 @@ msgstr ""
 #.  The stat system calls deal with three different data structures,
 #.  defined in include/asm-i386/stat.h: __old_kernel_stat, stat, stat64
 #. type: Plain text
-#: man-pages/man2/syscalls.2:940
+#: man-pages/man2/syscalls.2:938
 msgid ""
 "By now there are three different versions of B<stat>(2): I<sys_stat>()  "
 "(slot I<__NR_oldstat>), I<sys_newstat>()  (slot I<__NR_stat>), and "
@@ -30369,7 +30437,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/syscalls.2:951
+#: man-pages/man2/syscalls.2:949
 msgid ""
 "Similarly, the defines I<__NR_oldolduname>, I<__NR_olduname>, and "
 "I<__NR_uname> refer to the routines I<sys_olduname>(), I<sys_uname>()  and "
@@ -30377,14 +30445,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/syscalls.2:958
+#: man-pages/man2/syscalls.2:956
 msgid ""
 "In Linux 2.0, a new version of B<vm86>(2)  appeared, with the old and the "
 "new kernel routines being named I<sys_vm86old>()  and I<sys_vm86>()."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/syscalls.2:969
+#: man-pages/man2/syscalls.2:967
 msgid ""
 "In Linux 2.4, a new version of B<getrlimit>(2)  appeared, with the old and "
 "the new kernel routines being named I<sys_old_getrlimit>()  (slot "
@@ -30394,7 +30462,7 @@ msgstr ""
 #.  64-bit off_t changes: ftruncate64, *stat64,
 #.  fcntl64 (because of the flock structure), getdents64, *statfs64
 #. type: Plain text
-#: man-pages/man2/syscalls.2:981
+#: man-pages/man2/syscalls.2:979
 msgid ""
 "Linux 2.4 increased the size of user and group IDs from 16 to 32 bits.  To "
 "support this change, a range of system calls were added (e.g., "
@@ -30403,7 +30471,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/syscalls.2:998
+#: man-pages/man2/syscalls.2:996
 msgid ""
 "Linux 2.4 added support for applications on 32-bit architectures to access "
 "large files (i.e., files for which the sizes and file offsets can't be "
@@ -30417,7 +30485,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/syscalls.2:1004
+#: man-pages/man2/syscalls.2:1002
 msgid ""
 "On newer platforms that only have 64-bit file access and 32-bit UIDs/GIDs "
 "(e.g., alpha, ia64, s390x, x86-64), there is just a single version of the "
@@ -30427,7 +30495,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/syscalls.2:1012
+#: man-pages/man2/syscalls.2:1010
 msgid ""
 "The I<rt_sig*> calls were added in kernel 2.2 to support the addition of "
 "real-time signals (see B<signal>(7)).  These system calls supersede the "
@@ -30455,7 +30523,7 @@ msgstr ""
 #.  and the semantics of the latter call were changed to what
 #.  they are today.
 #. type: Plain text
-#: man-pages/man2/syscalls.2:1066
+#: man-pages/man2/syscalls.2:1064
 msgid ""
 "The B<select>(2)  and B<mmap>(2)  system calls use five or more arguments, "
 "which caused problems in the way argument passing on the i386 used to be set"
@@ -30469,48 +30537,48 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/syscalls.2:1066
+#: man-pages/man2/syscalls.2:1064
 #, no-wrap
 msgid "Architecture-specific details: Alpha"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/syscalls.2:1073
+#: man-pages/man2/syscalls.2:1071
 msgid ""
 "B<getxgid>(2)  returns a pair of GID and effective GID via registers B<r0> "
 "and B<r20>; it is provided instead of B<getgid>(2) and B<getegid>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/syscalls.2:1078
+#: man-pages/man2/syscalls.2:1076
 msgid ""
 "B<getxpid>(2)  returns a pair of PID and parent PID via registers B<r0> and "
 "B<r20>; it is provided instead of B<getpid>(2) and B<getppid>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/syscalls.2:1082
+#: man-pages/man2/syscalls.2:1080
 msgid ""
 "B<old_adjtimex>(2)  is a variant of B<adjtimex>(2) that uses I<struct "
 "timeval32>, for compatibility with OSF/1."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/syscalls.2:1087
+#: man-pages/man2/syscalls.2:1085
 msgid ""
 "B<getxuid>(2)  returns a pair of GID and effective GID via registers B<r0> "
 "and B<r20>; it is provided instead of B<getuid>(2) and B<geteuid>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/syscalls.2:1091
+#: man-pages/man2/syscalls.2:1089
 msgid ""
 "B<sethae>(2)  is used for configuring the Host Address Extension register on"
 " low-cost Alphas in order to access address space beyond first 27 bits."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/syscalls.2:1097
+#: man-pages/man2/syscalls.2:1095
 msgid ""
 "B<intro>(2), B<syscall>(2), B<unimplemented>(2), B<errno>(3), B<libc>(7), "
 "B<vdso>(7)"
@@ -34326,23 +34394,24 @@ msgid "[All currently available fields]"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:286
+#: man-pages/man2/statx.2:289
 msgid ""
-"Note that the kernel does I<not> reject values in I<mask> other than the "
-"above.  Instead, it simply informs the caller which values are supported by "
-"this kernel and filesystem via the I<statx.stx_mask> field.  Therefore, I<do"
-" not> simply set I<mask> to B<UINT_MAX> (all bits set), as one or more bits "
-"may, in the future, be used to specify an extension to the buffer."
+"Note that, in general, the kernel does I<not> reject values in I<mask> other"
+" than the above.  (For an exception, see B<EINVAL> in errors.)  Instead, it "
+"simply informs the caller which values are supported by this kernel and "
+"filesystem via the I<statx.stx_mask> field.  Therefore, I<do not> simply set"
+" I<mask> to B<UINT_MAX> (all bits set), as one or more bits may, in the "
+"future, be used to specify an extension to the buffer."
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/statx.2:286
+#: man-pages/man2/statx.2:289
 #, no-wrap
 msgid "The returned information"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:301
+#: man-pages/man2/statx.2:304
 msgid ""
 "The status information for the target file is returned in the I<statx> "
 "structure pointed to by I<statxbuf>.  Included in this is I<stx_mask> which "
@@ -34352,7 +34421,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:310
+#: man-pages/man2/statx.2:313
 msgid ""
 "It should be noted that the kernel may return fields that weren't requested "
 "and may fail to return fields that were requested, depending on what the "
@@ -34362,7 +34431,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:318
+#: man-pages/man2/statx.2:321
 msgid ""
 "If a filesystem does not support a field or if it has an unrepresentable "
 "value (for instance, a file with an exotic type), then the mask bit "
@@ -34373,7 +34442,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:323
+#: man-pages/man2/statx.2:326
 msgid ""
 "A filesystem may also fill in fields that the caller didn't ask for if it "
 "has values for them available and the information is available at no extra "
@@ -34383,7 +34452,7 @@ msgstr ""
 #.  Background: inode attributes are modified with i_mutex held, but
 #.  read by stat() without taking the mutex.
 #. type: Plain text
-#: man-pages/man2/statx.2:348
+#: man-pages/man2/statx.2:351
 msgid ""
 "I<Note>: for performance and simplicity reasons, different fields in the "
 "I<statx> structure may contain state information from different moments "
@@ -34394,90 +34463,90 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:354
+#: man-pages/man2/statx.2:357
 msgid ""
 "Apart from I<stx_mask> (which is described above), the fields in the "
 "I<statx> structure are:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/statx.2:354
+#: man-pages/man2/statx.2:357
 #, no-wrap
 msgid "I<stx_blksize>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:359
+#: man-pages/man2/statx.2:362
 msgid ""
 "The \"preferred\" block size for efficient filesystem I/O.  (Writing to a "
 "file in smaller chunks may cause an inefficient read-modify-rewrite.)"
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/statx.2:359
+#: man-pages/man2/statx.2:362
 #, no-wrap
 msgid "I<stx_attributes>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:362
+#: man-pages/man2/statx.2:365
 msgid ""
 "Further status information about the file (see below for more information)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/statx.2:362
+#: man-pages/man2/statx.2:365
 #, no-wrap
 msgid "I<stx_nlink>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:365
+#: man-pages/man2/statx.2:368
 msgid "The number of hard links on a file."
-msgstr ""
-
-#. type: TP
-#: man-pages/man2/statx.2:365
-#, no-wrap
-msgid "I<stx_uid>"
 msgstr ""
 
 #. type: TP
 #: man-pages/man2/statx.2:368
 #, no-wrap
-msgid "I<stx_gid>"
+msgid "I<stx_uid>"
 msgstr ""
 
 #. type: TP
 #: man-pages/man2/statx.2:371
 #, no-wrap
+msgid "I<stx_gid>"
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/statx.2:374
+#, no-wrap
 msgid "I<stx_mode>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:377
+#: man-pages/man2/statx.2:380
 msgid "The file type and mode.  See B<inode>(7)  for details."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/statx.2:377
+#: man-pages/man2/statx.2:380
 #, no-wrap
 msgid "I<stx_ino>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:380
+#: man-pages/man2/statx.2:383
 msgid "The inode number of the file."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/statx.2:380
+#: man-pages/man2/statx.2:383
 #, no-wrap
 msgid "I<stx_size>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:385
+#: man-pages/man2/statx.2:388
 msgid ""
 "The size of the file (if it is a regular file or a symbolic link) in bytes."
 "  The size of a symbolic link is the length of the pathname it contains, "
@@ -34485,107 +34554,107 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/statx.2:385
+#: man-pages/man2/statx.2:388
 #, no-wrap
 msgid "I<stx_blocks>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:391
+#: man-pages/man2/statx.2:394
 msgid ""
 "The number of blocks allocated to the file on the medium, in 512-byte units."
 "  (This may be smaller than I<stx_size>/512 when the file has holes.)"
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/statx.2:391
+#: man-pages/man2/statx.2:394
 #, no-wrap
 msgid "I<stx_attributes_mask>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:396
+#: man-pages/man2/statx.2:399
 msgid ""
 "A mask indicating which bits in I<stx_attributes> are supported by the VFS "
 "and the filesystem."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/statx.2:396
+#: man-pages/man2/statx.2:399
 #, no-wrap
 msgid "I<stx_atime>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:399
+#: man-pages/man2/statx.2:402
 msgid "The file's last access timestamp."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/statx.2:399
+#: man-pages/man2/statx.2:402
 #, no-wrap
 msgid "I<stx_btime>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:402
+#: man-pages/man2/statx.2:405
 msgid "The file's creation timestamp."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/statx.2:402
+#: man-pages/man2/statx.2:405
 #, no-wrap
 msgid "I<stx_ctime>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:405
+#: man-pages/man2/statx.2:408
 msgid "The file's last status change timestamp."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/statx.2:405
+#: man-pages/man2/statx.2:408
 #, no-wrap
 msgid "I<stx_mtime>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:408
+#: man-pages/man2/statx.2:411
 msgid "The file's last modification timestamp."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/statx.2:408
+#: man-pages/man2/statx.2:411
 #, no-wrap
 msgid "I<stx_dev_major> and I<stx_dev_minor>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:411
+#: man-pages/man2/statx.2:414
 msgid "The device on which this file (inode) resides."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/statx.2:411
+#: man-pages/man2/statx.2:414
 #, no-wrap
 msgid "I<stx_rdev_major> and I<stx_rdev_minor>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:415
+#: man-pages/man2/statx.2:418
 msgid ""
 "The device that this file (inode) represents if the file is of block or "
 "character device type."
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/statx.2:419
+#: man-pages/man2/statx.2:422
 #, no-wrap
 msgid "File attributes"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:432
+#: man-pages/man2/statx.2:435
 msgid ""
 "The I<stx_attributes> field contains a set of ORed flags that indicate "
 "additional attributes of the file.  Note that any attribute that is not "
@@ -34595,31 +34664,31 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:434
+#: man-pages/man2/statx.2:437
 msgid "The flags are as follows:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/statx.2:434
+#: man-pages/man2/statx.2:437
 #, no-wrap
 msgid "B<STATX_ATTR_COMPRESSED>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:438
+#: man-pages/man2/statx.2:441
 msgid ""
 "The file is compressed by the filesystem and may take extra resources to "
 "access."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/statx.2:438
+#: man-pages/man2/statx.2:441
 #, no-wrap
 msgid "B<STATX_ATTR_IMMUTABLE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:444
+#: man-pages/man2/statx.2:447
 msgid ""
 "The file cannot be modified: it cannot be deleted or renamed, no hard links "
 "can be created to this file and no data can be written to it.  See "
@@ -34627,73 +34696,75 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/statx.2:444
+#: man-pages/man2/statx.2:447
 #, no-wrap
 msgid "B<STATX_ATTR_APPEND>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:451
+#: man-pages/man2/statx.2:454
 msgid ""
 "The file can only be opened in append mode for writing.  Random access "
 "writing is not permitted.  See B<chattr>(1)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/statx.2:451
+#: man-pages/man2/statx.2:454
 #, no-wrap
 msgid "B<STATX_ATTR_NODUMP>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:458
+#: man-pages/man2/statx.2:461
 msgid ""
 "File is not a candidate for backup when a backup program such as B<dump>(8)"
 "  is run.  See B<chattr>(1)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/statx.2:458
+#: man-pages/man2/statx.2:461
 #, no-wrap
 msgid "B<STATX_ATTR_ENCRYPTED>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:461
+#: man-pages/man2/statx.2:464
 msgid "A key is required for the file to be encrypted by the filesystem."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:478
+#: man-pages/man2/statx.2:481
 msgid "I<dirfd> is not a valid open file descriptor."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:485
+#: man-pages/man2/statx.2:488
 msgid ""
 "I<pathname> or I<statxbuf> is NULL or points to a location outside the "
 "process's accessible address space."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:493
-msgid "Reserved flag specified in I<mask>."
+#: man-pages/man2/statx.2:499
+msgid ""
+"Reserved flag specified in I<mask>.  (Currently, there is one such flag, "
+"designated by the constant B<STATX__RESERVED>, with the value 0x80000000U.)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:496
+#: man-pages/man2/statx.2:502
 msgid "Too many symbolic links encountered while traversing the pathname."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:510
+#: man-pages/man2/statx.2:516
 msgid ""
 "A component of I<pathname> does not exist, or I<pathname> is an empty string"
 " and B<AT_EMPTY_PATH> was not specified in I<flags>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:522
+#: man-pages/man2/statx.2:528
 msgid ""
 "A component of the path prefix of I<pathname> is not a directory or "
 "I<pathname> is relative and I<dirfd> is a file descriptor referring to a "
@@ -34701,19 +34772,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:525
+#: man-pages/man2/statx.2:531
 msgid ""
 "B<statx>()  was added to Linux in kernel 4.11; library support was added in "
 "glibc 2.28."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:528
+#: man-pages/man2/statx.2:534
 msgid "B<statx>()  is Linux-specific."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/statx.2:539
+#: man-pages/man2/statx.2:545
 msgid ""
 "B<ls>(1), B<stat>(1), B<access>(2), B<chmod>(2), B<chown>(2), "
 "B<readlink>(2), B<stat>(2), B<utime>(2), B<capabilities>(7), B<inode>(7), "
@@ -39079,7 +39150,7 @@ msgstr ""
 #: man-pages/man2/semop.2:555
 msgid ""
 "B<clone>(2), B<semctl>(2), B<semget>(2), B<sigaction>(2), "
-"B<capabilities>(7), B<sem_overview>(7), B<svipc>(7), B<time>(7)"
+"B<capabilities>(7), B<sem_overview>(7), B<sysvipc>(7), B<time>(7)"
 msgstr ""
 
 #. type: TH
@@ -40443,62 +40514,63 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/splice.2:160
+#: man-pages/man2/splice.2:162
 msgid ""
-"B<SPLICE_F_NONBLOCK> was specified in I<flags>, and the operation would "
-"block."
+"B<SPLICE_F_NONBLOCK> was specified in I<flags> or one of the file "
+"descriptors had been marked as nonblocking (B<O_NONBLOCK>)B<,> and the "
+"operation would block."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/splice.2:164
+#: man-pages/man2/splice.2:166
 msgid ""
 "One or both file descriptors are not valid, or do not have proper read-write"
 " mode."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/splice.2:167
+#: man-pages/man2/splice.2:169
 msgid "The target filesystem doesn't support splicing."
 msgstr ""
 
 #.  The append-mode error is given since 2.6.27; in earlier kernels,
 #.  splice() in append mode was broken
 #. type: Plain text
-#: man-pages/man2/splice.2:172
+#: man-pages/man2/splice.2:174
 msgid "The target file is opened in append mode."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/splice.2:175
+#: man-pages/man2/splice.2:177
 msgid "Neither of the file descriptors refers to a pipe."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/splice.2:178
+#: man-pages/man2/splice.2:180
 msgid "An offset was given for nonseekable device (e.g., a pipe)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/splice.2:184
+#: man-pages/man2/splice.2:186
 msgid "I<fd_in> and I<fd_out> refer to the same pipe."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/splice.2:194
+#: man-pages/man2/splice.2:196
 msgid ""
 "Either I<off_in> or I<off_out> was not NULL, but the corresponding file "
 "descriptor refers to a pipe."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/splice.2:199
+#: man-pages/man2/splice.2:201
 msgid ""
 "The B<splice>()  system call first appeared in Linux 2.6.17; library support"
 " was added to glibc in version 2.5."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/splice.2:211
+#: man-pages/man2/splice.2:213
 msgid ""
 "The three system calls B<splice>(), B<vmsplice>(2), and B<tee>(2), provide "
 "user-space programs with full control over an arbitrary kernel buffer, "
@@ -40507,25 +40579,25 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/splice.2:211
+#: man-pages/man2/splice.2:213
 #, no-wrap
 msgid "B<splice>()"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/splice.2:215
+#: man-pages/man2/splice.2:217
 msgid ""
 "moves data from the buffer to an arbitrary file descriptor, or vice versa, "
 "or from one buffer to another."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/splice.2:218
+#: man-pages/man2/splice.2:220
 msgid "\"copies\" the data from one buffer to another."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/splice.2:221
+#: man-pages/man2/splice.2:223
 msgid "\"copies\" data from user space into the buffer."
 msgstr ""
 
@@ -40549,7 +40621,7 @@ msgstr ""
 #.  the data and choose to forward it to two or more different
 #.  users - for things like logging etc.).
 #. type: Plain text
-#: man-pages/man2/splice.2:252
+#: man-pages/man2/splice.2:254
 msgid ""
 "Though we talk of copying, actual copies are generally avoided.  The kernel "
 "does this by implementing a pipe buffer as a set of reference-counted "
@@ -40561,7 +40633,7 @@ msgstr ""
 
 #.  commit 7c77f0b3f9208c339a4b40737bb2cb0f0319bb8d
 #. type: Plain text
-#: man-pages/man2/splice.2:262
+#: man-pages/man2/splice.2:264
 msgid ""
 "In Linux 2.6.30 and earlier, exactly one of I<fd_in> and I<fd_out> was "
 "required to be a pipe.  Since Linux 2.6.31, both arguments may refer to "
@@ -40569,12 +40641,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/splice.2:265
+#: man-pages/man2/splice.2:267
 msgid "See B<tee>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/splice.2:270
+#: man-pages/man2/splice.2:272
 msgid ""
 "B<copy_file_range>(2), B<sendfile>(2), B<tee>(2), B<vmsplice>(2), B<pipe>(7)"
 msgstr ""
@@ -47644,77 +47716,25 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/stdarg.3:262
+#: man-pages/man3/stdarg.3:272
 msgid ""
-"These macros are I<not> compatible with the historic macros they replace.  A"
-" backward-compatible version can be found in the include file "
-"I<E<lt>varargs.hE<gt>>."
+"Unlike the historical B<varargs> macros, the B<stdarg> macros do not permit "
+"programmers to code a function with no fixed arguments.  This problem "
+"generates work mainly when converting B<varargs> code to B<stdarg> code, but"
+" it also creates difficulties for variadic functions that wish to pass all "
+"of their arguments on to a function that takes a I<va_list> argument, such "
+"as B<vfprintf>(3)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/stdarg.3:264
-msgid "The historic setup is:"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man3/stdarg.3:268
-#, no-wrap
-msgid "#include E<lt>varargs.hE<gt>\n"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man3/stdarg.3:274
-#, no-wrap
-msgid ""
-"void\n"
-"foo(va_alist)\n"
-"    va_dcl\n"
-"{\n"
-"    va_list ap;\n"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man3/stdarg.3:283
-#, no-wrap
-msgid ""
-"    va_start(ap);\n"
-"    while (...) {\n"
-"        ...\n"
-"        x = va_arg(ap, type);\n"
-"        ...\n"
-"    }\n"
-"    va_end(ap);\n"
-"}\n"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man3/stdarg.3:292
-msgid ""
-"On some systems, I<va_end> contains a closing \\(aq}\\(aq matching a "
-"\\(aq{\\(aq in I<va_start>, so that both macros must occur in the same "
-"function, and in a way that allows this."
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man3/stdarg.3:308
-msgid ""
-"Unlike the B<varargs> macros, the B<stdarg> macros do not permit programmers"
-" to code a function with no fixed arguments.  This problem generates work "
-"mainly when converting B<varargs> code to B<stdarg> code, but it also "
-"creates difficulties for variadic functions that wish to pass all of their "
-"arguments on to a function that takes a I<va_list> argument, such as "
-"B<vfprintf>(3)."
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man3/stdarg.3:313
+#: man-pages/man3/stdarg.3:277
 msgid ""
 "The function I<foo> takes a string of format characters and prints out the "
 "argument associated with each format character based on the type."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/stdarg.3:317
+#: man-pages/man3/stdarg.3:281
 #, no-wrap
 msgid ""
 "#include E<lt>stdio.hE<gt>\n"
@@ -47722,11 +47742,17 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/stdarg.3:324
+#: man-pages/man3/stdarg.3:284
 #, no-wrap
 msgid ""
 "void\n"
-"foo(char *fmt, ...)\n"
+"foo(char *fmt, ...)   /* '...' is C syntax for a variadic function */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/stdarg.3:289
+#, no-wrap
+msgid ""
 "{\n"
 "    va_list ap;\n"
 "    int d;\n"
@@ -47734,7 +47760,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/stdarg.3:345
+#: man-pages/man3/stdarg.3:310
 #, no-wrap
 msgid ""
 "    va_start(ap, fmt);\n"
@@ -51445,7 +51471,7 @@ msgid ""
 "{\n"
 "#define LIM 4000000\n"
 "    int j;\n"
-"    char p[LIM];\n"
+"    char p[LIM + 1];    /* +1 for terminating null byte */\n"
 "    time_t base;\n"
 msgstr ""
 
@@ -57497,33 +57523,44 @@ msgid "B<PAGESIZE> - B<_SC_PAGESIZE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:179
-msgid ""
-"Size of a page in bytes.  Must not be less than 1.  (Some systems use "
-"PAGE_SIZE instead.)"
+#: man-pages/man3/sysconf.3:178
+msgid "Size of a page in bytes.  Must not be less than 1."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/sysconf.3:179 man-pages/man3/sysconf.3:266
+#: man-pages/man3/sysconf.3:178
+#, no-wrap
+msgid "B<PAGE_SIZE> - B<_SC_PAGE_SIZE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/sysconf.3:187
+msgid ""
+"A synonym for B<PAGESIZE>/B<_SC_PAGESIZE>.  (Both B<PAGESIZE> and "
+"B<PAGE_SIZE> are specified in POSIX.)"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/sysconf.3:187 man-pages/man3/sysconf.3:274
 #, no-wrap
 msgid "B<RE_DUP_MAX> - B<_SC_RE_DUP_MAX>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:188
+#: man-pages/man3/sysconf.3:196
 msgid ""
 "The number of repeated occurrences of a BRE permitted by B<regexec>(3)  and "
 "B<regcomp>(3).  Must not be less than B<_POSIX2_RE_DUP_MAX> (255)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/sysconf.3:188
+#: man-pages/man3/sysconf.3:196
 #, no-wrap
 msgid "B<STREAM_MAX> - B<_SC_STREAM_MAX>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:197
+#: man-pages/man3/sysconf.3:205
 msgid ""
 "The maximum number of streams that a process can have open at any time.  If "
 "defined, it has the same value as the standard C macro B<FOPEN_MAX>.  Must "
@@ -57531,302 +57568,302 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/sysconf.3:197
+#: man-pages/man3/sysconf.3:205
 #, no-wrap
 msgid "B<SYMLOOP_MAX> - B<_SC_SYMLOOP_MAX>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:205
+#: man-pages/man3/sysconf.3:213
 msgid ""
 "The maximum number of symbolic links seen in a pathname before resolution "
 "returns B<ELOOP>.  Must not be less than B<_POSIX_SYMLOOP_MAX> (8)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/sysconf.3:205
+#: man-pages/man3/sysconf.3:213
 #, no-wrap
 msgid "B<TTY_NAME_MAX> - B<_SC_TTY_NAME_MAX>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:212
+#: man-pages/man3/sysconf.3:220
 msgid ""
 "The maximum length of terminal device name, including the terminating null "
 "byte.  Must not be less than B<_POSIX_TTY_NAME_MAX> (9)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/sysconf.3:212
+#: man-pages/man3/sysconf.3:220
 #, no-wrap
 msgid "B<TZNAME_MAX> - B<_SC_TZNAME_MAX>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:218
+#: man-pages/man3/sysconf.3:226
 msgid ""
 "The maximum number of bytes in a timezone name.  Must not be less than "
 "B<_POSIX_TZNAME_MAX> (6)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/sysconf.3:218
+#: man-pages/man3/sysconf.3:226
 #, no-wrap
 msgid "B<_POSIX_VERSION> - B<_SC_VERSION>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:226
+#: man-pages/man3/sysconf.3:234
 msgid ""
 "indicates the year and month the POSIX.1 standard was approved in the format"
 " B<YYYYMML>; the value B<199009L> indicates the Sept. 1990 revision."
 msgstr ""
 
 #. type: SS
-#: man-pages/man3/sysconf.3:226
+#: man-pages/man3/sysconf.3:234
 #, no-wrap
 msgid "POSIX.2 variables"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:228
+#: man-pages/man3/sysconf.3:236
 msgid "Next, the POSIX.2 values, giving limits for utilities."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/sysconf.3:228
+#: man-pages/man3/sysconf.3:236
 #, no-wrap
 msgid "B<BC_BASE_MAX> - B<_SC_BC_BASE_MAX>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:235
+#: man-pages/man3/sysconf.3:243
 msgid ""
 "indicates the maximum I<obase> value accepted by the B<bc>(1)  utility."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/sysconf.3:235
+#: man-pages/man3/sysconf.3:243
 #, no-wrap
 msgid "B<BC_DIM_MAX> - B<_SC_BC_DIM_MAX>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:239
+#: man-pages/man3/sysconf.3:247
 msgid ""
 "indicates the maximum value of elements permitted in an array by B<bc>(1)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/sysconf.3:239
+#: man-pages/man3/sysconf.3:247
 #, no-wrap
 msgid "B<BC_SCALE_MAX> - B<_SC_BC_SCALE_MAX>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:245
+#: man-pages/man3/sysconf.3:253
 msgid "indicates the maximum I<scale> value allowed by B<bc>(1)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/sysconf.3:245
+#: man-pages/man3/sysconf.3:253
 #, no-wrap
 msgid "B<BC_STRING_MAX> - B<_SC_BC_STRING_MAX>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:249
+#: man-pages/man3/sysconf.3:257
 msgid "indicates the maximum length of a string accepted by B<bc>(1)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/sysconf.3:249
+#: man-pages/man3/sysconf.3:257
 #, no-wrap
 msgid "B<COLL_WEIGHTS_MAX> - B<_SC_COLL_WEIGHTS_MAX>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:255
+#: man-pages/man3/sysconf.3:263
 msgid ""
 "indicates the maximum numbers of weights that can be assigned to an entry of"
 " the B<LC_COLLATE order> keyword in the locale definition file,"
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/sysconf.3:255
+#: man-pages/man3/sysconf.3:263
 #, no-wrap
 msgid "B<EXPR_NEST_MAX> - B<_SC_EXPR_NEST_MAX>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:260
+#: man-pages/man3/sysconf.3:268
 msgid ""
 "is the maximum number of expressions which can be nested within parentheses "
 "by B<expr>(1)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/sysconf.3:260
+#: man-pages/man3/sysconf.3:268
 #, no-wrap
 msgid "B<LINE_MAX> - B<_SC_LINE_MAX>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:266
+#: man-pages/man3/sysconf.3:274
 msgid ""
 "The maximum length of a utility's input line, either from standard input or "
 "from a file.  This includes space for a trailing newline."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:272
+#: man-pages/man3/sysconf.3:280
 msgid ""
 "The maximum number of repeated occurrences of a regular expression when the "
 "interval notation B<\\e{m,n\\e}> is used."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/sysconf.3:272
+#: man-pages/man3/sysconf.3:280
 #, no-wrap
 msgid "B<POSIX2_VERSION> - B<_SC_2_VERSION>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:276
+#: man-pages/man3/sysconf.3:284
 msgid ""
 "indicates the version of the POSIX.2 standard in the format of YYYYMML."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/sysconf.3:276
+#: man-pages/man3/sysconf.3:284
 #, no-wrap
 msgid "B<POSIX2_C_DEV> - B<_SC_2_C_DEV>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:280
+#: man-pages/man3/sysconf.3:288
 msgid ""
 "indicates whether the POSIX.2 C language development facilities are "
 "supported."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/sysconf.3:280
+#: man-pages/man3/sysconf.3:288
 #, no-wrap
 msgid "B<POSIX2_FORT_DEV> - B<_SC_2_FORT_DEV>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:284
+#: man-pages/man3/sysconf.3:292
 msgid ""
 "indicates whether the POSIX.2 FORTRAN development utilities are supported."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/sysconf.3:284
+#: man-pages/man3/sysconf.3:292
 #, no-wrap
 msgid "B<POSIX2_FORT_RUN> - B<_SC_2_FORT_RUN>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:287
+#: man-pages/man3/sysconf.3:295
 msgid ""
 "indicates whether the POSIX.2 FORTRAN run-time utilities are supported."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/sysconf.3:287
+#: man-pages/man3/sysconf.3:295
 #, no-wrap
 msgid "B<_POSIX2_LOCALEDEF> - B<_SC_2_LOCALEDEF>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:292
+#: man-pages/man3/sysconf.3:300
 msgid ""
 "indicates whether the POSIX.2 creation of locates via B<localedef>(1)  is "
 "supported."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/sysconf.3:292
+#: man-pages/man3/sysconf.3:300
 #, no-wrap
 msgid "B<POSIX2_SW_DEV> - B<_SC_2_SW_DEV>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:296
+#: man-pages/man3/sysconf.3:304
 msgid ""
 "indicates whether the POSIX.2 software development utilities option is "
 "supported."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:298
+#: man-pages/man3/sysconf.3:306
 msgid "These values also exist, but may not be standard."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/sysconf.3:298
+#: man-pages/man3/sysconf.3:306
 #, no-wrap
 msgid " - B<_SC_PHYS_PAGES>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:305
+#: man-pages/man3/sysconf.3:313
 msgid ""
 "The number of pages of physical memory.  Note that it is possible for the "
 "product of this value and the value of B<_SC_PAGESIZE> to overflow."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/sysconf.3:305
+#: man-pages/man3/sysconf.3:313
 #, no-wrap
 msgid " - B<_SC_AVPHYS_PAGES>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:308
+#: man-pages/man3/sysconf.3:316
 msgid "The number of currently available pages of physical memory."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/sysconf.3:308
+#: man-pages/man3/sysconf.3:316
 #, no-wrap
 msgid " - B<_SC_NPROCESSORS_CONF>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:313
+#: man-pages/man3/sysconf.3:321
 msgid "The number of processors configured.  See also B<get_nprocs_conf>(3)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/sysconf.3:313
+#: man-pages/man3/sysconf.3:321
 #, no-wrap
 msgid " - B<_SC_NPROCESSORS_ONLN>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:318
+#: man-pages/man3/sysconf.3:326
 msgid ""
 "The number of processors currently online (available).  See also "
 "B<get_nprocs_conf>(3)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:322
+#: man-pages/man3/sysconf.3:330
 msgid "The return value of B<sysconf>()  is one of the following:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:331
+#: man-pages/man3/sysconf.3:339
 msgid ""
 "On error, -1 is returned and I<errno> is set to indicate the cause of the "
 "error (for example, B<EINVAL>, indicating that I<name> is invalid)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:343
+#: man-pages/man3/sysconf.3:351
 msgid ""
 "If I<name> corresponds to a maximum or minimum limit, and that limit is "
 "indeterminate, -1 is returned and I<errno> is not changed.  (To distinguish "
@@ -57835,14 +57872,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:349
+#: man-pages/man3/sysconf.3:357
 msgid ""
 "If I<name> corresponds to an option, a positive value is returned if the "
 "option is supported, and -1 is returned if the option is not supported."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:358
+#: man-pages/man3/sysconf.3:366
 msgid ""
 "Otherwise, the current value of the option or limit is returned.  This value"
 " will not be more restrictive than the corresponding value that was "
@@ -57851,24 +57888,24 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:363
+#: man-pages/man3/sysconf.3:371
 msgid "I<name> is invalid."
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/sysconf.3:373
+#: man-pages/man3/sysconf.3:381
 #, no-wrap
 msgid "B<sysconf>()"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/sysconf.3:373
+#: man-pages/man3/sysconf.3:381
 #, no-wrap
 msgid "MT-Safe env"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:383
+#: man-pages/man3/sysconf.3:391
 msgid ""
 "It is difficult to use B<ARG_MAX> because it is not specified how much of "
 "the argument space for B<exec>(3)  is consumed by the user's environment "
@@ -57876,14 +57913,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:386
+#: man-pages/man3/sysconf.3:394
 msgid ""
 "Some returned values may be huge; they are not suitable for allocating "
 "memory."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/sysconf.3:394
+#: man-pages/man3/sysconf.3:402
 msgid ""
 "B<bc>(1), B<expr>(1), B<getconf>(1), B<locale>(1), B<confstr>(3), "
 "B<fpathconf>(3), B<pathconf>(3), B<posixoptions>(7)"

@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
-"POT-Creation-Date: 2017-10-19 18:56+0300\n"
-"PO-Revision-Date: 2019-04-02 15:55+0000\n"
+"POT-Creation-Date: 2019-08-26 09:26+0300\n"
+"PO-Revision-Date: 2019-08-26 06:21+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Portuguese (http://www.transifex.com/kruvalig/man-pages/language/pt/)\n"
 "MIME-Version: 1.0\n"
@@ -3846,6 +3846,12 @@ msgstr ""
 msgid "ON_EXIT"
 msgstr ""
 
+#. type: TH
+#: man-pages/man3/on_exit.3:31
+#, no-wrap
+msgid "2019-08-02"
+msgstr ""
+
 #. type: Plain text
 #: man-pages/man3/on_exit.3:34
 msgid ""
@@ -3921,7 +3927,16 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/on_exit.3:106
+#: man-pages/man3/on_exit.3:113
+msgid ""
+"By the time I<function> is executed, stack (I<auto>)  variables may already "
+"have gone out of scope.  Therefore, I<arg> should not be a pointer to a "
+"stack variable; it may however be a pointer to a heap variable or a global "
+"variable."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/on_exit.3:116
 msgid "B<_exit>(2), B<atexit>(3), B<exit>(3)"
 msgstr ""
 

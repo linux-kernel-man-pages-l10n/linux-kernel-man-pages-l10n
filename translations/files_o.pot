@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-10-19 18:56+0300\n"
+"POT-Creation-Date: 2019-08-26 09:26+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3844,6 +3844,12 @@ msgstr ""
 msgid "ON_EXIT"
 msgstr ""
 
+#. type: TH
+#: man-pages/man3/on_exit.3:31
+#, no-wrap
+msgid "2019-08-02"
+msgstr ""
+
 #. type: Plain text
 #: man-pages/man3/on_exit.3:34
 msgid ""
@@ -3919,7 +3925,16 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/on_exit.3:106
+#: man-pages/man3/on_exit.3:113
+msgid ""
+"By the time I<function> is executed, stack (I<auto>)  variables may already "
+"have gone out of scope.  Therefore, I<arg> should not be a pointer to a "
+"stack variable; it may however be a pointer to a heap variable or a global "
+"variable."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/on_exit.3:116
 msgid "B<_exit>(2), B<atexit>(3), B<exit>(3)"
 msgstr ""
 

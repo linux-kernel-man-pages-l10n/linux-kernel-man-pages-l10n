@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
-"POT-Creation-Date: 2017-10-19 18:57+0300\n"
-"PO-Revision-Date: 2019-04-02 15:56+0000\n"
+"POT-Creation-Date: 2019-08-26 09:27+0300\n"
+"PO-Revision-Date: 2019-08-26 06:22+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Hindi (India) (http://www.transifex.com/kruvalig/man-pages/language/hi_IN/)\n"
 "MIME-Version: 1.0\n"
@@ -240,7 +240,7 @@ msgstr ""
 #. type: TH
 #: man-pages/man7/xattr.7:28
 #, no-wrap
-msgid "2018-04-30"
+msgid "2019-08-02"
 msgstr ""
 
 #. type: Plain text
@@ -343,13 +343,13 @@ msgstr ""
 #. type: SS
 #: man-pages/man7/xattr.7:97
 #, no-wrap
-msgid "Extended system attributes"
+msgid "System extended attributes"
 msgstr ""
 
 #. type: Plain text
 #: man-pages/man7/xattr.7:103
 msgid ""
-"Extended system attributes are used by the kernel to store system objects "
+"System extended attributes are used by the kernel to store system objects "
 "such as Access Control Lists.  Read and write access permissions to system "
 "attributes depend on the policy implemented for each system attribute "
 "implemented by filesystems in the kernel."
@@ -374,13 +374,13 @@ msgstr ""
 #. type: SS
 #: man-pages/man7/xattr.7:111
 #, no-wrap
-msgid "Extended user attributes"
+msgid "User extended attributes"
 msgstr ""
 
 #. type: Plain text
 #: man-pages/man7/xattr.7:119
 msgid ""
-"Extended user attributes may be assigned to files and directories for "
+"User extended attributes may be assigned to files and directories for "
 "storing arbitrary additional information such as the mime type, character "
 "set or encoding of a file.  The access permissions for user attributes are "
 "defined by the file permission bits: read permission is required to retrieve"
@@ -403,8 +403,8 @@ msgstr ""
 #. type: Plain text
 #: man-pages/man7/xattr.7:138
 msgid ""
-"For this reason, extended user attributes are allowed only for regular files"
-" and directories, and access to extended user attributes is restricted to "
+"For this reason, user extended attributes are allowed only for regular files"
+" and directories, and access to user extended attributes is restricted to "
 "the owner and to users with appropriate capabilities for directories with "
 "the sticky bit set (see the B<chmod>(1)  manual page for an explanation of "
 "the sticky bit)."
@@ -431,7 +431,7 @@ msgstr ""
 msgid ""
 "Some filesystems, such as Reiserfs (and, historically, ext2 and ext3), "
 "require the filesystem to be mounted with the B<user_xattr> mount option in "
-"order for extended user attributes to be used."
+"order for user extended attributes to be used."
 msgstr ""
 
 #. type: Plain text

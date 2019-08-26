@@ -13,8 +13,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
-"POT-Creation-Date: 2017-03-04 13:11+0300\n"
-"PO-Revision-Date: 2019-07-28 06:39+0000\n"
+"POT-Creation-Date: 2019-08-26 09:27+0300\n"
+"PO-Revision-Date: 2019-08-26 06:22+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -670,8 +670,8 @@ msgstr "UNIX"
 #. type: TH
 #: man-pages/man7/unix.7:20
 #, no-wrap
-msgid "2018-04-30"
-msgstr "2018-04-30"
+msgid "2019-08-02"
+msgstr ""
 
 #. type: Plain text
 #: man-pages/man7/unix.7:23
@@ -1214,9 +1214,18 @@ msgid ""
 "receiving process."
 msgstr "Если используемый для приёма вспомогательных данных с файловыми дескрипторами буфер слишком мал (или отсутствует), то вспомогательные данные обрезаются (или отбрасываются), а избыточные файловые дескрипторы автоматически закрываются в принимающем процессе."
 
+#. type: Plain text
+#: man-pages/man7/unix.7:462
+msgid ""
+"If the number of file descriptors received in the ancillary data would cause"
+" the process to exceed its B<RLIMIT_NOFILE> resource limit (see "
+"B<getrlimit>(2)), the excess file descriptors are automatically closed in "
+"the receiving process."
+msgstr ""
+
 #.  commit bba14de98753cb6599a2dae0e520714b2153522d
 #. type: Plain text
-#: man-pages/man7/unix.7:467
+#: man-pages/man7/unix.7:475
 msgid ""
 "The kernel constant B<SCM_MAX_FD> defines a limit on the number of file "
 "descriptors in the array.  Attempting to send an array larger than this "
@@ -1225,13 +1234,13 @@ msgid ""
 msgstr "Константой ядра B<SCM_MAX_FD> задаётся ограничение на количество файловых дескрипторов в массиве. Попытка послать с помощью B<sendmsg>(2) массив превышающий ограничение завершается ошибкой B<EINVAL>. Значение B<SCM_MAX_FD> равно 253 (или 255 в ядрах до версии 2.6.38)."
 
 #. type: TP
-#: man-pages/man7/unix.7:467
+#: man-pages/man7/unix.7:475
 #, no-wrap
 msgid "B<SCM_CREDENTIALS>"
 msgstr "B<SCM_CREDENTIALS>"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:477
+#: man-pages/man7/unix.7:485
 msgid ""
 "Send or receive UNIX credentials.  This can be used for authentication.  The"
 " credentials are passed as a I<struct ucred> ancillary message.  Thus "
@@ -1239,7 +1248,7 @@ msgid ""
 msgstr "Передать или принять учётные данные UNIX. Может быть использована для аутентификации. Учётные данные передаются в виде структуры I<struct ucred> вспомогательного сообщения. Эта структура определена в I<E<lt>sys/socket.hE<gt>> следующим образом:"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:485
+#: man-pages/man7/unix.7:493
 #, no-wrap
 msgid ""
 "struct ucred {\n"
@@ -1250,7 +1259,7 @@ msgid ""
 msgstr "struct ucred {\n    pid_t pid;    /* идентификатор посылающего процесса */\n    uid_t uid;    /* идентификатор пользователя посылающего процесса */\n    gid_t gid;    /* идентификатор группы посылающего процесса */\n};\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:494
+#: man-pages/man7/unix.7:502
 msgid ""
 "Since glibc 2.8, the B<_GNU_SOURCE> feature test macro must be defined "
 "(before including I<any> header files) in order to obtain the definition of "
@@ -1258,7 +1267,7 @@ msgid ""
 msgstr "Начиная с glibc 2.8, чтобы получить определение данной структуры должен быть определён макрос тестирования свойств B<_GNU_SOURCE> (до включения I<каких-либо> заголовочных файлов)."
 
 #. type: Plain text
-#: man-pages/man7/unix.7:504
+#: man-pages/man7/unix.7:512
 msgid ""
 "The credentials which the sender specifies are checked by the kernel.  A "
 "privileged process is allowed to specify values that do not match its own.  "
@@ -1269,20 +1278,20 @@ msgid ""
 msgstr "Учётные данные (credentials), указываемые отправителем, проверяются ядром. Привилегированный процесс может указывать значения, отличные от его собственных. Отправитель должен указать идентификатор своего процесса (если только он не имеет мандата B<CAP_SYS_ADMIN>), свой реальный идентификатор пользователя, действующий идентификатор или сохранённый set-user-ID (если только он не имеет B<CAP_SETUID>) и реальный идентификатор своей группы, действующий идентификатор группы или сохранённый set-group-ID (если только он не имеет B<CAP_SETGID>)."
 
 #. type: Plain text
-#: man-pages/man7/unix.7:510
+#: man-pages/man7/unix.7:518
 msgid ""
 "To receive a I<struct ucred> message, the B<SO_PASSCRED> option must be "
 "enabled on the socket."
 msgstr "Для получения сообщения со структурой I<struct ucred> у сокета должен быть включён параметр B<SO_PASSCRED>."
 
 #. type: TP
-#: man-pages/man7/unix.7:510
+#: man-pages/man7/unix.7:518
 #, no-wrap
 msgid "B<SCM_SECURITY>"
 msgstr "B<SCM_SECURITY>"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:519
+#: man-pages/man7/unix.7:527
 msgid ""
 "Receive the SELinux security context (the security label)  of the peer "
 "socket.  The received ancillary data is a null-terminated string containing "
@@ -1291,21 +1300,21 @@ msgid ""
 msgstr "Получить контекст безопасности SELinux (метку безопасности) однорангового сокета. Полученные вспомогательные данные представляют собой строку (с null в конце) с контекстом безопасности. Получатель должен выделить не менее B<NAME_MAX> байт под эти данные в в части данных вспомогательного сообщения."
 
 #. type: Plain text
-#: man-pages/man7/unix.7:523
+#: man-pages/man7/unix.7:531
 msgid ""
 "To receive the security context, the B<SO_PASSSEC> option must be enabled on"
 " the socket (see above)."
 msgstr "Для получения контекста безопасности у сокета должен быть включён параметр B<SO_PASSSEC> (смотрите выше)."
 
 #. type: Plain text
-#: man-pages/man7/unix.7:527
+#: man-pages/man7/unix.7:535
 msgid ""
 "When sending ancillary data with B<sendmsg>(2), only one item of each of the"
 " above types may be included in the sent message."
 msgstr "При отправке вспомогательных данных с помощью B<sendmsg>(2) посылаемое сообщение может содержать только по одному элементу каждого типа, из представленных выше."
 
 #. type: Plain text
-#: man-pages/man7/unix.7:535
+#: man-pages/man7/unix.7:543
 msgid ""
 "At least one byte of real data should be sent when sending ancillary data.  "
 "On Linux, this is required to successfully send ancillary data over a UNIX "
@@ -1316,7 +1325,7 @@ msgid ""
 msgstr "По крайней мере один байт реальных данных должен быть отправлен при отправке вспомогательных данных. В Linux это требуется для успешной отправки вспомогательных данных через потоковый доменный сокет UNIX. При отправке вспомогательных данных через дейтаграммный доменный сокет UNIX в Linux необязательно отправлять какие-либо реальные сопровождающие данные. Однако переносимые приложения должны также включать, по крайней мере, один байт реальных данных при отправке вспомогательных данных через дейтаграммный сокет."
 
 #. type: Plain text
-#: man-pages/man7/unix.7:539
+#: man-pages/man7/unix.7:547
 msgid ""
 "When receiving from a stream socket, ancillary data forms a kind of barrier "
 "for the received data.  For example, suppose that the sender transmits as "
@@ -1324,35 +1333,35 @@ msgid ""
 msgstr "При получении из потокового сокета вспомогательные данные формируют своего рода барьер для полученных данных. Например, предположим, что отправитель передает так:"
 
 #. type: IP
-#: man-pages/man7/unix.7:542
+#: man-pages/man7/unix.7:550
 #, no-wrap
 msgid "1."
 msgstr "1."
 
 #. type: Plain text
-#: man-pages/man7/unix.7:545 man-pages/man7/unix.7:551
+#: man-pages/man7/unix.7:553 man-pages/man7/unix.7:559
 msgid "B<sendmsg>(2)  of four bytes, with no ancillary data."
 msgstr "B<sendmsg>(2) отправляет четыре байта без вспомогательных данных."
 
 #. type: IP
-#: man-pages/man7/unix.7:545
+#: man-pages/man7/unix.7:553
 #, no-wrap
 msgid "2."
 msgstr "2."
 
 #. type: Plain text
-#: man-pages/man7/unix.7:548
+#: man-pages/man7/unix.7:556
 msgid "B<sendmsg>(2)  of one byte, with ancillary data."
 msgstr "B<sendmsg>(2) отправляет один байт вспомогательных данных."
 
 #. type: IP
-#: man-pages/man7/unix.7:548
+#: man-pages/man7/unix.7:556
 #, no-wrap
 msgid "3."
 msgstr "3."
 
 #. type: Plain text
-#: man-pages/man7/unix.7:562
+#: man-pages/man7/unix.7:570
 msgid ""
 "Suppose that the receiver now performs B<recvmsg>(2)  calls each with a "
 "buffer size of 20 bytes.  The first call will receive five bytes of data, "
@@ -1361,7 +1370,7 @@ msgid ""
 msgstr "Предположим, что получатель теперь выполняет каждый вызов B<recvmsg>(2) с буфером размером 20 байтов. Первый вызов получит пять байтов данных вместе с вспомогательными данными, отправленными вторым вызовом B<sendmsg>(2). Следующий вызов получит оставшиеся пять байтов данных."
 
 #. type: Plain text
-#: man-pages/man7/unix.7:583
+#: man-pages/man7/unix.7:591
 msgid ""
 "If the space allocated for receiving incoming ancillary data is too small "
 "then the ancillary data is truncated to the number of headers that will fit "
@@ -1374,20 +1383,20 @@ msgid ""
 msgstr "Если место, выделенное для получения входящих вспомогательных данных, слишком маленькое, то вспомогательные данные обрезаются по количеству заголовков, которые влезут в предоставленной буфер (или, в случае списка файловых дескрипторов B<SCM_RIGHTS>, может быть обрезан список файловых дескрипторов). Если для входящих вспомогательных данных буфер не был предусмотрен (т. е., поле I<msg_control> в структуре I<msghdr>, указанное B<recvmsg>(2),  равно NULL), то входящие вспомогательные данные отбрасываются. В обоих случаях, в возвращаемом значении B<recvmsg>(2) в I<msg.msg_flags> будет установлен флаг B<MSG_CTRUNC>."
 
 #. type: SS
-#: man-pages/man7/unix.7:583
+#: man-pages/man7/unix.7:591
 #, no-wrap
 msgid "Ioctls"
 msgstr "Вызовы ioctl"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:589
+#: man-pages/man7/unix.7:597
 msgid ""
 "The following B<ioctl>(2)  calls return information in I<value>.  The "
 "correct syntax is:"
 msgstr "Следующие вызовы B<ioctl>(2) возвращают информацию в аргументе I<value>. Корректный синтаксис:"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:594
+#: man-pages/man7/unix.7:602
 #, no-wrap
 msgid ""
 "B<int>I< value>B<;>\n"
@@ -1395,12 +1404,12 @@ msgid ""
 msgstr "B<int>I< value>B<;>\nI<error>B< = ioctl(>I<unix_socket>B<, >I<ioctl_type>B<, &>I<value>B<);>\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:599
+#: man-pages/man7/unix.7:607
 msgid "I<ioctl_type> can be:"
 msgstr "Значением I<ioctl_type> может быть:"
 
 #. type: TP
-#: man-pages/man7/unix.7:599
+#: man-pages/man7/unix.7:607
 #, no-wrap
 msgid "B<SIOCINQ>"
 msgstr "B<SIOCINQ>"
@@ -1414,7 +1423,7 @@ msgstr "B<SIOCINQ>"
 #.  output. Since this info is, from userland's point of view, imprecise,
 #.  and it may well change, probably best not to document this now.
 #. type: Plain text
-#: man-pages/man7/unix.7:630
+#: man-pages/man7/unix.7:638
 msgid ""
 "For B<SOCK_STREAM> sockets, this call returns the number of unread bytes in "
 "the receive buffer.  The socket must not be in LISTEN state, otherwise an "
@@ -1426,32 +1435,32 @@ msgid ""
 msgstr "Для сокетов B<SOCK_STREAM> этот вызов возвращает количество непрочитанных данных в приёмном буфере. Сокет не должен быть в состоянии LISTEN, иначе возвращается ошибка (B<EINVAL>). Значение B<SIOCINQ> определено в I<E<lt>linux/sockios.hE<gt>>. В качестве альтернативы можно использовать синоним B<FIONREAD>, определённый в I<E<lt>sys/ioctl.hE<gt>>. Для сокетов B<SOCK_DGRAM> возвращаемое значение совпадает с дейтаграммными доменными сокетами Интернета; смотрите B<udp>(7)."
 
 #. type: SH
-#: man-pages/man7/unix.7:630
+#: man-pages/man7/unix.7:638
 #, no-wrap
 msgid "ERRORS"
 msgstr "ОШИБКИ"
 
 #. type: TP
-#: man-pages/man7/unix.7:631
+#: man-pages/man7/unix.7:639
 #, no-wrap
 msgid "B<EADDRINUSE>"
 msgstr "B<EADDRINUSE>"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:635
+#: man-pages/man7/unix.7:643
 msgid ""
 "The specified local address is already in use or the filesystem socket "
 "object already exists."
 msgstr "Заданный локальный адрес уже используется, или сокетный объект файловой системы уже существует."
 
 #. type: TP
-#: man-pages/man7/unix.7:635
+#: man-pages/man7/unix.7:643
 #, no-wrap
 msgid "B<EBADF>"
 msgstr "B<EBADF>"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:644
+#: man-pages/man7/unix.7:652
 msgid ""
 "This error can occur for B<sendmsg>(2)  when sending a file descriptor as "
 "ancillary data over a UNIX domain socket (see the description of "
@@ -1460,48 +1469,48 @@ msgid ""
 msgstr "Эта ошибка может возникать в B<sendmsg>(2) при отправке файлового дескриптора в вспомогательных данных через доменный сокет UNIX (смотрите описание B<SCM_RIGHTS> выше), и указывает на то, что отправляемый номер файлового дескриптора некорректен (например, не является открытым файловым дескриптором)."
 
 #. type: TP
-#: man-pages/man7/unix.7:644
+#: man-pages/man7/unix.7:652
 #, no-wrap
 msgid "B<ECONNREFUSED>"
 msgstr "B<ECONNREFUSED>"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:650
+#: man-pages/man7/unix.7:658
 msgid ""
 "The remote address specified by B<connect>(2)  was not a listening socket.  "
 "This error can also occur if the target pathname is not a socket."
 msgstr "Удалённый адрес, указанный B<connect>(2) не является слушающим сокетом. Эта ошибка также может возникнуть, если путь назначения не является сокетом."
 
 #. type: TP
-#: man-pages/man7/unix.7:650
+#: man-pages/man7/unix.7:658
 #, no-wrap
 msgid "B<ECONNRESET>"
 msgstr "B<ECONNRESET>"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:653
+#: man-pages/man7/unix.7:661
 msgid "Remote socket was unexpectedly closed."
 msgstr "Удалённый сокет был неожиданно закрыт."
 
 #. type: TP
-#: man-pages/man7/unix.7:653
+#: man-pages/man7/unix.7:661
 #, no-wrap
 msgid "B<EFAULT>"
 msgstr "B<EFAULT>"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:656
+#: man-pages/man7/unix.7:664
 msgid "User memory address was not valid."
 msgstr "Некорректный адрес пользовательской памяти."
 
 #. type: TP
-#: man-pages/man7/unix.7:656
+#: man-pages/man7/unix.7:664
 #, no-wrap
 msgid "B<EINVAL>"
 msgstr "B<EINVAL>"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:665
+#: man-pages/man7/unix.7:673
 msgid ""
 "Invalid argument passed.  A common cause is that the value B<AF_UNIX> was "
 "not specified in the I<sun_type> field of passed addresses, or the socket "
@@ -1509,86 +1518,86 @@ msgid ""
 msgstr "Передан неправильный аргумент. Основная причина \\(em не задано значение B<AF_UNIX> в поле I<sun_type> передаваемых адресов или сокет находится в некорректном состоянии для производимой операции."
 
 #. type: TP
-#: man-pages/man7/unix.7:665
+#: man-pages/man7/unix.7:673
 #, no-wrap
 msgid "B<EISCONN>"
 msgstr "B<EISCONN>"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:670
+#: man-pages/man7/unix.7:678
 msgid ""
 "B<connect>(2)  called on an already connected socket or a target address was"
 " specified on a connected socket."
 msgstr "Вызов B<connect>(2) запущен для уже соединённого сокета, или адрес назначения указывает на соединённый сокет."
 
 #. type: TP
-#: man-pages/man7/unix.7:670
+#: man-pages/man7/unix.7:678
 #, no-wrap
 msgid "B<ENOENT>"
 msgstr "B<ENOENT>"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:675
+#: man-pages/man7/unix.7:683
 msgid ""
 "The pathname in the remote address specified to B<connect>(2)  did not "
 "exist."
 msgstr "Путь, указанный в удалённом адресе для B<connect>(2), не существует."
 
 #. type: TP
-#: man-pages/man7/unix.7:675
+#: man-pages/man7/unix.7:683
 #, no-wrap
 msgid "B<ENOMEM>"
 msgstr "B<ENOMEM>"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:678
+#: man-pages/man7/unix.7:686
 msgid "Out of memory."
 msgstr "Не хватает памяти."
 
 #. type: TP
-#: man-pages/man7/unix.7:678
+#: man-pages/man7/unix.7:686
 #, no-wrap
 msgid "B<ENOTCONN>"
 msgstr "B<ENOTCONN>"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:681
+#: man-pages/man7/unix.7:689
 msgid ""
 "Socket operation needs a target address, but the socket is not connected."
 msgstr "Для операции над сокетом требуется адрес назначения, а сокет не соединён."
 
 #. type: TP
-#: man-pages/man7/unix.7:681
+#: man-pages/man7/unix.7:689
 #, no-wrap
 msgid "B<EOPNOTSUPP>"
 msgstr "B<EOPNOTSUPP>"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:685
+#: man-pages/man7/unix.7:693
 msgid ""
 "Stream operation called on non-stream oriented socket or tried to use the "
 "out-of-band data option."
 msgstr "Вызвана потоковая операция для не потокового сокета, или произведена попытка использования параметра для внеполосных данных."
 
 #. type: TP
-#: man-pages/man7/unix.7:685
+#: man-pages/man7/unix.7:693
 #, no-wrap
 msgid "B<EPERM>"
 msgstr "B<EPERM>"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:689
+#: man-pages/man7/unix.7:697
 msgid "The sender passed invalid credentials in the I<struct ucred>."
 msgstr "Отправитель указал неправильную информацию (credentials) в структуре I<struct ucred>."
 
 #. type: TP
-#: man-pages/man7/unix.7:689
+#: man-pages/man7/unix.7:697
 #, no-wrap
 msgid "B<EPIPE>"
 msgstr "B<EPIPE>"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:701
+#: man-pages/man7/unix.7:709
 msgid ""
 "Remote socket was closed on a stream socket.  If enabled, a B<SIGPIPE> is "
 "sent as well.  This can be avoided by passing the B<MSG_NOSIGNAL> flag to "
@@ -1596,48 +1605,48 @@ msgid ""
 msgstr "Удалённый сокет был закрыт в потоковом сокете. Если разрешено, также будет послан сигнал B<SIGPIPE>. Этого можно избежать, передав флаг B<MSG_NOSIGNAL> при вызове B<send>(2) или B<sendmsg>(2)."
 
 #. type: TP
-#: man-pages/man7/unix.7:701
+#: man-pages/man7/unix.7:709
 #, no-wrap
 msgid "B<EPROTONOSUPPORT>"
 msgstr "B<EPROTONOSUPPORT>"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:705
+#: man-pages/man7/unix.7:713
 msgid "Passed protocol is not B<AF_UNIX>."
 msgstr "Указанный протокол не является B<AF_UNIX>."
 
 #. type: TP
-#: man-pages/man7/unix.7:705
+#: man-pages/man7/unix.7:713
 #, no-wrap
 msgid "B<EPROTOTYPE>"
 msgstr "B<EPROTOTYPE>"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:711
+#: man-pages/man7/unix.7:719
 msgid ""
 "Remote socket does not match the local socket type (B<SOCK_DGRAM> versus "
 "B<SOCK_STREAM>)."
 msgstr "Удалённый сокет не совпадает с типом локального сокета (B<SOCK_DGRAM> против B<SOCK_STREAM>)."
 
 #. type: TP
-#: man-pages/man7/unix.7:711
+#: man-pages/man7/unix.7:719
 #, no-wrap
 msgid "B<ESOCKTNOSUPPORT>"
 msgstr "B<ESOCKTNOSUPPORT>"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:714
+#: man-pages/man7/unix.7:722
 msgid "Unknown socket type."
 msgstr "Неизвестный тип сокета."
 
 #. type: TP
-#: man-pages/man7/unix.7:714
+#: man-pages/man7/unix.7:722
 #, no-wrap
 msgid "B<ETOOMANYREFS>"
 msgstr "B<ETOOMANYREFS>"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:731
+#: man-pages/man7/unix.7:739
 msgid ""
 "This error can occur for B<sendmsg>(2)  when sending a file descriptor as "
 "ancillary data over a UNIX domain socket (see the description of "
@@ -1650,7 +1659,7 @@ msgstr "Эта ошибка может возникнуть в B<sendmsg>(2) п�
 
 #.  commit 712f4aad406bb1ed67f3f98d04c044191f0ff593
 #. type: Plain text
-#: man-pages/man7/unix.7:742
+#: man-pages/man7/unix.7:750
 msgid ""
 "This error is diagnosed since mainline Linux 4.5 (and in some earlier kernel"
 " versions where the fix has been backported).  In earlier kernel versions, "
@@ -1661,7 +1670,7 @@ msgid ""
 msgstr "Данная ошибка выявляется начиная с Linux 4.5 (и в некоторых старых версиях, в которые перенесено исправление). В ранних версиях ядра было возможно получить неограниченное количество файловых дескрипторов в полёте, посылая каждый файловый дескриптор с помощью B<sendmsg>(2) и затем закрывая файловый дескриптор, и таким образом он не учитывался в ограничителе ресурса B<RLIMIT_NOFILE>."
 
 #. type: Plain text
-#: man-pages/man7/unix.7:746
+#: man-pages/man7/unix.7:754
 msgid ""
 "Other errors can be generated by the generic socket layer or by the "
 "filesystem while generating a filesystem socket object.  See the appropriate"
@@ -1669,13 +1678,13 @@ msgid ""
 msgstr "При создании сокетного объекта на уровне сокетов или файловой системы могут генерироваться другие ошибки. За дополнительной информацией обращайтесь к соответствующей справочной странице."
 
 #. type: SH
-#: man-pages/man7/unix.7:746
+#: man-pages/man7/unix.7:754
 #, no-wrap
 msgid "VERSIONS"
 msgstr "ВЕРСИИ"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:752
+#: man-pages/man7/unix.7:760
 msgid ""
 "B<SCM_CREDENTIALS> and the abstract namespace were introduced with Linux 2.2"
 " and should not be used in portable programs.  (Some BSD-derived systems "
@@ -1683,13 +1692,13 @@ msgid ""
 msgstr "B<SCM_CREDENTIALS> и абстрактное пространство имён появились в Linux 2.2 и не должны использоваться в переносимых программах. Некоторые клоны BSD также поддерживают передачу дополнительной информации (credential), но методы реализации передачи могут серьезно отличаться на разных системах."
 
 #. type: SH
-#: man-pages/man7/unix.7:752
+#: man-pages/man7/unix.7:760
 #, no-wrap
 msgid "NOTES"
 msgstr "ЗАМЕЧАНИЯ"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:760
+#: man-pages/man7/unix.7:768
 msgid ""
 "Binding to a socket with a filename creates a socket in the filesystem that "
 "must be deleted by the caller when it is no longer needed (using "
@@ -1699,7 +1708,7 @@ msgid ""
 msgstr "Привязка сокета к имени файла создаёт сокет в файловой системе, который должен быть удалён создателем, когда необходимость в нём отпадёт (с помощью B<unlink>(2)). Обычная система ссылок UNIX также подходит для работы с сокетами; сокет может быть удалён в любое время, а реальное удаление из файловой системы будет произведено при закрытии последней на него ссылки."
 
 #. type: Plain text
-#: man-pages/man7/unix.7:769
+#: man-pages/man7/unix.7:777
 msgid ""
 "To pass file descriptors or credentials over a B<SOCK_STREAM> socket, you "
 "must to send or receive at least one byte of nonancillary data in the same "
@@ -1707,20 +1716,20 @@ msgid ""
 msgstr "Для передачи файловых дескрипторов или учётных данных (credentials) через сокет B<SOCK_STREAM> необходимо передать или принять, по меньшей мере, один байт не вспомогательных данных в том же вызове B<sendmsg>(2) или B<recvmsg>(2)."
 
 #. type: Plain text
-#: man-pages/man7/unix.7:772
+#: man-pages/man7/unix.7:780
 msgid ""
 "UNIX domain stream sockets do not support the notion of out-of-band data."
 msgstr "В потоковых доменных сокетах UNIX отсутствует такое понятие как внеполосные данные."
 
 #. type: SH
-#: man-pages/man7/unix.7:772
+#: man-pages/man7/unix.7:780
 #, no-wrap
 msgid "BUGS"
 msgstr "ДЕФЕКТЫ"
 
 #.  The behavior on Solaris is quite similar.
 #. type: Plain text
-#: man-pages/man7/unix.7:797
+#: man-pages/man7/unix.7:805
 msgid ""
 "When binding a socket to an address, Linux is one of the implementations "
 "that appends a null terminator if none is supplied in I<sun_path>.  In most "
@@ -1737,7 +1746,7 @@ msgstr "При привязке сокета к адресу Linux являет�
 
 #.  i.e., traditional BSD
 #. type: Plain text
-#: man-pages/man7/unix.7:807
+#: man-pages/man7/unix.7:815
 msgid ""
 "In addition, some implementations don't require a null terminator when "
 "binding a socket (the I<addrlen> argument is used to determine the length of"
@@ -1746,7 +1755,7 @@ msgid ""
 msgstr "Также, некоторые реализации не требуют наличия конечного null при привязке сокета (для определения длины I<sun_path> используется аргумент I<addrlen>) и когда в этих реализациях возвращается адрес сокета, то в I<sun_path> также отсутствует конечный null."
 
 #. type: Plain text
-#: man-pages/man7/unix.7:812
+#: man-pages/man7/unix.7:820
 msgid ""
 "Applications that retrieve socket addresses can (portably) code to handle "
 "the possibility that there is no null terminator in I<sun_path> by "
@@ -1763,13 +1772,13 @@ msgstr "Приложения, которые получают адрес сок�
 #.  2012-04-18
 #.  FIXME . Track http://austingroupbugs.net/view.php?id=561
 #. type: Plain text
-#: man-pages/man7/unix.7:824
+#: man-pages/man7/unix.7:832
 #, no-wrap
 msgid "    strnlen(addr.sun_path, addrlen - offsetof(sockaddr_un, sun_path))\n"
 msgstr "    strnlen(addr.sun_path, addrlen - offsetof(sockaddr_un, sun_path))\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:836
+#: man-pages/man7/unix.7:844
 msgid ""
 "Alternatively, an application can retrieve the socket address by allocating "
 "a buffer of size I<sizeof(struct sockaddr_un)+1> that is zeroed out before "
@@ -1779,13 +1788,13 @@ msgid ""
 msgstr "Или же приложение может перед получением адреса сокета выделить буфер размера I<sizeof(struct sockaddr_un)+1>, который будет обнулён перед возвращением. Возвращающий вызов может задать в I<addrlen> значение I<sizeof(struct sockaddr_un)>, и дополнительный нулевой байт здесь будет конечным null в строке, возвращаемой в I<sun_path>:"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:840
+#: man-pages/man7/unix.7:848
 #, no-wrap
 msgid "void *addrp;\n"
 msgstr "void *addrp;\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:846
+#: man-pages/man7/unix.7:854
 #, no-wrap
 msgid ""
 "addrlen = sizeof(struct sockaddr_un);\n"
@@ -1796,7 +1805,7 @@ msgid ""
 msgstr "addrlen = sizeof(struct sockaddr_un);\naddrp = malloc(addrlen + 1);\nif (addrp == NULL)\n    /* обработка ошибки */ ;\nmemset(addrp, 0, addrlen + 1);\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:849
+#: man-pages/man7/unix.7:857
 #, no-wrap
 msgid ""
 "if (getsockname(sfd, (struct sockaddr *) addrp, &addrlen)) == -1)\n"
@@ -1804,13 +1813,13 @@ msgid ""
 msgstr "if (getsockname(sfd, (struct sockaddr *) addrp, &addrlen)) == -1)\n    /* обработка ошибки */ ;\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:851
+#: man-pages/man7/unix.7:859
 #, no-wrap
 msgid "printf(\"sun_path = %s\\en\", ((struct sockaddr_un *) addrp)-E<gt>sun_path);\n"
 msgstr "printf(\"sun_path = %s\\en\", ((struct sockaddr_un *) addrp)-E<gt>sun_path);\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:859
+#: man-pages/man7/unix.7:867
 msgid ""
 "This sort of messiness can be avoided if it is guaranteed that the "
 "applications that I<create> pathname sockets follow the rules outlined above"
@@ -1818,13 +1827,13 @@ msgid ""
 msgstr "Данного беспорядка можно избежать, если гарантировать, что приложения, I<создающие> путевые сокеты, следуют правилам, описанным в общих чертах выше в I<Путевые сокеты>."
 
 #. type: SH
-#: man-pages/man7/unix.7:859
+#: man-pages/man7/unix.7:867
 #, no-wrap
 msgid "EXAMPLE"
 msgstr "ПРИМЕР"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:871
+#: man-pages/man7/unix.7:879
 msgid ""
 "The following code demonstrates the use of sequenced-packet sockets for "
 "local interprocess communication.  It consists of two programs.  The server "
@@ -1838,7 +1847,7 @@ msgid ""
 msgstr "В следующем коде демонстрируется использование пакето-упорядочивающих сокетов для локального межпроцессного обмена. Он состоит из двух программ. Программа-сервер ждёт подключения программы-клиента. Клиент посылает свой каждый аргумент командной строки в виде отдельного сообщения. Сервер считает входящие сообщения как целые числа и складывает их. Клиент посылает строку-команду «END». Сервер посылает ответное сообщение, содержащее сумму чисел клиента. Клиент печатает сумму и завершает работу. Сервер ждёт подключение следующего клиента. Для остановки сервера, клиент вызывается с аргументом командной строки «DOWN»."
 
 #. type: Plain text
-#: man-pages/man7/unix.7:875
+#: man-pages/man7/unix.7:883
 msgid ""
 "The following output was recorded while running the server in the background"
 " and repeatedly executing the client.  Execution of the server program ends "
@@ -1846,13 +1855,13 @@ msgid ""
 msgstr "Следующий вывод был записан при работе сервера в фоновом режиме и повторяющемся запуске клиента. Выполнение программы-сервера завершилось после получения им команды «DOWN»."
 
 #. type: SS
-#: man-pages/man7/unix.7:875
+#: man-pages/man7/unix.7:883
 #, no-wrap
 msgid "Example output"
 msgstr "Пример вывода"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:888
+#: man-pages/man7/unix.7:896
 #, no-wrap
 msgid ""
 "$ B<./server &>\n"
@@ -1868,13 +1877,13 @@ msgid ""
 msgstr "$ B<./server &>\n[1] 25887\n$ B<./client 3 4>\nРезультат = 7\n$ B<./client 11 -5>\nРезультат = 6\n$ B<./client DOWN>\nРезультат = 0\n[1]+  Done                    ./server\n$\n"
 
 #. type: SS
-#: man-pages/man7/unix.7:890
+#: man-pages/man7/unix.7:898
 #, no-wrap
 msgid "Program source"
 msgstr "Исходный код программы"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:896
+#: man-pages/man7/unix.7:904
 #, no-wrap
 msgid ""
 "/*\n"
@@ -1883,7 +1892,7 @@ msgid ""
 msgstr "/*\n * Файл connection.h\n */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:899
+#: man-pages/man7/unix.7:907
 #, no-wrap
 msgid ""
 "#define SOCKET_NAME \"/tmp/9Lq7BNBnBycd6nxy.socket\"\n"
@@ -1891,7 +1900,7 @@ msgid ""
 msgstr "#define SOCKET_NAME \"/tmp/9Lq7BNBnBycd6nxy.socket\"\n#define BUFFER_SIZE 12\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:903
+#: man-pages/man7/unix.7:911
 #, no-wrap
 msgid ""
 "/*\n"
@@ -1900,7 +1909,7 @@ msgid ""
 msgstr "/*\n * Файл server.c\n */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:911
+#: man-pages/man7/unix.7:919
 #, no-wrap
 msgid ""
 "#include E<lt>stdio.hE<gt>\n"
@@ -1913,7 +1922,7 @@ msgid ""
 msgstr "#include E<lt>stdio.hE<gt>\n#include E<lt>stdlib.hE<gt>\n#include E<lt>string.hE<gt>\n#include E<lt>sys/socket.hE<gt>\n#include E<lt>sys/un.hE<gt>\n#include E<lt>unistd.hE<gt>\n#include \"connection.h\"\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:922
+#: man-pages/man7/unix.7:930
 #, no-wrap
 msgid ""
 "int\n"
@@ -1929,7 +1938,7 @@ msgid ""
 msgstr "int\nmain(int argc, char *argv[])\n{\n    struct sockaddr_un name;\n    int down_flag = 0;\n    int ret;\n    int connection_socket;\n    int data_socket;\n    int result;\n    char buffer[BUFFER_SIZE];\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:927
+#: man-pages/man7/unix.7:935
 #, no-wrap
 msgid ""
 "    /*\n"
@@ -1939,19 +1948,19 @@ msgid ""
 msgstr "    /*\n     * Удалить сокет, оставшийся после последнего\n     * некорректного завершения программы.\n     */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:929 man-pages/man7/unix.7:1038
+#: man-pages/man7/unix.7:937 man-pages/man7/unix.7:1046
 #, no-wrap
 msgid "    unlink(SOCKET_NAME);\n"
 msgstr "    unlink(SOCKET_NAME);\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:931 man-pages/man7/unix.7:1065
+#: man-pages/man7/unix.7:939 man-pages/man7/unix.7:1073
 #, no-wrap
 msgid "    /* Create local socket. */\n"
 msgstr "    /* Создание локального сокета. */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:937
+#: man-pages/man7/unix.7:945
 #, no-wrap
 msgid ""
 "    connection_socket = socket(AF_UNIX, SOCK_SEQPACKET, 0);\n"
@@ -1962,7 +1971,7 @@ msgid ""
 msgstr "    connection_socket = socket(AF_UNIX, SOCK_SEQPACKET, 0);\n    if (connection_socket == -1) {\n        perror(\"socket\");\n        exit(EXIT_FAILURE);\n    }\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:943 man-pages/man7/unix.7:1077
+#: man-pages/man7/unix.7:951 man-pages/man7/unix.7:1085
 #, no-wrap
 msgid ""
 "    /*\n"
@@ -1973,19 +1982,19 @@ msgid ""
 msgstr "    /*\n     * Для переносимости очищаем всю структуру, так как в некоторых\n     * реализациях имеются дополнительные (нестандартные) поля.\n     */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:945
+#: man-pages/man7/unix.7:953
 #, no-wrap
 msgid "    memset(&name, 0, sizeof(struct sockaddr_un));\n"
 msgstr "    memset(&name, 0, sizeof(struct sockaddr_un));\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:947
+#: man-pages/man7/unix.7:955
 #, no-wrap
 msgid "    /* Bind socket to socket name. */\n"
 msgstr "    /* Привязываем сокет к имени сокета. */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:950
+#: man-pages/man7/unix.7:958
 #, no-wrap
 msgid ""
 "    name.sun_family = AF_UNIX;\n"
@@ -1993,7 +2002,7 @@ msgid ""
 msgstr "    name.sun_family = AF_UNIX;\n    strncpy(name.sun_path, SOCKET_NAME, sizeof(name.sun_path) - 1);\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:957
+#: man-pages/man7/unix.7:965
 #, no-wrap
 msgid ""
 "    ret = bind(connection_socket, (const struct sockaddr *) &name,\n"
@@ -2005,7 +2014,7 @@ msgid ""
 msgstr "    ret = bind(connection_socket, (const struct sockaddr *) &name,\n               sizeof(struct sockaddr_un));\n    if (ret == -1) {\n        perror(\"bind\");\n        exit(EXIT_FAILURE);\n    }\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:963
+#: man-pages/man7/unix.7:971
 #, no-wrap
 msgid ""
 "    /*\n"
@@ -2016,7 +2025,7 @@ msgid ""
 msgstr "    /*\n     * Готовимся принимать подключения. Размер очереди (backlog)\n     * устанавливаем равным 20. Пока один запрос обрабатывается, другие\n     * запросы смогут подождать.\n     */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:969
+#: man-pages/man7/unix.7:977
 #, no-wrap
 msgid ""
 "    ret = listen(connection_socket, 20);\n"
@@ -2027,25 +2036,25 @@ msgid ""
 msgstr "    ret = listen(connection_socket, 20);\n    if (ret == -1) {\n        perror(\"listen\");\n        exit(EXIT_FAILURE);\n    }\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:971
+#: man-pages/man7/unix.7:979
 #, no-wrap
 msgid "    /* This is the main loop for handling connections. */\n"
 msgstr "    /* Основной цикл обработки подключений. */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:973
+#: man-pages/man7/unix.7:981
 #, no-wrap
 msgid "    for (;;) {\n"
 msgstr "    for (;;) {\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:975
+#: man-pages/man7/unix.7:983
 #, no-wrap
 msgid "        /* Wait for incoming connection. */\n"
 msgstr "        /* Ожидание входящих подключений. */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:981
+#: man-pages/man7/unix.7:989
 #, no-wrap
 msgid ""
 "        data_socket = accept(connection_socket, NULL, NULL);\n"
@@ -2056,7 +2065,7 @@ msgid ""
 msgstr "        data_socket = accept(connection_socket, NULL, NULL);\n        if (data_socket == -1) {\n            perror(\"accept\");\n            exit(EXIT_FAILURE);\n        }\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:984
+#: man-pages/man7/unix.7:992
 #, no-wrap
 msgid ""
 "        result = 0;\n"
@@ -2064,13 +2073,13 @@ msgid ""
 msgstr "        result = 0;\n        for (;;) {\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:986
+#: man-pages/man7/unix.7:994
 #, no-wrap
 msgid "            /* Wait for next data packet. */\n"
 msgstr "            /* Ожидание следующего пакета с данными. */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:992
+#: man-pages/man7/unix.7:1000
 #, no-wrap
 msgid ""
 "            ret = read(data_socket, buffer, BUFFER_SIZE);\n"
@@ -2081,25 +2090,25 @@ msgid ""
 msgstr "            ret = read(data_socket, buffer, BUFFER_SIZE);\n            if (ret == -1) {\n                perror(\"read\");\n                exit(EXIT_FAILURE);\n            }\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:994
+#: man-pages/man7/unix.7:1002
 #, no-wrap
 msgid "            /* Ensure buffer is 0-terminated. */\n"
 msgstr "            /* Проверяем, что буфер завершается 0. */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:996
+#: man-pages/man7/unix.7:1004
 #, no-wrap
 msgid "            buffer[BUFFER_SIZE - 1] = 0;\n"
 msgstr "            buffer[BUFFER_SIZE - 1] = 0;\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:998
+#: man-pages/man7/unix.7:1006
 #, no-wrap
 msgid "            /* Handle commands. */\n"
 msgstr "            /* Обработка команд. */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1003
+#: man-pages/man7/unix.7:1011
 #, no-wrap
 msgid ""
 "            if (!strncmp(buffer, \"DOWN\", BUFFER_SIZE)) {\n"
@@ -2109,7 +2118,7 @@ msgid ""
 msgstr "            if (!strncmp(buffer, \"DOWN\", BUFFER_SIZE)) {\n                down_flag = 1;\n                break;\n            }\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1007
+#: man-pages/man7/unix.7:1015
 #, no-wrap
 msgid ""
 "            if (!strncmp(buffer, \"END\", BUFFER_SIZE)) {\n"
@@ -2118,13 +2127,13 @@ msgid ""
 msgstr "            if (!strncmp(buffer, \"END\", BUFFER_SIZE)) {\n                break;\n            }\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1009
+#: man-pages/man7/unix.7:1017
 #, no-wrap
 msgid "            /* Add received summand. */\n"
 msgstr "            /* Добавляем полученную команду. */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1012
+#: man-pages/man7/unix.7:1020
 #, no-wrap
 msgid ""
 "            result += atoi(buffer);\n"
@@ -2132,13 +2141,13 @@ msgid ""
 msgstr "            result += atoi(buffer);\n        }\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1014
+#: man-pages/man7/unix.7:1022
 #, no-wrap
 msgid "        /* Send result. */\n"
 msgstr "        /* Отправка результата. */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1021
+#: man-pages/man7/unix.7:1029
 #, no-wrap
 msgid ""
 "        sprintf(buffer, \"%d\", result);\n"
@@ -2150,25 +2159,25 @@ msgid ""
 msgstr "        sprintf(buffer, \"%d\", result);\n        ret = write(data_socket, buffer, BUFFER_SIZE);\n        if (ret == -1) {\n            perror(\"write\");\n            exit(EXIT_FAILURE);\n        }\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1023
+#: man-pages/man7/unix.7:1031
 #, no-wrap
 msgid "        /* Close socket. */\n"
 msgstr "        /* Закрытие сокета. */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1025
+#: man-pages/man7/unix.7:1033
 #, no-wrap
 msgid "        close(data_socket);\n"
 msgstr "        close(data_socket);\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1027
+#: man-pages/man7/unix.7:1035
 #, no-wrap
 msgid "        /* Quit on DOWN command. */\n"
 msgstr "        /* Завершаем работу по команде DOWN. */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1032
+#: man-pages/man7/unix.7:1040
 #, no-wrap
 msgid ""
 "        if (down_flag) {\n"
@@ -2178,19 +2187,19 @@ msgid ""
 msgstr "        if (down_flag) {\n            break;\n        }\n    }\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1034
+#: man-pages/man7/unix.7:1042
 #, no-wrap
 msgid "    close(connection_socket);\n"
 msgstr "    close(connection_socket);\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1036
+#: man-pages/man7/unix.7:1044
 #, no-wrap
 msgid "    /* Unlink the socket. */\n"
 msgstr "    /* Удаляем сокет. */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1041 man-pages/man7/unix.7:1131
+#: man-pages/man7/unix.7:1049 man-pages/man7/unix.7:1139
 #, no-wrap
 msgid ""
 "    exit(EXIT_SUCCESS);\n"
@@ -2198,7 +2207,7 @@ msgid ""
 msgstr "    exit(EXIT_SUCCESS);\n}\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1045
+#: man-pages/man7/unix.7:1053
 #, no-wrap
 msgid ""
 "/*\n"
@@ -2207,7 +2216,7 @@ msgid ""
 msgstr "/*\n * Файл client.c\n */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1054
+#: man-pages/man7/unix.7:1062
 #, no-wrap
 msgid ""
 "#include E<lt>errno.hE<gt>\n"
@@ -2221,7 +2230,7 @@ msgid ""
 msgstr "#include E<lt>errno.hE<gt>\n#include E<lt>stdio.hE<gt>\n#include E<lt>stdlib.hE<gt>\n#include E<lt>string.hE<gt>\n#include E<lt>sys/socket.hE<gt>\n#include E<lt>sys/un.hE<gt>\n#include E<lt>unistd.hE<gt>\n#include \"connection.h\"\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1063
+#: man-pages/man7/unix.7:1071
 #, no-wrap
 msgid ""
 "int\n"
@@ -2235,7 +2244,7 @@ msgid ""
 msgstr "int\nmain(int argc, char *argv[])\n{\n    struct sockaddr_un addr;\n    int i;\n    int ret;\n    int data_socket;\n    char buffer[BUFFER_SIZE];\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1071
+#: man-pages/man7/unix.7:1079
 #, no-wrap
 msgid ""
 "    data_socket = socket(AF_UNIX, SOCK_SEQPACKET, 0);\n"
@@ -2246,19 +2255,19 @@ msgid ""
 msgstr "    data_socket = socket(AF_UNIX, SOCK_SEQPACKET, 0);\n    if (data_socket == -1) {\n        perror(\"socket\");\n        exit(EXIT_FAILURE);\n    }\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1079
+#: man-pages/man7/unix.7:1087
 #, no-wrap
 msgid "    memset(&addr, 0, sizeof(struct sockaddr_un));\n"
 msgstr "    memset(&addr, 0, sizeof(struct sockaddr_un));\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1081
+#: man-pages/man7/unix.7:1089
 #, no-wrap
 msgid "    /* Connect socket to socket address */\n"
 msgstr "    /* соединяем сокет с адресом сокета */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1084
+#: man-pages/man7/unix.7:1092
 #, no-wrap
 msgid ""
 "    addr.sun_family = AF_UNIX;\n"
@@ -2266,7 +2275,7 @@ msgid ""
 msgstr "    addr.sun_family = AF_UNIX;\n    strncpy(addr.sun_path, SOCKET_NAME, sizeof(addr.sun_path) - 1);\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1091
+#: man-pages/man7/unix.7:1099
 #, no-wrap
 msgid ""
 "    ret = connect (data_socket, (const struct sockaddr *) &addr,\n"
@@ -2278,13 +2287,13 @@ msgid ""
 msgstr "    ret = connect (data_socket, (const struct sockaddr *) &addr,\n                   sizeof(struct sockaddr_un));\n    if (ret == -1) {\n        fprintf(stderr, \"The server is down.\\en\");\n        exit(EXIT_FAILURE);\n    }\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1093
+#: man-pages/man7/unix.7:1101
 #, no-wrap
 msgid "    /* Send arguments. */\n"
 msgstr "    /* Посылаем аргументы. */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1101
+#: man-pages/man7/unix.7:1109
 #, no-wrap
 msgid ""
 "    for (i = 1; i E<lt> argc; ++i) {\n"
@@ -2297,13 +2306,13 @@ msgid ""
 msgstr "    for (i = 1; i E<lt> argc; ++i) {\n        ret = write(data_socket, argv[i], strlen(argv[i]) + 1);\n        if (ret == -1) {\n            perror(\"write\");\n            break;\n        }\n    }\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1103
+#: man-pages/man7/unix.7:1111
 #, no-wrap
 msgid "    /* Request result. */\n"
 msgstr "    /* Отправка результата. */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1110
+#: man-pages/man7/unix.7:1118
 #, no-wrap
 msgid ""
 "    strcpy (buffer, \"END\");\n"
@@ -2315,13 +2324,13 @@ msgid ""
 msgstr "    strcpy (buffer, \"END\");\n    ret = write(data_socket, buffer, strlen(buffer) + 1);\n    if (ret == -1) {\n        perror(\"write\");\n        exit(EXIT_FAILURE);\n    }\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1112
+#: man-pages/man7/unix.7:1120
 #, no-wrap
 msgid "    /* Receive result. */\n"
 msgstr "    /* Получение результата. */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1118
+#: man-pages/man7/unix.7:1126
 #, no-wrap
 msgid ""
 "    ret = read(data_socket, buffer, BUFFER_SIZE);\n"
@@ -2332,48 +2341,48 @@ msgid ""
 msgstr "    ret = read(data_socket, buffer, BUFFER_SIZE);\n    if (ret == -1) {\n        perror(\"read\");\n        exit(EXIT_FAILURE);\n    }\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1120
+#: man-pages/man7/unix.7:1128
 #, no-wrap
 msgid "    /* Ensure buffer is 0-terminated. */\n"
 msgstr "    /* Проверяем, что буфер завершается 0. */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1122
+#: man-pages/man7/unix.7:1130
 #, no-wrap
 msgid "    buffer[BUFFER_SIZE - 1] = 0;\n"
 msgstr "    buffer[BUFFER_SIZE - 1] = 0;\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1124
+#: man-pages/man7/unix.7:1132
 #, no-wrap
 msgid "    printf(\"Result = %s\\en\", buffer);\n"
 msgstr "    printf(\"Result = %s\\en\", buffer);\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1126
+#: man-pages/man7/unix.7:1134
 #, no-wrap
 msgid "    /* Close socket. */\n"
 msgstr "    /* Закрытие сокета. */\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1128
+#: man-pages/man7/unix.7:1136
 #, no-wrap
 msgid "    close(data_socket);\n"
 msgstr "    close(data_socket);\n"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1137
+#: man-pages/man7/unix.7:1145
 msgid "For an example of the use of B<SCM_RIGHTS> see B<cmsg>(3)."
 msgstr "Пример использования B<SCM_RIGHTS> приведён в B<cmsg>(3)."
 
 #. type: SH
-#: man-pages/man7/unix.7:1137
+#: man-pages/man7/unix.7:1145
 #, no-wrap
 msgid "SEE ALSO"
 msgstr "СМОТРИТЕ ТАКЖЕ"
 
 #. type: Plain text
-#: man-pages/man7/unix.7:1146
+#: man-pages/man7/unix.7:1154
 msgid ""
 "B<recvmsg>(2), B<sendmsg>(2), B<socket>(2), B<socketpair>(2), B<cmsg>(3), "
 "B<capabilities>(7), B<credentials>(7), B<socket>(7), B<udp>(7)"
@@ -3329,16 +3338,17 @@ msgid ""
 msgstr "Начиная с Linux 3.8, непривилегированные процессы могут создавать пользовательские пространства имён, а для создания пространств имён других типов требуется мандат B<CAP_SYS_ADMIN> в пользовательском пространстве имён вызывающего."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:315
+#: man-pages/man7/user_namespaces.7:316
 msgid ""
 "When a nonuser namespace is created, it is owned by the user namespace in "
 "which the creating process was a member at the time of the creation of the "
-"namespace.  Actions on the nonuser namespace require capabilities in the "
-"corresponding user namespace."
-msgstr "После создания не пользовательского пространства имён оно принадлежит пользовательскому пространству имён, в котором создающий процесс являлся членом при создании пространства имён. Для действий с не пользовательским пространством имён требуются мандаты в соответствующем пользовательском пространстве имён."
+"namespace.  Privileged operations on resources governed by the nonuser "
+"namespace require that the process has the necessary capabilities in the "
+"user namespace that owns the nonuser namespace."
+msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:332
+#: man-pages/man7/user_namespaces.7:333
 msgid ""
 "If B<CLONE_NEWUSER> is specified along with other B<CLONE_NEW*> flags in a "
 "single B<clone>(2)  or B<unshare>(2)  call, the user namespace is guaranteed"
@@ -3349,7 +3359,7 @@ msgid ""
 msgstr "Если вместе с флагами B<CLONE_NEW*> указан флаг B<CLONE_NEWUSER> в вызове B<clone>(2) или B<unshare>(2), то пользовательское пространство имён гарантированно создаётся первым, давая потомку (B<clone>(2)) или вызывающему (B<unshare>(2))  права на остальные пространства имён, создаваемые вызовом. Даже бесправный вызывающий может задать такую комбинацию флагов."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:354
+#: man-pages/man7/user_namespaces.7:355
 msgid ""
 "When a new namespace (other than a user namespace) is created via "
 "B<clone>(2)  or B<unshare>(2), the kernel records the user namespace of the "
@@ -3367,21 +3377,21 @@ msgstr "При создании нового пространства имён (
 
 #.  ============================================================
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:364
+#: man-pages/man7/user_namespaces.7:365
 msgid ""
 "The B<NS_GET_USERNS> B<ioctl>(2)  operation can be used to discover the user"
 " namespace that owns a nonuser namespace; see B<ioctl_ns>(2)."
 msgstr "Операцию B<NS_GET_USERNS> B<ioctl>(2) можно использовать для обнаружения пространства имён пользователя, которое владеет не пользовательским пространством имён; смотрите B<ioctl_ns>(2)."
 
 #. type: SS
-#: man-pages/man7/user_namespaces.7:364
+#: man-pages/man7/user_namespaces.7:365
 #, no-wrap
 msgid "User and group ID mappings: uid_map and gid_map"
 msgstr "Отображение идентификаторов пользователей и групп: uid_map и gid_map"
 
 #.  commit 22d917d80e842829d0ca0a561967d728eb1d6303
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:379
+#: man-pages/man7/user_namespaces.7:380
 msgid ""
 "When a user namespace is created, it starts out without a mapping of user "
 "IDs (group IDs)  to the parent user namespace.  The I</proc/[pid]/uid_map> "
@@ -3392,7 +3402,7 @@ msgid ""
 msgstr "В новом созданном пользовательском пространстве имён отсутствует отображение пользовательских ID (ID групп) в родительское пользовательское пространство. Файл I</proc/[pid]/uid_map> и I</proc/[pid]/gid_map> (доступны начиная с Linux 3.5) предоставляют отображения пользовательских и групповых ID внутри пользовательского пространства имён для процесса I<pid>. Эти файлы можно читать для просмотра отображений в пользовательском пространстве имён и писать (однократно) для определения отображений."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:385
+#: man-pages/man7/user_namespaces.7:386
 msgid ""
 "The description in the following paragraphs explains the details for "
 "I<uid_map>; I<gid_map> is exactly the same, but each instance of \"user ID\""
@@ -3400,7 +3410,7 @@ msgid ""
 msgstr "В следующих параграфах объясняется формат I<uid_map>; I<gid_map> имеет тот же формат, но каждый экземпляр «ID пользователя» заменяется на «ID группы»."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:399
+#: man-pages/man7/user_namespaces.7:400
 msgid ""
 "The I<uid_map> file exposes the mapping of user IDs from the user namespace "
 "of the process I<pid> to the user namespace of the process that opened "
@@ -3411,7 +3421,7 @@ msgid ""
 msgstr "Файл I<uid_map> предоставляет отображение пользовательских ID из пользовательского пространства имён процесса I<pid> в пользовательское пространство имён процесса, который открыл I<uid_map> (но смотрите уточнение далее). Другими словами, процессы, которые находятся в разных пользовательских пространствах имён, возможно будут видеть разные значения при чтении соответствующего файла I<uid_map>, в зависимости от отображений пользовательских ID у пользовательских пространств имён читающего процесса."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:411
+#: man-pages/man7/user_namespaces.7:412
 msgid ""
 "Each line in the I<uid_map> file specifies a 1-to-1 mapping of a range of "
 "contiguous user IDs between two user namespaces.  (When a user namespace is "
@@ -3423,26 +3433,26 @@ msgid ""
 msgstr "Каждая строка в файле I<uid_map> определяет отображение 1-в-1 непрерывного диапазона пользовательских ID между двумя пользовательскими пространствами имён (при создании пользовательского пространства имён этот файл пуст). В каждой строке содержится три числа через пробел. Первые два числа определяют начальный пользовательский ID в каждом из двух пользовательских пространств имён. Третье число определяет длину отображаемого диапазона. Эти поля рассматриваются так:"
 
 #. type: IP
-#: man-pages/man7/user_namespaces.7:411
+#: man-pages/man7/user_namespaces.7:412
 #, no-wrap
 msgid "(1)"
 msgstr "(1)"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:415
+#: man-pages/man7/user_namespaces.7:416
 msgid ""
 "The start of the range of user IDs in the user namespace of the process "
 "I<pid>."
 msgstr "Начало диапазона пользовательских ID в пользовательском пространстве имён процесса I<pid>."
 
 #. type: IP
-#: man-pages/man7/user_namespaces.7:415
+#: man-pages/man7/user_namespaces.7:416
 #, no-wrap
 msgid "(2)"
 msgstr "(2)"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:423
+#: man-pages/man7/user_namespaces.7:424
 msgid ""
 "The start of the range of user IDs to which the user IDs specified by field "
 "one map.  How field two is interpreted depends on whether the process that "
@@ -3451,13 +3461,13 @@ msgid ""
 msgstr "Начало диапазона пользовательских ID, на который отображаются пользовательские ID, указанные в первом поле. Интерпретация второго поля зависит от того, находится ли процесс, открывший I<uid_map>, и процесс I<pid>, в одном пользовательском пространстве имён:"
 
 #. type: IP
-#: man-pages/man7/user_namespaces.7:424
+#: man-pages/man7/user_namespaces.7:425
 #, no-wrap
 msgid "a)"
 msgstr "а)"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:429
+#: man-pages/man7/user_namespaces.7:430
 msgid ""
 "If the two processes are in different user namespaces: field two is the "
 "start of a range of user IDs in the user namespace of the process that "
@@ -3465,13 +3475,13 @@ msgid ""
 msgstr "Если два процесса находятся в разных пользовательских пространствах имён: поле два — начало диапазона пользовательских ID в пользовательском пространстве имён процесса, который открыл I<uid_map>."
 
 #. type: IP
-#: man-pages/man7/user_namespaces.7:429
+#: man-pages/man7/user_namespaces.7:430
 #, no-wrap
 msgid "b)"
 msgstr "б)"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:440
+#: man-pages/man7/user_namespaces.7:441
 msgid ""
 "If the two processes are in the same user namespace: field two is the start "
 "of the range of user IDs in the parent user namespace of the process I<pid>."
@@ -3481,20 +3491,20 @@ msgid ""
 msgstr "Если два процесса находятся в одном пользовательском пространстве имён: поле два — начало диапазона пользовательских ID в родительском пользовательском пространстве имён процесса I<pid>. Это позволяет открывшему I<uid_map> (обычно открывают I</proc/self/uid_map>) видеть отображение пользовательских ID в пользовательском пространстве имён процесса, создавшего это пользовательское пространство имён."
 
 #. type: IP
-#: man-pages/man7/user_namespaces.7:441
+#: man-pages/man7/user_namespaces.7:442
 #, no-wrap
 msgid "(3)"
 msgstr "(3)"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:444
+#: man-pages/man7/user_namespaces.7:445
 msgid ""
 "The length of the range of user IDs that is mapped between the two user "
 "namespaces."
 msgstr "Длина диапазона пользовательских ID, выполняющего отображение между двумя пользовательскими пространствами имён."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:451
+#: man-pages/man7/user_namespaces.7:452
 msgid ""
 "System calls that return user IDs (group IDs)\\(emfor example, B<getuid>(2),"
 " B<getgid>(2), and the credential fields in the structure returned by "
@@ -3503,7 +3513,7 @@ msgid ""
 msgstr "Системные вызовы, возвращающие пользовательские ID (ID групп), например, B<getuid>(2), B<getgid>(2), и мандатные поля в структуре, возвращаемой B<stat>(2), возвращают пользовательский ID (ID группы), отображённый в пользовательском пространстве имён вызывающего."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:459
+#: man-pages/man7/user_namespaces.7:460
 msgid ""
 "When a process accesses a file, its user and group IDs are mapped into the "
 "initial user namespace for the purpose of permission checking and assigning "
@@ -3513,7 +3523,7 @@ msgid ""
 msgstr "Когда процесс обращается к файлу, его ID пользователя и группы отображаются в начальном пользовательском пространстве имён с целью проверки прав доступа и назначенного ID при создании файла. Когда процесс получает ID пользователя и группы файла через B<stat>(2), то ID отображаются в обратном направлении, для создания значений, относительно отображений ID пользователя и группы процесса."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:468
+#: man-pages/man7/user_namespaces.7:469
 msgid ""
 "The initial user namespace has no parent namespace, but, for consistency, "
 "the kernel provides dummy user and group ID mapping files for this "
@@ -3522,7 +3532,7 @@ msgid ""
 msgstr "Начальное пользовательское пространство имён не имеет родительского пространства имён, но для однородности, для него ядро предоставляет фиктивные файлы отображения ID пользователей и групп. Посмотрим на файл I<uid_map> (в I<gid_map> тоже самое) из оболочки в начальном пространстве имён:"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:473
+#: man-pages/man7/user_namespaces.7:474
 #, no-wrap
 msgid ""
 "$ B<cat /proc/$$/uid_map>\n"
@@ -3531,7 +3541,7 @@ msgstr "$ B<cat /proc/$$/uid_map>\n         0          0 4294967295\n"
 
 #.  ============================================================
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:493
+#: man-pages/man7/user_namespaces.7:494
 msgid ""
 "This mapping tells us that the range starting at user ID 0 in this namespace"
 " maps to a range starting at 0 in the (nonexistent) parent namespace, and "
@@ -3544,13 +3554,13 @@ msgid ""
 msgstr "Данное отображение показывает, что диапазон начинающийся с пользовательского ID 0 в этом пространстве имён, отображается в диапазон, начинающийся, с 0, в (несуществующее) родительское пространство имён, и длина диапазона равна самому большому 32-битному беззнаковому целому. Значение 4294967295 (32-битное знаковое значение -1) оставлено без отображения. Предназначение: I<(uid_t)\\ -\\1> используется в некоторых интерфейсах (например, B<setreuid>(2)) для указания «отсутствия ID пользователя». Оставление I<(uid_t)\\ -\\1> без отображения и его не использование гарантирует, что при использовании этих интерфейсов не будет проблем)."
 
 #. type: SS
-#: man-pages/man7/user_namespaces.7:493
+#: man-pages/man7/user_namespaces.7:494
 #, no-wrap
 msgid "Defining user and group ID mappings: writing to uid_map and gid_map"
 msgstr "Отображение идентификаторов пользователей и групп: запись в uid_map и gid_map"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:509
+#: man-pages/man7/user_namespaces.7:510
 msgid ""
 "After the creation of a new user namespace, the I<uid_map> file of I<one> of"
 " the processes in the namespace may be written to I<once> to define the "
@@ -3560,28 +3570,28 @@ msgid ""
 msgstr "После создания нового пользовательского пространства имён в файл I<uid_map> I<один> из процессов в пространстве имён может выполнить I<однократную> запись для определения отображения пользовательских ID в новом пользовательском пространстве имён. Повторная попытка записи в файл I<uid_map> в пользовательском пространстве имён завершится с ошибкой B<EPERM>. Эти же правила применимы к файлам I<gid_map>."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:514
+#: man-pages/man7/user_namespaces.7:515
 msgid ""
 "The lines written to I<uid_map> (I<gid_map>)  must conform to the following "
 "rules:"
 msgstr "Записываемые в I<uid_map> (I<gid_map>) строки должны соответствовать следующим правилам:"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:517
+#: man-pages/man7/user_namespaces.7:518
 msgid ""
 "The three fields must be valid numbers, and the last field must be greater "
 "than 0."
 msgstr "В трёх полях должны быть корректные числа и последнее поле должно быть больше 0."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:519
+#: man-pages/man7/user_namespaces.7:520
 msgid "Lines are terminated by newline characters."
 msgstr "Строки заканчиваются символами новой строки."
 
 #.  5*12-byte records could fit in a 64B cache line
 #.  commit 6397fac4915ab3002dc15aae751455da1a852f25
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:534
+#: man-pages/man7/user_namespaces.7:535
 msgid ""
 "There is a limit on the number of lines in the file.  In Linux 4.14 and "
 "earlier, this limit was (arbitrarily)  set at 5 lines.  Since Linux 4.15, "
@@ -3593,7 +3603,7 @@ msgstr "Существует ограничение на количество с
 
 #.  commit 0bd14b4fd72afd5df41e9fd59f356740f22fceba
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:547
+#: man-pages/man7/user_namespaces.7:548
 msgid ""
 "The range of user IDs (group IDs)  specified in each line cannot overlap "
 "with the ranges in any other lines.  In the initial implementation (Linux "
@@ -3605,17 +3615,17 @@ msgid ""
 msgstr "Диапазон пользовательских ID (групповых ID), указанный в каждой строке, не должен перекрываться с диапазонами в других строках. В первой реализации (Linux 3.8) это требование удовлетворялось простейшим способом, который задавал другое требование: значения в полях 1 и 2 следующих одна за одной строк, должны увеличиваться, что не давало создавать некоторые корректные отображения. В Linux 3.9 и новее это ограничение было снято, и допустим любой набор не перекрывающихся отображений."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:549
+#: man-pages/man7/user_namespaces.7:550
 msgid "At least one line must be written to the file."
 msgstr "В файл должна быть записана, как минимум, одна строка."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:552
+#: man-pages/man7/user_namespaces.7:553
 msgid "Writes that violate the above rules fail with the error B<EINVAL>."
 msgstr "Попытки записи, нарушающие перечисленные выше правила, завершаются с ошибкой B<EINVAL>."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:557
+#: man-pages/man7/user_namespaces.7:558
 msgid ""
 "In order for a process to write to the I</proc/[pid]/uid_map> "
 "(I</proc/[pid]/gid_map>)  file, all of the following requirements must be "
@@ -3623,65 +3633,65 @@ msgid ""
 msgstr "Чтобы процесс мог записывать в файл I</proc/[pid]/uid_map> (I</proc/[pid]/gid_map>) должны быть удовлетворены все условия:"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:563
+#: man-pages/man7/user_namespaces.7:564
 msgid ""
 "The writing process must have the B<CAP_SETUID> (B<CAP_SETGID>)  capability "
 "in the user namespace of the process I<pid>."
 msgstr "Записывающий процесс должен иметь мандат B<CAP_SETUID> (B<CAP_SETGID>) в пользовательском пространстве имён процесса I<pid>."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:568
+#: man-pages/man7/user_namespaces.7:569
 msgid ""
 "The writing process must either be in the user namespace of the process "
 "I<pid> or be in the parent user namespace of the process I<pid>."
 msgstr "Записывающий процесс должен находиться в пользовательском пространстве имён процесса I<pid> или быть родительским пользовательским пространством имён процесса I<pid>."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:571
+#: man-pages/man7/user_namespaces.7:572
 msgid ""
 "The mapped user IDs (group IDs) must in turn have a mapping in the parent "
 "user namespace."
 msgstr "Отображаемые пользовательские ID (групповые ID) должны иметь соответствующее отображение в родительском пользовательском пространстве имён."
 
 #. type: IP
-#: man-pages/man7/user_namespaces.7:571
+#: man-pages/man7/user_namespaces.7:572
 #, no-wrap
 msgid "4."
 msgstr "4."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:573
+#: man-pages/man7/user_namespaces.7:574
 msgid "One of the following two cases applies:"
 msgstr "Применимо к одному из двух случаев:"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:582
+#: man-pages/man7/user_namespaces.7:583
 msgid ""
 "I<Either> the writing process has the B<CAP_SETUID> (B<CAP_SETGID>)  "
 "capability in the I<parent> user namespace."
 msgstr "I<Или> записывающий процесс имеет мандат B<CAP_SETUID> (B<CAP_SETGID>) в I<родительском> пользовательском пространстве имён."
 
 #. type: IP
-#: man-pages/man7/user_namespaces.7:583 man-pages/man7/user_namespaces.7:592
-#: man-pages/man7/user_namespaces.7:600 man-pages/man7/user_namespaces.7:603
+#: man-pages/man7/user_namespaces.7:584 man-pages/man7/user_namespaces.7:593
+#: man-pages/man7/user_namespaces.7:601 man-pages/man7/user_namespaces.7:604
 #, no-wrap
 msgid "+"
 msgstr "+"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:587
+#: man-pages/man7/user_namespaces.7:588
 msgid ""
 "No further restrictions apply: the process can make mappings to arbitrary "
 "user IDs (group IDs)  in the parent user namespace."
 msgstr "В дальнейшем ограничения не применяются: процесс может создавать отображения в произвольные пользовательские ID (групповые ID) в родительском пользовательском пространстве имён."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:591
+#: man-pages/man7/user_namespaces.7:592
 msgid "I<Or> otherwise all of the following restrictions apply:"
 msgstr "I<Или> в противном случае накладываются следующие (все) ограничения:"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:600
+#: man-pages/man7/user_namespaces.7:601
 msgid ""
 "The data written to I<uid_map> (I<gid_map>)  must consist of a single line "
 "that maps the writing process's effective user ID (group ID) in the parent "
@@ -3689,14 +3699,14 @@ msgid ""
 msgstr "Данные, записываемые в I<uid_map> (I<gid_map>), должны состоять из одной строки, которая отображает эффективный пользовательский ID (групповой ID) записывающего процесса в родительском пользовательском пространстве имён в пользовательский ID (групповой ID) в пользовательском пространстве имён."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:603
+#: man-pages/man7/user_namespaces.7:604
 msgid ""
 "The writing process must have the same effective user ID as the process that"
 " created the user namespace."
 msgstr "Записывающий процесс должен иметь мандат тот же эффективный пользовательский ID что и процесс, который создал пользовательское пространство имён."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:614
+#: man-pages/man7/user_namespaces.7:615
 msgid ""
 "In the case of I<gid_map>, use of the B<setgroups>(2)  system call must "
 "first be denied by writing \"I<deny>\" to the I</proc/[pid]/setgroups> file "
@@ -3705,18 +3715,18 @@ msgstr "В случае I<gid_map>, перед записью в I<gid_map> сн
 
 #.  ============================================================
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:622
+#: man-pages/man7/user_namespaces.7:623
 msgid "Writes that violate the above rules fail with the error B<EPERM>."
 msgstr "Попытки записи, нарушающие перечисленные выше правила, завершаются с ошибкой B<EPERM>."
 
 #. type: SS
-#: man-pages/man7/user_namespaces.7:622
+#: man-pages/man7/user_namespaces.7:623
 #, no-wrap
 msgid "Interaction with system calls that change process UIDs or GIDs"
 msgstr "Взаимодействие с системными вызовами, которые изменяют UID или GID процесса."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:635
+#: man-pages/man7/user_namespaces.7:636
 msgid ""
 "In a user namespace where the I<uid_map> file has not been written, the "
 "system calls that change user IDs will fail.  Similarly, if the I<gid_map> "
@@ -3726,7 +3736,7 @@ msgid ""
 msgstr "В пользовательском пространстве имён, в котором не выполнялась запись в файл I<uid_map>, системные вызовы, изменяющие ID пользователя, будут завершаться с ошибкой. Подобными образом, если не выполнялась запись в файл I<gid_map>, то системные вызовы, изменяющие ID группы, будут завершаться с ошибкой. После записи в файл I<uid_map> и I<gid_map> только отображённые значения могут использоваться в системных вызовах, изменяющих ID пользователя или группы."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:649
+#: man-pages/man7/user_namespaces.7:650
 msgid ""
 "For user IDs, the relevant system calls include B<setuid>(2), "
 "B<setfsuid>(2), B<setreuid>(2), and B<setresuid>(2).  For group IDs, the "
@@ -3740,7 +3750,7 @@ msgstr "Для ID пользователя, это относится  к сле
 #.  http://lwn.net/Articles/626665/
 #.  ============================================================
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:670
+#: man-pages/man7/user_namespaces.7:671
 msgid ""
 "Writing \"I<deny>\" to the I</proc/[pid]/setgroups> file before writing to "
 "I</proc/[pid]/gid_map> will permanently disable B<setgroups>(2)  in a user "
@@ -3749,7 +3759,7 @@ msgid ""
 msgstr "Запись \"I<deny>\" в файле I</proc/[pid]/setgroups> перед записью в I</proc/[pid]/gid_map> насовсем отключает B<setgroups>(2) в пользовательском пространстве имён, а также разрешает запись в I</proc/[pid]/gid_map> без мандата B<CAP_SETGID> в родительском пользовательском пространстве имён."
 
 #. type: SS
-#: man-pages/man7/user_namespaces.7:670
+#: man-pages/man7/user_namespaces.7:671
 #, no-wrap
 msgid "The /proc/[pid]/setgroups file"
 msgstr "Файл /proc/[pid]/setgroups"
@@ -3759,7 +3769,7 @@ msgstr "Файл /proc/[pid]/setgroups"
 #.  http://lwn.net/Articles/626665/
 #.  http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-8989
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:697
+#: man-pages/man7/user_namespaces.7:698
 msgid ""
 "The I</proc/[pid]/setgroups> file displays the string \"I<allow>\" if "
 "processes in the user namespace that contains the process I<pid> are "
@@ -3771,7 +3781,7 @@ msgid ""
 msgstr "Файл I</proc/[pid]/setgroups> содержит строку \"I<allow>\", если процессам в пользовательском пространстве имён, которые содержат процесс с I<pid>, разрешено выполнять системный вызов B<setgroups>(2); в файл содержится строка \"I<deny>\", если B<setgroups>(2) запрещён в этом пользовательском пространстве имён. Заметим, что независимо от значения в файле I</proc/[pid]/setgroups> (и независимо от мандатов процесса) вызовы B<setgroups>(2) также запрещены, если I</proc/[pid]/gid_map> до этого не был настроен."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:713
+#: man-pages/man7/user_namespaces.7:714
 msgid ""
 "A privileged process (one with the B<CAP_SYS_ADMIN> capability in the "
 "namespace) may write either of the strings \"I<allow>\" or \"I<deny>\" to "
@@ -3781,7 +3791,7 @@ msgid ""
 msgstr "Привилегированный процесс (с мандатом B<CAP_SYS_ADMIN> в пространстве имён) может записать строку \"I<allow>\" или \"I<deny>\" в этот файл I<до> записи отображения ID групп для этого пользовательского пространства имён в файл I</proc/[pid]/gid_map>. Запись строки \"I<deny>\" запрещает любому процессу в пользовательском пространстве имён выполнять B<setgroups>(2)."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:732
+#: man-pages/man7/user_namespaces.7:733
 msgid ""
 "The essence of the restrictions described in the preceding paragraph is that"
 " it is permitted to write to I</proc/[pid]/setgroups> only so long as "
@@ -3793,14 +3803,14 @@ msgid ""
 msgstr "Сущность ограничений, описанных в предыдущем абзаце в том, чтобы разрешить запись в I</proc/[pid]/setgroups> только когда запрещено вызывать B<setgroups>(2), так как I</proc/[pid]gid_map> не настроен. Это гарантирует, что процесс не сможет перейти из состояния, в котором B<setgroups>(2) разрешён, в состояние, в котором B<setgroups>(2) запрещён; процесс может переходить только из состояния, когда B<setgroups>(2) запрещён, в состояние, когда B<setgroups>(2) разрешён."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:735
+#: man-pages/man7/user_namespaces.7:736
 msgid ""
 "The default value of this file in the initial user namespace is "
 "\"I<allow>\"."
 msgstr "Значение по умолчанию в этом файле для начального состояния пользовательского пространства имён равно \"I<allow>\"."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:750
+#: man-pages/man7/user_namespaces.7:751
 msgid ""
 "Once I</proc/[pid]/gid_map> has been written to (which has the effect of "
 "enabling B<setgroups>(2)  in the user namespace), it is no longer possible "
@@ -3809,14 +3819,14 @@ msgid ""
 msgstr "После записи в I</proc/[pid]/gid_map> (что действует как разрешение работы B<setgroups>(2) в пользовательском пространстве имён), больше невозможно запретить B<setgroups>(2) записью \"I<deny>\" в I</proc/[pid]/setgroups> (запись завершается ошибкой B<EPERM>)."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:754
+#: man-pages/man7/user_namespaces.7:755
 msgid ""
 "A child user namespace inherits the I</proc/[pid]/setgroups> setting from "
 "its parent."
 msgstr "Дочернее пользовательское пространство имён наследует значение I</proc/[pid]/setgroups> своего родителя."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:768
+#: man-pages/man7/user_namespaces.7:769
 msgid ""
 "If the I<setgroups> file has the value \"I<deny>\", then the B<setgroups>(2)"
 "  system call can't subsequently be reenabled (by writing \"I<allow>\" to "
@@ -3836,7 +3846,7 @@ msgstr "Если файл I<setgroups> содержит значение \"I<den
 #. 	* Must already have written "deny" to /proc/PID/setgroups
 #.  ============================================================
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:810
+#: man-pages/man7/user_namespaces.7:811
 msgid ""
 "The I</proc/[pid]/setgroups> file was added in Linux 3.19, but was "
 "backported to many earlier stable kernel series, because it addresses a "
@@ -3856,14 +3866,14 @@ msgid ""
 msgstr "Файл I</proc/[pid]/setgroups> был добавлен в Linux 3.19, но перенесён и в старшие серии ядра, так как служит для обеспечения безопасности. В частности, это влияет на файлы с правами доступа «rwx---rwx». Эти файлы меньшие права «группе» по сравнению с группой «остальные». Это означает, что удаление группы с помощью B<setgroups>(2) может открыть доступ к файлу, тем которые не имели его. До существования пользовательских пространств имён это не было проблемой, так как только привилегированный процесс (с мандатом B<CAP_SETGID>) мог вызывать B<setgroups>(2). Однако с введение пользовательских пространств имён стало возможным и непривилегированному процессу создавать новое пространство имён, в котором пользователь имеет все права. После этого ранее непривилегированный пользователь может удалить группы и таким образом получить доступ к файлу, которого раньше не имел. Файл I</proc/[pid]/setgroups> был добавлен для решения этой проблемы безопасности; он запрещает непривилегированному процессу удалять группы с помощью  B<setgroups>(2)."
 
 #. type: SS
-#: man-pages/man7/user_namespaces.7:810
+#: man-pages/man7/user_namespaces.7:811
 #, no-wrap
 msgid "Unmapped user and group IDs"
 msgstr "Неотображённые пользовательские и групповые ID"
 
 #.  from_kuid_munged(), from_kgid_munged()
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:827
+#: man-pages/man7/user_namespaces.7:828
 msgid ""
 "There are various places where an unmapped user ID (group ID)  may be "
 "exposed to user space.  For example, the first process in a new user "
@@ -3877,7 +3887,7 @@ msgstr "Есть несколько мест, где в пользователь
 
 #.  also SO_PEERCRED
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:855
+#: man-pages/man7/user_namespaces.7:856
 msgid ""
 "The cases where unmapped IDs are mapped in this fashion include system calls"
 " that return user IDs (B<getuid>(2), B<getgid>(2), and similar), credentials"
@@ -3894,7 +3904,7 @@ msgstr "Случаи, где неотображённые ID отображаю�
 #.  Also F_GETOWNER_UIDS is an exception
 #.  ============================================================
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:870
+#: man-pages/man7/user_namespaces.7:871
 msgid ""
 "There is one notable case where unmapped user and group IDs are I<not> "
 "converted to the corresponding overflow ID value.  When viewing a I<uid_map>"
@@ -3903,14 +3913,82 @@ msgid ""
 msgstr "Есть один известный случай, где неотображённый пользовательский и групповой ID I<не> преобразуется в соответствующее значение ID переполнения. Если при просмотре файла I<uid_map> или I<gid_map> обнаруживается, что для второго поля нет отображения, то поле отображается как 4294967295 (-1 для беззнакового целого)."
 
 #. type: SS
-#: man-pages/man7/user_namespaces.7:870
+#: man-pages/man7/user_namespaces.7:871
+#, no-wrap
+msgid "Accessing files"
+msgstr ""
+
+#.  ============================================================
+#. type: Plain text
+#: man-pages/man7/user_namespaces.7:883
+msgid ""
+"In order to determine permissions when an unprivileged process accesses a "
+"file, the process credentials (UID, GID) and the file credentials are in "
+"effect mapped back to what they would be in the initial user namespace and "
+"then compared to determine the permissions that the process has on the file."
+"  The same is also of other objects that employ the credentials plus "
+"permissions mask accessibility model, such as System V IPC objects"
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/user_namespaces.7:883
+#, no-wrap
+msgid "Operation of file-related capabilities"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/user_namespaces.7:895
+msgid ""
+"Certain capabilities allow a process to bypass various kernel-enforced "
+"restrictions when performing operations on files owned by other users or "
+"groups.  These capabilities are: B<CAP_CHOWN>, B<CAP_DAC_OVERRIDE>, "
+"B<CAP_DAC_READ_SEARCH>, B<CAP_FOWNER>, and B<CAP_FSETID>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/user_namespaces.7:900
+msgid ""
+"Within a user namespace, these capabilities allow a process to bypass the "
+"rules if the process has the relevant capability over the file, meaning "
+"that:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/user_namespaces.7:902
+msgid ""
+"the process has the relevant effective capability in its user namespace; and"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/user_namespaces.7:905
+msgid ""
+"the file's user ID and group ID both have valid mappings in the user "
+"namespace."
+msgstr ""
+
+#.  These are the checks performed by the kernel function
+#.  inode_owner_or_capable(). There is one exception to the exception:
+#.  overriding the directory sticky permission bit requires that
+#.  the file has a valid mapping for both its UID and GID.
+#.  ============================================================
+#. type: Plain text
+#: man-pages/man7/user_namespaces.7:919
+msgid ""
+"The B<CAP_FOWNER> capability is treated somewhat exceptionally: it allows a "
+"process to bypass the corresponding rules so long as at least the file's "
+"user ID has a mapping in the user namespace (i.e., the file's group ID does "
+"not need to have a valid mapping)."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/user_namespaces.7:919
 #, no-wrap
 msgid "Set-user-ID and set-group-ID programs"
 msgstr "Программы с установленными битами set-user-ID и set-group-ID"
 
 #.  ============================================================
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:890
+#: man-pages/man7/user_namespaces.7:939
 msgid ""
 "When a process inside a user namespace executes a set-user-ID (set-group-ID)"
 " program, the process's effective user (group) ID inside the namespace is "
@@ -3924,13 +4002,13 @@ msgid ""
 msgstr "Когда процесс внутри пользовательского пространства имён выполняет программу с установленным битом set-user-ID (set-group-ID), то эффективный ID пользователя (группы) внутри пространства имён изменяется на значение, отображённое для ID пользователя (группы) файла. Однако, если ID пользователя I<или> группы файла не имеет отображения внутри пространства имён, то бит set-user-ID (set-group-ID) просто игнорируется: выполняется новая программа, но эффективный ID пользователя (группы) остаётся не изменённым (такое поведение зеркально семантике выполнения программы с set-user-ID или set-group-ID, располагающейся в файловой системе, которая была смонтирована с флагом B<MS_NOSUID>, как описано в B<mount>(2))."
 
 #. type: SS
-#: man-pages/man7/user_namespaces.7:890
+#: man-pages/man7/user_namespaces.7:939
 #, no-wrap
 msgid "Miscellaneous"
 msgstr "Разное"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:900
+#: man-pages/man7/user_namespaces.7:949
 msgid ""
 "When a process's user and group IDs are passed over a UNIX domain socket to "
 "a process in a different user namespace (see the description of "
@@ -3940,19 +4018,19 @@ msgid ""
 msgstr "Когда ID пользователя и группы процесса передаются через доменный сокет UNIX в процесс в другом пользовательском пространстве имён (смотрите описание B<SCM_CREDENTIALS> в B<unix>(7)), то они транслируются в соответствующие значения согласно отображению ID пользователя и группы принимающего процесса."
 
 #. type: SH
-#: man-pages/man7/user_namespaces.7:900
+#: man-pages/man7/user_namespaces.7:949
 #, no-wrap
 msgid "CONFORMING TO"
 msgstr "СООТВЕТСТВИЕ СТАНДАРТАМ"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:903
+#: man-pages/man7/user_namespaces.7:952
 msgid "Namespaces are a Linux-specific feature."
 msgstr "Пространства имён есть только в Linux."
 
 #.  ============================================================
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:913
+#: man-pages/man7/user_namespaces.7:962
 msgid ""
 "Over the years, there have been a lot of features that have been added to "
 "the Linux kernel that have been made available only to privileged users "
@@ -3963,13 +4041,13 @@ msgid ""
 msgstr "За эти годы в ядро Linux добавлено много свойств, которые были доступны только привилегированным пользователям, так как их возможности слишком велики, чтобы наделять ими приложения с set-user-ID. В целом, становится безопасно разрешать пользователю root в пользовательском пространстве имён использовать эти свойства, так как будучи в пользовательском пространстве имён, он не может получить больше прав, чем имеет root в пользовательском пространстве имён."
 
 #. type: SS
-#: man-pages/man7/user_namespaces.7:913
+#: man-pages/man7/user_namespaces.7:962
 #, no-wrap
 msgid "Availability"
 msgstr "Доступность"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:921
+#: man-pages/man7/user_namespaces.7:970
 msgid ""
 "Use of user namespaces requires a kernel that is configured with the "
 "B<CONFIG_USER_NS> option.  User namespaces require support in a range of "
@@ -3979,18 +4057,19 @@ msgstr "Для использования пользовательских пр�
 
 #.  commit d6970d4b726cea6d7a9bc4120814f95c09571fc3
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:932
+#: man-pages/man7/user_namespaces.7:981
 msgid ""
 "As at Linux 3.8, most relevant subsystems supported user namespaces, but a "
 "number of filesystems did not have the infrastructure needed to map user and"
 " group IDs between user namespaces.  Linux 3.9 added the required "
 "infrastructure support for many of the remaining unsupported filesystems "
 "(Plan 9 (9P), Andrew File System (AFS), Ceph, CIFS, CODA, NFS, and OCFS2).  "
-"Linux 3.12 added support the last of the unsupported major filesystems, XFS."
-msgstr "В Linux 3.8 самые важные подсистемы поддерживают пользовательские пространства имён, но значительное количество файловых систем не имеют инфраструктуры для отображения пользовательских и групповых ID между пользовательскими пространствами имён. В Linux 3.9 добавлена требуемая поддержка инфраструктуры во многие неподдерживаемые файловые системы (Plan 9 (9P), Andrew File System (AFS), Ceph, CIFS, CODA, NFS и OCFS2). В Linux 3.12 добавлена поддержка в последние основные файловые системы (XFS)."
+"Linux 3.12 added support for the last of the unsupported major filesystems, "
+"XFS."
+msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:941
+#: man-pages/man7/user_namespaces.7:990
 msgid ""
 "The program below is designed to allow experimenting with user namespaces, "
 "as well as other types of namespaces.  It creates namespaces as specified by"
@@ -4001,12 +4080,12 @@ msgid ""
 msgstr "Представленная далее программа разработана для экспериментов с пользовательскими пространствами имён. Она создаёт пространства имён согласно параметрам командной строки и затем выполняет команду внутри этих пространств имён. В комментариях и функции I<usage()> предоставлено полное описание программы. Следующий сеанс оболочки показывает её работу."
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:943
+#: man-pages/man7/user_namespaces.7:992
 msgid "First, we look at the run-time environment:"
 msgstr "Сначала, посмотрим на окружение выполнения:"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:952
+#: man-pages/man7/user_namespaces.7:1001
 #, no-wrap
 msgid ""
 "$ B<uname -rs>     # Need Linux 3.8 or later\n"
@@ -4018,7 +4097,7 @@ msgid ""
 msgstr "$ B<uname -rs>     # требуется Linux 3.8 или новее\nLinux 3.8.0\n$ B<id -u>         # работа от непривилегированного пользователя\n1000\n$ B<id -g>\n1000\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:966
+#: man-pages/man7/user_namespaces.7:1015
 msgid ""
 "Now start a new shell in new user (I<-U>), mount (I<-m>), and PID (I<-p>)  "
 "namespaces, with user ID (I<-M>)  and group ID (I<-G>)  1000 mapped to 0 "
@@ -4026,20 +4105,20 @@ msgid ""
 msgstr "Теперь запустим новую оболочку в новых пользовательском (I<-U>), монтирования (I<-m>) и PID (I<-p>) пространствах имён с пользовательским (I<-M>) и групповым ID (I<-G>)  1000, отображающимся в 0 внутри пользовательского пространства имён:"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:970
+#: man-pages/man7/user_namespaces.7:1019
 #, no-wrap
 msgid "$ B<./userns_child_exec -p -m -U -M '0 1000 1' -G '0 1000 1' bash>\n"
 msgstr "$ B<./userns_child_exec -p -m -U -M '0 1000 1' -G '0 1000 1' bash>\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:975
+#: man-pages/man7/user_namespaces.7:1024
 msgid ""
 "The shell has PID 1, because it is the first process in the new PID "
 "namespace:"
 msgstr "У оболочки PID равен 1, так как это первый процесс в новом пространстве имён PID:"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:980
+#: man-pages/man7/user_namespaces.7:1029
 #, no-wrap
 msgid ""
 "bash$ B<echo $$>\n"
@@ -4047,7 +4126,7 @@ msgid ""
 msgstr "bash$ B<echo $$>\n1\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:988
+#: man-pages/man7/user_namespaces.7:1037
 msgid ""
 "Mounting a new I</proc> filesystem and listing all of the processes visible "
 "in the new PID namespace shows that the shell can't see any processes "
@@ -4055,7 +4134,7 @@ msgid ""
 msgstr "Смонтируем новую файловую систему I</proc> и просмотрим все процессы, видимые в новом пространстве имён PID; убедимся, что оболочка не видит ни одного процесса вне своего пространства имён PID:"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:996
+#: man-pages/man7/user_namespaces.7:1045
 #, no-wrap
 msgid ""
 "bash$ B<mount -t proc proc /proc>\n"
@@ -4066,14 +4145,14 @@ msgid ""
 msgstr "bash$ B<mount -t proc proc /proc>\nbash$ B<ps ax>\n  PID TTY      STAT   TIME COMMAND\n    1 pts/3    S      0:00 bash\n   22 pts/3    R+     0:00 ps ax\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1001
+#: man-pages/man7/user_namespaces.7:1050
 msgid ""
 "Inside the user namespace, the shell has user and group ID 0, and a full set"
 " of permitted and effective capabilities:"
 msgstr "Внутри пользовательского пространства имён идентификаторы пользователя и группы оболочки равны 0, и она имеет полный набор разрешённых и эффективных мандатов:"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1011
+#: man-pages/man7/user_namespaces.7:1060
 #, no-wrap
 msgid ""
 "bash$ B<cat /proc/$$/status | egrep '^[UG]id'>\n"
@@ -4086,19 +4165,19 @@ msgid ""
 msgstr "bash$ B<cat /proc/$$/status | egrep '^[UG]id'>\nUid:\t0\t0\t0\t0\nGid:\t0\t0\t0\t0\nbash$ B<cat /proc/$$/status | egrep '^Cap(Prm|Inh|Eff)'>\nCapInh:\t0000000000000000\nCapPrm:\t0000001fffffffff\nCapEff:\t0000001fffffffff\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1017
+#: man-pages/man7/user_namespaces.7:1066
 #, no-wrap
 msgid "/* userns_child_exec.c\n"
 msgstr "/* userns_child_exec.c\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1019
+#: man-pages/man7/user_namespaces.7:1068
 #, no-wrap
 msgid "   Licensed under GNU General Public License v2 or later\n"
 msgstr "   Лицензируется на условиях Универсальной общественной лицензии\n   GNU версии 2 и новее\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1035
+#: man-pages/man7/user_namespaces.7:1084
 #, no-wrap
 msgid ""
 "   Create a child process that executes a shell command in new\n"
@@ -4119,7 +4198,7 @@ msgid ""
 msgstr "   Создаёт дочерний процесс, который запускает командную оболочку\n   в новых пространствах имён; может выполнять отображение UID и GID,\n   если они указаны при создании пользовательского пространства имён.\n*/\n#define _GNU_SOURCE\n#include E<lt>sched.hE<gt>\n#include E<lt>unistd.hE<gt>\n#include E<lt>stdlib.hE<gt>\n#include E<lt>sys/wait.hE<gt>\n#include E<lt>signal.hE<gt>\n#include E<lt>fcntl.hE<gt>\n#include E<lt>stdio.hE<gt>\n#include E<lt>string.hE<gt>\n#include E<lt>limits.hE<gt>\n#include E<lt>errno.hE<gt>\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1038
+#: man-pages/man7/user_namespaces.7:1087
 #, no-wrap
 msgid ""
 "/* A simple error-handling function: print an error message based\n"
@@ -4127,7 +4206,7 @@ msgid ""
 msgstr "/* Простая функция обработки ошибок: выводит сообщение об ошибке согласно\n   значению в «errno» и завершает вызвавший процесс */\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1041
+#: man-pages/man7/user_namespaces.7:1090
 #, no-wrap
 msgid ""
 "#define errExit(msg)    do { perror(msg); exit(EXIT_FAILURE); \\e\n"
@@ -4135,7 +4214,7 @@ msgid ""
 msgstr "#define errExit(msg)    do { perror(msg); exit(EXIT_FAILURE); \\e\n                        } while (0)\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1046
+#: man-pages/man7/user_namespaces.7:1095
 #, no-wrap
 msgid ""
 "struct child_args {\n"
@@ -4145,13 +4224,13 @@ msgid ""
 msgstr "struct child_args {\n    char **argv;        /* команда, выполняемая потомком с параметрами */\n    int    pipe_fd[2];  /* канал для синхронизации родителя и потомка */\n};\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1048
+#: man-pages/man7/user_namespaces.7:1097
 #, no-wrap
 msgid "static int verbose;\n"
 msgstr "static int verbose;\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1081
+#: man-pages/man7/user_namespaces.7:1130
 #, no-wrap
 msgid ""
 "static void\n"
@@ -4189,7 +4268,7 @@ msgid ""
 msgstr "static void\nusage(char *pname)\n{\n    fprintf(stderr, \"Использование: %s [параметры] кмд [арг…]\\en\\en\", pname);\n    fprintf(stderr, \"Создаёт дочерний процесс, который запускает командную \"\n            \"оболочку в новом пользовательском пространстве имён,\\en\"\n            \"и, возможно, также в других новых пространствах имён.\\en\\en\");\n    fprintf(stderr, \"Параметры:\\en\\en\");\n#define fpe(str) fprintf(stderr, \"    %s\", str);\n    fpe(\"-i          Новое пространство имён IPC\\en\");\n    fpe(\"-m          Новое пространство имён монтирования\\en\");\n    fpe(\"-n          Новое сетевое пространство имён\\en\");\n    fpe(\"-p          Новое пространство имён PID\\en\");\n    fpe(\"-u          Новое пространство имён UTS\\en\");\n    fpe(\"-U          Новое пользовательское пространство имён\\en\");\n    fpe(\"-M uid_map  карта UID для пользовательского пространства имён\\en\");\n    fpe(\"-G gid_map  карта GID для пользовательского пространства имён\\en\");\n    fpe(\"-z          Отображать пользовательский UID и GID в 0 в пользовательском пространстве имён\\en\");\n    fpe(\"            (эквивалентно: -M \\(aq0 E<lt>uidE<gt> 1\\(aq -G \\(aq0 E<lt>gidE<gt> 1\\(aq)\\en\");\n    fpe(\"-v          показывать дополнительные сообщения\\en\");\n    fpe(\"\\en\");\n    fpe(\"Если указан -z, -M или -G, то требуется -U.\\en\");\n    fpe(\"Нельзя указывать -z вместе с -M или -G.\\en\");\n    fpe(\"\\en\");\n    fpe(\"Строка карты для -M и -G состоит из записей вида:\\en\");\n    fpe(\"\\en\");\n    fpe(\"    ID-внутри-ns   ID-вне-ns   длина\\en\");\n    fpe(\"\\en\");\n    fpe(\"Строка карты может содержать несколько записей через запятую;\\en\");\n    fpe(\"запятые замещаются на символы новой строки перед записью\"\n        \" в файлы карт.\\en\");\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1084
+#: man-pages/man7/user_namespaces.7:1133
 #, no-wrap
 msgid ""
 "    exit(EXIT_FAILURE);\n"
@@ -4197,7 +4276,7 @@ msgid ""
 msgstr "    exit(EXIT_FAILURE);\n}\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1089
+#: man-pages/man7/user_namespaces.7:1138
 #, no-wrap
 msgid ""
 "/* Update the mapping file \\(aqmap_file\\(aq, with the value provided in\n"
@@ -4207,13 +4286,13 @@ msgid ""
 msgstr "/* Обновляем файл отображения «map_file» значением из\n   «mapping» — строкой, в которой определены отображения UID или GID.\n   Отображения UID или GID состоят из одной или более записей\n   (разделённых символом новой строки) вида:\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1091
+#: man-pages/man7/user_namespaces.7:1140
 #, no-wrap
 msgid "       ID_inside-ns    ID-outside-ns   length\n"
 msgstr "       ID-внутри-ns    ID-снаружи-ns   длина\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1096
+#: man-pages/man7/user_namespaces.7:1145
 #, no-wrap
 msgid ""
 "   Requiring the user to supply a string that contains newlines is\n"
@@ -4223,7 +4302,7 @@ msgid ""
 msgstr "   Требовать от пользователя указывать строку с символами новой строки\n   в командной строке неприемлемо. Поэтому мы позволим использовать\n   для разделения записей запятые и заменим их символами новой строки\n   перед записью строки в файл. */\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1102
+#: man-pages/man7/user_namespaces.7:1151
 #, no-wrap
 msgid ""
 "static void\n"
@@ -4234,13 +4313,13 @@ msgid ""
 msgstr "static void\nupdate_map(char *mapping, char *map_file)\n{\n    int fd, j;\n    size_t map_len;     /* длина «mapping» */\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1104
+#: man-pages/man7/user_namespaces.7:1153
 #, no-wrap
 msgid "    /* Replace commas in mapping string with newlines */\n"
 msgstr "    /* Заменяем запятые на символы новой строки в строке отображения */\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1109
+#: man-pages/man7/user_namespaces.7:1158
 #, no-wrap
 msgid ""
 "    map_len = strlen(mapping);\n"
@@ -4250,7 +4329,7 @@ msgid ""
 msgstr "    map_len = strlen(mapping);\n    for (j = 0; j E<lt> map_len; j++)\n        if (mapping[j] == \\(aq,\\(aq)\n            mapping[j] = \\(aq\\en\\(aq;\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1116
+#: man-pages/man7/user_namespaces.7:1165
 #, no-wrap
 msgid ""
 "    fd = open(map_file, O_RDWR);\n"
@@ -4262,7 +4341,7 @@ msgid ""
 msgstr "    fd = open(map_file, O_RDWR);\n    if (fd == -1) {\n        fprintf(stderr, \"ОШИБКА: open %s: %s\\en\", map_file,\n                strerror(errno));\n        exit(EXIT_FAILURE);\n    }\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1122
+#: man-pages/man7/user_namespaces.7:1171
 #, no-wrap
 msgid ""
 "    if (write(fd, mapping, map_len) != map_len) {\n"
@@ -4273,7 +4352,7 @@ msgid ""
 msgstr "    if (write(fd, mapping, map_len) != map_len) {\n        fprintf(stderr, \"ОШИБКА: write %s: %s\\en\", map_file,\n                strerror(errno));\n        exit(EXIT_FAILURE);\n    }\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1125 man-pages/man7/user_namespaces.7:1169
+#: man-pages/man7/user_namespaces.7:1174 man-pages/man7/user_namespaces.7:1218
 #, no-wrap
 msgid ""
 "    close(fd);\n"
@@ -4281,7 +4360,7 @@ msgid ""
 msgstr "    close(fd);\n}\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1134
+#: man-pages/man7/user_namespaces.7:1183
 #, no-wrap
 msgid ""
 "/* Linux 3.19 made a change in the handling of setgroups(2) and the\n"
@@ -4295,7 +4374,7 @@ msgid ""
 msgstr "/* В Linux 3.19 изменена работа с setgroups(2) и добавлен файл\n   \\(aqgid_map\\(aq для обеспечения безопасности. Задача в том,\n   чтобы запретить удалять группы *непривилегированному* пользователю\n   через создание пространства имён. Результат изменений 3.19 в том, что\n   для обновления файла \\(aqgid_maps\\(aq, сначала нужно запретить системный\n   вызов setgroups() в этом пользовательском пространстве имён, записав\n   \"deny\" в один из файлов /proc/PID/setgroups в этом пространстве имён.\n   Это цель данной функции. */\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1140
+#: man-pages/man7/user_namespaces.7:1189
 #, no-wrap
 msgid ""
 "static void\n"
@@ -4306,7 +4385,7 @@ msgid ""
 msgstr "static void\nproc_setgroups_write(pid_t child_pid, char *str)\n{\n    char setgroups_path[PATH_MAX];\n    int fd;\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1143
+#: man-pages/man7/user_namespaces.7:1192
 #, no-wrap
 msgid ""
 "    snprintf(setgroups_path, PATH_MAX, \"/proc/%ld/setgroups\",\n"
@@ -4314,7 +4393,7 @@ msgid ""
 msgstr "    snprintf(setgroups_path, PATH_MAX, \"/proc/%ld/setgroups\",\n            (long) child_pid);\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1146
+#: man-pages/man7/user_namespaces.7:1195
 #, no-wrap
 msgid ""
 "    fd = open(setgroups_path, O_RDWR);\n"
@@ -4322,7 +4401,7 @@ msgid ""
 msgstr "    fd = open(setgroups_path, O_RDWR);\n    if (fd == -1) {\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1152
+#: man-pages/man7/user_namespaces.7:1201
 #, no-wrap
 msgid ""
 "        /* We may be on a system that doesn\\(aqt support\n"
@@ -4333,7 +4412,7 @@ msgid ""
 msgstr "        /* Система может не поддерживать\n           /proc/PID/setgroups. В этом случае файл не существует,\n           и система не закладывает ограничений, добавленных в Linux 3.19.\n           Хорошо, нам не нужно ничего делать, чтобы разрешить\n           обновлять \\(aqgid_map\\(aq.\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1156
+#: man-pages/man7/user_namespaces.7:1205
 #, no-wrap
 msgid ""
 "           However, if the error from open() was something other than\n"
@@ -4342,7 +4421,7 @@ msgid ""
 msgstr "           Однако, если ошибка open() отличается от\n           ENOENT, сообщим об этом пользователю. */\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1162
+#: man-pages/man7/user_namespaces.7:1211
 #, no-wrap
 msgid ""
 "        if (errno != ENOENT)\n"
@@ -4353,7 +4432,7 @@ msgid ""
 msgstr "        if (errno != ENOENT)\n            fprintf(stderr, \"ERROR: open %s: %s\\en\", setgroups_path,\n                strerror(errno));\n        return;\n    }\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1166
+#: man-pages/man7/user_namespaces.7:1215
 #, no-wrap
 msgid ""
 "    if (write(fd, str, strlen(str)) == -1)\n"
@@ -4362,7 +4441,7 @@ msgid ""
 msgstr "    if (write(fd, str, strlen(str)) == -1)\n        fprintf(stderr, \"ОШИБКА: write %s: %s\\en\", setgroups_path,\n            strerror(errno));\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1175
+#: man-pages/man7/user_namespaces.7:1224
 #, no-wrap
 msgid ""
 "static int              /* Start function for cloned child */\n"
@@ -4373,7 +4452,7 @@ msgid ""
 msgstr "static int              /* Начальная функция клонированного потомка */\nchildFunc(void *arg)\n{\n    struct child_args *args = (struct child_args *) arg;\n    char ch;\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1180
+#: man-pages/man7/user_namespaces.7:1229
 #, no-wrap
 msgid ""
 "    /* Wait until the parent has updated the UID and GID mappings.\n"
@@ -4383,7 +4462,7 @@ msgid ""
 msgstr "    /* Ждём пока родитель обновит отображения UID и GID.\n       Смотрите комментарий в main(). Мы ждём конца файла в канале,\n       который будет закрыт родительским процессом после обновления\n       отображений. */\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1189
+#: man-pages/man7/user_namespaces.7:1238
 #, no-wrap
 msgid ""
 "    close(args-E<gt>pipe_fd[1]);    /* Close our descriptor for the write\n"
@@ -4397,19 +4476,19 @@ msgid ""
 msgstr "    close(args-E<gt>pipe_fd[1]);    /* закрываем наш дескриптор для записи\n                                   конца канала для того, чтобы мы\n                                   увидели EOF, когда родитель закроет\n                                   свой дескриптор */\n    if (read(args-E<gt>pipe_fd[0], &ch, 1) != 0) {\n        fprintf(stderr,\n                \"Ошибка в потомке: при чтении из канала получен != 0\\en\");\n        exit(EXIT_FAILURE);\n    }\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1191
+#: man-pages/man7/user_namespaces.7:1240
 #, no-wrap
 msgid "    close(args-E<gt>pipe_fd[0]);\n"
 msgstr "    close(args-E<gt>pipe_fd[0]);\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1193
+#: man-pages/man7/user_namespaces.7:1242
 #, no-wrap
 msgid "    /* Execute a shell command */\n"
 msgstr "    /* Запускаем командную оболочку */\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1198
+#: man-pages/man7/user_namespaces.7:1247
 #, no-wrap
 msgid ""
 "    printf(\"About to exec %s\\en\", args-E<gt>argv[0]);\n"
@@ -4419,20 +4498,20 @@ msgid ""
 msgstr "    printf(\"О exec %s\\en\", args-E<gt>argv[0]);\n    execvp(args-E<gt>argv[0], args-E<gt>argv);\n    errExit(\"execvp\");\n}\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1200
+#: man-pages/man7/user_namespaces.7:1249
 #, no-wrap
 msgid "#define STACK_SIZE (1024 * 1024)\n"
 msgstr "#define STACK_SIZE (1024 * 1024)\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1202
+#: man-pages/man7/user_namespaces.7:1251
 #, no-wrap
 msgid ""
 "static char child_stack[STACK_SIZE];    /* Space for child\\(aqs stack */\n"
 msgstr "static char child_stack[STACK_SIZE];    /* место под стек в потомке */\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1213
+#: man-pages/man7/user_namespaces.7:1262
 #, no-wrap
 msgid ""
 "int\n"
@@ -4448,7 +4527,7 @@ msgid ""
 msgstr "int\nmain(int argc, char *argv[])\n{\n    int flags, opt, map_zero;\n    pid_t child_pid;\n    struct child_args args;\n    char *uid_map, *gid_map;\n    const int MAP_BUF_SIZE = 100;\n    char map_buf[MAP_BUF_SIZE];\n    char map_path[PATH_MAX];\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1220
+#: man-pages/man7/user_namespaces.7:1269
 #, no-wrap
 msgid ""
 "    /* Parse command-line options. The initial \\(aq+\\(aq character in\n"
@@ -4460,7 +4539,7 @@ msgid ""
 msgstr "    /* Разбираем параметры командной строки. Начальный символ «+» в\n       последнем аргументе getopt() предотвращает подстановку параметров\n       командной строки в стиле GNU. Это полезно, так как иногда\n       «команда», выполняемая этой программой, сама имеет параметры\n       командной строки. Мы не хотим, чтобы getopt() передала их\n       нашей программе. */\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1241
+#: man-pages/man7/user_namespaces.7:1290
 #, no-wrap
 msgid ""
 "    flags = 0;\n"
@@ -4486,13 +4565,13 @@ msgid ""
 msgstr "    flags = 0;\n    verbose = 0;\n    gid_map = NULL;\n    uid_map = NULL;\n    map_zero = 0;\n    while ((opt = getopt(argc, argv, \"+imnpuUM:G:zv\")) != -1) {\n        switch (opt) {\n        case \\(aqi\\(aq: flags |= CLONE_NEWIPC;        break;\n        case \\(aqm\\(aq: flags |= CLONE_NEWNS;         break;\n        case \\(aqn\\(aq: flags |= CLONE_NEWNET;        break;\n        case \\(aqp\\(aq: flags |= CLONE_NEWPID;        break;\n        case \\(aqu\\(aq: flags |= CLONE_NEWUTS;        break;\n        case \\(aqv\\(aq: verbose = 1;                  break;\n        case \\(aqz\\(aq: map_zero = 1;                 break;\n        case \\(aqM\\(aq: uid_map = optarg;             break;\n        case \\(aqG\\(aq: gid_map = optarg;             break;\n        case \\(aqU\\(aq: flags |= CLONE_NEWUSER;       break;\n        default:  usage(argv[0]);\n        }\n    }\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1243
+#: man-pages/man7/user_namespaces.7:1292
 #, no-wrap
 msgid "    /* -M or -G without -U is nonsensical */\n"
 msgstr "    /* -M или -G без -U не имеют смысла */\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1248
+#: man-pages/man7/user_namespaces.7:1297
 #, no-wrap
 msgid ""
 "    if (((uid_map != NULL || gid_map != NULL || map_zero) &&\n"
@@ -4502,13 +4581,13 @@ msgid ""
 msgstr "    if (((uid_map != NULL || gid_map != NULL || map_zero) &&\n                !(flags & CLONE_NEWUSER)) ||\n            (map_zero && (uid_map != NULL || gid_map != NULL)))\n        usage(argv[0]);\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1250
+#: man-pages/man7/user_namespaces.7:1299
 #, no-wrap
 msgid "    args.argv = &argv[optind];\n"
 msgstr "    args.argv = &argv[optind];\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1260
+#: man-pages/man7/user_namespaces.7:1309
 #, no-wrap
 msgid ""
 "    /* We use a pipe to synchronize the parent and child, in order to\n"
@@ -4523,7 +4602,7 @@ msgid ""
 msgstr "    /* Мы используем канал для синхронизации родителя и потомка, чтобы\n       родитель настроил отображения UID и GID до того, как потомок\n       вызовет execve(). Это гарантирует, что потомок предъявит свои\n       мандаты при execve(); обычно мы хотим отобразить эффективный\n       пользовательский ID потомка в 0 в новом пользовательском\n       пространстве имён. Без этой синхронизации потомок потерял\n       бы свои мандаты при вызове execve() с ненулевым пользовательским\n       ID (смотрите в справочной странице capabilities(7) подробности\n       преобразования мандатов процесса при execve()). */\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1263
+#: man-pages/man7/user_namespaces.7:1312
 #, no-wrap
 msgid ""
 "    if (pipe(args.pipe_fd) == -1)\n"
@@ -4531,13 +4610,13 @@ msgid ""
 msgstr "    if (pipe(args.pipe_fd) == -1)\n        errExit(\"pipe\");\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1265
+#: man-pages/man7/user_namespaces.7:1314
 #, no-wrap
 msgid "    /* Create the child in new namespace(s) */\n"
 msgstr "    /* создаём потомка в новом пространстве имён */\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1270
+#: man-pages/man7/user_namespaces.7:1319
 #, no-wrap
 msgid ""
 "    child_pid = clone(childFunc, child_stack + STACK_SIZE,\n"
@@ -4547,13 +4626,13 @@ msgid ""
 msgstr "    child_pid = clone(childFunc, child_stack + STACK_SIZE,\n                      flags | SIGCHLD, &args);\n    if (child_pid == -1)\n        errExit(\"clone\");\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1272
+#: man-pages/man7/user_namespaces.7:1321
 #, no-wrap
 msgid "    /* Parent falls through to here */\n"
 msgstr "    /* предок попадает сюда */\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1276
+#: man-pages/man7/user_namespaces.7:1325
 #, no-wrap
 msgid ""
 "    if (verbose)\n"
@@ -4562,13 +4641,13 @@ msgid ""
 msgstr "    if (verbose)\n        printf(\"%s: PID потомка, созданного clone(): %ld\\en\",\n                argv[0], (long) child_pid);\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1278
+#: man-pages/man7/user_namespaces.7:1327
 #, no-wrap
 msgid "    /* Update the UID and GID maps in the child */\n"
 msgstr "    /* обновляем отображения UID и GID в потомке */\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1288
+#: man-pages/man7/user_namespaces.7:1337
 #, no-wrap
 msgid ""
 "    if (uid_map != NULL || map_zero) {\n"
@@ -4583,7 +4662,7 @@ msgid ""
 msgstr "    if (uid_map != NULL || map_zero) {\n        snprintf(map_path, PATH_MAX, \"/proc/%ld/uid_map\",\n                (long) child_pid);\n        if (map_zero) {\n            snprintf(map_buf, MAP_BUF_SIZE, \"0 %ld 1\", (long) getuid());\n            uid_map = map_buf;\n        }\n        update_map(uid_map, map_path);\n    }\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1291
+#: man-pages/man7/user_namespaces.7:1340
 #, no-wrap
 msgid ""
 "    if (gid_map != NULL || map_zero) {\n"
@@ -4591,7 +4670,7 @@ msgid ""
 msgstr "    if (gid_map != NULL || map_zero) {\n        proc_setgroups_write(child_pid, \"deny\");\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1300
+#: man-pages/man7/user_namespaces.7:1349
 #, no-wrap
 msgid ""
 "        snprintf(map_path, PATH_MAX, \"/proc/%ld/gid_map\",\n"
@@ -4605,7 +4684,7 @@ msgid ""
 msgstr "        snprintf(map_path, PATH_MAX, \"/proc/%ld/gid_map\",\n                (long) child_pid);\n        if (map_zero) {\n            snprintf(map_buf, MAP_BUF_SIZE, \"0 %ld 1\", (long) getgid());\n            gid_map = map_buf;\n        }\n        update_map(gid_map, map_path);\n    }\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1303
+#: man-pages/man7/user_namespaces.7:1352
 #, no-wrap
 msgid ""
 "    /* Close the write end of the pipe, to signal to the child that we\n"
@@ -4613,13 +4692,13 @@ msgid ""
 msgstr "    /* закрываем конец канала на стороне записи для сообщения потомку\n       о том, что мы обновили отображения UID и GID */\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1305
+#: man-pages/man7/user_namespaces.7:1354
 #, no-wrap
 msgid "    close(args.pipe_fd[1]);\n"
 msgstr "    close(args.pipe_fd[1]);\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1308
+#: man-pages/man7/user_namespaces.7:1357
 #, no-wrap
 msgid ""
 "    if (waitpid(child_pid, NULL, 0) == -1)      /* Wait for child */\n"
@@ -4627,7 +4706,7 @@ msgid ""
 msgstr "    if (waitpid(child_pid, NULL, 0) == -1)      /* ждём потомка */\n        errExit(\"waitpid\");\n"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1311
+#: man-pages/man7/user_namespaces.7:1360
 #, no-wrap
 msgid ""
 "    if (verbose)\n"
@@ -4639,7 +4718,7 @@ msgstr "    if (verbose)\n        printf(\"%s: завершение\\en\", argv[
 #.  From the shadow package
 #.  From the shadow package
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1330
+#: man-pages/man7/user_namespaces.7:1379
 msgid ""
 "B<newgidmap>(1), B<newuidmap>(1), B<clone>(2), B<ptrace>(2), B<setns>(2), "
 "B<unshare>(2), B<proc>(5), B<subgid>(5), B<subuid>(5), B<capabilities>(7), "
@@ -4648,7 +4727,7 @@ msgid ""
 msgstr "B<newgidmap>(1), B<newuidmap>(1), B<clone>(2), B<ptrace>(2), B<setns>(2), B<unshare>(2), B<proc>(5), B<subgid>(5), B<subuid>(5), B<capabilities>(7), B<cgroup_namespaces>(7)  B<credentials>(7), B<namespaces>(7), B<pid_namespaces>(7)"
 
 #. type: Plain text
-#: man-pages/man7/user_namespaces.7:1332
+#: man-pages/man7/user_namespaces.7:1381
 msgid ""
 "The kernel source file I<Documentation/namespaces/resource-control.txt>."
 msgstr "Файл из дерева исходного кода ядра I<Documentation/namespaces/resource-control.txt>."

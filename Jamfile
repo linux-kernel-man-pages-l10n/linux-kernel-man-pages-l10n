@@ -21,6 +21,10 @@
 # отправить POT в TX
 # jam push_pot
 
+# каталоги, добавляемые вручную
+# po man man-pages
+
+ 
 # проверить и зарегистрировать POT-файлы в TX
 # (один раз при создании проекта)
 # jam reg-pot
@@ -31,7 +35,7 @@
 local LANGS = ru ;
 
 # актуальная версия оригинальных страниц
-local MAN-PAGE-VERSION = 5.00 ;
+local MAN-PAGE-VERSION = 5.02 ;
 
 # каталог с оригинальными страницами на английском
 local en_orig_dir     = man-pages-git ;
@@ -136,7 +140,7 @@ rule MergePOT
 }
 actions MergePOT
 {
-	msgcat --use-first --force-po -t UTF-8 --lang=en -o $(<) -f $(<).list
+	msgcat --use-first --force-po -w 79 -t UTF-8 --lang=en -o $(<) -f $(<).list
 }
 
 NOTFILE reg-pot ;

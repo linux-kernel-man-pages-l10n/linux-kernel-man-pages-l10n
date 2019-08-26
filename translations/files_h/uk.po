@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
-"POT-Creation-Date: 2018-01-09 18:51+0300\n"
-"PO-Revision-Date: 2019-04-02 15:54+0000\n"
+"POT-Creation-Date: 2019-08-26 09:25+0300\n"
+"PO-Revision-Date: 2019-08-26 06:20+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/kruvalig/man-pages/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -504,7 +504,7 @@ msgstr ""
 #. type: TH
 #: man-pages/man7/hostname.7:39
 #, no-wrap
-msgid "2017-05-03"
+msgid "2019-05-09"
 msgstr ""
 
 #. type: Plain text
@@ -532,17 +532,24 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/hostname.7:70
+#: man-pages/man7/hostname.7:68
 msgid ""
 "Hostnames are often used with network client and server programs, which must"
 " generally translate the name to an address for use.  (This task is "
 "generally performed by either B<getaddrinfo>(3)  or the obsolete "
-"B<gethostbyname>(3).)  Hostnames are resolved by the Internet name resolver "
-"in the following fashion."
+"B<gethostbyname>(3).)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/hostname.7:83
+#: man-pages/man7/hostname.7:78
+msgid ""
+"Hostnames are resolved by the NSS framework in glibc according to the "
+"B<hosts> configuration in B<nsswitch.conf>.  The DNS-based name resolver (in"
+" the B<dns> NSS service module) resolves them in the following fashion."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hostname.7:91
 msgid ""
 "If the name consists of a single component, that is, contains no dot, and if"
 " the environment variable B<HOSTALIASES> is set to the name of a file, that "
@@ -556,14 +563,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/hostname.7:87
+#: man-pages/man7/hostname.7:95
 msgid ""
 "If the input name ends with a trailing dot, the trailing dot is removed, and"
 " the remaining name is looked up with no further processing."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/hostname.7:100
+#: man-pages/man7/hostname.7:108
 msgid ""
 "If the input name does not end with a trailing dot, it is looked up by "
 "searching through a list of domains until a match is found.  The default "
@@ -577,19 +584,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/hostname.7:106
+#: man-pages/man7/hostname.7:115
 msgid ""
-"B<getaddrinfo>(3), B<gethostbyname>(3), B<resolver>(5), B<mailaddr>(7), "
-"B<named>(8)"
+"B<getaddrinfo>(3), B<gethostbyname>(3), B<nsswitch.conf>(5), B<resolver>(5),"
+" B<mailaddr>(7), B<named>(8)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/hostname.7:110
+#: man-pages/man7/hostname.7:119
 msgid "E<.UR http://www.ietf.org\\:/rfc\\:/rfc1123.txt> IETF RFC\\ 1123 E<.UE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/hostname.7:113
+#: man-pages/man7/hostname.7:122
 msgid "E<.UR http://www.ietf.org\\:/rfc\\:/rfc1178.txt> IETF RFC\\ 1178 E<.UE>"
 msgstr ""
 

@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
-"POT-Creation-Date: 2017-04-23 07:40+0300\n"
-"PO-Revision-Date: 2019-04-02 15:56+0000\n"
+"POT-Creation-Date: 2019-08-26 09:27+0300\n"
+"PO-Revision-Date: 2019-08-26 06:22+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Persian (http://www.transifex.com/kruvalig/man-pages/language/fa/)\n"
 "MIME-Version: 1.0\n"
@@ -3269,7 +3269,7 @@ msgstr ""
 #. type: TH
 #: man-pages/man2/tkill.2:29
 #, no-wrap
-msgid "2017-09-15"
+msgid "2019-08-02"
 msgstr ""
 
 #. type: Plain text
@@ -3290,13 +3290,12 @@ msgid "B<int tgkill(int >I<tgid>B<, int >I<tid>B<, int >I<sig>B<);>\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tkill.2:41
-msgid ""
-"I<Note>: There are no glibc wrappers for these system calls; see NOTES."
+#: man-pages/man2/tkill.2:43
+msgid "I<Note>: There is no glibc wrapper for B<tkill>(); see NOTES."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tkill.2:54
+#: man-pages/man2/tkill.2:56
 msgid ""
 "B<tgkill>()  sends the signal I<sig> to the thread with the thread ID I<tid>"
 " in the thread group I<tgid>.  (By contrast, B<kill>(2)  can be used to send"
@@ -3325,7 +3324,7 @@ msgstr ""
 #.  possibly by lowering the max pid parameter in /proc, forcing
 #.  the same tid to be reused rapidly.
 #. type: Plain text
-#: man-pages/man2/tkill.2:87
+#: man-pages/man2/tkill.2:89
 msgid ""
 "B<tkill>()  is an obsolete predecessor to B<tgkill>().  It allows only the "
 "target thread ID to be specified, which may result in the wrong thread being"
@@ -3334,119 +3333,125 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tkill.2:90
+#: man-pages/man2/tkill.2:92
 msgid ""
 "These are the raw system call interfaces, meant for internal thread library "
 "use."
 msgstr ""
 
 #. type: SH
-#: man-pages/man2/tkill.2:90
+#: man-pages/man2/tkill.2:92
 #, no-wrap
 msgid "RETURN VALUE"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tkill.2:94
+#: man-pages/man2/tkill.2:96
 msgid ""
 "On success, zero is returned.  On error, -1 is returned, and I<errno> is set"
 " appropriately."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/tkill.2:95
+#: man-pages/man2/tkill.2:97
 #, no-wrap
 msgid "B<EINVAL>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tkill.2:98
+#: man-pages/man2/tkill.2:100
 msgid "An invalid thread ID, thread group ID, or signal was specified."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/tkill.2:98
+#: man-pages/man2/tkill.2:100
 #, no-wrap
 msgid "B<EPERM>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tkill.2:103
+#: man-pages/man2/tkill.2:105
 msgid "Permission denied.  For the required permissions, see B<kill>(2)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/tkill.2:103
+#: man-pages/man2/tkill.2:105
 #, no-wrap
 msgid "B<ESRCH>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tkill.2:106
+#: man-pages/man2/tkill.2:108
 msgid "No process with the specified thread ID (and thread group ID) exists."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/tkill.2:106 man-pages/man2/tkill.2:113
+#: man-pages/man2/tkill.2:108 man-pages/man2/tkill.2:115
 #, no-wrap
 msgid "B<EAGAIN>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tkill.2:113
+#: man-pages/man2/tkill.2:115
 msgid ""
 "The B<RLIMIT_SIGPENDING> resource limit was reached and I<sig> is a real-"
 "time signal."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tkill.2:118
+#: man-pages/man2/tkill.2:120
 msgid ""
 "Insufficient kernel memory was available and I<sig> is a real-time signal."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tkill.2:123
+#: man-pages/man2/tkill.2:125
 msgid ""
 "B<tkill>()  is supported since Linux 2.4.19 / 2.5.4.  B<tgkill>()  was added"
 " in Linux 2.5.75."
 msgstr ""
 
+#. type: Plain text
+#: man-pages/man2/tkill.2:129
+msgid "Library support for B<tgkill>()  was added to glibc in version 2.30."
+msgstr ""
+
 #. type: SH
-#: man-pages/man2/tkill.2:123
+#: man-pages/man2/tkill.2:129
 #, no-wrap
 msgid "CONFORMING TO"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tkill.2:129
+#: man-pages/man2/tkill.2:135
 msgid ""
 "B<tkill>()  and B<tgkill>()  are Linux-specific and should not be used in "
 "programs that are intended to be portable."
 msgstr ""
 
 #. type: SH
-#: man-pages/man2/tkill.2:129
+#: man-pages/man2/tkill.2:135
 #, no-wrap
 msgid "NOTES"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tkill.2:135
+#: man-pages/man2/tkill.2:141
 msgid ""
 "See the description of B<CLONE_THREAD> in B<clone>(2)  for an explanation of"
 " thread groups."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tkill.2:138
+#: man-pages/man2/tkill.2:148
 msgid ""
-"Glibc does not provide wrappers for these system calls; call them using "
-"B<syscall>(2)."
+"Glibc does not provide a wrapper for B<tkill>(); call it using "
+"B<syscall>(2).  Before glibc 2.30, there was also no wrapper function for "
+"B<tgkill>()."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tkill.2:142
+#: man-pages/man2/tkill.2:152
 msgid "B<clone>(2), B<gettid>(2), B<kill>(2), B<rt_sigqueueinfo>(2)"
 msgstr ""
 
@@ -3454,6 +3459,12 @@ msgstr ""
 #: man-pages/man2/timer_getoverrun.2:26
 #, no-wrap
 msgid "TIMER_GETOVERRUN"
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/timer_getoverrun.2:26
+#, no-wrap
+msgid "2017-09-15"
 msgstr ""
 
 #. type: Plain text
@@ -4597,38 +4608,39 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tee.2:105
+#: man-pages/man2/tee.2:107
 msgid ""
-"B<SPLICE_F_NONBLOCK> was specified in I<flags>, and the operation would "
-"block."
+"B<SPLICE_F_NONBLOCK> was specified in I<flags> or one of the file "
+"descriptors had been marked as nonblocking (B<O_NONBLOCK>)B<,> and the "
+"operation would block."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tee.2:115
+#: man-pages/man2/tee.2:117
 msgid ""
 "I<fd_in> or I<fd_out> does not refer to a pipe; or I<fd_in> and I<fd_out> "
 "refer to the same pipe."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tee.2:118
+#: man-pages/man2/tee.2:120
 msgid "Out of memory."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tee.2:123
+#: man-pages/man2/tee.2:125
 msgid ""
 "The B<tee>()  system call first appeared in Linux 2.6.17; library support "
 "was added to glibc in version 2.5."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tee.2:125
+#: man-pages/man2/tee.2:127
 msgid "This system call is Linux-specific."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tee.2:134
+#: man-pages/man2/tee.2:136
 msgid ""
 "Conceptually, B<tee>()  copies the data between the two pipes.  In reality "
 "no real data copying takes place though: under the covers, B<tee>()  assigns"
@@ -4636,14 +4648,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tee.2:141
+#: man-pages/man2/tee.2:143
 msgid ""
 "The example below implements a basic B<tee>(1)  program using the B<tee>()  "
 "system call.  Here is an example of its use:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tee.2:148
+#: man-pages/man2/tee.2:150
 #, no-wrap
 msgid ""
 "$ B<date |./a.out out.log | cat>\n"
@@ -4653,7 +4665,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tee.2:160
+#: man-pages/man2/tee.2:162
 #, no-wrap
 msgid ""
 "#define _GNU_SOURCE\n"
@@ -4666,7 +4678,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tee.2:166
+#: man-pages/man2/tee.2:168
 #, no-wrap
 msgid ""
 "int\n"
@@ -4677,7 +4689,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tee.2:171
+#: man-pages/man2/tee.2:173
 #, no-wrap
 msgid ""
 "    if (argc != 2) {\n"
@@ -4687,7 +4699,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tee.2:177
+#: man-pages/man2/tee.2:179
 #, no-wrap
 msgid ""
 "    fd = open(argv[1], O_WRONLY | O_CREAT | O_TRUNC, 0644);\n"
@@ -4698,7 +4710,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tee.2:184
+#: man-pages/man2/tee.2:186
 #, no-wrap
 msgid ""
 "    do {\n"
@@ -4710,7 +4722,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tee.2:193
+#: man-pages/man2/tee.2:195
 #, no-wrap
 msgid ""
 "        if (len E<lt> 0) {\n"
@@ -4724,7 +4736,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tee.2:207
+#: man-pages/man2/tee.2:209
 #, no-wrap
 msgid ""
 "        /*\n"
@@ -4743,7 +4755,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tee.2:211
+#: man-pages/man2/tee.2:213
 #, no-wrap
 msgid ""
 "    close(fd);\n"
@@ -4752,7 +4764,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tee.2:215
+#: man-pages/man2/tee.2:217
 msgid "B<splice>(2), B<vmsplice>(2), B<pipe>(7)"
 msgstr ""
 
@@ -8373,6 +8385,12 @@ msgstr ""
 msgid "TSEARCH"
 msgstr ""
 
+#. type: TH
+#: man-pages/man3/tsearch.3:25
+#, no-wrap
+msgid "2019-05-09"
+msgstr ""
+
 #. type: Plain text
 #: man-pages/man3/tsearch.3:28
 msgid "tsearch, tfind, tdelete, twalk, tdestroy - manage a binary search tree"
@@ -8385,7 +8403,13 @@ msgid "B<#include E<lt>search.hE<gt>>\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:34
+#: man-pages/man3/tsearch.3:33
+#, no-wrap
+msgid "B<typedef enum { preorder, postorder, endorder, leaf } VISIT;>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/tsearch.3:36
 #, no-wrap
 msgid ""
 "B<void *tsearch(const void *>I<key>B<, void **>I<rootp>B<,>\n"
@@ -8393,7 +8417,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:37
+#: man-pages/man3/tsearch.3:39
 #, no-wrap
 msgid ""
 "B<void *tfind(const void *>I<key>B<, void *const *>I<rootp>B<,>\n"
@@ -8401,7 +8425,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:40
+#: man-pages/man3/tsearch.3:42
 #, no-wrap
 msgid ""
 "B<void *tdelete(const void *>I<key>B<, void **>I<rootp>B<,>\n"
@@ -8409,16 +8433,16 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:44
+#: man-pages/man3/tsearch.3:46
 #, no-wrap
 msgid ""
-"B<void twalk(const void *>I<root>B<, void (*>I<action>B<)(const void *>I<nodep>B<,>\n"
-"B<                                   const VISIT >I<which>B<,>\n"
-"B<                                   const int >I<depth>B<));>\n"
+"B<void twalk(const void *>I<root>B<,>\n"
+"B<                void (*>I<action>B<)(const void *>I<nodep>B<, VISIT >I<which>B<,>\n"
+"B<                               int >I<depth>B<));>\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:47
+#: man-pages/man3/tsearch.3:49
 #, no-wrap
 msgid ""
 "B<#define _GNU_SOURCE>         /* See feature_test_macros(7) */\n"
@@ -8426,7 +8450,17 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:49
+#: man-pages/man3/tsearch.3:54
+#, no-wrap
+msgid ""
+"B<void twalk_r(const void *>I<root>B<,>\n"
+"B<                void (*>I<action>B<)(const void *>I<nodep>B<, VISIT >I<which>B<,>\n"
+"B<                               void *>I<closure>B<),>\n"
+"B<                void *>I<closure>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/tsearch.3:56
 #, no-wrap
 msgid ""
 "B<void tdestroy(void *>I<root>B<, void (*>I<free_node>B<)(void "
@@ -8434,7 +8468,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:68
+#: man-pages/man3/tsearch.3:75
 msgid ""
 "B<tsearch>(), B<tfind>(), B<twalk>(), and B<tdelete>()  manage a binary "
 "search tree.  They are generalized from Knuth (6.2.2) Algorithm T.  The "
@@ -8446,7 +8480,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:90
+#: man-pages/man3/tsearch.3:97
 msgid ""
 "B<tsearch>()  searches the tree for an item.  I<key> points to the item to "
 "be searched for.  I<rootp> points to a variable which points to the root of "
@@ -8459,21 +8493,21 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:98
+#: man-pages/man3/tsearch.3:105
 msgid ""
 "B<tfind>()  is like B<tsearch>(), except that if the item is not found, then"
 " B<tfind>()  returns NULL."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:103
+#: man-pages/man3/tsearch.3:110
 msgid ""
 "B<tdelete>()  deletes an item from the tree.  Its arguments are the same as "
 "for B<tsearch>()."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:138
+#: man-pages/man3/tsearch.3:145
 msgid ""
 "B<twalk>()  performs depth-first, left-to-right traversal of a binary tree."
 "  I<root> points to the starting node for the traversal.  If that node is "
@@ -8493,7 +8527,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:154
+#: man-pages/man3/tsearch.3:161
 msgid ""
 "(More commonly, B<preorder>, B<postorder>, and B<endorder> are known as "
 "B<preorder>, B<inorder>, and B<postorder>: before visiting the children, "
@@ -8502,7 +8536,17 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:169
+#: man-pages/man3/tsearch.3:174
+msgid ""
+"B<twalk_r>()  is similar to B<twalk>(), but instead of the I<depth> "
+"argument, the I<closure> argument pointer is passed to each invocation of "
+"the action callback, unchanged.  This pointer can be used to pass "
+"information to and from the callback function in a thread-safe fashion, "
+"without resorting to global variables."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/tsearch.3:189
 msgid ""
 "B<tdestroy>()  removes the whole tree pointed to by I<root>, freeing all "
 "resources allocated by the B<tsearch>()  function.  For the data in each "
@@ -8512,7 +8556,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:179
+#: man-pages/man3/tsearch.3:199
 msgid ""
 "B<tsearch>()  returns a pointer to a matching node in the tree, or to the "
 "newly added node, or NULL if there was insufficient memory to add the item."
@@ -8522,7 +8566,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:186
+#: man-pages/man3/tsearch.3:206
 msgid ""
 "B<tdelete>()  returns a pointer to the parent of the node deleted, or NULL "
 "if the item was not found.  If the deleted node was the root node, "
@@ -8530,14 +8574,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:195
+#: man-pages/man3/tsearch.3:215
 msgid ""
 "B<tsearch>(), B<tfind>(), and B<tdelete>()  also return NULL if I<rootp> was"
 " NULL on entry."
 msgstr ""
 
+#. type: Plain text
+#: man-pages/man3/tsearch.3:218
+msgid "B<twalk_r>()  is available in glibc since version 2.30."
+msgstr ""
+
 #. type: tbl table
-#: man-pages/man3/tsearch.3:206
+#: man-pages/man3/tsearch.3:229
 #, no-wrap
 msgid ""
 "B<tsearch>(),\n"
@@ -8545,64 +8594,70 @@ msgid ""
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/tsearch.3:206
+#: man-pages/man3/tsearch.3:229
 #, no-wrap
 msgid ".br\n"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/tsearch.3:208
+#: man-pages/man3/tsearch.3:231
 #, no-wrap
 msgid "B<tdelete>()"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/tsearch.3:208
+#: man-pages/man3/tsearch.3:231
 #, no-wrap
 msgid "MT-Safe race:rootp"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/tsearch.3:211
+#: man-pages/man3/tsearch.3:234
 #, no-wrap
 msgid "B<twalk>()"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/tsearch.3:211
+#: man-pages/man3/tsearch.3:234 man-pages/man3/tsearch.3:237
 #, no-wrap
 msgid "MT-Safe race:root"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/tsearch.3:214
+#: man-pages/man3/tsearch.3:237
+#, no-wrap
+msgid "B<twalk_r>()"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/tsearch.3:240
 #, no-wrap
 msgid "B<tdestroy>()"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:221
+#: man-pages/man3/tsearch.3:249
 msgid ""
-"POSIX.1-2001, POSIX.1-2008, SVr4.  The function B<tdestroy>()  is a GNU "
-"extension."
+"POSIX.1-2001, POSIX.1-2008, SVr4.  The functions B<tdestroy>()  and "
+"B<twalk_r>()  are GNU extensions."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:225
+#: man-pages/man3/tsearch.3:253
 msgid ""
 "B<twalk>()  takes a pointer to the root, while the other functions take a "
 "pointer to a variable which points to the root."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:230
+#: man-pages/man3/tsearch.3:258
 msgid ""
 "B<tdelete>()  frees the memory required for the node in the tree.  The user "
 "is responsible for freeing the memory for the corresponding data."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:238
+#: man-pages/man3/tsearch.3:266
 msgid ""
 "The example program depends on the fact that B<twalk>()  makes no further "
 "reference to a node after calling the user function with argument "
@@ -8611,14 +8666,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:242
+#: man-pages/man3/tsearch.3:270
 msgid ""
 "The following program inserts twelve random numbers into a binary tree, "
 "where duplicate numbers are collapsed, then prints the numbers in order."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:249
+#: man-pages/man3/tsearch.3:277
 #, no-wrap
 msgid ""
 "#define _GNU_SOURCE     /* Expose declaration of tdestroy() */\n"
@@ -8629,13 +8684,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:251
+#: man-pages/man3/tsearch.3:279
 #, no-wrap
 msgid "static void *root = NULL;\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:262
+#: man-pages/man3/tsearch.3:290
 #, no-wrap
 msgid ""
 "static void *\n"
@@ -8651,7 +8706,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:272
+#: man-pages/man3/tsearch.3:300
 #, no-wrap
 msgid ""
 "static int\n"
@@ -8666,17 +8721,17 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:277
+#: man-pages/man3/tsearch.3:305
 #, no-wrap
 msgid ""
 "static void\n"
-"action(const void *nodep, const VISIT which, const int depth)\n"
+"action(const void *nodep, VISIT which, int depth)\n"
 "{\n"
 "    int *datap;\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:293
+#: man-pages/man3/tsearch.3:321
 #, no-wrap
 msgid ""
 "    switch (which) {\n"
@@ -8697,7 +8752,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:299
+#: man-pages/man3/tsearch.3:327
 #, no-wrap
 msgid ""
 "int\n"
@@ -8708,7 +8763,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:314
+#: man-pages/man3/tsearch.3:342
 #, no-wrap
 msgid ""
 "    srand(time(NULL));\n"
@@ -8728,7 +8783,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/tsearch.3:319
+#: man-pages/man3/tsearch.3:347
 msgid "B<bsearch>(3), B<hsearch>(3), B<lsearch>(3), B<qsort>(3)"
 msgstr ""
 

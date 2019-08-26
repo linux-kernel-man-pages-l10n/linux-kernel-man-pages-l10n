@@ -23,8 +23,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
-"POT-Creation-Date: 2017-09-05 08:20+0300\n"
-"PO-Revision-Date: 2019-07-07 05:20+0000\n"
+"POT-Creation-Date: 2019-08-26 09:26+0300\n"
+"PO-Revision-Date: 2019-08-26 06:21+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -2443,8 +2443,8 @@ msgstr "MOUNT_NAMESPACES"
 #. type: TH
 #: man-pages/man7/mount_namespaces.7:26
 #, no-wrap
-msgid "2018-04-30"
-msgstr "2018-04-30"
+msgid "2019-08-02"
+msgstr ""
 
 #. type: Plain text
 #: man-pages/man7/mount_namespaces.7:29
@@ -2543,33 +2543,39 @@ msgstr "Значения флагов B<MS_RDONLY>, B<MS_NOSUID>, B<MS_NOEXEC> �
 
 #.  (As of 3.18-rc1 (in Al Viro's 2014-08-30 vfs.git#for-next tree))
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:125
+#: man-pages/man7/mount_namespaces.7:127
 msgid ""
 "A file or directory that is a mount point in one namespace that is not a "
 "mount point in another namespace, may be renamed, unlinked, or removed "
 "(B<rmdir>(2))  in the mount namespace in which it is not a mount point "
-"(subject to the usual permission checks)."
-msgstr "Файл или каталог, являющийся точкой монтирования в одном пространстве имён, и не являющийся в другом, может быть переименован, отсоединён (unlinked) или удалён (B<rmdir>(2)) в пространстве имён монтирования, в котором он не является точкой монтирования (выполняются обычные проверки прав доступа)."
+"(subject to the usual permission checks).  Consequently, the mount point is "
+"removed in the mount namespace where it was a mount point."
+msgstr ""
 
+#.  mtk: The change was in Linux 3.18, I think, with this commit:
+#.      commit 8ed936b5671bfb33d89bc60bdcc7cf0470ba52fe
+#.      Author: Eric W. Biederman <ebiederman@twitter.com>
+#.      Date:   Tue Oct 1 18:33:48 2013 -0700
+#.          vfs: Lazily remove mounts on unlinked files and directories.
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:134
+#: man-pages/man7/mount_namespaces.7:143
 msgid ""
-"Previously, attempting to unlink, rename, or remove a file or directory that"
-" was a mount point in another mount namespace would result in the error "
-"B<EBUSY>.  That behavior had technical problems of enforcement (e.g., for "
-"NFS)  and permitted denial-of-service attacks against more privileged users."
-"  (i.e., preventing individual files from being updated by bind mounting on "
-"top of them)."
-msgstr "Раньше, попытка переименовать, отсоединить или удалить файл или каталог, который являлся точкой монтирования в другом пространстве имён монтирования, приводила к ошибке B<EBUSY>. Такое поведение вызывало технические проблемы в работе (например, NFS) и позволяло выполнять атаку отказа в обслуживании более привилегированных пользователей (т. е., не давало обновлять отдельные файлы посредством монтирования поверх их)."
+"Previously (before Linux 3.18), attempting to unlink, rename, or remove a "
+"file or directory that was a mount point in another mount namespace would "
+"result in the error B<EBUSY>.  That behavior had technical problems of "
+"enforcement (e.g., for NFS)  and permitted denial-of-service attacks against"
+" more privileged users.  (i.e., preventing individual files from being "
+"updated by bind mounting on top of them)."
+msgstr ""
 
 #. type: SH
-#: man-pages/man7/mount_namespaces.7:134
+#: man-pages/man7/mount_namespaces.7:143
 #, no-wrap
 msgid "SHARED SUBTREES"
 msgstr "ОБЩИЕ ПОДДЕРЕВЬЯ"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:149
+#: man-pages/man7/mount_namespaces.7:158
 msgid ""
 "After the implementation of mount namespaces was completed, experience "
 "showed that the isolation that they provided was, in some cases, too great."
@@ -2582,20 +2588,20 @@ msgid ""
 msgstr "После завершения реализации пространств имён монтирования опыт использования показал, что полученная изоляция, в некоторых случаях, слишком велика. Например, чтобы только что смонтированный оптический диск сделать доступным в во всех пространствах имён, требуется операция монтирования в каждом пространстве имён. Для этого случаях и других в Linux 2.6.15 были добавлены общие поддеревья. Это свойство предоставляет автоматическое, управляемое распространение I<событий> монтирования и размонтирования в пространствах имён (или, точнее, между членами I<равноправной группы>, которые обмениваются событиями между собой)."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:154
+#: man-pages/man7/mount_namespaces.7:163
 msgid ""
 "Each mount point is marked (via B<mount>(2))  as having one of the following"
 " I<propagation types>:"
 msgstr "Каждая точка монтирования помечается (в B<mount>(2)) одним из следующих I<типов распространения>:"
 
 #. type: TP
-#: man-pages/man7/mount_namespaces.7:154
+#: man-pages/man7/mount_namespaces.7:163
 #, no-wrap
 msgid "B<MS_SHARED>"
 msgstr "B<MS_SHARED>"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:164
+#: man-pages/man7/mount_namespaces.7:173
 msgid ""
 "This mount point shares events with members of a peer group.  Mount and "
 "unmount events immediately under this mount point will propagate to the "
@@ -2607,26 +2613,26 @@ msgid ""
 msgstr "События такой точки монтирования являются общими с остальными членами равноправной группы. События монтирования и размонтирования этой точки сразу же распространяются на другие точки монтирования, являющиеся членами равноправной группы. То есть монтирование или размонтирование автоматически происходит и у всех остальных точек монтирования в равноправной группе. И наоборот, события монтирования и размонтирования, возникшие у точек монтирования равноправной группы, будут распространены и на эту точку монтирования."
 
 #. type: TP
-#: man-pages/man7/mount_namespaces.7:164
+#: man-pages/man7/mount_namespaces.7:173
 #, no-wrap
 msgid "B<MS_PRIVATE>"
 msgstr "B<MS_PRIVATE>"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:168
+#: man-pages/man7/mount_namespaces.7:177
 msgid ""
 "This mount point is private; it does not have a peer group.  Mount and "
 "unmount events do not propagate into or out of this mount point."
 msgstr "Данная точка монтирования индивидуальна; у неё нет равноправной группы. События монтирования и размонтирования не распространяются от этой точки и на эту точку."
 
 #. type: TP
-#: man-pages/man7/mount_namespaces.7:168
+#: man-pages/man7/mount_namespaces.7:177
 #, no-wrap
 msgid "B<MS_SLAVE>"
 msgstr "B<MS_SLAVE>"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:173
+#: man-pages/man7/mount_namespaces.7:182
 msgid ""
 "Mount and unmount events propagate into this mount point from a (master) "
 "shared peer group.  Mount and unmount events under this mount point do not "
@@ -2634,7 +2640,7 @@ msgid ""
 msgstr "События монтирования и размонтирования распространяются на эту точку монтирования из (главной) общей равноправной группы. События монтирования и размонтирования этой точки не распространяются на членов группы."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:178
+#: man-pages/man7/mount_namespaces.7:187
 msgid ""
 "Note that a mount point can be the slave of another peer group while at the "
 "same time sharing mount and unmount events with a peer group of which it is "
@@ -2643,13 +2649,13 @@ msgid ""
 msgstr "Заметим, что точка монтирования может быть подчинённой одной равноправной группе и в тоже время может распространять события в другую группу, где она является членом (точнее, одна равноправная группа может быть подчинённой другой равноправной группе)."
 
 #. type: TP
-#: man-pages/man7/mount_namespaces.7:178
+#: man-pages/man7/mount_namespaces.7:187
 #, no-wrap
 msgid "B<MS_UNBINDABLE>"
 msgstr "B<MS_UNBINDABLE>"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:187
+#: man-pages/man7/mount_namespaces.7:196
 msgid ""
 "This is like a private mount, and in addition this mount can't be bind "
 "mounted.  Attempts to bind mount this mount (B<mount>(2)  with the "
@@ -2657,7 +2663,7 @@ msgid ""
 msgstr "Данный тип подобен индивидуальной точке монтирования, но дополнительно такая точка монтирования не может быть привязана (bind). Попытка привязать эту точку монтирования (B<mount>(2) с флагом B<MS_BIND>) завершится ошибкой."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:198
+#: man-pages/man7/mount_namespaces.7:207
 msgid ""
 "When a recursive bind mount (B<mount>(2)  with the B<MS_BIND> and B<MS_REC> "
 "flags) is performed on a directory subtree, any bind mounts within the "
@@ -2666,13 +2672,13 @@ msgid ""
 msgstr "При рекурсивной привязке (B<mount>(2) с флагами B<MS_BIND> и B<MS_REC>) поддерева каталога все привязки внутри поддерева автоматически удаляются (т. е., не копируются) при копировании этого поддерева для создания целевого поддерева."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:201
+#: man-pages/man7/mount_namespaces.7:210
 msgid ""
 "For a discussion of the propagation type assigned to a new mount, see NOTES."
 msgstr "Описание типа распространения, назначаемого на новое монтирование, смотрите в ЗАМЕЧАНИЯХ."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:207
+#: man-pages/man7/mount_namespaces.7:216
 msgid ""
 "The propagation type is a per-mount-point setting; some mount points may be "
 "marked as shared (with each shared mount point being a member of a distinct "
@@ -2680,7 +2686,7 @@ msgid ""
 msgstr "Тип распространения имеется у каждой точки монтирования; некоторые точки монтирования могут быть помечены как общие (каждая общая точка монтирования является членом определённой равноправной группы), а некоторые как индивидуальные (или подчинённые или непривязываемые)."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:218
+#: man-pages/man7/mount_namespaces.7:227
 msgid ""
 "Note that a mount's propagation type determines whether mounts and unmounts "
 "of mount points I<immediately under> the mount point are propagated.  Thus, "
@@ -2691,33 +2697,33 @@ msgid ""
 msgstr "Заметим, что тип распространения монтирования определяет, будет ли монтирование или размонтирование распространяться точки монтирования, находящиеся I<на одну ступень ниже> точки, где возникло событие. То есть, тип распространения не влияет на распространение событий для внуков и в дальнейшем удаляемых потомков точки монтирования. Это случается, если сама точка монтирования размонтируется из-за действия типа распространения который, в сущности, влияние I<родительской> точки монтирования."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:222
+#: man-pages/man7/mount_namespaces.7:231
 msgid ""
 "Members are added to a I<peer group> when a mount point is marked as shared "
 "and either:"
 msgstr "Члены добавляются в I<равноправную группу>, если точка монтирования помечается как общая, или:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:224
+#: man-pages/man7/mount_namespaces.7:233
 msgid ""
 "the mount point is replicated during the creation of a new mount namespace; "
 "or"
 msgstr "точка монтирования копируется при создании нового пространства имён монтирования"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:226
+#: man-pages/man7/mount_namespaces.7:235
 msgid "a new bind mount is created from the mount point."
 msgstr "создаётся новая привязка из точки монтирования"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:229
+#: man-pages/man7/mount_namespaces.7:238
 msgid ""
 "In both of these cases, the new mount point joins the peer group of which "
 "the existing mount point is a member."
 msgstr "В обоих случаях новая точка монтирования присоединяется к равноправной группе, в которую входит существующая точка монтирования."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:235
+#: man-pages/man7/mount_namespaces.7:244
 msgid ""
 "A new peer group is also created when a child mount point is created under "
 "an existing mount point that is marked as shared.  In this case, the new "
@@ -2727,7 +2733,7 @@ msgid ""
 msgstr "Новая равноправная группа также создаётся, если дочерняя точка монтирования создана под существующей точкой монтирования, помеченной как общая. В этом случае, новая дочерняя точка монтирования также помечается как общая и получаемая равноправная группа состоит из всех точек монтирования, которые дублируются в равноправных группах родительской точки монтирования."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:240
+#: man-pages/man7/mount_namespaces.7:249
 msgid ""
 "A mount ceases to be a member of a peer group when either the mount is "
 "explicitly unmounted, or when the mount is implicitly unmounted because a "
@@ -2735,7 +2741,7 @@ msgid ""
 msgstr "Точка монтирования перестаёт быть членом равноправной группы, когда происходит её явное размонтирование или неявное из-за удаления пространства имён монтирования (из-за отсутствия участвующих процессов)."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:249
+#: man-pages/man7/mount_namespaces.7:258
 msgid ""
 "The propagation type of the mount points in a mount namespace can be "
 "discovered via the \"optional fields\" exposed in I</proc/[pid]/mountinfo>."
@@ -2744,13 +2750,13 @@ msgid ""
 msgstr "Тип распространения точек монтирования в пространстве имён монтирования может узнать через «необязательные поля» в файле I</proc/[pid]/mountinfo> (описание файла смотрите в B<proc>(5)). В необязательных полях этого файла могут появляться следующие метки:"
 
 #. type: TP
-#: man-pages/man7/mount_namespaces.7:249
+#: man-pages/man7/mount_namespaces.7:258
 #, no-wrap
 msgid "I<shared:X>"
 msgstr "I<shared:X>"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:258
+#: man-pages/man7/mount_namespaces.7:267
 msgid ""
 "This mount point is shared in peer group I<X>.  Each peer group has a unique"
 " ID that is automatically generated by the kernel, and all mount points in "
@@ -2760,25 +2766,25 @@ msgid ""
 msgstr "Эта точка монтирования является общей в равноправной группе I<X>. Каждая равноправная группа имеет автоматически генерируемый ядром уникальный идентификатор, и у всех точек монтирования одной равноправной группы здесь будет одинаковый идентификатор (эти идентификаторы начинаются с 1 и могут повторно использоваться, когда в равноправной группе не останется членов)."
 
 #. type: TP
-#: man-pages/man7/mount_namespaces.7:258
+#: man-pages/man7/mount_namespaces.7:267
 #, no-wrap
 msgid "I<master:X>"
 msgstr "I<master:X>"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:262
+#: man-pages/man7/mount_namespaces.7:271
 msgid "This mount is a slave to shared peer group I<X>."
 msgstr "Эта точка монтирования является подчинённой общей равноправной группе I<X>."
 
 #. type: TP
-#: man-pages/man7/mount_namespaces.7:262
+#: man-pages/man7/mount_namespaces.7:271
 #, no-wrap
 msgid "I<propagate_from:X> (since Linux 2.6.26)"
 msgstr "I<propagate_from:X> (начиная с Linux 2.6.26)"
 
 #.  commit 97e7e0f71d6d948c25f11f0a33878d9356d9579e
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:283
+#: man-pages/man7/mount_namespaces.7:292
 msgid ""
 "This mount is a slave and receives propagation from shared peer group I<X>."
 "  This tag will always appear in conjunction with a I<master:X> tag.  Here, "
@@ -2789,29 +2795,29 @@ msgid ""
 msgstr "Эта точка монтирования является подчинённой и принимает события от общей равноправной группы I<X>. Данная метка всегда появляется вместе с меткой I<master:X>. Здесь I<X> это ближайшая главенствующая равноправная группа из корневого каталога процесса. Если I<X> является непосредственным владельцем точки монтирования, или в том же корне нет ближайшей главенствующей равноправной группы, то существует только поле I<master:X>, и поле I<propagate_from:X> отсутствует. Подробности смотрите ниже."
 
 #. type: TP
-#: man-pages/man7/mount_namespaces.7:283
+#: man-pages/man7/mount_namespaces.7:292
 #, no-wrap
 msgid "I<unbindable>"
 msgstr "I<unbindable>"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:286
+#: man-pages/man7/mount_namespaces.7:295
 msgid "This is an unbindable mount."
 msgstr "Точка монтирования является непривязываемой."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:288
+#: man-pages/man7/mount_namespaces.7:297
 msgid "If none of the above tags is present, then this is a private mount."
 msgstr "Если нет ни одной из вышеперечисленных меток, то точка монтирования является индивидуальной."
 
 #. type: SS
-#: man-pages/man7/mount_namespaces.7:288
+#: man-pages/man7/mount_namespaces.7:297
 #, no-wrap
 msgid "MS_SHARED and MS_PRIVATE example"
 msgstr "Пример MS_SHARED и MS_PRIVATE"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:293
+#: man-pages/man7/mount_namespaces.7:302
 msgid ""
 "Suppose that on a terminal in the initial mount namespace, we mark one mount"
 " point as shared and another as private, and then view the mounts in "
@@ -2819,7 +2825,7 @@ msgid ""
 msgstr "Предположим, что на терминале в первоначальном пространстве имён монтирования мы помечаем одну точку монтирования как общую, а другую — как индивидуальную, и затем смотрим точки монтирования в I</proc/self/mountinfo>:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:301
+#: man-pages/man7/mount_namespaces.7:310
 #, no-wrap
 msgid ""
 "sh1# B<mount --make-shared /mntS>\n"
@@ -2830,7 +2836,7 @@ msgid ""
 msgstr "sh1# B<mount --make-shared /mntS>\nsh1# B<mount --make-private /mntP>\nsh1# B<cat /proc/self/mountinfo | grep \\(aq/mnt\\(aq | sed \\(aqs/ - .*//\\(aq>\n77 61 8:17 / /mntS rw,relatime shared:1\n83 61 8:15 / /mntP rw,relatime\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:320
+#: man-pages/man7/mount_namespaces.7:329
 msgid ""
 "From the I</proc/self/mountinfo> output, we see that I</mntS> is a shared "
 "mount in peer group 1, and that I</mntP> has no optional tags, indicating "
@@ -2842,7 +2848,7 @@ msgid ""
 msgstr "Из вывода I</proc/self/mountinfo> мы видим, что I</mntS> является общей точкой монтирования в равноправной группе 1, и что I</mntP> не имеет необязательных меток, то есть это индивидуальная точка монтирования. Первые два поля в каждой записи этого файла содержат уникальный идентификатор этой точки монтирования и идентификатор точки монтирования родительской точки монтирования. Далее в файле мы видим, что родительская точка монтирования I</mntS> и I</mntP> является корневым каталогом, I</>, которая смонтирована как индивидуальная:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:325
+#: man-pages/man7/mount_namespaces.7:334
 #, no-wrap
 msgid ""
 "sh1# B<cat /proc/self/mountinfo | awk \\(aq$1 == 61\\(aq | sed \\(aqs/ - .*//\\(aq>\n"
@@ -2850,14 +2856,14 @@ msgid ""
 msgstr "sh1# B<cat /proc/self/mountinfo | awk \\(aq$1 == 61\\(aq | sed \\(aqs/ - .*//\\(aq>\n61 0 8:2 / / rw,relatime\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:331
+#: man-pages/man7/mount_namespaces.7:340
 msgid ""
 "On a second terminal, we create a new mount namespace where we run a second "
 "shell and inspect the mounts:"
 msgstr "На втором терминале мы создаём новое пространство имён монтирования, в котором запускаем вторую оболочку, и смотрим точки монтирования:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:338
+#: man-pages/man7/mount_namespaces.7:347
 #, no-wrap
 msgid ""
 "$ B<PS1=\\(aqsh2# \\(aq sudo unshare -m --propagation unchanged sh>\n"
@@ -2868,7 +2874,7 @@ msgstr "$ B<PS1=\\(aqsh2# \\(aq sudo unshare -m --propagation unchanged sh>\nsh2
 
 #.  Since util-linux 2.27
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:352
+#: man-pages/man7/mount_namespaces.7:361
 msgid ""
 "The new mount namespace received a copy of the initial mount namespace's "
 "mount points.  These new mount points maintain the same propagation types, "
@@ -2878,14 +2884,14 @@ msgid ""
 msgstr "Новое пространство имён монтирования получает копию точек монтирования из начального пространства имён монтирования. Эти новые точки монтирования имеют тот же тип распространения, но другие уникальные идентификаторы монтирования (при создании нового пространства имён монтирования передача параметра I<--propagation\\ unchanged> программе B<unshare>(1) не даёт помечать все точки монтирования как индивидуальные (что делается по умолчанию))."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:358
+#: man-pages/man7/mount_namespaces.7:367
 msgid ""
 "In the second terminal, we then create submounts under each of I</mntS> and "
 "I</mntP> and inspect the set-up:"
 msgstr "Далее на втором терминале мы создаём подмонтирования в каталоге  I</mntS> и I</mntP> и смотрим что получилось:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:370
+#: man-pages/man7/mount_namespaces.7:379
 #, no-wrap
 msgid ""
 "sh2# B<mkdir /mntS/a>\n"
@@ -2900,7 +2906,7 @@ msgid ""
 msgstr "sh2# B<mkdir /mntS/a>\nsh2# B<mount /dev/sdb6 /mntS/a>\nsh2# B<mkdir /mntP/b>\nsh2# B<mount /dev/sdb7 /mntP/b>\nsh2# B<cat /proc/self/mountinfo | grep \\(aq/mnt\\(aq | sed \\(aqs/ - .*//\\(aq>\n222 145 8:17 / /mntS rw,relatime shared:1\n225 145 8:15 / /mntP rw,relatime\n178 222 8:22 / /mntS/a rw,relatime shared:2\n230 225 8:23 / /mntP/b rw,relatime\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:378
+#: man-pages/man7/mount_namespaces.7:387
 msgid ""
 "From the above, it can be seen that I</mntS/a> was created as shared "
 "(inheriting this setting from its parent mount) and I</mntP/b> was created "
@@ -2908,7 +2914,7 @@ msgid ""
 msgstr "Из показанного выше мы видим, что I</mntS/a> была создана как общая (унаследовала от родительской точки монтирования), а I</mntP/b> — как индивидуальная точка монтирования."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:386
+#: man-pages/man7/mount_namespaces.7:395
 msgid ""
 "Returning to the first terminal and inspecting the set-up, we see that the "
 "new mount created under the shared mount point I</mntS> propagated to its "
@@ -2917,7 +2923,7 @@ msgid ""
 msgstr "Если вернуться на первый терминал и и ещё раз посмотреть параметры, то можно увидеть, что новая точка монтирования, созданная в общей точке монтирования I</mntS>, передалась в свою равноправную группу монтирования (в начальном пространстве имён монтирования), а новая точка монтирования, созданная в индивидуальной точке монтирования I</mntP>, нет:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:393
+#: man-pages/man7/mount_namespaces.7:402
 #, no-wrap
 msgid ""
 "sh1# B<cat /proc/self/mountinfo | grep \\(aq/mnt\\(aq | sed \\(aqs/ - .*//\\(aq>\n"
@@ -2927,13 +2933,13 @@ msgid ""
 msgstr "sh1# B<cat /proc/self/mountinfo | grep \\(aq/mnt\\(aq | sed \\(aqs/ - .*//\\(aq>\n77 61 8:17 / /mntS rw,relatime shared:1\n83 61 8:15 / /mntP rw,relatime\n179 77 8:22 / /mntS/a rw,relatime shared:2\n"
 
 #. type: SS
-#: man-pages/man7/mount_namespaces.7:396
+#: man-pages/man7/mount_namespaces.7:405
 #, no-wrap
 msgid "MS_SLAVE example"
 msgstr "Пример MS_SLAVE"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:405
+#: man-pages/man7/mount_namespaces.7:414
 msgid ""
 "Making a mount point a slave allows it to receive propagated mount and "
 "unmount events from a master shared peer group, while preventing it from "
@@ -2945,14 +2951,14 @@ msgid ""
 msgstr "Создание подчинённой точки монтирования позволяет ей принимать распространяемые события монтирования и размонтирования из главной общей равноправной группы, но запрещает распространять события в эту главную группу. Это полезно, если требуется, скажем, принимать событие монтирования оптического диска в главной общей равноправной группе (в другом пространстве имён монтирования), но не нужно, чтобы события монтирования и размонтирования в подчинённой точке монтирования передавались в другие пространства имён."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:408
+#: man-pages/man7/mount_namespaces.7:417
 msgid ""
 "We can demonstrate the effect of slaving by first marking two mount points "
 "as shared in the initial mount namespace:"
 msgstr "Для демонстрации следствия подчинённости сначала создадим две общие точки монтирования в начальном пространстве имён монтирования:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:416
+#: man-pages/man7/mount_namespaces.7:425
 #, no-wrap
 msgid ""
 "sh1# B<mount --make-shared /mntX>\n"
@@ -2963,14 +2969,14 @@ msgid ""
 msgstr "sh1# B<mount --make-shared /mntX>\nsh1# B<mount --make-shared /mntY>\nsh1# B<cat /proc/self/mountinfo | grep \\(aq/mnt\\(aq | sed \\(aqs/ - .*//\\(aq>\n132 83 8:23 / /mntX rw,relatime shared:1\n133 83 8:22 / /mntY rw,relatime shared:2\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:421
+#: man-pages/man7/mount_namespaces.7:430
 msgid ""
 "On a second terminal, we create a new mount namespace and inspect the mount "
 "points:"
 msgstr "На втором терминале создадим новое пространство имён монтирования и посмотрим точки монтирования:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:428
+#: man-pages/man7/mount_namespaces.7:437
 #, no-wrap
 msgid ""
 "sh2# B<unshare -m --propagation unchanged sh>\n"
@@ -2980,13 +2986,13 @@ msgid ""
 msgstr "sh2# B<unshare -m --propagation unchanged sh>\nsh2# B<cat /proc/self/mountinfo | grep \\(aq/mnt\\(aq | sed \\(aqs/ - .*//\\(aq>\n168 167 8:23 / /mntX rw,relatime shared:1\n169 167 8:22 / /mntY rw,relatime shared:2\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:432
+#: man-pages/man7/mount_namespaces.7:441
 msgid ""
 "In the new mount namespace, we then mark one of the mount points as a slave:"
 msgstr "Далее в новом пространстве имён монтирования пометим одну из точек монтирования как подчинённую:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:439
+#: man-pages/man7/mount_namespaces.7:448
 #, no-wrap
 msgid ""
 "sh2# B<mount --make-slave /mntY>\n"
@@ -2996,21 +3002,21 @@ msgid ""
 msgstr "sh2# B<mount --make-slave /mntY>\nsh2# B<cat /proc/self/mountinfo | grep \\(aq/mnt\\(aq | sed \\(aqs/ - .*//\\(aq>\n168 167 8:23 / /mntX rw,relatime shared:1\n169 167 8:22 / /mntY rw,relatime master:2\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:446
+#: man-pages/man7/mount_namespaces.7:455
 msgid ""
 "From the above output, we see that I</mntY> is now a slave mount that is "
 "receiving propagation events from the shared peer group with the ID 2."
 msgstr "Из показанного выше видно, что I</mntY> теперь подчинённая точка монтирования, которая принимать распространяемые события от общей равноправной группы с ID 2."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:451
+#: man-pages/man7/mount_namespaces.7:460
 msgid ""
 "Continuing in the new namespace, we create submounts under each of I</mntX> "
 "and I</mntY>:"
 msgstr "Далее в новом пространстве имён создадим подмонтирования в I</mntX> и I</mntY>:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:458
+#: man-pages/man7/mount_namespaces.7:467
 #, no-wrap
 msgid ""
 "sh2# B<mkdir /mntX/a>\n"
@@ -3020,7 +3026,7 @@ msgid ""
 msgstr "sh2# B<mkdir /mntX/a>\nsh2# B<mount /dev/sda3 /mntX/a>\nsh2# B<mkdir /mntY/b>\nsh2# B<mount /dev/sda5 /mntY/b>\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:468
+#: man-pages/man7/mount_namespaces.7:477
 msgid ""
 "When we inspect the state of the mount points in the new mount namespace, we"
 " see that I</mntX/a> was created as a new shared mount (inheriting the "
@@ -3029,7 +3035,7 @@ msgid ""
 msgstr "Если посмотреть состояние точек монтирования в новом пространстве имён монтирования можно увидеть, что I</mntX/a> создана как новая общая точка монтирования (наследует «общность» от родительской точки монтирования), а I</mntY/b> создана как индивидуальная точка монтирования:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:476
+#: man-pages/man7/mount_namespaces.7:485
 #, no-wrap
 msgid ""
 "sh2# B<cat /proc/self/mountinfo | grep \\(aq/mnt\\(aq | sed \\(aqs/ - .*//\\(aq>\n"
@@ -3040,7 +3046,7 @@ msgid ""
 msgstr "sh2# B<cat /proc/self/mountinfo | grep \\(aq/mnt\\(aq | sed \\(aqs/ - .*//\\(aq>\n168 167 8:23 / /mntX rw,relatime shared:1\n169 167 8:22 / /mntY rw,relatime master:2\n173 168 8:3 / /mntX/a rw,relatime shared:3\n175 169 8:5 / /mntY/b rw,relatime\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:487
+#: man-pages/man7/mount_namespaces.7:496
 msgid ""
 "Returning to the first terminal (in the initial mount namespace), we see "
 "that the mount I</mntX/a> propagated to the peer (the shared I</mntX>), but "
@@ -3048,7 +3054,7 @@ msgid ""
 msgstr "Если вернуться на первый терминал (в начальное пространство имён монтирования), то можно увидеть, что точка монтирования I</mntX/a> передалась в свою равноправную группу (общую с I</mntX>), а точка монтирования I</mntY/b> нет:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:494
+#: man-pages/man7/mount_namespaces.7:503
 #, no-wrap
 msgid ""
 "sh1# B<cat /proc/self/mountinfo | grep \\(aq/mnt\\(aq | sed \\(aqs/ - .*//\\(aq>\n"
@@ -3058,12 +3064,12 @@ msgid ""
 msgstr "sh1# B<cat /proc/self/mountinfo | grep \\(aq/mnt\\(aq | sed \\(aqs/ - .*//\\(aq>\n132 83 8:23 / /mntX rw,relatime shared:1\n133 83 8:22 / /mntY rw,relatime shared:2\n174 132 8:3 / /mntX/a rw,relatime shared:3\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:500
+#: man-pages/man7/mount_namespaces.7:509
 msgid "Now we create a new mount point under I</mntY> in the first shell:"
 msgstr "Теперь создадим новую точку монтирования в I</mntY> в первом терминале:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:510
+#: man-pages/man7/mount_namespaces.7:519
 #, no-wrap
 msgid ""
 "sh1# B<mkdir /mntY/c>\n"
@@ -3076,7 +3082,7 @@ msgid ""
 msgstr "sh1# B<mkdir /mntY/c>\nsh1# B<mount /dev/sda1 /mntY/c>\nsh1# B<cat /proc/self/mountinfo | grep '/mnt' | sed 's/ - .*//'>\n132 83 8:23 / /mntX rw,relatime shared:1\n133 83 8:22 / /mntY rw,relatime shared:2\n174 132 8:3 / /mntX/a rw,relatime shared:3\n178 133 8:1 / /mntY/c rw,relatime shared:4\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:517
+#: man-pages/man7/mount_namespaces.7:526
 msgid ""
 "When we examine the mount points in the second mount namespace, we see that "
 "in this case the new mount has been propagated to the slave mount point, and"
@@ -3084,7 +3090,7 @@ msgid ""
 msgstr "Если посмотреть точки монтирования во втором пространстве имён монтирования, то можно увидеть, что на этот раз новая точка монтирования передалась в подчинённую точку монтирования и что эта новая точка монтирования сама является подчинённой (равноправной группе 4):"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:526
+#: man-pages/man7/mount_namespaces.7:535
 #, no-wrap
 msgid ""
 "sh2# B<cat /proc/self/mountinfo | grep \\(aq/mnt\\(aq | sed \\(aqs/ - .*//\\(aq>\n"
@@ -3096,13 +3102,13 @@ msgid ""
 msgstr "sh2# B<cat /proc/self/mountinfo | grep \\(aq/mnt\\(aq | sed \\(aqs/ - .*//\\(aq>\n168 167 8:23 / /mntX rw,relatime shared:1\n169 167 8:22 / /mntY rw,relatime master:2\n173 168 8:3 / /mntX/a rw,relatime shared:3\n175 169 8:5 / /mntY/b rw,relatime\n179 169 8:1 / /mntY/c rw,relatime master:4\n"
 
 #. type: SS
-#: man-pages/man7/mount_namespaces.7:529
+#: man-pages/man7/mount_namespaces.7:538
 #, no-wrap
 msgid "MS_UNBINDABLE example"
 msgstr "Пример MS_UNBINDABLE"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:534
+#: man-pages/man7/mount_namespaces.7:543
 msgid ""
 "One of the primary purposes of unbindable mounts is to avoid the \"mount "
 "point explosion\" problem when repeatedly performing bind mounts of a "
@@ -3111,12 +3117,12 @@ msgid ""
 msgstr "Одним из основных назначений непривязываемых точек монтирования является решение проблемы «взрыва точек монтирования» — повторяющееся выполнение привязки точки монтирования поддерева верхнего уровня в точках монтирования нижнего уровня. Эта проблема показана в сеансе далее."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:536
+#: man-pages/man7/mount_namespaces.7:545
 msgid "Suppose we have a system with the following mount points:"
 msgstr "Предположим, что имеется система с следующими точками монтирования:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:543
+#: man-pages/man7/mount_namespaces.7:552
 #, no-wrap
 msgid ""
 "# B<mount | awk \\(aq{print $1, $2, $3}\\(aq>\n"
@@ -3126,7 +3132,7 @@ msgid ""
 msgstr "# B<mount | awk \\(aq{print $1, $2, $3}\\(aq>\n/dev/sda1 on /\n/dev/sdb6 on /mntX\n/dev/sdb7 on /mntY\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:549
+#: man-pages/man7/mount_namespaces.7:558
 msgid ""
 "Suppose furthermore that we wish to recursively bind mount the root "
 "directory under several users' home directories.  We do this for the first "
@@ -3134,7 +3140,7 @@ msgid ""
 msgstr "Предположим, что нужно рекурсивно привязать точки монтирования корневого каталога в нескольких пользовательских домашних каталогах. Сделаем это для первого пользователя и посмотрим точки монтирования:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:560
+#: man-pages/man7/mount_namespaces.7:569
 #, no-wrap
 msgid ""
 "# B<mount --rbind / /home/cecilia/>\n"
@@ -3148,14 +3154,14 @@ msgid ""
 msgstr "# B<mount --rbind / /home/cecilia/>\n# B<mount | awk \\(aq{print $1, $2, $3}\\(aq>\n/dev/sda1 on /\n/dev/sdb6 on /mntX\n/dev/sdb7 on /mntY\n/dev/sda1 on /home/cecilia\n/dev/sdb6 on /home/cecilia/mntX\n/dev/sdb7 on /home/cecilia/mntY\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:565
+#: man-pages/man7/mount_namespaces.7:574
 msgid ""
 "When we repeat this operation for the second user, we start to see the "
 "explosion problem:"
 msgstr "Повторяя эту операцию для второго пользователя сталкиваемся с проблемой взрывного роста:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:582
+#: man-pages/man7/mount_namespaces.7:591
 #, no-wrap
 msgid ""
 "# B<mount --rbind / /home/henry>\n"
@@ -3175,7 +3181,7 @@ msgid ""
 msgstr "# B<mount --rbind / /home/henry>\n# B<mount | awk \\(aq{print $1, $2, $3}\\(aq>\n/dev/sda1 on /\n/dev/sdb6 on /mntX\n/dev/sdb7 on /mntY\n/dev/sda1 on /home/cecilia\n/dev/sdb6 on /home/cecilia/mntX\n/dev/sdb7 on /home/cecilia/mntY\n/dev/sda1 on /home/henry\n/dev/sdb6 on /home/henry/mntX\n/dev/sdb7 on /home/henry/mntY\n/dev/sda1 on /home/henry/home/cecilia\n/dev/sdb6 on /home/henry/home/cecilia/mntX\n/dev/sdb7 on /home/henry/home/cecilia/mntY\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:596
+#: man-pages/man7/mount_namespaces.7:605
 msgid ""
 "Under I</home/henry>, we have not only recursively added the I</mntX> and "
 "I</mntY> mounts, but also the recursive mounts of those directories under "
@@ -3185,7 +3191,7 @@ msgid ""
 msgstr "В I</home/henry> рекурсивно добавились не только точки монтирования I</mntX> и I</mntY>, но и рекурсивные точки монтирования этих каталогов, смонтированных в I</home/cecilia>, который мы создали на предыдущем шаге. Далее повторяя процесс для третьего пользователя, станет очевидно, что взрывной рост происходит экспоненциально:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:625
+#: man-pages/man7/mount_namespaces.7:634
 #, no-wrap
 msgid ""
 "# B<mount --rbind / /home/otto>\n"
@@ -3217,7 +3223,7 @@ msgid ""
 msgstr "# B<mount --rbind / /home/otto>\n# B<mount | awk \\(aq{print $1, $2, $3}\\(aq>\n/dev/sda1 on /\n/dev/sdb6 on /mntX\n/dev/sdb7 on /mntY\n/dev/sda1 on /home/cecilia\n/dev/sdb6 on /home/cecilia/mntX\n/dev/sdb7 on /home/cecilia/mntY\n/dev/sda1 on /home/henry\n/dev/sdb6 on /home/henry/mntX\n/dev/sdb7 on /home/henry/mntY\n/dev/sda1 on /home/henry/home/cecilia\n/dev/sdb6 on /home/henry/home/cecilia/mntX\n/dev/sdb7 on /home/henry/home/cecilia/mntY\n/dev/sda1 on /home/otto\n/dev/sdb6 on /home/otto/mntX\n/dev/sdb7 on /home/otto/mntY\n/dev/sda1 on /home/otto/home/cecilia\n/dev/sdb6 on /home/otto/home/cecilia/mntX\n/dev/sdb7 on /home/otto/home/cecilia/mntY\n/dev/sda1 on /home/otto/home/henry\n/dev/sdb6 on /home/otto/home/henry/mntX\n/dev/sdb7 on /home/otto/home/henry/mntY\n/dev/sda1 on /home/otto/home/henry/home/cecilia\n/dev/sdb6 on /home/otto/home/henry/home/cecilia/mntX\n/dev/sdb7 on /home/otto/home/henry/home/cecilia/mntY\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:633
+#: man-pages/man7/mount_namespaces.7:642
 msgid ""
 "The mount explosion problem in the above scenario can be avoided by making "
 "each of the new mounts unbindable.  The effect of doing this is that "
@@ -3226,19 +3232,19 @@ msgid ""
 msgstr "Проблемы взрывного роста монтирования в показанном сценарии можно избежать, если делать каждое новое монтирование непривязываемым. В этом случае рекурсивное монтирование корневого каталоге не копирует непривязываемые точки монтирования. Сделаем такое монтирование для первого пользователя:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:637
+#: man-pages/man7/mount_namespaces.7:646
 #, no-wrap
 msgid "# B<mount --rbind --make-unbindable / /home/cecilia>\n"
 msgstr "# B<mount --rbind --make-unbindable / /home/cecilia>\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:641
+#: man-pages/man7/mount_namespaces.7:650
 msgid ""
 "Before going further, we show that unbindable mounts are indeed unbindable:"
 msgstr "Перед тем как продолжить, посмотрим, что непривязываемые точки монтирования действительно нельзя привязать:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:648
+#: man-pages/man7/mount_namespaces.7:657
 #, no-wrap
 msgid ""
 "# B<mkdir /mntZ>\n"
@@ -3248,7 +3254,7 @@ msgid ""
 msgstr "# B<mkdir /mntZ>\n# B<mount --bind /home/cecilia /mntZ>\nmount: wrong fs type, bad option, bad superblock on /home/cecilia,\n       missing codepage or helper program, or other error\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:651
+#: man-pages/man7/mount_namespaces.7:660
 #, no-wrap
 msgid ""
 "       In some cases useful info is found in syslog - try\n"
@@ -3256,13 +3262,13 @@ msgid ""
 msgstr "       В некоторых случаях полезная информация может быть\n       найдена в syslog - попробуйте dmesg | tail или что-то\n       в этом роде.\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:655
+#: man-pages/man7/mount_namespaces.7:664
 msgid ""
 "Now we create unbindable recursive bind mounts for the other two users:"
 msgstr "Теперь создадим непривязываемое рекурсивное монтирования для остальных пользователей:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:660
+#: man-pages/man7/mount_namespaces.7:669
 #, no-wrap
 msgid ""
 "# B<mount --rbind --make-unbindable / /home/henry>\n"
@@ -3270,7 +3276,7 @@ msgid ""
 msgstr "# B<mount --rbind --make-unbindable / /home/henry>\n# B<mount --rbind --make-unbindable / /home/otto>\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:667
+#: man-pages/man7/mount_namespaces.7:676
 msgid ""
 "Upon examining the list of mount points, we see there has been no explosion "
 "of mount points, because the unbindable mounts were not replicated under "
@@ -3278,7 +3284,7 @@ msgid ""
 msgstr "Если посмотреть список точек монтирования, то можно увидеть, что взрывного роста не произошло, так как непривязываемые точки монтирования не скопировались в каждый пользовательский каталог:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:683
+#: man-pages/man7/mount_namespaces.7:692
 #, no-wrap
 msgid ""
 "# B<mount | awk \\(aq{print $1, $2, $3}\\(aq>\n"
@@ -3297,13 +3303,13 @@ msgid ""
 msgstr "# B<mount | awk \\(aq{print $1, $2, $3}\\(aq>\n/dev/sda1 on /\n/dev/sdb6 on /mntX\n/dev/sdb7 on /mntY\n/dev/sda1 on /home/cecilia\n/dev/sdb6 on /home/cecilia/mntX\n/dev/sdb7 on /home/cecilia/mntY\n/dev/sda1 on /home/henry\n/dev/sdb6 on /home/henry/mntX\n/dev/sdb7 on /home/henry/mntY\n/dev/sda1 on /home/otto\n/dev/sdb6 on /home/otto/mntX\n/dev/sdb7 on /home/otto/mntY\n"
 
 #. type: SS
-#: man-pages/man7/mount_namespaces.7:686
+#: man-pages/man7/mount_namespaces.7:695
 #, no-wrap
 msgid "Propagation type transitions"
 msgstr "Переходы типов распространения"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:695
+#: man-pages/man7/mount_namespaces.7:704
 msgid ""
 "The following table shows the effect that applying a new propagation type "
 "(i.e., I<mount --make-xxxx>)  has on the existing propagation type of a "
@@ -3313,157 +3319,157 @@ msgid ""
 msgstr "В следующей таблице показано как влияет применение нового типа распространения (т. е., I<mount --make-xxxx>) на текущий тип распространения точки монтирования. Строки соответствуют существующим типам распространения, а столбцы — заданию нового типа распространения. Из-за нехватки места «индивидуальная» тип сокращён до «инд», а «непривязываемая» до «неприв»."
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:698
+#: man-pages/man7/mount_namespaces.7:707
 #, no-wrap
 msgid "make-shared"
 msgstr "сделать-общим"
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:698
+#: man-pages/man7/mount_namespaces.7:707
 #, no-wrap
 msgid "make-slave"
 msgstr "сделать-подчинён"
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:698
+#: man-pages/man7/mount_namespaces.7:707
 #, no-wrap
 msgid "make-priv"
 msgstr "сделать-инд"
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:698
+#: man-pages/man7/mount_namespaces.7:707
 #, no-wrap
 msgid "make-unbind"
 msgstr "сделать-неприв"
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:699 man-pages/man7/mount_namespaces.7:702
-#: man-pages/man7/mount_namespaces.7:703 man-pages/man7/mount_namespaces.7:743
-#: man-pages/man7/mount_namespaces.7:745 man-pages/man7/mount_namespaces.7:746
-#: man-pages/man7/mount_namespaces.7:783 man-pages/man7/mount_namespaces.7:785
-#: man-pages/man7/mount_namespaces.7:786
+#: man-pages/man7/mount_namespaces.7:708 man-pages/man7/mount_namespaces.7:711
+#: man-pages/man7/mount_namespaces.7:712 man-pages/man7/mount_namespaces.7:756
+#: man-pages/man7/mount_namespaces.7:758 man-pages/man7/mount_namespaces.7:759
+#: man-pages/man7/mount_namespaces.7:800 man-pages/man7/mount_namespaces.7:802
+#: man-pages/man7/mount_namespaces.7:803
 #, no-wrap
 msgid "shared"
 msgstr "общий"
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:699
+#: man-pages/man7/mount_namespaces.7:708
 #, no-wrap
 msgid "slave/priv [1]"
 msgstr "общий/инд [1]"
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:699 man-pages/man7/mount_namespaces.7:700
-#: man-pages/man7/mount_namespaces.7:701 man-pages/man7/mount_namespaces.7:702
-#: man-pages/man7/mount_namespaces.7:703
+#: man-pages/man7/mount_namespaces.7:708 man-pages/man7/mount_namespaces.7:709
+#: man-pages/man7/mount_namespaces.7:710 man-pages/man7/mount_namespaces.7:711
+#: man-pages/man7/mount_namespaces.7:712
 #, no-wrap
 msgid "priv"
 msgstr "инд"
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:699 man-pages/man7/mount_namespaces.7:700
-#: man-pages/man7/mount_namespaces.7:701 man-pages/man7/mount_namespaces.7:702
-#: man-pages/man7/mount_namespaces.7:703 man-pages/man7/mount_namespaces.7:743
-#: man-pages/man7/mount_namespaces.7:783
+#: man-pages/man7/mount_namespaces.7:708 man-pages/man7/mount_namespaces.7:709
+#: man-pages/man7/mount_namespaces.7:710 man-pages/man7/mount_namespaces.7:711
+#: man-pages/man7/mount_namespaces.7:712 man-pages/man7/mount_namespaces.7:756
+#: man-pages/man7/mount_namespaces.7:800
 #, no-wrap
 msgid "unbind"
 msgstr "неприв"
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:700 man-pages/man7/mount_namespaces.7:701
-#: man-pages/man7/mount_namespaces.7:743 man-pages/man7/mount_namespaces.7:746
-#: man-pages/man7/mount_namespaces.7:783 man-pages/man7/mount_namespaces.7:786
+#: man-pages/man7/mount_namespaces.7:709 man-pages/man7/mount_namespaces.7:710
+#: man-pages/man7/mount_namespaces.7:756 man-pages/man7/mount_namespaces.7:759
+#: man-pages/man7/mount_namespaces.7:800 man-pages/man7/mount_namespaces.7:803
 #, no-wrap
 msgid "slave"
 msgstr "подчинён"
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:700 man-pages/man7/mount_namespaces.7:701
-#: man-pages/man7/mount_namespaces.7:745 man-pages/man7/mount_namespaces.7:785
+#: man-pages/man7/mount_namespaces.7:709 man-pages/man7/mount_namespaces.7:710
+#: man-pages/man7/mount_namespaces.7:758 man-pages/man7/mount_namespaces.7:802
 #, no-wrap
 msgid "slave+shared"
 msgstr "подчинён+общий"
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:700
+#: man-pages/man7/mount_namespaces.7:709
 #, no-wrap
 msgid "slave [2]"
 msgstr "подчинён [2]"
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:702 man-pages/man7/mount_namespaces.7:743
-#: man-pages/man7/mount_namespaces.7:746 man-pages/man7/mount_namespaces.7:783
-#: man-pages/man7/mount_namespaces.7:786
+#: man-pages/man7/mount_namespaces.7:711 man-pages/man7/mount_namespaces.7:756
+#: man-pages/man7/mount_namespaces.7:759 man-pages/man7/mount_namespaces.7:800
+#: man-pages/man7/mount_namespaces.7:803
 #, no-wrap
 msgid "private"
 msgstr "инд"
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:702
+#: man-pages/man7/mount_namespaces.7:711
 #, no-wrap
 msgid "priv [2]"
 msgstr "инд [2]"
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:703 man-pages/man7/mount_namespaces.7:786
+#: man-pages/man7/mount_namespaces.7:712 man-pages/man7/mount_namespaces.7:803
 #, no-wrap
 msgid "unbindable"
 msgstr "неприв"
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:703
+#: man-pages/man7/mount_namespaces.7:712
 #, no-wrap
 msgid "unbind [2]"
 msgstr "неприв [2]"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:707
+#: man-pages/man7/mount_namespaces.7:716
 msgid "Note the following details to the table:"
 msgstr "Замечания к таблице:"
 
 #. type: IP
-#: man-pages/man7/mount_namespaces.7:707
+#: man-pages/man7/mount_namespaces.7:716
 #, no-wrap
 msgid "[1]"
 msgstr "[1]"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:710
+#: man-pages/man7/mount_namespaces.7:719
 msgid ""
 "If a shared mount is the only mount in its peer group, making it a slave "
 "automatically makes it private."
 msgstr "Если общая точка монтирования смонтирована только в её равноправной группе, то изменение её типа на подчинённый автоматически делает её индивидуальной."
 
 #. type: IP
-#: man-pages/man7/mount_namespaces.7:710
+#: man-pages/man7/mount_namespaces.7:719
 #, no-wrap
 msgid "[2]"
 msgstr "[2]"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:713
+#: man-pages/man7/mount_namespaces.7:722
 msgid "Slaving a nonshared mount has no effect on the mount."
 msgstr "Подчинение не общей точки монтирования не влияет на монтирование."
 
 #. type: SS
-#: man-pages/man7/mount_namespaces.7:713
+#: man-pages/man7/mount_namespaces.7:722
 #, no-wrap
 msgid "Bind (MS_BIND) semantics"
 msgstr "Семантика привязывания (MS_BIND)"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:715 man-pages/man7/mount_namespaces.7:759
+#: man-pages/man7/mount_namespaces.7:724 man-pages/man7/mount_namespaces.7:772
 msgid "Suppose that the following command is performed:"
 msgstr "Предположим, что выполняется следующая команда:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:717
+#: man-pages/man7/mount_namespaces.7:728
 #, no-wrap
-msgid "    mount --bind A/a B/b\n"
-msgstr "    mount --bind A/a B/b\n"
+msgid "mount --bind A/a B/b\n"
+msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:737
+#: man-pages/man7/mount_namespaces.7:750
 msgid ""
 "Here, I<A> is the source mount point, I<B> is the destination mount point, "
 "I<a> is a subdirectory path under the mount point I<A>, and I<b> is a "
@@ -3473,44 +3479,44 @@ msgid ""
 msgstr "Здесь I<A> — исходная точка монтирования, I<B> — целевая точка монтирования, I<a> — подкаталог в точке монтирования I<A> и I<b> — подкаталог в точке монтирования I<B>. Тип распространения получаемой точки, I<B/b>, зависит от типов распространения точек монтирования I<A> и I<B>, и рассчитывается по следующей таблице:"
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:742 man-pages/man7/mount_namespaces.7:782
+#: man-pages/man7/mount_namespaces.7:755 man-pages/man7/mount_namespaces.7:799
 #, no-wrap
 msgid "source(A)"
 msgstr "исход(A)"
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:744 man-pages/man7/mount_namespaces.7:784
+#: man-pages/man7/mount_namespaces.7:757 man-pages/man7/mount_namespaces.7:801
 #, no-wrap
 msgid "_"
 msgstr "_"
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:745 man-pages/man7/mount_namespaces.7:785
+#: man-pages/man7/mount_namespaces.7:758 man-pages/man7/mount_namespaces.7:802
 #, no-wrap
 msgid "dest(B)"
 msgstr "цель(B)"
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:745 man-pages/man7/mount_namespaces.7:785
+#: man-pages/man7/mount_namespaces.7:758 man-pages/man7/mount_namespaces.7:802
 #, no-wrap
 msgid "shared    |"
 msgstr "общий    |"
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:745 man-pages/man7/mount_namespaces.7:746
-#: man-pages/man7/mount_namespaces.7:785
+#: man-pages/man7/mount_namespaces.7:758 man-pages/man7/mount_namespaces.7:759
+#: man-pages/man7/mount_namespaces.7:802
 #, no-wrap
 msgid "invalid"
 msgstr "некорректно"
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:746 man-pages/man7/mount_namespaces.7:786
+#: man-pages/man7/mount_namespaces.7:759 man-pages/man7/mount_namespaces.7:803
 #, no-wrap
 msgid "nonshared |"
 msgstr "не_общий |"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:752
+#: man-pages/man7/mount_namespaces.7:765
 msgid ""
 "Note that a recursive bind of a subtree follows the same semantics as for a "
 "bind operation on each mount in the subtree.  (Unbindable mounts are "
@@ -3518,26 +3524,26 @@ msgid ""
 msgstr "Заметим, что рекурсивное привязывание поддерева имеет такую же семантику как в операции привязывания каждой точки монтирования в поддереве (непривязываемые точки монтирования автоматически убираются из целевой точки монтирования)."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:757 man-pages/man7/mount_namespaces.7:795
+#: man-pages/man7/mount_namespaces.7:770 man-pages/man7/mount_namespaces.7:812
 msgid ""
 "For further details, see I<Documentation/filesystems/sharedsubtree.txt> in "
 "the kernel source tree."
 msgstr "Дополнительную информацию смотрите в файле I<Documentation/filesystems/sharedsubtree.txt> дерева исходного кода ядра."
 
 #. type: SS
-#: man-pages/man7/mount_namespaces.7:757
+#: man-pages/man7/mount_namespaces.7:770
 #, no-wrap
 msgid "Move (MS_MOVE) semantics"
 msgstr "Семантика перемещения (MS_MOVE)"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:761
+#: man-pages/man7/mount_namespaces.7:776
 #, no-wrap
-msgid "    mount --move A B/b\n"
-msgstr "    mount --move A B/b\n"
+msgid "mount --move A B/b\n"
+msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:777
+#: man-pages/man7/mount_namespaces.7:794
 msgid ""
 "Here, I<A> is the source mount point, I<B> is the destination mount point, "
 "and I<b> is a subdirectory path under the mount point I<B>.  The propagation"
@@ -3546,29 +3552,29 @@ msgid ""
 msgstr "Здесь I<A> — исходная точка монтирования, I<B> — целевая точка монтирования и I<b> — подкаталог в точке монтирования I<B>. Тип распространения получаемой точки, I<B/b>, зависит от типов распространения точек монтирования I<A> и I<B>, и рассчитывается по следующей таблице:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:790
+#: man-pages/man7/mount_namespaces.7:807
 msgid "Note: moving a mount that resides under a shared mount is invalid."
 msgstr "Замечание: перемещение точки монтирования, располагающейся ниже общей точки, некорректно."
 
 #. type: SS
-#: man-pages/man7/mount_namespaces.7:795
+#: man-pages/man7/mount_namespaces.7:812
 #, no-wrap
 msgid "Mount semantics"
 msgstr "Семантики монтирования"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:797
+#: man-pages/man7/mount_namespaces.7:814
 msgid "Suppose that we use the following command to create a mount point:"
 msgstr "Предположим, что для создания точки монтирования используется следующая команда:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:799
+#: man-pages/man7/mount_namespaces.7:818
 #, no-wrap
-msgid "    mount device B/b\n"
-msgstr "    mount устройство B/b\n"
+msgid "mount device B/b\n"
+msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:812
+#: man-pages/man7/mount_namespaces.7:833
 msgid ""
 "Here, I<B> is the destination mount point, and I<b> is a subdirectory path "
 "under the mount point I<B>.  The propagation type of the resulting mount, "
@@ -3577,24 +3583,24 @@ msgid ""
 msgstr "Здесь I<B> — целевая точка монтирования и I<b> — подкаталог в точке монтирования I<B>. Тип распространения получаемой точки, I<B/b>, получается таким же как при привязывании, где тип распространения исходной точки монтирования всегда равен индивидуальному."
 
 #. type: SS
-#: man-pages/man7/mount_namespaces.7:812
+#: man-pages/man7/mount_namespaces.7:833
 #, no-wrap
 msgid "Unmount semantics"
 msgstr "Семантики размонтирования"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:814
+#: man-pages/man7/mount_namespaces.7:835
 msgid "Suppose that we use the following command to tear down a mount point:"
 msgstr "Предположим, что для размонтирования точки используется следующая команда:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:816
+#: man-pages/man7/mount_namespaces.7:839
 #, no-wrap
-msgid "    unmount A\n"
-msgstr "    unmount A\n"
+msgid "unmount A\n"
+msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:835
+#: man-pages/man7/mount_namespaces.7:860
 msgid ""
 "Here, I<A> is a mount point on I<B/b>, where I<B> is the parent mount and "
 "I<b> is a subdirectory path under the mount point I<B>.  If B<B> is shared, "
@@ -3604,13 +3610,13 @@ msgid ""
 msgstr "Здесь I<A> точка монтирования на I<B/b>, где I<B> — родительская точка монтирования и I<b> — подкаталог в точке монтирования I<B>. Если B<B> имеет общий тип распространения, то все последние монтирования в I<b>, получающие события от точки монтирования I<B> и не имеющие подмонтирований внутри, будут размонтированы."
 
 #. type: SS
-#: man-pages/man7/mount_namespaces.7:835
+#: man-pages/man7/mount_namespaces.7:860
 #, no-wrap
 msgid "The /proc/[pid]/mountinfo propagate_from tag"
 msgstr "Метка /proc/[pid]/mountinfo propagate_from"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:845
+#: man-pages/man7/mount_namespaces.7:870
 msgid ""
 "The I<propagate_from:X> tag is shown in the optional fields of a "
 "I</proc/[pid]/mountinfo> record in cases where a process can't see a slave's"
@@ -3620,7 +3626,7 @@ msgid ""
 msgstr "Метка I<propagate_from:X> появляется в необязательных полях записи I</proc/[pid]/mountinfo> в случаях, когда процесс не может видеть непосредственного мастера (т. е., путь к мастеру недоступен из корневого каталога файловой системы) и поэтому не может определить цепочку распространения между точками монтирования, которые он может видеть."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:860
+#: man-pages/man7/mount_namespaces.7:885
 msgid ""
 "In the following example, we first create a two-link master-slave chain "
 "between the mounts I</mnt>, I</tmp/etc>, and I</mnt/tmp/etc>.  Then the "
@@ -3631,7 +3637,7 @@ msgid ""
 msgstr "В следующем примере сначала создаётся двусвязная цепочка мастер-подчинённый между точками монтирования I</mnt>, I</tmp/etc> и I</mnt/tmp/etc>. Затем используется команда B<chroot>(1), чтобы сделать точку монтирования I</tmp/etc> недоступной из корневого каталога, что создаёт ситуацию, где мастер для I</mnt/tmp/etc> недоступен из (нового) корневого каталога процесса."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:873
+#: man-pages/man7/mount_namespaces.7:898
 msgid ""
 "First, we bind mount the root directory onto I</mnt> and then bind mount "
 "I</proc> at I</mnt/proc> so that after the later B<chroot>(1)  the "
@@ -3640,7 +3646,7 @@ msgid ""
 msgstr "Сначала привяжем корневой каталог в I</mnt>, а затем привяжем I</proc> в I</mnt/proc>, чтобы после этого в правильном месте chroot-окружения для B<chroot>(1) осталась доступной файловая система B<proc>(5)."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:879
+#: man-pages/man7/mount_namespaces.7:904
 #, no-wrap
 msgid ""
 "# B<mkdir -p /mnt/proc>\n"
@@ -3649,14 +3655,14 @@ msgid ""
 msgstr "# B<mkdir -p /mnt/proc>\n# B<mount --bind / /mnt>\n# B<mount --bind /proc /mnt/proc>\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:885
+#: man-pages/man7/mount_namespaces.7:910
 msgid ""
 "Next, we ensure that the I</mnt> mount is a shared mount in a new peer group"
 " (with no peers):"
 msgstr "Теперь убедимся, что точка монтирования I</mnt> является общей в новой равноправной группе (без членов):"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:893
+#: man-pages/man7/mount_namespaces.7:918
 #, no-wrap
 msgid ""
 "# B<mount --make-private /mnt>  # Isolate from any previous peer group\n"
@@ -3667,12 +3673,12 @@ msgid ""
 msgstr "# B<mount --make-private /mnt>  # Изолировать от любой предыдущей группы\n# B<mount --make-shared /mnt>\n# B<cat /proc/self/mountinfo | grep \\(aq/mnt\\(aq | sed \\(aqs/ - .*//\\(aq>\n239 61 8:2 / /mnt ... shared:102\n248 239 0:4 / /mnt/proc ... shared:5\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:900
+#: man-pages/man7/mount_namespaces.7:925
 msgid "Next, we bind mount I</mnt/etc> onto I</tmp/etc>:"
 msgstr "Теперь привяжем I</mnt/etc> к I</tmp/etc>:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:909
+#: man-pages/man7/mount_namespaces.7:934
 #, no-wrap
 msgid ""
 "# B<mkdir -p /tmp/etc>\n"
@@ -3684,7 +3690,7 @@ msgid ""
 msgstr "# B<mkdir -p /tmp/etc>\n# B<mount --bind /mnt/etc /tmp/etc>\n# B<cat /proc/self/mountinfo | egrep \\(aq/mnt|/tmp/\\(aq | sed \\(aqs/ - .*//\\(aq>\n239 61 8:2 / /mnt ... shared:102\n248 239 0:4 / /mnt/proc ... shared:5\n267 40 8:2 /etc /tmp/etc ... shared:102\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:921
+#: man-pages/man7/mount_namespaces.7:946
 msgid ""
 "Initially, these two mount points are in the same peer group, but we then "
 "make the I</tmp/etc> a slave of I</mnt/etc>, and then make I</tmp/etc> "
@@ -3693,7 +3699,7 @@ msgid ""
 msgstr "Первоначально, эти две точки монтирования были в одной равноправной группе, но мы сделали I</tmp/etc> подчинённой I</mnt/etc>, а затем сделали I</tmp/etc> общей, так чтобы она могла распространять события следующему подчинённому в цепочке:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:930
+#: man-pages/man7/mount_namespaces.7:955
 #, no-wrap
 msgid ""
 "# B<mount --make-slave /tmp/etc>\n"
@@ -3705,7 +3711,7 @@ msgid ""
 msgstr "# B<mount --make-slave /tmp/etc>\n# B<mount --make-shared /tmp/etc>\n# B<cat /proc/self/mountinfo | egrep \\(aq/mnt|/tmp/\\(aq | sed \\(aqs/ - .*//\\(aq>\n239 61 8:2 / /mnt ... shared:102\n248 239 0:4 / /mnt/proc ... shared:5\n267 40 8:2 /etc /tmp/etc ... shared:105 master:102\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:942
+#: man-pages/man7/mount_namespaces.7:967
 msgid ""
 "Then we bind mount I</tmp/etc> onto I</mnt/tmp/etc>.  Again, the two mount "
 "points are initially in the same peer group, but we then make "
@@ -3713,7 +3719,7 @@ msgid ""
 msgstr "Затем мы привязали I</tmp/etc> в I</mnt/tmp/etc>. Опять же, две точки монтирования первоначально были в одной равноправной группе, но позднее мы сделали I</mnt/tmp/etc> подчинённой I</tmp/etc>:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:953
+#: man-pages/man7/mount_namespaces.7:978
 #, no-wrap
 msgid ""
 "# B<mkdir -p /mnt/tmp/etc>\n"
@@ -3727,34 +3733,34 @@ msgid ""
 msgstr "# B<mkdir -p /mnt/tmp/etc>\n# B<mount --bind /tmp/etc /mnt/tmp/etc>\n# B<mount --make-slave /mnt/tmp/etc>\n# B<cat /proc/self/mountinfo | egrep \\(aq/mnt|/tmp/\\(aq | sed \\(aqs/ - .*//\\(aq>\n239 61 8:2 / /mnt ... shared:102\n248 239 0:4 / /mnt/proc ... shared:5\n267 40 8:2 /etc /tmp/etc ... shared:105 master:102\n273 239 8:2 /etc /mnt/tmp/etc ... master:105\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:962
+#: man-pages/man7/mount_namespaces.7:987
 msgid ""
 "From the above, we see that I</mnt> is the master of the slave I</tmp/etc>, "
 "which in turn is the master of the slave I</mnt/tmp/etc>."
 msgstr "Из показанного выше можно видеть, что I</mnt> является главной для подчинённой I</tmp/etc>, которая, в свою очередь, является главной для подчинённой I</mnt/tmp/etc>."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:969
+#: man-pages/man7/mount_namespaces.7:994
 msgid ""
 "We then B<chroot>(1)  to the I</mnt> directory, which renders the mount with"
 " ID 267 unreachable from the (new) root directory:"
 msgstr "Теперь выполним B<chroot>(1) в каталог I</mnt>, который делает точку монтирования с ID 267 недоступной из (нового корневого каталога:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:973
+#: man-pages/man7/mount_namespaces.7:998
 #, no-wrap
 msgid "# B<chroot /mnt>\n"
 msgstr "# B<chroot /mnt>\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:978
+#: man-pages/man7/mount_namespaces.7:1003
 msgid ""
 "When we examine the state of the mounts inside the chroot-ed environment, we"
 " see the following:"
 msgstr "Если мы проверим состояние точек монтирования внутри окружения chroot, то увидим следующее:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:985
+#: man-pages/man7/mount_namespaces.7:1010
 #, no-wrap
 msgid ""
 "# B<cat /proc/self/mountinfo | sed \\(aqs/ - .*//\\(aq>\n"
@@ -3764,7 +3770,7 @@ msgid ""
 msgstr "# B<cat /proc/self/mountinfo | sed \\(aqs/ - .*//\\(aq>\n239 61 8:2 / / ... shared:102\n248 239 0:4 / /proc ... shared:5\n273 239 8:2 /etc /tmp/etc ... master:105 propagate_from:102\n"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1000
+#: man-pages/man7/mount_namespaces.7:1025
 msgid ""
 "Above, we see that the mount with ID 273 is a slave whose master is the peer"
 " group 105.  The mount point for that master is unreachable, and so a "
@@ -3775,40 +3781,40 @@ msgid ""
 msgstr "Здесь мы видим, что точка монтирования с ID 273 является подчинённой для главной, которая входит в равноправную группу 105. Точка монтирования этой главной недоступна и поэтому появилась метка I<propagate_from>, показывающая, что идентификатор ближайшей ведущей равноправной группы (т. е., ближайшая достижимая точка монтирования в подчинённой цепи) равен 102 (соответствует точке монтирования I</mnt> до выполнения B<chroot>(1))."
 
 #. type: SH
-#: man-pages/man7/mount_namespaces.7:1000
+#: man-pages/man7/mount_namespaces.7:1025
 #, no-wrap
 msgid "VERSIONS"
 msgstr "ВЕРСИИ"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1002
+#: man-pages/man7/mount_namespaces.7:1027
 msgid "Mount namespaces first appeared in Linux 2.4.19."
 msgstr "Пространство имён монтирования впервые появилось в Linux 2.4.19."
 
 #. type: SH
-#: man-pages/man7/mount_namespaces.7:1002
+#: man-pages/man7/mount_namespaces.7:1027
 #, no-wrap
 msgid "CONFORMING TO"
 msgstr "СООТВЕТСТВИЕ СТАНДАРТАМ"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1005
+#: man-pages/man7/mount_namespaces.7:1030
 msgid "Namespaces are a Linux-specific feature."
 msgstr "Пространства имён есть только в Linux."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1016
+#: man-pages/man7/mount_namespaces.7:1040
 msgid ""
 "The propagation type assigned to a new mount point depends on the "
-"propagation type of the parent directory.  If the mount point has a parent "
+"propagation type of the parent mount.  If the mount point has a parent "
 "(i.e., it is a non-root mount point) and the propagation type of the parent "
 "is B<MS_SHARED>, then the propagation type of the new mount is also "
 "B<MS_SHARED>.  Otherwise, the propagation type of the new mount is "
-"B<MS_PRIVATE>.  But see also NOTES."
-msgstr "Тип распространения, назначаемый новой точке монтирования, зависит от типа распространения родительского каталога. Если точка монтирования имеет родителя (т. е., является не корневой точкой монтирования) и тип распространения родителя — B<MS_SHARED>, то тип распространения новой точки монтирования будет также B<MS_SHARED>. В противном случае типом новой точки монтирования будет B<MS_PRIVATE>. Но смотрите, также ЗАМЕЧАНИЯ."
+"B<MS_PRIVATE>."
+msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1029
+#: man-pages/man7/mount_namespaces.7:1053
 msgid ""
 "Notwithstanding the fact that the default propagation type for new mount "
 "points is in many cases B<MS_PRIVATE>, B<MS_SHARED> is typically more "
@@ -3818,7 +3824,7 @@ msgid ""
 msgstr "Несмотря на то, что тип распространения по умолчанию для новой точки монтирования во многих случаях равен B<MS_PRIVATE>, обычно, тип B<MS_SHARED> полезнее. По этой причине, при запуске системы B<systemd>(1) автоматически перемонтирует все точки монтирования как B<MS_SHARED>. Таким образом, в современных системах типом распространения по умолчанию практически является B<MS_SHARED>."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1044
+#: man-pages/man7/mount_namespaces.7:1068
 msgid ""
 "Since, when one uses B<unshare>(1)  to create a mount namespace, the goal is"
 " commonly to provide full isolation of the mount points in the new "
@@ -3829,20 +3835,20 @@ msgid ""
 msgstr "При создании пространства имён монтирования с помощью B<unshare>(1) чаще всего требуется создать полную изоляцию точек монтирования в новом пространстве имён, и B<unshare>(1) (начиная с I<util-linux> версии 2.27) отменяет изменения B<systemd>(1), делая все точки монтирования индивидуальными в новом пространстве имён. То есть B<unshare>(1) в новом пространстве имён монтирования выполняет эквивалент следующего:"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1046
+#: man-pages/man7/mount_namespaces.7:1072
 #, no-wrap
-msgid "    mount --make-rprivate /\n"
-msgstr "    mount --make-rprivate /\n"
+msgid "mount --make-rprivate /\n"
+msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1051
+#: man-pages/man7/mount_namespaces.7:1079
 msgid ""
 "To prevent this, one can use the I<--propagation\\ unchanged> option to "
 "B<unshare>(1)."
 msgstr "Чтобы этого не происходило в B<unshare>(1) можно использовать параметр I<--propagation\\ unchanged>."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1058
+#: man-pages/man7/mount_namespaces.7:1086
 msgid ""
 "For a discussion of propagation types when moving mounts (B<MS_MOVE>)  and "
 "creating bind mounts (B<MS_BIND>), see "
@@ -3850,15 +3856,15 @@ msgid ""
 msgstr "Описание типов распространения при перемещении точек монтирования (B<MS_MOVE>) и создании привязок монтирования (B<MS_BIND>) смотрите в I<Documentation/filesystems/sharedsubtree.txt>."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1069
+#: man-pages/man7/mount_namespaces.7:1099
 msgid ""
-"B<unshare>(1), B<clone>(2), B<mount>(2), B<setns>(2), B<umount>(2), "
-"B<unshare>(2), B<proc>(5), B<namespaces>(7), B<user_namespaces>(7), "
-"B<findmnt>(8)"
-msgstr "B<unshare>(1), B<clone>(2), B<mount>(2), B<setns>(2), B<umount>(2), B<unshare>(2), B<proc>(5), B<namespaces>(7), B<user_namespaces>(7), B<findmnt>(8)"
+"B<unshare>(1), B<clone>(2), B<mount>(2), B<pivot_root>(2), B<setns>(2), "
+"B<umount>(2), B<unshare>(2), B<proc>(5), B<namespaces>(7), "
+"B<user_namespaces>(7), B<findmnt>(8), B<pivot_root>(8)"
+msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1071
+#: man-pages/man7/mount_namespaces.7:1101
 msgid ""
 "I<Documentation/filesystems/sharedsubtree.txt> in the kernel source tree."
 msgstr "Файл I<Documentation/filesystems/sharedsubtree.txt> в дереве исходного кода ядра Linux."
@@ -9014,8 +9020,8 @@ msgstr "Различные поля в I<struct msqid_ds>, которые име
 #: man-pages/man2/msgctl.2:391
 msgid ""
 "B<msgget>(2), B<msgrcv>(2), B<msgsnd>(2), B<capabilities>(7), "
-"B<mq_overview>(7), B<svipc>(7)"
-msgstr "B<msgget>(2), B<msgrcv>(2), B<msgsnd>(2), B<capabilities>(7), B<mq_overview>(7), B<svipc>(7)"
+"B<mq_overview>(7), B<sysvipc>(7)"
+msgstr ""
 
 #. type: TH
 #: man-pages/man2/memfd_create.2:21
@@ -10865,8 +10871,8 @@ msgstr "Имя B<IPC_PRIVATE>, возможно, было выбрано неу�
 #: man-pages/man2/msgget.2:249
 msgid ""
 "B<msgctl>(2), B<msgrcv>(2), B<msgsnd>(2), B<ftok>(3), B<capabilities>(7), "
-"B<mq_overview>(7), B<svipc>(7)"
-msgstr "B<msgctl>(2), B<msgrcv>(2), B<msgsnd>(2), B<ftok>(3), B<capabilities>(7), B<mq_overview>(7), B<svipc>(7)"
+"B<mq_overview>(7), B<sysvipc>(7)"
+msgstr ""
 
 #. type: TH
 #: man-pages/man2/modify_ldt.2:25
@@ -11586,11 +11592,11 @@ msgstr "Начиная с Linux 3.17, если не одно из значени
 #. type: Plain text
 #: man-pages/man2/mount.2:423
 msgid ""
-"Since Linux 2.6.26, the B<MS_RMOUNT> flag can be used with B<MS_BIND> to "
+"Since Linux 2.6.26, the B<MS_REMOUNT> flag can be used with B<MS_BIND> to "
 "modify only the per-mount-point flags.  This is particularly useful for "
 "setting or clearing the \"read-only\" flag on a mount point without changing"
 " the underlying filesystem.  Specifying I<mountflags> as:"
-msgstr "Начиная с Linux 2.6.26, флаг B<MS_RMOUNT> можно использовать вместе с B<MS_BIND> для изменения только флагов, касающихся точки монтирования. В частности, это полезно для установки или сброса флага «только для чтения» на точке монтирования без изменения нижележащей файловой системы. При значении I<mountflags>:"
+msgstr ""
 
 #. type: Plain text
 #: man-pages/man2/mount.2:427
@@ -11887,21 +11893,36 @@ msgid ""
 msgstr "Была предпринята попытка перемонтирования (B<MS_REMOUNT>), но I<source> еще не был смонтирован в I<target>."
 
 #. type: Plain text
-#: man-pages/man2/mount.2:692
+#: man-pages/man2/mount.2:695
+msgid ""
+"A move operation (B<MS_MOVE>)  was attempted, but the mount tree under "
+"I<source> includes unbindable mounts and I<target> is a mount point that has"
+" propagation type B<MS_SHARED>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/mount.2:703
+msgid ""
+"A move operation (B<MS_MOVE>)  was attempted, but the parent mount of "
+"I<source> mount has propagation type B<MS_SHARED>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/mount.2:710
 msgid ""
 "A move operation (B<MS_MOVE>)  was attempted, but I<source> was not a mount "
 "point, or was \\(aq/\\(aq."
 msgstr "Была предпринята попытка перемещения (B<MS_MOVE>), но  I<source> не являлся точкой монтирования или был \\(aq/\\(aq."
 
 #. type: Plain text
-#: man-pages/man2/mount.2:701
+#: man-pages/man2/mount.2:719
 msgid ""
 "I<mountflags> includes more than one of B<MS_SHARED>, B<MS_PRIVATE>, "
 "B<MS_SLAVE>, or B<MS_UNBINDABLE>."
 msgstr "I<mountflags> включает более одного значения из B<MS_SHARED>, B<MS_PRIVATE>, B<MS_SLAVE>, или B<MS_UNBINDABLE>."
 
 #. type: Plain text
-#: man-pages/man2/mount.2:714
+#: man-pages/man2/mount.2:732
 msgid ""
 "I<mountflags> includes B<MS_SHARED>, B<MS_PRIVATE>, B<MS_SLAVE>, or "
 "B<MS_UNBINDABLE> and also includes a flag other than B<MS_REC> or "
@@ -11909,12 +11930,12 @@ msgid ""
 msgstr "I<mountflags> включает B<MS_SHARED>, B<MS_PRIVATE>, B<MS_SLAVE>, или B<MS_UNBINDABLE> а также включает флаг, отличный от B<MS_REC> или B<MS_SILENT>."
 
 #. type: Plain text
-#: man-pages/man2/mount.2:717
+#: man-pages/man2/mount.2:735
 msgid "An attempt was made to bind mount an unbindable mount."
 msgstr "Была попытка выполнить связанное монтирование, как несвязанное монтирование."
 
 #. type: Plain text
-#: man-pages/man2/mount.2:728
+#: man-pages/man2/mount.2:746
 msgid ""
 "In an unprivileged mount namespace (i.e., a mount namespace owned by a user "
 "namespace that was created by an unprivileged user), a bind mount operation "
@@ -11924,84 +11945,84 @@ msgid ""
 msgstr "В непривилегированном пространстве имён монтирования (т. е., пространстве имён монтирования, принадлежащем пространству имён пользователя, которое было создано непривилегированным пользователем) выполнялась операция связанного монтирования (B<MS_BIND>) без указания (B<MS_REC>), которая привела бы к открытию дерева файловой системы, находящемся ниже одного из подмонтирований каталога, к которому выполнялось связывание."
 
 #. type: Plain text
-#: man-pages/man2/mount.2:731
+#: man-pages/man2/mount.2:749
 msgid "Too many links encountered during pathname resolution."
 msgstr "Во время разбора имён найдено слишком много ссылок. "
 
 #. type: Plain text
-#: man-pages/man2/mount.2:737
+#: man-pages/man2/mount.2:755
 msgid ""
 "A move operation was attempted, and I<target> is a descendant of I<source>."
 msgstr "Сделана попытка перемещения, но I<цель> оказалась подкаталогом I<источника>."
 
 #. type: Plain text
-#: man-pages/man2/mount.2:741
+#: man-pages/man2/mount.2:759
 msgid ""
 "(In case no block device is required:)  Table of dummy devices is full."
 msgstr "(В случае, если не требуются блочные устройства): таблица фиктивных устройств переполнена."
 
 #. type: Plain text
-#: man-pages/man2/mount.2:745
+#: man-pages/man2/mount.2:763
 msgid "A pathname was longer than B<MAXPATHLEN>."
 msgstr "Значение пути длиннее чем B<MAXPATHLEN>."
 
 #. type: Plain text
-#: man-pages/man2/mount.2:749
+#: man-pages/man2/mount.2:767
 msgid "I<filesystemtype> not configured in the kernel."
 msgstr "Тип из I<filesystemtype> в ядре не настроен."
 
 #. type: Plain text
-#: man-pages/man2/mount.2:752
+#: man-pages/man2/mount.2:770
 msgid "A pathname was empty or had a nonexistent component."
 msgstr "Указан пустой путь или одна из его частей не существует."
 
 #. type: Plain text
-#: man-pages/man2/mount.2:755
+#: man-pages/man2/mount.2:773
 msgid ""
 "The kernel could not allocate a free page to copy filenames or data into."
 msgstr "Ядро не может выделить свободную страницу для копирования имени файла или данных."
 
 #. type: TP
-#: man-pages/man2/mount.2:755
+#: man-pages/man2/mount.2:773
 #, no-wrap
 msgid "B<ENOTBLK>"
 msgstr "B<ENOTBLK>"
 
 #. type: Plain text
-#: man-pages/man2/mount.2:759
+#: man-pages/man2/mount.2:777
 msgid "I<source> is not a block device (and a device was required)."
 msgstr "Значение I<source> не является блочным устройством (а устройство было запрошено)."
 
 #. type: Plain text
-#: man-pages/man2/mount.2:765
+#: man-pages/man2/mount.2:783
 msgid "I<target>, or a prefix of I<source>, is not a directory."
 msgstr "Значение I<target> или префикс I<source> не является каталогом."
 
 #. type: TP
-#: man-pages/man2/mount.2:765
+#: man-pages/man2/mount.2:783
 #, no-wrap
 msgid "B<ENXIO>"
 msgstr "B<ENXIO>"
 
 #. type: Plain text
-#: man-pages/man2/mount.2:770
+#: man-pages/man2/mount.2:788
 msgid "The major number of the block device I<source> is out of range."
 msgstr "Старший номер блочного устройства I<source> вне допустимого диапазона."
 
 #. type: Plain text
-#: man-pages/man2/mount.2:773
+#: man-pages/man2/mount.2:791
 msgid "The caller does not have the required privileges."
 msgstr "Вызывающий процесс не имеет требуемых привилегий."
 
 #. type: Plain text
-#: man-pages/man2/mount.2:781
+#: man-pages/man2/mount.2:799
 msgid ""
 "Mounting a read-only filesystem was attempted without giving the "
 "B<MS_RDONLY> flag.  See B<EACCES>, above."
 msgstr "Было предпринята попытка монтирования файловой системы доступной только на чтение без флага B<MS_RDONLY>. Смотрите описание B<EACCES>, приведённое выше."
 
 #. type: Plain text
-#: man-pages/man2/mount.2:795
+#: man-pages/man2/mount.2:813
 msgid ""
 "The definitions of B<MS_DIRSYNC>, B<MS_MOVE>, B<MS_PRIVATE>, B<MS_REC>, "
 "B<MS_RELATIME>, B<MS_SHARED>, B<MS_SLAVE>, B<MS_STRICTATIME>, and "
@@ -12009,7 +12030,7 @@ msgid ""
 msgstr "Определения B<MS_DIRSYNC>, B<MS_MOVE>, B<MS_PRIVATE>, B<MS_REC>, B<MS_RELATIME>, B<MS_SHARED>, B<MS_SLAVE>, B<MS_STRICTATIME> и B<MS_UNBINDABLE> были добавлены в заголовочные файлы glibc начиная с версии 2.12."
 
 #. type: Plain text
-#: man-pages/man2/mount.2:798
+#: man-pages/man2/mount.2:816
 msgid ""
 "This function is Linux-specific and should not be used in programs intended "
 "to be portable."
@@ -12017,14 +12038,14 @@ msgstr "Данная функция есть только в Linux и не до�
 
 #.  Multiple mounts on same mount point: since 2.3.99pre7.
 #. type: Plain text
-#: man-pages/man2/mount.2:803
+#: man-pages/man2/mount.2:821
 msgid ""
 "Since Linux 2.4 a single filesystem can be mounted at multiple mount points,"
 " and multiple mounts can be stacked on the same mount point."
 msgstr "Начиная с Linux 2.4 одна файловая система может быть смонтирована в множество точек монтирования, также множественное монтирование может осуществляться в одну точку."
 
 #. type: Plain text
-#: man-pages/man2/mount.2:815
+#: man-pages/man2/mount.2:833
 msgid ""
 "The I<mountflags> argument may have the magic number 0xC0ED (B<MS_MGC_VAL>)"
 "  in the top 16 bits.  (All of the other flags discussed in DESCRIPTION "
@@ -12034,7 +12055,7 @@ msgid ""
 msgstr "В верхних 16 битах аргумента I<mountflags> может содержаться магическое число 0xC0ED (B<MS_MGC_VAL>) (все остальные флаги из ОПИСАНИЯ находятся в младших 16 битах I<mountflags>). Указание B<MS_MGC_VAL> было требованием ядра до версии 2.4, но начиная с Linux 2.4 этого больше не нужно, и число игнорируется, если указано."
 
 #. type: Plain text
-#: man-pages/man2/mount.2:824
+#: man-pages/man2/mount.2:842
 msgid ""
 "The original B<MS_SYNC> flag was renamed B<MS_SYNCHRONOUS> in 1.1.69 when a "
 "different B<MS_SYNC> was added to I<E<lt>mman.hE<gt>>."
@@ -12042,7 +12063,7 @@ msgstr "Изначальный флаг B<MS_SYNC> был переименова
 
 #.  The change is in patch-2.4.0-prerelease.
 #. type: Plain text
-#: man-pages/man2/mount.2:834
+#: man-pages/man2/mount.2:852
 msgid ""
 "Before Linux 2.4 an attempt to execute a set-user-ID or set-group-ID program"
 " on a filesystem mounted with B<MS_NOSUID> would fail with B<EPERM>.  Since "
@@ -12051,13 +12072,13 @@ msgid ""
 msgstr "До Linux 2.4 попытка выполнения программ set-UID или set-GID на файловой системе, подключённой с параметром B<MS_NOSUID>, вызывает ошибку B<EPERM>. Начиная с Linux 2.4 биты set-UID и set-GID в этом случае негласно игнорируются."
 
 #. type: SS
-#: man-pages/man2/mount.2:834
+#: man-pages/man2/mount.2:852
 #, no-wrap
 msgid "Per-process namespaces"
 msgstr "Попроцессные пространства имён"
 
 #. type: Plain text
-#: man-pages/man2/mount.2:845
+#: man-pages/man2/mount.2:863
 msgid ""
 "Starting with kernel 2.4.19, Linux provides per-process mount namespaces.  A"
 " mount namespace is the set of filesystem mounts that are visible to a "
@@ -12069,14 +12090,14 @@ msgid ""
 msgstr "Начиная с ядра версии 2.4.19, Linux предоставляет попроцессные пространства имён монтирования. Пространство имён монтирования — это набор смонтированных файловых систем, которые видимы процессу. Пространства имён точек монтирования могут (обычно так и есть) совместно использоваться несколькими процессами, и изменение пространства имён (т.е., монтирование и размонтирование) одним процессом видимы всеми остальными процессами, использующими одно общее пространство имён. (Поведение до версии 2.4.19 в Linux можно рассматривать так, как если бы всеми процессами в системе использовалось одно пространство имён.)"
 
 #. type: Plain text
-#: man-pages/man2/mount.2:851
+#: man-pages/man2/mount.2:869
 msgid ""
 "A child process created by B<fork>(2)  shares its parent's mount namespace; "
 "the mount namespace is preserved across an B<execve>(2)."
 msgstr "Процесс-потомок, создаваемый B<fork>(2), использует родительское пространство имён монтирования совместно с родителем; пространство имён монтирования сохраняется при вызове B<execve>(2)."
 
 #. type: Plain text
-#: man-pages/man2/mount.2:871
+#: man-pages/man2/mount.2:889
 msgid ""
 "A process can obtain a private mount namespace if: it was created using the "
 "B<clone>(2)  B<CLONE_NEWNS> flag, in which case its new namespace is "
@@ -12090,7 +12111,7 @@ msgid ""
 msgstr "Процесс может получить собственное пространство имён монтирования если: он был создан с помощью B<clone>(2) с флагом B<CLONE_NEWNS>; в этом случае его новое пространство имён инициализируется I<копией> пространства имён процесса, который вызвал B<clone>(2); или он вызовет B<unshare>(2) с флагом B<CLONE_NEWNS>; в этом случае пространство имён вызвавшего получит свою копию пространства имён, которое он раньше совместно использовал с другими процессами, и дальнейшие монтирования и размонтирования вызвавшим будут невидимы другим процессам (за исключением потомков, которые вызывающий создаст позже) и наоборот."
 
 #. type: Plain text
-#: man-pages/man2/mount.2:886
+#: man-pages/man2/mount.2:904
 msgid ""
 "The Linux-specific I</proc/[pid]/mounts> file exposes the list of mount "
 "points in the mount namespace of the process with the specified ID.  The "
@@ -12101,11 +12122,12 @@ msgid ""
 msgstr "В файле I</proc/[pid]/mounts> (имеется только в Linux) отображается список точек монтирования в пространстве имён монтирования процесса с соответствующем ID. В файле I</proc/[pid]/mountinfo> отображается дополнительная информация о точках монтирования, включая тип распространения и информационный идентификатор монтирования, который позволяет обнаруживать связи между точками монтирования. Описание этих файлов смотрите в B<proc>(5) и B<mount_namespaces>(7)."
 
 #. type: Plain text
-#: man-pages/man2/mount.2:895
+#: man-pages/man2/mount.2:915
 msgid ""
-"B<mountpoint>(1), B<ioctl_iflags>(2), B<umount>(2), B<mount_namespaces>(7), "
-"B<path_resolution>(7), B<findmnt>(8), B<lsblk>(8), B<mount>(8), B<umount>(8)"
-msgstr "B<mountpoint>(1), B<ioctl_iflags>(2), B<umount>(2), B<mount_namespaces>(7), B<path_resolution>(7), B<findmnt>(8), B<lsblk>(8), B<mount>(8), B<umount>(8)"
+"B<mountpoint>(1), B<chroot>(2), B<ioctl_iflags>(2), B<pivot_root>(2), "
+"B<umount>(2), B<mount_namespaces>(7), B<path_resolution>(7), B<findmnt>(8), "
+"B<lsblk>(8), B<mount>(8), B<umount>(8)"
+msgstr ""
 
 #. type: TH
 #: man-pages/man2/msgop.2:39
@@ -12907,8 +12929,8 @@ msgstr "    if (mode == 2)\n        get_msg(qid, msgtype);\n    else\n        se
 #: man-pages/man2/msgop.2:715
 msgid ""
 "B<msgctl>(2), B<msgget>(2), B<capabilities>(7), B<mq_overview>(7), "
-"B<svipc>(7)"
-msgstr "B<msgctl>(2), B<msgget>(2), B<capabilities>(7), B<mq_overview>(7), B<svipc>(7)"
+"B<sysvipc>(7)"
+msgstr ""
 
 #. type: TH
 #: man-pages/man2/move_pages.2:20
@@ -13257,6 +13279,12 @@ msgstr "B<get_mempolicy>(2), B<mbind>(2), B<set_mempolicy>(2), B<numa>(3), B<num
 #, no-wrap
 msgid "MEMBARRIER"
 msgstr "MEMBARRIER"
+
+#. type: TH
+#: man-pages/man2/membarrier.2:25
+#, no-wrap
+msgid "2018-04-30"
+msgstr "2018-04-30"
 
 #. type: Plain text
 #: man-pages/man2/membarrier.2:28
@@ -13989,15 +14017,29 @@ msgid "mprotect, pkey_mprotect - set protection on a region of memory"
 msgstr "mprotect, pkey_mprotect - контролирует доступ к области памяти"
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:42
+#: man-pages/man2/mprotect.2:41
 #, no-wrap
-msgid ""
-"B<int mprotect(void *>I<addr>B<, size_t >I<len>B<, int >I<prot>B<);>\n"
-"B<int pkey_mprotect(void *>I<addr>B<, size_t >I<len>B<, int >I<prot>B<, int >I<pkey>B<);>\n"
-msgstr "B<int mprotect(void *>I<addr>B<, size_t >I<len>B<, int >I<prot>B<);>\nB<int pkey_mprotect(void *>I<addr>B<, size_t >I<len>B<, int >I<prot>B<, int >I<pkey>B<);>\n"
+msgid "B<int mprotect(void *>I<addr>B<, size_t >I<len>B<, int >I<prot>B<);>\n"
+msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:50
+#: man-pages/man2/mprotect.2:44
+#, no-wrap
+msgid ""
+"B<#define _GNU_SOURCE>             /* See feature_test_macros(7) */\n"
+"B<#include E<lt>sys/mman.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/mprotect.2:46
+#, no-wrap
+msgid ""
+"B<int pkey_mprotect(void *>I<addr>B<, size_t >I<len>B<, int >I<prot>B<, int "
+">I<pkey>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/mprotect.2:54
 msgid ""
 "B<mprotect>()  changes the access protections for the calling process's "
 "memory pages containing any part of the address range in the interval "
@@ -14005,47 +14047,47 @@ msgid ""
 msgstr "Вызов B<mprotect>() изменяет параметры доступа страниц памяти вызывающего процесса, которые содержатся, даже частично, в адресном диапазоне [I<addr>,\\ I<addr>+I<len>-1]. Значение I<addr> должно быть выровнено на границу страницы."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:55
+#: man-pages/man2/mprotect.2:59
 msgid ""
 "If the calling process tries to access memory in a manner that violates the "
 "protections, then the kernel generates a B<SIGSEGV> signal for the process."
 msgstr "Если вызывающий процесс нарушает защиту доступа к памяти, то ядро посылает процессу сигнал B<SIGSEGV>."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:60
+#: man-pages/man2/mprotect.2:64
 msgid ""
 "I<prot> is a combination of the following access flags: B<PROT_NONE> or a "
 "bitwise-or of the other values in the following list:"
 msgstr "Значение I<prot> представляет собой комбинацию следующих флагов доступа: B<PROT_NONE> или побитово сложенные другие значения из следующего списка:"
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:63
+#: man-pages/man2/mprotect.2:67
 msgid "The memory cannot be accessed at all."
 msgstr "Доступ к памяти запрещён."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:66
+#: man-pages/man2/mprotect.2:70
 msgid "The memory can be read."
 msgstr "Память можно читать."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:69
+#: man-pages/man2/mprotect.2:73
 msgid "The memory can be modified."
 msgstr "Память можно изменять."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:72
+#: man-pages/man2/mprotect.2:76
 msgid "The memory can be executed."
 msgstr "Память можно выполнять."
 
 #. type: TP
-#: man-pages/man2/mprotect.2:72
+#: man-pages/man2/mprotect.2:76
 #, no-wrap
 msgid "B<PROT_SEM> (since Linux 2.5.7)"
 msgstr "B<PROT_SEM> (начиная с Linux 2.5.7)"
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:81
+#: man-pages/man2/mprotect.2:85
 msgid ""
 "The memory can be used for atomic operations.  This flag was introduced as "
 "part of the B<futex>(2)  implementation (in order to guarantee the ability "
@@ -14054,7 +14096,7 @@ msgid ""
 msgstr "Память можно использовать для атомарных операций. Этот флаг появился как часть реализации B<futex>(2) (для гарантии способности выполнять атомарные операции, требуемые таким командам как B<FUTEX_WAIT>), но пока не используется ни в одной архитектуре."
 
 #. type: TP
-#: man-pages/man2/mprotect.2:81
+#: man-pages/man2/mprotect.2:85
 #, no-wrap
 msgid "B<PROT_SAO> (since Linux 2.6.26)"
 msgstr "B<PROT_SAO> (начиная с Linux 2.6.26)"
@@ -14062,7 +14104,7 @@ msgstr "B<PROT_SAO> (начиная с Linux 2.6.26)"
 #.  commit aba46c5027cb59d98052231b36efcbbde9c77a1d
 #.  commit ef3d3246a0d06be622867d21af25f997aeeb105f
 #. type: Plain text
-#: man-pages/man2/mprotect.2:90
+#: man-pages/man2/mprotect.2:94
 msgid ""
 "The memory should have strong access ordering.  This feature is specific to "
 "the PowerPC architecture (version 2.06 of the architecture specification "
@@ -14071,7 +14113,7 @@ msgid ""
 msgstr "Память должна иметь строгий порядок доступа. Это свойство есть только в архитектуре PowerPC (в спецификации архитектуры версии 2.06 добавлено свойство ЦП SAO и оно доступно, например, на POWER 7 или PowerPC A2)."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:94
+#: man-pages/man2/mprotect.2:98
 msgid ""
 "Additionally (since Linux 2.6.0), I<prot> can have one of the following "
 "flags set:"
@@ -14082,7 +14124,7 @@ msgstr "Также (начиная с Linux 2.6.0), I<prot> может соде�
 #. 			mm->def_flags | VM_MAYREAD | VM_MAYWRITE | VM_MAYEXEC;
 #.  And calc_vm_flag_bits converts only GROWSDOWN/DENYWRITE/LOCKED.
 #. type: TP
-#: man-pages/man2/mprotect.2:94
+#: man-pages/man2/mprotect.2:98
 #, no-wrap
 msgid "B<PROT_GROWSUP>"
 msgstr "B<PROT_GROWSUP>"
@@ -14092,7 +14134,7 @@ msgstr "B<PROT_GROWSUP>"
 #.  there is no mmap() flag (analogous to MAP_GROWSDOWN) for
 #.  creating a VMA that is marked VM_GROWSUP.
 #. type: Plain text
-#: man-pages/man2/mprotect.2:109
+#: man-pages/man2/mprotect.2:113
 msgid ""
 "Apply the protection mode up to the end of a mapping that grows upwards.  "
 "(Such mappings are created for the stack area on architectures\\(emfor "
@@ -14100,13 +14142,13 @@ msgid ""
 msgstr "Применить режим защиты до конца отображения, которое растёт вверх (такие отображения создаются для области стека например в архитектуре HP-PARISC, где стек растёт вверх)."
 
 #. type: TP
-#: man-pages/man2/mprotect.2:109
+#: man-pages/man2/mprotect.2:113
 #, no-wrap
 msgid "B<PROT_GROWSDOWN>"
 msgstr "B<PROT_GROWSDOWN>"
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:116
+#: man-pages/man2/mprotect.2:120
 msgid ""
 "Apply the protection mode down to the beginning of a mapping that grows "
 "downward (which should be a stack segment or a segment mapped with the "
@@ -14114,7 +14156,7 @@ msgid ""
 msgstr "Применить режим защиты до начала отображения, которое растёт вниз (которое должно быть сегментом стека или сегментом, отображённым с установленным флагом B<MAP_GROWSDOWN>)."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:135
+#: man-pages/man2/mprotect.2:139
 msgid ""
 "Like B<mprotect>(), B<pkey_mprotect>()  changes the protection on the pages "
 "specified by I<addr> and I<len>.  The I<pkey> argument specifies the "
@@ -14125,14 +14167,14 @@ msgid ""
 msgstr "Подобно B<mprotect>(), вызов B<pkey_mprotect>() изменяет защиту страниц, указанных I<addr> и I<len>. Аргумент I<pkey> содержит ключ защиты (смотрите B<pkeys>(7)), назначаемый памяти. Ключ защиты должен быть выделен с помощью B<pkey_alloc>(2) до передачи в B<pkey_mprotect>(). Пример использования этого системного вызова смотрите в B<pkeys>(7)."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:144
+#: man-pages/man2/mprotect.2:148
 msgid ""
 "On success, B<mprotect>()  and B<pkey_mprotect>()  return zero.  On error, "
 "these system calls return -1, and I<errno> is set appropriately."
 msgstr "При успешном выполнении B<mprotect>() и B<pkey_mprotect>() возвращают 0. В случае ошибки возвращается -1, а I<errno> устанавливается в соответствующее значение."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:154
+#: man-pages/man2/mprotect.2:158
 msgid ""
 "The memory cannot be given the specified access.  This can happen, for "
 "example, if you B<mmap>(2)  a file to which you have read-only access, then "
@@ -14140,41 +14182,41 @@ msgid ""
 msgstr "Нельзя задать этот вид доступа. Например, это может случиться, если при вызове B<mmap>(2) файл доступен только на чтение, а запрос B<mprotect>() был B<PROT_WRITE>."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:158
+#: man-pages/man2/mprotect.2:162
 msgid ""
 "I<addr> is not a valid pointer, or not a multiple of the system page size."
 msgstr "Значение I<addr> не является правильным указателем или не кратен размеру системной страницы."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:163
+#: man-pages/man2/mprotect.2:167
 msgid ""
 "(B<pkey_mprotect>())  I<pkey> has not been allocated with B<pkey_alloc>(2)"
 msgstr "(B<pkey_mprotect>())  I<pkey> не был выделен с помощью B<pkey_alloc>(2)."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:171
+#: man-pages/man2/mprotect.2:175
 msgid "Both B<PROT_GROWSUP> and B<PROT_GROWSDOWN> were specified in I<prot>."
 msgstr "В I<prot> указаны оба флага, B<PROT_GROWSUP> и B<PROT_GROWSDOWN>."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:175
+#: man-pages/man2/mprotect.2:179
 msgid "Invalid flags specified in I<prot>."
 msgstr "Указано неверное значение в I<prot>."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:182
+#: man-pages/man2/mprotect.2:186
 msgid ""
 "(PowerPC architecture)  B<PROT_SAO> was specified in I<prot>, but SAO "
 "hardware feature is not available."
 msgstr "(архитектура PowerPC ) В I<prot> указан B<PROT_SAO>, но недоступно аппаратное свойство SAO."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:185
+#: man-pages/man2/mprotect.2:189
 msgid "Internal kernel structures could not be allocated."
 msgstr "Не удалось выделить место под внутренние структуры ядра."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:195
+#: man-pages/man2/mprotect.2:199
 msgid ""
 "Addresses in the range [I<addr>, I<addr>+I<len>-1] are invalid for the "
 "address space of the process, or specify one or more pages that are not "
@@ -14184,7 +14226,7 @@ msgstr "Адреса в диапазоне [I<addr>, I<addr>+I<len>-1] неко�
 
 #.  I.e., the number of VMAs would exceed the 64 kB maximum
 #. type: Plain text
-#: man-pages/man2/mprotect.2:207
+#: man-pages/man2/mprotect.2:211
 msgid ""
 "Changing the protection of a memory region would result in the total number "
 "of mappings with distinct attributes (e.g., read versus read/write "
@@ -14195,7 +14237,7 @@ msgid ""
 msgstr "Изменение защиты области памяти привело бы к превышению разрешённого максимума на количество отображений с различающимися атрибутами (защита на чтение и на чтение/запись). Например, защита диапазона B<PROT_READ> в середине области, которая сейчас защищена B<PROT_READ|PROT_WRITE>, привела бы к трём отображениям: два отображения на концах, доступных на чтение/запись и доступное только для чтение отображение посередине."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:211
+#: man-pages/man2/mprotect.2:215
 msgid ""
 "B<pkey_mprotect>()  first appeared in Linux 4.9; library support was added "
 "in glibc 2.27."
@@ -14204,7 +14246,7 @@ msgstr "Вызов B<pkey_mprotect>() впервые появился в Linux 4
 #.  SVr4 defines an additional error
 #.  code EAGAIN. The SVr4 error conditions don't map neatly onto Linux's.
 #. type: Plain text
-#: man-pages/man2/mprotect.2:221
+#: man-pages/man2/mprotect.2:225
 msgid ""
 "B<mprotect>(): POSIX.1-2001, POSIX.1-2008, SVr4.  POSIX says that the "
 "behavior of B<mprotect>()  is unspecified if it is applied to a region of "
@@ -14212,12 +14254,12 @@ msgid ""
 msgstr "B<mprotect>(): В POSIX.1-2001, POSIX.1-2008,  SVr4 сказано, что поведение B<mprotect>() не определено, если переданная область памяти не получена через B<mmap>(2)."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:224
+#: man-pages/man2/mprotect.2:228
 msgid "B<pkey_mprotect>()  is a nonportable Linux extension."
 msgstr "Вызов B<pkey_mprotect> является непереносимым расширением Linux."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:231
+#: man-pages/man2/mprotect.2:235
 msgid ""
 "On Linux, it is always permissible to call B<mprotect>()  on any address in "
 "a process's address space (except for the kernel vsyscall area).  In "
@@ -14225,7 +14267,7 @@ msgid ""
 msgstr "В Linux всегда можно вызвать B<mprotect>() с любым адресом из адресного пространства процесса (за исключением области ядра vsyscall). В частности, это можно использовать для изменения отображений существующего кода на записываемые."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:245
+#: man-pages/man2/mprotect.2:249
 msgid ""
 "Whether B<PROT_EXEC> has any effect different from B<PROT_READ> depends on "
 "processor architecture, kernel version, and process state.  If "
@@ -14235,14 +14277,14 @@ msgid ""
 msgstr "Отличается ли действие B<PROT_EXEC> от B<PROT_READ> зависит от архитектуры процессора, версии ядра и состояния процесса. Если в флагах специализаций процессора установлен B<READ_IMPLIES_EXEC> (смотрите B<personality>(2)), то указание B<PROT_READ> подразумевает добавление B<PROT_EXEC>."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:250
+#: man-pages/man2/mprotect.2:254
 msgid ""
 "On some hardware architectures (e.g., i386), B<PROT_WRITE> implies "
 "B<PROT_READ>."
 msgstr "На некоторых аппаратных архитектурах (например, i386) B<PROT_WRITE> подразумевает B<PROT_READ>."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:259
+#: man-pages/man2/mprotect.2:263
 msgid ""
 "POSIX.1 says that an implementation may permit access other than that "
 "specified in I<prot>, but at a minimum can allow write access only if "
@@ -14251,7 +14293,7 @@ msgid ""
 msgstr "В POSIX.1 сказано, что реализация может разрешить доступ отличный от указанного в I<prot>, но для доступа на запись должен быть обязательно установлен флаг B<PROT_WRITE>, и любой доступ должен быть запрещён, если установлен флаг B<PROT_NONE>."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:272
+#: man-pages/man2/mprotect.2:276
 msgid ""
 "Applications should be careful when mixing use of B<mprotect>()  and "
 "B<pkey_mprotect>().  On x86, when B<mprotect>()  is used with I<prot> set to"
@@ -14260,16 +14302,16 @@ msgid ""
 msgstr "В приложениях нужно осторожно использовать B<mprotect>() и B<pkey_mprotect>() вместе. На x86, если B<mprotect>() используется с установленным в I<prot> значением  B<PROT_EXEC>, то pkey может быть выделен и установлен ядром в память неявным образом, но только если до этого pkey был равен 0."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:282
+#: man-pages/man2/mprotect.2:286
 msgid ""
 "On systems that do not support protection keys in hardware, "
-"B<pkey_mprotect>()  may still be used, but I<pkey> must be set to 0.  When "
+"B<pkey_mprotect>()  may still be used, but I<pkey> must be set to -1.  When "
 "called this way, the operation of B<pkey_mprotect>()  is equivalent to "
 "B<mprotect>()."
-msgstr "В системах без аппаратной поддержки ключей защиты B<pkey_mprotect>() всё ещё можно использовать, но значение I<pkey> должно быть равно 0. При таком вызове операция B<pkey_mprotect>() эквивалентна B<mprotect>()."
+msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:290
+#: man-pages/man2/mprotect.2:294
 msgid ""
 "The program below demonstrates the use of B<mprotect>().  The program "
 "allocates four pages of memory, makes the third of these pages read-only, "
@@ -14278,13 +14320,13 @@ msgid ""
 msgstr "Программа, представленная далее, показывает использование B<mprotect>(). Она выделяет четыре страницы памяти, делает третью доступной только на чтение, а затем запускает цикл, который проходит по выделенной области, меняя байты."
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:293
+#: man-pages/man2/mprotect.2:297
 msgid ""
 "An example of what we might see when running the program is the following:"
 msgstr "Результат работы программы:"
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:299
+#: man-pages/man2/mprotect.2:303
 #, no-wrap
 msgid ""
 "$B< ./a.out>\n"
@@ -14293,7 +14335,7 @@ msgid ""
 msgstr "$B< ./a.out>\nНачало области:             0x804c000\nПолучен SIGSEGV при адресе: 0x804e000\n"
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:311
+#: man-pages/man2/mprotect.2:315
 #, no-wrap
 msgid ""
 "#include E<lt>unistd.hE<gt>\n"
@@ -14306,13 +14348,13 @@ msgid ""
 msgstr "#include E<lt>unistd.hE<gt>\n#include E<lt>signal.hE<gt>\n#include E<lt>stdio.hE<gt>\n#include E<lt>malloc.hE<gt>\n#include E<lt>stdlib.hE<gt>\n#include E<lt>errno.hE<gt>\n#include E<lt>sys/mman.hE<gt>\n"
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:316
+#: man-pages/man2/mprotect.2:320
 #, no-wrap
 msgid "static char *buffer;\n"
 msgstr "static char *buffer;\n"
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:325
+#: man-pages/man2/mprotect.2:329
 #, no-wrap
 msgid ""
 "static void\n"
@@ -14326,7 +14368,7 @@ msgid ""
 msgstr "static void\nhandler(int sig, siginfo_t *si, void *unused)\n{\n    /* Замечание: вызов printf() из обработчика сигнала небезопасен\n       (и не должен выполняться в готовых программах), так как\n       printf() не async-signal-safe; смотрите signal-safety(7).\n       Тем не менее, здесь мы используем printf(), так как это простой\n       способ показать когда вызывается обработчик. */\n"
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:330
+#: man-pages/man2/mprotect.2:334
 #, no-wrap
 msgid ""
 "    printf(\"Got SIGSEGV at address: 0x%lx\\en\",\n"
@@ -14336,7 +14378,7 @@ msgid ""
 msgstr "    printf(\"Получен SIGSEGV при адресе: 0x%lx\\en\",\n            (long) si-E<gt>si_addr);\n    exit(EXIT_FAILURE);\n}\n"
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:337
+#: man-pages/man2/mprotect.2:341
 #, no-wrap
 msgid ""
 "int\n"
@@ -14348,7 +14390,7 @@ msgid ""
 msgstr "int\nmain(int argc, char *argv[])\n{\n    char *p;\n    int pagesize;\n    struct sigaction sa;\n"
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:343
+#: man-pages/man2/mprotect.2:347
 #, no-wrap
 msgid ""
 "    sa.sa_flags = SA_SIGINFO;\n"
@@ -14359,7 +14401,7 @@ msgid ""
 msgstr "    sa.sa_flags = SA_SIGINFO;\n    sigemptyset(&sa.sa_mask);\n    sa.sa_sigaction = handler;\n    if (sigaction(SIGSEGV, &sa, NULL) == -1)\n        handle_error(\"sigaction\");\n"
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:347
+#: man-pages/man2/mprotect.2:351
 #, no-wrap
 msgid ""
 "    pagesize = sysconf(_SC_PAGE_SIZE);\n"
@@ -14368,7 +14410,7 @@ msgid ""
 msgstr "    pagesize = sysconf(_SC_PAGE_SIZE);\n    if (pagesize == -1)\n        handle_error(\"sysconf\");\n"
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:350
+#: man-pages/man2/mprotect.2:354
 #, no-wrap
 msgid ""
 "    /* Allocate a buffer aligned on a page boundary;\n"
@@ -14376,7 +14418,7 @@ msgid ""
 msgstr "    /* выделить буфер с выравниванием на границу страницы;\n       начальная защита: PROT_READ | PROT_WRITE */\n"
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:354
+#: man-pages/man2/mprotect.2:358
 #, no-wrap
 msgid ""
 "    buffer = memalign(pagesize, 4 * pagesize);\n"
@@ -14385,13 +14427,13 @@ msgid ""
 msgstr "    buffer = memalign(pagesize, 4 * pagesize);\n    if (buffer == NULL)\n        handle_error(\"memalign\");\n"
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:356
+#: man-pages/man2/mprotect.2:360
 #, no-wrap
 msgid "    printf(\"Start of region:        0x%lx\\en\", (long) buffer);\n"
 msgstr "    printf(\"Начало области:             0x%lx\\en\", (long) buffer);\n"
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:360
+#: man-pages/man2/mprotect.2:364
 #, no-wrap
 msgid ""
 "    if (mprotect(buffer + pagesize * 2, pagesize,\n"
@@ -14400,7 +14442,7 @@ msgid ""
 msgstr "    if (mprotect(buffer + pagesize * 2, pagesize,\n                PROT_READ) == -1)\n        handle_error(\"mprotect\");\n"
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:363
+#: man-pages/man2/mprotect.2:367
 #, no-wrap
 msgid ""
 "    for (p = buffer ; ; )\n"
@@ -14408,7 +14450,7 @@ msgid ""
 msgstr "    for (p = buffer ; ; )\n        *(p++) = \\(aqa\\(aq;\n"
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:367
+#: man-pages/man2/mprotect.2:371
 #, no-wrap
 msgid ""
 "    printf(\"Loop completed\\en\");     /* Should never happen */\n"
@@ -14417,7 +14459,7 @@ msgid ""
 msgstr "    printf(\"Цикл завершён\\en\");     /* никогда не должно случиться */\n    exit(EXIT_SUCCESS);\n}\n"
 
 #. type: Plain text
-#: man-pages/man2/mprotect.2:371
+#: man-pages/man2/mprotect.2:375
 msgid "B<mmap>(2), B<sysconf>(3), B<pkeys>(7)"
 msgstr "B<mmap>(2), B<sysconf>(3), B<pkeys>(7)"
 
@@ -19120,10 +19162,16 @@ msgstr "B<memccpy>(3), B<memcpy>(3), B<memmove>(3), B<wmemcpy>(3)"
 msgid "MALLOC_TRIM"
 msgstr "MALLOC_TRIM"
 
+#. type: TH
+#: man-pages/man3/malloc_trim.3:26
+#, no-wrap
+msgid "2019-05-09"
+msgstr ""
+
 #. type: Plain text
 #: man-pages/man3/malloc_trim.3:29
-msgid "malloc_trim - release free memory from the top of the heap"
-msgstr "malloc_trim — освободить память из вершины кучи"
+msgid "malloc_trim - release free memory from the heap"
+msgstr ""
 
 #. type: Plain text
 #: man-pages/man3/malloc_trim.3:33
@@ -19131,14 +19179,14 @@ msgid "B<int malloc_trim(size_t >I<pad>B<);>"
 msgstr "B<int malloc_trim(size_t >I<pad>B<);>"
 
 #. type: Plain text
-#: man-pages/man3/malloc_trim.3:40
+#: man-pages/man3/malloc_trim.3:42
 msgid ""
-"The B<malloc_trim>()  function attempts to release free memory at the top of"
-" the heap (by calling B<sbrk>(2)  with a suitable argument)."
-msgstr "Функция B<malloc_trim>() освобождает память из вершины кучи (используя B<sbrk>(2) с подходящими аргументами)."
+"The B<malloc_trim>()  function attempts to release free memory from the heap"
+" (by calling B<sbrk>(2)  or B<madvise>(2)  with suitable arguments)."
+msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/malloc_trim.3:51
+#: man-pages/man3/malloc_trim.3:53
 msgid ""
 "The I<pad> argument specifies the amount of free space to leave untrimmed at"
 " the top of the heap.  If this argument is 0, only the minimum amount of "
@@ -19149,7 +19197,7 @@ msgid ""
 msgstr "Аргумент I<pad> определяет размер свободного пространства, оставляемого на верху кучи. Если он 0, то поддерживается минимум памяти (одна страница или меньше). Если значение отлично от нуля, то освобождается пространство для будущего распределения без необходимости использовать B<sbrk>(2)."
 
 #. type: Plain text
-#: man-pages/man3/malloc_trim.3:56
+#: man-pages/man3/malloc_trim.3:58
 msgid ""
 "The B<malloc_trim>()  function returns 1 if memory was actually released "
 "back to the system, or 0 if it was not possible to release any memory."
@@ -19158,18 +19206,18 @@ msgstr "B<malloc_trim>() возвращает 1 если память была �
 #.  .SH VERSIONS
 #.  Available already in glibc 2.0, possibly earlier
 #. type: Plain text
-#: man-pages/man3/malloc_trim.3:60
+#: man-pages/man3/malloc_trim.3:62
 msgid "No errors are defined."
 msgstr "Ошибки не установлены."
 
 #. type: tbl table
-#: man-pages/man3/malloc_trim.3:70
+#: man-pages/man3/malloc_trim.3:72
 #, no-wrap
 msgid "B<malloc_trim>()"
 msgstr "B<malloc_trim>()"
 
 #. type: Plain text
-#: man-pages/man3/malloc_trim.3:84
+#: man-pages/man3/malloc_trim.3:86
 msgid ""
 "This function is automatically called by B<free>(3)  in certain "
 "circumstances; see the discussion of B<M_TOP_PAD> and B<M_TRIM_THRESHOLD> in"
@@ -19177,21 +19225,31 @@ msgid ""
 msgstr "Эта функция автоматически вызывается функцией B<free>(3) в определенных обстоятельствах. Смотрите обсуждение B<M_TOP_PAD> и B<M_TRIM_THRESHOLD> в B<mallopt>(3)."
 
 #. type: Plain text
-#: man-pages/man3/malloc_trim.3:87
+#: man-pages/man3/malloc_trim.3:92
 msgid ""
-"This function cannot release free memory located at places other than the "
-"top of the heap."
-msgstr "Функция не освобождает память в других областях памяти, кроме вершины кучи."
+"Only the main heap (using B<sbrk>(2))  honors the I<pad> argument; thread "
+"heaps do not."
+msgstr ""
 
-#.  malloc/malloc.c::mTRIm():
-#.      return result | (av == &main_arena ? sYSTRIm (pad, av) : 0);
+#.  See commit 68631c8eb92ff38d9da1ae34f6aa048539b199cc
+#.  (dated 2007-12-16) which adds iteration over all
+#.  arenas and frees all pages in chunks which are free.
 #. type: Plain text
-#: man-pages/man3/malloc_trim.3:91
-msgid "This function releases only memory in the main arena."
-msgstr "Эта функция освобождает память только в главной области."
+#: man-pages/man3/malloc_trim.3:98
+msgid ""
+"Since glibc 2.8 this function frees memory in all arenas and in all chunks "
+"with whole free pages."
+msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/malloc_trim.3:94
+#: man-pages/man3/malloc_trim.3:101
+msgid ""
+"Before glibc 2.8 this function only freed memory at the top of the heap in "
+"the main arena."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/malloc_trim.3:104
 msgid "B<sbrk>(2), B<malloc>(3), B<mallopt>(3)"
 msgstr "B<sbrk>(2), B<malloc>(3), B<mallopt>(3)"
 
@@ -23705,15 +23763,27 @@ msgid "B<struct mallinfo mallinfo(void);>"
 msgstr "B<struct mallinfo mallinfo(void);>"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:41
+#: man-pages/man3/mallinfo.3:40
 msgid ""
 "The B<mallinfo>()  function returns a copy of a structure containing "
 "information about memory allocations performed by B<malloc>(3)  and related "
-"functions.  This structure is defined as follows:"
-msgstr "Функция B<mallinfo>() возвращает копию структуры, содержащую информацию о выделении памяти, выполненной функцией B<malloc>(3) и связанными с ней функциями. Эта структура определена следующим образом:"
+"functions."
+msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:56
+#: man-pages/man3/mallinfo.3:46
+msgid ""
+"Note that not all allocations are visible to B<mallinfo>(); see BUGS and "
+"consider using B<malloc_info>(3)  instead."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/mallinfo.3:48
+msgid "The returned structure is defined as follows:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/mallinfo.3:63
 #, no-wrap
 msgid ""
 "struct mallinfo {\n"
@@ -23731,19 +23801,19 @@ msgid ""
 msgstr "struct mallinfo {\n    int arena;     /* не размеченная область памяти выделенная под кучу (в байтах) */\n    int ordblks;   /* Количество свободных блоков */\n    int smblks;    /* Количество свободных блоков fastbin */\n    int hblks;     /* Количество размеченных областей */\n    int hblkhd;    /* Пространство, выделенное в размеченных областях (в байтах) */\n    int usmblks;   /* Максимум общей выделенной области (в байтах) */\n    int fsmblks;   /* Пространство в освобожденных fastbin блоках (в байтах) */\n    int uordblks;  /* Общее выделенное пространство (в байтах) */\n    int fordblks;  /* Общее свободное пространство (в байтах) */\n    int keepcost;  /* Верхнее пространство, которое можно освободить (в байтах) */\n};\n"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:62
+#: man-pages/man3/mallinfo.3:69
 msgid ""
 "The fields of the I<mallinfo> structure contain the following information:"
 msgstr "Поля структуры I<mallinfo> содержат следующую информацию:"
 
 #. type: TP
-#: man-pages/man3/mallinfo.3:62
+#: man-pages/man3/mallinfo.3:69
 #, no-wrap
 msgid "I<arena>"
 msgstr "I<arena>"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:68
+#: man-pages/man3/mallinfo.3:75
 msgid ""
 "The total amount of memory allocated by means other than B<mmap>(2)  (i.e., "
 "memory allocated on the heap).  This figure includes both in-use blocks and "
@@ -23751,59 +23821,59 @@ msgid ""
 msgstr "Общее количество памяти, выделенной способами отличными от B<mmap>(2) (т. е., память, выделенная из кучи). Это значение включает используемые и свободные блоки из списка."
 
 #. type: TP
-#: man-pages/man3/mallinfo.3:68
+#: man-pages/man3/mallinfo.3:75
 #, no-wrap
 msgid "I<ordblks>"
 msgstr "I<ordblks>"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:71
+#: man-pages/man3/mallinfo.3:78
 msgid "The number of ordinary (i.e., non-fastbin) free blocks."
 msgstr "Количество обычных (т. е., не fastbin) свободных блоков."
 
 #. type: TP
-#: man-pages/man3/mallinfo.3:71
+#: man-pages/man3/mallinfo.3:78
 #, no-wrap
 msgid "I<smblks>"
 msgstr "I<smblks>"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:75
+#: man-pages/man3/mallinfo.3:82
 msgid "The number of fastbin free blocks (see B<mallopt>(3))."
 msgstr "Количество свободных блоков fastbin (смотрите B<mallopt>(3))."
 
 #. type: TP
-#: man-pages/man3/mallinfo.3:75
+#: man-pages/man3/mallinfo.3:82
 #, no-wrap
 msgid "I<hblks>"
 msgstr "I<hblks>"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:83
+#: man-pages/man3/mallinfo.3:90
 msgid ""
 "The number of blocks currently allocated using B<mmap>(2).  (See the "
 "discussion of B<M_MMAP_THRESHOLD> in B<mallopt>(3).)"
 msgstr "Количество блоков, выделенных с помощью B<mmap>(2) на настоящий момент (смотрите описание B<M_MMAP_THRESHOLD> в B<mallopt>(3))."
 
 #. type: TP
-#: man-pages/man3/mallinfo.3:83
+#: man-pages/man3/mallinfo.3:90
 #, no-wrap
 msgid "I<hblkhd>"
 msgstr "I<hblkhd>"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:87
+#: man-pages/man3/mallinfo.3:94
 msgid "The number of bytes in blocks currently allocated using B<mmap>(2)."
 msgstr "Количество байт в блоках, выделенных с помощью B<mmap>(2) на настоящий момент."
 
 #. type: TP
-#: man-pages/man3/mallinfo.3:87
+#: man-pages/man3/mallinfo.3:94
 #, no-wrap
 msgid "I<usmblks>"
 msgstr "I<usmblks>"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:92
+#: man-pages/man3/mallinfo.3:99
 msgid ""
 "The \"highwater mark\" for allocated space\\(emthat is, the maximum amount "
 "of space that was ever allocated.  This field is maintained only in "
@@ -23811,40 +23881,40 @@ msgid ""
 msgstr "«Верхняя отметка» выделенного пространства, то есть максимальное количество места, которое когда-либо выделялось. Это поле изменяется только в окружениях без нитей."
 
 #. type: TP
-#: man-pages/man3/mallinfo.3:92
+#: man-pages/man3/mallinfo.3:99
 #, no-wrap
 msgid "I<fsmblks>"
 msgstr "I<fsmblks>"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:95
+#: man-pages/man3/mallinfo.3:102
 msgid "The total number of bytes in fastbin free blocks."
 msgstr "Общее количество байт в свободных блоках fastbin."
 
 #. type: TP
-#: man-pages/man3/mallinfo.3:95
+#: man-pages/man3/mallinfo.3:102
 #, no-wrap
 msgid "I<uordblks>"
 msgstr "I<uordblks>"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:98
+#: man-pages/man3/mallinfo.3:105
 msgid "The total number of bytes used by in-use allocations."
 msgstr "Общее количество байт, в используемой выделенной памяти."
 
 #. type: TP
-#: man-pages/man3/mallinfo.3:98
+#: man-pages/man3/mallinfo.3:105
 #, no-wrap
 msgid "I<fordblks>"
 msgstr "I<fordblks>"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:101
+#: man-pages/man3/mallinfo.3:108
 msgid "The total number of bytes in free blocks."
 msgstr "Общее количество байт в свободных блоках."
 
 #. type: TP
-#: man-pages/man3/mallinfo.3:101
+#: man-pages/man3/mallinfo.3:108
 #, no-wrap
 msgid "I<keepcost>"
 msgstr "I<keepcost>"
@@ -23852,7 +23922,7 @@ msgstr "I<keepcost>"
 #.  .SH VERSIONS
 #.  Available already in glibc 2.0, possibly earlier
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:110
+#: man-pages/man3/mallinfo.3:117
 msgid ""
 "The total amount of releasable free space at the top of the heap.  This is "
 "the maximum number of bytes that could ideally (i.e., ignoring page "
@@ -23860,19 +23930,19 @@ msgid ""
 msgstr "Общее количество освобождаемого свободного пространства сверху кучи. Это значение является максимальным количеством байт, которое будет освобождено B<malloc_trim>(3) в идеальном случае (т. е., без учёта ограничений по выравниванию и т. п.)."
 
 #. type: tbl table
-#: man-pages/man3/mallinfo.3:120
+#: man-pages/man3/mallinfo.3:127
 #, no-wrap
 msgid "B<mallinfo>()"
 msgstr "B<mallinfo>()"
 
 #. type: tbl table
-#: man-pages/man3/mallinfo.3:120
+#: man-pages/man3/mallinfo.3:127
 #, no-wrap
 msgid "MT-Unsafe init const:mallopt"
 msgstr "MT-Unsafe init const:mallopt"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:136
+#: man-pages/man3/mallinfo.3:143
 msgid ""
 "B<mallinfo>()  would access some global internal objects.  If modify them "
 "with non-atomically, may get inconsistent results.  The identifier "
@@ -23882,7 +23952,7 @@ msgid ""
 msgstr "Функция B<mallinfo>() получила бы доступ к некоторым глобальным внутренним переменным. Если изменять их не атомарно, то можно нарушить целостность результатов. Идентификатор I<mallopt> в I<const:mallopt> означает, что B<mallopt>() изменяла бы глобальные внутренние переменные атомарно, что делает B<mallinfo>() достаточно безопасной, но другие изменения могут выполняться не атомарно."
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:140
+#: man-pages/man3/mallinfo.3:147
 msgid ""
 "This function is not specified by POSIX or the C standards.  A similar "
 "function exists on many System V derivatives, and was specified in the SVID."
@@ -23893,7 +23963,7 @@ msgstr "Эта функция не определена в стандартах 
 #.      "[patch] Fix mallinfo() to accumulate results for all arenas"
 #.  on libc-alpha@sourceware.org
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:152
+#: man-pages/man3/mallinfo.3:159
 msgid ""
 "B<Information is returned for only the main memory allocation area.> "
 "Allocations in other arenas are excluded.  See B<malloc_stats>(3)  and "
@@ -23902,7 +23972,7 @@ msgid ""
 msgstr "B<Информация возвращается только для главной области выделяемой памяти.> Выделение в других областях не учитываются. Альтернативой, возвращаемой информацию о других частях, являются B<malloc_stats>(3) и B<malloc_info>(3)."
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:160
+#: man-pages/man3/mallinfo.3:167
 msgid ""
 "The fields of the I<mallinfo> structure are typed as I<int>.  However, "
 "because some internal bookkeeping values may be of type I<long>, the "
@@ -23910,7 +23980,7 @@ msgid ""
 msgstr "Поля структуры I<mallinfo> имеют тип I<int>. Однако, из-за того, что некоторые внутренние значения поддержки (bookkeeping) могут иметь тип I<long>, возвращаемые значения могут быть близкими к нулю и поэтому не точны."
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:166
+#: man-pages/man3/mallinfo.3:173
 msgid ""
 "The program below employs B<mallinfo>()  to retrieve memory allocation "
 "statistics before and after allocating and freeing some blocks of memory.  "
@@ -23918,14 +23988,14 @@ msgid ""
 msgstr "Программа, представленная ниже, вызывает B<mallinfo>() для получения статистики по выделенной памяти перед и после выделения и освобождения нескольких блоков памяти. Статистика выдаётся в стандартный вывод."
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:170
+#: man-pages/man3/mallinfo.3:177
 msgid ""
 "The first two command-line arguments specify the number and size of blocks "
 "to be allocated with B<malloc>(3)."
 msgstr "Первые два параметра командной строки определяют количество и размер блоков, которые будут выделены с помощью B<malloc>(3)."
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:184
+#: man-pages/man3/mallinfo.3:191
 msgid ""
 "The remaining three arguments specify which of the allocated blocks should "
 "be freed with B<free>(3).  These three arguments are optional, and specify "
@@ -23939,14 +24009,14 @@ msgid ""
 msgstr "В оставшихся трёх аргументах задаётся какие из выделенных блоков должны быть освобождены с помощью B<free>(3). Эти аргументы необязательны и определяют (по порядку): размер шага, используемый в цикле освобождения блоков (по умолчанию 1, что приводит к освобождению всех блоков диапазона); порядковая позиция первого освобождаемого блока (по умолчанию 0, то есть первый выделенный блок); номер, на единицу больший порядковой позиции последнего освобождаемого блока (по умолчанию, на единицу больше, чем максимальное количество блоков). Если эти аргументы не указаны, то по умолчанию освобождаются все выделенные блоки."
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:188
+#: man-pages/man3/mallinfo.3:195
 msgid ""
 "In the following example run of the program, 1000 allocations of 100 bytes "
 "are performed, and then every second allocated block is freed:"
 msgstr "Пример запуска программы, где память выделяется 1000 раз по 100 байт, а затем освобождается каждый второй выделенный блок:"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:203
+#: man-pages/man3/mallinfo.3:210
 #, no-wrap
 msgid ""
 "$ B<./a.out 1000 100 2>\n"
@@ -23964,7 +24034,7 @@ msgid ""
 msgstr "$ B<./a.out 1000 100 2>\n============== перед выделением блоков ==============\nвсего неотображённых байт (часть):       0\nкол-во свободных порций (ordblks):            1\nкол-во свободных блоков fastbin (smblks):     0\nкол-во отображённых областей (hblks):           0\nбайтов в отображённых областях (hblkhd):      0\nмаксимальное количество выделенного пространства (usmblks):  0\nсвободных байт в fastbins (fsmblks): 0\nполное выделенное пространство (uordblks):      0\nполное свободное пространство (fordblks):           0\nосвобождаемых блоков сверху (keepcost):   0\n"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:215
+#: man-pages/man3/mallinfo.3:222
 #, no-wrap
 msgid ""
 "============== After allocating blocks ==============\n"
@@ -23981,7 +24051,7 @@ msgid ""
 msgstr "============== после выделения блоков ==============\nвсего неотображённых байт (часть):       1\nкол-во свободных порций (ordblks):            0\nкол-во свободных блоков fastbin (smblks):     0\nкол-во отображённых областей (hblks):           0\nбайтов в отображённых областях (hblkhd):      0\nмаксимальное количество выделенного пространства (usmblks):  0\nсвободных байт в fastbins (fsmblks): 0\nполное выделенное пространство (uordblks):      104000\nполное свободное пространство (fordblks):           31168\nосвобождаемых блоков сверху (keepcost):   31168\n"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:227
+#: man-pages/man3/mallinfo.3:234
 #, no-wrap
 msgid ""
 "============== After freeing blocks ==============\n"
@@ -23998,7 +24068,7 @@ msgid ""
 msgstr "============== после освобождения блоков ==============\nвсего неотображённых байт (часть):       135168\nкол-во свободных порций (ordblks):            501\nкол-во свободных блоков fastbin (smblks):     0\nкол-во отображённых областей (hblks):           0\nбайтов в отображённых областях (hblkhd):      0\nмаксимальное количество выделенного пространства (usmblks):  0\nсвободных байт в fastbins (fsmblks): 0\nполное выделенное пространство (uordblks):      52000\nполное свободное пространство (fordblks):           83168\nосвобождаемых блоков сверху (keepcost):   31168\n"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:235
+#: man-pages/man3/mallinfo.3:242
 #, no-wrap
 msgid ""
 "#include E<lt>malloc.hE<gt>\n"
@@ -24007,7 +24077,7 @@ msgid ""
 msgstr "#include E<lt>malloc.hE<gt>\n#include E<lt>stdlib.hE<gt>\n#include E<lt>string.hE<gt>\n"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:240
+#: man-pages/man3/mallinfo.3:247
 #, no-wrap
 msgid ""
 "static void\n"
@@ -24017,13 +24087,13 @@ msgid ""
 msgstr "static void\ndisplay_mallinfo(void)\n{\n    struct mallinfo mi;\n"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:242
+#: man-pages/man3/mallinfo.3:249
 #, no-wrap
 msgid "    mi = mallinfo();\n"
 msgstr "    mi = mallinfo();\n"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:254
+#: man-pages/man3/mallinfo.3:261
 #, no-wrap
 msgid ""
 "    printf(\"Total non-mmapped bytes (arena):       %d\\en\", mi.arena);\n"
@@ -24040,7 +24110,7 @@ msgid ""
 msgstr "    printf(\"всего неотображённых байт (часть):       %d\\en\", mi.arena);\n    printf(\"кол-во свободных порций (ordblks):            %d\\en\", mi.ordblks);\n    printf(\"кол-во свободных блоков fastbin (smblks):     %d\\en\", mi.smblks);\n    printf(\"кол-во отображённых областей (hblks):           %d\\en\", mi.hblks);\n    printf(\"байтов в отображённых областях (hblkhd):      %d\\en\", mi.hblkhd);\n    printf(\"максимальное количество выделенного пространства (usmblks):  %d\\en\", mi.usmblks);\n    printf(\"свободных байт в fastbins (fsmblks): %d\\en\", mi.fsmblks);\n    printf(\"полное выделенное пространство (uordblks):      %d\\en\", mi.uordblks);\n    printf(\"полное свободное пространство (fordblks):           %d\\en\", mi.fordblks);\n    printf(\"освобождаемых блоков сверху (keepcost):   %d\\en\", mi.keepcost);\n}\n"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:262
+#: man-pages/man3/mallinfo.3:269
 #, no-wrap
 msgid ""
 "int\n"
@@ -24053,7 +24123,7 @@ msgid ""
 msgstr "int\nmain(int argc, char *argv[])\n{\n#define MAX_ALLOCS 2000000\n    char *alloc[MAX_ALLOCS];\n    int numBlocks, j, freeBegin, freeEnd, freeStep;\n    size_t blockSize;\n"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:268
+#: man-pages/man3/mallinfo.3:275
 #, no-wrap
 msgid ""
 "    if (argc E<lt> 3 || strcmp(argv[1], \"--help\") == 0) {\n"
@@ -24064,7 +24134,7 @@ msgid ""
 msgstr "    if (argc E<lt> 3 || strcmp(argv[1], \"--help\") == 0) {\n        fprintf(stderr, \"%s кол-во блоков размер блока [шаг освобождения\"\n                \"[начало освобождения [конец освобождения]]]\\en\", argv[0]);\n        exit(EXIT_FAILURE);\n    }\n"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:274
+#: man-pages/man3/mallinfo.3:281
 #, no-wrap
 msgid ""
 "    numBlocks = atoi(argv[1]);\n"
@@ -24075,7 +24145,7 @@ msgid ""
 msgstr "    numBlocks = atoi(argv[1]);\n    blockSize = atoi(argv[2]);\n    freeStep = (argc E<gt> 3) ? atoi(argv[3]) : 1;\n    freeBegin = (argc E<gt> 4) ? atoi(argv[4]) : 0;\n    freeEnd = (argc E<gt> 5) ? atoi(argv[5]) : numBlocks;\n"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:277
+#: man-pages/man3/mallinfo.3:284
 #, no-wrap
 msgid ""
 "    printf(\"============== Before allocating blocks ==============\\en\");\n"
@@ -24083,7 +24153,7 @@ msgid ""
 msgstr "    printf(\"============== перед выделением блоков ==============\\en\");\n    display_mallinfo();\n"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:283
+#: man-pages/man3/mallinfo.3:290
 #, no-wrap
 msgid ""
 "    for (j = 0; j E<lt> numBlocks; j++) {\n"
@@ -24094,7 +24164,7 @@ msgid ""
 msgstr "    for (j = 0; j E<lt> numBlocks; j++) {\n        if (numBlocks E<gt>= MAX_ALLOCS) {\n            fprintf(stderr, \"слишком много выделений\\en\");\n            exit(EXIT_FAILURE);\n        }\n"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:290
+#: man-pages/man3/mallinfo.3:297
 #, no-wrap
 msgid ""
 "        alloc[j] = malloc(blockSize);\n"
@@ -24106,7 +24176,7 @@ msgid ""
 msgstr "        alloc[j] = malloc(blockSize);\n        if (alloc[j] == NULL) {\n            perror(\"malloc\");\n            exit(EXIT_FAILURE);\n        }\n    }\n"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:293
+#: man-pages/man3/mallinfo.3:300
 #, no-wrap
 msgid ""
 "    printf(\"\\en============== After allocating blocks ==============\\en\");\n"
@@ -24114,7 +24184,7 @@ msgid ""
 msgstr "    printf(\"\\en============== после выделения блоков ==============\\en\");\n    display_mallinfo();\n"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:296
+#: man-pages/man3/mallinfo.3:303
 #, no-wrap
 msgid ""
 "    for (j = freeBegin; j E<lt> freeEnd; j += freeStep)\n"
@@ -24122,7 +24192,7 @@ msgid ""
 msgstr "    for (j = freeBegin; j E<lt> freeEnd; j += freeStep)\n        free(alloc[j]);\n"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:299
+#: man-pages/man3/mallinfo.3:306
 #, no-wrap
 msgid ""
 "    printf(\"\\en============== After freeing blocks ==============\\en\");\n"
@@ -24130,7 +24200,7 @@ msgid ""
 msgstr "    printf(\"\\en============== после освобождения блоков ==============\\en\");\n    display_mallinfo();\n"
 
 #. type: Plain text
-#: man-pages/man3/mallinfo.3:311
+#: man-pages/man3/mallinfo.3:318
 msgid ""
 "B<mmap>(2), B<malloc>(3), B<malloc_info>(3), B<malloc_stats>(3), "
 "B<malloc_trim>(3), B<mallopt>(3)"
