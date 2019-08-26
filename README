@@ -5,9 +5,6 @@
 За основу взят перевод manpages-ru-0.98 c
 http://www.linuxshare.ru/projects/trans/mans.html
 
-Исходные тексты с переводами:
-svn co https://man-pages-ru.svn.sourceforge.net/svnroot/man-pages-ru man-pages-ru
-
 Структура:
 
 Оригинальный репозиторий страниц на английском
