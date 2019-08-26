@@ -1,0 +1,2671 @@
+# Copyright (C) 2014 Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Alex Nik <rage.iz.me@gmail.com>, 2013.
+# Yuri Kozlov <yuray@komyakino.ru>, 2011-2014.
+# Yuri Kozlov <yuray@komyakino.ru>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: translation of man-pages\n"
+"POT-Creation-Date: 2012-04-29 11:33+0400\n"
+"PO-Revision-Date: 2014-06-08 21:48+0400\n"
+"Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
+"Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<"
+"=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#. type: TH
+#: man-pages/man7/koi8-u.7:27
+#, no-wrap
+msgid "KOI8-U"
+msgstr "KOI8-U"
+
+#. type: TH
+#: man-pages/man7/koi8-u.7:27
+#, no-wrap
+msgid "2014-03-18"
+msgstr "2014-03-18"
+
+#. type: TH
+#: man-pages/man7/koi8-u.7:27
+#, no-wrap
+msgid "Linux"
+msgstr "Linux"
+
+#. type: TH
+#: man-pages/man7/koi8-u.7:27
+#, no-wrap
+msgid "Linux Programmer's Manual"
+msgstr "Руководство программиста Linux"
+
+#. type: SH
+#: man-pages/man7/koi8-u.7:29
+#, no-wrap
+msgid "NAME"
+msgstr "ИМЯ"
+
+#. type: Plain text
+#: man-pages/man7/koi8-u.7:32
+msgid ""
+"koi8-u - Ukrainian character set encoded in octal, decimal, and hexadecimal"
+msgstr ""
+"koi8-u - набор украинских символов в восьмеричном, десятичном и "
+"шестнадцатеричном виде"
+
+#. type: SH
+#: man-pages/man7/koi8-u.7:32
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr "ОПИСАНИЕ"
+
+#. type: Plain text
+#: man-pages/man7/koi8-u.7:39
+msgid ""
+"KOI8-U (KOI8 Ukrainian, described in RFC\\ 2310)  is the de-facto standard "
+"character set for encoding Ukrainian texts.  KOI8-U is compatible with "
+"KOI8-R (RFC 1489)  for all Russian letters, and extends KOI8-R with four "
+"Ukrainian letters (in both uppercase and lowercase)  in locations that are "
+"compliant with ISO-IR-111."
+msgstr ""
+"KOI8-U (украинский KOI8, описан в RFC\\ 2310) — стандартный набор символов "
+"де-факто для кодировки украинских текстов. KOI8-U совместим с KOI8-R (RFC "
+"1489) по части русских букв, и расширяет KOI8-R четырьмя украинскими буквами "
+"(строчными и прописными), располагая их согласно ISO-IR-111."
+
+#. type: SS
+#: man-pages/man7/koi8-u.7:39
+#, no-wrap
+msgid "KOI8-U characters"
+msgstr "Символы KOI8-U"
+
+#.  The fourth column will only show the proper glyphs
+#.  in an environment configured for koi8-u.
+#. type: Plain text
+#: man-pages/man7/koi8-u.7:46
+msgid ""
+"The following table displays the characters in KOI8-U, which are printable "
+"and unlisted in the B<ascii>(7)  manual page."
+msgstr ""
+"В следующей таблице показаны символы из набора KOI8-U, являющиеся печатными и "
+"отсутствующие в справочной странице B<ascii>(7)."
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:48
+#, no-wrap
+msgid "Oct\tDec\tHex\tChar\tDescription\n"
+msgstr "Вос\tДес\tШес\tСимв\tОписание\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:49
+#, no-wrap
+msgid "_\n"
+msgstr "_\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:50
+#, no-wrap
+msgid "200\t128\t80\t─\tBOX DRAWINGS LIGHT HORIZONTAL\n"
+msgstr "200\t128\t80\t─\tОДИНАРНАЯ ГОРИЗОНТАЛЬНАЯ ЛИНИЯ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:51
+#, no-wrap
+msgid "201\t129\t81\t│\tBOX DRAWINGS LIGHT VERTICAL\n"
+msgstr "201\t129\t81\t│\tОДИНАРНАЯ ВЕРТИКАЛЬНАЯ ЛИНИЯ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:52
+#, no-wrap
+msgid "202\t130\t82\t┌\tBOX DRAWINGS LIGHT DOWN AND RIGHT\n"
+msgstr "202\t130\t82\t┌\tОДИНАРНАЯ УГЛОВАЯ ЛИНИЯ ВНИЗ И НАПРАВО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:53
+#, no-wrap
+msgid "203\t131\t83\t┐\tBOX DRAWINGS LIGHT DOWN AND LEFT\n"
+msgstr "203\t131\t83\t┐\tОДИНАРНАЯ УГЛОВАЯ ЛИНИЯ ВНИЗ И НАЛЕВО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:54
+#, no-wrap
+msgid "204\t132\t84\t└\tBOX DRAWINGS LIGHT UP AND RIGHT\n"
+msgstr "204\t132\t84\t└\tОДИНАРНАЯ УГЛОВАЯ ЛИНИЯ ВВЕРХ И НАПРАВО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:55
+#, no-wrap
+msgid "205\t133\t85\t┘\tBOX DRAWINGS LIGHT UP AND LEFT\n"
+msgstr "205\t133\t85\t┘\tОДИНАРНАЯ УГЛОВАЯ ЛИНИЯ ВВЕРХ И НАЛЕВО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:56
+#, no-wrap
+msgid "206\t134\t86\t├\tBOX DRAWINGS LIGHT VERTICAL AND RIGHT\n"
+msgstr "206\t134\t86\t├\tОДИНАРНАЯ ВЕРТИКАЛЬНАЯ ЛИНИЯ С ЛИНИЕЙ ВПРАВО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:57
+#, no-wrap
+msgid "207\t135\t87\t┤\tBOX DRAWINGS LIGHT VERTICAL AND LEFT\n"
+msgstr "207\t135\t87\t┤\tОДИНАРНАЯ ВЕРТИКАЛЬНАЯ ЛИНИЯ С ЛИНИЕЙ ВЛЕВО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:58
+#, no-wrap
+msgid "210\t136\t88\t┬\tBOX DRAWINGS LIGHT DOWN AND HORIZONTAL\n"
+msgstr "210\t136\t88\t┬\tОДИНАРНАЯ ГОРИЗОНТАЛЬНАЯ ЛИНИЯ С ЛИНИЕЙ ВНИЗ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:59
+#, no-wrap
+msgid "211\t137\t89\t┴\tBOX DRAWINGS LIGHT UP AND HORIZONTAL\n"
+msgstr "211\t137\t89\t┴\tОДИНАРНАЯ ГОРИЗОНТАЛЬНАЯ ЛИНИЯ С ЛИНИЕЙ ВВЕРХ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:60
+#, no-wrap
+msgid "212\t138\t8A\t┼\tBOX DRAWINGS LIGHT VERTICAL AND HORIZONTAL\n"
+msgstr ""
+"212\t138\t8A\t┼\tОДИНАРНАЯ ГОРИЗОНТАЛЬНАЯ ЛИНИЯ С\n\t\t\t\tОДИНАРНОЙ "
+"ВЕРТИКАЛЬНОЙ ЛИНИЕЙ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:61
+#, no-wrap
+msgid "213\t139\t8B\t▀\tUPPER HALF BLOCK\n"
+msgstr "213\t139\t8B\t▀\tПОЛОВИНА ПРЯМОУГОЛЬНИКА ВВЕРХУ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:62
+#, no-wrap
+msgid "214\t140\t8C\t▄\tLOWER HALF BLOCK\n"
+msgstr "214\t140\t8C\t▄\tПОЛОВИНА ПРЯМОУГОЛЬНИКА ВНИЗУ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:63
+#, no-wrap
+msgid "215\t141\t8D\t█\tFULL BLOCK\n"
+msgstr "215\t141\t8D\t█\tПОЛНЫЙ ПРЯМОУГОЛЬНИК\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:64
+#, no-wrap
+msgid "216\t142\t8E\t▌\tLEFT HALF BLOCK\n"
+msgstr "216\t142\t8E\t▌\tПОЛОВИНА ПРЯМОУГОЛЬНИКА СЛЕВА\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:65
+#, no-wrap
+msgid "217\t143\t8F\t▐\tRIGHT HALF BLOCK\n"
+msgstr "217\t143\t8F\t▐\tПОЛОВИНА ПРЯМОУГОЛЬНИКА СПРАВА\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:66
+#, no-wrap
+msgid "220\t144\t90\t░\tLIGHT SHADE\n"
+msgstr "220\t144\t90\t░\tЛЁГКОЕ ЗАПОЛНЕНИЕ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:67
+#, no-wrap
+msgid "221\t145\t91\t▒\tMEDIUM SHADE\n"
+msgstr "221\t145\t91\t▒\tСРЕДНЕЕ ЗАПОЛНЕНИЕ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:68
+#, no-wrap
+msgid "222\t146\t92\t▓\tDARK SHADE\n"
+msgstr "222\t146\t92\t▓\tТЁМНОЕ ЗАПОЛНЕНИЕ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:69
+#, no-wrap
+msgid "223\t147\t93\t⌠\tTOP HALF INTEGRAL\n"
+msgstr "223\t147\t93\t⌠\tВЕРХНЯЯ ПОЛОВИНА ИНТЕГРАЛА\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:70
+#, no-wrap
+msgid "224\t148\t94\t■\tBLACK SQUARE\n"
+msgstr "224\t148\t94\t■\tЧЁРНЫЙ КВАДРАТ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:71
+#, no-wrap
+msgid "225\t149\t95\t∙\tBULLET OPERATOR\n"
+msgstr "225\t149\t95\t∙\tМЕТКА В ЦЕНТРЕ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:72
+#, no-wrap
+msgid "226\t150\t96\t√\tSQUARE ROOT\n"
+msgstr "226\t150\t96\t√\tКОРЕНЬ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:73
+#, no-wrap
+msgid "227\t151\t97\t≈\tALMOST EQUAL TO\n"
+msgstr "227\t151\t97\t≈\tПРИМЕРНО РАВНО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:74
+#, no-wrap
+msgid "230\t152\t98\t≤\tLESS-THAN OR EQUAL TO\n"
+msgstr "230\t152\t98\t≤\tМЕНЬШЕ ИЛИ РАВНО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:75
+#, no-wrap
+msgid "231\t153\t99\t≥\tGREATER-THAN OR EQUAL TO\n"
+msgstr "231\t153\t99\t≥\tБОЛЬШЕ ИЛИ РАВНО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:76
+#, no-wrap
+msgid "232\t154\t9A\t\\ \tNO-BREAK SPACE\n"
+msgstr "232\t154\t9A\t\\ \tНЕРАЗРЫВНЫЙ ПРОБЕЛ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:77
+#, no-wrap
+msgid "233\t155\t9B\t⌡\tBOTTOM HALF INTEGRAL\n"
+msgstr "233\t155\t9B\t⌡\tНИЖНЯЯ ЧАСТЬ ИНТЕГРАЛА\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:78
+#, no-wrap
+msgid "234\t156\t9C\t°\tDEGREE SIGN\n"
+msgstr "234\t156\t9C\t°\tЗНАК ГРАДУСА\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:79
+#, no-wrap
+msgid "235\t157\t9D\t²\tSUPERSCRIPT TWO\n"
+msgstr "235\t157\t9D\t²\tЦИФРА ДВА ВВЕРХУ МЕЛКИМ ШРИФТОМ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:80
+#, no-wrap
+msgid "236\t158\t9E\t·\tMIDDLE DOT\n"
+msgstr "236\t158\t9E\t·\tТОЧКА В ЦЕНТРЕ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:81
+#, no-wrap
+msgid "237\t159\t9F\t÷\tDIVISION SIGN\n"
+msgstr "237\t159\t9F\t÷\tЗНАК ДЕЛЕНИЯ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:82
+#, no-wrap
+msgid "240\t160\tA0\t═\tBOX DRAWINGS DOUBLE HORIZONTAL\n"
+msgstr "240\t160\tA0\t═\tДВОЙНАЯ ГОРИЗОНТАЛЬНАЯ ЛИНИЯ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:83
+#, no-wrap
+msgid "241\t161\tA1\t║\tBOX DRAWINGS DOUBLE VERTICAL\n"
+msgstr "241\t161\tA1\t║\tДВОЙНАЯ ВЕРТИКАЛЬНАЯ ЛИНИЯ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:84
+#, no-wrap
+msgid "242\t162\tA2\t╒\tBOX DRAWINGS DOWN SINGLE AND RIGHT DOUBLE\n"
+msgstr "242\t162\tA2\t╒\tДВОЙНАЯ ЛИНИЯ ВПРАВО И ОДИНАРНАЯ ЛИНИЯ ВНИЗ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:85
+#, no-wrap
+msgid "243\t163\tA3\tё\tCYRILLIC SMALL LETTER IO\n"
+msgstr "243\t163\tA3\tё\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА ё\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:86
+#, no-wrap
+msgid "244\t164\tA4\tє\tCYRILLIC SMALL LETTER UKRAINIAN IE\n"
+msgstr "244\t164\tA4\tє\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА УКРАИНСКАЯ є\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:87
+#, no-wrap
+msgid "245\t165\tA5\t╔\tBOX DRAWINGS DOUBLE DOWN AND RIGHT\n"
+msgstr "245\t165\tA5\t╔\tДВОЙНАЯ ЛИНИЯ ВНИЗ И ВПРАВО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:88
+#, no-wrap
+msgid "246\t166\tA6\tі\tT{\n"
+msgstr "246\t166\tA6\tі\tT{\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:89
+#, no-wrap
+msgid "CYRILLIC SMALL LETTER\n"
+msgstr "КИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:90 man-pages/man7/koi8-u.7:110
+#: man-pages/man7/koi8-u.7:120
+#, no-wrap
+msgid ".br\n"
+msgstr ".br\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:91 man-pages/man7/koi8-u.7:111
+#, no-wrap
+msgid "BYELORUSSIAN-UKRAINIAN I\n"
+msgstr "БЕЛОРУССКО-УКРАИНСКАЯ І\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:92 man-pages/man7/koi8-u.7:112
+#: man-pages/man7/koi8-u.7:122
+#, no-wrap
+msgid "T}\n"
+msgstr "T}\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:93
+#, no-wrap
+msgid "247\t167\tA7\tї\tCYRILLIC SMALL LETTER YI (Ukrainian)\n"
+msgstr "247\t167\tA7\tї\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА ї (украинская)\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:94
+#, no-wrap
+msgid "250\t168\tA8\t╗\tBOX DRAWINGS DOUBLE DOWN AND LEFT\n"
+msgstr "250\t168\tA8\t╗\tДВОЙНАЯ ЛИНИЯ ВНИЗ И ВЛЕВО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:95
+#, no-wrap
+msgid "251\t169\tA9\t╘\tBOX DRAWINGS UP SINGLE AND RIGHT DOUBLE\n"
+msgstr "251\t169\tA9\t╘\tОДИНАРНАЯ ЛИНИЯ ВВЕРХ И ДВОЙНАЯ ЛИНИЯ ВПРАВО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:96
+#, no-wrap
+msgid "252\t170\tAA\t╙\tBOX DRAWINGS UP DOUBLE AND RIGHT SINGLE\n"
+msgstr "252\t170\tAA\t╙\tДВОЙНАЯ ЛИНИЯ ВВЕРХ И ОДИНАРНАЯ ЛИНИЯ ВПРАВО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:97
+#, no-wrap
+msgid "253\t171\tAB\t╚\tBOX DRAWINGS DOUBLE UP AND RIGHT\n"
+msgstr "253\t171\tAB\t╚\tДВОЙНАЯ ЛИНИЯ ВВЕРХ И ВПРАВО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:98
+#, no-wrap
+msgid "254\t172\tAC\t╛\tBOX DRAWINGS UP SINGLE AND LEFT DOUBLE\n"
+msgstr "254\t172\tAC\t╛\tОДИНАРНАЯ ЛИНИЯ ВВЕРХ И ДВОЙНАЯ ЛИНИЯ ВЛЕВО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:99
+#, no-wrap
+msgid "255\t173\tAD\tґ\tCYRILLIC SMALL LETTER GHE WITH UPTURN\n"
+msgstr "255\t173\tAD\tґ\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА ґ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:100
+#, no-wrap
+msgid "256\t174\tAE\t╝\tBOX DRAWINGS DOUBLE UP AND LEFT\n"
+msgstr "256\t174\tAE\t╝\tДВОЙНАЯ ЛИНИЯ ВВЕРХ И ВЛЕВО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:101
+#, no-wrap
+msgid "257\t175\tAF\t╞\tBOX DRAWINGS VERTICAL SINGLE AND RIGHT DOUBLE\n"
+msgstr ""
+"257\t175\tAF\t╞\tОДИНАРНАЯ ВЕРТИКАЛЬНАЯ ЛИНИЯ И\n\t\t\t\tДВОЙНАЯ ЛИНИЯ "
+"ВПРАВО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:102
+#, no-wrap
+msgid "260\t176\tB0\t╟\tBOX DRAWINGS VERTICAL DOUBLE AND RIGHT SINGLE\n"
+msgstr ""
+"260\t176\tB0\t╟\tДВОЙНАЯ ВЕРТИКАЛЬНАЯ ЛИНИЯ И\n\t\t\t\tОДИНАРНАЯ ЛИНИЯ "
+"ВПРАВО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:103
+#, no-wrap
+msgid "261\t177\tB1\t╠\tBOX DRAWINGS DOUBLE VERTICAL AND RIGHT\n"
+msgstr ""
+"261\t177\tB1\t╠\tДВОЙНАЯ ВЕРТИКАЛЬНАЯ ЛИНИЯ И\n\t\t\t\tДВОЙНАЯ ЛИНИЯ ВПРАВО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:104
+#, no-wrap
+msgid "262\t178\tB2\t╡\tBOX DRAWINGS VERTICAL SINGLE AND LEFT DOUBLE\n"
+msgstr ""
+"262\t178\tB2\t╡\tОДИНАРНАЯ ВЕРТИКАЛЬНАЯ ЛИНИЯ И\n\t\t\t\tДВОЙНАЯ ЛИНИЯ ВЛЕВО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:105
+#, no-wrap
+msgid "263\t179\tB3\tЁ\tCYRILLIC CAPITAL LETTER IO\n"
+msgstr "263\t179\tB3\tЁ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Ё\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:106
+#, no-wrap
+msgid "264\t180\tB4\tЄ\tCYRILLIC CAPITAL LETTER UKRAINIAN IE\n"
+msgstr "264\t180\tB4\tЄ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Є\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:107
+#, no-wrap
+msgid "265\t181\tB5\t╣\tBOX DRAWINGS DOUBLE VERTICAL AND LEFT\n"
+msgstr "265\t181\tB5\t╣\tДВОЙНАЯ ВЕРТИКАЛЬНАЯ ЛИНИЯ И ДВОЙНАЯ ЛИНИЯ ВЛЕВО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:108
+#, no-wrap
+msgid "266\t182\tB6\tІ\tT{\n"
+msgstr "266\t182\tB6\tІ\tT{\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:109
+#, no-wrap
+msgid "CYRILLIC CAPITAL LETTER\n"
+msgstr "КИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:113
+#, no-wrap
+msgid "267\t183\tB7\tЇ\tCYRILLIC CAPITAL LETTER YI (Ukrainian)\n"
+msgstr "267\t183\tB7\tЇ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Ї (украинская)\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:114
+#, no-wrap
+msgid "270\t184\tB8\t╦\tBOX DRAWINGS DOUBLE DOWN AND HORIZONTAL\n"
+msgstr "270\t184\tB8\t╦\tДВОЙНАЯ ГОРИЗОНТАЛЬНАЯ ЛИНИЯ И ЛИНИЯ ВНИЗ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:115
+#, no-wrap
+msgid "271\t185\tB9\t╧\tBOX DRAWINGS UP SINGLE AND HORIZONTAL DOUBLE\n"
+msgstr ""
+"271\t185\tB9\t╧\tДВОЙНАЯ ГОРИЗОНТАЛЬНАЯ ЛИНИЯ И\n\t\t\t\tОДИНАРНАЯ ЛИНИЯ "
+"ВВЕРХ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:116
+#, no-wrap
+msgid "272\t186\tBA\t╨\tBOX DRAWINGS UP DOUBLE AND HORIZONTAL SINGLE\n"
+msgstr ""
+"272\t186\tBA\t╨\tОДИНАРНАЯ ГОРИЗОНТАЛЬНАЯ ЛИНИЯ И\n\t\t\t\tДВОЙНАЯ ЛИНИЯ "
+"ВВЕРХ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:117
+#, no-wrap
+msgid "273\t187\tBB\t╩\tBOX DRAWINGS DOUBLE UP AND HORIZONTAL\n"
+msgstr ""
+"273\t187\tBB\t╩\tДВОЙНАЯ ГОРИЗОНТАЛЬНАЯ ЛИНИЯ И\n\t\t\t\tДВОЙНАЯ ЛИНИЯ ВВЕРХ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:118
+#, no-wrap
+msgid "274\t188\tBC\t╪\tT{\n"
+msgstr "274\t188\tBC\t╪\tT{\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:119
+#, no-wrap
+msgid "BOX DRAWINGS VERTICAL SINGLE\n"
+msgstr "ОДИНАРНАЯ ВЕРТИКАЛЬНАЯ ЛИНИЯ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:121
+#, no-wrap
+msgid "AND HORIZONTAL DOUBLE\n"
+msgstr "И ДВОЙНАЯ ГОРИЗОНТАЛЬНАЯ ЛИНИЯ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:123
+#, no-wrap
+msgid "275\t189\tBD\tҐ\tCYRILLIC CAPITAL LETTER GHE WITH UPTURN\n"
+msgstr "275\t189\tBD\tҐ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Ґ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:124
+#, no-wrap
+msgid "276\t190\tBE\t╬\tBOX DRAWINGS DOUBLE VERTICAL AND HORIZONTAL\n"
+msgstr ""
+"276\t190\tBE\t╬\tДВОЙНАЯ ВЕРТИКАЛЬНАЯ ЛИНИЯ И\n\t\t\t\tДВОЙНАЯ ГОРИЗОНТАЛЬНАЯ "
+"ЛИНИЯ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:125
+#, no-wrap
+msgid "277\t191\tBF\t©\tCOPYRIGHT SIGN\n"
+msgstr "277\t191\tBF\t©\tЗНАК ОХРАНЫ АВТОРСКОГО ПРАВА\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:126
+#, no-wrap
+msgid "300\t192\tC0\tю\tCYRILLIC SMALL LETTER YU\n"
+msgstr "300\t192\tC0\tю\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА ю\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:127
+#, no-wrap
+msgid "301\t193\tC1\tа\tCYRILLIC SMALL LETTER A\n"
+msgstr "301\t193\tC1\tа\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА а\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:128
+#, no-wrap
+msgid "302\t194\tC2\tб\tCYRILLIC SMALL LETTER BE\n"
+msgstr "302\t194\tC2\tб\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА б\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:129
+#, no-wrap
+msgid "303\t195\tC3\tц\tCYRILLIC SMALL LETTER TSE\n"
+msgstr "303\t195\tC3\tц\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА ц\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:130
+#, no-wrap
+msgid "304\t196\tC4\tд\tCYRILLIC SMALL LETTER DE\n"
+msgstr "304\t196\tC4\tд\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА д\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:131
+#, no-wrap
+msgid "305\t197\tC5\tе\tCYRILLIC SMALL LETTER IE\n"
+msgstr "305\t197\tC5\tе\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА е\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:132
+#, no-wrap
+msgid "306\t198\tC6\tф\tCYRILLIC SMALL LETTER EF\n"
+msgstr "306\t198\tC6\tф\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА ф\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:133
+#, no-wrap
+msgid "307\t199\tC7\tг\tCYRILLIC SMALL LETTER GHE\n"
+msgstr "307\t199\tC7\tг\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА г\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:134
+#, no-wrap
+msgid "310\t200\tC8\tх\tCYRILLIC SMALL LETTER HA\n"
+msgstr "310\t200\tC8\tх\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА х\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:135
+#, no-wrap
+msgid "311\t201\tC9\tи\tCYRILLIC SMALL LETTER I\n"
+msgstr "311\t201\tC9\tи\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА и\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:136
+#, no-wrap
+msgid "312\t202\tCA\tй\tCYRILLIC SMALL LETTER SHORT I\n"
+msgstr "312\t202\tCA\tй\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА й\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:137
+#, no-wrap
+msgid "313\t203\tCB\tк\tCYRILLIC SMALL LETTER KA\n"
+msgstr "313\t203\tCB\tк\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА к\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:138
+#, no-wrap
+msgid "314\t204\tCC\tл\tCYRILLIC SMALL LETTER EL\n"
+msgstr "314\t204\tCC\tл\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА л\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:139
+#, no-wrap
+msgid "315\t205\tCD\tм\tCYRILLIC SMALL LETTER EM\n"
+msgstr "315\t205\tCD\tм\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА м\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:140
+#, no-wrap
+msgid "316\t206\tCE\tн\tCYRILLIC SMALL LETTER EN\n"
+msgstr "316\t206\tCE\tн\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА н\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:141
+#, no-wrap
+msgid "317\t207\tCF\tо\tCYRILLIC SMALL LETTER O\n"
+msgstr "317\t207\tCF\tо\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА о\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:142
+#, no-wrap
+msgid "320\t208\tD0\tп\tCYRILLIC SMALL LETTER PE\n"
+msgstr "320\t208\tD0\tп\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА п\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:143
+#, no-wrap
+msgid "321\t209\tD1\tя\tCYRILLIC SMALL LETTER YA\n"
+msgstr "321\t209\tD1\tя\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА я\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:144
+#, no-wrap
+msgid "322\t210\tD2\tр\tCYRILLIC SMALL LETTER ER\n"
+msgstr "322\t210\tD2\tр\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА р\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:145
+#, no-wrap
+msgid "323\t211\tD3\tс\tCYRILLIC SMALL LETTER ES\n"
+msgstr "323\t211\tD3\tс\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА с\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:146
+#, no-wrap
+msgid "324\t212\tD4\tт\tCYRILLIC SMALL LETTER TE\n"
+msgstr "324\t212\tD4\tт\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА т\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:147
+#, no-wrap
+msgid "325\t213\tD5\tу\tCYRILLIC SMALL LETTER U\n"
+msgstr "325\t213\tD5\tу\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА у\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:148
+#, no-wrap
+msgid "326\t214\tD6\tж\tCYRILLIC SMALL LETTER ZHE\n"
+msgstr "326\t214\tD6\tж\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА ж\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:149
+#, no-wrap
+msgid "327\t215\tD7\tв\tCYRILLIC SMALL LETTER VE\n"
+msgstr "327\t215\tD7\tв\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА в\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:150
+#, no-wrap
+msgid "330\t216\tD8\tь\tCYRILLIC SMALL LETTER SOFT SIGN\n"
+msgstr "330\t216\tD8\tь\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА ь\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:151
+#, no-wrap
+msgid "331\t217\tD9\tы\tCYRILLIC SMALL LETTER YERU\n"
+msgstr "331\t217\tD9\tы\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА ы\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:152
+#, no-wrap
+msgid "332\t218\tDA\tз\tCYRILLIC SMALL LETTER ZE\n"
+msgstr "332\t218\tDA\tз\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА з\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:153
+#, no-wrap
+msgid "333\t219\tDB\tш\tCYRILLIC SMALL LETTER SHA\n"
+msgstr "333\t219\tDB\tш\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА ш\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:154
+#, no-wrap
+msgid "334\t220\tDC\tэ\tCYRILLIC SMALL LETTER E\n"
+msgstr "334\t220\tDC\tэ\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА э\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:155
+#, no-wrap
+msgid "335\t221\tDD\tщ\tCYRILLIC SMALL LETTER SHCHA\n"
+msgstr "335\t221\tDD\tщ\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА щ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:156
+#, no-wrap
+msgid "336\t222\tDE\tч\tCYRILLIC SMALL LETTER CHE\n"
+msgstr "336\t222\tDE\tч\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА ч\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:157
+#, no-wrap
+msgid "337\t223\tDF\tъ\tCYRILLIC SMALL LETTER HARD SIGN\n"
+msgstr "337\t223\tDF\tъ\tКИРИЛЛИЧЕСКАЯ СТРОЧНАЯ БУКВА ъ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:158
+#, no-wrap
+msgid "340\t224\tE0\tЮ\tCYRILLIC CAPITAL LETTER YU\n"
+msgstr "340\t224\tE0\tЮ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Ю\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:159
+#, no-wrap
+msgid "341\t225\tE1\tА\tCYRILLIC CAPITAL LETTER A\n"
+msgstr "341\t225\tE1\tА\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА А\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:160
+#, no-wrap
+msgid "342\t226\tE2\tБ\tCYRILLIC CAPITAL LETTER BE\n"
+msgstr "342\t226\tE2\tБ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Б\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:161
+#, no-wrap
+msgid "343\t227\tE3\tЦ\tCYRILLIC CAPITAL LETTER TSE\n"
+msgstr "343\t227\tE3\tЦ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Ц\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:162
+#, no-wrap
+msgid "344\t228\tE4\tД\tCYRILLIC CAPITAL LETTER DE\n"
+msgstr "344\t228\tE4\tД\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Д\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:163
+#, no-wrap
+msgid "345\t229\tE5\tЕ\tCYRILLIC CAPITAL LETTER IE\n"
+msgstr "345\t229\tE5\tЕ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Е\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:164
+#, no-wrap
+msgid "346\t230\tE6\tФ\tCYRILLIC CAPITAL LETTER EF\n"
+msgstr "346\t230\tE6\tФ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Ф\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:165
+#, no-wrap
+msgid "347\t231\tE7\tГ\tCYRILLIC CAPITAL LETTER GHE\n"
+msgstr "347\t231\tE7\tГ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Г\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:166
+#, no-wrap
+msgid "350\t232\tE8\tХ\tCYRILLIC CAPITAL LETTER HA\n"
+msgstr "350\t232\tE8\tХ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Х\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:167
+#, no-wrap
+msgid "351\t233\tE9\tИ\tCYRILLIC CAPITAL LETTER I\n"
+msgstr "351\t233\tE9\tИ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА И\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:168
+#, no-wrap
+msgid "352\t234\tEA\tЙ\tCYRILLIC CAPITAL LETTER SHORT I\n"
+msgstr "352\t234\tEA\tЙ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Й\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:169
+#, no-wrap
+msgid "353\t235\tEB\tК\tCYRILLIC CAPITAL LETTER KA\n"
+msgstr "353\t235\tEB\tК\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА К\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:170
+#, no-wrap
+msgid "354\t236\tEC\tЛ\tCYRILLIC CAPITAL LETTER EL\n"
+msgstr "354\t236\tEC\tЛ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Л\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:171
+#, no-wrap
+msgid "355\t237\tED\tМ\tCYRILLIC CAPITAL LETTER EM\n"
+msgstr "355\t237\tED\tМ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА М\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:172
+#, no-wrap
+msgid "356\t238\tEE\tН\tCYRILLIC CAPITAL LETTER EN\n"
+msgstr "356\t238\tEE\tН\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Н\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:173
+#, no-wrap
+msgid "357\t239\tEF\tО\tCYRILLIC CAPITAL LETTER O\n"
+msgstr "357\t239\tEF\tО\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА О\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:174
+#, no-wrap
+msgid "360\t240\tF0\tП\tCYRILLIC CAPITAL LETTER PE\n"
+msgstr "360\t240\tF0\tП\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА П\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:175
+#, no-wrap
+msgid "361\t241\tF1\tЯ\tCYRILLIC CAPITAL LETTER YA\n"
+msgstr "361\t241\tF1\tЯ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Я\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:176
+#, no-wrap
+msgid "362\t242\tF2\tР\tCYRILLIC CAPITAL LETTER ER\n"
+msgstr "362\t242\tF2\tР\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Р\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:177
+#, no-wrap
+msgid "363\t243\tF3\tС\tCYRILLIC CAPITAL LETTER ES\n"
+msgstr "363\t243\tF3\tС\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА С\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:178
+#, no-wrap
+msgid "364\t244\tF4\tТ\tCYRILLIC CAPITAL LETTER TE\n"
+msgstr "364\t244\tF4\tТ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Т\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:179
+#, no-wrap
+msgid "365\t245\tF5\tУ\tCYRILLIC CAPITAL LETTER U\n"
+msgstr "365\t245\tF5\tУ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА У\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:180
+#, no-wrap
+msgid "366\t246\tF6\tЖ\tCYRILLIC CAPITAL LETTER ZHE\n"
+msgstr "366\t246\tF6\tЖ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Ж\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:181
+#, no-wrap
+msgid "367\t247\tF7\tВ\tCYRILLIC CAPITAL LETTER VE\n"
+msgstr "367\t247\tF7\tВ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА В\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:182
+#, no-wrap
+msgid "370\t248\tF8\tЬ\tCYRILLIC CAPITAL LETTER SOFT SIGN\n"
+msgstr "370\t248\tF8\tЬ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Ь\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:183
+#, no-wrap
+msgid "371\t249\tF9\tЫ\tCYRILLIC CAPITAL LETTER YERU\n"
+msgstr "371\t249\tF9\tЫ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Ы\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:184
+#, no-wrap
+msgid "372\t250\tFA\tЗ\tCYRILLIC CAPITAL LETTER ZE\n"
+msgstr "372\t250\tFA\tЗ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА З\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:185
+#, no-wrap
+msgid "373\t251\tFB\tШ\tCYRILLIC CAPITAL LETTER SHA\n"
+msgstr "373\t251\tFB\tШ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Ш\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:186
+#, no-wrap
+msgid "374\t252\tFC\tЭ\tCYRILLIC CAPITAL LETTER E\n"
+msgstr "374\t252\tFC\tЭ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Э\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:187
+#, no-wrap
+msgid "375\t253\tFD\tЩ\tCYRILLIC CAPITAL LETTER SHCHA\n"
+msgstr "375\t253\tFD\tЩ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Щ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:188
+#, no-wrap
+msgid "376\t254\tFE\tЧ\tCYRILLIC CAPITAL LETTER CHE\n"
+msgstr "376\t254\tFE\tЧ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Ч\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-u.7:189
+#, no-wrap
+msgid "377\t255\tFF\tЪ\tCYRILLIC CAPITAL LETTER HARD SIGN\n"
+msgstr "377\t255\tFF\tЪ\tКИРИЛЛИЧЕСКАЯ ПРОПИСНАЯ БУКВА Ъ\n"
+
+#. type: SH
+#: man-pages/man7/koi8-u.7:191
+#, no-wrap
+msgid "NOTES"
+msgstr "ЗАМЕЧАНИЯ"
+
+#. type: Plain text
+#: man-pages/man7/koi8-u.7:194
+msgid ""
+"The differences from KOI8-R are in the hex positions A4, A6, A7, AD, B4, B6,"
+" B7, and BD."
+msgstr ""
+"Данный набор отличается от KOI8-R в позициях A4, A6, A7, AD, B4, B6, B7 и BD "
+"(шестнадцатеричные)."
+
+#. type: SH
+#: man-pages/man7/koi8-u.7:194
+#, no-wrap
+msgid "SEE ALSO"
+msgstr "СМОТРИТЕ ТАКЖЕ"
+
+#. type: Plain text
+#: man-pages/man7/koi8-u.7:196
+msgid "B<ascii>(7), B<koi8-r>(7)"
+msgstr "B<ascii>(7), B<koi8-r>(7)"
+
+#. type: TH
+#: man-pages/man7/koi8-r.7:27
+#, no-wrap
+msgid "KOI8-R"
+msgstr "KOI8-R"
+
+#. type: TH
+#: man-pages/man7/koi8-r.7:27
+#, no-wrap
+msgid "2014-02-16"
+msgstr "2014-02-16"
+
+#. type: Plain text
+#: man-pages/man7/koi8-r.7:32
+msgid ""
+"koi8-r - Russian character set encoded in octal, decimal, and hexadecimal"
+msgstr ""
+"koi8-r - набор русских символов в восьмеричном, десятичном и "
+"шестнадцатеричном виде"
+
+#. type: Plain text
+#: man-pages/man7/koi8-r.7:38
+msgid ""
+"KOI8-R is the character set of choice for encoding Russian texts for many "
+"UNIX-like operation systems.  KOI8-R is a successor for KOI-8, a de-facto "
+"standard for Internet Mail, News, WWW, and other interactive services at "
+"least all over the ex-SU territory."
+msgstr ""
+"KOI8-R — набор символов для кодировки русских текстов во многих UNIX-подобных "
+"операционных системах. KOI8-R является наследником KOI-8 и стандартом "
+"де-факто (был до распространения UTF-8) для интернет-почты, новостей, "
+"веб-сайтов и других интерактивных сервисов по всей территории бывшего СССР."
+
+#. type: Plain text
+#: man-pages/man7/koi8-r.7:41
+msgid ""
+"KOI8-R is defined by RFC\\ 1489 (Registration of a Cyrillic Character Set)."
+msgstr ""
+"KOI8-R определяется RFC\\ 1489 (Зарегистрированный набор кириллических "
+"символов)."
+
+#. type: Plain text
+#: man-pages/man7/koi8-r.7:50
+msgid ""
+"KOI8-R was designed for mixed Russian/English texts and covers only Russian "
+"Cyrillic characters, so if you're looking for Cyrillic characters for "
+"Ukrainian, Byelorussian, and so on, try ISO-IR-111, or KOI8-U (Ukrainian "
+"Character Set), or KOI8-C (for ancient Russian texts)  instead, which are "
+"identical to KOI8-R in the Russian Cyrillic letters area."
+msgstr ""
+"KOI8-R был разработан для смешанных англо-русских текстов, и поэтому в нём "
+"содержатся только русские кириллические символы, так что если вам нужны "
+"кириллические символы для украинского, белорусского и т. п. языков, "
+"попробуйте использовать наборы ISO-IR-111, KOI8-U (украинский набор символов) "
+"или KOI8-C (для древних русских текстов), которые совпадают с KOI8-R в "
+"области русской кириллицы."
+
+#. type: Plain text
+#: man-pages/man7/koi8-r.7:53
+msgid ""
+"A more complete set of Cyrillic characters is also defined by the ISO-8859-5"
+" character set."
+msgstr ""
+"Более полный набор кириллических символов определён в наборе ISO-8859-5."
+
+#. type: SS
+#: man-pages/man7/koi8-r.7:53
+#, no-wrap
+msgid "KOI8-R characters"
+msgstr "Символы KOI8-R"
+
+#. type: Plain text
+#: man-pages/man7/koi8-r.7:58
+msgid ""
+"The following table displays the characters in KOI8-R, which are printable "
+"and unlisted in the B<ascii>(7)  manual page."
+msgstr ""
+"В следующей таблице показаны символы из набора KOI8-R, являющиеся печатными и "
+"отсутствующие в справочной странице B<ascii>(7)."
+
+#. type: tbl table
+#: man-pages/man7/koi8-r.7:98
+#, no-wrap
+msgid "244\t164\tA4\t╓\tBOX DRAWINGS DOWN DOUBLE AND RIGHT SINGLE\n"
+msgstr "244\t164\tA4\t╓\tДВОЙНАЯ ЛИНИЯ ВНИЗ И ОДИНАРНАЯ ЛИНИЯ ВПРАВО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-r.7:100
+#, no-wrap
+msgid "246\t166\tA6\t╕\tBOX DRAWINGS DOWN SINGLE AND LEFT DOUBLE\n"
+msgstr "246\t166\tA6\t╕\tОДИНАРНАЯ ЛИНИЯ ВНИЗ И ДВОЙНАЯ ВЛЕВО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-r.7:101
+#, no-wrap
+msgid "247\t167\tA7\t╖\tBOX DRAWINGS DOWN DOUBLE AND LEFT SINGLE\n"
+msgstr "247\t167\tA7\t╖\tДВОЙНАЯ ЛИНИЯ ВНИЗ И ОДИНАРНАЯ ВЛЕВО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-r.7:107
+#, no-wrap
+msgid "255\t173\tAD\t╜\tBOX DRAWINGS UP DOUBLE AND LEFT SINGLE\n"
+msgstr "255\t173\tAD\t╜\tДВОЙНАЯ ЛИНИЯ ВВЕРХ И ОДИНАРНАЯ ЛИНИЯ ВЛЕВО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-r.7:114
+#, no-wrap
+msgid "264\t180\tB4\t╢\tBOX DRAWINGS VERTICAL DOUBLE AND LEFT SINGLE\n"
+msgstr ""
+"264\t180\tB4\t╢\tДВОЙНАЯ ВЕРТИКАЛЬНАЯ ЛИНИЯ И\n\t\t\t\tОДИНАРНАЯ ЛИНИЯ ВЛЕВО\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-r.7:116
+#, no-wrap
+msgid "266\t182\tB6\t╤\tBOX DRAWINGS DOWN SINGLE AND HORIZONTAL DOUBLE\n"
+msgstr ""
+"266\t182\tB6\t╤\tДВОЙНАЯ ГОРИЗОНТАЛЬНАЯ ЛИНИЯ И\n\t\t\t\tОДИНАРНАЯ ЛИНИЯ "
+"ВНИЗ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-r.7:117
+#, no-wrap
+msgid "267\t183\tB7\t╥\tBOX DRAWINGS DOWN DOUBLE AND HORIZONTAL SINGLE\n"
+msgstr ""
+"267\t183\tB7\t╥\tДВОЙНАЯ ЛИНИЯ ВНИЗ И ОДИНАРНАЯ\n\t\t\t\tГОРИЗОНТАЛЬНАЯ "
+"ЛИНИЯ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-r.7:127
+#, no-wrap
+msgid "275\t189\tBD\t╫\tT{\n"
+msgstr "275\t189\tBD\t╫\tT{\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-r.7:128
+#, no-wrap
+msgid "BOX DRAWINGS VERTICAL DOUBLE\n"
+msgstr "ДВОЙНАЯ ВЕРТИКАЛЬНАЯ ЛИНИЯ\n"
+
+#. type: tbl table
+#: man-pages/man7/koi8-r.7:130
+#, no-wrap
+msgid "AND HORIZONTAL SINGLE\n"
+msgstr "И ОДИНАРНАЯ ГОРИЗОНТАЛЬНАЯ ЛИНИЯ\n"
+
+#. type: Plain text
+#: man-pages/man7/koi8-r.7:203
+msgid "B<ascii>(7), B<iso-8859-5>(7), B<koi8-u>(7)"
+msgstr "B<ascii>(7), B<iso-8859-5>(7), B<koi8-u>(7)"
+
+#. type: Plain text
+#: man-pages/man7/koi8-r.7:206
+msgid "RFC\\ 1489, E<.UR http://koi8.pp.ru/> E<.UE>"
+msgstr "RFC\\ 1489, E<.UR http://koi8.pp.ru/> E<.UE>"
+
+#. type: TH
+#: man-pages/man2/kcmp.2:28
+#, no-wrap
+msgid "KCMP"
+msgstr "KCMP"
+
+#. type: TH
+#: man-pages/man2/kcmp.2:28
+#, no-wrap
+msgid "2013-12-08"
+msgstr "2013-12-08"
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:31
+msgid ""
+"kcmp - compare two processes to determine if they share a kernel resource"
+msgstr ""
+"kcmp - сравнивает два процесса, определяя используют ли они общий ресурс ядра"
+
+#. type: SH
+#: man-pages/man2/kcmp.2:31
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr "ОБЗОР"
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:34
+#, no-wrap
+msgid "B<#include E<lt>linux/kcmp.hE<gt>>\n"
+msgstr "B<#include E<lt>linux/kcmp.hE<gt>>\n"
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:37
+#, no-wrap
+msgid ""
+"B<int kcmp(pid_t >I<pid1>B<, pid_t >I<pid2>B<, int >I<type>B<,>\n"
+"B<         unsigned long >I<idx1>B<, unsigned long >I<idx2>B<);>\n"
+msgstr ""
+"B<int kcmp(pid_t >I<pid1>B<, pid_t >I<pid2>B<, int >I<type>B<,>\nB<         "
+"unsigned long >I<idx1>B<, unsigned long >I<idx2>B<);>\n"
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:41
+msgid "I<Note>: There is no glibc wrapper for this system call; see NOTES."
+msgstr ""
+"I<Замечание>: В glibc нет обёрточной функции для данного системного вызова; "
+"смотрите ЗАМЕЧАНИЯ."
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:50
+msgid ""
+"The B<kcmp>()  system call can be used to check whether the two processes "
+"identified by I<pid1> and I<pid2> share a kernel resource such as virtual "
+"memory, file descriptors, and so on."
+msgstr ""
+"Системный вызов B<kcmp>() может использоваться для проверки, используют ли "
+"два процесса I<pid1> и I<pid2> общий ресурс ядра, например виртуальную "
+"память, файловые дескрипторы и т.д."
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:55
+msgid ""
+"The I<type> argument specifies which resource is to be compared in the two "
+"processes.  It has one of the following values:"
+msgstr ""
+"В аргументе I<type> указывается какой ресурс двух процессов нужно сравнивать. "
+"Допустимы следующие значения:"
+
+#. type: TP
+#: man-pages/man2/kcmp.2:55
+#, no-wrap
+msgid "B<KCMP_FILE>"
+msgstr "B<KCMP_FILE>"
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:67
+msgid ""
+"Check whether a file descriptor I<idx1> in the process I<pid1> refers to the"
+" same open file description (see B<open>(2))  as file descriptor I<idx2> in "
+"the process I<pid2>."
+msgstr ""
+"Проверить, что файловой дескриптор I<idx1> в процессе I<pid1> указывает на "
+"тот же открытый файловый дескриптор (смотрите B<open>(2)) что и файловый "
+"дескриптор I<idx2> в процессе I<pid2>."
+
+#. type: TP
+#: man-pages/man2/kcmp.2:67
+#, no-wrap
+msgid "B<KCMP_FILES>"
+msgstr "B<KCMP_FILES>"
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:75
+msgid ""
+"Check whether the process share the same set of open file descriptors.  The "
+"arguments I<idx1> and I<idx2> are ignored."
+msgstr ""
+"Проверить, используют ли процессы один и тот же набор открытых файловых "
+"дескрипторов. Аргументы I<idx1> и I<idx2> игнорируются."
+
+#. type: TP
+#: man-pages/man2/kcmp.2:75
+#, no-wrap
+msgid "B<KCMP_FS>"
+msgstr "B<KCMP_FS>"
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:84
+msgid ""
+"Check whether the processes share the same filesystem information (i.e., "
+"file mode creation mask, working directory, and filesystem root).  The "
+"arguments I<idx1> and I<idx2> are ignored."
+msgstr ""
+"Проверить, используют ли процессы общую информацию для файловой системы (т.е. "
+"маску прав создания, рабочий каталог и корень файловой системы). Аргументы I<"
+"idx1> и I<idx2> игнорируются."
+
+#. type: TP
+#: man-pages/man2/kcmp.2:84
+#, no-wrap
+msgid "B<KCMP_IO>"
+msgstr "B<KCMP_IO>"
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:92
+msgid ""
+"Check whether the processes share I/O context.  The arguments I<idx1> and "
+"I<idx2> are ignored."
+msgstr ""
+"Проверить, используют ли процессы общий контекст ввода-вывода. Аргументы I<"
+"idx1> и I<idx2> игнорируются."
+
+#. type: TP
+#: man-pages/man2/kcmp.2:92
+#, no-wrap
+msgid "B<KCMP_SIGHAND>"
+msgstr "B<KCMP_SIGHAND>"
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:100
+msgid ""
+"Check whether the processes share the same table of signal dispositions.  "
+"The arguments I<idx1> and I<idx2> are ignored."
+msgstr ""
+"Проверить, используют ли процессы общую таблицу обработчиков сигналов. "
+"Аргументы I<idx1> и I<idx2> игнорируются."
+
+#. type: TP
+#: man-pages/man2/kcmp.2:100
+#, no-wrap
+msgid "B<KCMP_SYSVSEM>"
+msgstr "B<KCMP_SYSVSEM>"
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:109
+msgid ""
+"Check whether the processes share the same list of System\\ V semaphore undo"
+" operations.  The arguments I<idx1> and I<idx2> are ignored."
+msgstr ""
+"Проверить, используют ли процессы общий список отмены операций семафоров "
+"System\\ V. Аргументы I<idx1> и I<idx2> игнорируются."
+
+#. type: TP
+#: man-pages/man2/kcmp.2:109
+#, no-wrap
+msgid "B<KCMP_VM>"
+msgstr "B<KCMP_VM>"
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:117
+msgid ""
+"Check whether the processes share the same address space.  The arguments "
+"I<idx1> and I<idx2> are ignored."
+msgstr ""
+"Проверить, используют ли процессы общее адресное пространство. Аргументы I<"
+"idx1> и I<idx2> игнорируются."
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:127
+msgid ""
+"Note the B<kcmp>()  is not protected against false positives which may occur"
+" if tasks are running.  One should stop tasks by sending B<SIGSTOP> (see "
+"B<signal>(7))  prior to inspection with this system call to obtain "
+"meaningful results."
+msgstr ""
+"Заметим, что вызов B<kcmp>() не защищён от ложных срабатываний (false "
+"positives), которые могут случаться, если задачи находятся в работающем "
+"состоянии. Это означает, что для получения достоверных результатов нужно "
+"остановить задачи перед выполнением данного системного вызова послав B<"
+"SIGSTOP> (смотрите B<signal>(7))."
+
+#. type: SH
+#: man-pages/man2/kcmp.2:127
+#, no-wrap
+msgid "RETURN VALUE"
+msgstr "ВОЗВРАЩАЕМОЕ ЗНАЧЕНИЕ"
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:133
+msgid ""
+"The return value of a successful call to B<kcmp>()  is simply the result of "
+"arithmetic comparison of kernel pointers (when the kernel compares "
+"resources, it uses their memory addresses)."
+msgstr ""
+"При успешном выполнении B<kcmp>() возвращает результат арифметического "
+"сложения указателей ядра (когда ядро сравнивает ресурсы, оно использует их "
+"адреса памяти)."
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:141
+msgid ""
+"The easiest way to explain is to consider an example.  Suppose that I<v1> "
+"and I<v2> are the addresses of appropriate resources, then the return value "
+"is one of the following:"
+msgstr ""
+"Для простоты объяснения рассмотрим пример. Предположим, что I<v1> и I<v2> — "
+"адреса соответствующих ресурсов и возвращается значение:"
+
+#. type: IP
+#: man-pages/man2/kcmp.2:142
+#, no-wrap
+msgid "0"
+msgstr "0"
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:147
+msgid ""
+"I<v1> is equal to I<v2>; in other words, the two processes share the "
+"resource."
+msgstr ""
+"I<v1> равен I<v2>; другими словами, два процесса используют ресурс совместно."
+
+#. type: IP
+#: man-pages/man2/kcmp.2:147
+#, no-wrap
+msgid "1"
+msgstr "1"
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:151
+msgid "I<v1> is less than I<v2>."
+msgstr "I<v1> меньше I<v2>."
+
+#. type: IP
+#: man-pages/man2/kcmp.2:151
+#, no-wrap
+msgid "2"
+msgstr "2"
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:155
+msgid "I<v1> is greater than I<v2>."
+msgstr "I<v1> больше I<v2>."
+
+#. type: IP
+#: man-pages/man2/kcmp.2:155
+#, no-wrap
+msgid "3"
+msgstr "3"
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:160
+msgid "I<v1> is not equal to I<v2>, but ordering information is unavailable."
+msgstr "I<v1> не равен I<v2>, но нужная информация недоступна."
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:165
+msgid "On error, -1 is returned, and I<errno> is set appropriately."
+msgstr ""
+"В случае ошибки возвращается -1 и значение I<errno> устанавливается "
+"соответствующим образом."
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:170
+msgid ""
+"B<kcmp>()  was designed to return values suitable for sorting.  This is "
+"particularly handy if one needs to compare a large number of file "
+"descriptors."
+msgstr ""
+"Значения вызова B<kcmp>() специально выбраны так, чтобы их легко можно было "
+"упорядочить. В частности, это удобно когда нужно сравнить большое количество "
+"файловых дескрипторов."
+
+#. type: SH
+#: man-pages/man2/kcmp.2:170
+#, no-wrap
+msgid "ERRORS"
+msgstr "ОШИБКИ"
+
+#. type: TP
+#: man-pages/man2/kcmp.2:171
+#, no-wrap
+msgid "B<EBADF>"
+msgstr "B<EBADF>"
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:181
+msgid ""
+"I<type> is B<KCMP_FILE> and I<fd1> or I<fd2> is not an open file descriptor."
+msgstr ""
+"Значение I<type> равно B<KCMP_FILE> и I<fd1> или I<fd2> не являются открытыми "
+"файловыми дескрипторами."
+
+#. type: TP
+#: man-pages/man2/kcmp.2:181
+#, no-wrap
+msgid "B<EINVAL>"
+msgstr "B<EINVAL>"
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:185
+msgid "I<type> is invalid."
+msgstr "Значение I<type> неверно."
+
+#. type: TP
+#: man-pages/man2/kcmp.2:185
+#, no-wrap
+msgid "B<EPERM>"
+msgstr "B<EPERM>"
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:191
+msgid ""
+"Insufficient permission to inspect process resources.  The B<CAP_SYS_PTRACE>"
+" capability is required to inspect processes that you do not own."
+msgstr ""
+"Недостаточно прав для просмотра ресурсов процесса. Для проверки процессов "
+"требуется мандат B<CAP_SYS_PTRACE>, которого у вас нет."
+
+#. type: TP
+#: man-pages/man2/kcmp.2:191
+#, no-wrap
+msgid "B<ESRCH>"
+msgstr "B<ESRCH>"
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:198
+msgid "Process I<pid1> or I<pid2> does not exist."
+msgstr "Процесс I<pid1> или I<pid2> не существует."
+
+#. type: SH
+#: man-pages/man2/kcmp.2:198
+#, no-wrap
+msgid "VERSIONS"
+msgstr "ВЕРСИИ"
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:202
+msgid "The B<kcmp>()  system call first appeared in Linux 3.5."
+msgstr "Системный вызов B<kcmp>() впервые появился в Linux 3.5."
+
+#. type: SH
+#: man-pages/man2/kcmp.2:202
+#, no-wrap
+msgid "CONFORMING TO"
+msgstr "СООТВЕТСТВИЕ СТАНДАРТАМ"
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:205
+msgid ""
+"B<kcmp>()  is Linux-specific and should not be used in programs intended to "
+"be portable."
+msgstr ""
+"Вызов B<kcmp>() есть только в Linux и не должен использоваться в переносимых "
+"программах."
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:208
+msgid ""
+"Glibc does not provide a wrapper for this system call; call it using "
+"B<syscall>(2)."
+msgstr ""
+"В glibc нет обёртки для данного системного вызова; запускайте его с помощью "
+"B<syscall>(2)."
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:217
+msgid ""
+"This system call is available only if the kernel was configured with "
+"B<CONFIG_CHECKPOINT_RESTORE>.  The main use of the system call is for the "
+"checkpoint/restore in user space (CRIU) feature.  The alternative to this "
+"system call would have been to expose suitable process information via the "
+"B<proc>(5)  filesystem; this was deemed to be unsuitable for security "
+"reasons."
+msgstr ""
+"Данный системный вызов доступен только, если ядро собрано с параметром B<"
+"CONFIG_CHECKPOINT_RESTORE>. Основное предназначение вызова — возможность "
+"засечки/восстановления в пользовательском пространстве (CRIU). Альтернативой "
+"этому системному вызову было бы выставление соответствующей информации о "
+"процессе в файловой системе B<proc>(5); такой вариант не пригоден по причинам "
+"безопасности."
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:222
+msgid ""
+"See B<clone>(2)  for some background information on the shared resources "
+"referred to on this page."
+msgstr "Дополнительную информацию об общих ресурсах смотрите в B<clone>(2)."
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:224
+msgid "B<clone>(2), B<unshare>(2)"
+msgstr "B<clone>(2), B<unshare>(2)"
+
+#. type: TH
+#: man-pages/man2/killpg.2:42
+#, no-wrap
+msgid "KILLPG"
+msgstr "KILLPG"
+
+#. type: TH
+#: man-pages/man2/killpg.2:42
+#, no-wrap
+msgid "2010-09-20"
+msgstr "2010-09-20"
+
+#. type: Plain text
+#: man-pages/man2/killpg.2:45
+msgid "killpg - send signal to a process group"
+msgstr "killpg - послать сигнал группе процессов"
+
+#. type: Plain text
+#: man-pages/man2/killpg.2:47
+msgid "B<#include E<lt>signal.hE<gt>>"
+msgstr "B<#include E<lt>signal.hE<gt>>"
+
+#. type: Plain text
+#: man-pages/man2/killpg.2:49
+msgid "B<int killpg(int >I<pgrp>B<, int >I<sig>B<);>"
+msgstr "B<int killpg(int >I<pgrp>B<, int >I<sig>B<);>"
+
+#. type: Plain text
+#: man-pages/man2/killpg.2:53
+msgid ""
+"Feature Test Macro Requirements for glibc (see B<feature_test_macros>(7)):"
+msgstr ""
+"Требования макроса тестирования свойств для glibc (см. B<feature_test_macros>"
+"(7)):"
+
+#. type: TP
+#: man-pages/man2/killpg.2:55
+#, no-wrap
+msgid "B<killpg>():"
+msgstr "B<killpg>():"
+
+#. type: Plain text
+#: man-pages/man2/killpg.2:59
+msgid ""
+"_BSD_SOURCE || _XOPEN_SOURCE\\ E<gt>=\\ 500 || _XOPEN_SOURCE\\ &&\\ "
+"_XOPEN_SOURCE_EXTENDED"
+msgstr ""
+"_BSD_SOURCE || _XOPEN_SOURCE\\ E<gt>=\\ 500 || _XOPEN_SOURCE\\ &&\\ "
+"_XOPEN_SOURCE_EXTENDED"
+
+#. type: Plain text
+#: man-pages/man2/killpg.2:69
+msgid ""
+"B<killpg>()  sends the signal I<sig> to the process group I<pgrp>.  See "
+"B<signal>(7)  for a list of signals."
+msgstr ""
+"B<killpg>() отправляет сигнал I<sig> группе процессов I<pgrp>. Список "
+"сигналов можно найти в B<signal>(7)."
+
+#. type: Plain text
+#: man-pages/man2/killpg.2:78
+msgid ""
+"If I<pgrp> is 0, B<killpg>()  sends the signal to the calling process's "
+"process group.  (POSIX says: If I<pgrp> is less than or equal to 1, the "
+"behavior is undefined.)"
+msgstr ""
+"Если значение I<pgrp> равно 0, то B<killpg>() отправляет сигнал вызывающей "
+"группе процессов. (В POSIX: если значение I<pgrp> меньше или равно 1, "
+"поведение не определено.)"
+
+#. type: Plain text
+#: man-pages/man2/killpg.2:89
+msgid ""
+"For a process to have permission to send a signal it must either be "
+"privileged (under Linux: have the B<CAP_KILL> capability), or the real or "
+"effective user ID of the sending process must equal the real or saved set-"
+"user-ID of the target process.  In the case of B<SIGCONT> it suffices when "
+"the sending and receiving processes belong to the same session."
+msgstr ""
+"Чтобы процесс мог посылать сигнал, он должен быть привилегированным (в Linux: "
+"иметь мандат B<CAP_KILL>), либо реальный или эффективный идентификатор "
+"пользователя посылающего процесса должен быть равен реальному или "
+"сохранённому идентификатору пользователя процесса, которому отправляется "
+"сигнал. Для сигнала B<SIGCONT> посылающий и получающий процессы должны "
+"принадлежать одному сеансу."
+
+#. type: Plain text
+#: man-pages/man2/killpg.2:94
+msgid ""
+"On success, zero is returned.  On error, -1 is returned, and I<errno> is set"
+" appropriately."
+msgstr ""
+"При успешном выполнении возвращается 0. В случае ошибки возвращается -1, а I<"
+"errno> устанавливается в соответствующее значение."
+
+#. type: Plain text
+#: man-pages/man2/killpg.2:99
+msgid "I<sig> is not a valid signal number."
+msgstr "В I<sig> задан неправильный номер сигнала."
+
+#. type: Plain text
+#: man-pages/man2/killpg.2:103
+msgid ""
+"The process does not have permission to send the signal to any of the target"
+" processes."
+msgstr ""
+"Процесс не имеет достаточно прав для отправки сигнала ни одному из группы "
+"процессов-получателей."
+
+#. type: Plain text
+#: man-pages/man2/killpg.2:107
+msgid "No process can be found in the process group specified by I<pgrp>."
+msgstr "В группе процессов I<pgrp> нет ни одного процесса."
+
+#. type: Plain text
+#: man-pages/man2/killpg.2:111
+msgid ""
+"The process group was given as 0 but the sending process does not have a "
+"process group."
+msgstr ""
+"Номер группы процессов равен 0, но процесс-отправитель не входит ни в какую "
+"группу процессов."
+
+#. type: Plain text
+#: man-pages/man2/killpg.2:115
+msgid ""
+"SVr4, 4.4BSD (the B<killpg>()  function call first appeared in 4BSD), "
+"POSIX.1-2001."
+msgstr ""
+"SVr4, 4.4BSD (функция B<killpg>() первые появилась в 4BSD), POSIX.1-2001."
+
+#. type: Plain text
+#: man-pages/man2/killpg.2:129
+msgid ""
+"There are various differences between the permission checking in BSD-type "
+"systems and System\\ V-type systems.  See the POSIX rationale for B<kill>()."
+"  A difference not mentioned by POSIX concerns the return value B<EPERM>: "
+"BSD documents that no signal is sent and B<EPERM> returned when the "
+"permission check failed for at least one target process, while POSIX "
+"documents B<EPERM> only when the permission check failed for all target "
+"processes."
+msgstr ""
+"Есть некоторые различия между проверкой прав в системах BSD и System\\ V. "
+"Смотрите в POSIX объяснение B<kill>(). Различие не упомянуто в POSIX по "
+"отношению к возвращаемому значению B<EPERM>: в BSD описано, что сигнал не "
+"послан и возвращается B<EPERM> когда проверка прав не пройдена по крайней "
+"мере для одного процесса-получателя, в то время как в POSIX описано, что B<"
+"EPERM> возвращается только когда проверка прав не пройдена для всех "
+"процессов-получателей."
+
+#. type: Plain text
+#: man-pages/man2/killpg.2:134
+msgid ""
+"On Linux, B<killpg>()  is implemented as a library function that makes the "
+"call I<kill(-pgrp,\\ sig)>."
+msgstr ""
+"В Linux B<killpg>() реализован в виде библиотечной функции, которая вызывает "
+"I<kill(-pgrp,\\ sig)>."
+
+#. type: Plain text
+#: man-pages/man2/killpg.2:139
+msgid ""
+"B<getpgrp>(2), B<kill>(2), B<signal>(2), B<capabilities>(7), "
+"B<credentials>(7)"
+msgstr ""
+"B<getpgrp>(2), B<kill>(2), B<signal>(2), B<capabilities>(7), B<credentials>(7)"
+
+#. type: TH
+#: man-pages/man2/kill.2:44
+#, no-wrap
+msgid "KILL"
+msgstr "KILL"
+
+#. type: TH
+#: man-pages/man2/kill.2:44
+#, no-wrap
+msgid "2013-09-17"
+msgstr "2013-09-17"
+
+#. type: Plain text
+#: man-pages/man2/kill.2:47
+msgid "kill - send signal to a process"
+msgstr "kill - послать сигнал процессу"
+
+#. type: Plain text
+#: man-pages/man2/kill.2:50
+#, no-wrap
+msgid "B<#include E<lt>sys/types.hE<gt>>\n"
+msgstr "B<#include E<lt>sys/types.hE<gt>>\n"
+
+#. type: Plain text
+#: man-pages/man2/kill.2:52
+#, no-wrap
+msgid "B<#include E<lt>signal.hE<gt>>\n"
+msgstr "B<#include E<lt>signal.hE<gt>>\n"
+
+#. type: Plain text
+#: man-pages/man2/kill.2:54
+#, no-wrap
+msgid "B<int kill(pid_t >I<pid>B<, int >I<sig>B<);>\n"
+msgstr "B<int kill(pid_t >I<pid>B<, int >I<sig>B<);>\n"
+
+#. type: Plain text
+#: man-pages/man2/kill.2:64
+msgid ""
+"B<kill>(): _POSIX_C_SOURCE\\ E<gt>=\\ 1 || _XOPEN_SOURCE || _POSIX_SOURCE"
+msgstr ""
+"B<kill>(): _POSIX_C_SOURCE\\ E<gt>=\\ 1 || _XOPEN_SOURCE || _POSIX_SOURCE"
+
+#. type: Plain text
+#: man-pages/man2/kill.2:70
+msgid ""
+"The B<kill>()  system call can be used to send any signal to any process "
+"group or process."
+msgstr ""
+"Системный вызов B<kill>() может быть использован для посылки какого-либо "
+"сигнала какому-либо процессу или группе процессов."
+
+#. type: Plain text
+#: man-pages/man2/kill.2:73
+msgid ""
+"If I<pid> is positive, then signal I<sig> is sent to the process with the ID"
+" specified by I<pid>."
+msgstr ""
+"Если значение I<pid> является положительным, то сигнал I<sig> посылается "
+"процессу с идентификатором I<pid>."
+
+#. type: Plain text
+#: man-pages/man2/kill.2:76
+msgid ""
+"If I<pid> equals 0, then I<sig> is sent to every process in the process "
+"group of the calling process."
+msgstr ""
+"Если значение I<pid> равно 0, то I<sig> посылается каждому процессу, который "
+"входит в группу вызывающего процесса."
+
+#. type: Plain text
+#: man-pages/man2/kill.2:80
+msgid ""
+"If I<pid> equals -1, then I<sig> is sent to every process for which the "
+"calling process has permission to send signals, except for process 1 "
+"(I<init>), but see below."
+msgstr ""
+"Если значение I<pid> равно -1, то I<sig> посылается каждому процессу, которым "
+"вызывающий процесс имеет право отправлять сигналы, за исключением процесса с "
+"номером 1 (I<init>), подробности смотрите далее."
+
+#. type: Plain text
+#: man-pages/man2/kill.2:83
+msgid ""
+"If I<pid> is less than -1, then I<sig> is sent to every process in the "
+"process group whose ID is I<-pid>."
+msgstr ""
+"Если значение I<pid> меньше -1, то I<sig> посылается каждому процессу, "
+"который входит в группу процессов, чей ID равен I<-pid>."
+
+#. type: Plain text
+#: man-pages/man2/kill.2:88
+msgid ""
+"If I<sig> is 0, then no signal is sent, but error checking is still "
+"performed; this can be used to check for the existence of a process ID or "
+"process group ID."
+msgstr ""
+"Если значение I<sig> равно 0, то никакой сигнал не посылается, а только "
+"выполняется проверка; это можно использовать для проверки существования "
+"процесса или группы процессов с заданным ID."
+
+#. type: Plain text
+#: man-pages/man2/kill.2:100
+msgid ""
+"For a process to have permission to send a signal it must either be "
+"privileged (under Linux: have the B<CAP_KILL> capability), or the real or "
+"effective user ID of the sending process must equal the real or saved set-"
+"user-ID of the target process.  In the case of B<SIGCONT> it suffices when "
+"the sending and receiving processes belong to the same session.  "
+"(Historically, the rules were different; see NOTES.)"
+msgstr ""
+"Чтобы процесс мог посылать сигнал, он должен быть привилегированным (в Linux: "
+"иметь мандат B<CAP_KILL>), либо реальный или эффективный идентификатор "
+"пользователя посылающего процесса должен быть равен реальному или "
+"сохранённому идентификатору пользователя процесса, которому отправляется "
+"сигнал. Для сигнала B<SIGCONT> посылающий и получающий процессы должны "
+"принадлежать одному сеансу (сложилось исторически; правила разные; смотрите "
+"ЗАМЕЧАНИЯ)."
+
+#. type: Plain text
+#: man-pages/man2/kill.2:105
+msgid ""
+"On success (at least one signal was sent), zero is returned.  On error, -1 "
+"is returned, and I<errno> is set appropriately."
+msgstr ""
+"При успешном выполнении (по крайней мере, был послан один сигнал) "
+"возвращается 0. В случае ошибки возвращается -1, а I<errno> устанавливается в "
+"соответствующее значение."
+
+#. type: Plain text
+#: man-pages/man2/kill.2:109
+msgid "An invalid signal was specified."
+msgstr "Указан некорректный сигнал. "
+
+#. type: Plain text
+#: man-pages/man2/kill.2:121
+msgid ""
+"The pid or process group does not exist.  Note that an existing process "
+"might be a zombie, a process which already committed termination, but has "
+"not yet been B<wait>(2)ed for."
+msgstr ""
+"Такой pid или группа процессов не существует. Заметим, что существующий "
+"процесс может быть в состоянии зомби \\(em процесс, для которого  "
+"подтвердилось завершение, но которого ещё не дождались с помощью B<wait>(2)."
+
+#. type: Plain text
+#: man-pages/man2/kill.2:123
+msgid "SVr4, 4.3BSD, POSIX.1-2001."
+msgstr "SVr4, 4.3BSD, POSIX.1-2001."
+
+#. type: Plain text
+#: man-pages/man2/kill.2:131
+msgid ""
+"The only signals that can be sent to process ID 1, the I<init> process, are "
+"those for which I<init> has explicitly installed signal handlers.  This is "
+"done to assure the system is not brought down accidentally."
+msgstr ""
+"Процессу I<init>  с идентификатором 1 можно послать только те сигналы, для "
+"которых он явно установил обработчики сигналов. Так сделано, чтобы быть "
+"уверенным, что в случае какой-либо нештатной ситуации работа системы не будет "
+"завершена аварийно."
+
+#. type: Plain text
+#: man-pages/man2/kill.2:137
+msgid ""
+"POSIX.1-2001 requires that I<kill(-1,sig)> send I<sig> to all processes that"
+" the calling process may send signals to, except possibly for some "
+"implementation-defined system processes.  Linux allows a process to signal "
+"itself, but on Linux the call I<kill(-1,sig)> does not signal the calling "
+"process."
+msgstr ""
+"В POSIX.1-2001 требуется, чтобы I<kill(-1,sig)> посылал I<sig> всем "
+"процессам, которым вызывающий процесс может послать сигналы, возможно за "
+"исключением некоторых процессов, определяемых реализацией системы. Linux "
+"позволяет процессу послать сигнал самому себе, но при вызове I<kill(-1,sig)> "
+"вызывающий процесс сигнала не получит."
+
+#. type: Plain text
+#: man-pages/man2/kill.2:147
+msgid ""
+"POSIX.1-2001 requires that if a process sends a signal to itself, and the "
+"sending thread does not have the signal blocked, and no other thread has it "
+"unblocked or is waiting for it in B<sigwait>(3), at least one unblocked "
+"signal must be delivered to the sending thread before the B<kill>()  "
+"returns."
+msgstr ""
+"В POSIX.1-2001 говорится, что если процесс посылает себе сигнал и посылающая "
+"нить не блокирует сигнал, и нет ещё нити, которая его не блокирует или не "
+"ждёт его с помощью B<sigwait>(3), то, по крайней мере, один незаблокированный "
+"сигнал должен быть доставлен посылающей нити до возврата из B<kill>()."
+
+#. type: SS
+#: man-pages/man2/kill.2:147
+#, no-wrap
+msgid "Linux notes"
+msgstr "Замечания, касающиеся Linux"
+
+#.  In the 0.* kernels things chopped and changed quite
+#.  a bit - MTK, 24 Jul 02
+#. type: Plain text
+#: man-pages/man2/kill.2:161
+msgid ""
+"Across different kernel versions, Linux has enforced different rules for the"
+" permissions required for an unprivileged process to send a signal to "
+"another process.  In kernels 1.0 to 1.2.2, a signal could be sent if the "
+"effective user ID of the sender matched effective user ID of the target, or "
+"the real user ID of the sender matched the real user ID of the target.  From"
+" kernel 1.2.3 until 1.3.77, a signal could be sent if the effective user ID "
+"of the sender matched either the real or effective user ID of the target.  "
+"The current rules, which conform to POSIX.1-2001, were adopted in kernel "
+"1.3.78."
+msgstr ""
+"В различных версиях ядра Linux применяются разные правила, касающиеся прав "
+"доступа, которые требуются для непривилегированного процесса, чтобы посылать "
+"сигнал другому процессу. В ядрах с 1.0 по 1.2.2 сигнал может быть послан, "
+"если эффективный идентификатор пользователя отправителя совпадает с "
+"эффективным идентификатором пользователя цели или реальный идентификатор "
+"пользователя отправителя совпадает с реальным идентификатором пользователя "
+"цели. В ядрах с версии 1.2.3 по 1.3.77 сигнал может быть послан, если "
+"эффективный идентификатор пользователя отправителя совпадает или с реальным "
+"или с эффективным идентификатором пользователя цели. Текущие правила, которые "
+"соответствуют стандартам POSIX.1-2001, были введены, начиная с ядра версии "
+"1.3.78."
+
+#. type: SH
+#: man-pages/man2/kill.2:161
+#, no-wrap
+msgid "BUGS"
+msgstr "ДЕФЕКТЫ"
+
+#. type: Plain text
+#: man-pages/man2/kill.2:171
+msgid ""
+"In 2.6 kernels up to and including 2.6.7, there was a bug that meant that "
+"when sending signals to a process group, B<kill>()  failed with the error "
+"B<EPERM> if the caller did not have permission to send the signal to I<any> "
+"(rather than I<all>) of the members of the process group.  Notwithstanding "
+"this error return, the signal was still delivered to all of the processes "
+"for which the caller had permission to signal."
+msgstr ""
+"В ядрах 2.6 до 2.6.7 включительно есть дефект: когда посылаются сигналы "
+"группе процессов, вызов B<kill>() завершается с ошибкой B<EPERM>, если "
+"вызывающий не имеет право посылать сигнал I<любому> (но не I<всем>) члену "
+"группы процессов. Хотя возвращается ошибка, сигнал всё равно доставляется "
+"всем процессам, которым вызывающий имеет право послать сигнал."
+
+#. type: Plain text
+#: man-pages/man2/kill.2:180
+msgid ""
+"B<_exit>(2), B<killpg>(2), B<signal>(2), B<tkill>(2), B<exit>(3), "
+"B<sigqueue>(3), B<capabilities>(7), B<credentials>(7), B<signal>(7)"
+msgstr ""
+"B<_exit>(2), B<killpg>(2), B<signal>(2), B<tkill>(2), B<exit>(3), B<sigqueue>"
+"(3), B<capabilities>(7), B<credentials>(7), B<signal>(7)"
+
+#. type: TH
+#: man-pages/man2/kexec_load.2:26
+#, no-wrap
+msgid "KEXEC_LOAD"
+msgstr "KEXEC_LOAD"
+
+#. type: TH
+#: man-pages/man2/kexec_load.2:26
+#, no-wrap
+msgid "2012-07-13"
+msgstr "2012-07-13"
+
+#. type: Plain text
+#: man-pages/man2/kexec_load.2:29
+msgid "kexec_load - load a new kernel for later execution"
+msgstr "kexec_load - загружает новое ядро для выполнения в будущем"
+
+#. type: Plain text
+#: man-pages/man2/kexec_load.2:31
+msgid "B<#include E<lt>linux/kexec.hE<gt>>"
+msgstr "B<#include E<lt>linux/kexec.hE<gt>>"
+
+#. type: Plain text
+#: man-pages/man2/kexec_load.2:33
+msgid ""
+"B<long kexec_load(unsigned long >I<entry>B<, unsigned long "
+">I<nr_segments>B<,>"
+msgstr ""
+"B<long kexec_load(unsigned long >I<entry>B<, unsigned long >I<nr_segments>B<,>"
+
+#. type: Plain text
+#: man-pages/man2/kexec_load.2:36
+msgid "B< struct kexec_segment *>I<segments>B<, unsigned long >I<flags>B<);>"
+msgstr "B< struct kexec_segment *>I<segments>B<, unsigned long >I<flags>B<);>"
+
+#. type: Plain text
+#: man-pages/man2/kexec_load.2:44
+msgid ""
+"The B<kexec_load>()  system call loads a new kernel that can be executed "
+"later by B<reboot>(2)."
+msgstr ""
+"Системный вызов B<kexec_load>() загружает новое ядро, которое можно запустить "
+"позже с помощью B<reboot>(2)."
+
+#. type: Plain text
+#: man-pages/man2/kexec_load.2:50
+msgid ""
+"The I<flags> argument is a mask whose high-order bits control the operation "
+"of the call.  The following values can be specified in I<flags>:"
+msgstr ""
+"Аргумент I<flags> представляет собой маску, чьи старшие биты управляют "
+"работой вызова. В I<flags> можно указать следующие значения:"
+
+#. type: TP
+#: man-pages/man2/kexec_load.2:50
+#, no-wrap
+msgid "B<KEXEC_ON_CRASH> (since Linux 2.6.13)"
+msgstr "B<KEXEC_ON_CRASH> (начиная с Linux 2.6.13)"
+
+#.  FIXME figure out how this is really used
+#. type: Plain text
+#: man-pages/man2/kexec_load.2:54
+msgid "Execute the new kernel automatically on a system crash."
+msgstr "Запускать новое ядро автоматически после «падения» системы."
+
+#. type: TP
+#: man-pages/man2/kexec_load.2:54
+#, no-wrap
+msgid "B<KEXEC_PRESERVE_CONTEXT> (since Linux 2.6.27)"
+msgstr "B<KEXEC_PRESERVE_CONTEXT> (начиная с Linux 2.6.27)"
+
+#. type: Plain text
+#: man-pages/man2/kexec_load.2:64
+msgid ""
+"Preserve the system hardware and software states before executing the new "
+"kernel.  This could be used for system suspend.  This flag is available only"
+" if the kernel was configured with B<CONFIG_KEXEC_JUMP>, and is effective "
+"only if I<nr_segments> is greater than 0."
+msgstr ""
+"Сохранять аппаратное и программное состояния перед выполнением нового ядра. "
+"Может использоваться для перевода системы в состояние ожидания (suspend). "
+"Этот флаг доступен только, если ядро было собрано с параметром B<"
+"CONFIG_KEXEC_JUMP>, и работает только, если значение I<nr_segments> больше 0."
+
+#. type: Plain text
+#: man-pages/man2/kexec_load.2:84
+msgid ""
+"The low-order bits of I<flags> contain the architecture of the to-be-"
+"executed kernel.  Specify (OR) the constant B<KEXEC_ARCH_DEFAULT> to use the"
+" current architecture, or one of the following architecture constants "
+"B<KEXEC_ARCH_386>, B<KEXEC_ARCH_X86_64>, B<KEXEC_ARCH_PPC>, "
+"B<KEXEC_ARCH_PPC64>, B<KEXEC_ARCH_IA_64>, B<KEXEC_ARCH_ARM>, "
+"B<KEXEC_ARCH_S390>, B<KEXEC_ARCH_SH>, B<KEXEC_ARCH_MIPS>, and "
+"B<KEXEC_ARCH_MIPS_LE>.  The architecture must be executable on the CPU of "
+"the system."
+msgstr ""
+"В младших битах I<flags> задаётся архитектура, для которой будет выполняться "
+"ядро. Константой (через OR) B<KEXEC_ARCH_DEFAULT> задаётся использование "
+"текущей архитектуры; также есть другие константы, описывающие архитектуры: B<"
+"KEXEC_ARCH_386>, B<KEXEC_ARCH_X86_64>, B<KEXEC_ARCH_PPC>, B<KEXEC_ARCH_PPC64>"
+", B<KEXEC_ARCH_IA_64>, B<KEXEC_ARCH_ARM>, B<KEXEC_ARCH_S390>, B<KEXEC_ARCH_SH>"
+", B<KEXEC_ARCH_MIPS> и B<KEXEC_ARCH_MIPS_LE>. Архитектура должна быть "
+"работоспособна на ЦП системы."
+
+#. type: Plain text
+#: man-pages/man2/kexec_load.2:98
+msgid ""
+"The I<entry> argument is the physical entry address in the kernel image.  "
+"The I<nr_segments> argument is the number of segments pointed to by the "
+"I<segments> pointer.  The I<segments> argument is an array of "
+"I<kexec_segment> structures which define the kernel layout:"
+msgstr ""
+"В аргументе I<entry> задаётся физический адрес точки входа в образе ядра. В "
+"аргументе I<nr_segments> задаётся количество сегментов, на которые указывает "
+"указатель I<segments>. В аргументе I<segments> задаётся массив структур I<"
+"kexec_segment>, который определяет разбивку ядра:"
+
+#. type: Plain text
+#: man-pages/man2/kexec_load.2:107
+#, no-wrap
+msgid ""
+"struct kexec_segment {\n"
+"    void   *buf;        /* Buffer in user space */\n"
+"    size_t  bufsz;      /* Buffer length in user space */\n"
+"    void   *mem;        /* Physical address of kernel */\n"
+"    size_t  memsz;      /* Physical address length */\n"
+"};\n"
+msgstr ""
+"struct kexec_segment {\n    void   *buf;        /* буфер в пользовательском "
+"пространстве */\n    size_t  bufsz;      /* размер буфера в пользовательском "
+"пространстве */\n    void   *mem;        /* физический адрес ядра */\n    "
+"size_t  memsz;      /* размер ядра */\n};\n"
+
+#.  FIXME elaborate on the following:
+#. type: Plain text
+#: man-pages/man2/kexec_load.2:114
+msgid ""
+"The kernel image defined by I<segments> is copied from the calling process "
+"into previously reserved memory."
+msgstr ""
+"Образ ядра, определённый I<segments>, копируется из вызывающего процесса в "
+"ранее зарезервированную память."
+
+#. type: Plain text
+#: man-pages/man2/kexec_load.2:121
+msgid ""
+"On success, B<kexec_load>()  returns 0.  On error, -1 is returned and "
+"I<errno> is set to indicate the error."
+msgstr ""
+"При успешном выполнении B<kexec_load>() возвращается 0. При ошибке "
+"возвращается -1, а в I<errno> содержится код ошибки."
+
+#. type: TP
+#: man-pages/man2/kexec_load.2:122
+#, no-wrap
+msgid "B<EBUSY>"
+msgstr "B<EBUSY>"
+
+#. type: Plain text
+#: man-pages/man2/kexec_load.2:126
+msgid ""
+"Another crash kernel is already being loaded or a crash kernel is already in"
+" use."
+msgstr "Уже загружено другое crash-ядро или crash-ядро уже используется."
+
+#.  KEXEC_SEGMENT_MAX == 16
+#. type: Plain text
+#: man-pages/man2/kexec_load.2:133
+msgid "I<flags> is invalid; or I<nr_segments> is too large"
+msgstr ""
+"Неправильное значение I<flags>; или количество I<nr_segments> слишком большое"
+
+#. type: Plain text
+#: man-pages/man2/kexec_load.2:138
+msgid "The caller does not have the B<CAP_SYS_BOOT> capability."
+msgstr "Вызывающий не имеет мандата B<CAP_SYS_BOOT>."
+
+#. type: Plain text
+#: man-pages/man2/kexec_load.2:142
+msgid "The B<kexec_load>()  system call first appeared in Linux 2.6.13."
+msgstr "Системный вызов B<kexec_load>() впервые появился в 2.6.13."
+
+#. type: Plain text
+#: man-pages/man2/kexec_load.2:144
+msgid "This system call is Linux-specific."
+msgstr "Данный вызов есть только в Linux."
+
+#. type: Plain text
+#: man-pages/man2/kexec_load.2:149
+msgid ""
+"Currently, there is no glibc support for B<kexec_load>().  Call it using "
+"B<syscall>(2)."
+msgstr ""
+"В настоящее время в glibc нет поддержки вызова B<kexec_load>(). Вызывайте его "
+"через B<syscall>(2)."
+
+#.  FIXME Andi submitted a patch for this.
+#.  Check if it got accepted later.
+#. type: Plain text
+#: man-pages/man2/kexec_load.2:156
+msgid ""
+"The required constants are in the Linux kernel source file I<linux/kexec.h>,"
+" which is not currently exported to glibc.  Therefore, these constants must "
+"be defined manually."
+msgstr ""
+"Необходимые для работы константы находятся в файле исходного кода ядра Linux "
+"I<linux/kexec.h>, который не экспортируется в glibc. Поэтому данные константы "
+"должны определяться вручную."
+
+#. type: Plain text
+#: man-pages/man2/kexec_load.2:159
+msgid ""
+"This system call is available only if the kernel was configured with "
+"B<CONFIG_KEXEC>."
+msgstr ""
+"Данный системный вызов доступен только, если ядро было собрано с параметром "
+"B<CONFIG_KEXEC>."
+
+#. type: Plain text
+#: man-pages/man2/kexec_load.2:161
+msgid "B<reboot>(2), B<syscall>(2)"
+msgstr "B<reboot>(2), B<syscall>(2)"
+
+#. type: TH
+#: man-pages/man2/keyctl.2:27
+#, no-wrap
+msgid "KEYCTL"
+msgstr "KEYCTL"
+
+#. type: TH
+#: man-pages/man2/keyctl.2:27
+#, no-wrap
+msgid "2014-01-22"
+msgstr "2014-01-22"
+
+#. type: TH
+#: man-pages/man2/keyctl.2:27
+#, no-wrap
+msgid "Linux Key Management Calls"
+msgstr "Вызовы системы управления ключами Linux"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:30
+msgid "keyctl - manipulate the kernel's key management facility"
+msgstr "keyctl - работа с системой управления ключами ядра"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:33
+#, no-wrap
+msgid "B<#include E<lt>keyutils.hE<gt>>\n"
+msgstr "B<#include E<lt>keyutils.hE<gt>>\n"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:35
+#, no-wrap
+msgid "B<long keyctl(int >I<cmd>B<, ...);>\n"
+msgstr "B<long keyctl(int >I<cmd>B<, ...);>\n"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:39
+msgid "B<keyctl>()  has a number of functions available:"
+msgstr "Вызов B<keyctl>() выполняет несколько функций:"
+
+#. type: TP
+#: man-pages/man2/keyctl.2:39
+#, no-wrap
+msgid "B<KEYCTL_GET_KEYRING_ID>"
+msgstr "B<KEYCTL_GET_KEYRING_ID>"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:42
+msgid "Ask for a keyring's ID."
+msgstr "Запрашивает идентификатор связки ключей."
+
+#. type: TP
+#: man-pages/man2/keyctl.2:42
+#, no-wrap
+msgid "B<KEYCTL_JOIN_SESSION_KEYRING>"
+msgstr "B<KEYCTL_JOIN_SESSION_KEYRING>"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:45
+msgid "Join or start named session keyring."
+msgstr "Подсоединяется или запускает именованную сеансовую связку ключей."
+
+#. type: TP
+#: man-pages/man2/keyctl.2:45
+#, no-wrap
+msgid "B<KEYCTL_UPDATE>"
+msgstr "B<KEYCTL_UPDATE>"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:48
+msgid "Update a key."
+msgstr "Обновляет ключ."
+
+#. type: TP
+#: man-pages/man2/keyctl.2:48
+#, no-wrap
+msgid "B<KEYCTL_REVOKE>"
+msgstr "B<KEYCTL_REVOKE>"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:51
+msgid "Revoke a key."
+msgstr "Отзывает ключ."
+
+#. type: TP
+#: man-pages/man2/keyctl.2:51
+#, no-wrap
+msgid "B<KEYCTL_CHOWN>"
+msgstr "B<KEYCTL_CHOWN>"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:54
+msgid "Set ownership of a key."
+msgstr "Назначает владельца ключа."
+
+#. type: TP
+#: man-pages/man2/keyctl.2:54
+#, no-wrap
+msgid "B<KEYCTL_SETPERM>"
+msgstr "B<KEYCTL_SETPERM>"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:57
+msgid "Set perms on a key."
+msgstr "Назначает права на ключ."
+
+#. type: TP
+#: man-pages/man2/keyctl.2:57
+#, no-wrap
+msgid "B<KEYCTL_DESCRIBE>"
+msgstr "B<KEYCTL_DESCRIBE>"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:60
+msgid "Describe a key."
+msgstr "Описывает ключ."
+
+#. type: TP
+#: man-pages/man2/keyctl.2:60
+#, no-wrap
+msgid "B<KEYCTL_CLEAR>"
+msgstr "B<KEYCTL_CLEAR>"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:63
+msgid "Clear contents of a keyring."
+msgstr "Стирает содержимое связки ключей."
+
+#. type: TP
+#: man-pages/man2/keyctl.2:63
+#, no-wrap
+msgid "B<KEYCTL_LINK>"
+msgstr "B<KEYCTL_LINK>"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:66
+msgid "Link a key into a keyring."
+msgstr "Цепляет ключ в связку ключей."
+
+#. type: TP
+#: man-pages/man2/keyctl.2:66
+#, no-wrap
+msgid "B<KEYCTL_UNLINK>"
+msgstr "B<KEYCTL_UNLINK>"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:69
+msgid "Unlink a key from a keyring."
+msgstr "Отцепляет ключ от связки ключей."
+
+#. type: TP
+#: man-pages/man2/keyctl.2:69
+#, no-wrap
+msgid "B<KEYCTL_SEARCH>"
+msgstr "B<KEYCTL_SEARCH>"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:72
+msgid "Search for a key in a keyring."
+msgstr "Ищет ключ в связке ключей."
+
+#. type: TP
+#: man-pages/man2/keyctl.2:72
+#, no-wrap
+msgid "B<KEYCTL_READ>"
+msgstr "B<KEYCTL_READ>"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:75
+msgid "Read a key or keyring's contents."
+msgstr "Читает содержимое ключа или связки ключей."
+
+#. type: TP
+#: man-pages/man2/keyctl.2:75
+#, no-wrap
+msgid "B<KEYCTL_INSTANTIATE>"
+msgstr "B<KEYCTL_INSTANTIATE>"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:78
+msgid "Instantiate a partially constructed key."
+msgstr "Создаёт (Instantiate) частично сконструированный ключ."
+
+#. type: TP
+#: man-pages/man2/keyctl.2:78
+#, no-wrap
+msgid "B<KEYCTL_NEGATE>"
+msgstr "B<KEYCTL_NEGATE>"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:81
+msgid "Negate a partially constructed key."
+msgstr "Удаляет (Negate) частично сконструированный ключ."
+
+#. type: TP
+#: man-pages/man2/keyctl.2:81
+#, no-wrap
+msgid "B<KEYCTL_SET_REQKEY_KEYRING>"
+msgstr "B<KEYCTL_SET_REQKEY_KEYRING>"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:84
+msgid "Set default request-key keyring."
+msgstr "Назначает связку ключей request-key по умолчанию."
+
+#. type: TP
+#: man-pages/man2/keyctl.2:84
+#, no-wrap
+msgid "B<KEYCTL_SET_TIMEOUT>"
+msgstr "B<KEYCTL_SET_TIMEOUT>"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:87
+msgid "Set timeout on a key."
+msgstr "Назначает время ожидания ключа."
+
+#. type: TP
+#: man-pages/man2/keyctl.2:87
+#, no-wrap
+msgid "B<KEYCTL_ASSUME_AUTHORITY>"
+msgstr "B<KEYCTL_ASSUME_AUTHORITY>"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:90
+msgid "Assume authority to instantiate key."
+msgstr "Допускает полномочие создания ключа."
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:97
+msgid ""
+"These are wrapped by B<libkeyutils> into individual functions to permit "
+"compiler the compiler to check types.  See the B<See Also> section at the "
+"bottom."
+msgstr ""
+"На базе этих операций в B<libkeyutils> созданы отдельные функции, что "
+"позволяет проверять типы с помощью компилятора. Обратитесь к разделу B<"
+"Смотрите также> ниже."
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:103
+msgid ""
+"On success B<keyctl>()  returns the serial number of the key it found.  On "
+"error, the value -1 will be returned and errno will have been set to an "
+"appropriate error."
+msgstr ""
+"При успешном выполнении B<keyctl>() возвращается серийный номер найденного "
+"ключа. В случае ошибки возвращается значение -1, а в errno устанавливается "
+"код соответствующей ошибки."
+
+#. type: TP
+#: man-pages/man2/keyctl.2:104
+#, no-wrap
+msgid "B<EACCES>"
+msgstr "B<EACCES>"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:107
+msgid "A key operation wasn't permitted."
+msgstr "Операция с ключом не разрешена."
+
+#. type: TP
+#: man-pages/man2/keyctl.2:107
+#, no-wrap
+msgid "B<EDQUOT>"
+msgstr "B<EDQUOT>"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:111
+msgid ""
+"The key quota for the caller's user would be exceeded by creating a key or "
+"linking it to the keyring."
+msgstr ""
+"Квота на ключи для данного пользователя была бы превышена, если бы этот ключ "
+"создался или был бы прицеплен в связку ключей."
+
+#. type: TP
+#: man-pages/man2/keyctl.2:111
+#, no-wrap
+msgid "B<EKEYEXPIRED>"
+msgstr "B<EKEYEXPIRED>"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:114
+msgid "An expired key was found or specified."
+msgstr "Найден или указан просроченный ключ."
+
+#. type: TP
+#: man-pages/man2/keyctl.2:114
+#, no-wrap
+msgid "B<EKEYREJECTED>"
+msgstr "B<EKEYREJECTED>"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:117
+msgid "A rejected key was found or specified."
+msgstr "Найден или указан отклонённый (rejected) ключ."
+
+#. type: TP
+#: man-pages/man2/keyctl.2:117
+#, no-wrap
+msgid "B<EKEYREVOKED>"
+msgstr "B<EKEYREVOKED>"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:120
+msgid "A revoked key was found or specified."
+msgstr "Найден или указан отозванный ключ."
+
+#. type: TP
+#: man-pages/man2/keyctl.2:120
+#, no-wrap
+msgid "B<ENOKEY>"
+msgstr "B<ENOKEY>"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:123
+msgid "No matching key was found or an invalid key was specified."
+msgstr "Искомый ключ не найден или указан неверный ключ."
+
+#. type: SH
+#: man-pages/man2/keyctl.2:123
+#, no-wrap
+msgid "LINKING"
+msgstr "КОМПОНОВКА"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:131
+msgid ""
+"Although this is a Linux system call, it is not present in I<libc> but can "
+"be found rather in I<libkeyutils>.  When linking, B<-lkeyutils> should be "
+"specified to the linker."
+msgstr ""
+"Хотя это и системный вызов Linux, его нет в I<libc>, но его можно найти в I<"
+"libkeyutils>. При сборке программы компоновщику нужно указать параметр B<"
+"-lkeyutils>."
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:157
+msgid ""
+"B<keyctl>(1), B<add_key>(2), B<request_key>(2), B<keyctl_set_timeout>(3), "
+"B<keyctl_chown>(3), B<keyctl_clear>(3), B<keyctl_describe>(3), "
+"B<keyctl_describe_alloc>(3), B<keyctl_get_keyring_ID>(3), "
+"B<keyctl_instantiate>(3), B<keyctl_join_session_keyring>(3), "
+"B<keyctl_link>(3), B<keyctl_negate>(3), B<keyctl_revoke>(3), "
+"B<keyctl_search>(3), B<keyctl_setperm>(3), B<keyctl_set_reqkey_keyring>(3), "
+"B<keyctl_set_timeout>(3), B<keyctl_read>(3), B<keyctl_read_alloc>(3), "
+"B<keyctl_unlink>(3), B<keyctl_update>(3), B<request-key>(8)"
+msgstr ""
+"B<keyctl>(1), B<add_key>(2), B<request_key>(2), B<keyctl_set_timeout>(3), B<"
+"keyctl_chown>(3), B<keyctl_clear>(3), B<keyctl_describe>(3), B<"
+"keyctl_describe_alloc>(3), B<keyctl_get_keyring_ID>(3), B<keyctl_instantiate>"
+"(3), B<keyctl_join_session_keyring>(3), B<keyctl_link>(3), B<keyctl_negate>"
+"(3), B<keyctl_revoke>(3), B<keyctl_search>(3), B<keyctl_setperm>(3), B<"
+"keyctl_set_reqkey_keyring>(3), B<keyctl_set_timeout>(3), B<keyctl_read>(3), "
+"B<keyctl_read_alloc>(3), B<keyctl_unlink>(3), B<keyctl_update>(3), B<"
+"request-key>(8)"
+
+#. type: Plain text
+#: man-pages/man2/keyctl.2:159
+msgid "The kernel source file I<Documentation/security/keys.txt>."
+msgstr "Файл из дерева исходного кода ядра I<Documentation/security/keys.txt>."
+
+#. type: TH
+#: man-pages/man3/key_setsecret.3:9
+#, no-wrap
+msgid "KEY_SETSECRET"
+msgstr "KEY_SETSECRET"
+
+#. type: TH
+#: man-pages/man3/key_setsecret.3:9
+#, no-wrap
+msgid "2014-05-28"
+msgstr "2014-05-28"
+
+#. type: Plain text
+#: man-pages/man3/key_setsecret.3:13
+msgid ""
+"key_decryptsession, key_encryptsession, key_setsecret, key_gendes, "
+"key_secretkey_is_set - interfaces to rpc keyserver daemon"
+msgstr ""
+"key_decryptsession, key_encryptsession, key_setsecret, key_gendes, "
+"key_secretkey_is_set - взаимодействие с rpc-службой сервера ключей"
+
+#. type: Plain text
+#: man-pages/man3/key_setsecret.3:15
+msgid "B<#include E<lt>rpc/rpc.hE<gt>>"
+msgstr "B<#include E<lt>rpc/rpc.hE<gt>>"
+
+#. type: Plain text
+#: man-pages/man3/key_setsecret.3:18
+msgid ""
+"B<int key_decryptsession(char *>I<remotename>B<,> B<des_block "
+"*>I<deskey>B<);>"
+msgstr ""
+"B<int key_decryptsession(char *>I<remotename>B<,> B<des_block "
+"*>I<deskey>B<);>"
+
+#. type: Plain text
+#: man-pages/man3/key_setsecret.3:21
+msgid ""
+"B<int key_encryptsession(char *>I<remotename>B<,> B<des_block "
+"*>I<deskey>B<);>"
+msgstr ""
+"B<int key_encryptsession(char *>I<remotename>B<,> B<des_block "
+"*>I<deskey>B<);>"
+
+#. type: Plain text
+#: man-pages/man3/key_setsecret.3:23
+msgid "B<int key_gendes(des_block *>I<deskey>B<);>"
+msgstr "B<int key_gendes(des_block *>I<deskey>B<);>"
+
+#. type: Plain text
+#: man-pages/man3/key_setsecret.3:25
+msgid "B<int key_setsecret(char *>I<key>B<);>"
+msgstr "B<int key_setsecret(char *>I<key>B<);>"
+
+#. type: Plain text
+#: man-pages/man3/key_setsecret.3:27
+msgid "B<int key_secretkey_is_set(void);>"
+msgstr "B<int key_secretkey_is_set(void);>"
+
+#. type: Plain text
+#: man-pages/man3/key_setsecret.3:32
+msgid ""
+"The functions here are used within the RPC's secure authentication mechanism"
+" (AUTH_DES).  There should be no need for user programs to use this "
+"functions."
+msgstr ""
+"Данные функции используются в механизме безопасной аутентификации RPC "
+"(AUTH_DES). Программы прикладного уровня не должны использовать эти функции."
+
+#. type: Plain text
+#: man-pages/man3/key_setsecret.3:39
+msgid ""
+"The function B<key_decryptsession>()  uses the (remote) server netname and "
+"takes the DES key for decrypting.  It uses the public key of the server and "
+"the secret key associated with the effective UID of the calling process."
+msgstr ""
+"Функция B<key_decryptsession>() использует сетевое имя (удалённого) сервера и "
+"принимает ключ DES для расшифровки. Она использует открытый ключ сервера и "
+"закрытый ключ, привязанный к эффективному UID вызывающего процесса."
+
+#. type: Plain text
+#: man-pages/man3/key_setsecret.3:46
+msgid ""
+"The function B<key_encryptsession>()  is the inverse of "
+"B<key_decryptsession>().  It encrypts the DES keys with the public key of "
+"the server and the secret key associated with the effective UID of the "
+"calling process."
+msgstr ""
+"Функция B<key_encryptsession>() противоположна B<key_decryptsession>() по "
+"своему назначению. Она шифрует ключи DES открытым ключом сервера и закрытым "
+"ключом, привязанным к эффективному UID вызывающего процесса."
+
+#. type: Plain text
+#: man-pages/man3/key_setsecret.3:50
+msgid ""
+"The function B<key_gendes>()  is used to ask the keyserver for a secure "
+"conversation key."
+msgstr ""
+"Функция B<key_gendes>() используется для запроса у сервера ключей безопасного "
+"ключа обмена."
+
+#. type: Plain text
+#: man-pages/man3/key_setsecret.3:54
+msgid ""
+"The function B<key_setsecret>()  is used to set the key for the effective "
+"UID of the calling process."
+msgstr ""
+"Функция B<key_setsecret>() используется для привязки ключа к эффективному UID "
+"вызывающего процесса."
+
+#. type: Plain text
+#: man-pages/man3/key_setsecret.3:59
+msgid ""
+"The function B<key_secretkey_is_set>()  can be used to determine whether a "
+"key has been set for the effective UID of the calling process."
+msgstr ""
+"Функция B<key_secretkey_is_set>() может быть использована для определения "
+"того, был ли привязан ключ к эффективному UID вызывающего процесса."
+
+#. type: Plain text
+#: man-pages/man3/key_setsecret.3:61
+msgid "These functions return 1 on success and 0 on failure."
+msgstr "При успешном выполнении эти функции возвращают 1 и 0 при ошибке."
+
+#. type: Plain text
+#: man-pages/man3/key_setsecret.3:66
+msgid ""
+"Note that we talk about two types of encryption here.  One is asymmetric "
+"using a public and secret key.  The other is symmetric, the 64-bit DES."
+msgstr ""
+"Заметим, что здесь речь идёт о двух типах шифрования. Первый \\(em "
+"асимметричный на основе использования открытого и закрытого ключа. Второй "
+"\\(em симметричный, на основе 64-битного DES."
+
+#. type: Plain text
+#: man-pages/man3/key_setsecret.3:68
+msgid "These routines were part of the Linux/Doors-project, abandoned by now."
+msgstr "Данные функции были частью ныне заброшенного проекта Linux/Doors."
+
+#. type: Plain text
+#: man-pages/man3/key_setsecret.3:69
+msgid "B<crypt>(3)"
+msgstr "B<crypt>(3)"
+

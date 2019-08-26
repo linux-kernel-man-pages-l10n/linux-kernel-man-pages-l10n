@@ -1,0 +1,1459 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: translation of man-pages\n"
+"POT-Creation-Date: 2017-10-19 18:57+0300\n"
+"PO-Revision-Date: 2019-04-02 15:56+0000\n"
+"Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
+"Language-Team: Ukrainian (http://www.transifex.com/kruvalig/man-pages/language/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#. type: TH
+#: man-pages/man7/x25.7:12
+#, no-wrap
+msgid "X25"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/x25.7:12
+#, no-wrap
+msgid "2017-09-15"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/x25.7:12
+#, no-wrap
+msgid "Linux"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/x25.7:12
+#, no-wrap
+msgid "Linux Programmer's Manual"
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/x25.7:13
+#, no-wrap
+msgid "NAME"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/x25.7:15
+msgid "x25 - ITU-T X.25 / ISO-8208 protocol interface."
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/x25.7:15
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/x25.7:17
+msgid "B<#include E<lt>sys/socket.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/x25.7:19
+msgid "B<#include E<lt>linux/x25.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/x25.7:21
+msgid "B<x25_socket = socket(AF_X25, SOCK_SEQPACKET, 0);>"
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/x25.7:21
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/x25.7:30
+msgid ""
+"X25 sockets provide an interface to the X.25 packet layer protocol.  This "
+"allows applications to communicate over a public X.25 data network as "
+"standardized by International Telecommunication Union's recommendation X.25 "
+"(X.25 DTE-DCE mode).  X25 sockets can also be used for communication without"
+" an intermediate X.25 network (X.25 DTE-DTE mode) as described in ISO-8208."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/x25.7:47
+msgid ""
+"Message boundaries are preserved \\(em a B<read>(2)  from a socket will "
+"retrieve the same chunk of data as output with the corresponding B<write>(2)"
+"  to the peer socket.  When necessary, the kernel takes care of segmenting "
+"and reassembling long messages by means of the X.25 M-bit.  There is no "
+"hard-coded upper limit for the message size.  However, reassembling of a "
+"long message might fail if there is a temporary lack of system resources or "
+"when other constraints (such as socket memory or buffer size limits) become "
+"effective.  If that occurs, the X.25 connection will be reset."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/x25.7:47
+#, no-wrap
+msgid "Socket addresses"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/x25.7:54
+msgid ""
+"The B<AF_X25> socket address family uses the I<struct sockaddr_x25> for "
+"representing network addresses as defined in ITU-T recommendation X.121."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/x25.7:61
+#, no-wrap
+msgid ""
+"struct sockaddr_x25 {\n"
+"    sa_family_t sx25_family;    /* must be AF_X25 */\n"
+"    x25_address sx25_addr;      /* X.121 Address */\n"
+"};\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/x25.7:72
+msgid ""
+"I<sx25_addr> contains a char array I<x25_addr[]> to be interpreted as a "
+"null-terminated string.  I<sx25_addr.x25_addr[]> consists of up to 15 (not "
+"counting the terminating null byte) ASCII characters forming the X.121 "
+"address.  Only the decimal digit characters from \\(aq0\\(aq to \\(aq9\\(aq "
+"are allowed."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/x25.7:72
+#, no-wrap
+msgid "Socket options"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/x25.7:81
+msgid ""
+"The following X.25-specific socket options can be set by using "
+"B<setsockopt>(2)  and read with B<getsockopt>(2)  with the I<level> argument"
+" set to B<SOL_X25>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/x25.7:81
+#, no-wrap
+msgid "B<X25_QBITINCL>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/x25.7:100
+msgid ""
+"Controls whether the X.25 Q-bit (Qualified Data Bit) is accessible by the "
+"user.  It expects an integer argument.  If set to 0 (default), the Q-bit is "
+"never set for outgoing packets and the Q-bit of incoming packets is ignored."
+"  If set to 1, an additional first byte is prepended to each message read "
+"from or written to the socket.  For data read from the socket, a 0 first "
+"byte indicates that the Q-bits of the corresponding incoming data packets "
+"were not set.  A first byte with value 1 indicates that the Q-bit of the "
+"corresponding incoming data packets was set.  If the first byte of the data "
+"written to the socket is 1, the Q-bit of the corresponding outgoing data "
+"packets will be set.  If the first byte is 0, the Q-bit will not be set."
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/x25.7:100
+#, no-wrap
+msgid "VERSIONS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/x25.7:102
+msgid "The AF_X25 protocol family is a new feature of Linux 2.2."
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/x25.7:102
+#, no-wrap
+msgid "BUGS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/x25.7:105
+msgid "Plenty, as the X.25 PLP implementation is B<CONFIG_EXPERIMENTAL>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/x25.7:107
+msgid "This man page is incomplete."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/x25.7:114
+msgid ""
+"There is no dedicated application programmer's header file yet; you need to "
+"include the kernel header file I<E<lt>linux/x25.hE<gt>>.  "
+"B<CONFIG_EXPERIMENTAL> might also imply that future versions of the "
+"interface are not binary compatible."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/x25.7:118
+msgid ""
+"X.25 N-Reset events are not propagated to the user process yet.  Thus, if a "
+"reset occurred, data might be lost without notice."
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/x25.7:118
+#, no-wrap
+msgid "SEE ALSO"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/x25.7:121
+msgid "B<socket>(2), B<socket>(7)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/x25.7:126
+msgid ""
+"Jonathan Simon Naylor: \\(lqThe Re-Analysis and Re-Implementation of "
+"X.25.\\(rq The URL is E<.UR "
+"ftp://ftp.pspt.fi\\:/pub\\:/ham\\:/linux\\:/ax25\\:/x25doc.tgz> E<.UE .>"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/xattr.7:28
+#, no-wrap
+msgid "XATTR"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/xattr.7:28
+#, no-wrap
+msgid "2018-04-30"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:31
+msgid "xattr - Extended attributes"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:37
+msgid ""
+"Extended attributes are name:value pairs associated permanently with files "
+"and directories, similar to the environment strings associated with a "
+"process.  An attribute may be defined or undefined.  If it is defined, its "
+"value may be empty or non-empty."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:45
+msgid ""
+"Extended attributes are extensions to the normal attributes which are "
+"associated with all inodes in the system (i.e., the B<stat>(2)  data).  They"
+" are often used to provide additional functionality to a filesystem\\(emfor "
+"example, additional security features such as Access Control Lists (ACLs) "
+"may be implemented using extended attributes."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:49
+msgid ""
+"Users with search access to a file or directory may use B<listxattr>(2)  to "
+"retrieve a list of attribute names defined for that file or directory."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:57
+msgid ""
+"Extended attributes are accessed as atomic objects.  Reading "
+"(B<getxattr>(2))  retrieves the whole value of an attribute and stores it in"
+" a buffer.  Writing (B<setxattr>(2))  replaces any previous value with the "
+"new value."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:60
+msgid ""
+"Space consumed for extended attributes may be counted towards the disk "
+"quotas of the file owner and file group."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/xattr.7:60
+#, no-wrap
+msgid "Extended attribute namespaces"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:70
+msgid ""
+"Attribute names are null-terminated strings.  The attribute name is always "
+"specified in the fully qualified I<namespace.attribute> form, for example, "
+"I<user.mime_type>, I<trusted.md5sum>, I<system.posix_acl_access>, or "
+"I<security.selinux>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:77
+msgid ""
+"The namespace mechanism is used to define different classes of extended "
+"attributes.  These different classes exist for several reasons; for example,"
+" the permissions and capabilities required for manipulating extended "
+"attributes of one namespace may differ to another."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:86
+msgid ""
+"Currently, the I<security>, I<system>, I<trusted>, and I<user> extended "
+"attribute classes are defined as described below.  Additional classes may be"
+" added in the future."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/xattr.7:86
+#, no-wrap
+msgid "Extended security attributes"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:97
+msgid ""
+"The security attribute namespace is used by kernel security modules, such as"
+" Security Enhanced Linux, and also to implement file capabilities (see "
+"B<capabilities>(7)).  Read and write access permissions to security "
+"attributes depend on the policy implemented for each security attribute by "
+"the security module.  When no security module is loaded, all processes have "
+"read access to extended security attributes, and write access is limited to "
+"processes that have the B<CAP_SYS_ADMIN> capability."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/xattr.7:97
+#, no-wrap
+msgid "Extended system attributes"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:103
+msgid ""
+"Extended system attributes are used by the kernel to store system objects "
+"such as Access Control Lists.  Read and write access permissions to system "
+"attributes depend on the policy implemented for each system attribute "
+"implemented by filesystems in the kernel."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/xattr.7:103
+#, no-wrap
+msgid "Trusted extended attributes"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:111
+msgid ""
+"Trusted extended attributes are visible and accessible only to processes "
+"that have the B<CAP_SYS_ADMIN> capability.  Attributes in this class are "
+"used to implement mechanisms in user space (i.e., outside the kernel) which "
+"keep information in extended attributes to which ordinary processes should "
+"not have access."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/xattr.7:111
+#, no-wrap
+msgid "Extended user attributes"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:119
+msgid ""
+"Extended user attributes may be assigned to files and directories for "
+"storing arbitrary additional information such as the mime type, character "
+"set or encoding of a file.  The access permissions for user attributes are "
+"defined by the file permission bits: read permission is required to retrieve"
+" the attribute value, and writer permission is required to change it."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:130
+msgid ""
+"The file permission bits of regular files and directories are interpreted "
+"differently from the file permission bits of special files and symbolic "
+"links.  For regular files and directories the file permission bits define "
+"access to the file's contents, while for device special files they define "
+"access to the device described by the special file.  The file permissions of"
+" symbolic links are not used in access checks.  These differences would "
+"allow users to consume filesystem resources in a way not controllable by "
+"disk quotas for group or world writable special files and directories."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:138
+msgid ""
+"For this reason, extended user attributes are allowed only for regular files"
+" and directories, and access to extended user attributes is restricted to "
+"the owner and to users with appropriate capabilities for directories with "
+"the sticky bit set (see the B<chmod>(1)  manual page for an explanation of "
+"the sticky bit)."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/xattr.7:138
+#, no-wrap
+msgid "Filesystem differences"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:147
+msgid ""
+"The kernel and the filesystem may place limits on the maximum number and "
+"size of extended attributes that can be associated with a file.  The VFS "
+"imposes limitations that an attribute names is limited to 255 bytes and an "
+"attribute value is limited to 64\\ kB.  The list of attribute names that can"
+" be returned is also limited to 64\\ kB (see BUGS in B<listxattr>(2))."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:152
+msgid ""
+"Some filesystems, such as Reiserfs (and, historically, ext2 and ext3), "
+"require the filesystem to be mounted with the B<user_xattr> mount option in "
+"order for extended user attributes to be used."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:158
+msgid ""
+"In the current ext2, ext3, and ext4 filesystem implementations, the total "
+"bytes used by the names and values of all of a file's extended attributes "
+"must fit in a single filesystem block (1024, 2048 or 4096 bytes, depending "
+"on the block size specified when the filesystem was created)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:163
+msgid ""
+"In the Btrfs, XFS, and Reiserfs filesystem implementations, there is no "
+"practical limit on the number of extended attributes associated with a file,"
+" and the algorithms used to store extended attribute information on disk are"
+" scalable."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:166
+msgid ""
+"In the JFS, XFS, and Reiserfs filesystem implementations, the limit on bytes"
+" used in an EA value is the ceiling imposed by the VFS."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:172
+msgid ""
+"In the Btrfs filesystem implementation, the total bytes used for the name, "
+"value, and implementation overhead bytes is limited to the filesystem "
+"I<nodesize> value (16\\ kB by default)."
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/xattr.7:172
+#, no-wrap
+msgid "CONFORMING TO"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:175
+msgid ""
+"Extended attributes are not specified in POSIX.1, but some other systems "
+"(e.g., the BSDs and Solaris) provide a similar feature."
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/xattr.7:175
+#, no-wrap
+msgid "NOTES"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:180
+msgid ""
+"Since the filesystems on which extended attributes are stored might also be "
+"used on architectures with a different byte order and machine word size, "
+"care should be taken to store attribute values in an architecture-"
+"independent format."
+msgstr ""
+
+#.  .SH AUTHORS
+#.  Andreas Gruenbacher,
+#.  .RI < a.gruenbacher@bestbits.at >
+#.  and the SGI XFS development team,
+#.  .RI < linux-xfs@oss.sgi.com >.
+#. type: Plain text
+#: man-pages/man7/xattr.7:188
+msgid "This page was formerly named B<attr>(5)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/xattr.7:198
+msgid ""
+"B<getfattr>(1), B<setfattr>(1), B<getxattr>(2), B<ioctl_iflags>(2), "
+"B<listxattr>(2), B<removexattr>(2), B<setxattr>(2), B<acl>(5), "
+"B<capabilities>(7)  B<selinux>(8)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/xdr.3:11
+#, no-wrap
+msgid "XDR"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:14
+msgid "xdr - library routines for external data representation"
+msgstr ""
+
+#. type: SH
+#: man-pages/man3/xdr.3:14
+#, no-wrap
+msgid "SYNOPSIS AND DESCRIPTION"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:20
+msgid ""
+"These routines allow C programmers to describe arbitrary data structures in "
+"a machine-independent fashion.  Data for remote procedure calls are "
+"transmitted using these routines."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:24
+msgid ""
+"The prototypes below are declared in I<E<lt>rpc/xdr.hE<gt>> and make use of "
+"the following types:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:28
+#, no-wrap
+msgid "B<typedef int >I<bool_t>B<;>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:30
+#, no-wrap
+msgid "B<typedef bool_t (*>I<xdrproc_t>B<) (XDR *, void *,...);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:37
+msgid "For the declaration of the I<XDR> type, see I<E<lt>rpc/xdr.hE<gt>>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:42
+#, no-wrap
+msgid ""
+"B<bool_t xdr_array(XDR *>I<xdrs>B<, char **>I<arrp>B<, unsigned int *>I<sizep>B<,>\n"
+"B<                 unsigned int >I<maxsize>B<, unsigned int >I<elsize>B<,>\n"
+"B<                 xdrproc_t >I<elproc>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:63
+msgid ""
+"A filter primitive that translates between variable-length arrays and their "
+"corresponding external representations.  The argument I<arrp> is the address"
+" of the pointer to the array, while I<sizep> is the address of the element "
+"count of the array; this element count cannot exceed I<maxsize>.  The "
+"argument I<elsize> is the I<sizeof> each of the array's elements, and "
+"I<elproc> is an XDR filter that translates between the array elements' C "
+"form, and their external representation.  This routine returns one if it "
+"succeeds, zero otherwise."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:66
+#, no-wrap
+msgid "B<bool_t xdr_bool(XDR *>I<xdrs>B<, bool_t *>I<bp>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:74
+msgid ""
+"A filter primitive that translates between booleans (C integers)  and their "
+"external representations.  When encoding data, this filter produces values "
+"of either one or zero.  This routine returns one if it succeeds, zero "
+"otherwise."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:78
+#, no-wrap
+msgid ""
+"B<bool_t xdr_bytes(XDR *>I<xdrs>B<, char **>I<sp>B<, unsigned int *>I<sizep>B<,>\n"
+"B<                 unsigned int >I<maxsize>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:91
+msgid ""
+"A filter primitive that translates between counted byte strings and their "
+"external representations.  The argument I<sp> is the address of the string "
+"pointer.  The length of the string is located at address I<sizep>; strings "
+"cannot be longer than I<maxsize>.  This routine returns one if it succeeds, "
+"zero otherwise."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:94
+#, no-wrap
+msgid "B<bool_t xdr_char(XDR *>I<xdrs>B<, char *>I<cp>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:106
+msgid ""
+"A filter primitive that translates between C characters and their external "
+"representations.  This routine returns one if it succeeds, zero otherwise.  "
+"Note: encoded characters are not packed, and occupy 4 bytes each.  For "
+"arrays of characters, it is worthwhile to consider B<xdr_bytes>(), "
+"B<xdr_opaque>()  or B<xdr_string>()."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:109
+#, no-wrap
+msgid "B<void xdr_destroy(XDR *>I<xdrs>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:120
+msgid ""
+"A macro that invokes the destroy routine associated with the XDR stream, "
+"I<xdrs>.  Destruction usually involves freeing private data structures "
+"associated with the stream.  Using I<xdrs> after invoking B<xdr_destroy>()  "
+"is undefined."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:123
+#, no-wrap
+msgid "B<bool_t xdr_double(XDR *>I<xdrs>B<, double *>I<dp>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:129
+msgid ""
+"A filter primitive that translates between C I<double> precision numbers and"
+" their external representations.  This routine returns one if it succeeds, "
+"zero otherwise."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:132
+#, no-wrap
+msgid "B<bool_t xdr_enum(XDR *>I<xdrs>B<, enum_t *>I<ep>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:138
+msgid ""
+"A filter primitive that translates between C I<enum>s (actually integers) "
+"and their external representations.  This routine returns one if it "
+"succeeds, zero otherwise."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:141
+#, no-wrap
+msgid "B<bool_t xdr_float(XDR *>I<xdrs>B<, float *>I<fp>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:147
+msgid ""
+"A filter primitive that translates between C I<float>s and their external "
+"representations.  This routine returns one if it succeeds, zero otherwise."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:150
+#, no-wrap
+msgid "B<void xdr_free(xdrproc_t >I<proc>B<, char *>I<objp>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:160
+msgid ""
+"Generic freeing routine.  The first argument is the XDR routine for the "
+"object being freed.  The second argument is a pointer to the object itself."
+"  Note: the pointer passed to this routine is I<not> freed, but what it "
+"points to I<is> freed (recursively)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:163
+#, no-wrap
+msgid "B<unsigned int xdr_getpos(XDR *>I<xdrs>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:173
+msgid ""
+"A macro that invokes the get-position routine associated with the XDR "
+"stream, I<xdrs>.  The routine returns an unsigned integer, which indicates "
+"the position of the XDR byte stream.  A desirable feature of XDR streams is "
+"that simple arithmetic works with this number, although the XDR stream "
+"instances need not guarantee this."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:176
+#, no-wrap
+msgid "B<long *xdr_inline(XDR *>I<xdrs>B<, int >I<len>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:186
+msgid ""
+"A macro that invokes the inline routine associated with the XDR stream, "
+"I<xdrs>.  The routine returns a pointer to a contiguous piece of the "
+"stream's buffer; I<len> is the byte length of the desired buffer.  Note: "
+"pointer is cast to I<long\\ *>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:193
+msgid ""
+"Warning: B<xdr_inline>()  may return NULL (0)  if it cannot allocate a "
+"contiguous piece of a buffer.  Therefore the behavior may vary among stream "
+"instances; it exists for the sake of efficiency."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:196
+#, no-wrap
+msgid "B<bool_t xdr_int(XDR *>I<xdrs>B<, int *>I<ip>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:201
+msgid ""
+"A filter primitive that translates between C integers and their external "
+"representations.  This routine returns one if it succeeds, zero otherwise."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:204
+#, no-wrap
+msgid "B<bool_t xdr_long(XDR *>I<xdrs>B<, long *>I<lp>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:210
+msgid ""
+"A filter primitive that translates between C I<long> integers and their "
+"external representations.  This routine returns one if it succeeds, zero "
+"otherwise."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:214
+#, no-wrap
+msgid ""
+"B<void xdrmem_create(XDR *>I<xdrs>B<, char *>I<addr>B<, unsigned int >I<size>B<,>\n"
+"B<                   enum xdr_op >I<op>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:231
+msgid ""
+"This routine initializes the XDR stream object pointed to by I<xdrs>.  The "
+"stream's data is written to, or read from, a chunk of memory at location "
+"I<addr> whose length is no more than I<size> bytes long.  The I<op> "
+"determines the direction of the XDR stream (either B<XDR_ENCODE>, "
+"B<XDR_DECODE>, or B<XDR_FREE>)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:234
+#, no-wrap
+msgid ""
+"B<bool_t xdr_opaque(XDR *>I<xdrs>B<, char *>I<cp>B<, unsigned int "
+">I<cnt>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:244
+msgid ""
+"A filter primitive that translates between fixed size opaque data and its "
+"external representation.  The argument I<cp> is the address of the opaque "
+"object, and I<cnt> is its size in bytes.  This routine returns one if it "
+"succeeds, zero otherwise."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:248
+#, no-wrap
+msgid ""
+"B<bool_t xdr_pointer(XDR *>I<xdrs>B<, char **>I<objpp>B<,>\n"
+"B<                   unsigned int >I<objsize>B<, xdrproc_t >I<xdrobj>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:260
+msgid ""
+"Like B<xdr_reference>()  except that it serializes null pointers, whereas "
+"B<xdr_reference>()  does not.  Thus, B<xdr_pointer>()  can represent "
+"recursive data structures, such as binary trees or linked lists."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:266
+#, no-wrap
+msgid ""
+"B<void xdrrec_create(XDR *>I<xdrs>B<, unsigned int >I<sendsize>B<,>\n"
+"B<                   unsigned int >I<recvsize>B<, char *>I<handle>B<,>\n"
+"B<                   int (*>I<readit>B<) (char *, char *, int),>\n"
+"B<                   int (*>I<writeit>B<) (char *, char *, int));>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:293
+msgid ""
+"This routine initializes the XDR stream object pointed to by I<xdrs>.  The "
+"stream's data is written to a buffer of size I<sendsize>; a value of zero "
+"indicates the system should use a suitable default.  The stream's data is "
+"read from a buffer of size I<recvsize>; it too can be set to a suitable "
+"default by passing a zero value.  When a stream's output buffer is full, "
+"I<writeit> is called.  Similarly, when a stream's input buffer is empty, "
+"I<readit> is called.  The behavior of these two routines is similar to the "
+"system calls B<read>(2)  and B<write>(2), except that I<handle> is passed to"
+" the former routines as the first argument.  Note: the XDR stream's I<op> "
+"field must be set by the caller."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:303
+msgid ""
+"Warning: to read from an XDR stream created by this API, you'll need to call"
+" B<xdrrec_skiprecord>()  first before calling any other XDR APIs.  This "
+"inserts additional bytes in the stream to provide record boundary "
+"information.  Also, XDR streams created with different B<xdr*_create> APIs "
+"are not compatible for the same reason."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:306
+#, no-wrap
+msgid "B<bool_t xdrrec_endofrecord(XDR *>I<xdrs>B<, int >I<sendnow>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:315
+msgid ""
+"This routine can be invoked only on streams created by B<xdrrec_create>().  "
+"The data in the output buffer is marked as a completed record, and the "
+"output buffer is optionally written out if I<sendnow> is nonzero.  This "
+"routine returns one if it succeeds, zero otherwise."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:318
+#, no-wrap
+msgid "B<bool_t xdrrec_eof(XDR *>I<xdrs>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:325
+msgid ""
+"This routine can be invoked only on streams created by B<xdrrec_create>().  "
+"After consuming the rest of the current record in the stream, this routine "
+"returns one if the stream has no more input, zero otherwise."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:328
+#, no-wrap
+msgid "B<bool_t xdrrec_skiprecord(XDR *>I<xdrs>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:336
+msgid ""
+"This routine can be invoked only on streams created by B<xdrrec_create>().  "
+"It tells the XDR implementation that the rest of the current record in the "
+"stream's input buffer should be discarded.  This routine returns one if it "
+"succeeds, zero otherwise."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:340
+#, no-wrap
+msgid ""
+"B<bool_t xdr_reference(XDR *>I<xdrs>B<, char **>I<pp>B<, unsigned int >I<size>B<,>\n"
+"B<                     xdrproc_t >I<proc>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:356
+msgid ""
+"A primitive that provides pointer chasing within structures.  The argument "
+"I<pp> is the address of the pointer; I<size> is the I<sizeof> the structure "
+"that I<*pp> points to; and I<proc> is an XDR procedure that filters the "
+"structure between its C form and its external representation.  This routine "
+"returns one if it succeeds, zero otherwise."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:361
+msgid ""
+"Warning: this routine does not understand null pointers.  Use "
+"B<xdr_pointer>()  instead."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:364
+#, no-wrap
+msgid "B<xdr_setpos(XDR *>I<xdrs>B<, unsigned int >I<pos>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:375
+msgid ""
+"A macro that invokes the set position routine associated with the XDR stream"
+" I<xdrs>.  The argument I<pos> is a position value obtained from "
+"B<xdr_getpos>().  This routine returns one if the XDR stream could be "
+"repositioned, and zero otherwise."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:379
+msgid ""
+"Warning: it is difficult to reposition some types of XDR streams, so this "
+"routine may fail with one type of stream and succeed with another."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:382
+#, no-wrap
+msgid "B<bool_t xdr_short(XDR *>I<xdrs>B<, short *>I<sp>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:388
+msgid ""
+"A filter primitive that translates between C I<short> integers and their "
+"external representations.  This routine returns one if it succeeds, zero "
+"otherwise."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:391
+#, no-wrap
+msgid ""
+"B<void xdrstdio_create(XDR *>I<xdrs>B<, FILE *>I<file>B<, enum xdr_op "
+">I<op>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:406
+msgid ""
+"This routine initializes the XDR stream object pointed to by I<xdrs>.  The "
+"XDR stream data is written to, or read from, the I<stdio> stream I<file>.  "
+"The argument I<op> determines the direction of the XDR stream (either "
+"B<XDR_ENCODE>, B<XDR_DECODE>, or B<XDR_FREE>)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:413
+msgid ""
+"Warning: the destroy routine associated with such XDR streams calls "
+"B<fflush>(3)  on the I<file> stream, but never B<fclose>(3)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:416
+#, no-wrap
+msgid ""
+"B<bool_t xdr_string(XDR *>I<xdrs>B<, char **>I<sp>B<, unsigned int "
+">I<maxsize>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:426
+msgid ""
+"A filter primitive that translates between C strings and their corresponding"
+" external representations.  Strings cannot be longer than I<maxsize>.  Note:"
+" I<sp> is the address of the string's pointer.  This routine returns one if "
+"it succeeds, zero otherwise."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:429
+#, no-wrap
+msgid "B<bool_t xdr_u_char(XDR *>I<xdrs>B<, unsigned char *>I<ucp>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:435
+msgid ""
+"A filter primitive that translates between I<unsigned> C characters and "
+"their external representations.  This routine returns one if it succeeds, "
+"zero otherwise."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:438
+#, no-wrap
+msgid "B<bool_t xdr_u_int(XDR *>I<xdrs>B<, unsigned *>I<up>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:444
+msgid ""
+"A filter primitive that translates between C I<unsigned> integers and their "
+"external representations.  This routine returns one if it succeeds, zero "
+"otherwise."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:447
+#, no-wrap
+msgid "B<bool_t xdr_u_long(XDR *>I<xdrs>B<, unsigned long *>I<ulp>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:453
+msgid ""
+"A filter primitive that translates between C I<unsigned long> integers and "
+"their external representations.  This routine returns one if it succeeds, "
+"zero otherwise."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:456
+#, no-wrap
+msgid "B<bool_t xdr_u_short(XDR *>I<xdrs>B<, unsigned short *>I<usp>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:462
+msgid ""
+"A filter primitive that translates between C I<unsigned short> integers and "
+"their external representations.  This routine returns one if it succeeds, "
+"zero otherwise."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:467
+#, no-wrap
+msgid ""
+"B<bool_t xdr_union(XDR *>I<xdrs>B<, int *>I<dscmp>B<, char *>I<unp>B<,>\n"
+"B<                 struct xdr_discrim *>I<choices>B<,>\n"
+"B<                 xdrproc_t >I<defaultarm>B<);     /* may equal NULL */>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:501
+msgid ""
+"A filter primitive that translates between a discriminated C I<union> and "
+"its corresponding external representation.  It first translates the "
+"discriminant of the union located at I<dscmp>.  This discriminant is always "
+"an I<enum_t>.  Next the union located at I<unp> is translated.  The argument"
+" I<choices> is a pointer to an array of B<xdr_discrim>()  structures.  Each "
+"structure contains an ordered pair of [I<value>,I<proc>].  If the union's "
+"discriminant is equal to the associated I<value>, then the I<proc> is called"
+" to translate the union.  The end of the B<xdr_discrim>()  structure array "
+"is denoted by a routine of value NULL.  If the discriminant is not found in "
+"the I<choices> array, then the I<defaultarm> procedure is called (if it is "
+"not NULL).  Returns one if it succeeds, zero otherwise."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:505
+#, no-wrap
+msgid ""
+"B<bool_t xdr_vector(XDR *>I<xdrs>B<, char *>I<arrp>B<, unsigned int >I<size>B<,>\n"
+"B<                  unsigned int >I<elsize>B<, xdrproc_t >I<elproc>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:524
+msgid ""
+"A filter primitive that translates between fixed-length arrays and their "
+"corresponding external representations.  The argument I<arrp> is the address"
+" of the pointer to the array, while I<size> is the element count of the "
+"array.  The argument I<elsize> is the I<sizeof> each of the array's "
+"elements, and I<elproc> is an XDR filter that translates between the array "
+"elements' C form, and their external representation.  This routine returns "
+"one if it succeeds, zero otherwise."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:527
+#, no-wrap
+msgid "B<bool_t xdr_void(void);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:532
+msgid ""
+"This routine always returns one.  It may be passed to RPC routines that "
+"require a function argument, where nothing is to be done."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:535
+#, no-wrap
+msgid "B<bool_t xdr_wrapstring(XDR *>I<xdrs>B<, char **>I<sp>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:548
+msgid ""
+"A primitive that calls B<xdr_string(xdrs, sp,MAXUN.UNSIGNED );> where "
+"B<MAXUN.UNSIGNED> is the maximum value of an unsigned integer.  "
+"B<xdr_wrapstring>()  is handy because the RPC package passes a maximum of "
+"two XDR routines as arguments, and B<xdr_string>(), one of the most "
+"frequently used primitives, requires three.  Returns one if it succeeds, "
+"zero otherwise."
+msgstr ""
+
+#. type: SH
+#: man-pages/man3/xdr.3:548
+#, no-wrap
+msgid "ATTRIBUTES"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:551
+msgid ""
+"For an explanation of the terms used in this section, see B<attributes>(7)."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:555
+#, no-wrap
+msgid "Interface"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:555
+#, no-wrap
+msgid "Attribute"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:555
+#, no-wrap
+msgid "Value"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:559
+#, no-wrap
+msgid ""
+"B<xdr_array>(),\n"
+"B<xdr_bool>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:559 man-pages/man3/xdr.3:562 man-pages/man3/xdr.3:565
+#: man-pages/man3/xdr.3:568 man-pages/man3/xdr.3:571 man-pages/man3/xdr.3:574
+#: man-pages/man3/xdr.3:577 man-pages/man3/xdr.3:580 man-pages/man3/xdr.3:583
+#: man-pages/man3/xdr.3:585 man-pages/man3/xdr.3:587 man-pages/man3/xdr.3:590
+#: man-pages/man3/xdr.3:593 man-pages/man3/xdr.3:596 man-pages/man3/xdr.3:599
+#: man-pages/man3/xdr.3:602 man-pages/man3/xdr.3:605
+#, no-wrap
+msgid ".br\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:562
+#, no-wrap
+msgid ""
+"B<xdr_bytes>(),\n"
+"B<xdr_char>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:565
+#, no-wrap
+msgid ""
+"B<xdr_destroy>(),\n"
+"B<xdr_double>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:568
+#, no-wrap
+msgid ""
+"B<xdr_enum>(),\n"
+"B<xdr_float>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:571
+#, no-wrap
+msgid ""
+"B<xdr_free>(),\n"
+"B<xdr_getpos>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:574
+#, no-wrap
+msgid ""
+"B<xdr_inline>(),\n"
+"B<xdr_int>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:577
+#, no-wrap
+msgid ""
+"B<xdr_long>(),\n"
+"B<xdrmem_create>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:580
+#, no-wrap
+msgid ""
+"B<xdr_opaque>(),\n"
+"B<xdr_pointer>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:583
+#, no-wrap
+msgid ""
+"B<xdrrec_create>(),\n"
+"B<xdrrec_eof>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:585
+#, no-wrap
+msgid "B<xdrrec_endofrecord>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:587
+#, no-wrap
+msgid "B<xdrrec_skiprecord>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:590
+#, no-wrap
+msgid ""
+"B<xdr_reference>(),\n"
+"B<xdr_setpos>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:593
+#, no-wrap
+msgid ""
+"B<xdr_short>(),\n"
+"B<xdrstdio_create>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:596
+#, no-wrap
+msgid ""
+"B<xdr_string>(),\n"
+"B<xdr_u_char>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:599
+#, no-wrap
+msgid ""
+"B<xdr_u_int>(),\n"
+"B<xdr_u_long>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:602
+#, no-wrap
+msgid ""
+"B<xdr_u_short>(),\n"
+"B<xdr_union>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:605
+#, no-wrap
+msgid ""
+"B<xdr_vector>(),\n"
+"B<xdr_void>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:607
+#, no-wrap
+msgid "B<xdr_wrapstring>()"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:607
+#, no-wrap
+msgid "Thread safety"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xdr.3:607
+#, no-wrap
+msgid "MT-Safe"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:612
+msgid "B<rpc>(3)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:614
+msgid "The following manuals:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:616
+msgid "eXternal Data Representation Standard: Protocol Specification"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:618
+msgid "eXternal Data Representation: Sun Technical Notes"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xdr.3:622
+msgid ""
+"I<XDR: External Data Representation Standard>, RFC\\ 1014, Sun Microsystems,"
+" Inc., USC-ISI."
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/xcrypt.3:13
+#, no-wrap
+msgid "XCRYPT"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/xcrypt.3:13
+#, no-wrap
+msgid "2019-03-06"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xcrypt.3:16
+msgid "xencrypt, xdecrypt, passwd2des - RFS password encryption"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xcrypt.3:18
+msgid "B<#include E<lt>rpc/des_crypt.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xcrypt.3:20
+msgid "B<void passwd2des(char >I<*passwd>B<, char *>I<key>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xcrypt.3:22
+msgid "B<int xencrypt(char *>I<secret>B<, char *>I<passwd>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xcrypt.3:24
+msgid "B<int xdecrypt(char *>I<secret>B<, char *>I<passwd>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xcrypt.3:28
+msgid ""
+"B<WARNING>: Do not use these functions in new code. They do not achieve any "
+"type of acceptable cryptographic security guarantees."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xcrypt.3:44
+msgid ""
+"The function B<passwd2des>()  takes a character string I<passwd> of "
+"arbitrary length and fills a character array I<key> of length 8.  The array "
+"I<key> is suitable for use as DES key.  It has odd parity set in bit 0 of "
+"each byte.  Both other functions described here use this function to turn "
+"their argument I<passwd> into a DES key."
+msgstr ""
+
+#.  (over the alphabet 0123456789abcdefABCDEF),
+#.  (over the alphabet 0123456789abcdef)
+#. type: Plain text
+#: man-pages/man3/xcrypt.3:61
+msgid ""
+"The B<xencrypt>()  function takes the ASCII character string I<secret> given"
+" in hex, which must have a length that is a multiple of 16, encrypts it "
+"using the DES key derived from I<passwd> by B<passwd2des>(), and outputs the"
+" result again in I<secret> as a hex string of the same length."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xcrypt.3:65
+msgid "The B<xdecrypt>()  function performs the converse operation."
+msgstr ""
+
+#. type: SH
+#: man-pages/man3/xcrypt.3:65
+#, no-wrap
+msgid "RETURN VALUE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xcrypt.3:71
+msgid ""
+"The functions B<xencrypt>()  and B<xdecrypt>()  return 1 on success and 0 on"
+" error."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xcrypt.3:73
+msgid "These functions are available in glibc since version 2.1."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/xcrypt.3:85
+#, no-wrap
+msgid ""
+"B<passwd2des>(),\n"
+"B<xencrypt>(),\n"
+"B<xdecrypt>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xcrypt.3:90
+msgid "The prototypes are missing from the abovementioned include file."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/xcrypt.3:91
+msgid "B<cbc_crypt>(3)"
+msgstr ""

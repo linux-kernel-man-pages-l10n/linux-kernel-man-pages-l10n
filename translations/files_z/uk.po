@@ -1,0 +1,1342 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: translation of man-pages\n"
+"POT-Creation-Date: 2017-03-04 13:12+0300\n"
+"PO-Revision-Date: 2019-08-11 05:21+0000\n"
+"Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
+"Language-Team: Ukrainian (http://www.transifex.com/kruvalig/man-pages/language/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#. type: TH
+#: man-pages/man8/zic.8:5
+#, no-wrap
+msgid "ZIC"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/zic.8:5
+#, no-wrap
+msgid "2019-03-06"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/zic.8:5
+#, no-wrap
+msgid "Linux System Administration"
+msgstr ""
+
+#. type: SH
+#: man-pages/man8/zic.8:6
+#, no-wrap
+msgid "NAME"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:8
+msgid "zic - timezone compiler"
+msgstr ""
+
+#. type: SH
+#: man-pages/man8/zic.8:8
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:15
+msgid "B<zic> [ I<option> \\&... ] [ I<filename> \\&... ]"
+msgstr ""
+
+#. type: SH
+#: man-pages/man8/zic.8:15
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:34
+msgid ""
+"The B<zic> program reads text from the file(s) named on the command line and"
+" creates the time conversion information files specified in this input.  If "
+"a I<filename> is"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:36
+msgid "standard input is read."
+msgstr ""
+
+#. type: SH
+#: man-pages/man8/zic.8:36
+#, no-wrap
+msgid "OPTIONS"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:37
+#, no-wrap
+msgid "B<--version>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:40
+msgid "Output version information and exit."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:40
+#, no-wrap
+msgid "B<--help>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:43
+msgid "Output short usage message and exit."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:43
+#, no-wrap
+msgid "B<-d >I<directory>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:47
+msgid ""
+"Create time conversion information files in the named directory rather than "
+"in the standard directory named below."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:47
+#, no-wrap
+msgid "B<-l >I<timezone>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:54
+msgid ""
+"Use I<timezone> as local time.  B<zic> will act as if the input contained a "
+"link line of the form"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:57
+msgid "Link\tI<timezone>\t\tlocaltime"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:57
+#, no-wrap
+msgid "B<-p >I<timezone>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:65
+msgid ""
+"Use I<timezone>'s rules when handling POSIX-format timezone environment "
+"variables.  B<zic> will act as if the input contained a link line of the "
+"form"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:68
+msgid "Link\tI<timezone>\t\tposixrules"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:68
+#, no-wrap
+msgid "B<-L >I<leapsecondfilename>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:73
+msgid ""
+"Read leap second information from the file with the given name.  If this "
+"option is not used, no leap second information appears in output files."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:73
+#, no-wrap
+msgid "B<-v>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:76
+msgid "Be more verbose, and complain about the following situations:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:79
+msgid "The input specifies a link to a link."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:84
+msgid ""
+"A year that appears in a data file is outside the range of years "
+"representable by B<time>(2)  values."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:89
+msgid ""
+"A time of 24:00 or more appears in the input.  Pre-1998 versions of B<zic> "
+"prohibit 24:00, and pre-2007 versions prohibit times greater than 24:00."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:94
+msgid ""
+"A rule goes past the start or end of the month.  Pre-2004 versions of B<zic>"
+" prohibit this."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:101
+msgid ""
+"The output file does not contain all the information about the long-term "
+"future of a timezone, because the future cannot be summarized as an extended"
+" POSIX TZ string.  For example, as of 2013 this problem occurs for Iran's "
+"daylight-saving rules for the predicted future, as these rules are based on "
+"the Iranian calendar, which cannot be represented."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:107
+msgid ""
+"The output contains data that may not be handled properly by client code "
+"designed for older B<zic> output formats.  These compatibility issues affect"
+" only timestamps before 1970 or after the start of 2038."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:110
+msgid ""
+"A time zone abbreviation has fewer than 3 characters.  POSIX requires at "
+"least 3."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:112
+msgid "An output file name contains a byte that is not an ASCII letter,"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:115 man-pages/man8/zic.8:323 man-pages/man8/zic.8:327
+#: man-pages/man8/zic.8:355
+msgid "or"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:118
+msgid ""
+"or it contains a file name component that contains more than 14 bytes or "
+"that starts with"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:120
+#, no-wrap
+msgid "B<-s>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:125
+msgid ""
+"Limit time values stored in output files to values that are the same whether"
+" they're taken to be signed or unsigned.  You can use this option to "
+"generate SVVS-compatible files."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:139
+msgid ""
+"Input files should be text files, that is, they should be a series of zero "
+"or more lines, each ending in a newline byte and containing at most 511 "
+"bytes, and without any NUL bytes.  The input text's encoding is typically "
+"UTF-8 or ASCII; it should have a unibyte representation for the POSIX "
+"Portable Character Set (PPCS)  "
+"\\E<lt>http://pubs\\:.opengroup\\:.org/\\:onlinepubs/\\:9699919799/\\:basedefs/\\:V1_chap06\\:.html\\E<gt>"
+" and the encoding's non-unibyte characters should consist entirely of non-"
+"PPCS bytes.  Non-PPCS characters typically occur only in comments: although "
+"output file names and time zone abbreviations can contain nearly any "
+"character, other software will work better if these are limited to the "
+"restricted syntax described under the B<-v> option."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:152
+msgid ""
+"Input lines are made up of fields.  Fields are separated from one another by"
+" one or more white space characters.  The white space characters are space, "
+"form feed, carriage return, newline, tab, and vertical tab.  Leading and "
+"trailing white space on input lines is ignored.  An unquoted sharp character"
+" (#) in the input introduces a comment which extends to the end of the line "
+"the sharp character appears on.  White space characters and sharp characters"
+" may be enclosed in double quotes (\") if they're to be used as part of a "
+"field.  Any line that is blank (after comment stripping) is ignored.  "
+"Nonblank lines are expected to be of one of three types: rule lines, zone "
+"lines, and link lines."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:163
+msgid ""
+"Names must be in English and are case insensitive.  They appear in several "
+"contexts, and include month and weekday names and keywords such as "
+"B<maximum>, B<only>, B<Rolling>, and B<Zone>.  A name can be abbreviated by "
+"omitting all but an initial prefix; any abbreviation must be unambiguous in "
+"context."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:165
+msgid "A rule line has the form"
+msgstr ""
+
+#. type: ta
+#: man-pages/man8/zic.8:167
+#, no-wrap
+msgid ""
+"\\w'Rule\\0\\0'u +\\w'NAME\\0\\0'u +\\w'FROM\\0\\0'u +\\w'1973\\0\\0'u "
+"+\\w'TYPE\\0\\0'u +\\w'Apr\\0\\0'u +\\w'lastSun\\0\\0'u +\\w'2:00w\\0\\0'u "
+"+\\w'1:00d\\0\\0'u"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:170
+#, no-wrap
+msgid "Rule\tNAME\tFROM\tTO\tTYPE\tIN\tON\tAT\tSAVE\tLETTER/S\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:172 man-pages/man8/zic.8:341 man-pages/man8/zic.8:446
+#: man-pages/man8/zic.8:477
+#, no-wrap
+msgid "For example:\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:175
+#, no-wrap
+msgid "Rule\tUS\t1967\t1973\t-\tApr\tlastSun\t2:00w\t1:00\tD\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:178
+msgid "The fields that make up a rule line are:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:178 man-pages/man8/zic.8:347
+#, no-wrap
+msgid "B<NAME>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:183
+msgid ""
+"Gives the name of the rule set that contains this line.  The name must start"
+" with a character that is neither an ASCII digit nor"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:185
+msgid "nor"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:188
+msgid ""
+"To allow for future extensions, an unquoted name should not contain "
+"characters from the set"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:189
+#, no-wrap
+msgid "B<FROM>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:203
+msgid ""
+"Gives the first year in which the rule applies.  Any signed integer year can"
+" be supplied; the proleptic Gregorian calendar is assumed, with year 0 "
+"preceding year 1.  The word B<minimum> (or an abbreviation) means the "
+"indefinite past.  The word B<maximum> (or an abbreviation) means the "
+"indefinite future.  Rules can describe times that are not representable as "
+"time values, with the unrepresentable times ignored; this allows rules to be"
+" portable among hosts with differing time value types."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:203
+#, no-wrap
+msgid "B<TO>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:217
+msgid ""
+"Gives the final year in which the rule applies.  In addition to B<minimum> "
+"and B<maximum> (as above), the word B<only> (or an abbreviation)  may be "
+"used to repeat the value of the B<FROM> field."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:217
+#, no-wrap
+msgid "B<TYPE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:220
+msgid "should be"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:224
+msgid ""
+"and is present for compatibility with older versions of B<zic> in which it "
+"could contain year types."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:224
+#, no-wrap
+msgid "B<IN>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:228
+msgid ""
+"Names the month in which the rule takes effect.  Month names may be "
+"abbreviated."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:228
+#, no-wrap
+msgid "B<ON>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:232
+msgid ""
+"Gives the day on which the rule takes effect.  Recognized forms include:"
+msgstr ""
+
+#. type: ta
+#: man-pages/man8/zic.8:235
+#, no-wrap
+msgid "\\w'SunE<lt>=25\\0\\0'u"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:241
+#, no-wrap
+msgid ""
+"5\tthe fifth of the month\n"
+"lastSun\tthe last Sunday in the month\n"
+"lastMon\tthe last Monday in the month\n"
+"SunE<gt>=8\tfirst Sunday on or after the eighth\n"
+"SunE<lt>=25\tlast Sunday on or before the 25th\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:247
+msgid "A weekday name (e.g., B<Sunday>)  or a weekday name preceded by"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:254
+msgid ""
+"(e.g., B<lastSunday>)  may be abbreviated or spelled out in full.  Note that"
+" there must be no spaces within the B<ON> field."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:254
+#, no-wrap
+msgid "B<AT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:258
+msgid ""
+"Gives the time of day at which the rule takes effect.  Recognized forms "
+"include:"
+msgstr ""
+
+#. type: ta
+#: man-pages/man8/zic.8:261
+#, no-wrap
+msgid "\\w'00:19:32.13\\0\\0'u"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:269
+#, no-wrap
+msgid ""
+"2\ttime in hours\n"
+"2:00\ttime in hours and minutes\n"
+"01:28:14\ttime in hours, minutes, and seconds\n"
+"15:00\t24-hour format time (for times after noon)\n"
+"260:00\t260 hours after 00:00\n"
+"-2:30\t2.5 hours before 00:00\n"
+"-\tequivalent to 0\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:277
+msgid ""
+"where hour 0 is midnight at the start of the day, and hour 24 is midnight at"
+" the end of the day.  Any of these forms may be followed by the letter B<w> "
+"if the given time is local"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:281
+msgid "time, B<s> if the given time is local"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:295
+msgid ""
+"time, or B<u> (or B<g> or B<z>)  if the given time is universal time; in the"
+" absence of an indicator, wall clock time is assumed.  The intent is that a "
+"rule line describes the instants when a clock/calendar set to the type of "
+"time specified in the B<AT> field would show the specified date and time of "
+"day."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:295
+#, no-wrap
+msgid "B<SAVE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:316
+msgid ""
+"Gives the amount of time to be added to local standard time when the rule is"
+" in effect.  This field has the same format as the B<AT> field (although, of"
+" course, the B<w> and B<s> suffixes are not used).  Negative offsets are "
+"allowed; in Ireland, for example, daylight saving time is observed in winter"
+" and has a negative offset relative to Irish Standard Time.  The offset is "
+"merely added to standard time; for example, B<zic> does not distinguish a "
+"10:30 standard time plus an 0:30 B<SAVE> from a 10:00 standard time plus a "
+"1:00 B<SAVE>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:316
+#, no-wrap
+msgid "B<LETTER/S>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:319
+msgid "Gives the"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:321
+msgid "(for example, the"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:325
+msgid "in"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:330
+msgid ""
+"of time zone abbreviations to be used when this rule is in effect.  If this "
+"field is"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:332
+msgid "the variable part is null."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:334
+msgid "A zone line has the form"
+msgstr ""
+
+#. type: ta
+#: man-pages/man8/zic.8:337
+#, no-wrap
+msgid "\\w'Zone\\0\\0'u +\\w'Asia/Amman\\0\\0'u +\\w'UTOFF\\0\\0'u +\\w'Jordan\\0\\0'u +\\w'FORMAT\\0\\0'u"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:339
+#, no-wrap
+msgid "Zone\tNAME\tUTOFF\tRULES\tFORMAT\t[UNTIL]\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:344
+#, no-wrap
+msgid "Zone\tAsia/Amman\t2:00\tJordan\tEE%sT\t2017 Oct 27 01:00\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:347
+msgid "The fields that make up a zone line are:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:353
+msgid ""
+"The name of the timezone.  This is the name used in creating the time "
+"conversion information file for the timezone.  It should not contain a file "
+"name component"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:357
+msgid "a file name component is a maximal substring that does not contain"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:358
+#, no-wrap
+msgid "B<UTOFF>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:367
+msgid ""
+"The amount of time to add to UT to get standard time.  This field has the "
+"same format as the B<AT> and B<SAVE> fields of rule lines; begin the field "
+"with a minus sign if time must be subtracted from UT."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:367
+#, no-wrap
+msgid "B<RULES>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:378
+msgid ""
+"The name of the rules that apply in the timezone or, alternatively, a field "
+"in the same format as a rule-line SAVE column, giving of the amount of time "
+"to be added to local standard time effect, and whether the resulting time is"
+" standard or daylight saving.  If this field is B<-> then standard time "
+"always applies.  When an amount of time is given, only the sum of standard "
+"time and this amount matters."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:378
+#, no-wrap
+msgid "B<FORMAT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:384
+msgid ""
+"The format for time zone abbreviations.  The pair of characters B<%s> is "
+"used to show where the"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:404
+msgid ""
+"of the time zone abbreviation goes.  Alternatively, a format can use the "
+"pair of characters B<%z> to stand for the UT offset in the form \\(+-I<hh>, "
+"\\(+-I<hhmm>, or \\(+-I<hhmmss>, using the shortest form that does not lose "
+"information, where I<hh>, I<mm>, and I<ss> are the hours, minutes, and "
+"seconds east (+) or west (\\(mi) of UT.  Alternatively, a slash (/)  "
+"separates standard and daylight abbreviations.  To conform to POSIX, a time "
+"zone abbreviation should contain only alphanumeric ASCII characters,"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:406 man-pages/man8/zic.8:565
+msgid "and"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:407
+#, no-wrap
+msgid "B<UNTIL>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:418
+msgid ""
+"The time at which the UT offset or the rule(s) change for a location.  It "
+"takes the form of YEAR [MONTH [DAY [TIME]]].  If this is specified, the time"
+" zone information is generated from the given UT offset and rule change "
+"until the time specified, which is interpreted using the rules in effect "
+"just before the transition.  The month, day, and time of day have the same "
+"format as the IN, ON, and AT fields of a rule; trailing fields can be "
+"omitted, and default to the earliest possible value for the missing fields."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:420
+msgid "The next line must be a"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:423
+msgid "line; this has the same form as a zone line except that the string"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:426
+msgid ""
+"and the name are omitted, as the continuation line will place information "
+"starting at the time specified as the"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:429
+msgid ""
+"information in the previous line in the file used by the previous line.  "
+"Continuation lines may contain"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:432
+msgid ""
+"information, just as zone lines do, indicating that the next line is a "
+"further continuation."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:437
+msgid ""
+"If a zone changes at the same instant that a rule would otherwise take "
+"effect in the earlier zone or continuation line, the rule is ignored.  In a "
+"single zone it is an error if two rules take effect at the same instant, or "
+"if two zone changes take effect at the same instant."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:439
+msgid "A link line has the form"
+msgstr ""
+
+#. type: ta
+#: man-pages/man8/zic.8:442
+#, no-wrap
+msgid "\\w'Link\\0\\0'u +\\w'Europe/Istanbul\\0\\0'u"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:444
+#, no-wrap
+msgid "Link\tTARGET\tLINK-NAME\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:449
+#, no-wrap
+msgid "Link\tEurope/Istanbul\tAsia/Istanbul\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:462
+msgid ""
+"The B<TARGET> field should appear as the B<NAME> field in some zone line.  "
+"The B<LINK-NAME> field is used as an alternative name for that zone; it has "
+"the same syntax as a zone line's B<NAME> field."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:468
+msgid ""
+"Except for continuation lines, lines may appear in any order in the input.  "
+"However, the behavior is unspecified if multiple zone or link lines define "
+"the same name, or if the source of one link line is the target of another."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:470
+msgid "Lines in the file that describes leap seconds have the following form:"
+msgstr ""
+
+#. type: ta
+#: man-pages/man8/zic.8:472
+#, no-wrap
+msgid ""
+"\\w'Leap\\0\\0'u +\\w'YEAR\\0\\0'u +\\w'MONTH\\0\\0'u +\\w'DAY\\0\\0'u "
+"+\\w'HH:MM:SS\\0\\0'u +\\w'CORR\\0\\0'u"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:475
+#, no-wrap
+msgid "Leap\tYEAR\tMONTH\tDAY\tHH:MM:SS\tCORR\tR/S\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:480
+#, no-wrap
+msgid "Leap\t2016\tDec\t31\t23:59:60\t+\tS\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:493
+msgid ""
+"The B<YEAR>, B<MONTH>, B<DAY>, and B<HH:MM:SS> fields tell when the leap "
+"second happened.  The B<CORR> field should be"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:496
+msgid "if a second was added or"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:502
+msgid ""
+"if a second was skipped.  The B<R/S> field should be (an abbreviation of)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:506
+msgid ""
+"if the leap second time given by the other fields should be interpreted as "
+"UTC or (an abbreviation of)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:509
+msgid ""
+"if the leap second time given by the other fields should be interpreted as "
+"local wall clock time."
+msgstr ""
+
+#. type: SH
+#: man-pages/man8/zic.8:509
+#, no-wrap
+msgid "EXTENDED EXAMPLE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:515
+msgid ""
+"Here is an extended example of B<zic> input, intended to illustrate many of "
+"its features.  In this example, the EU rules are for the European Union and "
+"for its predecessor organization, the European Communities."
+msgstr ""
+
+#. type: ta
+#: man-pages/man8/zic.8:519
+#, no-wrap
+msgid ""
+"\\w'# Rule\\0\\0'u +\\w'NAME\\0\\0'u +\\w'FROM\\0\\0'u +\\w'1973\\0\\0'u "
+"+\\w'TYPE\\0\\0'u +\\w'Apr\\0\\0'u +\\w'lastSun\\0\\0'u +\\w'2:00\\0\\0'u "
+"+\\w'SAVE\\0\\0'u"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:524
+#, no-wrap
+msgid ""
+"# Rule\tNAME\tFROM\tTO\tTYPE\tIN\tON\tAT\tSAVE\tLETTER/S\n"
+"Rule\tSwiss\t1941\t1942\t-\tMay\tMonE<gt>=1\t1:00\t1:00\tS\n"
+"Rule\tSwiss\t1941\t1942\t-\tOct\tMonE<gt>=1\t2:00\t0\t-\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:531
+#, no-wrap
+msgid ""
+"Rule\tEU\t1977\t1980\t-\tApr\tSunE<gt>=1\t1:00u\t1:00\tS\n"
+"Rule\tEU\t1977\tonly\t-\tSep\tlastSun\t1:00u\t0\t-\n"
+"Rule\tEU\t1978\tonly\t-\tOct\t 1\t1:00u\t0\t-\n"
+"Rule\tEU\t1979\t1995\t-\tSep\tlastSun\t1:00u\t0\t-\n"
+"Rule\tEU\t1981\tmax\t-\tMar\tlastSun\t1:00u\t1:00\tS\n"
+"Rule\tEU\t1996\tmax\t-\tOct\tlastSun\t1:00u\t0\t-\n"
+msgstr ""
+
+#. type: ta
+#: man-pages/man8/zic.8:532
+#, no-wrap
+msgid ""
+"\\w'# Zone\\0\\0'u +\\w'Europe/Zurich\\0\\0'u +\\w'0:34:08\\0\\0'u "
+"+\\w'RULES\\0\\0'u +\\w'FORMAT\\0\\0'u"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:538
+#, no-wrap
+msgid ""
+"# Zone\tNAME\tUTOFF\tRULES\tFORMAT\t[UNTIL]\n"
+"Zone\tEurope/Zurich\t0:34:08\t-\tLMT\t1853 Jul 16\n"
+"\t\t0:29:46\t-\tBMT\t1894 Jun\n"
+"\t\t1:00\tSwiss\tCE%sT\t1981\n"
+"\t\t1:00\tEU\tCE%sT\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:540
+#, no-wrap
+msgid "Link\tEurope/Zurich\tEurope/Vaduz\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:550
+msgid ""
+"In this example, the timezone is named Europe/Zurich but it has an alias as "
+"Europe/Vaduz.  This example says that Zurich was 34 minutes and 8 seconds "
+"east of UT until 1853-07-16 at 00:00, when the legal offset was changed to "
+"7\\(de\\|26\\(fm\\|22.50\\(sd; although this works out to 0:29:45.50, the "
+"input format cannot represent fractional seconds so it is rounded here.  "
+"After 1894-06-01 at 00:00 the UT offset became one hour and Swiss daylight "
+"saving rules (defined with lines beginning with"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:553
+msgid ""
+"apply.  From 1981 to the present, EU daylight saving rules have applied, and"
+" the UTC offset has remained at one hour."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:561
+msgid ""
+"In 1941 and 1942, daylight saving time applied from the first Monday in May "
+"at 01:00 to the first Monday in October at 02:00.  The pre-1981 EU daylight-"
+"saving rules have no effect here, but are included for completeness.  Since "
+"1981, daylight saving has begun on the last Sunday in March at 01:00 UTC.  "
+"Until 1995 it ended the last Sunday in September at 01:00 UTC, but this "
+"changed to the last Sunday in October starting in 1996."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:563
+msgid "For purposes of display,"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:570
+msgid ""
+"were initially used, respectively.  Since Swiss rules and later EU rules "
+"were applied, the time zone abbreviation has been CET for standard time and "
+"CEST for daylight saving time."
+msgstr ""
+
+#. type: SH
+#: man-pages/man8/zic.8:570
+#, no-wrap
+msgid "FILES"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:571
+#, no-wrap
+msgid "I</etc/localtime>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:574
+msgid "Default local timezone file."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:574
+#, no-wrap
+msgid "I</usr/share/zoneinfo>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:577
+msgid "Default timezone information directory."
+msgstr ""
+
+#. type: SH
+#: man-pages/man8/zic.8:577
+#, no-wrap
+msgid "NOTES"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:583
+msgid ""
+"For areas with more than two types of local time, you may need to use local "
+"standard time in the B<AT> field of the earliest transition time's rule to "
+"ensure that the earliest transition time recorded in the compiled file is "
+"correct."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:595
+msgid ""
+"If, for a particular timezone, a clock advance caused by the start of "
+"daylight saving coincides with and is equal to a clock retreat caused by a "
+"change in UT offset, B<zic> produces a single transition to daylight saving "
+"at the new UT offset (without any change in wall clock time).  To get "
+"separate transitions use multiple zone continuation lines specifying "
+"transition instants using universal time."
+msgstr ""
+
+#. type: SH
+#: man-pages/man8/zic.8:595
+#, no-wrap
+msgid "SEE ALSO"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:597
+msgid "B<tzfile>(5), B<zdump>(8)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/zdump.8:5
+#, no-wrap
+msgid "ZDUMP"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:8
+msgid "zdump - timezone dumper"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:15
+msgid "B<zdump> [ I<option> \\&... ] [ I<timezone> \\&... ]"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:28
+msgid ""
+"The B<zdump> program prints the current time in each I<timezone> named on "
+"the command line."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zdump.8:35
+#, no-wrap
+msgid "B<-i>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:41
+msgid ""
+"Output a description of time intervals.  For each I<timezone> on the command"
+" line, output an interval-format description of the timezone.  See"
+msgstr ""
+
+#. type: SH
+#: man-pages/man8/zdump.8:41 man-pages/man8/zdump.8:97
+#, no-wrap
+msgid "INTERVAL FORMAT"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:43
+msgid "below."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:67
+msgid ""
+"Output a verbose description of time intervals.  For each I<timezone> on the"
+" command line, print the time at the lowest possible time value, the time "
+"one day after the lowest possible time value, the times both one second "
+"before and exactly at each detected time discontinuity, the time at one day "
+"less than the highest possible time value, and the time at the highest "
+"possible time value.  Each line is followed by B<isdst=>I<D> where I<D> is "
+"positive, zero, or negative depending on whether the given time is daylight "
+"saving time, standard time, or an unknown time type, respectively.  Each "
+"line is also followed by B<gmtoff=>I<N> if the given local time is known to "
+"be I<N> seconds east of Greenwich."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zdump.8:67
+#, no-wrap
+msgid "B<-V>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:74
+msgid ""
+"Like B<-v>, except omit the times relative to the extreme time values.  This"
+" generates output that is easier to compare to that of implementations with "
+"different time representations."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zdump.8:74
+#, no-wrap
+msgid "B<-c >[I<loyear>B<,>]I<hiyear>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:86
+msgid ""
+"Cut off interval output at the given year(s).  Cutoff times are computed "
+"using the proleptic Gregorian calendar with year 0 and with Universal Time "
+"(UT) ignoring leap seconds.  The lower bound is exclusive and the upper is "
+"inclusive; for example, a I<loyear> of 1970 excludes a transition occurring "
+"at 1970-01-01 00:00:00 UTC but a I<hiyear> of 1970 includes the transition."
+"  The default cutoff is B<-500,2500>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zdump.8:86
+#, no-wrap
+msgid "B<-t >[I<lotime>B<,>]I<hitime>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:97
+msgid ""
+"Cut off interval output at the given time(s), given in decimal seconds since"
+" 1970-01-01 00:00:00 Coordinated Universal Time (UTC).  The I<timezone> "
+"determines whether the count includes leap seconds.  As with B<-c>, the "
+"cutoff's lower bound is exclusive and its upper bound is inclusive."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:101
+msgid ""
+"The interval format is a compact text representation that is intended to be "
+"both human- and machine-readable.  It consists of an empty line, then a line"
+msgstr ""
+
+#. type: q
+#: man-pages/man8/zdump.8:101
+#, no-wrap
+msgid "TZ=I<string>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:105
+msgid ""
+"where I<string> is a double-quoted string giving the timezone, a second line"
+msgstr ""
+
+#. type: q
+#: man-pages/man8/zdump.8:105
+#, no-wrap
+msgid "- - I<interval>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:108
+msgid ""
+"describing the time interval before the first transition if any, and zero or"
+" more following lines"
+msgstr ""
+
+#. type: q
+#: man-pages/man8/zdump.8:108
+#, no-wrap
+msgid "I<date time interval> ,"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:111
+msgid ""
+"one line for each transition time and following interval.  Fields are "
+"separated by single tabs."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:127
+msgid ""
+"Dates are in I<yyyy>-I<mm>-I<dd> format and times are in 24-hour "
+"I<hh>:I<mm>:I<ss> format where I<hh>E<lt>24.  Times are in local time "
+"immediately after the transition.  A time interval description consists of a"
+" UT offset in signed \\(+-I<hhmmss> format, a time zone abbreviation, and an"
+" isdst flag.  An abbreviation that equals the UT offset is omitted; other "
+"abbreviations are double-quoted strings unless they consist of one or more "
+"alphabetic characters.  An isdst flag is omitted for standard time, and "
+"otherwise is a decimal integer that is unsigned and positive (typically 1) "
+"for daylight saving time and negative for unknown."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:135
+msgid ""
+"In times and in UT offsets with absolute value less than 100 hours, the "
+"seconds are omitted if they are zero, and the minutes are also omitted if "
+"they are also zero.  Positive UT offsets are east of Greenwich.  The UT "
+"offset -00 denotes a UT placeholder in areas where the actual offset is "
+"unspecified; by convention, this occurs when the UT offset is zero and the "
+"time zone abbreviation begins with"
+msgstr ""
+
+#. type: q
+#: man-pages/man8/zdump.8:135
+#, no-wrap
+msgid "-"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:137
+msgid "or is"
+msgstr ""
+
+#. type: q
+#: man-pages/man8/zdump.8:137
+#, no-wrap
+msgid "zzz ."
+msgstr ""
+
+#. "
+#. type: Plain text
+#: man-pages/man8/zdump.8:145
+msgid ""
+"In double-quoted strings, escape sequences represent unusual characters.  "
+"The escape sequences are \\es for space, and \\e\", \\e\\e, \\ef, \\en, "
+"\\er, \\et, and \\ev with their usual meaning in the C programming language."
+"  E.g., the double-quoted string ``\"CET\\es\\e\"\\e\\e\"'' represents the "
+"character sequence ``CET \"\\e''."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:150
+msgid ""
+"Here is an example of the output, with the leading empty line omitted.  "
+"(This example is shown with tab stops set far enough apart so that the "
+"tabbed columns line up.)"
+msgstr ""
+
+#. type: ta
+#: man-pages/man8/zdump.8:156
+#, no-wrap
+msgid "\\nwu +\\nwu +\\nwu +\\nwu"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:165
+#, no-wrap
+msgid ""
+"TZ=\"Pacific/Honolulu\"\n"
+"-\t-\t-10:31:26\tLMT\n"
+"1896-01-13\t12:01:26\t-10:30\tHST\n"
+"1933-04-30\t03\t-09:30\tHDT\t1\n"
+"1933-05-21\t11\t-10:30\tHST\n"
+"1942-02-09\t03\t-09:30\tHDT\t1\n"
+"1945-09-30\t01\t-10:30\tHST\n"
+"1947-06-08\t02:30\t-10\tHST\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:179
+msgid ""
+"Here, local time begins 10 hours, 31 minutes and 26 seconds west of UT, and "
+"is a standard time abbreviated LMT.  Immediately after the first transition,"
+" the date is 1896-01-13 and the time is 12:01:26, and the following time "
+"interval is 10.5 hours west of UT, a standard time abbreviated HST.  "
+"Immediately after the second transition, the date is 1933-04-30 and the time"
+" is 03:00:00 and the following time interval is 9.5 hours west of UT, is "
+"abbreviated HDT, and is daylight saving time.  Immediately after the last "
+"transition the date is 1947-06-08 and the time is 02:30:00, and the "
+"following time interval is 10 hours west of UT, a standard time abbreviated "
+"HST."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:182
+msgid "Here are excerpts from another example:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:196
+#, no-wrap
+msgid ""
+"TZ=\"Europe/Astrakhan\"\n"
+"-\t-\t+03:12:12\tLMT\n"
+"1924-04-30\t23:47:48\t+03\n"
+"1930-06-21\t01\t+04\n"
+"1981-04-01\t01\t+05\t\t1\n"
+"1981-09-30\t23\t+04\n"
+"\\&...\n"
+"2014-10-26\t01\t+03\n"
+"2016-03-27\t03\t+04\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:203
+msgid ""
+"This time zone is east of UT, so its UT offsets are positive.  Also, many of"
+" its time zone abbreviations are omitted since they duplicate the text of "
+"the UT offset."
+msgstr ""
+
+#. type: SH
+#: man-pages/man8/zdump.8:203
+#, no-wrap
+msgid "LIMITATIONS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:208
+msgid ""
+"Time discontinuities are found by sampling the results returned by localtime"
+" at twelve-hour intervals.  This works in all real-world cases; one can "
+"construct artificial time zones for which this fails."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:214
+msgid "In the B<-v> and B<-V> output,"
+msgstr ""
+
+#. type: q
+#: man-pages/man8/zdump.8:214 man-pages/man8/zdump.8:222
+#, no-wrap
+msgid "UT"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:220
+msgid ""
+"denotes the value returned by B<gmtime>(3), which uses UTC for modern "
+"timestamps and some other UT flavor for timestamps that predate the "
+"introduction of UTC.  No attempt is currently made to have the output use"
+msgstr ""
+
+#. type: q
+#: man-pages/man8/zdump.8:220
+#, no-wrap
+msgid "UTC"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:222
+msgid "for newer and"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:225
+msgid ""
+"for older timestamps, partly because the exact date of the introduction of "
+"UTC is problematic."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:227
+msgid "B<tzfile>(5), B<zic>(8)"
+msgstr ""

@@ -1,0 +1,138 @@
+[main]
+host = https://www.transifex.com
+
+[man-pages.files__]
+file_filter = translations/files__/<lang>.po
+source_file = translations/files__.pot
+source_lang = en
+
+[man-pages.files_a]
+file_filter = translations/files_a/<lang>.po
+source_file = translations/files_a.pot
+source_lang = en
+
+[man-pages.files_b]
+file_filter = translations/files_b/<lang>.po
+source_file = translations/files_b.pot
+source_lang = en
+
+[man-pages.files_c]
+file_filter = translations/files_c/<lang>.po
+source_file = translations/files_c.pot
+source_lang = en
+
+[man-pages.files_d]
+file_filter = translations/files_d/<lang>.po
+source_file = translations/files_d.pot
+source_lang = en
+
+[man-pages.files_e]
+file_filter = translations/files_e/<lang>.po
+source_file = translations/files_e.pot
+source_lang = en
+
+[man-pages.files_f]
+file_filter = translations/files_f/<lang>.po
+source_file = translations/files_f.pot
+source_lang = en
+
+[man-pages.files_g]
+file_filter = translations/files_g/<lang>.po
+source_file = translations/files_g.pot
+source_lang = en
+
+[man-pages.files_h]
+file_filter = translations/files_h/<lang>.po
+source_file = translations/files_h.pot
+source_lang = en
+
+[man-pages.files_i]
+file_filter = translations/files_i/<lang>.po
+source_file = translations/files_i.pot
+source_lang = en
+
+[man-pages.files_j]
+file_filter = translations/files_j/<lang>.po
+source_file = translations/files_j.pot
+source_lang = en
+
+[man-pages.files_k]
+file_filter = translations/files_k/<lang>.po
+source_file = translations/files_k.pot
+source_lang = en
+
+[man-pages.files_l]
+file_filter = translations/files_l/<lang>.po
+source_file = translations/files_l.pot
+source_lang = en
+
+[man-pages.files_m]
+file_filter = translations/files_m/<lang>.po
+source_file = translations/files_m.pot
+source_lang = en
+
+[man-pages.files_n]
+file_filter = translations/files_n/<lang>.po
+source_file = translations/files_n.pot
+source_lang = en
+
+[man-pages.files_o]
+file_filter = translations/files_o/<lang>.po
+source_file = translations/files_o.pot
+source_lang = en
+
+[man-pages.files_p]
+file_filter = translations/files_p/<lang>.po
+source_file = translations/files_p.pot
+source_lang = en
+
+[man-pages.files_q]
+file_filter = translations/files_q/<lang>.po
+source_file = translations/files_q.pot
+source_lang = en
+
+[man-pages.files_r]
+file_filter = translations/files_r/<lang>.po
+source_file = translations/files_r.pot
+source_lang = en
+
+[man-pages.files_s]
+file_filter = translations/files_s/<lang>.po
+source_file = translations/files_s.pot
+source_lang = en
+
+[man-pages.files_t]
+file_filter = translations/files_t/<lang>.po
+source_file = translations/files_t.pot
+source_lang = en
+
+[man-pages.files_u]
+file_filter = translations/files_u/<lang>.po
+source_file = translations/files_u.pot
+source_lang = en
+
+[man-pages.files_v]
+file_filter = translations/files_v/<lang>.po
+source_file = translations/files_v.pot
+source_lang = en
+
+[man-pages.files_w]
+file_filter = translations/files_w/<lang>.po
+source_file = translations/files_w.pot
+source_lang = en
+
+[man-pages.files_x]
+file_filter = translations/files_x/<lang>.po
+source_file = translations/files_x.pot
+source_lang = en
+
+[man-pages.files_y]
+file_filter = translations/files_y/<lang>.po
+source_file = translations/files_y.pot
+source_lang = en
+
+[man-pages.files_z]
+file_filter = translations/files_z/<lang>.po
+source_file = translations/files_z.pot
+source_lang = en
+

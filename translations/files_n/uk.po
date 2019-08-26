@@ -1,0 +1,6850 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: translation of man-pages\n"
+"POT-Creation-Date: 2017-09-05 08:20+0300\n"
+"PO-Revision-Date: 2019-04-02 15:55+0000\n"
+"Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
+"Language-Team: Ukrainian (http://www.transifex.com/kruvalig/man-pages/language/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#. type: TH
+#: man-pages/man4/null.4:26
+#, no-wrap
+msgid "NULL"
+msgstr ""
+
+#. type: TH
+#: man-pages/man4/null.4:26
+#, no-wrap
+msgid "2015-07-23"
+msgstr ""
+
+#. type: TH
+#: man-pages/man4/null.4:26
+#, no-wrap
+msgid "Linux"
+msgstr ""
+
+#. type: TH
+#: man-pages/man4/null.4:26
+#, no-wrap
+msgid "Linux Programmer's Manual"
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/null.4:27
+#, no-wrap
+msgid "NAME"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/null.4:29
+msgid "null, zero - data sink"
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/null.4:29
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/null.4:35
+msgid ""
+"Data written to the I</dev/null> and I</dev/zero> special files is "
+"discarded."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/null.4:43
+msgid ""
+"Reads from I</dev/null> always return end of file (i.e., B<read>(2)  returns"
+" 0), whereas reads from I</dev/zero> always return bytes containing zero "
+"(\\(aq\\e0\\(aq characters)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/null.4:45
+msgid "These devices are typically created by:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/null.4:51
+#, no-wrap
+msgid ""
+"mknod -m 666 /dev/null c 1 3\n"
+"mknod -m 666 /dev/zero c 1 5\n"
+"chown root:root /dev/null /dev/zero\n"
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/null.4:53
+#, no-wrap
+msgid "FILES"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/null.4:55
+msgid "I</dev/null>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/null.4:57
+msgid "I</dev/zero>"
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/null.4:57
+#, no-wrap
+msgid "NOTES"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/null.4:60
+msgid ""
+"If these devices are not writable and readable for all users, many programs "
+"will act strangely."
+msgstr ""
+
+#.  commit 2b83868723d090078ac0e2120e06a1cc94dbaef0
+#. type: Plain text
+#: man-pages/man4/null.4:68
+msgid ""
+"Since Linux 2.6.31, reads from I</dev/zero> are interruptible by signals.  "
+"(This change was made to help with bad latencies for large reads from "
+"I</dev/zero>.)"
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/null.4:68
+#, no-wrap
+msgid "SEE ALSO"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/null.4:71
+msgid "B<chown>(1), B<mknod>(1), B<full>(4)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/nscd.8:23
+#, no-wrap
+msgid "NSCD"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/nscd.8:23
+#, no-wrap
+msgid "2015-05-07"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/nscd.8:23
+#, no-wrap
+msgid "GNU"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/nscd.8:26
+msgid "nscd - name service cache daemon"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/nscd.8:35
+msgid ""
+"B<nscd> is a daemon that provides a cache for the most common name service "
+"requests.  The default configuration file, I</etc/nscd.conf>, determines the"
+" behavior of the cache daemon.  See B<nscd.conf>(5)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/nscd.8:51
+msgid ""
+"B<nscd> provides caching for accesses of the B<passwd>(5), B<group>(5), "
+"B<hosts>(5)  B<services>(5)  and I<netgroup> databases through standard libc"
+" interfaces, such as B<getpwnam>(3), B<getpwuid>(3), B<getgrnam>(3), "
+"B<getgrgid>(3), B<gethostbyname>(3), and others."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/nscd.8:60
+msgid ""
+"There are two caches for each database: a positive one for items found, and "
+"a negative one for items not found.  Each cache has a separate TTL (time-to-"
+"live)  period for its data.  Note that the shadow file is specifically not "
+"cached.  B<getspnam>(3)  calls remain uncached as a result."
+msgstr ""
+
+#. type: SH
+#: man-pages/man8/nscd.8:60
+#, no-wrap
+msgid "OPTIONS"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/nscd.8:61
+#, no-wrap
+msgid "B<--help>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/nscd.8:64
+msgid "will give you a list with all options and what they do."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/nscd.8:87
+msgid ""
+"The daemon will try to watch for changes in configuration files appropriate "
+"for each database (e.g., I</etc/passwd> for the I<passwd> database or "
+"I</etc/hosts> and I</etc/resolv.conf> for the I<hosts> database), and flush "
+"the cache when these are changed.  However, this will happen only after a "
+"short delay (unless the B<inotify>(7)  mechanism is available and glibc 2.9 "
+"or later is available), and this auto-detection does not cover configuration"
+" files required by nonstandard NSS modules, if any are specified in "
+"I</etc/nsswitch.conf>.  In that case, you need to run the following command "
+"after changing the configuration file of the database so that B<nscd> "
+"invalidates its cache:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/nscd.8:91
+#, no-wrap
+msgid "$ B<nscd -i> I<E<lt>databaseE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/nscd.8:95
+msgid "B<nscd.conf>(5), B<nsswitch.conf>(5)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/nptl.7:26
+#, no-wrap
+msgid "NPTL"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/nptl.7:26
+#, no-wrap
+msgid "2015-08-08"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/nptl.7:29
+msgid "nptl - Native POSIX Threads Library"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/nptl.7:34
+msgid ""
+"NPTL (Native POSIX Threads Library)  is the GNU C library POSIX threads "
+"implementation that is used on modern Linux systems."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/nptl.7:34
+#, no-wrap
+msgid "NPTL and signals"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/nptl.7:43
+msgid ""
+"NPTL makes internal use of the first two real-time signals (signal numbers "
+"32 and 33).  One of these signals is used to support thread cancellation and"
+" POSIX timers (see B<timer_create>(2)); the other is used as part of a "
+"mechanism that ensures all threads in a process always have the same UIDs "
+"and GIDs, as required by POSIX.  These signals cannot be used in "
+"applications."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/nptl.7:49
+msgid ""
+"To prevent accidental use of these signals in applications, which might "
+"interfere with the operation of the NPTL implementation, various glibc "
+"library functions and system call wrapper functions attempt to hide these "
+"signals from applications, as follows:"
+msgstr ""
+
+#. type: IP
+#: man-pages/man7/nptl.7:49 man-pages/man7/nptl.7:52 man-pages/man7/nptl.7:60
+#: man-pages/man7/nptl.7:66 man-pages/man7/nptl.7:75
+#, no-wrap
+msgid "*"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/nptl.7:52
+msgid "B<SIGRTMIN> is defined with the value 34 (rather than 32)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/nptl.7:60
+msgid ""
+"The B<sigwaitinfo>(2), B<sigtimedwait>(2), and B<sigwait>(3)  interfaces "
+"silently ignore requests to wait for these two signals if they are specified"
+" in the signal set argument of these calls."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/nptl.7:66
+msgid ""
+"The B<sigprocmask>(2)  and B<pthread_sigmask>(3)  interfaces silently ignore"
+" attempts to block these two signals."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/nptl.7:75
+msgid ""
+"The B<sigaction>(2), B<pthread_kill>(3), and B<pthread_sigqueue>(3)  "
+"interfaces fail with the error B<EINVAL> (indicating an invalid signal "
+"number) if these signals are specified."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/nptl.7:79
+msgid ""
+"B<sigfillset>(3)  does not include these two signals when it creates a full "
+"signal set."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/nptl.7:79
+#, no-wrap
+msgid "NPTL and process credential changes"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/nptl.7:89
+msgid ""
+"At the Linux kernel level, credentials (user and group IDs) are a per-thread"
+" attribute.  However, POSIX requires that all of the POSIX threads in a "
+"process have the same credentials.  To accommodate this requirement, the "
+"NPTL implementation wraps all of the system calls that change process "
+"credentials with functions that, in addition to invoking the underlying "
+"system call, arrange for all other threads in the process to also change "
+"their credentials."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/nptl.7:99
+msgid ""
+"The implementation of each of these system calls involves the use of a real-"
+"time signal that is sent (using B<tgkill>(2))  to each of the other threads "
+"that must change its credentials.  Before sending these signals, the thread "
+"that is changing credentials saves the new credential(s) and records the "
+"system call being employed in a global buffer.  A signal handler in the "
+"receiving thread(s) fetches this information and then uses the same system "
+"call to change its credentials."
+msgstr ""
+
+#.  FIXME .
+#.  Maybe say something about vfork() not being serialized wrt set*id() APIs?
+#.  https://sourceware.org/bugzilla/show_bug.cgi?id=14749
+#. type: Plain text
+#: man-pages/man7/nptl.7:114
+msgid ""
+"Wrapper functions employing this technique are provided for B<setgid>(2), "
+"B<setuid>(2), B<setegid>(2), B<seteuid>(2), B<setregid>(2), B<setreuid>(2), "
+"B<setresgid>(2), B<setresuid>(2), and B<setgroups>(2)."
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/nptl.7:114
+#, no-wrap
+msgid "CONFORMING TO"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/nptl.7:117
+msgid ""
+"For details of the conformance of NPTL to the POSIX standard, see "
+"B<pthreads>(7)."
+msgstr ""
+
+#.  See POSIX.1-2008 specification of pthread_mutexattr_init()
+#.  See sysdeps/x86/bits/pthreadtypes.h
+#. type: Plain text
+#: man-pages/man7/nptl.7:128
+msgid ""
+"POSIX says that any thread in any process with access to the memory "
+"containing a process-shared (B<PTHREAD_PROCESS_SHARED>)  mutex can operate "
+"on that mutex.  However, on 64-bit x86 systems, the mutex definition for "
+"x86-64 is incompatible with the mutex definition for i386, meaning that "
+"32-bit and 64-bit binaries can't share mutexes on x86-64 systems."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/nptl.7:132
+msgid "B<credentials>(7), B<pthreads>(7), B<signal>(7), B<standards>(7)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/netlink.7:11
+#, no-wrap
+msgid "NETLINK"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/netlink.7:11
+#, no-wrap
+msgid "2017-09-15"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:14
+msgid "netlink - communication between kernel and user space (AF_NETLINK)"
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/netlink.7:14
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:19
+#, no-wrap
+msgid ""
+"B<#include E<lt>asm/types.hE<gt>>\n"
+"B<#include E<lt>sys/socket.hE<gt>>\n"
+"B<#include E<lt>linux/netlink.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:21
+#, no-wrap
+msgid ""
+"B<netlink_socket = socket(AF_NETLINK, >I<socket_type>B<, "
+">I<netlink_family>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:31
+msgid ""
+"Netlink is used to transfer information between the kernel and user-space "
+"processes.  It consists of a standard sockets-based interface for user space"
+" processes and an internal kernel API for kernel modules.  The internal "
+"kernel interface is not documented in this manual page.  There is also an "
+"obsolete netlink interface via netlink character devices; this interface is "
+"not documented here and is provided only for backward compatibility."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:41
+msgid ""
+"Netlink is a datagram-oriented service.  Both B<SOCK_RAW> and B<SOCK_DGRAM> "
+"are valid values for I<socket_type>.  However, the netlink protocol does not"
+" distinguish between datagram and raw sockets."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:45
+msgid ""
+"I<netlink_family> selects the kernel module or netlink group to communicate "
+"with.  The currently assigned netlink families are:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:45
+#, no-wrap
+msgid "B<NETLINK_ROUTE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:52
+msgid ""
+"Receives routing and link updates and may be used to modify the routing "
+"tables (both IPv4 and IPv6), IP addresses, link parameters, neighbor setups,"
+" queueing disciplines, traffic classes and packet classifiers (see "
+"B<rtnetlink>(7))."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:52
+#, no-wrap
+msgid "B<NETLINK_W1> (Linux 2.6.13 to 2.16.17)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:55
+msgid "Messages from 1-wire subsystem."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:55
+#, no-wrap
+msgid "B<NETLINK_USERSOCK>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:58
+msgid "Reserved for user-mode socket protocols."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:58
+#, no-wrap
+msgid "B<NETLINK_FIREWALL> (up to and including Linux 3.4)"
+msgstr ""
+
+#.  removed by commit d16cf20e2f2f13411eece7f7fb72c17d141c4a84
+#. type: Plain text
+#: man-pages/man7/netlink.7:70
+msgid ""
+"Transport IPv4 packets from netfilter to user space.  Used by I<ip_queue> "
+"kernel module.  After a long period of being declared obsolete (in favor of "
+"the more advanced I<nfnetlink_queue> feature), B<NETLINK_FIREWALL> was "
+"removed in Linux 3.5."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:70
+#, no-wrap
+msgid "B<NETLINK_INET_DIAG> (since Linux 2.6.14)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:75
+msgid ""
+"Query information about sockets of various protocol families from the kernel"
+" (see B<sock_diag>(7))."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:75
+#, no-wrap
+msgid "B<NETLINK_SOCK_DIAG> (since Linux 3.3)"
+msgstr ""
+
+#.  commit 7f1fb60c4fc9fb29fbb406ac8c4cfb4e59e168d6
+#. type: Plain text
+#: man-pages/man7/netlink.7:80
+msgid "A synonym for B<NETLINK_INET_DIAG>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:80
+#, no-wrap
+msgid "B<NETLINK_NFLOG> (up to and including Linux 3.16)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:83
+msgid "Netfilter/iptables ULOG."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:83
+#, no-wrap
+msgid "B<NETLINK_XFRM>"
+msgstr ""
+
+#.  FIXME More details on NETLINK_XFRM needed.
+#. type: Plain text
+#: man-pages/man7/netlink.7:87
+msgid "IPsec."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:87
+#, no-wrap
+msgid "B<NETLINK_SELINUX> (since Linux 2.6.4)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:90
+msgid "SELinux event notifications."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:90
+#, no-wrap
+msgid "B<NETLINK_ISCSI> (since Linux 2.6.15)"
+msgstr ""
+
+#.  FIXME More details on NETLINK_ISCSI needed.
+#. type: Plain text
+#: man-pages/man7/netlink.7:94
+msgid "Open-iSCSI."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:94
+#, no-wrap
+msgid "B<NETLINK_AUDIT> (since Linux 2.6.6)"
+msgstr ""
+
+#.  FIXME More details on NETLINK_AUDIT needed.
+#. type: Plain text
+#: man-pages/man7/netlink.7:98
+msgid "Auditing."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:98
+#, no-wrap
+msgid "B<NETLINK_FIB_LOOKUP> (since Linux 2.6.13)"
+msgstr ""
+
+#.  FIXME More details on NETLINK_FIB_LOOKUP needed.
+#. type: Plain text
+#: man-pages/man7/netlink.7:102
+msgid "Access to FIB lookup from user space."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:102
+#, no-wrap
+msgid "B<NETLINK_CONNECTOR> (since Linux 2.6.14)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:108
+msgid ""
+"Kernel connector.  See I<Documentation/connector/*> in the Linux kernel "
+"source tree for further information."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:108
+#, no-wrap
+msgid "B<NETLINK_NETFILTER> (since Linux 2.6.14)"
+msgstr ""
+
+#.  FIXME More details on NETLINK_NETFILTER needed.
+#. type: Plain text
+#: man-pages/man7/netlink.7:112
+msgid "Netfilter subsystem."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:112
+#, no-wrap
+msgid "B<NETLINK_SCSITRANSPORT> (since Linux 2.6.19)"
+msgstr ""
+
+#.  commit 84314fd4740ad73550c76dee4a9578979d84af48
+#.  FIXME More details on NETLINK_SCSITRANSPORT needed.
+#. type: Plain text
+#: man-pages/man7/netlink.7:117
+msgid "SCSI Transports."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:117
+#, no-wrap
+msgid "B<NETLINK_RDMA> (since Linux 3.0)"
+msgstr ""
+
+#.  commit b2cbae2c248776d81cc265ff7d48405b6a4cc463
+#.  FIXME More details on NETLINK_RDMA needed.
+#. type: Plain text
+#: man-pages/man7/netlink.7:122
+msgid "Infiniband RDMA."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:122
+#, no-wrap
+msgid "B<NETLINK_IP6_FW> (up to and including Linux 3.4)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:128
+msgid ""
+"Transport IPv6 packets from netfilter to user space.  Used by I<ip6_queue> "
+"kernel module."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:128
+#, no-wrap
+msgid "B<NETLINK_DNRTMSG>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:131
+msgid "DECnet routing messages."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:131
+#, no-wrap
+msgid "B<NETLINK_KOBJECT_UEVENT> (since Linux 2.6.10)"
+msgstr ""
+
+#.  FIXME More details on NETLINK_KOBJECT_UEVENT needed.
+#. type: Plain text
+#: man-pages/man7/netlink.7:135
+msgid "Kernel messages to user space."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:135
+#, no-wrap
+msgid "B<NETLINK_GENERIC> (since Linux 2.6.15)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:138
+msgid "Generic netlink family for simplified netlink usage."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:138
+#, no-wrap
+msgid "B<NETLINK_CRYPTO> (since Linux 3.2)"
+msgstr ""
+
+#.  commit a38f7907b926e4c6c7d389ad96cc38cec2e5a9e9
+#.  Author: Steffen Klassert <steffen.klassert@secunet.com>
+#. type: Plain text
+#: man-pages/man7/netlink.7:145
+msgid ""
+"Netlink interface to request information about ciphers registered with the "
+"kernel crypto API as well as allow configuration of the kernel crypto API."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:155
+msgid ""
+"Netlink messages consist of a byte stream with one or multiple I<nlmsghdr> "
+"headers and associated payload.  The byte stream should be accessed only "
+"with the standard B<NLMSG_*> macros.  See B<netlink>(3)  for further "
+"information."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:163
+msgid ""
+"In multipart messages (multiple I<nlmsghdr> headers with associated payload "
+"in one byte stream) the first and all following headers have the "
+"B<NLM_F_MULTI> flag set, except for the last header which has the type "
+"B<NLMSG_DONE>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:167
+msgid "After each I<nlmsghdr> the payload follows."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:177
+#, no-wrap
+msgid ""
+"struct nlmsghdr {\n"
+"    __u32 nlmsg_len;    /* Length of message including header */\n"
+"    __u16 nlmsg_type;   /* Type of message content */\n"
+"    __u16 nlmsg_flags;  /* Additional flags */\n"
+"    __u32 nlmsg_seq;    /* Sequence number */\n"
+"    __u32 nlmsg_pid;    /* Sender port ID */\n"
+"};\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:190
+msgid ""
+"I<nlmsg_type> can be one of the standard message types: B<NLMSG_NOOP> "
+"message is to be ignored, B<NLMSG_ERROR> message signals an error and the "
+"payload contains an I<nlmsgerr> structure, B<NLMSG_DONE> message terminates "
+"a multipart message."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:197
+#, no-wrap
+msgid ""
+"struct nlmsgerr {\n"
+"    int error;        /* Negative errno or 0 for acknowledgements */\n"
+"    struct nlmsghdr msg;  /* Message header that caused the error */\n"
+"};\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:205
+msgid ""
+"A netlink family usually specifies more message types, see the appropriate "
+"manual pages for that, for example, B<rtnetlink>(7)  for B<NETLINK_ROUTE>."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:209
+#, no-wrap
+msgid "Standard flag bits in I<nlmsg_flags>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:210 man-pages/man7/netlink.7:225
+#: man-pages/man7/netlink.7:250
+#, no-wrap
+msgid "_"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:211
+#, no-wrap
+msgid "NLM_F_REQUEST"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:211
+#, no-wrap
+msgid "Must be set on all request messages."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:212
+#, no-wrap
+msgid "NLM_F_MULTI"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:215
+#, no-wrap
+msgid ""
+"The message is part of a multipart message terminated by\n"
+"B<NLMSG_DONE>."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:216
+#, no-wrap
+msgid "NLM_F_ACK"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:216
+#, no-wrap
+msgid "Request for an acknowledgment on success."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:217
+#, no-wrap
+msgid "NLM_F_ECHO"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:217
+#, no-wrap
+msgid "Echo this request."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:224
+#, no-wrap
+msgid "Additional flag bits for GET requests"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:226
+#, no-wrap
+msgid "NLM_F_ROOT"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:226
+#, no-wrap
+msgid "Return the complete table instead of a single entry."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:227
+#, no-wrap
+msgid "NLM_F_MATCH"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:230
+#, no-wrap
+msgid ""
+"Return all entries matching criteria passed in message content.\n"
+"Not implemented yet."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:231
+#, no-wrap
+msgid "NLM_F_ATOMIC"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:231
+#, no-wrap
+msgid "Return an atomic snapshot of the table."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:232
+#, no-wrap
+msgid "NLM_F_DUMP"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:234
+#, no-wrap
+msgid "Convenience macro; equivalent to\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:234
+#, no-wrap
+msgid ".br\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:236
+#, no-wrap
+msgid "(NLM_F_ROOT|NLM_F_MATCH)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:245
+msgid ""
+"Note that B<NLM_F_ATOMIC> requires the B<CAP_NET_ADMIN> capability or an "
+"effective UID of 0."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:249
+#, no-wrap
+msgid "Additional flag bits for NEW requests"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:251
+#, no-wrap
+msgid "NLM_F_REPLACE"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:251
+#, no-wrap
+msgid "Replace existing matching object."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:252
+#, no-wrap
+msgid "NLM_F_EXCL"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:252
+#, no-wrap
+msgid "Don't replace if the object already exists."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:253
+#, no-wrap
+msgid "NLM_F_CREATE"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:253
+#, no-wrap
+msgid "Create object if it doesn't already exist."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:254
+#, no-wrap
+msgid "NLM_F_APPEND"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netlink.7:254
+#, no-wrap
+msgid "Add to the end of the object list."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:270
+msgid ""
+"I<nlmsg_seq> and I<nlmsg_pid> are used to track messages.  I<nlmsg_pid> "
+"shows the origin of the message.  Note that there isn't a 1:1 relationship "
+"between I<nlmsg_pid> and the PID of the process if the message originated "
+"from a netlink socket.  See the B<ADDRESS FORMATS> section for further "
+"information."
+msgstr ""
+
+#.  FIXME Explain more about nlmsg_seq and nlmsg_pid.
+#. type: Plain text
+#: man-pages/man7/netlink.7:277
+msgid "Both I<nlmsg_seq> and I<nlmsg_pid> are opaque to netlink core."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:295
+msgid ""
+"Netlink is not a reliable protocol.  It tries its best to deliver a message "
+"to its destination(s), but may drop messages when an out-of-memory condition"
+" or other error occurs.  For reliable transfer the sender can request an "
+"acknowledgement from the receiver by setting the B<NLM_F_ACK> flag.  An "
+"acknowledgment is an B<NLMSG_ERROR> packet with the error field set to 0.  "
+"The application must generate acknowledgements for received messages itself."
+"  The kernel tries to send an B<NLMSG_ERROR> message for every failed "
+"packet.  A user process should follow this convention too."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:306
+msgid ""
+"However, reliable transmissions from kernel to user are impossible in any "
+"case.  The kernel can't send a netlink message if the socket buffer is full:"
+" the message will be dropped and the kernel and the user-space process will "
+"no longer have the same view of kernel state.  It is up to the application "
+"to detect when this happens (via the B<ENOBUFS> error returned by "
+"B<recvmsg>(2))  and resynchronize."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/netlink.7:306
+#, no-wrap
+msgid "Address formats"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:316
+msgid ""
+"The I<sockaddr_nl> structure describes a netlink client in user space or in "
+"the kernel.  A I<sockaddr_nl> can be either unicast (only sent to one peer) "
+"or sent to netlink multicast groups (I<nl_groups> not equal 0)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:325
+#, no-wrap
+msgid ""
+"struct sockaddr_nl {\n"
+"    sa_family_t     nl_family;  /* AF_NETLINK */\n"
+"    unsigned short  nl_pad;     /* Zero */\n"
+"    pid_t           nl_pid;     /* Port ID */\n"
+"    __u32           nl_groups;  /* Multicast groups mask */\n"
+"};\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:356
+msgid ""
+"I<nl_pid> is the unicast address of netlink socket.  It's always 0 if the "
+"destination is in the kernel.  For a user-space process, I<nl_pid> is "
+"usually the PID of the process owning the destination socket.  However, "
+"I<nl_pid> identifies a netlink socket, not a process.  If a process owns "
+"several netlink sockets, then I<nl_pid> can be equal to the process ID only "
+"for at most one socket.  There are two ways to assign I<nl_pid> to a netlink"
+" socket.  If the application sets I<nl_pid> before calling B<bind>(2), then "
+"it is up to the application to make sure that I<nl_pid> is unique.  If the "
+"application sets it to 0, the kernel takes care of assigning it.  The kernel"
+" assigns the process ID to the first netlink socket the process opens and "
+"assigns a unique I<nl_pid> to every netlink socket that the process "
+"subsequently creates."
+msgstr ""
+
+#.  commit d629b836d151d43332492651dd841d32e57ebe3b
+#. type: Plain text
+#: man-pages/man7/netlink.7:393
+msgid ""
+"I<nl_groups> is a bit mask with every bit representing a netlink group "
+"number.  Each netlink family has a set of 32 multicast groups.  When "
+"B<bind>(2)  is called on the socket, the I<nl_groups> field in the "
+"I<sockaddr_nl> should be set to a bit mask of the groups which it wishes to "
+"listen to.  The default value for this field is zero which means that no "
+"multicasts will be received.  A socket may multicast messages to any of the "
+"multicast groups by setting I<nl_groups> to a bit mask of the groups it "
+"wishes to send to when it calls B<sendmsg>(2)  or does a B<connect>(2).  "
+"Only processes with an effective UID of 0 or the B<CAP_NET_ADMIN> capability"
+" may send or listen to a netlink multicast group.  Since Linux 2.6.13, "
+"messages can't be broadcast to multiple groups.  Any replies to a message "
+"received for a multicast group should be sent back to the sending PID and "
+"the multicast group.  Some Linux kernel subsystems may additionally allow "
+"other users to send and/or receive messages.  As at Linux 3.0, the "
+"B<NETLINK_KOBJECT_UEVENT>, B<NETLINK_GENERIC>, B<NETLINK_ROUTE>, and "
+"B<NETLINK_SELINUX> groups allow other users to receive messages.  No groups "
+"allow other users to send messages."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/netlink.7:394
+#, no-wrap
+msgid "Socket options"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:405
+msgid ""
+"To set or get a netlink socket option, call B<getsockopt>(2)  to read or "
+"B<setsockopt>(2)  to write the option with the option level argument set to "
+"B<SOL_NETLINK>.  Unless otherwise noted, I<optval> is a pointer to an "
+"I<int>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:405
+#, no-wrap
+msgid "B<NETLINK_PKTINFO> (since Linux 2.6.14)"
+msgstr ""
+
+#. 	commit 9a4595bc7e67962f13232ee55a64e063062c3a99
+#. 	Author: Patrick McHardy <kaber@trash.net>
+#. type: Plain text
+#: man-pages/man7/netlink.7:413
+msgid ""
+"Enable B<nl_pktinfo> control messages for received packets to get the "
+"extended destination group number."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:413
+#, no-wrap
+msgid ""
+"B<NETLINK_ADD_MEMBERSHIP>,\\ B<NETLINK_DROP_MEMBERSHIP> (since Linux 2.6.14)"
+msgstr ""
+
+#. 	commit 9a4595bc7e67962f13232ee55a64e063062c3a99
+#. 	Author: Patrick McHardy <kaber@trash.net>
+#. type: Plain text
+#: man-pages/man7/netlink.7:419
+msgid "Join/leave a group specified by I<optval>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:419
+#, no-wrap
+msgid "B<NETLINK_LIST_MEMBERSHIPS> (since Linux 4.2)"
+msgstr ""
+
+#. 	commit b42be38b2778eda2237fc759e55e3b698b05b315
+#. 	Author: David Herrmann <dh.herrmann@gmail.com>
+#. type: Plain text
+#: man-pages/man7/netlink.7:433
+msgid ""
+"Retrieve all groups a socket is a member of.  I<optval> is a pointer to "
+"B<__u32> and I<optlen> is the size of the array.  The array is filled with "
+"the full membership set of the socket, and the required array size is "
+"returned in I<optlen>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:433
+#, no-wrap
+msgid "B<NETLINK_BROADCAST_ERROR> (since Linux 2.6.30)"
+msgstr ""
+
+#. 	commit be0c22a46cfb79ab2342bb28fde99afa94ef868e
+#. 	Author: Pablo Neira Ayuso <pablo@netfilter.org>
+#. type: Plain text
+#: man-pages/man7/netlink.7:444
+msgid ""
+"When not set, B<netlink_broadcast()> only reports B<ESRCH> errors and "
+"silently ignore B<NOBUFS> errors."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:444
+#, no-wrap
+msgid "B<NETLINK_NO_ENOBUFS> (since Linux 2.6.30)"
+msgstr ""
+
+#. 	commit 38938bfe3489394e2eed5e40c9bb8f66a2ce1405
+#. 	Author: Pablo Neira Ayuso <pablo@netfilter.org>
+#. type: Plain text
+#: man-pages/man7/netlink.7:451
+msgid ""
+"This flag can be used by unicast and broadcast listeners to avoid receiving "
+"B<ENOBUFS> errors."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:451
+#, no-wrap
+msgid "B<NETLINK_LISTEN_ALL_NSID> (since Linux 4.2)"
+msgstr ""
+
+#. 	commit 59324cf35aba5336b611074028777838a963d03b
+#. 	Author: Nicolas Dichtel <nicolas.dichtel@6wind.com>
+#. type: Plain text
+#: man-pages/man7/netlink.7:462
+msgid ""
+"When set, this socket will receive netlink notifications from all network "
+"namespaces that have an I<nsid> assigned into the network namespace where "
+"the socket has been opened.  The I<nsid> is sent to user space via an "
+"ancillary data."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netlink.7:462
+#, no-wrap
+msgid "B<NETLINK_CAP_ACK> (since Linux 4.2)"
+msgstr ""
+
+#. 	commit 0a6a3a23ea6efde079a5b77688541a98bf202721
+#. 	Author: Christophe Ricard <christophe.ricard@gmail.com>
+#. type: Plain text
+#: man-pages/man7/netlink.7:471
+msgid ""
+"The kernel may fail to allocate the necessary room for the acknowledgment "
+"message back to user space.  This option trims off the payload of the "
+"original netlink message.  The netlink message header is still included, so "
+"the user can guess from the sequence number which message triggered the "
+"acknowledgment."
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/netlink.7:471
+#, no-wrap
+msgid "VERSIONS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:473
+msgid "The socket interface to netlink first appeared Linux 2.2."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:477
+msgid ""
+"Linux 2.0 supported a more primitive device-based netlink interface (which "
+"is still available as a compatibility option).  This obsolete interface is "
+"not described here."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:483
+msgid ""
+"It is often better to use netlink via I<libnetlink> or I<libnl> than via the"
+" low-level kernel interface."
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/netlink.7:483
+#, no-wrap
+msgid "BUGS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:485
+msgid "This manual page is not complete."
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/netlink.7:485
+#, no-wrap
+msgid "EXAMPLE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:493
+msgid ""
+"The following example creates a B<NETLINK_ROUTE> netlink socket which will "
+"listen to the B<RTMGRP_LINK> (network interface create/delete/up/down "
+"events) and B<RTMGRP_IPV4_IFADDR> (IPv4 addresses add/delete events) "
+"multicast groups."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:497
+#, no-wrap
+msgid "struct sockaddr_nl sa;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:501
+#, no-wrap
+msgid ""
+"memset(&sa, 0, sizeof(sa));\n"
+"sa.nl_family = AF_NETLINK;\n"
+"sa.nl_groups = RTMGRP_LINK | RTMGRP_IPV4_IFADDR;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:504
+#, no-wrap
+msgid ""
+"fd = socket(AF_NETLINK, SOCK_RAW, NETLINK_ROUTE);\n"
+"bind(fd, (struct sockaddr *) &sa, sizeof(sa));\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:511
+msgid ""
+"The next example demonstrates how to send a netlink message to the kernel "
+"(pid 0).  Note that the application must take care of message sequence "
+"numbers in order to reliably track acknowledgements."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:518
+#, no-wrap
+msgid ""
+"struct nlmsghdr *nh;    /* The nlmsghdr with payload to send */\n"
+"struct sockaddr_nl sa;\n"
+"struct iovec iov = { nh, nh-E<gt>nlmsg_len };\n"
+"struct msghdr msg;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:526
+#, no-wrap
+msgid ""
+"msg = { &sa, sizeof(sa), &iov, 1, NULL, 0, 0 };\n"
+"memset(&sa, 0, sizeof(sa));\n"
+"sa.nl_family = AF_NETLINK;\n"
+"nh-E<gt>nlmsg_pid = 0;\n"
+"nh-E<gt>nlmsg_seq = ++sequence_number;\n"
+"/* Request an ack from kernel by setting NLM_F_ACK */\n"
+"nh-E<gt>nlmsg_flags |= NLM_F_ACK;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:528
+#, no-wrap
+msgid "sendmsg(fd, &msg, 0);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:532
+msgid "And the last example is about reading netlink message."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:542
+#, no-wrap
+msgid ""
+"int len;\n"
+"char buf[8192];     /* 8192 to avoid message truncation on\n"
+"                       platforms with page size E<gt> 4096 */\n"
+"struct iovec iov = { buf, sizeof(buf) };\n"
+"struct sockaddr_nl sa;\n"
+"struct msghdr msg;\n"
+"struct nlmsghdr *nh;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:545
+#, no-wrap
+msgid ""
+"msg = { &sa, sizeof(sa), &iov, 1, NULL, 0, 0 };\n"
+"len = recvmsg(fd, &msg, 0);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:551
+#, no-wrap
+msgid ""
+"for (nh = (struct nlmsghdr *) buf; NLMSG_OK (nh, len);\n"
+"     nh = NLMSG_NEXT (nh, len)) {\n"
+"    /* The end of multipart message */\n"
+"    if (nh-E<gt>nlmsg_type == NLMSG_DONE)\n"
+"        return;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:555
+#, no-wrap
+msgid ""
+"    if (nh-E<gt>nlmsg_type == NLMSG_ERROR)\n"
+"        /* Do some error handling */\n"
+"    ...\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:559
+#, no-wrap
+msgid ""
+"    /* Continue with parsing payload */\n"
+"    ...\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:567
+msgid ""
+"B<cmsg>(3), B<netlink>(3), B<capabilities>(7), B<rtnetlink>(7), "
+"B<sock_diag>(7)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:571
+msgid ""
+"E<.UR ftp://ftp.inr.ac.ru\\:/ip-routing\\:/iproute2*> information about "
+"libnetlink E<.UE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:575
+msgid ""
+"E<.UR http://www.infradead.org\\:/~tgr\\:/libnl/> information about libnl "
+"E<.UE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netlink.7:576
+msgid "RFC 3549 \"Linux Netlink as an IP Services Protocol\""
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/numa.7:29
+#, no-wrap
+msgid "NUMA"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/numa.7:29
+#, no-wrap
+msgid "2012-08-05"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:32
+msgid "numa - overview of Non-Uniform Memory Architecture"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:43
+msgid ""
+"Non-Uniform Memory Access (NUMA) refers to multiprocessor systems whose "
+"memory is divided into multiple memory nodes.  The access time of a memory "
+"node depends on the relative locations of the accessing CPU and the accessed"
+" node.  (This contrasts with a symmetric multiprocessor system, where the "
+"access time for all of the memory is the same for all CPUs.)  Normally, each"
+" CPU on a NUMA system has a local memory node whose contents can be accessed"
+" faster than the memory in the node local to another CPU or the memory on a "
+"bus shared by all CPUs."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/numa.7:43
+#, no-wrap
+msgid "NUMA system calls"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:54
+msgid ""
+"The Linux kernel implements the following NUMA-related system calls: "
+"B<get_mempolicy>(2), B<mbind>(2), B<migrate_pages>(2), B<move_pages>(2), and"
+" B<set_mempolicy>(2).  However, applications should normally use the "
+"interface provided by I<libnuma>; see \"Library Support\" below."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/numa.7:54
+#, no-wrap
+msgid "/proc/[number]/numa_maps (since Linux 2.6.14)"
+msgstr ""
+
+#.  See also Changelog-2.6.14
+#. type: Plain text
+#: man-pages/man7/numa.7:58
+msgid ""
+"This file displays information about a process's NUMA memory policy and "
+"allocation."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:62
+msgid ""
+"Each line contains information about a memory range used by the process, "
+"displaying\\(emamong other information\\(emthe effective memory policy for "
+"that memory range and on which nodes the pages have been allocated."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:70
+msgid ""
+"I<numa_maps> is a read-only file.  When I</proc/E<lt>pidE<gt>/numa_maps> is "
+"read, the kernel will scan the virtual address space of the process and "
+"report how memory is used.  One line is displayed for each unique memory "
+"range of the process."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:77
+msgid ""
+"The first field of each line shows the starting address of the memory range."
+"  This field allows a correlation with the contents of the "
+"I</proc/E<lt>pidE<gt>/maps> file, which contains the end address of the "
+"range and other information, such as the access permissions and sharing."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:85
+msgid ""
+"The second field shows the memory policy currently in effect for the memory "
+"range.  Note that the effective policy is not necessarily the policy "
+"installed by the process for that memory range.  Specifically, if the "
+"process installed a \"default\" policy for that range, the effective policy "
+"for that range will be the process policy, which may or may not be "
+"\"default\"."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:88
+msgid ""
+"The rest of the line contains information about the pages allocated in the "
+"memory range, as follows:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/numa.7:88
+#, no-wrap
+msgid "I<NE<lt>nodeE<gt>=E<lt>nr_pagesE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:101
+msgid ""
+"The number of pages allocated on I<E<lt>nodeE<gt>>.  I<E<lt>nr_pagesE<gt>> "
+"includes only pages currently mapped by the process.  Page migration and "
+"memory reclaim may have temporarily unmapped pages associated with this "
+"memory range.  These pages may show up again only after the process has "
+"attempted to reference them.  If the memory range represents a shared memory"
+" area or file mapping, other processes may currently have additional pages "
+"mapped in a corresponding memory range."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/numa.7:101
+#, no-wrap
+msgid "I<file=E<lt>filenameE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:107
+msgid ""
+"The file backing the memory range.  If the file is mapped as private, write "
+"accesses may have generated COW (Copy-On-Write) pages in this memory range."
+"  These pages are displayed as anonymous pages."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/numa.7:107
+#, no-wrap
+msgid "I<heap>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:110
+msgid "Memory range is used for the heap."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/numa.7:110
+#, no-wrap
+msgid "I<stack>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:113
+msgid "Memory range is used for the stack."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/numa.7:113
+#, no-wrap
+msgid "I<huge>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:117
+msgid ""
+"Huge memory range.  The page counts shown are huge pages and not regular "
+"sized pages."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/numa.7:117
+#, no-wrap
+msgid "I<anon=E<lt>pagesE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:120
+msgid "The number of anonymous page in the range."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/numa.7:120
+#, no-wrap
+msgid "I<dirty=E<lt>pagesE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:123
+msgid "Number of dirty pages."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/numa.7:123
+#, no-wrap
+msgid "I<mapped=E<lt>pagesE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:130
+msgid ""
+"Total number of mapped pages, if different from I<dirty> and I<anon> pages."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/numa.7:130
+#, no-wrap
+msgid "I<mapmax=E<lt>countE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:136
+msgid ""
+"Maximum mapcount (number of processes mapping a single page) encountered "
+"during the scan.  This may be used as an indicator of the degree of sharing "
+"occurring in a given memory range."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/numa.7:136
+#, no-wrap
+msgid "I<swapcache=E<lt>countE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:139
+msgid "Number of pages that have an associated entry on a swap device."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/numa.7:139
+#, no-wrap
+msgid "I<active=E<lt>pagesE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:145
+msgid ""
+"The number of pages on the active list.  This field is shown only if "
+"different from the number of pages in this range.  This means that some "
+"inactive pages exist in the memory range that may be removed from memory by "
+"the swapper soon."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/numa.7:145
+#, no-wrap
+msgid "I<writeback=E<lt>pagesE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:148
+msgid "Number of pages that are currently being written out to disk."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:150
+msgid "No standards govern NUMA interfaces."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:157
+msgid ""
+"The Linux NUMA system calls and I</proc> interface are available only if the"
+" kernel was configured and built with the B<CONFIG_NUMA> option."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/numa.7:157
+#, no-wrap
+msgid "Library support"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:166
+msgid ""
+"Link with I<-lnuma> to get the system call definitions.  I<libnuma> and the "
+"required I<E<lt>numaif.hE<gt>> header are available in the I<numactl> "
+"package."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:183
+msgid ""
+"However, applications should not use these system calls directly.  Instead, "
+"the higher level interface provided by the B<numa>(3)  functions in the "
+"I<numactl> package is recommended.  The I<numactl> package is available at "
+"E<.UR ftp://oss.sgi.com\\:/www\\:/projects\\:/libnuma\\:/download/> E<.UE .>"
+" The package is also included in some Linux distributions.  Some "
+"distributions include the development library and header in the separate I"
+"<numactl-devel> package."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/numa.7:190
+msgid ""
+"B<get_mempolicy>(2), B<mbind>(2), B<move_pages>(2), B<set_mempolicy>(2), "
+"B<numa>(3), B<cpuset>(7), B<numactl>(8)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/netdevice.7:18
+#, no-wrap
+msgid "NETDEVICE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:21
+msgid "netdevice - low-level access to Linux network devices"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:23
+msgid "B<#include E<lt>sys/ioctl.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:25
+msgid "B<#include E<lt>net/if.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:28
+msgid ""
+"This man page describes the sockets interface which is used to configure "
+"network devices."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:35
+msgid ""
+"Linux supports some standard ioctls to configure network devices.  They can "
+"be used on any socket's file descriptor regardless of the family or type.  "
+"Most of them pass an I<ifreq> structure:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:56
+#, no-wrap
+msgid ""
+"struct ifreq {\n"
+"    char ifr_name[IFNAMSIZ]; /* Interface name */\n"
+"    union {\n"
+"        struct sockaddr ifr_addr;\n"
+"        struct sockaddr ifr_dstaddr;\n"
+"        struct sockaddr ifr_broadaddr;\n"
+"        struct sockaddr ifr_netmask;\n"
+"        struct sockaddr ifr_hwaddr;\n"
+"        short           ifr_flags;\n"
+"        int             ifr_ifindex;\n"
+"        int             ifr_metric;\n"
+"        int             ifr_mtu;\n"
+"        struct ifmap    ifr_map;\n"
+"        char            ifr_slave[IFNAMSIZ];\n"
+"        char            ifr_newname[IFNAMSIZ];\n"
+"        char           *ifr_data;\n"
+"    };\n"
+"};\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:64
+msgid ""
+"Normally, the user specifies which device to affect by setting I<ifr_name> "
+"to the name of the interface.  All other members of the structure may share "
+"memory."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/netdevice.7:64
+#, no-wrap
+msgid "Ioctls"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:72
+msgid ""
+"If an ioctl is marked as privileged, then using it requires an effective "
+"user ID of 0 or the B<CAP_NET_ADMIN> capability.  If this is not the case, "
+"B<EPERM> will be returned."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netdevice.7:72
+#, no-wrap
+msgid "B<SIOCGIFNAME>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:80
+msgid ""
+"Given the I<ifr_ifindex>, return the name of the interface in I<ifr_name>.  "
+"This is the only ioctl which returns its result in I<ifr_name>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netdevice.7:80
+#, no-wrap
+msgid "B<SIOCGIFINDEX>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:84
+msgid "Retrieve the interface index of the interface into I<ifr_ifindex>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netdevice.7:84
+#, no-wrap
+msgid "B<SIOCGIFFLAGS>, B<SIOCSIFFLAGS>"
+msgstr ""
+
+#.  Do not right adjust text blocks in tables
+#. type: Plain text
+#: man-pages/man7/netdevice.7:90
+msgid ""
+"Get or set the active flag word of the device.  I<ifr_flags> contains a bit "
+"mask of the following values:"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:95
+#, no-wrap
+msgid "Device flags"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:96
+#, no-wrap
+msgid "IFF_UP"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:96
+#, no-wrap
+msgid "Interface is running."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:97
+#, no-wrap
+msgid "IFF_BROADCAST"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:97
+#, no-wrap
+msgid "Valid broadcast address set."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:98
+#, no-wrap
+msgid "IFF_DEBUG"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:98
+#, no-wrap
+msgid "Internal debugging flag."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:99
+#, no-wrap
+msgid "IFF_LOOPBACK"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:99
+#, no-wrap
+msgid "Interface is a loopback interface."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:100
+#, no-wrap
+msgid "IFF_POINTOPOINT"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:100
+#, no-wrap
+msgid "Interface is a point-to-point link."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:101
+#, no-wrap
+msgid "IFF_RUNNING"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:101
+#, no-wrap
+msgid "Resources allocated."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:102
+#, no-wrap
+msgid "IFF_NOARP"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:104
+#, no-wrap
+msgid "No arp protocol, L2 destination address not set."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:105
+#, no-wrap
+msgid "IFF_PROMISC"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:105
+#, no-wrap
+msgid "Interface is in promiscuous mode."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:106
+#, no-wrap
+msgid "IFF_NOTRAILERS"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:106
+#, no-wrap
+msgid "Avoid use of trailers."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:107
+#, no-wrap
+msgid "IFF_ALLMULTI"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:107
+#, no-wrap
+msgid "Receive all multicast packets."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:108
+#, no-wrap
+msgid "IFF_MASTER"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:108
+#, no-wrap
+msgid "Master of a load balancing bundle."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:109
+#, no-wrap
+msgid "IFF_SLAVE"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:109
+#, no-wrap
+msgid "Slave of a load balancing bundle."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:110
+#, no-wrap
+msgid "IFF_MULTICAST"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:110
+#, no-wrap
+msgid "Supports multicast"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:111
+#, no-wrap
+msgid "IFF_PORTSEL"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:111
+#, no-wrap
+msgid "Is able to select media type via ifmap."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:112
+#, no-wrap
+msgid "IFF_AUTOMEDIA"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:112
+#, no-wrap
+msgid "Auto media selection active."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:113
+#, no-wrap
+msgid "IFF_DYNAMIC"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:115
+#, no-wrap
+msgid "The addresses are lost when the interface goes down."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:116
+#, no-wrap
+msgid "IFF_LOWER_UP"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:116
+#, no-wrap
+msgid "Driver signals L1 up (since Linux 2.6.17)"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:117
+#, no-wrap
+msgid "IFF_DORMANT"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:117
+#, no-wrap
+msgid "Driver signals dormant (since Linux 2.6.17)"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:118
+#, no-wrap
+msgid "IFF_ECHO"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:118
+#, no-wrap
+msgid "Echo sent packets (since Linux 2.6.25)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:124
+msgid ""
+"Setting the active flag word is a privileged operation, but any process may "
+"read it."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netdevice.7:124
+#, no-wrap
+msgid "B<SIOCGIFPFLAGS>, B<SIOCSIFPFLAGS>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:129
+msgid ""
+"Get or set extended (private) flags for the device.  I<ifr_flags> contains a"
+" bit mask of the following values:"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:133
+#, no-wrap
+msgid "Private flags"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:134
+#, no-wrap
+msgid "IFF_802_1Q_VLAN"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:134
+#, no-wrap
+msgid "Interface is 802.1Q VLAN device."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:135
+#, no-wrap
+msgid "IFF_EBRIDGE"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:135
+#, no-wrap
+msgid "Interface is Ethernet bridging device."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:136
+#, no-wrap
+msgid "IFF_SLAVE_INACTIVE"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:136
+#, no-wrap
+msgid "Interface is inactive bonding slave."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:137
+#, no-wrap
+msgid "IFF_MASTER_8023AD"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:137
+#, no-wrap
+msgid "Interface is 802.3ad bonding master."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:138
+#, no-wrap
+msgid "IFF_MASTER_ALB"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:138
+#, no-wrap
+msgid "Interface is balanced-alb bonding master."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:139
+#, no-wrap
+msgid "IFF_BONDING"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:139
+#, no-wrap
+msgid "Interface is a bonding master or slave."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:140
+#, no-wrap
+msgid "IFF_SLAVE_NEEDARP"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:140
+#, no-wrap
+msgid "Interface needs ARPs for validation."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:141
+#, no-wrap
+msgid "IFF_ISATAP"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/netdevice.7:141
+#, no-wrap
+msgid "Interface is RFC4214 ISATAP interface."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:145
+msgid ""
+"Setting the extended (private) interface flags is a privileged operation."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netdevice.7:145
+#, no-wrap
+msgid "B<SIOCGIFADDR>, B<SIOCSIFADDR>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:153
+msgid ""
+"Get or set the address of the device using I<ifr_addr>.  Setting the "
+"interface address is a privileged operation.  For compatibility, only "
+"B<AF_INET> addresses are accepted or returned."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netdevice.7:153
+#, no-wrap
+msgid "B<SIOCGIFDSTADDR>, B<SIOCSIFDSTADDR>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:161
+msgid ""
+"Get or set the destination address of a point-to-point device using "
+"I<ifr_dstaddr>.  For compatibility, only B<AF_INET> addresses are accepted "
+"or returned.  Setting the destination address is a privileged operation."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netdevice.7:161
+#, no-wrap
+msgid "B<SIOCGIFBRDADDR>, B<SIOCSIFBRDADDR>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:169
+msgid ""
+"Get or set the broadcast address for a device using I<ifr_brdaddr>.  For "
+"compatibility, only B<AF_INET> addresses are accepted or returned.  Setting "
+"the broadcast address is a privileged operation."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netdevice.7:169
+#, no-wrap
+msgid "B<SIOCGIFNETMASK>, B<SIOCSIFNETMASK>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:177
+msgid ""
+"Get or set the network mask for a device using I<ifr_netmask>.  For "
+"compatibility, only B<AF_INET> addresses are accepted or returned.  Setting "
+"the network mask is a privileged operation."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netdevice.7:177
+#, no-wrap
+msgid "B<SIOCGIFMETRIC>, B<SIOCSIFMETRIC>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:186
+msgid ""
+"Get or set the metric of the device using I<ifr_metric>.  This is currently "
+"not implemented; it sets I<ifr_metric> to 0 if you attempt to read it and "
+"returns B<EOPNOTSUPP> if you attempt to set it."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netdevice.7:186
+#, no-wrap
+msgid "B<SIOCGIFMTU>, B<SIOCSIFMTU>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:193
+msgid ""
+"Get or set the MTU (Maximum Transfer Unit) of a device using I<ifr_mtu>.  "
+"Setting the MTU is a privileged operation.  Setting the MTU to too small "
+"values may cause kernel crashes."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netdevice.7:193
+#, no-wrap
+msgid "B<SIOCGIFHWADDR>, B<SIOCSIFHWADDR>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:204
+msgid ""
+"Get or set the hardware address of a device using I<ifr_hwaddr>.  The "
+"hardware address is specified in a struct I<sockaddr>.  I<sa_family> "
+"contains the ARPHRD_* device type, I<sa_data> the L2 hardware address "
+"starting from byte 0.  Setting the hardware address is a privileged "
+"operation."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netdevice.7:204
+#, no-wrap
+msgid "B<SIOCSIFHWBROADCAST>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:209
+msgid ""
+"Set the hardware broadcast address of a device from I<ifr_hwaddr>.  This is "
+"a privileged operation."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netdevice.7:209
+#, no-wrap
+msgid "B<SIOCGIFMAP>, B<SIOCSIFMAP>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:214
+msgid ""
+"Get or set the interface's hardware parameters using I<ifr_map>.  Setting "
+"the parameters is a privileged operation."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:225
+#, no-wrap
+msgid ""
+"struct ifmap {\n"
+"    unsigned long   mem_start;\n"
+"    unsigned long   mem_end;\n"
+"    unsigned short  base_addr;\n"
+"    unsigned char   irq;\n"
+"    unsigned char   dma;\n"
+"    unsigned char   port;\n"
+"};\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:230
+msgid ""
+"The interpretation of the ifmap structure depends on the device driver and "
+"the architecture."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netdevice.7:230
+#, no-wrap
+msgid "B<SIOCADDMULTI>, B<SIOCDELMULTI>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:239
+msgid ""
+"Add an address to or delete an address from the device's link layer "
+"multicast filters using I<ifr_hwaddr>.  These are privileged operations.  "
+"See also B<packet>(7)  for an alternative."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netdevice.7:239
+#, no-wrap
+msgid "B<SIOCGIFTXQLEN>, B<SIOCSIFTXQLEN>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:244
+msgid ""
+"Get or set the transmit queue length of a device using I<ifr_qlen>.  Setting"
+" the transmit queue length is a privileged operation."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netdevice.7:244
+#, no-wrap
+msgid "B<SIOCSIFNAME>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:253
+msgid ""
+"Changes the name of the interface specified in I<ifr_name> to "
+"I<ifr_newname>.  This is a privileged operation.  It is allowed only when "
+"the interface is not up."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/netdevice.7:253
+#, no-wrap
+msgid "B<SIOCGIFCONF>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:263
+msgid ""
+"Return a list of interface (transport layer) addresses.  This currently "
+"means only addresses of the B<AF_INET> (IPv4) family for compatibility.  "
+"Unlike the others, this ioctl passes an I<ifconf> structure:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:273
+#, no-wrap
+msgid ""
+"struct ifconf {\n"
+"    int                 ifc_len; /* size of buffer */\n"
+"    union {\n"
+"        char           *ifc_buf; /* buffer address */\n"
+"        struct ifreq   *ifc_req; /* array of structures */\n"
+"    };\n"
+"};\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:299
+msgid ""
+"If I<ifc_req> is NULL, B<SIOCGIFCONF> returns the necessary buffer size in "
+"bytes for receiving all available addresses in I<ifc_len>.  Otherwise, "
+"I<ifc_req> contains a pointer to an array of I<ifreq> structures to be "
+"filled with all currently active L3 interface addresses.  I<ifc_len> "
+"contains the size of the array in bytes.  Within each I<ifreq> structure, "
+"I<ifr_name> will receive the interface name, and I<ifr_addr> the address.  "
+"The actual number of bytes transferred is returned in I<ifc_len>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:315
+msgid ""
+"If the size specified by I<ifc_len> is insufficient to store all the "
+"addresses, the kernel will skip the exceeding ones and return success.  "
+"There is no reliable way of detecting this condition once it has occurred.  "
+"It is therefore recommended to either determine the necessary buffer size "
+"beforehand by calling B<SIOCGIFCONF> with I<ifc_req> set to NULL, or to "
+"retry the call with a bigger buffer whenever I<ifc_len> upon return differs "
+"by less than I<sizeof(struct ifreq)> from its original value."
+msgstr ""
+
+#.  Slaving isn't supported in 2.2
+#.  .
+#.  .TP
+#.  .BR SIOCGIFSLAVE ", " SIOCSIFSLAVE
+#.  Get or set the slave device using
+#.  .IR ifr_slave .
+#.  Setting the slave device is a privileged operation.
+#.  .PP
+#.  FIXME . add amateur radio stuff.
+#. type: Plain text
+#: man-pages/man7/netdevice.7:332
+msgid ""
+"If an error occurs accessing the I<ifconf> or I<ifreq> structures, B<EFAULT>"
+" will be returned."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:338
+msgid ""
+"Most protocols support their own ioctls to configure protocol-specific "
+"interface options.  See the protocol man pages for a description.  For "
+"configuring IP addresses, see B<ip>(7)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:341
+msgid ""
+"In addition, some devices support private ioctls.  These are not described "
+"here."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:349
+msgid ""
+"Strictly speaking, B<SIOCGIFCONF> and the other ioctls that accept or return"
+" only B<AF_INET> socket addresses, are IP-specific and belong in B<ip>(7)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:354
+msgid ""
+"The names of interfaces with no addresses or that don't have the "
+"B<IFF_RUNNING> flag set can be found via I</proc/net/dev>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:359
+msgid ""
+"Local IPv6 IP addresses can be found via I</proc/net> or via "
+"B<rtnetlink>(7)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:365
+msgid ""
+"glibc 2.1 is missing the I<ifr_newname> macro in I<E<lt>net/if.hE<gt>>.  Add"
+" the following to your program as a workaround:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:371
+#, no-wrap
+msgid ""
+"#ifndef ifr_newname\n"
+"#define ifr_newname     ifr_ifru.ifru_slave\n"
+"#endif\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/netdevice.7:377
+msgid "B<proc>(5), B<capabilities>(7), B<ip>(7), B<rtnetlink>(7)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/namespaces.7:27
+#, no-wrap
+msgid "NAMESPACES"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/namespaces.7:27
+#, no-wrap
+msgid "2019-03-06"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:30
+msgid "namespaces - overview of Linux namespaces"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:37
+msgid ""
+"A namespace wraps a global system resource in an abstraction that makes it "
+"appear to the processes within the namespace that they have their own "
+"isolated instance of the global resource.  Changes to the global resource "
+"are visible to other processes that are members of the namespace, but are "
+"invisible to other processes.  One use of namespaces is to implement "
+"containers."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:39
+msgid "Linux provides the following namespaces:"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:42
+#, no-wrap
+msgid "Namespace"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:42
+#, no-wrap
+msgid "Constant"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:42
+#, no-wrap
+msgid "Isolates"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:43
+#, no-wrap
+msgid "Cgroup"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:43
+#, no-wrap
+msgid "CLONE_NEWCGROUP"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:43
+#, no-wrap
+msgid "Cgroup root directory"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:44
+#, no-wrap
+msgid "IPC"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:44
+#, no-wrap
+msgid "CLONE_NEWIPC"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:44
+#, no-wrap
+msgid "System V IPC, POSIX message queues"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:45
+#, no-wrap
+msgid "Network"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:45
+#, no-wrap
+msgid "CLONE_NEWNET"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:45
+#, no-wrap
+msgid "Network devices, stacks, ports, etc."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:46
+#, no-wrap
+msgid "Mount"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:46
+#, no-wrap
+msgid "CLONE_NEWNS"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:46
+#, no-wrap
+msgid "Mount points"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:47
+#, no-wrap
+msgid "PID"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:47
+#, no-wrap
+msgid "CLONE_NEWPID"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:47
+#, no-wrap
+msgid "Process IDs"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:48
+#, no-wrap
+msgid "User"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:48
+#, no-wrap
+msgid "CLONE_NEWUSER"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:48
+#, no-wrap
+msgid "User and group IDs"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:49
+#, no-wrap
+msgid "UTS"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:49
+#, no-wrap
+msgid "CLONE_NEWUTS"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:49
+#, no-wrap
+msgid "Hostname and NIS domain name"
+msgstr ""
+
+#.  ==================== The namespaces API ====================
+#. type: Plain text
+#: man-pages/man7/namespaces.7:58
+msgid ""
+"This page describes the various namespaces and the associated I</proc> "
+"files, and summarizes the APIs for working with namespaces."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/namespaces.7:58
+#, no-wrap
+msgid "The namespaces API"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:63
+msgid ""
+"As well as various I</proc> files described below, the namespaces API "
+"includes the following system calls:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/namespaces.7:63
+#, no-wrap
+msgid "B<clone>(2)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:76
+msgid ""
+"The B<clone>(2)  system call creates a new process.  If the I<flags> "
+"argument of the call specifies one or more of the B<CLONE_NEW*> flags listed"
+" below, then new namespaces are created for each flag, and the child process"
+" is made a member of those namespaces.  (This system call also implements a "
+"number of features unrelated to namespaces.)"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/namespaces.7:76
+#, no-wrap
+msgid "B<setns>(2)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:85
+msgid ""
+"The B<setns>(2)  system call allows the calling process to join an existing "
+"namespace.  The namespace to join is specified via a file descriptor that "
+"refers to one of the I</proc/[pid]/ns> files described below."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/namespaces.7:85
+#, no-wrap
+msgid "B<unshare>(2)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:98
+msgid ""
+"The B<unshare>(2)  system call moves the calling process to a new namespace."
+"  If the I<flags> argument of the call specifies one or more of the "
+"B<CLONE_NEW*> flags listed below, then new namespaces are created for each "
+"flag, and the calling process is made a member of those namespaces.  (This "
+"system call also implements a number of features unrelated to namespaces.)"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/namespaces.7:98
+#, no-wrap
+msgid "B<ioctl>(2)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:105
+msgid ""
+"Various B<ioctl>(2)  operations can be used to discover information about "
+"namespaces.  These operations are described in B<ioctl_ns>(2)."
+msgstr ""
+
+#.  ==================== The /proc/[pid]/ns/ directory ====================
+#. type: Plain text
+#: man-pages/man7/namespaces.7:121
+msgid ""
+"Creation of new namespaces using B<clone>(2)  and B<unshare>(2)  in most "
+"cases requires the B<CAP_SYS_ADMIN> capability, since, in the new namespace,"
+" the creator will have the power to change global resources that are visible"
+" to other processes that are subsequently created in, or join the namespace."
+"  User namespaces are the exception: since Linux 3.8, no privilege is "
+"required to create a user namespace."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/namespaces.7:121
+#, no-wrap
+msgid "The /proc/[pid]/ns/ directory"
+msgstr ""
+
+#.  See commit 6b4e306aa3dc94a0545eb9279475b1ab6209a31f
+#. type: Plain text
+#: man-pages/man7/namespaces.7:128
+msgid ""
+"Each process has a I</proc/[pid]/ns/> subdirectory containing one entry for "
+"each namespace that supports being manipulated by B<setns>(2):"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:141
+#, no-wrap
+msgid ""
+"$ B<ls -l /proc/$$/ns>\n"
+"total 0\n"
+"lrwxrwxrwx. 1 mtk mtk 0 Apr 28 12:46 cgroup -E<gt> cgroup:[4026531835]\n"
+"lrwxrwxrwx. 1 mtk mtk 0 Apr 28 12:46 ipc -E<gt> ipc:[4026531839]\n"
+"lrwxrwxrwx. 1 mtk mtk 0 Apr 28 12:46 mnt -E<gt> mnt:[4026531840]\n"
+"lrwxrwxrwx. 1 mtk mtk 0 Apr 28 12:46 net -E<gt> net:[4026531969]\n"
+"lrwxrwxrwx. 1 mtk mtk 0 Apr 28 12:46 pid -E<gt> pid:[4026531836]\n"
+"lrwxrwxrwx. 1 mtk mtk 0 Apr 28 12:46 pid_for_children -E<gt> pid:[4026531834]\n"
+"lrwxrwxrwx. 1 mtk mtk 0 Apr 28 12:46 user -E<gt> user:[4026531837]\n"
+"lrwxrwxrwx. 1 mtk mtk 0 Apr 28 12:46 uts -E<gt> uts:[4026531838]\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:151
+msgid ""
+"Bind mounting (see B<mount>(2))  one of the files in this directory to "
+"somewhere else in the filesystem keeps the corresponding namespace of the "
+"process specified by I<pid> alive even if all processes currently in the "
+"namespace terminate."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:162
+msgid ""
+"Opening one of the files in this directory (or a file that is bind mounted "
+"to one of these files)  returns a file handle for the corresponding "
+"namespace of the process specified by I<pid>.  As long as this file "
+"descriptor remains open, the namespace will remain alive, even if all "
+"processes in the namespace terminate.  The file descriptor can be passed to "
+"B<setns>(2)."
+msgstr ""
+
+#.  commit bf056bfa80596a5d14b26b17276a56a0dcb080e5
+#. type: Plain text
+#: man-pages/man7/namespaces.7:178
+msgid ""
+"In Linux 3.7 and earlier, these files were visible as hard links.  Since "
+"Linux 3.8, they appear as symbolic links.  If two processes are in the same "
+"namespace, then the device IDs and inode numbers of their "
+"I</proc/[pid]/ns/xxx> symbolic links will be the same; an application can "
+"check this using the I<stat.st_dev> and I<stat.st_ino> fields returned by "
+"B<stat>(2).  The content of this symbolic link is a string containing the "
+"namespace type and inode number as in the following example:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:183
+#, no-wrap
+msgid ""
+"$ B<readlink /proc/$$/ns/uts>\n"
+"uts:[4026531838]\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:187
+msgid "The symbolic links in this subdirectory are as follows:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/namespaces.7:187
+#, no-wrap
+msgid "I</proc/[pid]/ns/cgroup> (since Linux 4.6)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:190
+msgid "This file is a handle for the cgroup namespace of the process."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/namespaces.7:190
+#, no-wrap
+msgid "I</proc/[pid]/ns/ipc> (since Linux 3.0)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:193
+msgid "This file is a handle for the IPC namespace of the process."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/namespaces.7:193
+#, no-wrap
+msgid "I</proc/[pid]/ns/mnt> (since Linux 3.8)"
+msgstr ""
+
+#.  commit 8823c079ba7136dc1948d6f6dcb5f8022bde438e
+#. type: Plain text
+#: man-pages/man7/namespaces.7:197
+msgid "This file is a handle for the mount namespace of the process."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/namespaces.7:197
+#, no-wrap
+msgid "I</proc/[pid]/ns/net> (since Linux 3.0)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:200
+msgid "This file is a handle for the network namespace of the process."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/namespaces.7:200
+#, no-wrap
+msgid "I</proc/[pid]/ns/pid> (since Linux 3.8)"
+msgstr ""
+
+#.  commit 57e8391d327609cbf12d843259c968b9e5c1838f
+#. type: Plain text
+#: man-pages/man7/namespaces.7:206
+msgid ""
+"This file is a handle for the PID namespace of the process.  This handle is "
+"permanent for the lifetime of the process (i.e., a process's PID namespace "
+"membership never changes)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/namespaces.7:206
+#, no-wrap
+msgid "I</proc/[pid]/ns/pid_for_children> (since Linux 4.12)"
+msgstr ""
+
+#.  commit eaa0d190bfe1ed891b814a52712dcd852554cb08
+#. type: Plain text
+#: man-pages/man7/namespaces.7:224
+msgid ""
+"This file is a handle for the PID namespace of child processes created by "
+"this process.  This can change as a consequence of calls to B<unshare>(2)  "
+"and B<setns>(2)  (see B<pid_namespaces>(7)), so the file may differ from "
+"I</proc/[pid]/ns/pid>.  The symbolic link gains a value only after the first"
+" child process is created in the namespace.  (Beforehand, B<readlink>(2)  of"
+" the symbolic link will return an empty buffer.)"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/namespaces.7:224
+#, no-wrap
+msgid "I</proc/[pid]/ns/user> (since Linux 3.8)"
+msgstr ""
+
+#.  commit cde1975bc242f3e1072bde623ef378e547b73f91
+#. type: Plain text
+#: man-pages/man7/namespaces.7:228
+msgid "This file is a handle for the user namespace of the process."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/namespaces.7:228
+#, no-wrap
+msgid "I</proc/[pid]/ns/uts> (since Linux 3.0)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:231
+msgid "This file is a handle for the UTS namespace of the process."
+msgstr ""
+
+#.  ==================== The /proc/sys/user directory ====================
+#. type: Plain text
+#: man-pages/man7/namespaces.7:241
+msgid ""
+"Permission to dereference or read (B<readlink>(2))  these symbolic links is "
+"governed by a ptrace access mode B<PTRACE_MODE_READ_FSCREDS> check; see "
+"B<ptrace>(2)."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/namespaces.7:241
+#, no-wrap
+msgid "The /proc/sys/user directory"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:247
+msgid ""
+"The files in the I</proc/sys/user> directory (which is present since Linux "
+"4.9) expose limits on the number of namespaces of various types that can be "
+"created.  The files are as follows:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/namespaces.7:247
+#, no-wrap
+msgid "I<max_cgroup_namespaces>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:251
+msgid ""
+"The value in this file defines a per-user limit on the number of cgroup "
+"namespaces that may be created in the user namespace."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/namespaces.7:251
+#, no-wrap
+msgid "I<max_ipc_namespaces>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:255
+msgid ""
+"The value in this file defines a per-user limit on the number of ipc "
+"namespaces that may be created in the user namespace."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/namespaces.7:255
+#, no-wrap
+msgid "I<max_mnt_namespaces>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:259
+msgid ""
+"The value in this file defines a per-user limit on the number of mount "
+"namespaces that may be created in the user namespace."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/namespaces.7:259
+#, no-wrap
+msgid "I<max_net_namespaces>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:263
+msgid ""
+"The value in this file defines a per-user limit on the number of network "
+"namespaces that may be created in the user namespace."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/namespaces.7:263
+#, no-wrap
+msgid "I<max_pid_namespaces>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:267
+msgid ""
+"The value in this file defines a per-user limit on the number of pid "
+"namespaces that may be created in the user namespace."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/namespaces.7:267
+#, no-wrap
+msgid "I<max_user_namespaces>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:271
+msgid ""
+"The value in this file defines a per-user limit on the number of user "
+"namespaces that may be created in the user namespace."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/namespaces.7:271
+#, no-wrap
+msgid "I<max_uts_namespaces>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:275
+msgid ""
+"The value in this file defines a per-user limit on the number of uts "
+"namespaces that may be created in the user namespace."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:277
+msgid "Note the following details about these files:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:279
+msgid "The values in these files are modifiable by privileged processes."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:282
+msgid ""
+"The values exposed by these files are the limits for the user namespace in "
+"which the opening process resides."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:286
+msgid ""
+"The limits are per-user.  Each user in the same user namespace can create "
+"namespaces up to the defined limit."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:288
+msgid "The limits apply to all users, including UID 0."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:291
+msgid ""
+"These limits apply in addition to any other per-namespace limits (such as "
+"those for PID and user namespaces) that may be enforced."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:298
+msgid ""
+"Upon encountering these limits, B<clone>(2)  and B<unshare>(2)  fail with "
+"the error B<ENOSPC>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:305
+msgid ""
+"For the initial user namespace, the default value in each of these files is "
+"half the limit on the number of threads that may be created "
+"(I</proc/sys/kernel/threads-max>).  In all descendant user namespaces, the "
+"default value in each file is B<MAXINT>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:309
+msgid ""
+"When a namespace is created, the object is also accounted against ancestor "
+"namespaces.  More precisely:"
+msgstr ""
+
+#. type: IP
+#: man-pages/man7/namespaces.7:310 man-pages/man7/namespaces.7:312
+#: man-pages/man7/namespaces.7:318
+#, no-wrap
+msgid "+"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:312
+msgid "Each user namespace has a creator UID."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:318
+msgid ""
+"When a namespace is created, it is accounted against the creator UIDs in "
+"each of the ancestor user namespaces, and the kernel ensures that the "
+"corresponding namespace limit for the creator UID in the ancestor namespace "
+"is not exceeded."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:322
+msgid ""
+"The aforementioned point ensures that creating a new user namespace cannot "
+"be used as a means to escape the limits in force in the current user "
+"namespace."
+msgstr ""
+
+#.  ==================== Cgroup namespaces ====================
+#. type: SS
+#: man-pages/man7/namespaces.7:326
+#, no-wrap
+msgid "Cgroup namespaces (CLONE_NEWCGROUP)"
+msgstr ""
+
+#.  ==================== IPC namespaces ====================
+#. type: Plain text
+#: man-pages/man7/namespaces.7:332
+msgid "See B<cgroup_namespaces>(7)."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/namespaces.7:332
+#, no-wrap
+msgid "IPC namespaces (CLONE_NEWIPC)"
+msgstr ""
+
+#.  commit 7eafd7c74c3f2e67c27621b987b28397110d643f
+#.  https://lwn.net/Articles/312232/
+#. type: Plain text
+#: man-pages/man7/namespaces.7:344
+msgid ""
+"IPC namespaces isolate certain IPC resources, namely, System V IPC objects "
+"(see B<svipc>(7))  and (since Linux 2.6.30)  POSIX message queues (see "
+"B<mq_overview>(7)).  The common characteristic of these IPC mechanisms is "
+"that IPC objects are identified by mechanisms other than filesystem "
+"pathnames."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:350
+msgid ""
+"Each IPC namespace has its own set of System V IPC identifiers and its own "
+"POSIX message queue filesystem.  Objects created in an IPC namespace are "
+"visible to all other processes that are members of that namespace, but are "
+"not visible to processes in other IPC namespaces."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:354
+msgid "The following I</proc> interfaces are distinct in each IPC namespace:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:357
+msgid "The POSIX message queue interfaces in I</proc/sys/fs/mqueue>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:370
+msgid ""
+"The System V IPC interfaces in I</proc/sys/kernel>, namely: I<msgmax>, "
+"I<msgmnb>, I<msgmni>, I<sem>, I<shmall>, I<shmmax>, I<shmmni>, and "
+"I<shm_rmid_forced>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:373
+msgid "The System V IPC interfaces in I</proc/sysvipc>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:377
+msgid ""
+"When an IPC namespace is destroyed (i.e., when the last process that is a "
+"member of the namespace terminates), all IPC objects in the namespace are "
+"automatically destroyed."
+msgstr ""
+
+#.  ==================== Network namespaces ====================
+#. type: Plain text
+#: man-pages/man7/namespaces.7:384
+msgid ""
+"Use of IPC namespaces requires a kernel that is configured with the "
+"B<CONFIG_IPC_NS> option."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/namespaces.7:384
+#, no-wrap
+msgid "Network namespaces (CLONE_NEWNET)"
+msgstr ""
+
+#.  ==================== Mount namespaces ====================
+#. type: Plain text
+#: man-pages/man7/namespaces.7:390
+msgid "See B<network_namespaces>(7)."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/namespaces.7:390
+#, no-wrap
+msgid "Mount namespaces (CLONE_NEWNS)"
+msgstr ""
+
+#.  ==================== PID namespaces ====================
+#. type: Plain text
+#: man-pages/man7/namespaces.7:396
+msgid "See B<mount_namespaces>(7)."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/namespaces.7:396
+#, no-wrap
+msgid "PID namespaces (CLONE_NEWPID)"
+msgstr ""
+
+#.  ==================== User namespaces ====================
+#. type: Plain text
+#: man-pages/man7/namespaces.7:402
+msgid "See B<pid_namespaces>(7)."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/namespaces.7:402
+#, no-wrap
+msgid "User namespaces (CLONE_NEWUSER)"
+msgstr ""
+
+#.  ==================== UTS namespaces ====================
+#. type: Plain text
+#: man-pages/man7/namespaces.7:408
+msgid "See B<user_namespaces>(7)."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/namespaces.7:408
+#, no-wrap
+msgid "UTS namespaces (CLONE_NEWUTS)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:420
+msgid ""
+"UTS namespaces provide isolation of two system identifiers: the hostname and"
+" the NIS domain name.  These identifiers are set using B<sethostname>(2)  "
+"and B<setdomainname>(2), and can be retrieved using B<uname>(2), "
+"B<gethostname>(2), and B<getdomainname>(2)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:425
+msgid ""
+"Use of UTS namespaces requires a kernel that is configured with the "
+"B<CONFIG_UTS_NS> option."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/namespaces.7:425
+#, no-wrap
+msgid "Namespace lifetime"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:432
+msgid ""
+"Absent any other factors, a namespace is automatically torn down when the "
+"last process in the namespace terminates or leaves the namespace.  However, "
+"there are a number of other factors that may pin a namespace into existence "
+"even though it has no member processes.  These factors include the "
+"following:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:436
+msgid ""
+"An open file descriptor or a bind mount exists for the corresponding "
+"I</proc/[pid]/ns/*> file."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:439
+msgid ""
+"The namespace is hierarchical (i.e., a PID or user namespace), and has a "
+"child namespace."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:441
+msgid "It is a user namespace that owns one or more nonuser namespaces."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:446
+msgid ""
+"It is a PID namespace, and there is a process that refers to the namespace "
+"via a I</proc/[pid]/ns/pid_for_children> symbolic link."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:452
+msgid ""
+"It is an IPC namespace, and a corresponding mount of an I<mqueue> filesystem"
+" (see B<mq_overview>(7))  refers to this namespace."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:456
+msgid ""
+"It is a PID namespace, and a corresponding mount of a B<proc>(5)  filesystem"
+" refers to this namespace."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:461
+msgid "See B<clone>(2)  and B<user_namespaces>(7)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:479
+msgid ""
+"B<nsenter>(1), B<readlink>(1), B<unshare>(1), B<clone>(2), B<ioctl_ns>(2), "
+"B<setns>(2), B<unshare>(2), B<proc>(5), B<capabilities>(7), "
+"B<cgroup_namespaces>(7), B<cgroups>(7), B<credentials>(7), "
+"B<network_namespaces>(7), B<pid_namespaces>(7), B<user_namespaces>(7), "
+"B<lsns>(8), B<pam_namespace>(8), B<switch_root>(8)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/network_namespaces.7:26
+#, no-wrap
+msgid "NETWORK_NAMESPACES"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/network_namespaces.7:26
+#, no-wrap
+msgid "2018-02-02"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/network_namespaces.7:29
+msgid "network_namespaces - overview of Linux network namespaces"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/network_namespaces.7:44
+msgid ""
+"Network namespaces provide isolation of the system resources associated with"
+" networking: network devices, IPv4 and IPv6 protocol stacks, IP routing "
+"tables, firewall rules, the I</proc/net> directory (which is a symbolic link"
+" to I</proc/PID/net>), the I</sys/class/net> directory, various files under "
+"I</proc/sys/net>, port numbers (sockets), and so on.  In addition, network "
+"namespaces isolate the UNIX domain abstract socket namespace (see "
+"B<unix>(7))."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/network_namespaces.7:51
+msgid ""
+"A physical network device can live in exactly one network namespace.  When a"
+" network namespace is freed (i.e., when the last process in the namespace "
+"terminates), its physical network devices are moved back to the initial "
+"network namespace (not to the parent of the process)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/network_namespaces.7:61
+msgid ""
+"A virtual network (B<veth>(4))  device pair provides a pipe-like abstraction"
+" that can be used to create tunnels between network namespaces, and can be "
+"used to create a bridge to a physical network device in another namespace.  "
+"When a namespace is freed, the B<veth>(4)  devices that it contains are "
+"destroyed."
+msgstr ""
+
+#.  FIXME .SH EXAMPLE
+#. type: Plain text
+#: man-pages/man7/network_namespaces.7:66
+msgid ""
+"Use of network namespaces requires a kernel that is configured with the "
+"B<CONFIG_NET_NS> option."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/network_namespaces.7:81
+msgid ""
+"B<nsenter>(1), B<unshare>(1), B<clone>(2), B<veth>(4), B<proc>(5), "
+"B<sysfs>(5), B<namespaces>(7), B<user_namespaces>(7), B<brctl>(8), B<ip>(8),"
+" B<ip-address>(8), B<ip-link>(8), B<ip-netns>(8), B<iptables>(8), B<ovs-"
+"vsctl>(8)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/nanosleep.2:34
+#, no-wrap
+msgid "NANOSLEEP"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:37
+msgid "nanosleep - high-resolution sleep"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:39
+msgid "B<#include E<lt>time.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:41
+msgid ""
+"B<int nanosleep(const struct timespec *>I<req>B<, struct timespec "
+"*>I<rem>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:45
+msgid ""
+"Feature Test Macro Requirements for glibc (see B<feature_test_macros>(7)):"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:49
+msgid "B<nanosleep>(): _POSIX_C_SOURCE\\ E<gt>=\\ 199309L"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:57
+msgid ""
+"B<nanosleep>()  suspends the execution of the calling thread until either at"
+" least the time specified in I<*req> has elapsed, or the delivery of a "
+"signal that triggers the invocation of a handler in the calling thread or "
+"that terminates the process."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:74
+msgid ""
+"If the call is interrupted by a signal handler, B<nanosleep>()  returns -1, "
+"sets I<errno> to B<EINTR>, and writes the remaining time into the structure "
+"pointed to by I<rem> unless I<rem> is NULL.  The value of I<*rem> can then "
+"be used to call B<nanosleep>()  again and complete the specified pause (but "
+"see NOTES)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:79
+msgid ""
+"The structure I<timespec> is used to specify intervals of time with "
+"nanosecond precision.  It is defined as follows:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:86
+#, no-wrap
+msgid ""
+"struct timespec {\n"
+"    time_t tv_sec;        /* seconds */\n"
+"    long   tv_nsec;       /* nanoseconds */\n"
+"};\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:90
+msgid ""
+"The value of the nanoseconds field must be in the range 0 to 999999999."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:102
+msgid ""
+"Compared to B<sleep>(3)  and B<usleep>(3), B<nanosleep>()  has the following"
+" advantages: it provides a higher resolution for specifying the sleep "
+"interval; POSIX.1 explicitly specifies that it does not interact with "
+"signals; and it makes the task of resuming a sleep that has been interrupted"
+" by a signal handler easier."
+msgstr ""
+
+#. type: SH
+#: man-pages/man2/nanosleep.2:102
+#, no-wrap
+msgid "RETURN VALUE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:110
+msgid ""
+"On successfully sleeping for the requested interval, B<nanosleep>()  returns"
+" 0.  If the call is interrupted by a signal handler or encounters an error, "
+"then it returns -1, with I<errno> set to indicate the error."
+msgstr ""
+
+#. type: SH
+#: man-pages/man2/nanosleep.2:110
+#, no-wrap
+msgid "ERRORS"
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/nanosleep.2:111
+#, no-wrap
+msgid "B<EFAULT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:114
+msgid "Problem with copying information from user space."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/nanosleep.2:114
+#, no-wrap
+msgid "B<EINTR>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:125
+msgid ""
+"The pause has been interrupted by a signal that was delivered to the thread "
+"(see B<signal>(7)).  The remaining sleep time has been written into I<*rem> "
+"so that the thread can easily call B<nanosleep>()  again and continue with "
+"the pause."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/nanosleep.2:125
+#, no-wrap
+msgid "B<EINVAL>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:132
+msgid ""
+"The value in the I<tv_nsec> field was not in the range 0 to 999999999 or "
+"I<tv_sec> was negative."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:134
+msgid "POSIX.1-2001, POSIX.1-2008."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:142
+msgid ""
+"If the interval specified in I<req> is not an exact multiple of the "
+"granularity underlying clock (see B<time>(7)), then the interval will be "
+"rounded up to the next multiple.  Furthermore, after the sleep completes, "
+"there may still be a delay before the CPU becomes free to once again execute"
+" the calling thread."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:152
+msgid ""
+"The fact that B<nanosleep>()  sleeps for a relative interval can be "
+"problematic if the call is repeatedly restarted after being interrupted by "
+"signals, since the time between the interruptions and restarts of the call "
+"will lead to drift in the time when the sleep finally completes.  This "
+"problem can be avoided by using B<clock_nanosleep>(2)  with an absolute time"
+" value."
+msgstr ""
+
+#.  See also http://thread.gmane.org/gmane.linux.kernel/696854/
+#.  Subject: nanosleep() uses CLOCK_MONOTONIC, should be CLOCK_REALTIME?
+#.  Date: 2008-06-22 07:35:41 GMT
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:170
+msgid ""
+"POSIX.1 specifies that B<nanosleep>()  should measure time against the "
+"B<CLOCK_REALTIME> clock.  However, Linux measures the time using the "
+"B<CLOCK_MONOTONIC> clock.  This probably does not matter, since the POSIX.1 "
+"specification for B<clock_settime>(2)  says that discontinuous changes in "
+"B<CLOCK_REALTIME> should not affect B<nanosleep>():"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:183
+msgid ""
+"Setting the value of the B<CLOCK_REALTIME> clock via B<clock_settime>(2)  "
+"shall have no effect on threads that are blocked waiting for a relative time"
+" service based upon this clock, including the B<nanosleep>()  function; ..."
+"  Consequently, these time services shall expire when the requested relative"
+" interval elapses, independently of the new or old value of the clock."
+msgstr ""
+
+#. type: SS
+#: man-pages/man2/nanosleep.2:184
+#, no-wrap
+msgid "Old behavior"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:196
+msgid ""
+"In order to support applications requiring much more precise pauses (e.g., "
+"in order to control some time-critical hardware), B<nanosleep>()  would "
+"handle pauses of up to 2 milliseconds by busy waiting with microsecond "
+"precision when called from a thread scheduled under a real-time policy like "
+"B<SCHED_FIFO> or B<SCHED_RR>.  This special extension was removed in kernel "
+"2.5.39, and is thus not available in Linux 2.6.0 and later kernels."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:215
+msgid ""
+"If a program that catches signals and uses B<nanosleep>()  receives signals "
+"at a very high rate, then scheduling delays and rounding errors in the "
+"kernel's calculation of the sleep interval and the returned I<remain> value "
+"mean that the I<remain> value may steadily I<increase> on successive "
+"restarts of the B<nanosleep>()  call.  To avoid such problems, use "
+"B<clock_nanosleep>(2)  with the B<TIMER_ABSTIME> flag to sleep to an "
+"absolute deadline."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:230
+msgid ""
+"In Linux 2.4, if B<nanosleep>()  is stopped by a signal (e.g., B<SIGTSTP>), "
+"then the call fails with the error B<EINTR> after the thread is resumed by a"
+" B<SIGCONT> signal.  If the system call is subsequently restarted, then the "
+"time that the thread spent in the stopped state is I<not> counted against "
+"the sleep interval.  This problem is fixed in Linux 2.6.0 and later kernels."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nanosleep.2:237
+msgid ""
+"B<clock_nanosleep>(2), B<restart_syscall>(2), B<sched_setscheduler>(2), "
+"B<timer_create>(2), B<sleep>(3), B<usleep>(3), B<time>(7)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/nfsservctl.2:5
+#, no-wrap
+msgid "NFSSERVCTL"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nfsservctl.2:8
+msgid "nfsservctl - syscall interface to kernel nfs daemon"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nfsservctl.2:11
+#, no-wrap
+msgid "B<#include E<lt>linux/nfsd/syscall.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nfsservctl.2:14
+#, no-wrap
+msgid ""
+"B<long nfsservctl(int >I<cmd>B<, struct nfsctl_arg *>I<argp>B<,>\n"
+"B<                union nfsctl_res *>I<resp>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nfsservctl.2:22
+msgid ""
+"I<Note>: Since Linux 3.1, this system call no longer exists.  It has been "
+"replaced by a set of files in the I<nfsd> filesystem; see B<nfsd>(7)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nfsservctl.2:37
+#, no-wrap
+msgid ""
+"/*\n"
+" * These are the commands understood by nfsctl().\n"
+" */\n"
+"#define NFSCTL_SVC        0  /* This is a server process. */\n"
+"#define NFSCTL_ADDCLIENT  1  /* Add an NFS client. */\n"
+"#define NFSCTL_DELCLIENT  2  /* Remove an NFS client. */\n"
+"#define NFSCTL_EXPORT     3  /* Export a filesystem. */\n"
+"#define NFSCTL_UNEXPORT   4  /* Unexport a filesystem. */\n"
+"#define NFSCTL_UGIDUPDATE 5  /* Update a client's UID/GID map\n"
+"                                (only in Linux 2.4.x and earlier). */\n"
+"#define NFSCTL_GETFH      6  /* Get a file handle (used by mountd)\n"
+"                                (only in Linux 2.4.x and earlier). */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nfsservctl.2:49
+#, no-wrap
+msgid ""
+"struct nfsctl_arg {\n"
+"    int                       ca_version;     /* safeguard */\n"
+"    union {\n"
+"        struct nfsctl_svc     u_svc;\n"
+"        struct nfsctl_client  u_client;\n"
+"        struct nfsctl_export  u_export;\n"
+"        struct nfsctl_uidmap  u_umap;\n"
+"        struct nfsctl_fhparm  u_getfh;\n"
+"        unsigned int          u_debug;\n"
+"    } u;\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nfsservctl.2:54
+#, no-wrap
+msgid ""
+"union nfsctl_res {\n"
+"        struct knfs_fh          cr_getfh;\n"
+"        unsigned int            cr_debug;\n"
+"};\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nfsservctl.2:61
+msgid ""
+"On success, zero is returned.  On error, -1 is returned, and I<errno> is set"
+" appropriately."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nfsservctl.2:64
+msgid ""
+"This system call was removed from the Linux kernel in version 3.1.  Library "
+"support was removed from glibc in version 2.28."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nfsservctl.2:65
+msgid "This call is Linux-specific."
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/nice.2:31
+#, no-wrap
+msgid "NICE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nice.2:34
+msgid "nice - change process priority"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nice.2:36
+msgid "B<#include E<lt>unistd.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nice.2:38
+msgid "B<int nice(int >I<inc>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nice.2:48
+#, no-wrap
+msgid ""
+"B<nice>():\n"
+"_XOPEN_SOURCE\n"
+"    || /* Since glibc 2.19: */ _DEFAULT_SOURCE\n"
+"    || /* Glibc versions E<lt>= 2.19: */ _BSD_SOURCE || _SVID_SOURCE\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nice.2:54
+msgid ""
+"B<nice>()  adds I<inc> to the nice value for the calling thread.  (A higher "
+"nice value means a low priority.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nice.2:57
+msgid ""
+"The range of the nice value is +19 (low priority) to -20 (high priority).  "
+"Attempts to set a nice value outside the range are clamped to the range."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nice.2:66
+msgid ""
+"Traditionally, only a privileged process could lower the nice value (i.e., "
+"set a higher priority).  However, since Linux 2.6.12, an unprivileged "
+"process can decrease the nice value of a target process that has a suitable "
+"B<RLIMIT_NICE> soft limit; see B<getrlimit>(2)  for details."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nice.2:71
+msgid ""
+"On success, the new nice value is returned (but see NOTES below).  On error,"
+" -1 is returned, and I<errno> is set appropriately."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nice.2:78
+msgid ""
+"A successful call can legitimately return -1.  To detect an error, set "
+"I<errno> to 0 before the call, and check whether it is nonzero after "
+"B<nice>()  returns -1."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/nice.2:79
+#, no-wrap
+msgid "B<EPERM>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nice.2:92
+msgid ""
+"The calling process attempted to increase its priority by supplying a "
+"negative I<inc> but has insufficient privileges.  Under Linux, the "
+"B<CAP_SYS_NICE> capability is required.  (But see the discussion of the "
+"B<RLIMIT_NICE> resource limit in B<setrlimit>(2).)"
+msgstr ""
+
+#.  SVr4 documents an additional
+#.  .B EINVAL
+#.  error code.
+#. type: Plain text
+#: man-pages/man2/nice.2:99
+msgid ""
+"POSIX.1-2001, POSIX.1-2008, SVr4, 4.3BSD.  However, the raw system call and "
+"(g)libc (earlier than glibc 2.2.4) return value is nonstandard, see below."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nice.2:102
+msgid "For further details on the nice value, see B<sched>(7)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nice.2:109
+msgid ""
+"I<Note>: the addition of the \"autogroup\" feature in Linux 2.6.38 means "
+"that the nice value no longer has its traditional effect in many "
+"circumstances.  For details, see B<sched>(7)."
+msgstr ""
+
+#. type: SS
+#: man-pages/man2/nice.2:109
+#, no-wrap
+msgid "C library/kernel differences"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nice.2:117
+msgid ""
+"POSIX.1 specifies that B<nice>()  should return the new nice value.  "
+"However, the raw Linux system call returns 0 on success.  Likewise, the "
+"B<nice>()  wrapper function provided in glibc 2.2.3 and earlier returns 0 on"
+" success."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nice.2:123
+msgid ""
+"Since glibc 2.2.4, the B<nice>()  wrapper function provided by glibc "
+"provides conformance to POSIX.1 by calling B<getpriority>(2)  to obtain the "
+"new nice value, which is then returned to the caller."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/nice.2:131
+msgid ""
+"B<nice>(1), B<renice>(1), B<fork>(2), B<getpriority>(2), B<getrlimit>(2), "
+"B<setpriority>(2), B<capabilities>(7), B<sched>(7)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man5/nscd.conf.5:20
+#, no-wrap
+msgid "NSCD.CONF"
+msgstr ""
+
+#. type: TH
+#: man-pages/man5/nscd.conf.5:20
+#, no-wrap
+msgid "2014-02-07"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:23
+msgid "nscd.conf - name service cache daemon configuration file"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:36
+msgid ""
+"The file I</etc/nscd.conf> is read from B<nscd>(8)  at startup.  Each line "
+"specifies either an attribute and a value, or an attribute, service, and a "
+"value.  Fields are separated either by SPACE or TAB characters.  A "
+"\\(aq#\\(aq (number sign) indicates the beginning of a comment; following "
+"characters, up to the end of the line, are not interpreted by nscd."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:39
+msgid ""
+"Valid services are I<passwd>, I<group>, I<hosts>, I<services>, or "
+"I<netgroup>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:42
+msgid "B<logfile> I<debug-file-name>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:44
+msgid "Specifies name of the file to which debug info should be written."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:48
+msgid "B<debug-level> I<value>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:51
+msgid "Sets the desired debug level.  The default is 0."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:55
+msgid "B<threads> I<number>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:59
+msgid ""
+"This is the number of threads that are started to wait for requests.  At "
+"least five threads will always be created."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:63
+msgid "B<max-threads> I<number>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:66
+msgid "Specifies the maximum number of threads.  The default is 32."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:70
+msgid "B<server-user> I<user>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:74
+msgid ""
+"If this option is set, nscd will run as this user and not as root.  If a "
+"separate cache for every user is used (-S parameter), this option is "
+"ignored."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:78
+msgid "B<stat-user> I<user>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:80
+msgid "Specifies the user who is allowed to request statistics."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:85
+msgid "B<reload-count> unlimited | I<number>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:89
+msgid ""
+"Limit on the number of times a cached entry gets reloaded without being used"
+" before it gets removed.  The default is 5."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:93
+msgid "B<paranoia> I<E<lt>yes|noE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:96
+msgid ""
+"Enabling paranoia mode causes nscd to restart itself periodically.  The "
+"default is no."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:100
+msgid "B<restart-interval> I<time>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:108
+msgid ""
+"Sets the restart interval to I<time> seconds if periodic restart is enabled "
+"by enabling B<paranoia> mode.  The default is 3600."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:113
+msgid "B<enable-cache> I<service> I<E<lt>yes|noE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:118
+msgid ""
+"Enables or disables the specified I<service> cache.  The default is no."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:123
+msgid "B<positive-time-to-live> I<service> I<value>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:131
+msgid ""
+"Sets the TTL (time-to-live) for positive entries (successful queries)  in "
+"the specified cache for I<service>.  I<Value> is in seconds.  Larger values "
+"increase cache hit rates and reduce mean response times, but increase "
+"problems with cache coherence."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:136
+msgid "B<negative-time-to-live> I<service> I<value>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:146
+msgid ""
+"Sets the TTL (time-to-live) for negative entries (unsuccessful queries)  in "
+"the specified cache for I<service>.  I<Value> is in seconds.  Can result in "
+"significant performance improvements if there are several files owned by "
+"UIDs (user IDs) not in system databases (for example untarring the Linux "
+"kernel sources as root); should be kept small to reduce cache coherency "
+"problems."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:151
+msgid "B<suggested-size> I<service> I<value>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:156
+msgid ""
+"This is the internal hash table size, I<value> should remain a prime number "
+"for optimum efficiency.  The default is 211."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:161
+msgid "B<check-files> I<service> I<E<lt>yes|noE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:173
+msgid ""
+"Enables or disables checking the file belonging to the specified I<service> "
+"for changes.  The files are I</etc/passwd>, I</etc/group>, I</etc/hosts>, "
+"I</etc/services> and I</etc/netgroup>.  The default is yes."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:178
+msgid "B<persistent> I<service> I<E<lt>yes|noE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:185
+msgid ""
+"Keep the content of the cache for I<service> over server restarts; useful "
+"when B<paranoia> mode is set.  The default is no."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:190
+msgid "B<shared> I<service> I<E<lt>yes|noE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:197
+msgid ""
+"The memory mapping of the nscd databases for I<service> is shared with the "
+"clients so that they can directly search in them instead of having to ask "
+"the daemon over the socket each time a lookup is performed.  The default is "
+"no."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:202
+msgid "B<max-db-size> I<service> I<bytes>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:206
+msgid ""
+"The maximum allowable size, in bytes, of the database files for the "
+"I<service>.  The default is 33554432."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:211
+msgid "B<auto-propagate> I<service> I<E<lt>yes|noE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:231
+msgid ""
+"When set to I<no> for I<passwd> or I<group> service, then the I<.byname> "
+"requests are not added to I<passwd.byuid> or I<group.bygid> cache.  This can"
+" help with tables containing multiple records for the same ID.  The default "
+"is yes.  This option is valid only for services I<passwd> and I<group>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:239
+msgid ""
+"The default values stated in this manual page originate from the source code"
+" of B<nscd>(8)  and are used if not overridden in the configuration file.  "
+"The default values used in the configuration file of your distribution might"
+" differ."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nscd.conf.5:240
+msgid "B<nscd>(8)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man5/networks.5:26
+#, no-wrap
+msgid "NETWORKS"
+msgstr ""
+
+#. type: TH
+#: man-pages/man5/networks.5:26
+#, no-wrap
+msgid "2008-09-04"
+msgstr ""
+
+#. type: TH
+#: man-pages/man5/networks.5:26
+#, no-wrap
+msgid "GNU/Linux"
+msgstr ""
+
+#. type: TH
+#: man-pages/man5/networks.5:26
+#, no-wrap
+msgid "Linux System Administration"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/networks.5:29
+msgid "networks - network name information"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/networks.5:35
+msgid ""
+"The file I</etc/networks> is a plain ASCII file that describes known DARPA "
+"networks and symbolic names for these networks.  Each line represents a "
+"network and has the following structure:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/networks.5:38
+msgid "I<name number aliases ...>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/networks.5:46
+msgid ""
+"where the fields are delimited by spaces or tabs.  Empty lines are ignored."
+"  The hash character (B<#>) indicates the start of a comment: this "
+"character, and the remaining characters up to the end of the current line, "
+"are ignored by library functions that process the file."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/networks.5:48
+msgid "The field descriptions are:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/networks.5:48
+#, no-wrap
+msgid "I<name>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/networks.5:53
+msgid ""
+"The symbolic name for the network.  Network names can contain any printable "
+"characters except white-space characters or the comment character."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/networks.5:53
+#, no-wrap
+msgid "I<number>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/networks.5:58
+msgid ""
+"The official number for this network in numbers-and-dots notation (see "
+"B<inet>(3)).  The trailing \".0\" (for the host component of the network "
+"address) may be omitted."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/networks.5:58
+#, no-wrap
+msgid "I<aliases>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/networks.5:61
+msgid "Optional aliases for the network."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/networks.5:70
+msgid ""
+"This file is read by the B<route>(8)  and B<netstat>(8)  utilities.  Only "
+"Class A, B or C networks are supported, partitioned networks (i.e., "
+"network/26 or network/28) are not supported by this facility."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/networks.5:71
+#, no-wrap
+msgid "I</etc/networks>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/networks.5:74
+msgid "The networks definition file."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/networks.5:79
+msgid ""
+"B<getnetbyaddr>(3), B<getnetbyname>(3), B<getnetent>(3), B<netstat>(8), "
+"B<route>(8)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man5/nologin.5:27
+#, no-wrap
+msgid "NOLOGIN"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nologin.5:30
+msgid "nologin - prevent unprivileged users from logging into the system"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nologin.5:37
+msgid ""
+"If the file I</etc/nologin> exists and is readable, B<login>(1)  will allow "
+"access only to root.  Other users will be shown the contents of this file "
+"and their logins will be refused.  This provides a simple way of temporarily"
+" disabling all unprivileged logins."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nologin.5:39
+msgid "I</etc/nologin>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nologin.5:41
+msgid "B<login>(1), B<shutdown>(8)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man5/nss.5:19
+#, no-wrap
+msgid "NSS"
+msgstr ""
+
+#. type: TH
+#: man-pages/man5/nss.5:19
+#, no-wrap
+msgid "2013-02-13"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nss.5:22
+msgid "nss - Name Service Switch configuration file"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nss.5:29
+msgid ""
+"Each call to a function which retrieves data from a system database like the"
+" password or group database is handled by the Name Service Switch "
+"implementation in the GNU C library.  The various services provided are "
+"implemented by independent modules, each of which naturally varies widely "
+"from the other."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nss.5:38
+msgid ""
+"The default implementations coming with the GNU C library are by default "
+"conservative and do not use unsafe data.  This might be very costly in some "
+"situations, especially when the databases are large.  Some modules allow the"
+" system administrator to request taking shortcuts if these are known to be "
+"safe.  It is then the system administrator's responsibility to ensure the "
+"assumption is correct."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nss.5:42
+msgid ""
+"There are other modules where the implementation changed over time.  If an "
+"implementation used to sacrifice speed for memory consumption, it might "
+"create problems if the preference is switched."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nss.5:51
+msgid ""
+"The I</etc/default/nss> file contains a number of variable assignments.  "
+"Each variable controls the behavior of one or more NSS modules.  White "
+"spaces are ignored.  Lines beginning with \\(aq#\\(aq are treated as "
+"comments."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nss.5:53
+msgid "The variables currently recognized are:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nss.5:53
+#, no-wrap
+msgid "B<NETID_AUTHORITATIVE => I<TRUE>|I<FALSE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nss.5:68
+msgid ""
+"If set to TRUE, the NIS backend for the B<initgroups>(3)  function will "
+"accept the information from the I<netid.byname> NIS map as authoritative.  "
+"This can speed up the function significantly if the I<group.byname> map is "
+"large.  The content of the I<netid.byname> map is used B<as is>.  The system"
+" administrator has to make sure it is correctly generated."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nss.5:68
+#, no-wrap
+msgid "B<SERVICES_AUTHORITATIVE => I<TRUE>|I<FALSE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nss.5:80
+msgid ""
+"If set to TRUE, the NIS backend for the B<getservbyname>(3)  and "
+"B<getservbyname_r>(3)  functions will assume that the "
+"I<services.byservicename> NIS map exists and is authoritative, particularly "
+"that it contains both keys with /proto and without /proto for both primary "
+"service names and service aliases.  The system administrator has to make "
+"sure it is correctly generated."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nss.5:80
+#, no-wrap
+msgid "B<SETENT_BATCH_READ => I<TRUE>|I<FALSE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nss.5:98
+msgid ""
+"If set to TRUE, the NIS backend for the B<setpwent>(3)  and B<setgrent>(3)  "
+"functions will read the entire database at once and then hand out the "
+"requests one by one from memory with every corresponding B<getpwent>(3)  or "
+"B<getgrent>(3)  call respectively.  Otherwise, each B<getpwent>(3)  or "
+"B<getgrent>(3)  call might result in a network communication with the server"
+" to get the next entry."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nss.5:100
+msgid "I</etc/default/nss>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nss.5:102
+msgid ""
+"The default configuration corresponds to the following configuration file:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nss.5:108
+#, no-wrap
+msgid ""
+"NETID_AUTHORITATIVE=FALSE\n"
+"SERVICES_AUTHORITATIVE=FALSE\n"
+"SETENT_BATCH_READ=FALSE\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nss.5:114
+msgid "I<nsswitch.conf>"
+msgstr ""
+
+#. type: TH
+#: man-pages/man5/nsswitch.conf.5:25
+#, no-wrap
+msgid "NSSWITCH.CONF"
+msgstr ""
+
+#. type: TH
+#: man-pages/man5/nsswitch.conf.5:25
+#, no-wrap
+msgid "2017-05-03"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:28
+msgid "nsswitch.conf - Name Service Switch configuration file"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:36
+msgid ""
+"The Name Service Switch (NSS) configuration file, I</etc/nsswitch.conf>, is "
+"used by the GNU C Library and certain other applications to determine the "
+"sources from which to obtain name-service information in a range of "
+"categories, and in what order.  Each category of information is identified "
+"by a database name."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:42
+msgid ""
+"The file is plain ASCII text, with columns separated by spaces or tab "
+"characters.  The first column specifies the database name.  The remaining "
+"columns describe the order of sources to query and a limited set of actions "
+"that can be performed by lookup result."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:44
+msgid "The following databases are understood by the GNU C Library:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:44 man-pages/man5/nsswitch.conf.5:371
+#, no-wrap
+msgid "B<aliases>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:49
+msgid "Mail aliases, used by B<getaliasent>(3)  and related functions."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:49 man-pages/man5/nsswitch.conf.5:375
+#, no-wrap
+msgid "B<ethers>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:52
+msgid "Ethernet numbers."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:52 man-pages/man5/nsswitch.conf.5:378
+#, no-wrap
+msgid "B<group>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:57
+msgid "Groups of users, used by B<getgrent>(3)  and related functions."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:57 man-pages/man5/nsswitch.conf.5:381
+#, no-wrap
+msgid "B<hosts>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:62
+msgid ""
+"Host names and numbers, used by B<gethostbyname>(3)  and related functions."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:62 man-pages/man5/nsswitch.conf.5:384
+#, no-wrap
+msgid "B<initgroups>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:67
+msgid "Supplementary group access list, used by B<getgrouplist>(3)  function."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:67 man-pages/man5/nsswitch.conf.5:387
+#, no-wrap
+msgid "B<netgroup>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:71
+msgid ""
+"Network-wide list of hosts and users, used for access rules.  C libraries "
+"before glibc 2.1 supported netgroups only over NIS."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:71 man-pages/man5/nsswitch.conf.5:390
+#, no-wrap
+msgid "B<networks>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:76
+msgid ""
+"Network names and numbers, used by B<getnetent>(3)  and related functions."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:76 man-pages/man5/nsswitch.conf.5:393
+#, no-wrap
+msgid "B<passwd>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:81
+msgid "User passwords, used by B<getpwent>(3)  and related functions."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:81 man-pages/man5/nsswitch.conf.5:396
+#, no-wrap
+msgid "B<protocols>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:86
+msgid "Network protocols, used by B<getprotoent>(3)  and related functions."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:86 man-pages/man5/nsswitch.conf.5:399
+#, no-wrap
+msgid "B<publickey>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:89
+msgid "Public and secret keys for Secure_RPC used by NFS and NIS+."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:89 man-pages/man5/nsswitch.conf.5:402
+#, no-wrap
+msgid "B<rpc>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:94
+msgid ""
+"Remote procedure call names and numbers, used by B<getrpcbyname>(3)  and "
+"related functions."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:94 man-pages/man5/nsswitch.conf.5:405
+#, no-wrap
+msgid "B<services>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:99
+msgid "Network services, used by B<getservent>(3)  and related functions."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:99 man-pages/man5/nsswitch.conf.5:408
+#, no-wrap
+msgid "B<shadow>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:104
+msgid "Shadow user passwords, used by B<getspnam>(3)  and related functions."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:112
+msgid ""
+"The GNU C Library ignores databases with unknown names.  Some applications "
+"use this to implement special handling for their own databases.  For "
+"example, B<sudo>(8)  consults the B<sudoers> database."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:116
+msgid "Here is an example I</etc/nsswitch.conf> file:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:122
+#, no-wrap
+msgid ""
+"passwd:         compat\n"
+"group:          compat\n"
+"shadow:         compat\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:129
+#, no-wrap
+msgid ""
+"hosts:          dns [!UNAVAIL=return] files\n"
+"networks:       nis [NOTFOUND=return] files\n"
+"ethers:         nis [NOTFOUND=return] files\n"
+"protocols:      nis [NOTFOUND=return] files\n"
+"rpc:            nis [NOTFOUND=return] files\n"
+"services:       nis [NOTFOUND=return] files\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:134
+msgid "The first column is the database name.  The remaining columns specify:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:138
+msgid ""
+"One or more service specifications, for example, \"files\", \"db\", or "
+"\"nis\".  The order of the services on the line determines the order in "
+"which those services will be queried, in turn, until a result is found."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:141
+msgid ""
+"Optional actions to perform if a particular result is obtained from the "
+"preceding service, for example, \"[NOTFOUND=return]\"."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:167
+msgid ""
+"The service specifications supported on your system depend on the presence "
+"of shared libraries, and are therefore extensible.  Libraries called "
+"I</lib/libnss_SERVICE.so.>B<X> will provide the named I<SERVICE>.  On a "
+"standard installation, you can use \"files\", \"db\", \"nis\", and "
+"\"nisplus\".  For the B<hosts> database, you can additionally specify "
+"\"dns\".  For the B<passwd>, B<group>, and B<shadow> databases, you can "
+"additionally specify \"compat\" (see B<Compatibility mode> below).  The "
+"version number B<X> may be 1 for glibc 2.0, or 2 for glibc 2.1 and later.  "
+"On systems with additional libraries installed, you may have access to "
+"further services such as \"hesiod\", \"ldap\", \"winbind\" and \"wins\"."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:172
+msgid ""
+"An action may also be specified following a service specification.  The "
+"action modifies the behavior following a result obtained from the preceding "
+"data source.  Action items take the general form:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:175
+msgid "[I<STATUS>=I<ACTION>]"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:177
+msgid "[!I<STATUS>=I<ACTION>]"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:180
+msgid "where"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:191
+msgid "I<STATUS> =E<gt> B<success> | B<notfound> | B<unavail> | B<tryagain>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:199
+msgid "I<ACTION> =E<gt> B<return> | B<continue> | B<merge>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:204
+msgid ""
+"The ! negates the test, matching all possible results except the one "
+"specified.  The case of the keywords is not significant."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:209
+msgid ""
+"The I<STATUS> value is matched against the result of the lookup function "
+"called by the preceding service specification, and can be one of:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:210
+#, no-wrap
+msgid "B<success>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:214
+msgid ""
+"No error occurred and the requested entry is returned.  The default action "
+"for this condition is \"return\"."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:214
+#, no-wrap
+msgid "B<notfound>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:218
+msgid ""
+"The lookup succeeded, but the requested entry was not found.  The default "
+"action for this condition is \"continue\"."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:218
+#, no-wrap
+msgid "B<unavail>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:225
+msgid ""
+"The service is permanently unavailable.  This can mean either that the "
+"required file cannot be read, or, for network services, that the server is "
+"not available or does not allow queries.  The default action for this "
+"condition is \"continue\"."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:225
+#, no-wrap
+msgid "B<tryagain>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:231
+msgid ""
+"The service is temporarily unavailable.  This could mean a file is locked or"
+" a server currently cannot accept more connections.  The default action for "
+"this condition is \"continue\"."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:236
+msgid "The I<ACTION> value can be one of:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:237
+#, no-wrap
+msgid "B<return>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:249
+msgid ""
+"Return a result now.  Do not call any further lookup functions.  However, "
+"for compatibility reasons, if this is the selected action for the B<group> "
+"database and the B<notfound> status, and the configuration file does not "
+"contain the B<initgroups> line, the next lookup function is always called, "
+"without affecting the search result."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:249
+#, no-wrap
+msgid "B<continue>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:252
+msgid "Call the next lookup function."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:252
+#, no-wrap
+msgid "B<merge>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:266
+msgid ""
+"I<[SUCCESS=merge]> is used between two database entries.  When a group is "
+"located in the first of the two group entries, processing will continue on "
+"to the next one.  If the group is also found in the next entry (and the "
+"group name and GID are an exact match), the member list of the second entry "
+"will be added to the group object to be returned.  Available since glibc "
+"2.24.  Note that merging will not be done for B<getgrent>(3)  nor will "
+"duplicate members be pruned when they occur in both entries being merged."
+msgstr ""
+
+#. type: SS
+#: man-pages/man5/nsswitch.conf.5:267
+#, no-wrap
+msgid "Compatibility mode (compat)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:272
+msgid ""
+"The NSS \"compat\" service is similar to \"files\" except that it "
+"additionally permits special entries in corresponding files for granting "
+"users or members of netgroups access to the system.  The following entries "
+"are valid in this mode:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:279
+msgid "For B<passwd> and B<shadow> databases:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:280
+#, no-wrap
+msgid "B<+>I<user>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:285
+msgid "Include the specified I<user> from the NIS passwd/shadow map."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:285
+#, no-wrap
+msgid "B<+@>I<netgroup>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:289
+msgid "Include all users in the given I<netgroup>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:289
+#, no-wrap
+msgid "B<->I<user>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:294
+msgid "Exclude the specified I<user> from the NIS passwd/shadow map."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:294
+#, no-wrap
+msgid "B<-@>I<netgroup>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:298
+msgid "Exclude all users in the given I<netgroup>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:298 man-pages/man5/nsswitch.conf.5:318
+#, no-wrap
+msgid "B<+>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:302
+msgid ""
+"Include every user, except previously excluded ones, from the NIS "
+"passwd/shadow map."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:307
+msgid "For B<group> database:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:308
+#, no-wrap
+msgid "B<+>I<group>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:313
+msgid "Include the specified I<group> from the NIS group map."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:313
+#, no-wrap
+msgid "B<->I<group>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:318
+msgid "Exclude the specified I<group> from the NIS group map."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:322
+msgid ""
+"Include every group, except previously excluded ones, from the NIS group "
+"map."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:332
+msgid ""
+"By default, the source is \"nis\", but this may be overridden by specifying "
+"any NSS service except \"compat\" itself as the source for the pseudo-"
+"databases B<passwd_compat>, B<group_compat>, and B<shadow_compat>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:339
+msgid ""
+"A service named I<SERVICE> is implemented by a shared object library named "
+"I<libnss_SERVICE.so.>B<X> that resides in I</lib>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:340
+#, no-wrap
+msgid "I</etc/nsswitch.conf>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:344
+msgid "NSS configuration file."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:344
+#, no-wrap
+msgid "I</lib/libnss_compat.so.>B<X>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:347
+msgid "implements \"compat\" source."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:347
+#, no-wrap
+msgid "I</lib/libnss_db.so.>B<X>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:350
+msgid "implements \"db\" source."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:350
+#, no-wrap
+msgid "I</lib/libnss_dns.so.>B<X>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:353
+msgid "implements \"dns\" source."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:353
+#, no-wrap
+msgid "I</lib/libnss_files.so.>B<X>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:356
+msgid "implements \"files\" source."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:356
+#, no-wrap
+msgid "I</lib/libnss_hesiod.so.>B<X>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:359
+msgid "implements \"hesiod\" source."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:359
+#, no-wrap
+msgid "I</lib/libnss_nis.so.>B<X>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:362
+msgid "implements \"nis\" source."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/nsswitch.conf.5:362
+#, no-wrap
+msgid "I</lib/libnss_nisplus.so.>B<X>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:365
+msgid "implements \"nisplus\" source."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:370
+msgid ""
+"The following files are read when \"files\" source is specified for "
+"respective databases:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:375
+msgid "I</etc/aliases>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:378
+msgid "I</etc/ethers>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:381 man-pages/man5/nsswitch.conf.5:387
+msgid "I</etc/group>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:384
+msgid "I</etc/hosts>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:390
+msgid "I</etc/netgroup>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:396
+msgid "I</etc/passwd>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:399
+msgid "I</etc/protocols>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:402
+msgid "I</etc/publickey>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:405
+msgid "I</etc/rpc>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:408
+msgid "I</etc/services>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:411
+msgid "I</etc/shadow>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:419
+msgid ""
+"Within each process that uses B<nsswitch.conf>, the entire file is read only"
+" once.  If the file is later changed, the process will continue using the "
+"old configuration."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:432
+msgid ""
+"Traditionally, there was only a single source for service information, often"
+" in the form of a single configuration file (e.g., I</etc/passwd>).  "
+"However, as other name services, such as the Network Information Service "
+"(NIS) and the Domain Name Service (DNS), became popular, a method was needed"
+" that would be more flexible than fixed search orders coded into the C "
+"library.  The Name Service Switch mechanism, which was based on the "
+"mechanism used by Sun Microsystems in the Solaris 2 C library, introduced a "
+"cleaner solution to the problem."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/nsswitch.conf.5:434
+msgid "B<getent>(1), B<nss>(5)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/nextafter.3:11
+#, no-wrap
+msgid "NEXTAFTER"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:15
+msgid ""
+"nextafter, nextafterf, nextafterl, nexttoward, nexttowardf, nexttowardl - "
+"floating-point number manipulation"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:17
+msgid "B<#include E<lt>math.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:19
+msgid "B<double nextafter(double >I<x>B<, double >I<y>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:21
+msgid "B<float nextafterf(float >I<x>B<, float >I<y>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:23
+msgid "B<long double nextafterl(long double >I<x>B<, long double >I<y>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:25
+msgid "B<double nexttoward(double >I<x>B<, long double >I<y>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:27
+msgid "B<float nexttowardf(float >I<x>B<, long double >I<y>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:29
+msgid "B<long double nexttowardl(long double >I<x>B<, long double >I<y>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:31
+msgid "Link with I<-lm>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:39
+msgid "B<nextafter>():"
+msgstr ""
+
+#.     || _XOPEN_SOURCE\ &&\ _XOPEN_SOURCE_EXTENDED
+#. type: Plain text
+#: man-pages/man3/nextafter.3:45
+#, no-wrap
+msgid ""
+"_ISOC99_SOURCE || _POSIX_C_SOURCE\\ E<gt>=\\ 200112L\n"
+"    || _XOPEN_SOURCE\\ E<gt>=\\ 500\n"
+"    || /* Since glibc 2.19: */ _DEFAULT_SOURCE\n"
+"    || /* Glibc versions E<lt>= 2.19: */ _BSD_SOURCE || _SVID_SOURCE\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:49
+msgid "B<nextafterf>(), B<nextafterl>():"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:53
+#, no-wrap
+msgid ""
+"_ISOC99_SOURCE || _POSIX_C_SOURCE\\ E<gt>=\\ 200112L\n"
+"    || /* Since glibc 2.19: */ _DEFAULT_SOURCE\n"
+"    || /* Glibc versions E<lt>= 2.19: */ _BSD_SOURCE || _SVID_SOURCE\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:58
+msgid "B<nexttoward>(), B<nexttowardf>(), B<nexttowardl>():"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:61
+msgid ""
+"_XOPEN_SOURCE\\ E<gt>=\\ 600 || _ISOC99_SOURCE || _POSIX_C_SOURCE\\ E<gt>=\\"
+" 200112L"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:79
+msgid ""
+"The B<nextafter>(), B<nextafterf>(), and B<nextafterl>()  functions return "
+"the next representable floating-point value following I<x> in the direction "
+"of I<y>.  If I<y> is less than I<x>, these functions will return the largest"
+" representable number less than I<x>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:86
+msgid "If I<x> equals I<y>, the functions return I<y>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:97
+msgid ""
+"The B<nexttoward>(), B<nexttowardf>(), and B<nexttowardl>()  functions do "
+"the same as the corresponding B<nextafter>()  functions, except that they "
+"have a I<long double> second argument."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:103
+msgid ""
+"On success, these functions return the next representable floating-point "
+"value after I<x> in the direction of I<y>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:113
+msgid ""
+"If I<x> equals I<y>, then I<y> (cast to the same type as I<x>)  is returned."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:120
+msgid "If I<x> or I<y> is a NaN, a NaN is returned."
+msgstr ""
+
+#.  e.g., DBL_MAX
+#. type: Plain text
+#: man-pages/man3/nextafter.3:133
+msgid ""
+"If I<x> is finite, and the result would overflow, a range error occurs, and "
+"the functions return B<HUGE_VAL>, B<HUGE_VALF>, or B<HUGE_VALL>, "
+"respectively, with the correct mathematical sign."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:142
+msgid ""
+"If I<x> is not equal to I<y>, and the correct function result would be "
+"subnormal, zero, or underflow, a range error occurs, and either the correct "
+"value (if it can be represented), or 0.0, is returned."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:147
+msgid ""
+"See B<math_error>(7)  for information on how to determine whether an error "
+"has occurred when calling these functions."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:149
+msgid "The following errors can occur:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/nextafter.3:149
+#, no-wrap
+msgid "Range error: result overflow"
+msgstr ""
+
+#.  e.g., nextafter(DBL_MAX, HUGE_VAL);
+#.  .I errno
+#.  is set to
+#.  .BR ERANGE .
+#. type: Plain text
+#: man-pages/man3/nextafter.3:158
+msgid "An overflow floating-point exception (B<FE_OVERFLOW>)  is raised."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/nextafter.3:158
+#, no-wrap
+msgid "Range error: result is subnormal or underflows"
+msgstr ""
+
+#.  e.g., nextafter(DBL_MIN, 0.0);
+#.  .I errno
+#.  is set to
+#.  .BR ERANGE .
+#. type: Plain text
+#: man-pages/man3/nextafter.3:167
+msgid "An underflow floating-point exception (B<FE_UNDERFLOW>)  is raised."
+msgstr ""
+
+#.  FIXME . Is it intentional that these functions do not set errno?
+#.  Bug raised: http://sources.redhat.com/bugzilla/show_bug.cgi?id=6799
+#. type: Plain text
+#: man-pages/man3/nextafter.3:172
+msgid "These functions do not set I<errno>."
+msgstr ""
+
+#. type: SH
+#: man-pages/man3/nextafter.3:172
+#, no-wrap
+msgid "ATTRIBUTES"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:175
+msgid ""
+"For an explanation of the terms used in this section, see B<attributes>(7)."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/nextafter.3:179
+#, no-wrap
+msgid "Interface"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/nextafter.3:179
+#, no-wrap
+msgid "Attribute"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/nextafter.3:179
+#, no-wrap
+msgid "Value"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/nextafter.3:183
+#, no-wrap
+msgid ""
+"B<nextafter>(),\n"
+"B<nextafterf>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/nextafter.3:186
+#, no-wrap
+msgid ""
+"B<nextafterl>(),\n"
+"B<nexttoward>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/nextafter.3:189
+#, no-wrap
+msgid ""
+"B<nexttowardf>(),\n"
+"B<nexttowardl>()"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/nextafter.3:189
+#, no-wrap
+msgid "Thread safety"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/nextafter.3:189
+#, no-wrap
+msgid "MT-Safe"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:195
+msgid ""
+"C99, POSIX.1-2001, POSIX.1-2008.  This function is defined in IEC 559 (and "
+"the appendix with recommended functions in IEEE 754/IEEE 854)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:200
+msgid ""
+"In glibc version 2.5 and earlier, these functions do not raise an underflow "
+"floating-point (B<FE_UNDERFLOW>)  exception when an underflow occurs."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextafter.3:201
+msgid "B<nearbyint>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/ntp_gettime.3:25
+#, no-wrap
+msgid "NTP_GETTIME"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/ntp_gettime.3:28
+msgid "ntp_gettime, ntp_gettimex - get time parameters (NTP daemon interface)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/ntp_gettime.3:31
+#, no-wrap
+msgid "B<#include E<lt>sys/timex.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/ntp_gettime.3:33
+#, no-wrap
+msgid "B<int ntp_gettime(struct ntptimeval *>I<ntv>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/ntp_gettime.3:35
+#, no-wrap
+msgid "B<int ntp_gettimex(struct ntptimeval *>I<ntv>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/ntp_gettime.3:40
+msgid ""
+"Both of these APIs return information to the caller via the I<ntv> argument,"
+" a structure of the following type:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/ntp_gettime.3:48
+#, no-wrap
+msgid ""
+"struct ntptimeval {\n"
+"    struct timeval time;        /* Current time */\n"
+"    long int maxerror;          /* Maximum error */\n"
+"    long int esterror;          /* Estimated error */\n"
+"    long int tai;               /* TAI offset */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/ntp_gettime.3:51
+#, no-wrap
+msgid ""
+"    /* Further padding bytes allowing for future expansion */\n"
+"};\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/ntp_gettime.3:55
+msgid "The fields of this structure are as follows:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/ntp_gettime.3:55
+#, no-wrap
+msgid "I<time>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/ntp_gettime.3:60
+msgid "The current time, expressed as a I<timeval> structure:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/ntp_gettime.3:67
+#, no-wrap
+msgid ""
+"struct timeval {\n"
+"    time_t      tv_sec;   /* Seconds since the Epoch */\n"
+"    suseconds_t tv_usec;  /* Microseconds */\n"
+"};\n"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/ntp_gettime.3:70
+#, no-wrap
+msgid "I<maxerror>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/ntp_gettime.3:79
+msgid ""
+"Maximum error, in microseconds.  This value can be initialized by "
+"B<ntp_adjtime>(3), and is increased periodically (on Linux: each second), "
+"but is clamped to an upper limit (the kernel constant B<NTP_PHASE_MAX>, with"
+" a value of 16,000)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/ntp_gettime.3:79
+#, no-wrap
+msgid "I<esterror>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/ntp_gettime.3:87
+msgid ""
+"Estimated error, in microseconds.  This value can be set via "
+"B<ntp_adjtime>(3)  to contain an estimate of the difference between the "
+"system clock and the true time.  This value is not used inside the kernel."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/ntp_gettime.3:87
+#, no-wrap
+msgid "I<tai>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/ntp_gettime.3:90
+msgid "TAI (Atomic International Time) offset."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/ntp_gettime.3:100
+msgid ""
+"B<ntp_gettime>()  returns an I<ntptimeval> structure in which the I<time>, "
+"I<maxerror>, and I<esterror> fields are filled in."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/ntp_gettime.3:107
+msgid ""
+"B<ntp_gettimex>()  performs the same task as B<ntp_gettime>(), but also "
+"returns information in the I<tai> field."
+msgstr ""
+
+#.  FIXME . the info page incorrectly describes the return values.
+#. type: Plain text
+#: man-pages/man3/ntp_gettime.3:116
+msgid ""
+"The return values for B<ntp_gettime>()  and B<ntp_gettimex>()  are as for "
+"B<adjtimex>(2).  Given a correct pointer argument, these functions always "
+"succeed."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/ntp_gettime.3:123
+msgid ""
+"The B<ntp_gettime>()  function is available since glibc 2.1.  The "
+"B<ntp_gettimex>()  function is available since glibc 2.12."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/ntp_gettime.3:134
+#, no-wrap
+msgid ""
+"B<ntp_gettime>(),\n"
+"B<ntp_gettimex>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/ntp_gettime.3:141
+msgid ""
+"B<ntp_gettime>()  is described in the NTP Kernel Application Program "
+"Interface.  B<ntp_gettimex>()  is a GNU extension."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/ntp_gettime.3:145
+msgid "B<adjtimex>(2)  B<ntp_adjtime>(3), B<time>(7)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/ntp_gettime.3:149
+msgid ""
+"E<.UR "
+"http://www.slac.stanford.edu/comp/unix/\\:package/\\:rtems/\\:src/\\:ssrlApps/\\:ntpNanoclock/\\:api.htm>"
+" NTP \"Kernel Application Program Interface\" E<.UE>"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/newlocale.3:26
+#, no-wrap
+msgid "NEWLOCALE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:29
+msgid "newlocale, freelocale - create, modify, and free a locale object"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:32
+#, no-wrap
+msgid "B<#include E<lt>locale.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:35
+#, no-wrap
+msgid ""
+"B<locale_t newlocale(int >I<category_mask>B<, const char *>I<locale>B<,>\n"
+"B<                   locale_t >I<base>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:37
+#, no-wrap
+msgid "B<void freelocale(locale_t >I<locobj>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:46
+msgid "B<newlocale>(), B<freelocale>():"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/newlocale.3:48
+#, no-wrap
+msgid "Since glibc 2.10:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:51
+msgid "_XOPEN_SOURCE\\ E<gt>=\\ 700"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/newlocale.3:51
+#, no-wrap
+msgid "Before glibc 2.10:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:54
+msgid "_GNU_SOURCE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:64
+msgid ""
+"The B<newlocale>()  function creates a new locale object, or modifies an "
+"existing object, returning a reference to the new or modified object as the "
+"function result.  Whether the call creates a new object or modifies an "
+"existing object is determined by the value of I<base>:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:70
+msgid "If I<base> is I<(locale_t)\\ 0>, a new object is created."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:93
+msgid ""
+"If I<base> refers to valid existing locale object (i.e., an object returned "
+"by a previous call to B<newlocale>()  or B<duplocale>(3)), then that object "
+"is modified by the call.  If the call is successful, the contents of I<base>"
+" are unspecified (in particular, the object referred to by I<base> may be "
+"freed, and a new object created).  Therefore, the caller should ensure that "
+"it stops using I<base> before the call to B<newlocale>(), and should "
+"subsequently refer to the modified object via the reference returned as the "
+"function result.  If the call fails, the contents of I<base> remain valid "
+"and unchanged."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:104
+msgid ""
+"If I<base> is the special locale object B<LC_GLOBAL_LOCALE> (see "
+"B<duplocale>(3)), or is not I<(locale_t)\\ 0> and is not a valid locale "
+"object handle, the behavior is undefined."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:127
+msgid ""
+"The I<category_mask> argument is a bit mask that specifies the locale "
+"categories that are to be set in a newly created locale object or modified "
+"in an existing object.  The mask is constructed by a bitwise OR of the "
+"constants B<LC_ADDRESS_MASK>, B<LC_CTYPE_MASK>, B<LC_COLLATE_MASK>, "
+"B<LC_IDENTIFICATION_MASK>, B<LC_MEASUREMENT_MASK>, B<LC_MESSAGES_MASK>, "
+"B<LC_MONETARY_MASK>, B<LC_NUMERIC_MASK>, B<LC_NAME_MASK>, B<LC_PAPER_MASK>, "
+"B<LC_TELEPHONE_MASK>, and B<LC_TIME_MASK>.  Alternatively, the mask can be "
+"specified as B<LC_ALL_MASK>, which is equivalent to ORing all of the "
+"preceding constants."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:138
+msgid ""
+"For each category specified in I<category_mask>, the locale data from "
+"I<locale> will be used in the object returned by B<newlocale>().  If a new "
+"locale object is being created, data for all categories not specified in "
+"I<category_mask> is taken from the default (\"POSIX\") locale."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:143
+msgid ""
+"The following preset values of I<locale> are defined for all categories that"
+" can be specified in I<category_mask>:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/newlocale.3:143
+#, no-wrap
+msgid "POSIX"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:146
+msgid "A minimal locale environment for C language programs."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/newlocale.3:146
+#, no-wrap
+msgid "C"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:149
+msgid "Equivalent to \"POSIX\"."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:158
+msgid ""
+"An implementation-defined native environment corresponding to the values of "
+"the B<LC_*> and B<LANG> environment variables (see B<locale>(7))."
+msgstr ""
+
+#. type: SS
+#: man-pages/man3/newlocale.3:158
+#, no-wrap
+msgid "freelocale()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:172
+msgid ""
+"The B<freelocale>()  function deallocates the resources associated with "
+"I<locobj>, a locale object previously returned by a call to B<newlocale>()  "
+"or B<duplocale>(3).  If I<locobj> is B<LC_GLOBAL_LOCALE> or is not valid "
+"locale object handle, the results are undefined."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:175
+msgid ""
+"Once a locale object has been freed, the program should make no further use "
+"of it."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:191
+msgid ""
+"On success, B<newlocale>()  returns a handle that can be used in calls to "
+"B<duplocale>(3), B<freelocale>(), and other functions that take a "
+"I<locale_t> argument.  On error, B<newlocale>()  returns I<(locale_t)\\ 0>, "
+"and sets I<errno> to indicate the cause of the error."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:197
+msgid ""
+"One or more bits in I<category_mask> do not correspond to a valid locale "
+"category."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:201
+msgid "I<locale> is NULL."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/newlocale.3:201
+#, no-wrap
+msgid "B<ENOENT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:205
+msgid "I<locale> is not a string pointer referring to a valid locale."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/newlocale.3:205
+#, no-wrap
+msgid "B<ENOMEM>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:208
+msgid "Insufficient memory to create a locale object."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:214
+msgid ""
+"The B<newlocale>()  and B<freelocale>()  functions first appeared in version"
+" 2.3 of the GNU C library."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:216
+msgid "POSIX.1-2008."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:221
+msgid ""
+"Each locale object created by B<newlocale>()  should be deallocated using "
+"B<freelocale>()."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:232
+msgid ""
+"The program below takes up to two command-line arguments, which each "
+"identify locales.  The first argument is required, and is used to set the "
+"B<LC_NUMERIC> category in a locale object created using B<newlocale>().  The"
+" second command-line argument is optional; if it is present, it is used to "
+"set the B<LC_TIME> category of the locale object."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:237
+msgid ""
+"Having created and initialized the locale object, the program then applies "
+"it using B<uselocale>(3), and then tests the effect of the locale changes "
+"by:"
+msgstr ""
+
+#. type: IP
+#: man-pages/man3/newlocale.3:237
+#, no-wrap
+msgid "1."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:245
+msgid ""
+"Displaying a floating-point number with a fractional part.  This output will"
+" be affected by the B<LC_NUMERIC> setting.  In many European-language "
+"locales, the fractional part of the number is separated from the integer "
+"part using a comma, rather than a period."
+msgstr ""
+
+#. type: IP
+#: man-pages/man3/newlocale.3:245
+#, no-wrap
+msgid "2."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:250
+msgid ""
+"Displaying the date.  The format and language of the output will be affected"
+" by the B<LC_TIME> setting."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:252
+msgid "The following shell sessions show some example runs of this program."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:258
+msgid "Set the B<LC_NUMERIC> category to I<fr_FR> (French):"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:264
+#, no-wrap
+msgid ""
+"$ B<./a.out fr_FR>\n"
+"123456,789\n"
+"Fri Mar  7 00:25:08 2014\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:277
+msgid ""
+"Set the B<LC_NUMERIC> category to I<fr_FR> (French), and the B<LC_TIME> "
+"category to I<it_IT> (Italian):"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:283
+#, no-wrap
+msgid ""
+"$ B<./a.out fr_FR it_IT>\n"
+"123456,789\n"
+"ven 07 mar 2014 00:26:01 CET\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:293
+msgid ""
+"Specify the B<LC_TIME> setting as an empty string, which causes the value to"
+" be taken from environment variable settings (which, here, specify I<mi_NZ>,"
+" New Zealand Māori):"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:299
+#, no-wrap
+msgid ""
+"$ LC_ALL=mi_NZ ./a.out fr_FR \"\"\n"
+"123456,789\n"
+"Te Paraire, te 07 o Poutū-te-rangi, 2014 00:38:44 CET\n"
+msgstr ""
+
+#. type: SS
+#: man-pages/man3/newlocale.3:301
+#, no-wrap
+msgid "Program source"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:308
+#, no-wrap
+msgid ""
+"#define _XOPEN_SOURCE 700\n"
+"#include E<lt>stdio.hE<gt>\n"
+"#include E<lt>stdlib.hE<gt>\n"
+"#include E<lt>locale.hE<gt>\n"
+"#include E<lt>time.hE<gt>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:311
+#, no-wrap
+msgid ""
+"#define errExit(msg)    do { perror(msg); exit(EXIT_FAILURE); \\e\n"
+"                        } while (0)\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:320
+#, no-wrap
+msgid ""
+"int\n"
+"main(int argc, char *argv[])\n"
+"{\n"
+"    char buf[100];\n"
+"    time_t t;\n"
+"    size_t s;\n"
+"    struct tm *tm;\n"
+"    locale_t loc, nloc;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:325
+#, no-wrap
+msgid ""
+"    if (argc E<lt> 2) {\n"
+"        fprintf(stderr, \"Usage: %s locale1 [locale2]\\en\", argv[0]);\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:328
+#, no-wrap
+msgid ""
+"    /* Create a new locale object, taking the LC_NUMERIC settings\n"
+"       from the locale specified in argv[1] */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:332
+#, no-wrap
+msgid ""
+"    loc = newlocale(LC_NUMERIC_MASK, argv[1], (locale_t) 0);\n"
+"    if (loc == (locale_t) 0)\n"
+"        errExit(\"newlocale\");\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:338
+#, no-wrap
+msgid ""
+"    /* If a second command-line argument was specified, modify the\n"
+"       locale object to take the LC_TIME settings from the locale\n"
+"       specified in argv[2]. We assign the result of this newlocale()\n"
+"       call to 'nloc' rather than 'loc', since in some cases, we might\n"
+"       want to preserve 'loc' if this call fails. */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:345
+#, no-wrap
+msgid ""
+"    if (argc E<gt> 2) {\n"
+"        nloc = newlocale(LC_TIME_MASK, argv[2], loc);\n"
+"        if (nloc == (locale_t) 0)\n"
+"            errExit(\"newlocale\");\n"
+"        loc = nloc;\n"
+"    }\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:347
+#, no-wrap
+msgid "    /* Apply the newly created locale to this thread */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:349
+#, no-wrap
+msgid "    uselocale(loc);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:351
+#, no-wrap
+msgid "    /* Test effect of LC_NUMERIC */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:353
+#, no-wrap
+msgid "    printf(\"%8.3f\\en\", 123456.789);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:355
+#, no-wrap
+msgid "    /* Test effect of LC_TIME */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:360
+#, no-wrap
+msgid ""
+"    t = time(NULL);\n"
+"    tm = localtime(&t);\n"
+"    if (tm == NULL)\n"
+"        errExit(\"time\");\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:364
+#, no-wrap
+msgid ""
+"    s = strftime(buf, sizeof(buf), \"%c\", tm);\n"
+"    if (s == 0)\n"
+"        errExit(\"strftime\");\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:366
+#, no-wrap
+msgid "    printf(\"%s\\en\", buf);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:368
+#, no-wrap
+msgid "    /* Free the locale object */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:370
+#, no-wrap
+msgid "    freelocale(loc);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:373
+#, no-wrap
+msgid ""
+"    exit(EXIT_SUCCESS);\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/newlocale.3:380
+msgid ""
+"B<locale>(1), B<duplocale>(3), B<setlocale>(3), B<uselocale>(3), "
+"B<locale>(5), B<locale>(7)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/netlink.3:10
+#, no-wrap
+msgid "2014-03-20"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/netlink.3:13
+msgid "netlink - Netlink macros"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/netlink.3:17
+#, no-wrap
+msgid ""
+"B<#include E<lt>asm/types.hE<gt>>\n"
+"B<#include E<lt>linux/netlink.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/netlink.3:25
+#, no-wrap
+msgid ""
+"B<int NLMSG_ALIGN(size_t >I<len>B<);>\n"
+"B<int NLMSG_LENGTH(size_t >I<len>B<);>\n"
+"B<int NLMSG_SPACE(size_t >I<len>B<);>\n"
+"B<void *NLMSG_DATA(struct nlmsghdr *>I<nlh>B<);>\n"
+"B<struct nlmsghdr *NLMSG_NEXT(struct nlmsghdr *>I<nlh>B<, int >I<len>B<);>\n"
+"B<int NLMSG_OK(struct nlmsghdr *>I<nlh>B<, int >I<len>B<);>\n"
+"B<int NLMSG_PAYLOAD(struct nlmsghdr *>I<nlh>B<, int >I<len>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/netlink.3:34
+msgid ""
+"I<E<lt>linux/netlink.hE<gt>> defines several standard macros to access or "
+"create a netlink datagram.  They are similar in spirit to the macros defined"
+" in B<cmsg>(3)  for auxiliary data.  The buffer passed to and from a netlink"
+" socket should be accessed using only these macros."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/netlink.3:34
+#, no-wrap
+msgid "B<NLMSG_ALIGN>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/netlink.3:37
+msgid "Round the length of a netlink message up to align it properly."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/netlink.3:37
+#, no-wrap
+msgid "B<NLMSG_LENGTH>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/netlink.3:45
+msgid ""
+"Given the payload length, I<len>, this macro returns the aligned length to "
+"store in the I<nlmsg_len> field of the I<nlmsghdr>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/netlink.3:45
+#, no-wrap
+msgid "B<NLMSG_SPACE>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/netlink.3:50
+msgid ""
+"Return the number of bytes that a netlink message with payload of I<len> "
+"would occupy."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/netlink.3:50
+#, no-wrap
+msgid "B<NLMSG_DATA>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/netlink.3:54
+msgid ""
+"Return a pointer to the payload associated with the passed I<nlmsghdr>."
+msgstr ""
+
+#.  this is bizarre, maybe the interface should be fixed.
+#. type: TP
+#: man-pages/man3/netlink.3:54
+#, no-wrap
+msgid "B<NLMSG_NEXT>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/netlink.3:70
+msgid ""
+"Get the next I<nlmsghdr> in a multipart message.  The caller must check if "
+"the current I<nlmsghdr> didn't have the B<NLMSG_DONE> set\\(emthis function "
+"doesn't return NULL on end.  The I<len> argument is an lvalue containing the"
+" remaining length of the message buffer.  This macro decrements it by the "
+"length of the message header."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/netlink.3:70
+#, no-wrap
+msgid "B<NLMSG_OK>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/netlink.3:74
+msgid ""
+"Return true if the netlink message is not truncated and is in a form "
+"suitable for parsing."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/netlink.3:74
+#, no-wrap
+msgid "B<NLMSG_PAYLOAD>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/netlink.3:78
+msgid "Return the length of the payload associated with the I<nlmsghdr>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/netlink.3:80
+msgid "These macros are nonstandard Linux extensions."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/netlink.3:84
+msgid ""
+"It is often better to use netlink via I<libnetlink> than via the low-level "
+"kernel interface."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/netlink.3:86
+msgid "B<libnetlink>(3), B<netlink>(7)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/nan.3:11
+#, no-wrap
+msgid "NAN"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/nan.3:11
+#, no-wrap
+msgid "2016-03-15"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nan.3:14
+msgid "nan, nanf, nanl - return 'Not a Number'"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nan.3:18
+msgid "B<double nan(const char *>I<tagp>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nan.3:20
+msgid "B<float nanf(const char *>I<tagp>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nan.3:22
+msgid "B<long double nanl(const char *>I<tagp>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nan.3:34
+msgid "B<nan>(), B<nanf>(), B<nanl>():"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nan.3:36
+msgid "_ISOC99_SOURCE || _POSIX_C_SOURCE\\ E<gt>=\\ 200112L"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nan.3:44
+msgid ""
+"These functions return a representation (determined by I<tagp>)  of a quiet "
+"NaN.  If the implementation does not support quiet NaNs, these functions "
+"return zero."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nan.3:48
+msgid "The call I<nan(\"char-sequence\")> is equivalent to:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nan.3:52
+#, no-wrap
+msgid "strtod(\"NAN(char-sequence)\", NULL);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nan.3:63
+msgid ""
+"Similarly, calls to B<nanf>()  and B<nanl>()  are equivalent to analogous "
+"calls to B<strtof>(3)  and B<strtold>(3)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nan.3:71
+msgid ""
+"The argument I<tagp> is used in an unspecified manner.  On IEEE 754 systems,"
+" there are many representations of NaN, and I<tagp> selects one.  On other "
+"systems it may do nothing."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nan.3:73
+msgid "These functions first appeared in glibc in version 2.1."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/nan.3:85
+#, no-wrap
+msgid ""
+"B<nan>(),\n"
+"B<nanf>(),\n"
+"B<nanl>()"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/nan.3:85
+#, no-wrap
+msgid "MT-Safe locale"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nan.3:91
+msgid ""
+"C99, POSIX.1-2001, POSIX.1-2008.  See also IEC 559 and the appendix with "
+"recommended functions in IEEE 754/IEEE 854."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nan.3:94
+msgid "B<isnan>(3), B<strtod>(3), B<math_error>(7)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/nl_langinfo.3:18
+#, no-wrap
+msgid "NL_LANGINFO"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:21
+msgid "nl_langinfo, nl_langinfo_l - query language and locale information"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:24
+#, no-wrap
+msgid "B<#include E<lt>langinfo.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:26
+#, no-wrap
+msgid "B<char *nl_langinfo(nl_item >I<item>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:28
+#, no-wrap
+msgid "B<char *nl_langinfo_l(nl_item >I<item>B<, locale_t >I<locale>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:37
+msgid "B<nl_langinfo_l>():"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:40
+#, no-wrap
+msgid ""
+"Since glibc 2.24:\n"
+"    _POSIX_C_SOURCE\\ E<gt>=\\ 200809L\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:43
+#, no-wrap
+msgid ""
+"Glibc 2.23 and earlier:\n"
+"    _POSIX_C_SOURCE\\ E<gt>=\\ 200112L\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:64
+msgid ""
+"The B<nl_langinfo>()  and B<nl_langinfo_l>()  functions provide access to "
+"locale information in a more flexible way than B<localeconv>(3).  "
+"B<nl_langinfo>()  returns a string which is the value corresponding to "
+"I<item> in the program's current global locale.  B<nl_langinfo>()  returns a"
+" string which is the value corresponding to I<item> for the locale "
+"identified by the locale object I<locale>, which was previously created by "
+"B<newlocale>(1).  Individual and additional elements of the locale "
+"categories can be queried."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:67
+msgid ""
+"Examples for the locale elements that can be specified in I<item> using the "
+"constants defined in I<E<lt>langinfo.hE<gt>> are:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/nl_langinfo.3:67
+#, no-wrap
+msgid "B<CODESET>\\ (LC_CTYPE)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:77
+msgid ""
+"Return a string with the name of the character encoding used in the selected"
+" locale, such as \"UTF-8\", \"ISO-8859-1\", or \"ANSI_X3.4-1968\" (better "
+"known as US-ASCII).  This is the same string that you get with \"locale "
+"charmap\".  For a list of character encoding names, try \"locale -m\" (see "
+"B<locale>(1))."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/nl_langinfo.3:77
+#, no-wrap
+msgid "B<D_T_FMT>\\ (LC_TIME)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:82
+msgid ""
+"Return a string that can be used as a format string for B<strftime>(3)  to "
+"represent time and date in a locale-specific way."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/nl_langinfo.3:82
+#, no-wrap
+msgid "B<D_FMT>\\ (LC_TIME)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:87
+msgid ""
+"Return a string that can be used as a format string for B<strftime>(3)  to "
+"represent a date in a locale-specific way."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/nl_langinfo.3:87
+#, no-wrap
+msgid "B<T_FMT>\\ (LC_TIME)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:92
+msgid ""
+"Return a string that can be used as a format string for B<strftime>(3)  to "
+"represent a time in a locale-specific way."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/nl_langinfo.3:92
+#, no-wrap
+msgid "B<DAY_>{1\\(en7} (LC_TIME)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:97
+msgid ""
+"Return name of the I<n>-th day of the week. [Warning: this follows the US "
+"convention DAY_1 = Sunday, not the international convention (ISO 8601) that "
+"Monday is the first day of the week.]"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/nl_langinfo.3:97
+#, no-wrap
+msgid "B<ABDAY_>{1\\(en7} (LC_TIME)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:100
+msgid "Return abbreviated name of the I<n>-th day of the week."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/nl_langinfo.3:100
+#, no-wrap
+msgid "B<MON_>{1\\(en12} (LC_TIME)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:103
+msgid "Return name of the I<n>-th month."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/nl_langinfo.3:103
+#, no-wrap
+msgid "B<ABMON_>{1\\(en12} (LC_TIME)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:106
+msgid "Return abbreviated name of the I<n>-th month."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/nl_langinfo.3:106
+#, no-wrap
+msgid "B<RADIXCHAR>\\ (LC_NUMERIC)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:109
+msgid "Return radix character (decimal dot, decimal comma, etc.)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/nl_langinfo.3:109
+#, no-wrap
+msgid "B<THOUSEP>\\ (LC_NUMERIC)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:112
+msgid "Return separator character for thousands (groups of three digits)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/nl_langinfo.3:112
+#, no-wrap
+msgid "B<YESEXPR>\\ (LC_MESSAGES)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:117
+msgid ""
+"Return a regular expression that can be used with the B<regex>(3)  function "
+"to recognize a positive response to a yes/no question."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/nl_langinfo.3:117
+#, no-wrap
+msgid "B<NOEXPR>\\ (LC_MESSAGES)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:122
+msgid ""
+"Return a regular expression that can be used with the B<regex>(3)  function "
+"to recognize a negative response to a yes/no question."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/nl_langinfo.3:122
+#, no-wrap
+msgid "B<CRNCYSTR>\\ (LC_MONETARY)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:127
+msgid ""
+"Return the currency symbol, preceded by \"-\" if the symbol should appear "
+"before the value, \"+\" if the symbol should appear after the value, or "
+"\".\" if the symbol should replace the radix character."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:131
+msgid ""
+"The above list covers just some examples of items that can be requested.  "
+"For a more detailed list, consult I<The GNU C Library Reference Manual>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:136
+msgid ""
+"On success, these functions return a pointer to a string which is the value "
+"corresponding to I<item> in the specified locale."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:149
+msgid ""
+"If no locale has been selected by B<setlocale>(3)  for the appropriate "
+"category, B<nl_langinfo>()  return a pointer to the corresponding string in "
+"the \"C\" locale.  The same is true of B<nl_langinfo_l>()  if I<locale> "
+"specifies a locale where I<langinfo> data is not defined."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:151
+msgid "If I<item> is not valid, a pointer to an empty string is returned."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:167
+msgid ""
+"The pointer returned by these functions may point to static data that may be"
+" overwritten, or the pointer itself may be invalidated, by a subsequent call"
+" to B<nl_langinfo>(), B<nl_langinfo_l>(), or B<setlocale>(3).  The same "
+"statements apply to B<nl_langinfo_l>()  if the locale object referred to by "
+"I<locale> is freed or modified by B<freelocale>(3)  or B<newlocale>(3)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:170
+msgid ""
+"POSIX specifies that the application may not modify the string returned by "
+"these functions."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/nl_langinfo.3:180
+#, no-wrap
+msgid "B<nl_langinfo>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:184
+msgid "POSIX.1-2001, POSIX.1-2008, SUSv2."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:192
+msgid ""
+"The behavior of B<nl_langinfo_l>()  is undefined if I<locale> is the special"
+" locale object B<LC_GLOBAL_LOCALE> or is not a valid locale object handle."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:196
+msgid ""
+"The following program sets the character type and the numeric locale "
+"according to the environment and queries the terminal character set and the "
+"radix character."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:202
+#, no-wrap
+msgid ""
+"#include E<lt>langinfo.hE<gt>\n"
+"#include E<lt>locale.hE<gt>\n"
+"#include E<lt>stdio.hE<gt>\n"
+"#include E<lt>stdlib.hE<gt>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:208
+#, no-wrap
+msgid ""
+"int\n"
+"main(int argc, char *argv[])\n"
+"{\n"
+"    setlocale(LC_CTYPE, \"\");\n"
+"    setlocale(LC_NUMERIC, \"\");\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:211
+#, no-wrap
+msgid ""
+"    printf(\"%s\\en\", nl_langinfo(CODESET));\n"
+"    printf(\"%s\\en\", nl_langinfo(RADIXCHAR));\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:221
+msgid ""
+"B<locale>(1), B<localeconv>(3), B<setlocale>(3), B<charsets>(7), "
+"B<locale>(7)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nl_langinfo.3:222
+msgid "The GNU C Library Reference Manual"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/nextup.3:25
+#, no-wrap
+msgid "NEXTUP"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextup.3:29
+msgid ""
+"nextup, nextupf, nextupl, nextdown, nextdownf, nextdownl - return next "
+"floating-point number toward positive/negative infinity"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextup.3:33
+#, no-wrap
+msgid ""
+"B<#define _GNU_SOURCE>     /* See feature_test_macros(7) */\n"
+"B<#include E<lt>math.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextup.3:37
+#, no-wrap
+msgid ""
+"B<double nextup(double >I<x>B<);>\n"
+"B<float nextupf(float >I<x>B<);>\n"
+"B<long double nextupl(long double >I<x>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextup.3:41
+#, no-wrap
+msgid ""
+"B<double nextdown(double >I<x>B<);>\n"
+"B<float nextdownf(float >I<x>B<);>\n"
+"B<long double nextdownl(long double >I<x>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextup.3:52
+msgid ""
+"The B<nextup>(), B<nextupf>(), and B<nextupl>()  functions return the next "
+"representable floating-point number greater than I<x>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextup.3:61
+msgid ""
+"If I<x> is the smallest representable negative number in the corresponding "
+"type, these functions return -0.  If I<x> is 0, the returned value is the "
+"smallest representable positive number of the corresponding type."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextup.3:70
+msgid ""
+"If I<x> is positive infinity, the returned value is positive infinity.  If "
+"I<x> is negative infinity, the returned value is the largest representable "
+"finite negative number of the corresponding type."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextup.3:75
+msgid "If I<x> is Nan, the returned value is NaN."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextup.3:81
+msgid ""
+"The value returned by I<nextdown(x)> is I<-nextup(-x)>, and similarly for "
+"the other types."
+msgstr ""
+
+#.  .SH ERRORS
+#. type: Plain text
+#: man-pages/man3/nextup.3:84
+msgid "See DESCRIPTION."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextup.3:86
+msgid "These functions first appeared in glibc in version 2.24."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/nextup.3:98
+#, no-wrap
+msgid ""
+"B<nextup>(),\n"
+"B<nextupf>(),\n"
+"B<nextupl>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/nextup.3:102
+#, no-wrap
+msgid ""
+"B<nextdown>(),\n"
+"B<nextdownf>(),\n"
+"B<nextdownl>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextup.3:109
+msgid ""
+"These functions are described in I<IEEE Std 754-2008 - Standard for "
+"Floating-Point Arithmetic> and I<ISO/IEC TS 18661>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/nextup.3:111
+msgid "B<nearbyint>(3), B<nextafter>(3)"
+msgstr ""

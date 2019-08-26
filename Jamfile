@@ -1,0 +1,344 @@
+# создать все переведённые справочные страницы
+# для всех языков
+# jam
+# только для русского
+# jam ru
+
+# пересоздать POT-файлы для TX
+# jam pot
+
+# создать отдельную переведённую справочную страницу
+# jam _syscall.2
+
+# получить переводы из TX
+# jam pull
+
+# отправить переводы в TX
+# jam push
+# отправить один файл с переводом
+# tx push -l ru -r man-pages.files_i -t
+
+# отправить POT в TX
+# jam push_pot
+
+# проверить и зарегистрировать POT-файлы в TX
+# (один раз при создании проекта)
+# jam reg-pot
+
+# ==== НАСТРОЙКИ ====
+
+# языки переводов
+local LANGS = ru ;
+
+# актуальная версия оригинальных страниц
+local MAN-PAGE-VERSION = 5.00 ;
+
+# каталог с оригинальными страницами на английском
+local en_orig_dir     = man-pages-git ;
+# каталог с исправленными страницами на английском
+local en_material_dir = man-pages ;
+# каталог с .pot и .po файлами
+local PO_DIR          = po ;
+# каталог с переведёнными страницами
+local MAN_DIR         = man ;
+# каталог с po-файлами, не нуждающимися в переводе
+local empty_po_dir    = empty_po ;
+# каталог файлов, переводимых черех Transifex
+local tx_dir = translations ;
+# название проекта в Transifex
+local tx_prj_name = man-pages ;
+
+# обязательное кол-во переведённого текста в % для
+# генерации страницы, по умолчанию 100%
+local KEEP = 100 ;
+#local KEEP = 0 ;
+
+# ==== КОНЕЦ НАСТРОЕК ====
+
+# целью по умолчанию является сборка справочных
+# страниц для всех языков
+DEPENDS all : $(LANGS) ;
+
+# накладывает заплатки на английские страницы
+# устанавливает зависимость между страницей в git и исправленной страницей
+# устанавливает зависимость между заплатой и исправленной страницей
+rule PrepareMaterialPage
+{
+	DEPENDS $(<) : $(>) ;
+	# если заплатки нет, то не учитывать зависимость
+	NOCARE $(<:BS).patch ;
+	DEPENDS $(<) : $(<:BS).patch ;
+}
+actions PrepareMaterialPage
+{
+	$(CP) $(>) $(<)
+	if [ -f $(<:BS).patch ]; then
+		patch $(<) $(<:BS).patch
+	fi
+}
+
+# настраивает переменную opts для определённой цели
+# SetSpecialOptions цель : для-чего
+# FIXME: прикрутить проверку, что оригинальные страницы ещё существуют
+rule SetSpecialOptions
+{
+	# доп. параметры для плохо понимаемых man
+	# взято из manpages-fr
+	switch $(>)
+	{
+		case crypt.3  : opts on $(<) = "-o groff_code=verbatim" ;
+		case regex.3  : opts on $(<) = "-o groff_code=verbatim -o untranslated=xx" ;
+		case printf.3 : opts on $(<) = "-o groff_code=verbatim" ;
+		case regex.7  : opts on $(<) = "-o groff_code=verbatim" ;
+		case ascii.7  : opts on $(<) = "-o groff_code=verbatim" ;
+		case smartpqi.4 : opts on $(<) = "-o groff_code=verbatim -o untranslated=SY,YS" ;
+		case futex.7  : opts on $(<) = "-o generated" ;
+		case zic.8    : opts on $(<) = "-o groff_code=verbatim -o untranslated=q" ;
+		case tanh.3   : opts on $(<) = "-o groff_code=verbatim -o untranslated=a.RE" ;
+		case suffixes.7 : opts on $(<) = "-o groff_code=verbatim -o untranslated=if" ;
+		case random.4 : opts on $(<) = "-o groff_code=verbatim -o untranslated=IN,NF,FI" ;
+		case syscall.2 : opts on $(<) = "-o groff_code=verbatim -o untranslated=if" ;
+		case vdso.7 : opts on $(<) = "-o groff_code=verbatim -o untranslated=if" ;
+		case tzfile.5 : opts on $(<) = "-o groff_code=verbatim -o untranslated=if,q" ;
+		case zdump.8 : opts on $(<) = "-o groff_code=verbatim -o untranslated=ie,el -o translate_joined=q" ;
+		case bpf-helpers.7 : opts on $(<) = "-o groff_code=verbatim -o untranslated=de1,.,INDENT,UNINDENT,ft C" ;
+	}
+}
+
+# создание POT-файла
+rule PreparePotFile
+{
+	# зависит от исправленной страницы
+	DEPENDS $(<) : $(>) ;
+	SetSpecialOptions $(<) : $(<:B) ;
+}
+actions PreparePotFile
+{
+	po4a-gettextize -f man -M UTF-8 -m $(>) $(opts) -p $(<)
+}
+
+# создание списков файлов
+rule AddToList
+{
+	DEPENDS $(<) : $(>) ;
+}
+actions quietly AddToList
+{
+	echo $(>) >> $(<)
+}
+
+# создание объединённого POT-файла
+rule MergePOT
+{
+	for f in $(>) { AddToList $(<).list : $(f) ; }
+	DEPENDS $(<) : $(<).list ;
+	RmTemps $(<) : $(<).list ;
+}
+actions MergePOT
+{
+	msgcat --use-first --force-po -t UTF-8 --lang=en -o $(<) -f $(<).list
+}
+
+NOTFILE reg-pot ;
+ALWAYS reg-pot ;
+rule RegisterPOT
+{
+	NOTFILE $(<[1]) ;
+	ALWAYS $(<[1]) ;
+	DEPENDS reg-pot : $(<[2]) ;
+	src_file on $(<) = $(tx_dir)/$(<[2]) ;
+	tr_dir on $(<) = $(tx_dir)/$(<[2]:B) ;
+}
+actions RegisterPOT
+{
+	tx status -r $(<[1]) 2>/dev/null 1>&2
+	if [ ! $? = 0 ]
+	then
+		tx set --auto-local -r $(<[1]) --source-language=en --source-file $(src_file) "$(tr_dir)/<lang>.po" --execute
+		tx push -r $(<[1]) -s
+	fi
+}
+
+# создаёт переведённую справочную страницу
+# 1 - переведённая страница с путём
+# 2 - исправленная непереведённая страница
+# 3 - PO-файл, переведённый через tx
+rule MakeTranslatedPage
+{
+	DEPENDS $(1) : $(3) ;
+	master on $(1) = $(2) ;
+	po on $(1)     = $(1).po ;
+	comp on $(1)     = $(3) ;
+	KEEP on $(1) = $(KEEP) ;
+	SetSpecialOptions $(1) : $(1:BS) ;
+	MakeTranslatedPag $(1) ;
+}
+actions MakeTranslatedPag
+{
+	$(RM) $(po)
+	po4a-updatepo -f man -M UTF-8 -m $(master) $(opts) --po $(po)
+	sed -i s/=CHARSET/=UTF-8/ $(po)
+	msgmerge -w 79 -U -C $(comp) $(po) $(po)
+	po4a-translate -k $(KEEP) -f man -M UTF-8 -m $(master) $(opts) --po $(po) --localized $(1)
+	[ -e $(1) ] &&
+	if [ `wc -l < $(1)` -ge 3 ]
+	then
+		ttt=`mktemp`
+		cat insert_encoding.add $(1) > ${ttt} && mv ${ttt} $(1)
+	fi
+}
+
+# скачивает переводы из TX
+actions PullFromTX
+{
+	tx pull -r $(>) -a
+}
+
+# отправляет переводы в TX
+actions PushToTX
+{
+	tx push -r $(>) -t
+}
+
+# отправляет POT в TX
+actions PotToTX
+{
+	tx push -r $(>) -s
+}
+
+actions UnifyLen
+{
+	msgmerge -w 79 -U $(>)/ru.po $(>).pot
+}
+
+# tar : lang
+rule MakeTar {
+	man_dir on $(<) = $(MAN_DIR)/$(>) ;
+	en_orig_dir on $(<) = $(en_orig_dir) ;
+}
+actions MakeTar {
+	num_trans_pages=`find $(man_dir) -type f -name *.[1-9] | wc -l`
+	[ ${num_trans_pages} -eq 0 ] && exit 1
+	num_orig_pages=`find $(en_orig_dir)/man[1-9] -type f -name *.[1-9] | wc -l`
+	name=$(<)-${num_orig_pages}-${num_trans_pages}-`date +%Y%m%d`
+	mv $(man_dir) ${name}
+	cp License ${name}
+	cp README ${name}
+	tar cjf ${name}.tar.bz2 --exclude='*.po' --exclude-backups ${name}
+	rm ${name}/README
+	rm ${name}/License
+	mv ${name} $(man_dir)
+}
+
+# настраиваем зависимости
+
+# цель first выполняется раньше all
+# в цель dirs попадают все каталоги, которые нужно создать
+DEPENDS first : dirs ;
+
+local pot_files = "" ;
+for en_orig_d in [ GLOB $(en_orig_dir) : man[123456789] ]
+{
+	# каталоги с исправленными страницами на английском
+	local section = $(en_orig_d:BS) ;
+	MkDir $(en_material_dir)/$(section) ;
+	# каталоги для поштучных po-файлов
+	local po_d = $(PO_DIR)/$(section) ;
+	MkDir $(po_d) ;
+	# заполняем список пустых po-файлов
+	local empty_po_list ;
+	for ep in [ GLOB $(empty_po_dir)/$(section) : *.po ] { empty_po_list += $(ep:BS) ; }
+
+	for en_orig_f in [ GLOB $(en_orig_d) : *.[123456789] ]
+	{
+		# исправленная страница на английском
+		local en_material_f = $(en_material_dir)/$(section)/$(en_orig_f:BS) ;
+		PrepareMaterialPage $(en_material_f) : $(en_orig_f) ;
+		# POT-файл
+		local pot_f = $(po_d)/$(en_orig_f:BS).pot ;
+		PreparePotFile $(pot_f) : $(en_material_f) ;
+		pot_files += $(pot_f) ;
+		if ! ( $(en_orig_f:BS).po in $(empty_po_list) )
+		{
+			for lang in $(LANGS)
+			{
+				local man_d = $(MAN_DIR)/$(lang)/$(section) ;
+				MkDir $(man_d) ;
+			}
+		}
+	}
+}
+
+NOTFILE pot ;
+ALWAYS pot ;
+
+NOTFILE po ;
+ALWAYS po ;
+
+NOTFILE pull ;
+ALWAYS pull ;
+
+NOTFILE push ;
+ALWAYS push ;
+
+NOTFILE push_pot ;
+ALWAYS push_pot ;
+
+NOTFILE unify ;
+ALWAYS unify ;
+
+local sym_list = _ a b c d e f g h i j k l m n o p q r s t u v w x y z ;
+#local sym_list = _ mf ;
+for sym in $(sym_list)
+{
+	#ECHO files_$(sym) ... ;
+	local files_$(sym) = [ MATCH (^$(PO_DIR)/man[0-9]/$(sym).*\.pot$|^$(PO_DIR)/man[0-9]/$(sym:U).*\.pot$) : $(pot_files) ] ;
+	# следующая буква, если файлов не найдено
+	if $(files_$(sym)) = ""
+	{
+		#ECHO 'no data for' files_$(sym) ;
+		continue ;
+	}
+	# регистрируем POT-файлы в TX
+	RegisterPOT $(tx_prj_name).files_$(sym) files_$(sym).pot ;
+	# создаём POT-файлы для TX
+	MergePOT $(tx_dir)/files_$(sym).pot : $(files_$(sym)) ;
+	DEPENDS pot : $(tx_dir)/files_$(sym).pot ;
+	PullFromTX pull : $(tx_prj_name).files_$(sym) ;
+	PushToTX push : $(tx_prj_name).files_$(sym) ;
+	PotToTX push_pot : $(tx_prj_name).files_$(sym) ;
+	UnifyLen unify : $(tx_dir)/files_$(sym) ;
+	for lang in $(LANGS)
+	{
+		for pot_f in $(files_$(sym))
+		{
+			local f = $(pot_f:B) ;
+			# только для того, чтобы убрать точку у расширения
+			local s ;
+			switch $(f:S)
+			{
+				case .1 : s = 1 ; case .2 : s = 2 ; case .3 : s = 3 ;
+				case .4 : s = 4 ; case .5 : s = 5 ; case .6 : s = 6 ;
+				case .7 : s = 7 ; case .8 : s = 8 ; case .9 : s = 9 ;
+			}
+			local section = man$(s) ;
+			local en_material_f = $(en_material_dir)/$(section)/$(f:BS) ;
+			# переведённая справочная страница
+			local man_f = $(MAN_DIR)/$(lang)/man$(s)/$(pot_f:B) ;
+			#ECHO $(man_f:BS) ;
+			MakeTranslatedPage $(man_f) : $(en_material_f) : $(tx_dir)/files_$(sym)/$(lang).po ;
+			DEPENDS $(man_f:BS) : $(man_f) ;
+			DEPENDS $(lang) : $(man_f) ;
+		}
+	}
+}
+
+NOTFILE tar ;
+ALWAYS tar ;
+
+for lang in $(LANGS) {
+	local mp_name = man-pages-$(lang)_$(MAN-PAGE-VERSION) ;
+	NOTFILE $(lang) ;
+	MakeTar $(mp_name) : $(lang) ;
+	DEPENDS tar : $(mp_name) ;
+}

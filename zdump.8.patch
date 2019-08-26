@@ -1,0 +1,111 @@
+--- man-pages-git/man8/zdump.8	2019-08-11 07:32:17.593125264 +0300
++++ /tmp/zdump.8	2019-08-11 07:52:52.033862360 +0300
+@@ -20,8 +20,6 @@
+ .de q
+ \\$3\*(lq\\$1\*(rq\\$2
+ ..
+-.ie \n(.g .ds - \f(CW-\fP
+-.el ds - \-
+ The
+ .B zdump
+ program prints the current time in each
+@@ -29,13 +27,13 @@
+ named on the command line.
+ .SH OPTIONS
+ .TP
+-.B \*-\*-version
++.B \-\-version
+ Output version information and exit.
+ .TP
+-.B \*-\*-help
++.B \-\-help
+ Output short usage message and exit.
+ .TP
+-.B \*-i
++.B \-i
+ Output a description of time intervals.  For each
+ .I timezone
+ on the command line, output an interval-format description of the
+@@ -43,7 +41,7 @@
+ .q "INTERVAL FORMAT"
+ below.
+ .TP
+-.B \*-v
++.B \-v
+ Output a verbose description of time intervals.
+ For each
+ .I timezone
+@@ -67,14 +65,14 @@
+ .I N
+ seconds east of Greenwich.
+ .TP
+-.B \*-V
++.B \-V
+ Like
+-.BR \*-v ,
++.BR \-v ,
+ except omit the times relative to the extreme time values.
+ This generates output that is easier to compare to that of
+ implementations with different time representations.
+ .TP
+-.BI "\*-c " \fR[\fIloyear , \fR]\fIhiyear
++.BI "\-c " \fR[\fIloyear , \fR]\fIhiyear
+ Cut off interval output at the given year(s).
+ Cutoff times are computed using the proleptic Gregorian calendar with year 0
+ and with Universal Time (UT) ignoring leap seconds.
+@@ -84,9 +82,9 @@
+ .I hiyear
+ of 1970 includes the transition.
+ The default cutoff is
+-.BR \*-500,2500 .
++.BR \-500,2500 .
+ .TP
+-.BI "\*-t " \fR[\fIlotime , \fR]\fIhitime
++.BI "\-t " \fR[\fIlotime , \fR]\fIhitime
+ Cut off interval output at the given time(s),
+ given in decimal seconds since 1970-01-01 00:00:00
+ Coordinated Universal Time (UTC).
+@@ -94,7 +92,7 @@
+ .I timezone
+ determines whether the count includes leap seconds.
+ As with
+-.BR \*-c ,
++.BR \-c ,
+ the cutoff's lower bound is exclusive and its upper bound is inclusive.
+ .SH "INTERVAL FORMAT"
+ The interval format is a compact text representation that is intended
+@@ -104,7 +102,7 @@
+ where
+ .I string
+ is a double-quoted string giving the timezone, a second line
+-.q "\*- \*- \fIinterval\fP"
++.q "\- \- \fIinterval\fP"
+ describing the time interval before the first transition if any, and
+ zero or more following lines
+ .q "\fIdate time interval\fP",
+@@ -130,11 +128,11 @@
+ In times and in UT offsets with absolute value less than 100 hours,
+ the seconds are omitted if they are zero, and
+ the minutes are also omitted if they are also zero.  Positive UT
+-offsets are east of Greenwich.  The UT offset \*-00 denotes a UT
++offsets are east of Greenwich.  The UT offset \-00 denotes a UT
+ placeholder in areas where the actual offset is unspecified; by
+ convention, this occurs when the UT offset is zero and the time zone
+ abbreviation begins with
+-.q "\*-"
++.q "\-"
+ or is
+ .q "zzz".
+ .PP
+@@ -209,9 +207,9 @@
+ one can construct artificial time zones for which this fails.
+ .PP
+ In the
+-.B \*-v
++.B \-v
+ and
+-.B \*-V
++.B \-V
+ output,
+ .q "UT"
+ denotes the value returned by

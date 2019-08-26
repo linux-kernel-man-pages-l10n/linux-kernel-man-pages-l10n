@@ -1,0 +1,4842 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: translation of man-pages\n"
+"POT-Creation-Date: 2017-11-12 08:35+0300\n"
+"PO-Revision-Date: 2019-04-02 15:56+0000\n"
+"Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
+"Language-Team: Belarusian (Belarus) (http://www.transifex.com/kruvalig/man-pages/language/be_BY/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: be_BY\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#. type: TH
+#: man-pages/man4/wavelan.4:15
+#, no-wrap
+msgid "WAVELAN"
+msgstr ""
+
+#. type: TH
+#: man-pages/man4/wavelan.4:15
+#, no-wrap
+msgid "2017-09-15"
+msgstr ""
+
+#. type: TH
+#: man-pages/man4/wavelan.4:15
+#, no-wrap
+msgid "Linux"
+msgstr ""
+
+#. type: TH
+#: man-pages/man4/wavelan.4:15
+#, no-wrap
+msgid "Linux Programmer's Manual"
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/wavelan.4:16
+#, no-wrap
+msgid "NAME"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/wavelan.4:18
+msgid "wavelan - AT&T GIS WaveLAN ISA device driver"
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/wavelan.4:18
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/wavelan.4:20
+msgid ""
+"B<insmod wavelan_cs.o [io=>I<B,B..>B<] [ irq=>I<I,I..>B<] "
+"[name=>I<N,N..>B<]>"
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/wavelan.4:20
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/wavelan.4:23
+msgid ""
+"I<This driver is obsolete:> it was removed from the kernel in version "
+"2.6.35."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/wavelan.4:39
+msgid ""
+"I<wavelan> is the low-level device driver for the NCR / AT&T / Lucent "
+"B<WaveLAN ISA> and Digital (DEC)  B<RoamAbout DS> wireless ethernet adapter."
+"  This driver is available as a module or might be compiled in the kernel.  "
+"This driver supports multiple cards in both forms (up to 4) and allocates "
+"the next available ethernet device (eth0..eth#) for each card found, unless "
+"a device name is explicitly specified (see below).  This device name will be"
+" reported in the kernel log file with the MAC address, NWID and frequency "
+"used by the card."
+msgstr ""
+
+#. type: SS
+#: man-pages/man4/wavelan.4:39
+#, no-wrap
+msgid "Parameters"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/wavelan.4:46
+msgid ""
+"This section apply to the module form (parameters passed on the B<insmod>(8)"
+"  command line).  If the driver is included in the kernel, use the "
+"I<ether=IRQ,IO,NAME> syntax on the kernel command line."
+msgstr ""
+
+#. type: TP
+#: man-pages/man4/wavelan.4:46
+#, no-wrap
+msgid "B<io>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/wavelan.4:53
+msgid ""
+"Specify the list of base address where to search for wavelan cards (setting "
+"by dip switch on the card).  If you don't specify any io address, the driver"
+" will scan 0x390 and 0x3E0 addresses, which might conflict with other "
+"hardware..."
+msgstr ""
+
+#. type: TP
+#: man-pages/man4/wavelan.4:53
+#, no-wrap
+msgid "B<irq>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/wavelan.4:57
+msgid ""
+"Set the list of irq that each wavelan card should use (the value is saved in"
+" permanent storage for future use)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man4/wavelan.4:57
+#, no-wrap
+msgid "B<name>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/wavelan.4:62
+msgid ""
+"Set the list of name to be used for each wavelan cards device (name used by "
+"B<ifconfig>(8))."
+msgstr ""
+
+#. type: SS
+#: man-pages/man4/wavelan.4:62
+#, no-wrap
+msgid "Wireless extensions"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/wavelan.4:66
+msgid "Use B<iwconfig>(8)  to manipulate wireless extensions."
+msgstr ""
+
+#. type: SS
+#: man-pages/man4/wavelan.4:66
+#, no-wrap
+msgid "NWID (or domain)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/wavelan.4:75
+msgid ""
+"Set the network ID [I<0> to I<FFFF>] or disable it [I<off>].  As the NWID is"
+" stored in the card Permanent Storage Area, it will be reuse at any further "
+"invocation of the driver."
+msgstr ""
+
+#. type: SS
+#: man-pages/man4/wavelan.4:75
+#, no-wrap
+msgid "Frequency & channels"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/wavelan.4:86
+msgid ""
+"For the 2.4\\ GHz 2.00 Hardware, you are able to set the frequency by "
+"specifying one of the 10 defined channels (I<2.412,> I<2.422, 2.425, 2.4305,"
+" 2.432, 2.442, 2.452, 2.460, 2.462> or I<2.484>)  or directly by its value."
+"  The frequency is changed immediately and permanently.  Frequency "
+"availability depends on the regulations..."
+msgstr ""
+
+#. type: SS
+#: man-pages/man4/wavelan.4:86
+#, no-wrap
+msgid "Statistics spy"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/wavelan.4:90
+msgid ""
+"Set a list of MAC addresses in the driver (up to 8) and get the last quality"
+" of link for each of those (see B<iwspy>(8))."
+msgstr ""
+
+#. type: SS
+#: man-pages/man4/wavelan.4:90
+#, no-wrap
+msgid "/proc/net/wireless"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/wavelan.4:105
+msgid ""
+"I<status> is the status reported by the modem.  I<Link quality> reports the "
+"quality of the modulation on the air (direct sequence spread spectrum) [max "
+"= 16].  I<Level> and I<Noise> refer to the signal level and noise level [max"
+" = 64].  The I<crypt discarded packet> and I<misc discarded packet> counters"
+" are not implemented."
+msgstr ""
+
+#. type: SS
+#: man-pages/man4/wavelan.4:105
+#, no-wrap
+msgid "Private ioctl"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/wavelan.4:109
+msgid "You may use B<iwpriv>(8)  to manipulate private ioctls."
+msgstr ""
+
+#. type: SS
+#: man-pages/man4/wavelan.4:109
+#, no-wrap
+msgid "Quality and level threshold"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/wavelan.4:112
+msgid ""
+"Enable you the define the quality and level threshold used by the modem "
+"(packet below that level are discarded)."
+msgstr ""
+
+#. type: SS
+#: man-pages/man4/wavelan.4:112
+#, no-wrap
+msgid "Histogram"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/wavelan.4:119
+msgid ""
+"This functionality makes it possible to set a number of signal level "
+"intervals and to count the number of packets received in each of those "
+"defined intervals.  This distribution might be used to calculate the mean "
+"value and standard deviation of the signal level."
+msgstr ""
+
+#. type: SS
+#: man-pages/man4/wavelan.4:119
+#, no-wrap
+msgid "Specific notes"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/wavelan.4:125
+msgid ""
+"This driver fails to detect some B<non-NCR/AT&T/Lucent> Wavelan cards.  If "
+"this happens for you, you must look in the source code on how to add your "
+"card to the detection routine."
+msgstr ""
+
+#.  .SH AUTHOR
+#.  Bruce Janson \(em bruce@cs.usyd.edu.au
+#.  .br
+#.  Jean Tourrilhes \(em jt@hplb.hpl.hp.com
+#.  .br
+#.  (and others; see source code for details)
+#.  SEE ALSO part
+#. type: Plain text
+#: man-pages/man4/wavelan.4:138
+msgid ""
+"Some of the mentioned features are optional.  You may enable to disable them"
+" by changing flags in the driver header and recompile."
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/wavelan.4:138
+#, no-wrap
+msgid "SEE ALSO"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/wavelan.4:144
+msgid ""
+"B<wavelan_cs>(4), B<ifconfig>(8), B<insmod>(8), B<iwconfig>(8), "
+"B<iwpriv>(8), B<iwspy>(8)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/write.2:39
+#, no-wrap
+msgid "WRITE"
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/write.2:39
+#, no-wrap
+msgid "2019-03-06"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:42
+msgid "write - write to a file descriptor"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:44
+msgid "B<#include E<lt>unistd.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:46
+msgid ""
+"B<ssize_t write(int >I<fd>B<, const void *>I<buf>B<, size_t >I<count>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:54
+msgid ""
+"B<write>()  writes up to I<count> bytes from the buffer starting at I<buf> "
+"to the file referred to by the file descriptor I<fd>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:68
+msgid ""
+"The number of bytes written may be less than I<count> if, for example, there"
+" is insufficient space on the underlying physical medium, or the "
+"B<RLIMIT_FSIZE> resource limit is encountered (see B<setrlimit>(2)), or the "
+"call was interrupted by a signal handler after having written less than "
+"I<count> bytes.  (See also B<pipe>(7).)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:82
+msgid ""
+"For a seekable file (i.e., one to which B<lseek>(2)  may be applied, for "
+"example, a regular file)  writing takes place at the file offset, and the "
+"file offset is incremented by the number of bytes actually written.  If the "
+"file was B<open>(2)ed with B<O_APPEND>, the file offset is first set to the "
+"end of the file before writing.  The adjustment of the file offset and the "
+"write operation are performed as an atomic step."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:89
+msgid ""
+"POSIX requires that a B<read>(2)  that can be proved to occur after a "
+"B<write>()  has returned will return the new data.  Note that not all "
+"filesystems are POSIX conforming."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:96
+msgid ""
+"According to POSIX.1, if I<count> is greater than B<SSIZE_MAX>, the result "
+"is implementation-defined; see NOTES for the upper limit on Linux."
+msgstr ""
+
+#. type: SH
+#: man-pages/man2/write.2:96
+#, no-wrap
+msgid "RETURN VALUE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:100
+msgid ""
+"On success, the number of bytes written is returned.  On error, -1 is "
+"returned, and I<errno> is set to indicate the cause of the error."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:118
+msgid ""
+"Note that a successful B<write>()  may transfer fewer than I<count> bytes.  "
+"Such partial writes can occur for various reasons; for example, because "
+"there was insufficient space on the disk device to write all of the "
+"requested bytes, or because a blocked B<write>()  to a socket, pipe, or "
+"similar was interrupted by a signal handler after it had transferred some, "
+"but before it had transferred all of the requested bytes.  In the event of a"
+" partial write, the caller can make another B<write>()  call to transfer the"
+" remaining bytes.  The subsequent call will either transfer further bytes or"
+" may result in an error (e.g., if the disk is now full)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:131
+msgid ""
+"If I<count> is zero and I<fd> refers to a regular file, then B<write>()  may"
+" return a failure status if one of the errors below is detected.  If no "
+"errors are detected, or error detection is not performed, 0 will be returned"
+" without causing any other effect.  If I<count> is zero and I<fd> refers to "
+"a file other than a regular file, the results are not specified."
+msgstr ""
+
+#. type: SH
+#: man-pages/man2/write.2:131
+#, no-wrap
+msgid "ERRORS"
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/write.2:132
+#, no-wrap
+msgid "B<EAGAIN>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:144
+msgid ""
+"The file descriptor I<fd> refers to a file other than a socket and has been "
+"marked nonblocking (B<O_NONBLOCK>), and the write would block.  See "
+"B<open>(2)  for further details on the B<O_NONBLOCK> flag."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/write.2:144
+#, no-wrap
+msgid "B<EAGAIN> or B<EWOULDBLOCK>"
+msgstr ""
+
+#.  Actually EAGAIN on Linux
+#. type: Plain text
+#: man-pages/man2/write.2:155
+msgid ""
+"The file descriptor I<fd> refers to a socket and has been marked nonblocking"
+" (B<O_NONBLOCK>), and the write would block.  POSIX.1-2001 allows either "
+"error to be returned for this case, and does not require these constants to "
+"have the same value, so a portable application should check for both "
+"possibilities."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/write.2:155
+#, no-wrap
+msgid "B<EBADF>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:159
+msgid "I<fd> is not a valid file descriptor or is not open for writing."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/write.2:159
+#, no-wrap
+msgid "B<EDESTADDRREQ>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:164
+msgid ""
+"I<fd> refers to a datagram socket for which a peer address has not been set "
+"using B<connect>(2)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/write.2:164
+#, no-wrap
+msgid "B<EDQUOT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:170
+msgid ""
+"The user's quota of disk blocks on the filesystem containing the file "
+"referred to by I<fd> has been exhausted."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/write.2:170
+#, no-wrap
+msgid "B<EFAULT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:174
+msgid "I<buf> is outside your accessible address space."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/write.2:174
+#, no-wrap
+msgid "B<EFBIG>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:179
+msgid ""
+"An attempt was made to write a file that exceeds the implementation-defined "
+"maximum file size or the process's file size limit, or to write at a "
+"position past the maximum allowed offset."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/write.2:179
+#, no-wrap
+msgid "B<EINTR>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:183
+msgid ""
+"The call was interrupted by a signal before any data was written; see "
+"B<signal>(7)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/write.2:183
+#, no-wrap
+msgid "B<EINVAL>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:194
+msgid ""
+"I<fd> is attached to an object which is unsuitable for writing; or the file "
+"was opened with the B<O_DIRECT> flag, and either the address specified in "
+"I<buf>, the value specified in I<count>, or the file offset is not suitably "
+"aligned."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/write.2:194
+#, no-wrap
+msgid "B<EIO>"
+msgstr ""
+
+#.  commit 088737f44bbf6378745f5b57b035e57ee3dc4750
+#. type: Plain text
+#: man-pages/man2/write.2:222
+msgid ""
+"A low-level I/O error occurred while modifying the inode.  This error may "
+"relate to the write-back of data written by an earlier B<write>(2), which "
+"may have been issued to a different file descriptor on the same file.  Since"
+" Linux 4.13, errors from write-back come with a promise that they I<may> be "
+"reported by subsequent.  B<write>(2)  requests, and I<will> be reported by a"
+" subsequent B<fsync>(2)  (whether or not they were also reported by "
+"B<write>(2)).  An alternate cause of B<EIO> on networked filesystems is when"
+" an advisory lock had been taken out on the file descriptor and this lock "
+"has been lost.  See the I<Lost locks> section of B<fcntl>(2)  for further "
+"details."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/write.2:222
+#, no-wrap
+msgid "B<ENOSPC>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:227
+msgid ""
+"The device containing the file referred to by I<fd> has no room for the "
+"data."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/write.2:227
+#, no-wrap
+msgid "B<EPERM>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:231
+msgid "The operation was prevented by a file seal; see B<fcntl>(2)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/write.2:231
+#, no-wrap
+msgid "B<EPIPE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:240
+msgid ""
+"I<fd> is connected to a pipe or socket whose reading end is closed.  When "
+"this happens the writing process will also receive a B<SIGPIPE> signal.  "
+"(Thus, the write return value is seen only if the program catches, blocks or"
+" ignores this signal.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:243
+msgid "Other errors may occur, depending on the object connected to I<fd>."
+msgstr ""
+
+#. type: SH
+#: man-pages/man2/write.2:243
+#, no-wrap
+msgid "CONFORMING TO"
+msgstr ""
+
+#.  SVr4 documents additional error
+#.  conditions EDEADLK, ENOLCK, ENOLNK, ENOSR, ENXIO, or ERANGE.
+#. type: Plain text
+#: man-pages/man2/write.2:247
+msgid "SVr4, 4.3BSD, POSIX.1-2001."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:252
+msgid ""
+"Under SVr4 a write may be interrupted and return B<EINTR> at any point, not "
+"just before any data is written."
+msgstr ""
+
+#. type: SH
+#: man-pages/man2/write.2:252
+#, no-wrap
+msgid "NOTES"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:259
+msgid ""
+"The types I<size_t> and I<ssize_t> are, respectively, unsigned and signed "
+"integer data types specified by POSIX.1."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:274
+msgid ""
+"A successful return from B<write>()  does not make any guarantee that data "
+"has been committed to disk.  On some filesystems, including NFS, it does not"
+" even guarantee that space has successfully been reserved for the data.  In "
+"this case, some errors might be delayed until a future B<write>(2), "
+"B<fsync>(2), or even B<close>(2).  The only way to be sure is to call "
+"B<fsync>(2)  after you are done writing all your data."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:282
+msgid ""
+"If a B<write>()  is interrupted by a signal handler before any bytes are "
+"written, then the call fails with the error B<EINTR>; if it is interrupted "
+"after at least one byte has been written, the call succeeds, and returns the"
+" number of bytes written."
+msgstr ""
+
+#.  commit e28cc71572da38a5a12c1cfe4d7032017adccf69
+#. type: Plain text
+#: man-pages/man2/write.2:290
+msgid ""
+"On Linux, B<write>()  (and similar system calls) will transfer at most "
+"0x7ffff000 (2,147,479,552) bytes, returning the number of bytes actually "
+"transferred.  (This is true on both 32-bit and 64-bit systems.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:298
+msgid ""
+"An error return value while performing B<write>()  using direct I/O does not"
+" mean the entire write has failed. Partial data may be written and the data "
+"at the file offset on which the B<write>()  was attempted should be "
+"considered inconsistent."
+msgstr ""
+
+#. type: SH
+#: man-pages/man2/write.2:298
+#, no-wrap
+msgid "BUGS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:301
+msgid ""
+"According to POSIX.1-2008/SUSv4 Section XSI 2.9.7 (\"Thread Interactions "
+"with Regular File Operations\"):"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:306
+msgid ""
+"All of the following functions shall be atomic with respect to each other in"
+" the effects specified in POSIX.1-2008 when they operate on regular files or"
+" symbolic links: ..."
+msgstr ""
+
+#.  http://thread.gmane.org/gmane.linux.kernel/1649458
+#.     From: Michael Kerrisk (man-pages <mtk.manpages <at> gmail.com>
+#.     Subject: Update of file offset on write() etc. is non-atomic with I/O
+#.     Date: 2014-02-17 15:41:37 GMT
+#.     Newsgroups: gmane.linux.kernel, gmane.linux.file-systems
+#.  commit 9c225f2655e36a470c4f58dbbc99244c5fc7f2d4
+#.     Author: Linus Torvalds <torvalds@linux-foundation.org>
+#.     Date:   Mon Mar 3 09:36:58 2014 -0800
+#.         vfs: atomic f_pos accesses as per POSIX
+#. type: Plain text
+#: man-pages/man2/write.2:337
+msgid ""
+"Among the APIs subsequently listed are B<write>()  and B<writev>(2).  And "
+"among the effects that should be atomic across threads (and processes)  are "
+"updates of the file offset.  However, on Linux before version 3.14, this was"
+" not the case: if two processes that share an open file description (see "
+"B<open>(2))  perform a B<write>()  (or B<writev>(2))  at the same time, then"
+" the I/O operations were not atomic with respect updating the file offset, "
+"with the result that the blocks of data output by the two processes might "
+"(incorrectly) overlap.  This problem was fixed in Linux 3.14."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/write.2:348
+msgid ""
+"B<close>(2), B<fcntl>(2), B<fsync>(2), B<ioctl>(2), B<lseek>(2), B<open>(2),"
+" B<pwrite>(2), B<read>(2), B<select>(2), B<writev>(2), B<fwrite>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/wait.2:49
+#, no-wrap
+msgid "WAIT"
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/wait.2:49
+#, no-wrap
+msgid "2018-04-30"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:52
+msgid "wait, waitpid, waitid - wait for process to change state"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:54
+msgid "B<#include E<lt>sys/types.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:56
+msgid "B<#include E<lt>sys/wait.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:58
+msgid "B<pid_t wait(int *>I<wstatus>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:60
+msgid ""
+"B<pid_t waitpid(pid_t >I<pid>B<, int *>I<wstatus>B<, int >I<options>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:65
+#, no-wrap
+msgid ""
+"B<int waitid(idtype_t >I<idtype>B<, id_t >I<id>B<, siginfo_t *>I<infop>B<, int >I<options>B<);>\n"
+"                /* This is the glibc and POSIX interface; see\n"
+"                   NOTES for information on the raw system call. */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:69
+msgid ""
+"Feature Test Macro Requirements for glibc (see B<feature_test_macros>(7)):"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:74
+msgid "B<waitid>():"
+msgstr ""
+
+#.     (_XOPEN_SOURCE && _XOPEN_SOURCE_EXTENDED)
+#. type: Plain text
+#: man-pages/man2/wait.2:79
+#, no-wrap
+msgid ""
+"Since glibc 2.26:\n"
+"_XOPEN_SOURCE E<gt>= 500 ||\n"
+"    _POSIX_C_SOURCE\\ E<gt>=\\ 200809L\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:84
+#, no-wrap
+msgid ""
+"Glibc 2.25 and earlier:\n"
+"    _XOPEN_SOURCE\n"
+"        || /* Since glibc 2.12: */ _POSIX_C_SOURCE\\ E<gt>=\\ 200809L\n"
+"        || /* Glibc versions E<lt>= 2.19: */ _BSD_SOURCE\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:97
+msgid ""
+"All of these system calls are used to wait for state changes in a child of "
+"the calling process, and obtain information about the child whose state has "
+"changed.  A state change is considered to be: the child terminated; the "
+"child was stopped by a signal; or the child was resumed by a signal.  In the"
+" case of a terminated child, performing a wait allows the system to release "
+"the resources associated with the child; if a wait is not performed, then "
+"the terminated child remains in a \"zombie\" state (see NOTES below)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:109
+msgid ""
+"If a child has already changed state, then these calls return immediately.  "
+"Otherwise, they block until either a child changes state or a signal handler"
+" interrupts the call (assuming that system calls are not automatically "
+"restarted using the B<SA_RESTART> flag of B<sigaction>(2)).  In the "
+"remainder of this page, a child whose state has changed and which has not "
+"yet been waited upon by one of these system calls is termed I<waitable>."
+msgstr ""
+
+#. type: SS
+#: man-pages/man2/wait.2:109
+#, no-wrap
+msgid "wait() and waitpid()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:117
+msgid ""
+"The B<wait>()  system call suspends execution of the calling thread until "
+"one of its children terminates.  The call I<wait(&wstatus)> is equivalent "
+"to:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:121
+#, no-wrap
+msgid "waitpid(-1, &wstatus, 0);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:136
+msgid ""
+"The B<waitpid>()  system call suspends execution of the calling thread until"
+" a child specified by I<pid> argument has changed state.  By default, "
+"B<waitpid>()  waits only for terminated children, but this behavior is "
+"modifiable via the I<options> argument, as described below."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:140
+msgid "The value of I<pid> can be:"
+msgstr ""
+
+#. type: IP
+#: man-pages/man2/wait.2:140
+#, no-wrap
+msgid "E<lt> -1"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:144
+msgid ""
+"meaning wait for any child process whose process group ID is equal to the "
+"absolute value of I<pid>."
+msgstr ""
+
+#. type: IP
+#: man-pages/man2/wait.2:144
+#, no-wrap
+msgid "-1"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:146
+msgid "meaning wait for any child process."
+msgstr ""
+
+#. type: IP
+#: man-pages/man2/wait.2:146
+#, no-wrap
+msgid "0"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:149
+msgid ""
+"meaning wait for any child process whose process group ID is equal to that "
+"of the calling process."
+msgstr ""
+
+#. type: IP
+#: man-pages/man2/wait.2:149
+#, no-wrap
+msgid "E<gt> 0"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:153
+msgid ""
+"meaning wait for the child whose process ID is equal to the value of I<pid>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:157
+msgid ""
+"The value of I<options> is an OR of zero or more of the following constants:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:157 man-pages/man2/wait.2:289
+#, no-wrap
+msgid "B<WNOHANG>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:160
+msgid "return immediately if no child has exited."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:160
+#, no-wrap
+msgid "B<WUNTRACED>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:169
+msgid ""
+"also return if a child has stopped (but not traced via B<ptrace>(2)).  "
+"Status for I<traced> children which have stopped is provided even if this "
+"option is not specified."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:169
+#, no-wrap
+msgid "B<WCONTINUED> (since Linux 2.6.10)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:173
+msgid ""
+"also return if a stopped child has been resumed by delivery of B<SIGCONT>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:175
+msgid "(For Linux-only options, see below.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:189
+msgid ""
+"If I<wstatus> is not NULL, B<wait>()  and B<waitpid>()  store status "
+"information in the I<int> to which it points.  This integer can be inspected"
+" with the following macros (which take the integer itself as an argument, "
+"not a pointer to it, as is done in B<wait>()  and B<waitpid>()!):"
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:189
+#, no-wrap
+msgid "B<WIFEXITED(>I<wstatus>B<)>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:197
+msgid ""
+"returns true if the child terminated normally, that is, by calling "
+"B<exit>(3)  or B<_exit>(2), or by returning from main()."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:197
+#, no-wrap
+msgid "B<WEXITSTATUS(>I<wstatus>B<)>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:210
+msgid ""
+"returns the exit status of the child.  This consists of the least "
+"significant 8 bits of the I<status> argument that the child specified in a "
+"call to B<exit>(3)  or B<_exit>(2)  or as the argument for a return "
+"statement in main().  This macro should be employed only if B<WIFEXITED> "
+"returned true."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:210
+#, no-wrap
+msgid "B<WIFSIGNALED(>I<wstatus>B<)>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:213
+msgid "returns true if the child process was terminated by a signal."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:213
+#, no-wrap
+msgid "B<WTERMSIG(>I<wstatus>B<)>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:220
+msgid ""
+"returns the number of the signal that caused the child process to terminate."
+"  This macro should be employed only if B<WIFSIGNALED> returned true."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:220
+#, no-wrap
+msgid "B<WCOREDUMP(>I<wstatus>B<)>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:227
+msgid ""
+"returns true if the child produced a core dump (see B<core>(5)).  This macro"
+" should be employed only if B<WIFSIGNALED> returned true."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:232
+msgid ""
+"This macro is not specified in POSIX.1-2001 and is not available on some "
+"UNIX implementations (e.g., AIX, SunOS).  Therefore, enclose its use inside "
+"I<#ifdef WCOREDUMP ... #endif>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:232
+#, no-wrap
+msgid "B<WIFSTOPPED(>I<wstatus>B<)>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:239
+msgid ""
+"returns true if the child process was stopped by delivery of a signal; this "
+"is possible only if the call was done using B<WUNTRACED> or when the child "
+"is being traced (see B<ptrace>(2))."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:239
+#, no-wrap
+msgid "B<WSTOPSIG(>I<wstatus>B<)>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:245
+msgid ""
+"returns the number of the signal which caused the child to stop.  This macro"
+" should be employed only if B<WIFSTOPPED> returned true."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:245
+#, no-wrap
+msgid "B<WIFCONTINUED(>I<wstatus>B<)>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:250
+msgid ""
+"(since Linux 2.6.10)  returns true if the child process was resumed by "
+"delivery of B<SIGCONT>."
+msgstr ""
+
+#. type: SS
+#: man-pages/man2/wait.2:250
+#, no-wrap
+msgid "waitid()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:255
+msgid ""
+"The B<waitid>()  system call (available since Linux 2.6.9) provides more "
+"precise control over which child state changes to wait for."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:261
+msgid ""
+"The I<idtype> and I<id> arguments select the child(ren) to wait for, as "
+"follows:"
+msgstr ""
+
+#. type: IP
+#: man-pages/man2/wait.2:261
+#, no-wrap
+msgid "I<idtype> == B<P_PID>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:264
+msgid "Wait for the child whose process ID matches I<id>."
+msgstr ""
+
+#. type: IP
+#: man-pages/man2/wait.2:264
+#, no-wrap
+msgid "I<idtype> == B<P_PGID>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:267
+msgid "Wait for any child whose process group ID matches I<id>."
+msgstr ""
+
+#. type: IP
+#: man-pages/man2/wait.2:267
+#, no-wrap
+msgid "I<idtype> == B<P_ALL>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:271
+msgid "Wait for any child; I<id> is ignored."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:275
+msgid ""
+"The child state changes to wait for are specified by ORing one or more of "
+"the following flags in I<options>:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:275
+#, no-wrap
+msgid "B<WEXITED>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:278
+msgid "Wait for children that have terminated."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:278
+#, no-wrap
+msgid "B<WSTOPPED>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:281
+msgid "Wait for children that have been stopped by delivery of a signal."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:281
+#, no-wrap
+msgid "B<WCONTINUED>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:286
+msgid ""
+"Wait for (previously stopped) children that have been resumed by delivery of"
+" B<SIGCONT>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:289
+msgid "The following flags may additionally be ORed in I<options>:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:293
+msgid "As for B<waitpid>()."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:293
+#, no-wrap
+msgid "B<WNOWAIT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:297
+msgid ""
+"Leave the child in a waitable state; a later wait call can be used to again "
+"retrieve the child status information."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:304
+msgid ""
+"Upon successful return, B<waitid>()  fills in the following fields of the "
+"I<siginfo_t> structure pointed to by I<infop>:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:304
+#, no-wrap
+msgid "I<si_pid>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:307
+msgid "The process ID of the child."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:307
+#, no-wrap
+msgid "I<si_uid>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:311
+msgid ""
+"The real user ID of the child.  (This field is not set on most other "
+"implementations.)"
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:311
+#, no-wrap
+msgid "I<si_signo>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:315
+msgid "Always set to B<SIGCHLD>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:315
+#, no-wrap
+msgid "I<si_status>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:325
+msgid ""
+"Either the exit status of the child, as given to B<_exit>(2)  (or "
+"B<exit>(3)), or the signal that caused the child to terminate, stop, or "
+"continue.  The I<si_code> field can be used to determine how to interpret "
+"this field."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:325
+#, no-wrap
+msgid "I<si_code>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:342
+msgid ""
+"Set to one of: B<CLD_EXITED> (child called B<_exit>(2)); B<CLD_KILLED> "
+"(child killed by signal); B<CLD_DUMPED> (child killed by signal, and dumped "
+"core); B<CLD_STOPPED> (child stopped by signal); B<CLD_TRAPPED> (traced "
+"child has trapped); or B<CLD_CONTINUED> (child continued by B<SIGCONT>)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:360
+msgid ""
+"If B<WNOHANG> was specified in I<options> and there were no children in a "
+"waitable state, then B<waitid>()  returns 0 immediately and the state of the"
+" I<siginfo_t> structure pointed to by I<infop> depends on the "
+"implementation.  To (portably) distinguish this case from that where a child"
+" was in a waitable state, zero out the I<si_pid> field before the call and "
+"check for a nonzero value in this field after the call returns."
+msgstr ""
+
+#.  POSIX.1-2001 leaves this possibility unspecified; most
+#.  implementations (including Linux) zero out the structure
+#.  in this case, but at least one implementation (AIX 5.1)
+#.  does not -- MTK Nov 04
+#. type: Plain text
+#: man-pages/man2/wait.2:383
+msgid ""
+"POSIX.1-2008 Technical Corrigendum 1 (2013) adds the requirement that when "
+"B<WNOHANG> is specified in I<options> and there were no children in a "
+"waitable state, then B<waitid>()  should zero out the I<si_pid> and "
+"I<si_signo> fields of the structure.  On Linux and other implementations "
+"that adhere to this requirement, it is not necessary to zero out the "
+"I<si_pid> field before calling B<waitid>().  However, not all "
+"implementations follow the POSIX.1 specification on this point."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:387
+msgid ""
+"B<wait>(): on success, returns the process ID of the terminated child; on "
+"error, -1 is returned."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:396
+msgid ""
+"B<waitpid>(): on success, returns the process ID of the child whose state "
+"has changed; if B<WNOHANG> was specified and one or more child(ren) "
+"specified by I<pid> exist, but have not yet changed state, then 0 is "
+"returned.  On error, -1 is returned."
+msgstr ""
+
+#.  FIXME As reported by Vegard Nossum, if infop is NULL, then waitid()
+#.  returns the PID of the child.  Either this is a bug, or it is intended
+#.  behavior that needs to be documented.  See my Jan 2009 LKML mail
+#.  "waitid() return value strangeness when infop is NULL".
+#. type: Plain text
+#: man-pages/man2/wait.2:409
+msgid ""
+"B<waitid>(): returns 0 on success or if B<WNOHANG> was specified and no "
+"child(ren) specified by I<id> has yet changed state; on error, -1 is "
+"returned."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:413
+msgid ""
+"Each of these calls sets I<errno> to an appropriate value in the case of an "
+"error."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:414 man-pages/man2/wait.2:419
+#, no-wrap
+msgid "B<ECHILD>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:419
+msgid ""
+"(for B<wait>())  The calling process does not have any unwaited-for "
+"children."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:439
+msgid ""
+"(for B<waitpid>()  or B<waitid>())  The process specified by I<pid> "
+"(B<waitpid>())  or I<idtype> and I<id> (B<waitid>())  does not exist or is "
+"not a child of the calling process.  (This can happen for one's own child if"
+" the action for B<SIGCHLD> is set to B<SIG_IGN>.  See also the I<Linux "
+"Notes> section about threads.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:446
+msgid ""
+"B<WNOHANG> was not set and an unblocked signal or a B<SIGCHLD> was caught; "
+"see B<signal>(7)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:451
+msgid "The I<options> argument was invalid."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:471
+msgid ""
+"A child that terminates, but has not been waited for becomes a \"zombie\".  "
+"The kernel maintains a minimal set of information about the zombie process "
+"(PID, termination status, resource usage information)  in order to allow the"
+" parent to later perform a wait to obtain information about the child.  As "
+"long as a zombie is not removed from the system via a wait, it will consume "
+"a slot in the kernel process table, and if this table fills, it will not be "
+"possible to create further processes.  If a parent process terminates, then "
+"its \"zombie\" children (if any)  are adopted by B<init>(1), (or by the "
+"nearest \"subreaper\" process as defined through the use of the B<prctl>(2)"
+"  B<PR_SET_CHILD_SUBREAPER> operation); B<init>(1)  automatically performs a"
+" wait to remove the zombies."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:500
+msgid ""
+"POSIX.1-2001 specifies that if the disposition of B<SIGCHLD> is set to "
+"B<SIG_IGN> or the B<SA_NOCLDWAIT> flag is set for B<SIGCHLD> (see "
+"B<sigaction>(2)), then children that terminate do not become zombies and a "
+"call to B<wait>()  or B<waitpid>()  will block until all children have "
+"terminated, and then fail with I<errno> set to B<ECHILD>.  (The original "
+"POSIX standard left the behavior of setting B<SIGCHLD> to B<SIG_IGN> "
+"unspecified.  Note that even though the default disposition of B<SIGCHLD> is"
+" \"ignore\", explicitly setting the disposition to B<SIG_IGN> results in "
+"different treatment of zombie process children.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:513
+msgid ""
+"Linux 2.6 conforms to the POSIX requirements.  However, Linux 2.4 (and "
+"earlier) does not: if a B<wait>()  or B<waitpid>()  call is made while "
+"B<SIGCHLD> is being ignored, the call behaves just as though B<SIGCHLD> were"
+" not being ignored, that is, the call blocks until the next child terminates"
+" and then returns the process ID and status of that child."
+msgstr ""
+
+#. type: SS
+#: man-pages/man2/wait.2:513
+#, no-wrap
+msgid "Linux notes"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:529
+msgid ""
+"In the Linux kernel, a kernel-scheduled thread is not a distinct construct "
+"from a process.  Instead, a thread is simply a process that is created using"
+" the Linux-unique B<clone>(2)  system call; other routines such as the "
+"portable B<pthread_create>(3)  call are implemented using B<clone>(2).  "
+"Before Linux 2.4, a thread was just a special case of a process, and as a "
+"consequence one thread could not wait on the children of another thread, "
+"even when the latter belongs to the same thread group.  However, POSIX "
+"prescribes such functionality, and since Linux 2.4 a thread can, and by "
+"default will, wait on children of other threads in the same thread group."
+msgstr ""
+
+#.  commit 91c4e8ea8f05916df0c8a6f383508ac7c9e10dba
+#. type: Plain text
+#: man-pages/man2/wait.2:538
+msgid ""
+"The following Linux-specific I<options> are for use with children created "
+"using B<clone>(2); they can also, since Linux 4.7, be used with B<waitid>():"
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:538
+#, no-wrap
+msgid "B<__WCLONE>"
+msgstr ""
+
+#.  since 0.99pl10
+#. type: Plain text
+#: man-pages/man2/wait.2:549
+msgid ""
+"Wait for \"clone\" children only.  If omitted, then wait for \"non-clone\" "
+"children only.  (A \"clone\" child is one which delivers no signal, or a "
+"signal other than B<SIGCHLD> to its parent upon termination.)  This option "
+"is ignored if B<__WALL> is also specified."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:549
+#, no-wrap
+msgid "B<__WALL> (since Linux 2.4)"
+msgstr ""
+
+#.  since patch-2.3.48
+#. type: Plain text
+#: man-pages/man2/wait.2:554
+msgid "Wait for all children, regardless of type (\"clone\" or \"non-clone\")."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/wait.2:554
+#, no-wrap
+msgid "B<__WNOTHREAD> (since Linux 2.4)"
+msgstr ""
+
+#.  since patch-2.4.0-test8
+#. type: Plain text
+#: man-pages/man2/wait.2:560
+msgid ""
+"Do not wait for children of other threads in the same thread group.  This "
+"was the default before Linux 2.4."
+msgstr ""
+
+#.  commit bf959931ddb88c4e4366e96dd22e68fa0db9527c
+#.  prevents cases where an unreapable zombie is created if
+#.  /sbin/init doesn't use __WALL.
+#. type: Plain text
+#: man-pages/man2/wait.2:568
+msgid ""
+"Since Linux 4.7, the B<__WALL> flag is automatically implied if the child is"
+" being ptraced."
+msgstr ""
+
+#. type: SS
+#: man-pages/man2/wait.2:568
+#, no-wrap
+msgid "C library/kernel differences"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:572
+msgid ""
+"B<wait>()  is actually a library function that (in glibc) is implemented as "
+"a call to B<wait4>(2)."
+msgstr ""
+
+#.  e.g., i386 has the system call, but not x86-64
+#. type: Plain text
+#: man-pages/man2/wait.2:580
+msgid ""
+"On some architectures, there is no B<waitpid>()  system call; instead, this "
+"interface is implemented via a C library wrapper function that calls "
+"B<wait4>(2)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:592
+msgid ""
+"The raw B<waitid>()  system call takes a fifth argument, of type I<struct "
+"rusage\\ *>.  If this argument is non-NULL, then it is used to return "
+"resource usage information about the child, in the same manner as "
+"B<wait4>(2).  See B<getrusage>(2)  for details."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:607
+msgid ""
+"According to POSIX.1-2008, an application calling B<waitid>()  must ensure "
+"that I<infop> points to a I<siginfo_t> structure (i.e., that it is a non-"
+"null pointer).  On Linux, if I<infop> is NULL, B<waitid>()  succeeds, and "
+"returns the process ID of the waited-for child.  Applications should avoid "
+"relying on this inconsistent, nonstandard, and unnecessary feature."
+msgstr ""
+
+#. type: SH
+#: man-pages/man2/wait.2:607
+#, no-wrap
+msgid "EXAMPLE"
+msgstr ""
+
+#.  fork.2 refers to this example program.
+#. type: Plain text
+#: man-pages/man2/wait.2:624
+msgid ""
+"The following program demonstrates the use of B<fork>(2)  and B<waitpid>()."
+"  The program creates a child process.  If no command-line argument is "
+"supplied to the program, then the child suspends its execution using "
+"B<pause>(2), to allow the user to send signals to the child.  Otherwise, if "
+"a command-line argument is supplied, then the child exits immediately, using"
+" the integer supplied on the command line as the exit status.  The parent "
+"process executes a loop that monitors the child using B<waitpid>(), and uses"
+" the W*() macros described above to analyze the wait status value."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:626
+msgid "The following shell session demonstrates the use of the program:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:640
+#, no-wrap
+msgid ""
+"$B< ./a.out &>\n"
+"Child PID is 32360\n"
+"[1] 32359\n"
+"$B< kill -STOP 32360>\n"
+"stopped by signal 19\n"
+"$B< kill -CONT 32360>\n"
+"continued\n"
+"$B< kill -TERM 32360>\n"
+"killed by signal 15\n"
+"[1]+  Done                    ./a.out\n"
+"$\n"
+msgstr ""
+
+#. type: SS
+#: man-pages/man2/wait.2:642
+#, no-wrap
+msgid "Program source"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:649
+#, no-wrap
+msgid ""
+"#include E<lt>sys/wait.hE<gt>\n"
+"#include E<lt>stdlib.hE<gt>\n"
+"#include E<lt>unistd.hE<gt>\n"
+"#include E<lt>stdio.hE<gt>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:655
+#, no-wrap
+msgid ""
+"int\n"
+"main(int argc, char *argv[])\n"
+"{\n"
+"    pid_t cpid, w;\n"
+"    int wstatus;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:661
+#, no-wrap
+msgid ""
+"    cpid = fork();\n"
+"    if (cpid == -1) {\n"
+"        perror(\"fork\");\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:667
+#, no-wrap
+msgid ""
+"    if (cpid == 0) {            /* Code executed by child */\n"
+"        printf(\"Child PID is %ld\\en\", (long) getpid());\n"
+"        if (argc == 1)\n"
+"            pause();                    /* Wait for signals */\n"
+"        _exit(atoi(argv[1]));\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:675
+#, no-wrap
+msgid ""
+"    } else {                    /* Code executed by parent */\n"
+"        do {\n"
+"            w = waitpid(cpid, &wstatus, WUNTRACED | WCONTINUED);\n"
+"            if (w == -1) {\n"
+"                perror(\"waitpid\");\n"
+"                exit(EXIT_FAILURE);\n"
+"            }\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:689
+#, no-wrap
+msgid ""
+"            if (WIFEXITED(wstatus)) {\n"
+"                printf(\"exited, status=%d\\en\", WEXITSTATUS(wstatus));\n"
+"            } else if (WIFSIGNALED(wstatus)) {\n"
+"                printf(\"killed by signal %d\\en\", WTERMSIG(wstatus));\n"
+"            } else if (WIFSTOPPED(wstatus)) {\n"
+"                printf(\"stopped by signal %d\\en\", WSTOPSIG(wstatus));\n"
+"            } else if (WIFCONTINUED(wstatus)) {\n"
+"                printf(\"continued\\en\");\n"
+"            }\n"
+"        } while (!WIFEXITED(wstatus) && !WIFSIGNALED(wstatus));\n"
+"        exit(EXIT_SUCCESS);\n"
+"    }\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait.2:702
+msgid ""
+"B<_exit>(2), B<clone>(2), B<fork>(2), B<kill>(2), B<ptrace>(2), "
+"B<sigaction>(2), B<signal>(2), B<wait4>(2), B<pthread_create>(3), "
+"B<core>(5), B<credentials>(7), B<signal>(7)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/wait4.2:33
+#, no-wrap
+msgid "WAIT4"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait4.2:36
+msgid "wait3, wait4 - wait for process to change state, BSD style"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait4.2:42
+#, no-wrap
+msgid ""
+"B<#include E<lt>sys/types.hE<gt>>\n"
+"B<#include E<lt>sys/time.hE<gt>>\n"
+"B<#include E<lt>sys/resource.hE<gt>>\n"
+"B<#include E<lt>sys/wait.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait4.2:45
+#, no-wrap
+msgid ""
+"B<pid_t wait3(int *>I<wstatus>B<, int >I<options>B<,>\n"
+"B<            struct rusage *>I<rusage>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait4.2:48
+#, no-wrap
+msgid ""
+"B<pid_t wait4(pid_t >I<pid>B<, int *>I<wstatus>B<, int >I<options>B<,>\n"
+"B<            struct rusage *>I<rusage>B<);>\n"
+msgstr ""
+
+#.           || _XOPEN_SOURCE\ &&\ _XOPEN_SOURCE_EXTENDED
+#. type: Plain text
+#: man-pages/man2/wait4.2:62
+#, no-wrap
+msgid ""
+"B<wait3>():\n"
+"    Since glibc 2.19:\n"
+"        _DEFAULT_SOURCE || _XOPEN_SOURCE\\ E<gt>=\\ 500\n"
+"    Glibc 2.19 and earlier:\n"
+"        _BSD_SOURCE || _XOPEN_SOURCE\\ E<gt>=\\ 500\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait4.2:68
+#, no-wrap
+msgid ""
+"B<wait4>():\n"
+"    Since glibc 2.19:\n"
+"        _DEFAULT_SOURCE\n"
+"    Glibc 2.19 and earlier:\n"
+"        _BSD_SOURCE\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait4.2:75
+msgid ""
+"These functions are nonstandard; in new programs, the use of B<waitpid>(2)  "
+"or B<waitid>(2)  is preferable."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait4.2:85
+msgid ""
+"The B<wait3>()  and B<wait4>()  system calls are similar to B<waitpid>(2), "
+"but additionally return resource usage information about the child in the "
+"structure pointed to by I<rusage>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait4.2:91
+msgid ""
+"Other than the use of the I<rusage> argument, the following B<wait3>()  "
+"call:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait4.2:95
+#, no-wrap
+msgid "wait3(wstatus, options, rusage);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait4.2:99 man-pages/man2/wait4.2:117
+msgid "is equivalent to:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait4.2:103
+#, no-wrap
+msgid "waitpid(-1, wstatus, options);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait4.2:109
+msgid "Similarly, the following B<wait4>()  call:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait4.2:113
+#, no-wrap
+msgid "wait4(pid, wstatus, options, rusage);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait4.2:121
+#, no-wrap
+msgid "waitpid(pid, wstatus, options);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait4.2:132
+msgid ""
+"In other words, B<wait3>()  waits of any child, while B<wait4>()  can be "
+"used to select a specific child, or children, on which to wait.  See "
+"B<wait>(2)  for further details."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait4.2:142
+msgid ""
+"If I<rusage> is not NULL, the I<struct rusage> to which it points will be "
+"filled with accounting information about the child.  See B<getrusage>(2)  "
+"for details."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait4.2:145 man-pages/man2/wait4.2:148
+msgid "As for B<waitpid>(2)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait4.2:150
+msgid "4.3BSD."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait4.2:157
+msgid ""
+"SUSv1 included a specification of B<wait3>(); SUSv2 included B<wait3>(), but"
+" marked it LEGACY; SUSv3 removed it."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait4.2:169
+msgid ""
+"Including I<E<lt>sys/time.hE<gt>> is not required these days, but increases "
+"portability.  (Indeed, I<E<lt>sys/resource.hE<gt>> defines the I<rusage> "
+"structure with fields of type I<struct timeval> defined in "
+"I<E<lt>sys/time.hE<gt>>.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait4.2:175
+msgid ""
+"On Linux, B<wait3>()  is a library function implemented on top of the "
+"B<wait4>()  system call."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/wait4.2:181
+msgid ""
+"B<fork>(2), B<getrusage>(2), B<sigaction>(2), B<signal>(2), B<wait>(2), "
+"B<signal>(7)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcrtomb.3:16
+#, no-wrap
+msgid "WCRTOMB"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcrtomb.3:16
+#, no-wrap
+msgid "GNU"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcrtomb.3:19
+msgid "wcrtomb - convert a wide character to a multibyte sequence"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcrtomb.3:22
+#, no-wrap
+msgid "B<#include E<lt>wchar.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcrtomb.3:24
+#, no-wrap
+msgid ""
+"B<size_t wcrtomb(char *>I<s>B<, wchar_t >I<wc>B<, mbstate_t *>I<ps>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcrtomb.3:48
+msgid ""
+"The main case for this function is when I<s> is not NULL and I<wc> is not a "
+"null wide character (L\\(aq\\e0\\(aq).  In this case, the B<wcrtomb>()  "
+"function converts the wide character I<wc> to its multibyte representation "
+"and stores it at the beginning of the character array pointed to by I<s>.  "
+"It updates the shift state I<*ps>, and returns the length of said multibyte "
+"representation, that is, the number of bytes written at I<s>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcrtomb.3:72
+msgid ""
+"A different case is when I<s> is not NULL, but I<wc> is a null wide "
+"character (L\\(aq\\e0\\(aq).  In this case, the B<wcrtomb>()  function "
+"stores at the character array pointed to by I<s> the shift sequence needed "
+"to bring I<*ps> back to the initial state, followed by a \\(aq\\e0\\(aq "
+"byte.  It updates the shift state I<*ps> (i.e., brings it into the initial "
+"state), and returns the length of the shift sequence plus one, that is, the "
+"number of bytes written at I<s>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcrtomb.3:80
+msgid ""
+"A third case is when I<s> is NULL.  In this case, I<wc> is ignored, and the "
+"function effectively returns"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcrtomb.3:82
+#, no-wrap
+msgid "    wcrtomb(buf, L\\(aq\\e0\\(aq, ps)\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcrtomb.3:86
+msgid "where I<buf> is an internal anonymous buffer."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcrtomb.3:93
+msgid ""
+"In all of the above cases, if I<ps> is NULL, a static anonymous state known "
+"only to the B<wcrtomb>()  function is used instead."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcrtomb.3:109
+msgid ""
+"The B<wcrtomb>()  function returns the number of bytes that have been or "
+"would have been written to the byte array at I<s>.  If I<wc> can not be "
+"represented as a multibyte sequence (according to the current locale), "
+"I<(size_t)\\ -1> is returned, and I<errno> set to B<EILSEQ>."
+msgstr ""
+
+#. type: SH
+#: man-pages/man3/wcrtomb.3:109
+#, no-wrap
+msgid "ATTRIBUTES"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcrtomb.3:112
+msgid ""
+"For an explanation of the terms used in this section, see B<attributes>(7)."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcrtomb.3:116
+#, no-wrap
+msgid "Interface"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcrtomb.3:116
+#, no-wrap
+msgid "Attribute"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcrtomb.3:116
+#, no-wrap
+msgid "Value"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcrtomb.3:119
+#, no-wrap
+msgid "B<wcrtomb>()"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcrtomb.3:119
+#, no-wrap
+msgid "Thread safety"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcrtomb.3:119
+#, no-wrap
+msgid "MT-Unsafe race:wcrtomb/!ps"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcrtomb.3:124
+msgid "POSIX.1-2001, POSIX.1-2008, C99."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcrtomb.3:131
+msgid ""
+"The behavior of B<wcrtomb>()  depends on the B<LC_CTYPE> category of the "
+"current locale."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcrtomb.3:135
+msgid "Passing NULL as I<ps> is not multithread safe."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcrtomb.3:137
+msgid "B<mbsinit>(3), B<wcsrtombs>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcsspn.3:16
+#, no-wrap
+msgid "WCSSPN"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcsspn.3:16
+#, no-wrap
+msgid "2015-08-08"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsspn.3:20
+msgid ""
+"wcsspn - advance in a wide-character string, skipping any of a set of wide "
+"characters"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsspn.3:25
+#, no-wrap
+msgid ""
+"B<size_t wcsspn(const wchar_t *>I<wcs>B<, const wchar_t *>I<accept>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsspn.3:41
+msgid ""
+"The B<wcsspn>()  function is the wide-character equivalent of the "
+"B<strspn>(3)  function.  It determines the length of the longest initial "
+"segment of I<wcs> which consists entirely of wide-characters listed in "
+"I<accept>.  In other words, it searches for the first occurrence in the "
+"wide-character string I<wcs> of a wide-character not contained in the wide-"
+"character string I<accept>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsspn.3:60
+msgid ""
+"The B<wcsspn>()  function returns the number of wide characters in the "
+"longest initial segment of I<wcs> which consists entirely of wide-characters"
+" listed in I<accept>.  In other words, it returns the position of the first "
+"occurrence in the wide-character string I<wcs> of a wide-character not "
+"contained in the wide-character string I<accept>, or I<wcslen(wcs)> if there"
+" is none."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcsspn.3:70
+#, no-wrap
+msgid "B<wcsspn>()"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcsspn.3:70
+#, no-wrap
+msgid "MT-Safe"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsspn.3:76
+msgid "B<strspn>(3), B<wcscspn>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wprintf.3:16
+#, no-wrap
+msgid "WPRINTF"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wprintf.3:20
+msgid ""
+"wprintf, fwprintf, swprintf, vwprintf, vfwprintf, vswprintf - formatted "
+"wide-character output conversion"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wprintf.3:24
+#, no-wrap
+msgid ""
+"B<#include E<lt>stdio.hE<gt>>\n"
+"B<#include E<lt>wchar.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wprintf.3:29
+#, no-wrap
+msgid ""
+"B<int wprintf(const wchar_t *>I<format>B<, ...);>\n"
+"B<int fwprintf(FILE *>I<stream>B<, const wchar_t *>I<format>B<, ...);>\n"
+"B<int swprintf(wchar_t *>I<wcs>B<, size_t >I<maxlen>B<,>\n"
+"B<             const wchar_t *>I<format>B<, ...);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wprintf.3:34
+#, no-wrap
+msgid ""
+"B<int vwprintf(const wchar_t *>I<format>B<, va_list >I<args>B<);>\n"
+"B<int vfwprintf(FILE *>I<stream>B<, const wchar_t *>I<format>B<, va_list >I<args>B<);>\n"
+"B<int vswprintf(wchar_t *>I<wcs>B<, size_t >I<maxlen>B<,>\n"
+"B<              const wchar_t *>I<format>B<, va_list >I<args>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wprintf.3:43
+msgid "All functions shown above:"
+msgstr ""
+
+#.  .BR wprintf (),
+#.  .BR fwprintf (),
+#.  .BR swprintf (),
+#.  .BR vwprintf (),
+#.  .BR vfwprintf (),
+#.  .BR vswprintf ():
+#. type: Plain text
+#: man-pages/man3/wprintf.3:51
+msgid "_XOPEN_SOURCE\\ E<gt>=\\ 500 || _ISOC99_SOURCE ||"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wprintf.3:53
+msgid "_POSIX_C_SOURCE\\ E<gt>=\\ 200112L"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wprintf.3:64
+msgid ""
+"The B<wprintf>()  family of functions is the wide-character equivalent of "
+"the B<printf>(3)  family of functions.  It performs formatted output of wide"
+" characters."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wprintf.3:76
+msgid ""
+"The B<wprintf>()  and B<vwprintf>()  functions perform wide-character output"
+" to I<stdout>.  I<stdout> must not be byte oriented; see B<fwide>(3)  for "
+"more information."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wprintf.3:88
+msgid ""
+"The B<fwprintf>()  and B<vfwprintf>()  functions perform wide-character "
+"output to I<stream>.  I<stream> must not be byte oriented; see B<fwide>(3)  "
+"for more information."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wprintf.3:102
+msgid ""
+"The B<swprintf>()  and B<vswprintf>()  functions perform wide-character "
+"output to an array of wide characters.  The programmer must ensure that "
+"there is room for at least I<maxlen> wide characters at I<wcs>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wprintf.3:113
+msgid ""
+"These functions are like the B<printf>(3), B<vprintf>(3), B<fprintf>(3), "
+"B<vfprintf>(3), B<sprintf>(3), B<vsprintf>(3)  functions except for the "
+"following differences:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/wprintf.3:113 man-pages/man3/wprintf.3:118
+#: man-pages/man3/wprintf.3:121
+#, no-wrap
+msgid "B<\\(bu>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wprintf.3:118
+msgid "The I<format> string is a wide-character string."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wprintf.3:121
+msgid "The output consists of wide characters, not bytes."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wprintf.3:140
+msgid ""
+"B<swprintf>()  and B<vswprintf>()  take a I<maxlen> argument, B<sprintf>(3)"
+"  and B<vsprintf>(3)  do not.  (B<snprintf>(3)  and B<vsnprintf>(3)  take a "
+"I<maxlen> argument, but these functions do not return -1 upon buffer "
+"overflow on Linux.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wprintf.3:146
+msgid "The treatment of the conversion characters B<c> and B<s> is different:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/wprintf.3:146
+#, no-wrap
+msgid "B<c>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wprintf.3:160
+msgid ""
+"If no B<l> modifier is present, the I<int> argument is converted to a wide "
+"character by a call to the B<btowc>(3)  function, and the resulting wide "
+"character is written.  If an B<l> modifier is present, the I<wint_t> (wide "
+"character) argument is written."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/wprintf.3:160
+#, no-wrap
+msgid "B<s>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wprintf.3:200
+msgid ""
+"If no B<l> modifier is present: the I<const\\ char\\ *> argument is expected"
+" to be a pointer to an array of character type (pointer to a string) "
+"containing a multibyte character sequence beginning in the initial shift "
+"state.  Characters from the array are converted to wide characters (each by "
+"a call to the B<mbrtowc>(3)  function with a conversion state starting in "
+"the initial state before the first byte).  The resulting wide characters are"
+" written up to (but not including) the terminating null wide character "
+"(L\\(aq\\e0\\(aq).  If a precision is specified, no more wide characters "
+"than the number specified are written.  Note that the precision determines "
+"the number of I<wide characters> written, not the number of I<bytes> or "
+"I<screen positions>.  The array must contain a terminating null byte "
+"(\\(aq\\e0\\(aq), unless a precision is given and it is so small that the "
+"number of converted wide characters reaches it before the end of the array "
+"is reached.  If an B<l> modifier is present: the I<const\\ wchar_t\\ *> "
+"argument is expected to be a pointer to an array of wide characters.  Wide "
+"characters from the array are written up to (but not including) a "
+"terminating null wide character.  If a precision is specified, no more than "
+"the number specified are written.  The array must contain a terminating null"
+" wide character, unless a precision is given and it is smaller than or equal"
+" to the number of wide characters in the array."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wprintf.3:208
+msgid ""
+"The functions return the number of wide characters written, excluding the "
+"terminating null wide character in case of the functions B<swprintf>()  and "
+"B<vswprintf>().  They return -1 when an error occurs."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wprintf.3:219
+#, no-wrap
+msgid ""
+"B<wprintf>(),\n"
+"B<fwprintf>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wprintf.3:219 man-pages/man3/wprintf.3:222
+#, no-wrap
+msgid ".br\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wprintf.3:222
+#, no-wrap
+msgid ""
+"B<swprintf>(),\n"
+"B<vwprintf>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wprintf.3:225
+#, no-wrap
+msgid ""
+"B<vfwprintf>(),\n"
+"B<vswprintf>()"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wprintf.3:225
+#, no-wrap
+msgid "MT-Safe locale"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wprintf.3:238
+msgid ""
+"The behavior of B<wprintf>()  et al. depends on the B<LC_CTYPE> category of "
+"the current locale."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wprintf.3:268
+msgid ""
+"If the I<format> string contains non-ASCII wide characters, the program will"
+" work correctly only if the B<LC_CTYPE> category of the current locale at "
+"run time is the same as the B<LC_CTYPE> category of the current locale at "
+"compile time.  This is because the I<wchar_t> representation is platform- "
+"and locale-dependent.  (The glibc represents wide characters using their "
+"Unicode (ISO-10646) code point, but other platforms don't do this.  Also, "
+"the use of C99 universal character names of the form \\eunnnn does not solve"
+" this problem.)  Therefore, in internationalized programs, the I<format> "
+"string should consist of ASCII wide characters only, or should be "
+"constructed at run time in an internationalized way (e.g., using "
+"B<gettext>(3)  or B<iconv>(3), followed by B<mbstowcs>(3))."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wprintf.3:273
+msgid "B<fprintf>(3), B<fputwc>(3), B<fwide>(3), B<printf>(3), B<snprintf>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wctype.3:16
+#, no-wrap
+msgid "WCTYPE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctype.3:19
+msgid "wctype - wide-character classification"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctype.3:22
+#, no-wrap
+msgid "B<#include E<lt>wctype.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctype.3:24
+#, no-wrap
+msgid "B<wctype_t wctype(const char *>I<name>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctype.3:42
+msgid ""
+"The I<wctype_t> type represents a property which a wide character may or may"
+" not have.  In other words, it represents a class of wide characters.  This "
+"type's nature is implementation-dependent, but the special value "
+"I<(wctype_t) 0> denotes an invalid property.  Nonzero I<wctype_t> values can"
+" be passed to the B<iswctype>(3)  function to actually test whether a given "
+"wide character has the property."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctype.3:51
+msgid ""
+"The B<wctype>()  function returns a property, given by its name.  The set of"
+" valid names depends on the B<LC_CTYPE> category of the current locale, but "
+"the following names are valid in all locales."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctype.3:65
+#, no-wrap
+msgid ""
+"    \"alnum\" - realizes the B<isalnum>(3) classification function\n"
+"    \"alpha\" - realizes the B<isalpha>(3) classification function\n"
+"    \"blank\" - realizes the B<isblank>(3) classification function\n"
+"    \"cntrl\" - realizes the B<iscntrl>(3) classification function\n"
+"    \"digit\" - realizes the B<isdigit>(3) classification function\n"
+"    \"graph\" - realizes the B<isgraph>(3) classification function\n"
+"    \"lower\" - realizes the B<islower>(3) classification function\n"
+"    \"print\" - realizes the B<isprint>(3) classification function\n"
+"    \"punct\" - realizes the B<ispunct>(3) classification function\n"
+"    \"space\" - realizes the B<isspace>(3) classification function\n"
+"    \"upper\" - realizes the B<isupper>(3) classification function\n"
+"    \"xdigit\" - realizes the B<isxdigit>(3) classification function\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctype.3:75
+msgid ""
+"The B<wctype>()  function returns a property descriptor if the I<name> is "
+"valid.  Otherwise, it returns I<(wctype_t) 0>."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wctype.3:85
+#, no-wrap
+msgid "B<wctype>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctype.3:96
+msgid ""
+"The behavior of B<wctype>()  depends on the B<LC_CTYPE> category of the "
+"current locale."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctype.3:97
+msgid "B<iswctype>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wmemmove.3:16
+#, no-wrap
+msgid "WMEMMOVE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemmove.3:19
+msgid "wmemmove - copy an array of wide-characters"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemmove.3:24
+#, no-wrap
+msgid ""
+"B<wchar_t *wmemmove(wchar_t *>I<dest>B<, const wchar_t *>I<src>B<, size_t "
+">I<n>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemmove.3:40
+msgid ""
+"The B<wmemmove>()  function is the wide-character equivalent of the "
+"B<memmove>(3)  function.  It copies I<n> wide characters from the array "
+"starting at I<src> to the array starting at I<dest>.  The arrays may "
+"overlap."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemmove.3:46
+msgid ""
+"The programmer must ensure that there is room for at least I<n> wide "
+"characters at I<dest>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemmove.3:50
+msgid "B<wmemmove>()  returns I<dest>."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wmemmove.3:60
+#, no-wrap
+msgid "B<wmemmove>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemmove.3:66
+msgid "B<memmove>(3), B<wmemcpy>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wmemcpy.3:16
+#, no-wrap
+msgid "WMEMCPY"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemcpy.3:19
+msgid "wmemcpy - copy an array of wide-characters"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemcpy.3:24
+#, no-wrap
+msgid ""
+"B<wchar_t *wmemcpy(wchar_t *>I<dest>B<, const wchar_t *>I<src>B<, size_t "
+">I<n>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemcpy.3:37
+msgid ""
+"The B<wmemcpy>()  function is the wide-character equivalent of the "
+"B<memcpy>(3)  function.  It copies I<n> wide characters from the array "
+"starting at I<src> to the array starting at I<dest>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemcpy.3:42
+msgid ""
+"The arrays may not overlap; use B<wmemmove>(3)  to copy between overlapping "
+"arrays."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemcpy.3:52
+msgid "B<wmemcpy>()  returns I<dest>."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wmemcpy.3:62
+#, no-wrap
+msgid "B<wmemcpy>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemcpy.3:70
+msgid "B<memcpy>(3), B<wcscpy>(3), B<wmemmove>(3), B<wmempcpy>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcscat.3:16
+#, no-wrap
+msgid "WCSCAT"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscat.3:19
+msgid "wcscat - concatenate two wide-character strings"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscat.3:24
+#, no-wrap
+msgid "B<wchar_t *wcscat(wchar_t *>I<dest>B<, const wchar_t *>I<src>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscat.3:37
+msgid ""
+"The B<wcscat>()  function is the wide-character equivalent of the "
+"B<strcat>(3)  function.  It copies the wide-character string pointed to by "
+"I<src>, including the terminating null wide character (L\\(aq\\e0\\(aq), to "
+"the end of the wide-character string pointed to by I<dest>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscat.3:39
+msgid "The strings may not overlap."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscat.3:44
+msgid ""
+"The programmer must ensure that there is room for at least "
+"I<wcslen(dest)>+I<wcslen(src)>+1 wide characters at I<dest>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscat.3:48
+msgid "B<wcscat>()  returns I<dest>."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcscat.3:58
+#, no-wrap
+msgid "B<wcscat>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscat.3:66
+msgid "B<strcat>(3), B<wcpcpy>(3), B<wcscpy>(3), B<wcsncat>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wmemcmp.3:15
+#, no-wrap
+msgid "WMEMCMP"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemcmp.3:18
+msgid "wmemcmp - compare two arrays of wide-characters"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemcmp.3:23
+#, no-wrap
+msgid ""
+"B<int wmemcmp(const wchar_t *>I<s1>B<, const wchar_t *>I<s2>B<, size_t "
+">I<n>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemcmp.3:38
+msgid ""
+"The B<wmemcmp>()  function is the wide-character equivalent of the "
+"B<memcmp>(3)  function.  It compares the I<n> wide-characters starting at "
+"I<s1> and the I<n> wide-characters starting at I<s2>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemcmp.3:70
+msgid ""
+"The B<wmemcmp>()  function returns zero if the wide-character arrays of size"
+" I<n> at I<s1> and I<s2> are equal.  It returns an integer greater than zero"
+" if at the first differing position I<i> (I<i> E<lt> I<n>), the "
+"corresponding wide-character I<s1[i]> is greater than I<s2[i]>.  It returns "
+"an integer less than zero if at the first differing position I<i> (I<i> "
+"E<lt> I<n>), the corresponding wide-character I<s1[i]> is less than "
+"I<s2[i]>."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wmemcmp.3:80
+#, no-wrap
+msgid "B<wmemcmp>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemcmp.3:86
+msgid "B<memcmp>(3), B<wcscmp>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcstombs.3:16
+#, no-wrap
+msgid "WCSTOMBS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstombs.3:19
+msgid "wcstombs - convert a wide-character string to a multibyte string"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstombs.3:22
+#, no-wrap
+msgid "B<#include E<lt>stdlib.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstombs.3:24
+#, no-wrap
+msgid ""
+"B<size_t wcstombs(char *>I<dest>B<, const wchar_t *>I<src>B<, size_t "
+">I<n>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstombs.3:43
+msgid ""
+"If I<dest> is not NULL, the B<wcstombs>()  function converts the wide-"
+"character string I<src> to a multibyte string starting at I<dest>.  At most "
+"I<n> bytes are written to I<dest>.  The sequence of characters placed in "
+"I<dest> begins in the initial shift state.  The conversion can stop for "
+"three reasons:"
+msgstr ""
+
+#. type: IP
+#: man-pages/man3/wcstombs.3:43
+#, no-wrap
+msgid "1."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstombs.3:49
+msgid ""
+"A wide character has been encountered that can not be represented as a "
+"multibyte sequence (according to the current locale).  In this case, "
+"I<(size_t)\\ -1> is returned."
+msgstr ""
+
+#. type: IP
+#: man-pages/man3/wcstombs.3:49
+#, no-wrap
+msgid "2."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstombs.3:54
+msgid ""
+"The length limit forces a stop.  In this case, the number of bytes written "
+"to I<dest> is returned, but the shift state at this point is lost."
+msgstr ""
+
+#. type: IP
+#: man-pages/man3/wcstombs.3:54
+#, no-wrap
+msgid "3."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstombs.3:61
+msgid ""
+"The wide-character string has been completely converted, including the "
+"terminating null wide character (L\\(aq\\e0\\(aq).  In this case, the "
+"conversion ends in the initial shift state.  The number of bytes written to "
+"I<dest>, excluding the terminating null byte (\\(aq\\e0\\(aq), is returned."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstombs.3:67
+msgid ""
+"The programmer must ensure that there is room for at least I<n> bytes at "
+"I<dest>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstombs.3:75
+msgid ""
+"If I<dest> is NULL, I<n> is ignored, and the conversion proceeds as above, "
+"except that the converted bytes are not written out to memory, and no length"
+" limit exists."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstombs.3:80
+msgid ""
+"In order to avoid the case 2 above, the programmer should make sure I<n> is "
+"greater than or equal to I<wcstombs(NULL,src,0)+1>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstombs.3:90
+msgid ""
+"The B<wcstombs>()  function returns the number of bytes that make up the "
+"converted part of a multibyte sequence, not including the terminating null "
+"byte.  If a wide character was encountered which could not be converted, "
+"I<(size_t)\\ -1> is returned."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcstombs.3:100
+#, no-wrap
+msgid "B<wcstombs>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstombs.3:112
+msgid ""
+"The behavior of B<wcstombs>()  depends on the B<LC_CTYPE> category of the "
+"current locale."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstombs.3:116
+msgid ""
+"The function B<wcsrtombs>(3)  provides a better interface to the same "
+"functionality."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstombs.3:121
+msgid ""
+"B<mblen>(3), B<mbstowcs>(3), B<mbtowc>(3), B<wcsrtombs>(3)  B<wctomb>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcsdup.3:15
+#, no-wrap
+msgid "WCSDUP"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsdup.3:18
+msgid "wcsdup - duplicate a wide-character string"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsdup.3:23
+#, no-wrap
+msgid "B<wchar_t *wcsdup(const wchar_t *>I<s>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsdup.3:31
+msgid "B<wcsdup>():"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/wcsdup.3:34
+#, no-wrap
+msgid "Since glibc 2.10:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsdup.3:37
+msgid "_POSIX_C_SOURCE\\ E<gt>=\\ 200809L"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/wcsdup.3:37
+#, no-wrap
+msgid "Before glibc 2.10:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsdup.3:40
+msgid "_GNU_SOURCE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsdup.3:53
+msgid ""
+"The B<wcsdup>()  function is the wide-character equivalent of the "
+"B<strdup>(3)  function.  It allocates and returns a new wide-character "
+"string whose initial contents is a duplicate of the wide-character string "
+"pointed to by I<s>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsdup.3:59
+msgid ""
+"Memory for the new wide-character string is obtained with B<malloc>(3), and "
+"should be freed with B<free>(3)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsdup.3:66
+msgid ""
+"On success, B<wcsdup>()  returns a pointer to the new wide-character string."
+"  On error, it returns NULL, with I<errno> set to indicate the cause of the "
+"error."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/wcsdup.3:67
+#, no-wrap
+msgid "B<ENOMEM>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsdup.3:70
+msgid "Insufficient memory available to allocate duplicate string."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcsdup.3:80
+#, no-wrap
+msgid "B<wcsdup>()"
+msgstr ""
+
+#.  present in libc5 and glibc 2.0 and later
+#. type: Plain text
+#: man-pages/man3/wcsdup.3:88
+msgid ""
+"POSIX.1-2008.  This function is not specified in POSIX.1-2001, and is not "
+"widely available on other systems."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsdup.3:90
+msgid "B<strdup>(3), B<wcscpy>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcscasecmp.3:15
+#, no-wrap
+msgid "WCSCASECMP"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcscasecmp.3:15
+#, no-wrap
+msgid "2016-03-15"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscasecmp.3:18
+msgid "wcscasecmp - compare two wide-character strings, ignoring case"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscasecmp.3:23
+#, no-wrap
+msgid "B<int wcscasecmp(const wchar_t *>I<s1>B<, const wchar_t *>I<s2>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscasecmp.3:31
+msgid "B<wcscasecmp>():"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscasecmp.3:58
+msgid ""
+"The B<wcscasecmp>()  function is the wide-character equivalent of the "
+"B<strcasecmp>(3)  function.  It compares the wide-character string pointed "
+"to by I<s1> and the wide-character string pointed to by I<s2>, ignoring case"
+" differences (B<towupper>(3), B<towlower>(3))."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscasecmp.3:79
+msgid ""
+"The B<wcscasecmp>()  function returns zero if the wide-character strings at "
+"I<s1> and I<s2> are equal except for case distinctions.  It returns a "
+"positive integer if I<s1> is greater than I<s2>, ignoring case.  It returns "
+"a negative integer if I<s1> is smaller than I<s2>, ignoring case."
+msgstr ""
+
+#. type: SH
+#: man-pages/man3/wcscasecmp.3:79
+#, no-wrap
+msgid "VERSIONS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscasecmp.3:83
+msgid "The B<wcscasecmp>()  function is provided in glibc since version 2.1."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcscasecmp.3:93
+#, no-wrap
+msgid "B<wcscasecmp>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscasecmp.3:106
+msgid ""
+"The behavior of B<wcscasecmp>()  depends on the B<LC_CTYPE> category of the "
+"current locale."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscasecmp.3:108
+msgid "B<strcasecmp>(3), B<wcscmp>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcsncasecmp.3:15
+#, no-wrap
+msgid "WCSNCASECMP"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncasecmp.3:18
+msgid ""
+"wcsncasecmp - compare two fixed-size wide-character strings, ignoring case"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncasecmp.3:23
+#, no-wrap
+msgid ""
+"B<int wcsncasecmp(const wchar_t *>I<s1>B<, const wchar_t *>I<s2>B<, size_t "
+">I<n>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncasecmp.3:31
+msgid "B<wcsncasecmp>():"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncasecmp.3:60
+msgid ""
+"The B<wcsncasecmp>()  function is the wide-character equivalent of the "
+"B<strncasecmp>(3)  function.  It compares the wide-character string pointed "
+"to by I<s1> and the wide-character string pointed to by I<s2>, but at most "
+"I<n> wide characters from each string, ignoring case differences "
+"(B<towupper>(3), B<towlower>(3))."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncasecmp.3:84
+msgid ""
+"The B<wcsncasecmp>()  function returns zero if the wide-character strings at"
+" I<s1> and I<s2>, truncated to at most length I<n>, are equal except for "
+"case distinctions.  It returns a positive integer if truncated I<s1> is "
+"greater than truncated I<s2>, ignoring case.  It returns a negative integer "
+"if truncated I<s1> is smaller than truncated I<s2>, ignoring case."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncasecmp.3:88
+msgid "The B<wcsncasecmp>()  function is provided in glibc since version 2.1."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcsncasecmp.3:98
+#, no-wrap
+msgid "B<wcsncasecmp>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncasecmp.3:111
+msgid ""
+"The behavior of B<wcsncasecmp>()  depends on the B<LC_CTYPE> category of the"
+" current locale."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncasecmp.3:113
+msgid "B<strncasecmp>(3), B<wcsncmp>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcstoimax.3:24
+#, no-wrap
+msgid "WCSTOIMAX"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstoimax.3:27
+msgid "wcstoimax, wcstoumax - convert wide-character string to integer"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstoimax.3:31
+#, no-wrap
+msgid ""
+"B<#include E<lt>stddef.hE<gt>>\n"
+"B<#include E<lt>inttypes.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstoimax.3:36
+#, no-wrap
+msgid ""
+"B<intmax_t wcstoimax(const wchar_t *>I<nptr>B<, wchar_t **>I<endptr>B<, int >I<base>B<);>\n"
+"B<uintmax_t wcstoumax(const wchar_t *>I<nptr>B<, wchar_t **>I<endptr>B<, int >I<base>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstoimax.3:47
+msgid ""
+"These functions are just like B<wcstol>(3)  and B<wcstoul>(3), except that "
+"they return a value of type I<intmax_t> and I<uintmax_t>, respectively."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcstoimax.3:58
+#, no-wrap
+msgid ""
+"B<wcstoimax>(),\n"
+"B<wcstoumax>()"
+msgstr ""
+
+#.  FIXME . the pages referred to by the following xrefs are not yet written
+#. type: Plain text
+#: man-pages/man3/wcstoimax.3:69
+msgid ""
+"B<imaxabs>(3), B<imaxdiv>(3), B<strtoimax>(3), B<strtoumax>(3), "
+"B<wcstol>(3), B<wcstoul>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcstok.3:16
+#, no-wrap
+msgid "WCSTOK"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstok.3:19
+msgid "wcstok - split wide-character string into tokens"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstok.3:25
+#, no-wrap
+msgid ""
+"B<wchar_t *wcstok(wchar_t *>I<wcs>B<, const wchar_t *>I<delim>B<, wchar_t "
+"**>I<ptr>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstok.3:39
+msgid ""
+"The B<wcstok>()  function is the wide-character equivalent of the "
+"B<strtok>(3)  function, with an added argument to make it multithread-safe."
+"  It can be used to split a wide-character string I<wcs> into tokens, where "
+"a token is defined as a substring not containing any wide-characters from "
+"I<delim>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstok.3:74
+msgid ""
+"The search starts at I<wcs>, if I<wcs> is not NULL, or at I<*ptr>, if I<wcs>"
+" is NULL.  First, any delimiter wide-characters are skipped, that is, the "
+"pointer is advanced beyond any wide-characters which occur in I<delim>.  If "
+"the end of the wide-character string is now reached, B<wcstok>()  returns "
+"NULL, to indicate that no tokens were found, and stores an appropriate value"
+" in I<*ptr>, so that subsequent calls to B<wcstok>()  will continue to "
+"return NULL.  Otherwise, the B<wcstok>()  function recognizes the beginning "
+"of a token and returns a pointer to it, but before doing that, it zero-"
+"terminates the token by replacing the next wide-character which occurs in "
+"I<delim> with a null wide character (L\\(aq\\e0\\(aq), and it updates "
+"I<*ptr> so that subsequent calls will continue searching after the end of "
+"recognized token."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstok.3:79
+msgid ""
+"The B<wcstok>()  function returns a pointer to the next token, or NULL if no"
+" further token was found."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcstok.3:89
+#, no-wrap
+msgid "B<wcstok>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstok.3:98
+msgid ""
+"The original I<wcs> wide-character string is destructively modified during "
+"the operation."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstok.3:100
+msgid ""
+"The following code loops over the tokens contained in a wide-character "
+"string."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstok.3:110
+#, no-wrap
+msgid ""
+"wchar_t *wcs = ...;\n"
+"wchar_t *token;\n"
+"wchar_t *state;\n"
+"for (token = wcstok(wcs, \" \\et\\en\", &state);\n"
+"    token != NULL;\n"
+"    token = wcstok(NULL, \" \\et\\en\", &state)) {\n"
+"    ...\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcstok.3:113
+msgid "B<strtok>(3), B<wcschr>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcscpy.3:16
+#, no-wrap
+msgid "WCSCPY"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscpy.3:19
+msgid "wcscpy - copy a wide-character string"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscpy.3:24
+#, no-wrap
+msgid "B<wchar_t *wcscpy(wchar_t *>I<dest>B<, const wchar_t *>I<src>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscpy.3:37
+msgid ""
+"The B<wcscpy>()  function is the wide-character equivalent of the "
+"B<strcpy>(3)  function.  It copies the wide-character string pointed to by "
+"I<src>, including the terminating null wide character (L\\(aq\\e0\\(aq), to "
+"the array pointed to by I<dest>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscpy.3:45
+msgid ""
+"The programmer must ensure that there is room for at least I<wcslen(src)+1> "
+"wide characters at I<dest>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscpy.3:49
+msgid "B<wcscpy>()  returns I<dest>."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcscpy.3:59
+#, no-wrap
+msgid "B<wcscpy>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscpy.3:68
+msgid "B<strcpy>(3), B<wcpcpy>(3), B<wcscat>(3), B<wcsdup>(3), B<wmemcpy>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcscspn.3:16
+#, no-wrap
+msgid "WCSCSPN"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscspn.3:19
+msgid ""
+"wcscspn - search a wide-character string for any of a set of wide characters"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscspn.3:24
+#, no-wrap
+msgid ""
+"B<size_t wcscspn(const wchar_t *>I<wcs>B<, const wchar_t *>I<reject>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscspn.3:42
+msgid ""
+"The B<wcscspn>()  function is the wide-character equivalent of the "
+"B<strcspn>(3)  function.  It determines the length of the longest initial "
+"segment of I<wcs> which consists entirely of wide-characters not listed in "
+"I<reject>.  In other words, it searches for the first occurrence in the "
+"wide-character string I<wcs> of any of the characters in the wide-character "
+"string I<reject>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscspn.3:61
+msgid ""
+"The B<wcscspn>()  function returns the number of wide characters in the "
+"longest initial segment of I<wcs> which consists entirely of wide-characters"
+" not listed in I<reject>.  In other words, it returns the position of the "
+"first occurrence in the wide-character string I<wcs> of any of the "
+"characters in the wide-character string I<reject>, or I<wcslen(wcs)> if "
+"there is none."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcscspn.3:71
+#, no-wrap
+msgid "B<wcscspn>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscspn.3:78
+msgid "B<strcspn>(3), B<wcspbrk>(3), B<wcsspn>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcsnlen.3:15
+#, no-wrap
+msgid "WCSNLEN"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsnlen.3:18
+msgid "wcsnlen - determine the length of a fixed-size wide-character string"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsnlen.3:23
+#, no-wrap
+msgid "B<size_t wcsnlen(const wchar_t *>I<s>B<, size_t >I<maxlen>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsnlen.3:31
+msgid "B<wcsnlen>():"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsnlen.3:64
+msgid ""
+"The B<wcsnlen>()  function is the wide-character equivalent of the "
+"B<strnlen>(3)  function.  It returns the number of wide-characters in the "
+"string pointed to by I<s>, not including the terminating null wide character"
+" (L\\(aq\\e0\\(aq), but at most I<maxlen> wide characters (note: this "
+"parameter is not a byte count).  In doing this, B<wcsnlen>()  looks at only "
+"the first I<maxlen> wide characters at I<s> and never beyond I<s+maxlen>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsnlen.3:78
+msgid ""
+"The B<wcsnlen>()  function returns I<wcslen(s)>, if that is less than "
+"I<maxlen>, or I<maxlen> if there is no null wide character among the first "
+"I<maxlen> wide characters pointed to by I<s>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsnlen.3:82
+msgid "The B<wcsnlen>()  function is provided in glibc since version 2.1."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcsnlen.3:92
+#, no-wrap
+msgid "B<wcsnlen>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsnlen.3:96
+msgid "POSIX.1-2008."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsnlen.3:98
+msgid "B<strnlen>(3), B<wcslen>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcpcpy.3:15
+#, no-wrap
+msgid "WCPCPY"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcpcpy.3:18
+msgid "wcpcpy - copy a wide-character string, returning a pointer to its end"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcpcpy.3:23
+#, no-wrap
+msgid "B<wchar_t *wcpcpy(wchar_t *>I<dest>B<, const wchar_t *>I<src>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcpcpy.3:31
+msgid "B<wcpcpy>():"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcpcpy.3:54
+msgid ""
+"The B<wcpcpy>()  function is the wide-character equivalent of the "
+"B<stpcpy>(3)  function.  It copies the wide-character string pointed to by "
+"I<src>, including the terminating null wide character (L\\(aq\\e0\\(aq), to "
+"the array pointed to by I<dest>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcpcpy.3:67
+msgid ""
+"B<wcpcpy>()  returns a pointer to the end of the wide-character string "
+"I<dest>, that is, a pointer to the terminating null wide character."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcpcpy.3:77
+#, no-wrap
+msgid "B<wcpcpy>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcpcpy.3:83
+msgid "B<strcpy>(3), B<wcscpy>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcwidth.3:15
+#, no-wrap
+msgid "WCWIDTH"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcwidth.3:18
+msgid "wcwidth - determine columns needed for a wide character"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcwidth.3:22
+#, no-wrap
+msgid ""
+"B<#define _XOPEN_SOURCE>       /* See feature_test_macros(7) */\n"
+"B<#include E<lt>wchar.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcwidth.3:24
+#, no-wrap
+msgid "B<int wcwidth(wchar_t >I<c>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcwidth.3:39
+msgid ""
+"The B<wcwidth>()  function returns the number of columns needed to represent"
+" the wide character I<c>.  If I<c> is a printable wide character, the value "
+"is at least 0.  If I<c> is null wide character (L\\(aq\\e0\\(aq), the value "
+"is 0.  Otherwise, -1 is returned."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcwidth.3:45
+msgid ""
+"The B<wcwidth>()  function returns the number of column positions for I<c>."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcwidth.3:55
+#, no-wrap
+msgid "B<wcwidth>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcwidth.3:59
+msgid "POSIX.1-2001, POSIX.1-2008."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcwidth.3:61
+msgid "Note that glibc before 2.2.5 used the prototype"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcwidth.3:64
+#, no-wrap
+msgid "B<int wcwidth(wint_t >I<c>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcwidth.3:72
+msgid ""
+"The behavior of B<wcwidth>()  depends on the B<LC_CTYPE> category of the "
+"current locale."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcwidth.3:74
+msgid "B<iswprint>(3), B<wcswidth>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcpncpy.3:15
+#, no-wrap
+msgid "WCPNCPY"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcpncpy.3:19
+msgid ""
+"wcpncpy - copy a fixed-size string of wide characters, returning a pointer "
+"to its end"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcpncpy.3:24
+#, no-wrap
+msgid ""
+"B<wchar_t *wcpncpy(wchar_t *>I<dest>B<, const wchar_t *>I<src>B<, size_t "
+">I<n>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcpncpy.3:32
+msgid "B<wcpncpy>():"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcpncpy.3:81
+msgid ""
+"The B<wcpncpy>()  function is the wide-character equivalent of the "
+"B<stpncpy>(3)  function.  It copies at most I<n> wide characters from the "
+"wide-character string pointed to by I<src>, including the terminating null "
+"wide (L\\(aq\\e0\\(aq), to the array pointed to by I<dest>.  Exactly I<n> "
+"wide characters are written at I<dest>.  If the length I<wcslen(src)> is "
+"smaller than I<n>, the remaining wide characters in the array pointed to by "
+"I<dest> are filled with L\\(aq\\e0\\(aq characters.  If the length "
+"I<wcslen(src)> is greater than or equal to I<n>, the string pointed to by "
+"I<dest> will not be L\\(aq\\e0\\(aq terminated."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcpncpy.3:93
+msgid ""
+"B<wcpncpy>()  returns a pointer to the last wide character written, that is,"
+" I<dest>+I<n>-1."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcpncpy.3:103
+#, no-wrap
+msgid "B<wcpncpy>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcpncpy.3:109
+msgid "B<stpncpy>(3), B<wcsncpy>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcschr.3:16
+#, no-wrap
+msgid "WCSCHR"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcschr.3:19
+msgid "wcschr - search a wide character in a wide-character string"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcschr.3:24
+#, no-wrap
+msgid "B<wchar_t *wcschr(const wchar_t *>I<wcs>B<, wchar_t >I<wc>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcschr.3:37
+msgid ""
+"The B<wcschr>()  function is the wide-character equivalent of the "
+"B<strchr>(3)  function.  It searches the first occurrence of I<wc> in the "
+"wide-character string pointed to by I<wcs>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcschr.3:47
+msgid ""
+"The B<wcschr>()  function returns a pointer to the first occurrence of I<wc>"
+" in the wide-character string pointed to by I<wcs>, or NULL if I<wc> does "
+"not occur in the string."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcschr.3:57
+#, no-wrap
+msgid "B<wcschr>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcschr.3:66
+msgid ""
+"B<strchr>(3), B<wcspbrk>(3), B<wcsrchr>(3), B<wcsstr>(3), B<wmemchr>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wctob.3:16
+#, no-wrap
+msgid "WCTOB"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctob.3:19
+msgid "wctob - try to represent a wide character as a single byte"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctob.3:24
+#, no-wrap
+msgid "B<int wctob(wint_t >I<c>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctob.3:36
+msgid ""
+"The B<wctob>()  function tests whether the multibyte representation of the "
+"wide character I<c>, starting in the initial state, consists of a single "
+"byte.  If so, it is returned as an I<unsigned char>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctob.3:42
+msgid ""
+"Never use this function.  It cannot help you in writing internationalized "
+"programs.  Internationalized programs must never distinguish single-byte and"
+" multibyte characters."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctob.3:50
+msgid ""
+"The B<wctob>()  function returns the single-byte representation of I<c>, if "
+"it exists, of B<EOF> otherwise."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wctob.3:60
+#, no-wrap
+msgid "B<wctob>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctob.3:72
+msgid ""
+"The behavior of B<wctob>()  depends on the B<LC_CTYPE> category of the "
+"current locale."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctob.3:81
+msgid ""
+"This function should never be used.  Internationalized programs must never "
+"distinguish single-byte and multibyte characters.  Use either B<wctomb>(3)  "
+"or the thread-safe B<wcrtomb>(3)  instead."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctob.3:84
+msgid "B<btowc>(3), B<wcrtomb>(3), B<wctomb>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcspbrk.3:16
+#, no-wrap
+msgid "WCSPBRK"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcspbrk.3:19
+msgid ""
+"wcspbrk - search a wide-character string for any of a set of wide characters"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcspbrk.3:24
+#, no-wrap
+msgid ""
+"B<wchar_t *wcspbrk(const wchar_t *>I<wcs>B<, const wchar_t "
+"*>I<accept>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcspbrk.3:39
+msgid ""
+"The B<wcspbrk>()  function is the wide-character equivalent of the "
+"B<strpbrk>(3)  function.  It searches for the first occurrence in the wide-"
+"character string pointed to by I<wcs> of any of the characters in the wide-"
+"character string pointed to by I<accept>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcspbrk.3:49
+msgid ""
+"The B<wcspbrk>()  function returns a pointer to the first occurrence in "
+"I<wcs> of any of the characters listed in I<accept>.  If I<wcs> contains "
+"none of these characters, NULL is returned."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcspbrk.3:59
+#, no-wrap
+msgid "B<wcspbrk>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcspbrk.3:66
+msgid "B<strpbrk>(3), B<wcschr>(3), B<wcscspn>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wordexp.3:24
+#, no-wrap
+msgid "WORDEXP"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:27
+msgid "wordexp, wordfree - perform word expansion like a posix-shell"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:29
+msgid "B<#include E<lt>wordexp.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:31
+msgid ""
+"B<int wordexp(const char *>I<s>B<, wordexp_t *>I<p>B<, int >I<flags>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:33
+msgid "B<void wordfree(wordexp_t *>I<p>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:42
+msgid "B<wordexp>(), B<wordfree>(): _XOPEN_SOURCE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:76
+msgid ""
+"The function B<wordexp>()  performs a shell-like expansion of the string "
+"I<s> and returns the result in the structure pointed to by I<p>.  The data "
+"type I<wordexp_t> is a structure that at least has the fields I<we_wordc>, "
+"I<we_wordv>, and I<we_offs>.  The field I<we_wordc> is a I<size_t> that "
+"gives the number of words in the expansion of I<s>.  The field I<we_wordv> "
+"is a I<char\\ **> that points to the array of words found.  The field "
+"I<we_offs> of type I<size_t> is sometimes (depending on I<flags>, see below)"
+" used to indicate the number of initial elements in the I<we_wordv> array "
+"that should be filled with NULLs."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:84
+msgid ""
+"The function B<wordfree>()  frees the allocated memory again.  More "
+"precisely, it does not free its argument, but it frees the array I<we_wordv>"
+" and the strings that points to."
+msgstr ""
+
+#. type: SS
+#: man-pages/man3/wordexp.3:84
+#, no-wrap
+msgid "The string argument"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:94
+msgid ""
+"Since the expansion is the same as the expansion by the shell (see B<sh>(1))"
+"  of the parameters to a command, the string I<s> must not contain "
+"characters that would be illegal in shell command parameters.  In "
+"particular, there must not be any unescaped newline or |, &, ;, E<lt>, "
+"E<gt>, (, ), {, } characters outside a command substitution or parameter "
+"substitution context."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:100
+msgid ""
+"If the argument I<s> contains a word that starts with an unquoted comment "
+"character #, then it is unspecified whether that word and all following "
+"words are ignored, or the # is treated as a non-comment character."
+msgstr ""
+
+#. type: SS
+#: man-pages/man3/wordexp.3:100
+#, no-wrap
+msgid "The expansion"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:107
+msgid ""
+"The expansion done consists of the following stages: tilde expansion "
+"(replacing ~user by user's home directory), variable substitution (replacing"
+" $FOO by the value of the environment variable FOO), command substitution "
+"(replacing $(command) or \\`command\\` by the output of command), arithmetic"
+" expansion, field splitting, wildcard expansion, quote removal."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:110
+msgid ""
+"The result of expansion of special parameters ($@, $*, $#, $?, $-, $$, $!, "
+"$0) is unspecified."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:113
+msgid ""
+"Field splitting is done using the environment variable $IFS.  If it is not "
+"set, the field separators are space, tab and newline."
+msgstr ""
+
+#. type: SS
+#: man-pages/man3/wordexp.3:113
+#, no-wrap
+msgid "The output array"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:117
+msgid "The array I<we_wordv> contains the words found, followed by a NULL."
+msgstr ""
+
+#. type: SS
+#: man-pages/man3/wordexp.3:117
+#, no-wrap
+msgid "The flags argument"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:121
+msgid ""
+"The I<flag> argument is a bitwise inclusive OR of the following values:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/wordexp.3:121
+#, no-wrap
+msgid "B<WRDE_APPEND>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:124
+msgid "Append the words found to the array resulting from a previous call."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/wordexp.3:124
+#, no-wrap
+msgid "B<WRDE_DOOFFS>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:132
+msgid ""
+"Insert I<we_offs> initial NULLs in the array I<we_wordv>.  (These are not "
+"counted in the returned I<we_wordc>.)"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/wordexp.3:132
+#, no-wrap
+msgid "B<WRDE_NOCMD>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:135
+msgid "Don't do command substitution."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/wordexp.3:135
+#, no-wrap
+msgid "B<WRDE_REUSE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:145
+msgid ""
+"The argument I<p> resulted from a previous call to B<wordexp>(), and "
+"B<wordfree>()  was not called.  Reuse the allocated storage."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/wordexp.3:145
+#, no-wrap
+msgid "B<WRDE_SHOWERR>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:154
+msgid ""
+"Normally during command substitution I<stderr> is redirected to "
+"I</dev/null>.  This flag specifies that I<stderr> is not to be redirected."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/wordexp.3:154
+#, no-wrap
+msgid "B<WRDE_UNDEF>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:157
+msgid "Consider it an error if an undefined shell variable is expanded."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:161
+msgid ""
+"In case of success 0 is returned.  In case of error one of the following "
+"five values is returned."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/wordexp.3:161
+#, no-wrap
+msgid "B<WRDE_BADCHAR>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:164
+msgid ""
+"Illegal occurrence of newline or one of |, &, ;, E<lt>, E<gt>, (, ), {, }."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/wordexp.3:164
+#, no-wrap
+msgid "B<WRDE_BADVAL>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:170
+msgid ""
+"An undefined shell variable was referenced, and the B<WRDE_UNDEF> flag told "
+"us to consider this an error."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/wordexp.3:170
+#, no-wrap
+msgid "B<WRDE_CMDSUB>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:175
+msgid ""
+"Command substitution requested, but the B<WRDE_NOCMD> flag told us to "
+"consider this an error."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/wordexp.3:175
+#, no-wrap
+msgid "B<WRDE_NOSPACE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:178
+msgid "Out of memory."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/wordexp.3:178
+#, no-wrap
+msgid "B<WRDE_SYNTAX>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:182
+msgid ""
+"Shell syntax error, such as unbalanced parentheses or unmatched quotes."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:187
+msgid ""
+"B<wordexp>()  and B<wordfree>()  are provided in glibc since version 2.1."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wordexp.3:197
+#, no-wrap
+msgid "B<wordexp>()"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wordexp.3:199
+#, no-wrap
+msgid "MT-Unsafe race:utent const:env\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wordexp.3:201
+#, no-wrap
+msgid "env sig:ALRM timer locale"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wordexp.3:204
+#, no-wrap
+msgid "B<wordfree>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:221
+msgid ""
+"In the above table, I<utent> in I<race:utent> signifies that if any of the "
+"functions B<setutent>(3), B<getutent>(3), or B<endutent>(3)  are used in "
+"parallel in different threads of a program, then data races could occur.  "
+"B<wordexp>()  calls those functions, so we use race:utent to remind users."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:226
+msgid ""
+"The output of the following example program is approximately that of \"ls "
+"[a-c]*.c\"."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:231
+#, no-wrap
+msgid ""
+"#include E<lt>stdio.hE<gt>\n"
+"#include E<lt>stdlib.hE<gt>\n"
+"#include E<lt>wordexp.hE<gt>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:238
+#, no-wrap
+msgid ""
+"int\n"
+"main(int argc, char **argv)\n"
+"{\n"
+"    wordexp_t p;\n"
+"    char **w;\n"
+"    int i;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:246
+#, no-wrap
+msgid ""
+"    wordexp(\"[a-c]*.c\", &p, 0);\n"
+"    w = p.we_wordv;\n"
+"    for (i = 0; i E<lt> p.we_wordc; i++)\n"
+"        printf(\"%s\\en\", w[i]);\n"
+"    wordfree(&p);\n"
+"    exit(EXIT_SUCCESS);\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wordexp.3:249
+msgid "B<fnmatch>(3), B<glob>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wctrans.3:16
+#, no-wrap
+msgid "WCTRANS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctrans.3:19
+msgid "wctrans - wide-character translation mapping"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctrans.3:24
+#, no-wrap
+msgid "B<wctrans_t wctrans(const char *>I<name>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctrans.3:41
+msgid ""
+"The I<wctrans_t> type represents a mapping which can map a wide character to"
+" another wide character.  Its nature is implementation-dependent, but the "
+"special value I<(wctrans_t)\\ 0> denotes an invalid mapping.  Nonzero "
+"I<wctrans_t> values can be passed to the B<towctrans>(3)  function to "
+"actually perform the wide-character mapping."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctrans.3:50
+msgid ""
+"The B<wctrans>()  function returns a mapping, given by its name.  The set of"
+" valid names depends on the B<LC_CTYPE> category of the current locale, but "
+"the following names are valid in all locales."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctrans.3:54
+#, no-wrap
+msgid ""
+"    \"tolower\" - realizes the B<tolower>(3) mapping\n"
+"    \"toupper\" - realizes the B<toupper>(3) mapping\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctrans.3:63
+msgid ""
+"The B<wctrans>()  function returns a mapping descriptor if the I<name> is "
+"valid.  Otherwise, it returns I<(wctrans_t)\\ 0>."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wctrans.3:73
+#, no-wrap
+msgid "B<wctrans>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctrans.3:84
+msgid ""
+"The behavior of B<wctrans>()  depends on the B<LC_CTYPE> category of the "
+"current locale."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctrans.3:85
+msgid "B<towctrans>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcsrtombs.3:16
+#, no-wrap
+msgid "WCSRTOMBS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsrtombs.3:19
+msgid "wcsrtombs - convert a wide-character string to a multibyte string"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsrtombs.3:25
+#, no-wrap
+msgid ""
+"B<size_t wcsrtombs(char *>I<dest>B<, const wchar_t **>I<src>B<,>\n"
+"B<                 size_t >I<len>B<, mbstate_t *>I<ps>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsrtombs.3:55
+msgid ""
+"If I<dest> is not NULL, the B<wcsrtombs>()  function converts the wide-"
+"character string I<*src> to a multibyte string starting at I<dest>.  At most"
+" I<len> bytes are written to I<dest>.  The shift state I<*ps> is updated.  "
+"The conversion is effectively performed by repeatedly calling "
+"I<wcrtomb(dest, *src, ps)>, as long as this call succeeds, and then "
+"incrementing I<dest> by the number of bytes written and I<*src> by one.  The"
+" conversion can stop for three reasons:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsrtombs.3:67
+msgid ""
+"A wide character has been encountered that can not be represented as a "
+"multibyte sequence (according to the current locale).  In this case, I<*src>"
+" is left pointing to the invalid wide character, I<(size_t)\\ -1> is "
+"returned, and I<errno> is set to B<EILSEQ>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsrtombs.3:76
+msgid ""
+"The length limit forces a stop.  In this case, I<*src> is left pointing to "
+"the next wide character to be converted, and the number of bytes written to "
+"I<dest> is returned."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsrtombs.3:89
+msgid ""
+"The wide-character string has been completely converted, including the "
+"terminating null wide character (L\\(aq\\e0\\(aq), which has the side effect"
+" of bringing back I<*ps> to the initial state.  In this case, I<*src> is set"
+" to NULL, and the number of bytes written to I<dest>, excluding the "
+"terminating null byte (\\(aq\\e0\\(aq), is returned."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsrtombs.3:98
+msgid ""
+"If I<dest> is NULL, I<len> is ignored, and the conversion proceeds as above,"
+" except that the converted bytes are not written out to memory, and that no "
+"length limit exists."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsrtombs.3:106
+msgid ""
+"In both of the above cases, if I<ps> is NULL, a static anonymous state known"
+" only to the B<wcsrtombs>()  function is used instead."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsrtombs.3:112
+msgid ""
+"The programmer must ensure that there is room for at least I<len> bytes at "
+"I<dest>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsrtombs.3:126
+msgid ""
+"The B<wcsrtombs>()  function returns the number of bytes that make up the "
+"converted part of multibyte sequence, not including the terminating null "
+"byte.  If a wide character was encountered which could not be converted, "
+"I<(size_t)\\ -1> is returned, and I<errno> set to B<EILSEQ>."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcsrtombs.3:136
+#, no-wrap
+msgid "B<wcsrtombs>()"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcsrtombs.3:136
+#, no-wrap
+msgid "MT-Unsafe race:wcsrtombs/!ps"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsrtombs.3:148
+msgid ""
+"The behavior of B<wcsrtombs>()  depends on the B<LC_CTYPE> category of the "
+"current locale."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsrtombs.3:157
+msgid ""
+"B<iconv>(3), B<mbsinit>(3), B<wcrtomb>(3), B<wcsnrtombs>(3), B<wcstombs>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcsncmp.3:16
+#, no-wrap
+msgid "WCSNCMP"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncmp.3:19
+msgid "wcsncmp - compare two fixed-size wide-character strings"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncmp.3:24
+#, no-wrap
+msgid ""
+"B<int wcsncmp(const wchar_t *>I<s1>B<, const wchar_t *>I<s2>B<, size_t "
+">I<n>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncmp.3:42
+msgid ""
+"The B<wcsncmp>()  function is the wide-character equivalent of the "
+"B<strncmp>(3)  function.  It compares the wide-character string pointed to "
+"by I<s1> and the wide-character string pointed to by I<s2>, but at most I<n>"
+" wide characters from each string.  In each string, the comparison extends "
+"only up to the first occurrence of a null wide character (L\\(aq\\e0\\(aq), "
+"if any."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncmp.3:73
+msgid ""
+"The B<wcsncmp>()  function returns zero if the wide-character strings at "
+"I<s1> and I<s2>, truncated to at most length I<n>, are equal.  It returns an"
+" integer greater than zero if at the first differing position I<i> (I<i> "
+"E<lt> I<n>), the corresponding wide-character I<s1[i]> is greater than "
+"I<s2[i]>.  It returns an integer less than zero if at the first differing "
+"position I<i> (I<i> E<lt> I<n>), the corresponding wide-character I<s1[i]> "
+"is less than I<s2[i]>."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcsncmp.3:83
+#, no-wrap
+msgid "B<wcsncmp>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncmp.3:89
+msgid "B<strncmp>(3), B<wcsncasecmp>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wctomb.3:16
+#, no-wrap
+msgid "WCTOMB"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctomb.3:19
+msgid "wctomb - convert a wide character to a multibyte sequence"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctomb.3:24
+#, no-wrap
+msgid "B<int wctomb(char *>I<s>B<, wchar_t >I<wc>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctomb.3:45
+msgid ""
+"If I<s> is not NULL, the B<wctomb>()  function converts the wide character "
+"I<wc> to its multibyte representation and stores it at the beginning of the "
+"character array pointed to by I<s>.  It updates the shift state, which is "
+"stored in a static anonymous variable known only to the B<wctomb>()  "
+"function, and returns the length of said multibyte representation, that is, "
+"the number of bytes written at I<s>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctomb.3:51
+msgid ""
+"The programmer must ensure that there is room for at least B<MB_CUR_MAX> "
+"bytes at I<s>."
+msgstr ""
+
+#.  The Dinkumware doc and the Single UNIX specification say this, but
+#.  glibc doesn't implement this.
+#. type: Plain text
+#: man-pages/man3/wctomb.3:63
+msgid ""
+"If I<s> is NULL, the B<wctomb>()  function resets the shift state, known "
+"only to this function, to the initial state, and returns nonzero if the "
+"encoding has nontrivial shift state, or zero if the encoding is stateless."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctomb.3:77
+msgid ""
+"If I<s> is not NULL, the B<wctomb>()  function returns the number of bytes "
+"that have been written to the byte array at I<s>.  If I<wc> can not be "
+"represented as a multibyte sequence (according to the current locale), -1 is"
+" returned."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctomb.3:84
+msgid ""
+"If I<s> is NULL, the B<wctomb>()  function returns nonzero if the encoding "
+"has nontrivial shift state, or zero if the encoding is stateless."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wctomb.3:94
+#, no-wrap
+msgid "B<wctomb>()"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wctomb.3:94
+#, no-wrap
+msgid "MT-Unsafe race"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctomb.3:105
+msgid ""
+"The behavior of B<wctomb>()  depends on the B<LC_CTYPE> category of the "
+"current locale."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctomb.3:110
+msgid ""
+"The function B<wcrtomb>(3)  provides a better interface to the same "
+"functionality."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wctomb.3:116
+msgid ""
+"B<MB_CUR_MAX>(3), B<mblen>(3), B<mbstowcs>(3), B<mbtowc>(3), B<wcrtomb>(3), "
+"B<wcstombs>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wmemchr.3:16
+#, no-wrap
+msgid "WMEMCHR"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemchr.3:19
+msgid "wmemchr - search a wide character in a wide-character array"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemchr.3:24
+#, no-wrap
+msgid ""
+"B<wchar_t *wmemchr(const wchar_t *>I<s>B<, wchar_t >I<c>B<, size_t "
+">I<n>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemchr.3:38
+msgid ""
+"The B<wmemchr>()  function is the wide-character equivalent of the "
+"B<memchr>(3)  function.  It searches the I<n> wide characters starting at "
+"I<s> for the first occurrence of the wide character I<c>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemchr.3:51
+msgid ""
+"The B<wmemchr>()  function returns a pointer to the first occurrence of I<c>"
+" among the I<n> wide characters starting at I<s>, or NULL if I<c> does not "
+"occur among these."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wmemchr.3:61
+#, no-wrap
+msgid "B<wmemchr>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemchr.3:67
+msgid "B<memchr>(3), B<wcschr>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcsrchr.3:16
+#, no-wrap
+msgid "WCSRCHR"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsrchr.3:19
+msgid "wcsrchr - search a wide character in a wide-character string"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsrchr.3:24
+#, no-wrap
+msgid "B<wchar_t *wcsrchr(const wchar_t *>I<wcs>B<, wchar_t >I<wc>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsrchr.3:37
+msgid ""
+"The B<wcsrchr>()  function is the wide-character equivalent of the "
+"B<strrchr>(3)  function.  It searches the last occurrence of I<wc> in the "
+"wide-character string pointed to by I<wcs>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsrchr.3:47
+msgid ""
+"The B<wcsrchr>()  function returns a pointer to the last occurrence of I<wc>"
+" in the wide-character string pointed to by I<wcs>, or NULL if I<wc> does "
+"not occur in the string."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcsrchr.3:57
+#, no-wrap
+msgid "B<wcsrchr>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsrchr.3:63
+msgid "B<strrchr>(3), B<wcschr>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcswidth.3:15
+#, no-wrap
+msgid "WCSWIDTH"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcswidth.3:18
+msgid ""
+"wcswidth - determine columns needed for a fixed-size wide-character string"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcswidth.3:22
+#, no-wrap
+msgid ""
+"B<#define _XOPEN_SOURCE>             /* See feature_test_macros(7) */\n"
+"B<#include E<lt>wchar.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcswidth.3:24
+#, no-wrap
+msgid "B<int wcswidth(const wchar_t *>I<s>B<, size_t >I<n>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcswidth.3:38
+msgid ""
+"The B<wcswidth>()  function returns the number of columns needed to "
+"represent the wide-character string pointed to by I<s>, but at most I<n> "
+"wide characters.  If a nonprintable wide character occurs among these "
+"characters, -1 is returned."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcswidth.3:47
+msgid ""
+"The B<wcswidth>()  function returns the number of column positions for the "
+"wide-character string I<s>, truncated to at most length I<n>."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcswidth.3:57
+#, no-wrap
+msgid "B<wcswidth>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcswidth.3:68
+msgid ""
+"The behavior of B<wcswidth>()  depends on the B<LC_CTYPE> category of the "
+"current locale."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcswidth.3:70
+msgid "B<iswprint>(3), B<wcwidth>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcsncat.3:16
+#, no-wrap
+msgid "WCSNCAT"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncat.3:19
+msgid "wcsncat - concatenate two wide-character strings"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncat.3:24
+#, no-wrap
+msgid ""
+"B<wchar_t *wcsncat(wchar_t *>I<dest>B<, const wchar_t *>I<src>B<, size_t "
+">I<n>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncat.3:40
+msgid ""
+"The B<wcsncat>()  function is the wide-character equivalent of the "
+"B<strncat>(3)  function.  It copies at most I<n> wide characters from the "
+"wide-character string pointed to by I<src> to the end of the wide-character "
+"string pointed to by I<dest>, and adds a terminating null wide character "
+"(L\\(aq\\e0\\(aq)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncat.3:47
+msgid ""
+"The programmer must ensure that there is room for at least "
+"I<wcslen(dest)>+I<n>+1 wide characters at I<dest>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncat.3:51
+msgid "B<wcsncat>()  returns I<dest>."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcsncat.3:61
+#, no-wrap
+msgid "B<wcsncat>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncat.3:67
+msgid "B<strncat>(3), B<wcscat>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcsnrtombs.3:15
+#, no-wrap
+msgid "WCSNRTOMBS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsnrtombs.3:18
+msgid "wcsnrtombs - convert a wide-character string to a multibyte string"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsnrtombs.3:24
+#, no-wrap
+msgid ""
+"B<size_t wcsnrtombs(char *>I<dest>B<, const wchar_t **>I<src>B<, size_t >I<nwc>B<,>\n"
+"B<                  size_t >I<len>B<, mbstate_t *>I<ps>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsnrtombs.3:32
+msgid "B<wcsnrtombs>():"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsnrtombs.3:55
+msgid ""
+"The B<wcsnrtombs>()  function is like the B<wcsrtombs>(3)  function, except "
+"that the number of wide characters to be converted, starting at I<*src>, is "
+"limited to I<nwc>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsnrtombs.3:87
+msgid ""
+"If I<dest> is not NULL, the B<wcsnrtombs>()  function converts at most "
+"I<nwc> wide characters from the wide-character string I<*src> to a multibyte"
+" string starting at I<dest>.  At most I<len> bytes are written to I<dest>.  "
+"The shift state I<*ps> is updated.  The conversion is effectively performed "
+"by repeatedly calling I<wcrtomb(dest, *src, ps)>, as long as this call "
+"succeeds, and then incrementing I<dest> by the number of bytes written and "
+"I<*src> by one.  The conversion can stop for three reasons:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsnrtombs.3:111
+msgid ""
+"I<nwc> wide characters have been converted without encountering a null wide "
+"character (L\\(aq\\e0\\(aq), or the length limit forces a stop.  In this "
+"case, I<*src> is left pointing to the next wide character to be converted, "
+"and the number of bytes written to I<dest> is returned."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsnrtombs.3:123
+msgid ""
+"The wide-character string has been completely converted, including the "
+"terminating null wide character (which has the side effect of bringing back "
+"I<*ps> to the initial state).  In this case, I<*src> is set to NULL, and the"
+" number of bytes written to I<dest>, excluding the terminating null byte "
+"(\\(aq\\e0\\(aq), is returned."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsnrtombs.3:132
+msgid ""
+"If I<dest> is NULL, I<len> is ignored, and the conversion proceeds as above,"
+" except that the converted bytes are not written out to memory, and that no "
+"destination length limit exists."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsnrtombs.3:140
+msgid ""
+"In both of the above cases, if I<ps> is NULL, a static anonymous state known"
+" only to the B<wcsnrtombs>()  function is used instead."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsnrtombs.3:160
+msgid ""
+"The B<wcsnrtombs>()  function returns the number of bytes that make up the "
+"converted part of multibyte sequence, not including the terminating null "
+"byte.  If a wide character was encountered which could not be converted, "
+"I<(size_t)\\ -1> is returned, and I<errno> set to B<EILSEQ>."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcsnrtombs.3:170
+#, no-wrap
+msgid "B<wcsnrtombs>()"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcsnrtombs.3:170
+#, no-wrap
+msgid "MT-Unsafe race:wcsnrtombs/!ps"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsnrtombs.3:182
+msgid ""
+"The behavior of B<wcsnrtombs>()  depends on the B<LC_CTYPE> category of the "
+"current locale."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsnrtombs.3:189
+msgid "B<iconv>(3), B<mbsinit>(3), B<wcsrtombs>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wmemset.3:16
+#, no-wrap
+msgid "WMEMSET"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemset.3:19
+msgid ""
+"wmemset - fill an array of wide-characters with a constant wide character"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemset.3:24
+#, no-wrap
+msgid ""
+"B<wchar_t *wmemset(wchar_t *>I<wcs>B<, wchar_t >I<wc>B<, size_t >I<n>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemset.3:39
+msgid ""
+"The B<wmemset>()  function is the wide-character equivalent of the "
+"B<memset>(3)  function.  It fills the array of I<n> wide-characters starting"
+" at I<wcs> with I<n> copies of the wide character I<wc>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemset.3:43
+msgid "B<wmemset>()  returns I<wcs>."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wmemset.3:53
+#, no-wrap
+msgid "B<wmemset>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wmemset.3:58
+msgid "B<memset>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcslen.3:16
+#, no-wrap
+msgid "WCSLEN"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcslen.3:19
+msgid "wcslen - determine the length of a wide-character string"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcslen.3:24
+#, no-wrap
+msgid "B<size_t wcslen(const wchar_t *>I<s>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcslen.3:36
+msgid ""
+"The B<wcslen>()  function is the wide-character equivalent of the "
+"B<strlen>(3)  function.  It determines the length of the wide-character "
+"string pointed to by I<s>, excluding the terminating null wide character "
+"(L\\(aq\\e0\\(aq)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcslen.3:42
+msgid ""
+"The B<wcslen>()  function returns the number of wide characters in I<s>."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcslen.3:52
+#, no-wrap
+msgid "B<wcslen>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcslen.3:57
+msgid "B<strlen>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcsstr.3:16
+#, no-wrap
+msgid "WCSSTR"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsstr.3:19
+msgid "wcsstr - locate a substring in a wide-character string"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsstr.3:24
+#, no-wrap
+msgid ""
+"B<wchar_t *wcsstr(const wchar_t *>I<haystack>B<, const wchar_t "
+"*>I<needle>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsstr.3:36
+msgid ""
+"The B<wcsstr>()  function is the wide-character equivalent of the "
+"B<strstr>(3)  function.  It searches for the first occurrence of the wide-"
+"character string I<needle> (without its terminating null wide character "
+"(L\\(aq\\e0\\(aq))  as a substring in the wide-character string I<haystack>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsstr.3:48
+msgid ""
+"The B<wcsstr>()  function returns a pointer to the first occurrence of "
+"I<needle> in I<haystack>.  It returns NULL if I<needle> does not occur as a "
+"substring in I<haystack>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsstr.3:56
+msgid ""
+"Note the special case: If I<needle> is the empty wide-character string, the "
+"return value is always I<haystack> itself."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcsstr.3:66
+#, no-wrap
+msgid "B<wcsstr>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsstr.3:72
+msgid "B<strstr>(3), B<wcschr>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcsncpy.3:16
+#, no-wrap
+msgid "WCSNCPY"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncpy.3:19
+msgid "wcsncpy - copy a fixed-size string of wide characters"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncpy.3:24
+#, no-wrap
+msgid ""
+"B<wchar_t *wcsncpy(wchar_t *>I<dest>B<, const wchar_t *>I<src>B<, size_t "
+">I<n>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncpy.3:57
+msgid ""
+"The B<wcsncpy>()  function is the wide-character equivalent of the "
+"B<strncpy>(3)  function.  It copies at most I<n> wide characters from the "
+"wide-character string pointed to by I<src>, including the terminating null "
+"wide character (L\\(aq\\e0\\(aq), to the array pointed to by I<dest>.  "
+"Exactly I<n> wide characters are written at I<dest>.  If the length "
+"I<wcslen(src)> is smaller than I<n>, the remaining wide characters in the "
+"array pointed to by I<dest> are filled with null wide characters.  If the "
+"length I<wcslen(src)> is greater than or equal to I<n>, the string pointed "
+"to by I<dest> will not be terminated by a null wide character."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncpy.3:69
+msgid "B<wcsncpy>()  returns I<dest>."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcsncpy.3:79
+#, no-wrap
+msgid "B<wcsncpy>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcsncpy.3:84
+msgid "B<strncpy>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/wcscmp.3:16
+#, no-wrap
+msgid "WCSCMP"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscmp.3:19
+msgid "wcscmp - compare two wide-character strings"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscmp.3:24
+#, no-wrap
+msgid "B<int wcscmp(const wchar_t *>I<s1>B<, const wchar_t *>I<s2>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscmp.3:37
+msgid ""
+"The B<wcscmp>()  function is the wide-character equivalent of the "
+"B<strcmp>(3)  function.  It compares the wide-character string pointed to by"
+" I<s1> and the wide-character string pointed to by I<s2>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscmp.3:59
+msgid ""
+"The B<wcscmp>()  function returns zero if the wide-character strings at "
+"I<s1> and I<s2> are equal.  It returns an integer greater than zero if at "
+"the first differing position I<i>, the corresponding wide-character I<s1[i]>"
+" is greater than I<s2[i]>.  It returns an integer less than zero if at the "
+"first differing position I<i>, the corresponding wide-character I<s1[i]> is "
+"less than I<s2[i]>."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/wcscmp.3:69
+#, no-wrap
+msgid "B<wcscmp>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/wcscmp.3:76
+msgid "B<strcmp>(3), B<wcscasecmp>(3), B<wmemcmp>(3)"
+msgstr ""

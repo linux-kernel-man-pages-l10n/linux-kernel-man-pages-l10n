@@ -1,0 +1,5 @@
+iconv -f koi8-u man-pages-git/man7/koi8-u.7 >/tmp/k.7
+удаляем кодировку из шапки
+mv /tmp/k.7 man-pages/man7/koi8-u.7
+diff -Naur man-pages-git/man7/koi8-u.7 man-pages/man7/koi8-u.7 > koi8-u.7.patch
+

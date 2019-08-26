@@ -1,0 +1,634 @@
+3.39-xxxx (rxxx):
+	[Azamat Hackimov]
+U    po/man3/ru/LC_MESSAGES/matherr.3.po
+U    po/man3/ru/LC_MESSAGES/printf.3.po
+U    po/man3/ru/LC_MESSAGES/profil.3.po
+U    po/man3/ru/LC_MESSAGES/glob.3.po
+U    po/man3/ru/LC_MESSAGES/tsearch.3.po
+U    po/man3/ru/LC_MESSAGES/sysconf.3.po
+U    po/man3/ru/LC_MESSAGES/getspnam.3.po
+U    po/man3/ru/LC_MESSAGES/CPU_SET.3.po
+U    po/man3/ru/LC_MESSAGES/getaddrinfo.3.po
+
+U    po/man3/ru/LC_MESSAGES/fpclassify.3.po
+U    po/man3/ru/LC_MESSAGES/pthread_setcancelstate.3.po
+
+3.56:
+	[Yuri Kozlov]
+		* новая версия
+
+3.54-xxxx (rxxx):
+	[Yuri Kozlov]
+		* новая версия
+
+3.49-xxxx (r686):
+	[Yuri Kozlov]
+		* новая версия
+		* udplite.7
+		* исправление ошибок
+		* вернул все потерянные из предыдущих версий
+
+3.41-xxxx (rxxx):
+	[Yuri Kozlov]
+		* utf8.7
+
+3.41-1724 (rxxx):
+	[Yuri Kozlov]
+		* aio.7
+		* addseverity.3
+		* aio_fsync.3
+		* aio_error.3
+		* aio_suspend.3
+		* aio_return.3
+		* aio_cancel.3
+		* aio_init.3
+		* aio_write.3
+		* ddp.7
+		* des_crypt.3
+		* drand48_r.3
+		* daemon.3
+		* dl_iterate_phdr.3
+		* dprintf.3
+		* dbopen.3
+		* difftime.3
+		* dysize.3
+		* div.3
+		* dirfd.3
+		* queue.3
+		* qecvt.3
+		* hpsa.4
+		* hostname.7
+
+3.41-1699 (r672):
+	[Yuri Kozlov]
+		* arp.7
+		* asprintf.3
+		* atexit.3
+		* a64l.3
+		* asprintf.3
+		* alloca.3
+		* abort.3
+		* assert.3
+		* argz_add.3
+		* assert_perror.3
+		* hier.7
+		* hash.3
+		* hsearch.3
+		* nscd.8
+		* netlink.7
+		* netdevice.7
+		* nextafter.3
+		* netlink.3
+		* nl_langinfo.3
+
+	[Inna Kabanova]
+		* hier.7
+
+3.39-1658 (r639):
+	[Yuri Kozlov]
+		* prctl.2
+		* ptrace.2
+		* libc.7
+		* bootparam.7
+		* brk.2
+		* bind.2
+		* backtrace.3
+		* btree.3
+
+	[Azamat Hackimov]
+		* lrint.3
+		* bootparam.7 _
+		* basename.3 _
+		* bsearch.3 _
+		* bsd_signal.3 _
+		* bindresvport.3 _
+		* btowc.3 _
+		* bstring.3 _
+		* byteorder.3 _
+		* backtrace.3 _
+		* btree.3 _
+		* epoll.7 _
+		* err.3 _
+		* end.3 _
+		* endian.3 _
+		* encrypt.3 _
+		* ether_aton.3 _
+		* ecvt_r.3 _
+		* exec.3 _
+		* envz_add.3 _
+		* error.3 _
+		* errno.3 _
+		* longjmp.3 _
+		* login.3 _
+		* lio_listio.3 _
+		* localeconv.3 _
+		* log1p.3 _
+		* lround.3 _
+		* lockf.3 _
+		* lsearch.3 _
+		* lseek64.3 _
+
+3.39-1645 (r645):
+	[Yuri Kozlov]
+		* изменена лицензия на переводы
+
+3.39-1620 (r639):
+	[Yuri Kozlov]
+		* обновление vfork.2
+		* wctype.3
+		* wcscat.3
+		* wcstombs.3
+		* wcsdup.3
+		* wcsncasecmp.3
+		* wcstoimax.3
+		* wcstok.3
+		* wcscpy.3
+		* wcscspn.3
+		* wcsnlen.3
+		* wcpcpy.3
+		* wcwidth.3
+		* wcpncpy.3
+		* wcschr.3
+		* wctob.3
+		* wcspbrk.3
+		* wordexp.3
+		* wctrans.3
+		* wcsrtombs.3
+		* wcsncmp.3
+		* wctomb.3
+		* wcsrchr.3
+		* wcswidth.3
+		* wcsncat.3
+		* wcsnrtombs.3
+		* wcslen.3
+		* wcsstr.3
+		* wcsncpy.3
+
+3.35-1603 (r626):
+	[Konstantin Shvaykovskiy]
+		* openpty.3
+	 	* on_exit.3
+
+	[Yuri Kozlov]
+		* sigqueue.3
+		* getpass.3
+		* pow.3
+		* modf.3
+		* lgamma.3
+		* tgamma.3
+		* ldexp.3
+		* fmod.3
+		* erfc.3
+		* erf.3
+		* ceil.3
+		* atof.3
+		* atanh.3
+		* atan2.3
+		* acosh.3
+
+3.35-1586 (r618):
+	[Konstantin Shvaykovskiy]
+		* operator.7
+		* outb.2
+		* opendir.3
+		* offsetof.3
+
+	[Yuri Kozlov]
+		* strsep.3
+		* strchr.3
+		* strcat.3
+		* strcasecmp.3
+		* sinh.3
+		* index.3
+		* hypot.3
+		* frexp.3
+		* malloc.3
+
+3.35-1575 (r613):
+        [Yuri Kozlov]
+		* strspn.3
+		* strtok.3
+		* strxfrm.3
+		* tanh.3
+		* fifo.7
+		* complex.7
+		* tcp.7
+		* icmp.7
+		* ip.7
+		* signal.7
+
+3.35-1565 (r608):
+	* переразбивка материала для перехода на TX новой версии
+	* обновление до версии 3.35
+
+	[Azamat Hackimov]
+		* svipc.7
+
+        [Yuri Kozlov]
+		* statfs.2
+		* __setfpucw.3
+		* x25.7
+		* wcrtomb.3
+		* wcsspn.3
+		* wprintf.3
+		* subpage_prot.2
+		* wcscasecmp.3
+		* wmemmove.3
+		* environ.7
+
+3.32-1553 (r600):
+        [Yuri Kozlov]
+		* shmop.2
+		* utimensat.2
+		* sigaltstack.2
+		* signalfd.2
+		* sigpending.2
+		* sigprocmask.2
+		* sigqueue.2
+		* sigsuspend.2
+		* splice.2
+		* spu_create.2
+		* spu_run.2
+
+3.32-1542 (r589):
+        [Yuri Kozlov]
+		* semop.2
+		* send.2
+		* sendfile.2
+		* set_mempolicy.2
+		* set_tid_address.2
+		* setpgid.2
+		* setreuid.2
+		* sgetmask.2
+		* shmctl.2
+		* shmget.2
+
+3.32-1532 (r579):
+        [Yuri Kozlov]
+		* sched_get_priority_max.2
+		* sched_rr_get_interval.2
+		* sched_setaffinity.2
+		* setfsgid.2
+		* setfsuid.2
+		* sched_setparam.2
+		* sched_setscheduler.2
+		* select_tut.2
+		* semctl.2
+		* semget.2
+
+3.32-1522 (r568):
+        [Yuri Kozlov]
+		* readdir.2
+		* prctl.2
+		* ptrace.2
+		* quotactl.2
+		* unshare.2
+		* readlinkat.2
+		* symlinkat.2
+		* readv.2
+		* recv.2
+		* remap_file_pages.2
+
+3.32-1512 (r558):
+	[Azamat Hackimov]
+		* tempnam.3
+		* memchr.3
+
+        [Yuri Kozlov]
+		* mremap.2
+		* msgctl.2
+		* msgget.2
+		* pivot_root.2
+		* unlinkat.2
+		* poll.2
+		* posix_fadvise.2
+
+3.29-1499 (r536):
+	[Inna Kabanova]
+    		* unix.7
+
+	[Azamat Hackimov]
+		* wmemset.3
+		* wmemchr.3
+		* mkfifoat.3
+		* key_setsecret.3
+		* ttyslot.3
+		* rewinddir.3
+		* xcrypt.3
+		* wcscmp.3
+		* syslog.3
+		* drand48.3
+
+	[Yuri Kozlov]
+		* kexec_load.2
+		* modify_ldt.2
+		* mount.2
+		* move_pages.2
+    		* unix.7
+		* mprotect.2
+
+3.27-1473 (r497):
+	[Inna Kabanova]
+		* stat.2
+
+	[Azamat Hackimov]
+		* makedev.3
+		* aio_return.3
+		* floor.3
+		* towlower.3
+		* stpncpy.3
+		* ecvt.3
+		* signbit.3
+		* wmemcmp.3
+		* fcloseall.3
+		* getrpcport.3
+		* strstr.3
+
+	[Yuri Kozlov]
+		* mbind.2
+		* migrate_pages.2
+		* mkdirat.2
+		* mknodat.2
+		* renameat.2
+		* vmsplice.2
+		* stat.2
+		* mlock.2
+		* mmap.2
+
+3.27-1451 (r462):
+		* nan.3
+		* mkdtemp.3
+		* csinh.3
+		* catan.3
+		* trunc.3
+		* asinh.3
+		* casinh.3
+		* ctanh.3
+		* fabs.3
+		* memset.3
+		* cacosh.3
+		* statvfs.3
+		* rtime.3
+		* ferror.3
+
+	[Yuri Kozlov]
+		* select.2
+		* removexattr.2
+
+3.27-1435 (r435):
+	[Azamat Hackimov]
+		* conj.3
+		* cabs.3
+		* strcoll.3
+		* log10.3
+		* log2.3
+		* log.3
+		* memmove.3
+		* ctan.3
+		* sqrt.3
+		* memcpy.3
+		* telldir.3
+		* wmemcpy.3
+		* mkstemp.3
+		* cpow.3
+		* atoi.3
+		* y0.3
+		* atan.3
+		* exp.3
+
+	[Inna Kabanova]
+		* boot.7
+		* locale.7
+
+	[Yuri Kozlov]
+		* getxattr.2
+		* gettimeofday.2
+		* inotify_add_watch.2
+		* inotify_rm_watch.2
+		* ioctl.2
+		* ioprio_set.2
+		* keyctl.2
+		* linkat.2
+		* lookup_dcookie.2
+		* lseek.2
+		* madvise.2
+
+3.25-1411 (r384):
+	[Yuri Kozlov]
+		* clock_getres.2
+		* clock_nanosleep.2
+		* epoll_create.2
+		* epoll_ctl.2
+		* epoll_wait.2
+		* eventfd.2
+		* faccessat.2
+		* fchmodat.2	
+		* fchownat.2
+		* flock.2
+		* fork.2
+		* fstatat.2
+		* fsync.2
+		* futex.2
+		* futimesat.2
+		* get_mempolicy.2
+		* getdents.2
+		* getdomainname.2
+		* getitimer.2
+		* getpriority.2
+		* getrlimit.2
+		* getrusage.2
+
+3.25-1389 (r360):
+	[Inna Kabanova]
+		* nanosleep.2
+		* mincore.2
+		* ustat.2
+		* socket.2
+		* vfork.2
+		* pipe.2
+
+	[Yuri Kozlov]
+		* _exit.2
+		* _syscall.2
+		* cacheflush.2
+		* get_kernel_syms.2
+		* getgroups.2
+		* console_codes.4
+		* console_ioctl.4
+		* msr.4
+		* cpuid.4
+		* dsp56k.4
+		* full.4
+		* initrd.4
+		* fd.4
+		* hd.4
+		* sigaction.2
+		* st.4
+		* tty_ioctl.4
+		* sk98lin.4
+		* wavelan.4
+		* sd.4
+		* vcs.4
+		* ttyS.4
+
+3.25-1352 (r310):
+	[Inna Kabanova]
+	* listen.2
+	[Yuri Kozlov]
+	* синхронизация с новой версией, дополнение имеющихся переводов
+	* swapon.2
+	* getcpu.2
+	* tkill.2
+	* console.4
+	* timer_delete.2
+	* utime.2
+	* mmap2.2
+	* tee.2
+	* umount.2
+	* kill.2
+	[Azamat H. Hackimov]
+	* adjtime.3
+
+3.24-1337 (r290):
+	[Yuri Kozlov]
+	* ОШИБКИ(BUGS)->ДЕФЕКТЫ
+	* ld.so.8
+	* set_thread_area.2
+	* uname.2
+	* io_getevents.2
+	* delete_module.2
+	* init_module.2
+	* create_module.2
+	* query_module.2
+	* reboot.2
+	* umask.2
+	* sysinfo.2
+	* unimplemented.2
+	* setxattr.2
+	* listxattr.2
+	* personality.2
+	* getpagesize.2
+	* msync.2
+	* signal.2
+	[Inna Kabanova]
+	* setresuid.2
+	* iopl.2
+	* socketpair.2
+	* chmod.2
+	* killpg.2
+	* vm86.2
+	* dup.2
+	* getcontext.2
+	* sched_yield.2
+	* sysfs.2
+	* chown.2
+	* sigreturn.2
+	* connect.2
+	* syscall.2
+	* gethostname.2
+	* sigwaitinfo.2
+	[Azamat H. Hackimov]
+	* clog10.3
+	* mktemp.3
+	* log.3
+	* bcopy.3
+	* toascii.3
+	* canonicalize_file_name.3
+	* exp.3
+	* bcmp.3
+	* exp2.3
+	* log10.3
+	* log2.3
+	* qsort.3 (опечатка)
+	* mkstemp.3
+	* cbrt.3
+	* csqrt.3
+	* strlen.3
+
+3.24-2059-1287-20100612 (r214):
+	[Azamat H. Hackimov]
+	* правка опечаток
+	* tan.3
+	* exp10.3
+	* cosh.3
+	* pow10.3
+	* bzero.3
+	[Valeriy Kruchko]
+	* mq_getsetattr.2
+	[Yuri Kozlov]
+	* getresuid.2
+	* nice.2
+	* setsid.2
+	* rename.2
+	* seteuid.2
+	* inotify_init.2
+	* getsockopt.2
+	* fcntl.2
+	[Inna Kabanova]
+	* io_submit.2
+	* io_destroy.2
+	* io_cancel.2
+	* setuid.2
+	* gettid.2
+	* io_setup.2
+	* pread.2
+	* ioperm.2
+	* ipc.2
+	* llseek.2
+	* get_thread_area.2
+
+3.24-2059-1253-20100523 (r172):
+	[Yuri Kozlov]
+	* outb.2.po
+	* socketcall.2.po
+	* setup.2.po
+	* getsockname.2.po
+	* getgid.2.po
+	* ascii.7
+	* uselib.2
+	* getuid.2.po
+	* idle.2.po
+	* getdtablesize.2
+	* getpeername.2
+	* open.2
+	[Azamat H. Hackimov]
+	* asin.3
+	* sqrt.3
+	* atan.3
+	* sleep.3
+	* sin.3
+	* y0.3
+	* acos.3
+	* sincos.3
+	* abs.3
+	* cos.3
+	[Valeriy Kruchko]
+	* atoi.3
+	* closedir.3
+	[все]
+	* inet.3
+
+3.24-2059-1237-20100516 (r141):
+	* koi8-r.7
+	* koi8-u.7
+	* request_add.2
+	* stime.2
+	* setgid.2
+	* getpid.2
+	* shutdown.2
+	* getsid.2
+	* readlink.2
+	* unlink.2
+	* fallocate.2
+	* clone.2
+
+3.24-2059-1223-20100508 (r120):
+	* завершён man5
+
+3.24-2059-1194-20100403 (r???):
+	* новые переведённые файлы
+
+3.24-2059-1179-20100328 (r???):
+	* новые переведённые файлы
+	* добавлена сборка tar.bz2
+

@@ -1,0 +1,60 @@
+Данный пакет содержит переводы справочных страниц,
+размещённых на http://www.kernel.org/doc/man-pages/.
+Исходный текст на английском обновляется из git.
+
+За основу взят перевод manpages-ru-0.98 c
+http://www.linuxshare.ru/projects/trans/mans.html
+
+Исходные тексты с переводами:
+svn co https://man-pages-ru.svn.sourceforge.net/svnroot/man-pages-ru man-pages-ru
+
+Структура:
+
+Оригинальный репозиторий страниц на английском
+man-pages-git/man1
+man-pages-git/man2
+...
+
+Заплатки для страниц на английском
+имя_страницы.patch
+...
+
+Страницы на английском после применения заплаток
+(используется для создания .pot файлов)
+man-pages/man1
+man-pages/man2
+...
+
+
+Переведённые генерируемые страницы
+man/ЯЗЫК/man1
+man/ЯЗЫК/man2
+...
+
+.po файлы переводимых страниц
+po/man1/ЯЗЫК/LC_MESSAGES/
+po/man2/ЯЗЫК/LC_MESSAGES/
+...
+
+Пакеты для работы:
+subversion - работа с svn
+jam или ftjam - программа сборки
+po4a - преобразование man в po и обратно
+gettext - создание compendium-файла
+git-core - получение свежих оригинальных страниц
+patch - наложение заплат на оригинальные страницы
+
+Координация и перевод осуществляется через веб-интерфейс на 
+платформе Transifex:
+https://www.transifex.com/projects/p/man-pages/
+
+Генерация переведённых страниц:
+
+cd man-pages-ru
+jam make-man
+
+или, если есть несколько ядер/процессоров,
+jam -j 4 make-man
+
+Описание дополнительных параметров есть в начале файла Jamfile
+

@@ -1,0 +1,6789 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: translation of man-pages\n"
+"POT-Creation-Date: 2019-04-01 18:52+0300\n"
+"PO-Revision-Date: 2019-04-02 15:54+0000\n"
+"Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
+"Language-Team: Spanish (http://www.transifex.com/kruvalig/man-pages/language/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. type: TH
+#: man-pages/man4/dsp56k.4:27
+#, no-wrap
+msgid "DSP56K"
+msgstr ""
+
+#. type: TH
+#: man-pages/man4/dsp56k.4:27
+#, no-wrap
+msgid "2019-03-06"
+msgstr ""
+
+#. type: TH
+#: man-pages/man4/dsp56k.4:27
+#, no-wrap
+msgid "Linux"
+msgstr ""
+
+#. type: TH
+#: man-pages/man4/dsp56k.4:27
+#, no-wrap
+msgid "Linux Programmer's Manual"
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/dsp56k.4:28
+#, no-wrap
+msgid "NAME"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/dsp56k.4:30
+msgid "dsp56k - DSP56001 interface device"
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/dsp56k.4:30
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/dsp56k.4:33
+#, no-wrap
+msgid "#include E<lt>asm/dsp56k.hE<gt>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/dsp56k.4:36
+#, no-wrap
+msgid ""
+"B<ssize_t read(int >I<fd>B<, void *>I<data>B<, size_t >I<length>B<);>\n"
+"B<ssize_t write(int >I<fd>B<, void *>I<data>B<, size_t >I<length>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/dsp56k.4:42
+#, no-wrap
+msgid ""
+"B<int ioctl(int >I<fd>B<, DSP56K_UPLOAD, struct dsp56k_upload *>I<program>B<);>\n"
+"B<int ioctl(int >I<fd>B<, DSP56K_SET_TX_WSIZE, int >I<wsize>B<);>\n"
+"B<int ioctl(int >I<fd>B<, DSP56K_SET_RX_WSIZE, int >I<wsize>B<);>\n"
+"B<int ioctl(int >I<fd>B<, DSP56K_HOST_FLAGS, struct dsp56k_host_flags *>I<flags>B<);>\n"
+"B<int ioctl(int >I<fd>B<, DSP56K_HOST_CMD, int >I<cmd>B<);>\n"
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/dsp56k.4:43
+#, no-wrap
+msgid "CONFIGURATION"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/dsp56k.4:46
+msgid ""
+"The dsp56k device is a character device with major number 55 and minor "
+"number 0."
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/dsp56k.4:46
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/dsp56k.4:52
+msgid ""
+"The Motorola DSP56001 is a fully programmable 24-bit digital signal "
+"processor found in Atari Falcon030-compatible computers.  The I<dsp56k> "
+"special file is used to control the DSP56001, and to send and receive data "
+"using the bidirectional handshaked host port."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/dsp56k.4:62
+msgid ""
+"To send a data stream to the signal processor, use B<write>(2)  to the "
+"device, and B<read>(2)  to receive processed data.  The data can be sent or "
+"received in 8, 16, 24, or 32-bit quantities on the host side, but will "
+"always be seen as 24-bit quantities in the DSP56001."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/dsp56k.4:67
+msgid ""
+"The following B<ioctl>(2)  calls are used to control the I<dsp56k> device:"
+msgstr ""
+
+#. type: IP
+#: man-pages/man4/dsp56k.4:67
+#, no-wrap
+msgid "B<DSP56K_UPLOAD>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/dsp56k.4:74
+msgid ""
+"resets the DSP56001 and uploads a program.  The third B<ioctl>(2)  argument "
+"must be a pointer to a I<struct dsp56k_binary> with members I<bin> pointing "
+"to a DSP56001 binary program, and I<len> set to the length of the program, "
+"counted in 24-bit words."
+msgstr ""
+
+#. type: IP
+#: man-pages/man4/dsp56k.4:74
+#, no-wrap
+msgid "B<DSP56K_SET_TX_WSIZE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/dsp56k.4:82
+msgid ""
+"sets the transmit word size.  Allowed values are in the range 1 to 4, and is"
+" the number of bytes that will be sent at a time to the DSP56001.  These "
+"data quantities will either be padded with zero bytes, or truncated to fit "
+"the native 24-bit data format of the DSP56001."
+msgstr ""
+
+#. type: IP
+#: man-pages/man4/dsp56k.4:82
+#, no-wrap
+msgid "B<DSP56K_SET_RX_WSIZE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/dsp56k.4:89
+msgid ""
+"sets the receive word size.  Allowed values are in the range 1 to 4, and is "
+"the number of bytes that will be received at a time from the DSP56001.  "
+"These data quantities will either truncated, or padded with a null byte "
+"(\\(aq\\e0\\(aq) to fit the native 24-bit data format of the DSP56001."
+msgstr ""
+
+#. type: IP
+#: man-pages/man4/dsp56k.4:89
+#, no-wrap
+msgid "B<DSP56K_HOST_FLAGS>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/dsp56k.4:96
+msgid ""
+"read and write the host flags.  The host flags are four general-purpose bits"
+" that can be read by both the hosting computer and the DSP56001.  Bits 0 and"
+" 1 can be written by the host, and bits 2 and 3 can be written by the "
+"DSP56001."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/dsp56k.4:106
+msgid ""
+"To access the host flags, the third B<ioctl>(2)  argument must be a pointer "
+"to a I<struct dsp56k_host_flags>.  If bit 0 or 1 is set in the I<dir> "
+"member, the corresponding bit in I<out> will be written to the host flags.  "
+"The state of all host flags will be returned in the lower four bits of the "
+"I<status> member."
+msgstr ""
+
+#. type: IP
+#: man-pages/man4/dsp56k.4:106
+#, no-wrap
+msgid "B<DSP56K_HOST_CMD>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/dsp56k.4:110
+msgid ""
+"sends a host command.  Allowed values are in the range 0 to 31, and is a "
+"user-defined command handled by the program running in the DSP56001."
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/dsp56k.4:110
+#, no-wrap
+msgid "FILES"
+msgstr ""
+
+#.  .SH AUTHORS
+#.  Fredrik Noring <noring@nocrew.org>, lars brinkhoff <lars@nocrew.org>,
+#.  Tomas Berndtsson <tomas@nocrew.org>.
+#. type: Plain text
+#: man-pages/man4/dsp56k.4:115
+msgid "/dev/dsp56k"
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/dsp56k.4:115
+#, no-wrap
+msgid "SEE ALSO"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/dsp56k.4:120
+msgid ""
+"I<linux/include/asm-m68k/dsp56k.h>, I<linux/drivers/char/dsp56k.c>, E<.UR "
+"http://dsp56k.nocrew.org/> E<.UE ,> DSP56000/DSP56001 Digital Signal "
+"Processor User's Manual"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/ddp.7:12
+#, no-wrap
+msgid "DDP"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/ddp.7:12
+#, no-wrap
+msgid "2017-09-15"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:15
+msgid "ddp - Linux AppleTalk protocol implementation"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:17
+msgid "B<#include E<lt>sys/socket.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:19
+msgid "B<#include E<lt>netatalk/at.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:21
+msgid "I<ddp_socket>B< = socket(AF_APPLETALK, SOCK_DGRAM, 0);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:23
+msgid "I<raw_socket>B< = socket(AF_APPLETALK, SOCK_RAW, >I<protocol>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:34
+msgid ""
+"Linux implements the AppleTalk protocols described in I<Inside AppleTalk>.  "
+"Only the DDP layer and AARP are present in the kernel.  They are designed to"
+" be used via the B<netatalk> protocol libraries.  This page documents the "
+"interface for those who wish or need to use the DDP layer directly."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:39
+msgid ""
+"The communication between AppleTalk and the user program works using a BSD-"
+"compatible socket interface.  For more information on sockets, see "
+"B<socket>(7)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:60
+msgid ""
+"An AppleTalk socket is created by calling the B<socket>(2)  function with a "
+"B<AF_APPLETALK> socket family argument.  Valid socket types are "
+"B<SOCK_DGRAM> to open a B<ddp> socket or B<SOCK_RAW> to open a B<raw> "
+"socket.  I<protocol> is the AppleTalk protocol to be received or sent.  For "
+"B<SOCK_RAW> you must specify B<ATPROTO_DDP>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:65
+msgid ""
+"Raw sockets may be opened only by a process with effective user ID 0 or when"
+" the process has the B<CAP_NET_RAW> capability."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/ddp.7:65
+#, no-wrap
+msgid "Address format"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:68
+msgid ""
+"An AppleTalk socket address is defined as a combination of a network number,"
+" a node number, and a port number."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:75
+#, no-wrap
+msgid ""
+"struct at_addr {\n"
+"    unsigned short s_net;\n"
+"    unsigned char  s_node;\n"
+"};\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:81
+#, no-wrap
+msgid ""
+"struct sockaddr_atalk {\n"
+"    sa_family_t    sat_family;    /* address family */\n"
+"    unsigned char  sat_port;      /* port */\n"
+"    struct at_addr sat_addr;      /* net/node */\n"
+"};\n"
+msgstr ""
+
+#.  FIXME . this doesn't make sense [johnl]
+#. type: Plain text
+#: man-pages/man7/ddp.7:120
+msgid ""
+"I<sat_family> is always set to B<AF_APPLETALK>.  I<sat_port> contains the "
+"port.  The port numbers below 129 are known as I<reserved ports>.  Only "
+"processes with the effective user ID 0 or the B<CAP_NET_BIND_SERVICE> "
+"capability may B<bind>(2)  to these sockets.  I<sat_addr> is the host "
+"address.  The I<net> member of I<struct at_addr> contains the host network "
+"in network byte order.  The value of B<AT_ANYNET> is a wildcard and also "
+"implies \\(lqthis network.\\(rq The I<node> member of I<struct at_addr> "
+"contains the host node number.  The value of B<AT_ANYNODE> is a wildcard and"
+" also implies \\(lqthis node.\\(rq The value of B<ATADDR_BCAST> is a link "
+"local broadcast address."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/ddp.7:120
+#, no-wrap
+msgid "Socket options"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:122
+msgid "No protocol-specific socket options are supported."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/ddp.7:122
+#, no-wrap
+msgid "/proc interfaces"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:128
+msgid ""
+"IP supports a set of I</proc> interfaces to configure some global AppleTalk "
+"parameters.  The parameters can be accessed by reading or writing files in "
+"the directory I</proc/sys/net/atalk/>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/ddp.7:128
+#, no-wrap
+msgid "I<aarp-expiry-time>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:131
+msgid "The time interval (in seconds) before an AARP cache entry expires."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/ddp.7:131
+#, no-wrap
+msgid "I<aarp-resolve-time>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:134
+msgid "The time interval (in seconds) before an AARP cache entry is resolved."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/ddp.7:134
+#, no-wrap
+msgid "I<aarp-retransmit-limit>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:138
+msgid ""
+"The number of retransmissions of an AARP query before the node is declared "
+"dead."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/ddp.7:138
+#, no-wrap
+msgid "I<aarp-tick-time>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:141
+msgid "The timer rate (in seconds) for the timer driving AARP."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:144
+msgid ""
+"The default values match the specification and should never need to be "
+"changed."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/ddp.7:144
+#, no-wrap
+msgid "Ioctls"
+msgstr ""
+
+#.  FIXME . Add a section about multicasting
+#. type: Plain text
+#: man-pages/man7/ddp.7:149
+msgid "All ioctls described in B<socket>(7)  apply to DDP."
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/ddp.7:149
+#, no-wrap
+msgid "ERRORS"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/ddp.7:150
+#, no-wrap
+msgid "B<EACCES>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:157
+msgid ""
+"The user tried to execute an operation without the necessary permissions.  "
+"These include sending to a broadcast address without having the broadcast "
+"flag set, and trying to bind to a reserved port without effective user ID 0 "
+"or B<CAP_NET_BIND_SERVICE>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/ddp.7:157
+#, no-wrap
+msgid "B<EADDRINUSE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:160
+msgid "Tried to bind to an address already in use."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/ddp.7:160
+#, no-wrap
+msgid "B<EADDRNOTAVAIL>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:164
+msgid ""
+"A nonexistent interface was requested or the requested source address was "
+"not local."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/ddp.7:164
+#, no-wrap
+msgid "B<EAGAIN>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:167
+msgid "Operation on a nonblocking socket would block."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/ddp.7:167
+#, no-wrap
+msgid "B<EALREADY>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:170
+msgid "A connection operation on a nonblocking socket is already in progress."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/ddp.7:170
+#, no-wrap
+msgid "B<ECONNABORTED>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:174
+msgid "A connection was closed during an B<accept>(2)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/ddp.7:174
+#, no-wrap
+msgid "B<EHOSTUNREACH>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:177
+msgid "No routing table entry matches the destination address."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/ddp.7:177
+#, no-wrap
+msgid "B<EINVAL>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:180
+msgid "Invalid argument passed."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/ddp.7:180
+#, no-wrap
+msgid "B<EISCONN>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:184
+msgid "B<connect>(2)  was called on an already connected socket."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/ddp.7:184
+#, no-wrap
+msgid "B<EMSGSIZE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:187
+msgid "Datagram is bigger than the DDP MTU."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/ddp.7:187
+#, no-wrap
+msgid "B<ENODEV>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:190
+msgid "Network device not available or not capable of sending IP."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/ddp.7:190
+#, no-wrap
+msgid "B<ENOENT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:194
+msgid "B<SIOCGSTAMP> was called on a socket where no packet arrived."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/ddp.7:194
+#, no-wrap
+msgid "B<ENOMEM> and B<ENOBUFS>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:197
+msgid "Not enough memory available."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/ddp.7:197
+#, no-wrap
+msgid "B<ENOPKG>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:200
+msgid "A kernel subsystem was not configured."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/ddp.7:200
+#, no-wrap
+msgid "B<ENOPROTOOPT> and B<EOPNOTSUPP>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:203
+msgid "Invalid socket option passed."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/ddp.7:203
+#, no-wrap
+msgid "B<ENOTCONN>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:207
+msgid ""
+"The operation is defined only on a connected socket, but the socket wasn't "
+"connected."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/ddp.7:207
+#, no-wrap
+msgid "B<EPERM>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:212
+msgid ""
+"User doesn't have permission to set high priority, make a configuration "
+"change, or send signals to the requested process or group."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/ddp.7:212
+#, no-wrap
+msgid "B<EPIPE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:215
+msgid "The connection was unexpectedly closed or shut down by the other end."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/ddp.7:215
+#, no-wrap
+msgid "B<ESOCKTNOSUPPORT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:218
+msgid "The socket was unconfigured, or an unknown socket type was requested."
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/ddp.7:218
+#, no-wrap
+msgid "VERSIONS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:223
+msgid ""
+"AppleTalk is supported by Linux 2.0 or higher.  The I</proc> interfaces "
+"exist since Linux 2.2."
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/ddp.7:223
+#, no-wrap
+msgid "NOTES"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:229
+msgid ""
+"Be very careful with the B<SO_BROADCAST> option; it is not privileged in "
+"Linux.  It is easy to overload the network with careless sending to "
+"broadcast addresses."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/ddp.7:229
+#, no-wrap
+msgid "Compatibility"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:236
+msgid ""
+"The basic AppleTalk socket interface is compatible with B<netatalk> on BSD-"
+"derived systems.  Many BSD systems fail to check B<SO_BROADCAST> when "
+"sending broadcast frames; this can lead to compatibility problems."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:241
+msgid ""
+"The raw socket mode is unique to Linux and exists to support the alternative"
+" CAP package and AppleTalk monitoring tools more easily."
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/ddp.7:241
+#, no-wrap
+msgid "BUGS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:243
+msgid "There are too many inconsistent error values."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:246
+msgid ""
+"The ioctls used to configure routing tables, devices, AARP tables, and other"
+" devices are not yet described."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ddp.7:250
+msgid "B<recvmsg>(2), B<sendmsg>(2), B<capabilities>(7), B<socket>(7)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/dup.2:37
+#, no-wrap
+msgid "DUP"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:40
+msgid "dup, dup2, dup3 - duplicate a file descriptor"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:43
+#, no-wrap
+msgid "B<#include E<lt>unistd.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:46
+#, no-wrap
+msgid ""
+"B<int dup(int >I<oldfd>B<);>\n"
+"B<int dup2(int >I<oldfd>B<, int >I<newfd>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:50
+#, no-wrap
+msgid ""
+"B<#define _GNU_SOURCE>             /* See feature_test_macros(7) */\n"
+"B<#include E<lt>fcntl.hE<gt>>              /* Obtain O_* constant definitions */\n"
+"B<#include E<lt>unistd.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:52
+#, no-wrap
+msgid "B<int dup3(int >I<oldfd>B<, int >I<newfd>B<, int >I<flags>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:59
+msgid ""
+"The B<dup>()  system call creates a copy of the file descriptor I<oldfd>, "
+"using the lowest-numbered unused file descriptor for the new descriptor."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:68
+msgid ""
+"After a successful return, the old and new file descriptors may be used "
+"interchangeably.  They refer to the same open file description (see "
+"B<open>(2))  and thus share file offset and file status flags; for example, "
+"if the file offset is modified by using B<lseek>(2)  on one of the file "
+"descriptors, the offset is also changed for the other."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:77
+msgid ""
+"The two file descriptors do not share file descriptor flags (the close-on-"
+"exec flag).  The close-on-exec flag (B<FD_CLOEXEC>; see B<fcntl>(2))  for "
+"the duplicate descriptor is off."
+msgstr ""
+
+#. type: SS
+#: man-pages/man2/dup.2:77
+#, no-wrap
+msgid "dup2()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:88
+msgid ""
+"The B<dup2>()  system call performs the same task as B<dup>(), but instead "
+"of using the lowest-numbered unused file descriptor, it uses the file "
+"descriptor number specified in I<newfd>.  If the file descriptor I<newfd> "
+"was previously open, it is silently closed before being reused."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:104
+msgid ""
+"The steps of closing and reusing the file descriptor I<newfd> are performed "
+"I<atomically>.  This is important, because trying to implement equivalent "
+"functionality using B<close>(2)  and B<dup>()  would be subject to race "
+"conditions, whereby I<newfd> might be reused between the two steps.  Such "
+"reuse could happen because the main program is interrupted by a signal "
+"handler that allocates a file descriptor, or because a parallel thread "
+"allocates a file descriptor."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:106
+msgid "Note the following points:"
+msgstr ""
+
+#. type: IP
+#: man-pages/man2/dup.2:106 man-pages/man2/dup.2:112 man-pages/man2/dup.2:129
+#: man-pages/man2/dup.2:138
+#, no-wrap
+msgid "*"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:112
+msgid ""
+"If I<oldfd> is not a valid file descriptor, then the call fails, and "
+"I<newfd> is not closed."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:124
+msgid ""
+"If I<oldfd> is a valid file descriptor, and I<newfd> has the same value as "
+"I<oldfd>, then B<dup2>()  does nothing, and returns I<newfd>."
+msgstr ""
+
+#. type: SS
+#: man-pages/man2/dup.2:124
+#, no-wrap
+msgid "dup3()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:129
+msgid "B<dup3>()  is the same as B<dup2>(), except that:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:138
+msgid ""
+"The caller can force the close-on-exec flag to be set for the new file "
+"descriptor by specifying B<O_CLOEXEC> in I<flags>.  See the description of "
+"the same flag in B<open>(2)  for reasons why this may be useful."
+msgstr ""
+
+#.  Ulrich Drepper, LKML, 2008-10-09:
+#. 	We deliberately decided on this change.  Otherwise, what is the
+#. 	result of dup3(fd, fd, O_CLOEXEC)?
+#. type: Plain text
+#: man-pages/man2/dup.2:150
+msgid ""
+"If I<oldfd> equals I<newfd>, then B<dup3>()  fails with the error B<EINVAL>."
+msgstr ""
+
+#. type: SH
+#: man-pages/man2/dup.2:150
+#, no-wrap
+msgid "RETURN VALUE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:156
+msgid ""
+"On success, these system calls return the new file descriptor.  On error, -1"
+" is returned, and I<errno> is set appropriately."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/dup.2:157 man-pages/man2/dup.2:161
+#, no-wrap
+msgid "B<EBADF>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:161
+msgid "I<oldfd> isn't an open file descriptor."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:168
+msgid ""
+"I<newfd> is out of the allowed range for file descriptors (see the "
+"discussion of B<RLIMIT_NOFILE> in B<getrlimit>(2))."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/dup.2:168
+#, no-wrap
+msgid "B<EBUSY>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:178
+msgid ""
+"(Linux only) This may be returned by B<dup2>()  or B<dup3>()  during a race "
+"condition with B<open>(2)  and B<dup>()."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/dup.2:178
+#, no-wrap
+msgid "B<EINTR>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:186
+msgid ""
+"The B<dup2>()  or B<dup3>()  call was interrupted by a signal; see "
+"B<signal>(7)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:191
+msgid "(B<dup3>())  I<flags> contain an invalid value."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:197
+msgid "(B<dup3>())  I<oldfd> was equal to I<newfd>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/dup.2:197
+#, no-wrap
+msgid "B<EMFILE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:204
+msgid ""
+"The per-process limit on the number of open file descriptors has been "
+"reached (see the discussion of B<RLIMIT_NOFILE> in B<getrlimit>(2))."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:209
+msgid ""
+"B<dup3>()  was added to Linux in version 2.6.27; glibc support is available "
+"starting with version 2.9."
+msgstr ""
+
+#. type: SH
+#: man-pages/man2/dup.2:209
+#, no-wrap
+msgid "CONFORMING TO"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:213
+msgid "B<dup>(), B<dup2>(): POSIX.1-2001, POSIX.1-2008, SVr4, 4.3BSD."
+msgstr ""
+
+#.  SVr4 documents additional
+#.  EINTR and ENOLINK error conditions.  POSIX.1 adds EINTR.
+#.  The EBUSY return is Linux-specific.
+#. type: Plain text
+#: man-pages/man2/dup.2:219
+msgid "B<dup3>()  is Linux-specific."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:233
+msgid ""
+"The error returned by B<dup2>()  is different from that returned by "
+"B<fcntl(>..., B<F_DUPFD>, ...B<)> when I<newfd> is out of range.  On some "
+"systems, B<dup2>()  also sometimes returns B<EINVAL> like B<F_DUPFD>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:249
+msgid ""
+"If I<newfd> was open, any errors that would have been reported at "
+"B<close>(2)  time are lost.  If this is of concern, then\\(emunless the "
+"program is single-threaded and does not allocate file descriptors in signal "
+"handlers\\(emthe correct approach is I<not> to close I<newfd> before calling"
+" B<dup2>(), because of the race condition described above.  Instead, code "
+"something like the following could be used:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:254
+#, no-wrap
+msgid ""
+"    /* Obtain a duplicate of 'newfd' that can subsequently\n"
+"       be used to check for close() errors; an EBADF error\n"
+"       means that 'newfd' was not open. */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:259
+#, no-wrap
+msgid ""
+"    tmpfd = dup(newfd);\n"
+"    if (tmpfd == -1 && errno != EBADF) {\n"
+"        /* Handle unexpected dup() error */\n"
+"    }\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:261
+#, no-wrap
+msgid "    /* Atomically duplicate 'oldfd' on 'newfd' */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:265
+#, no-wrap
+msgid ""
+"    if (dup2(oldfd, newfd) == -1) {\n"
+"        /* Handle dup2() error */\n"
+"    }\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:268
+#, no-wrap
+msgid ""
+"    /* Now check for close() errors on the file originally\n"
+"       referred to by 'newfd' */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:274
+#, no-wrap
+msgid ""
+"    if (tmpfd != -1) {\n"
+"        if (close(tmpfd) == -1) {\n"
+"            /* Handle errors from close */\n"
+"        }\n"
+"    }\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/dup.2:278
+msgid "B<close>(2), B<fcntl>(2), B<open>(2)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/delete_module.2:25
+#, no-wrap
+msgid "DELETE_MODULE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:28
+msgid "delete_module - unload a kernel module"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:31
+#, no-wrap
+msgid "B<int delete_module(const char *>I<name>B<, int >I<flags>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:35
+msgid ""
+"I<Note>: No declaration of this system call is provided in glibc headers; "
+"see NOTES."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:49
+msgid ""
+"The B<delete_module>()  system call attempts to remove the unused loadable "
+"module entry identified by I<name>.  If the module has an I<exit> function, "
+"then that function is executed before unloading the module.  The I<flags> "
+"argument is used to modify the behavior of the system call, as described "
+"below.  This system call requires privilege."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:51
+msgid "Module removal is attempted according to the following rules:"
+msgstr ""
+
+#. type: IP
+#: man-pages/man2/delete_module.2:51
+#, no-wrap
+msgid "1."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:55
+msgid ""
+"If there are other loaded modules that depend on (i.e., refer to symbols "
+"defined in) this module, then the call fails."
+msgstr ""
+
+#. type: IP
+#: man-pages/man2/delete_module.2:55
+#, no-wrap
+msgid "2."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:59
+msgid ""
+"Otherwise, if the reference count for the module (i.e., the number of "
+"processes currently using the module)  is zero, then the module is "
+"immediately unloaded."
+msgstr ""
+
+#. type: IP
+#: man-pages/man2/delete_module.2:59
+#, no-wrap
+msgid "3."
+msgstr ""
+
+#.   	O_TRUNC == KMOD_REMOVE_FORCE in kmod library
+#.   	O_NONBLOCK == KMOD_REMOVE_NOWAIT in kmod library
+#. type: Plain text
+#: man-pages/man2/delete_module.2:70
+msgid ""
+"If a module has a nonzero reference count, then the behavior depends on the "
+"bits set in I<flags>.  In normal usage (see NOTES), the B<O_NONBLOCK> flag "
+"is always specified, and the B<O_TRUNC> flag may additionally be specified."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:74
+msgid "The various combinations for I<flags> have the following effect:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/delete_module.2:75
+#, no-wrap
+msgid "B<flags == O_NONBLOCK>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:78
+msgid "The call returns immediately, with an error."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/delete_module.2:78
+#, no-wrap
+msgid "B<flags == (O_NONBLOCK | O_TRUNC)>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:82
+msgid ""
+"The module is unloaded immediately, regardless of whether it has a nonzero "
+"reference count."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/delete_module.2:82
+#, no-wrap
+msgid "B<(flags & O_NONBLOCK) == 0>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:89
+msgid "If I<flags> does not specify B<O_NONBLOCK>, the following steps occur:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:92
+msgid "The module is marked so that no new references are permitted."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:97
+msgid ""
+"If the module's reference count is nonzero, the caller is placed in an "
+"uninterruptible sleep state (B<TASK_UNINTERRUPTIBLE>)  until the reference "
+"count is zero, at which point the call unblocks."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:99
+msgid "The module is unloaded in the usual way."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:113
+msgid ""
+"The B<O_TRUNC> flag has one further effect on the rules described above.  By"
+" default, if a module has an I<init> function but no I<exit> function, then "
+"an attempt to remove the module fails.  However, if B<O_TRUNC> was "
+"specified, this requirement is bypassed."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:124
+msgid ""
+"Using the B<O_TRUNC> flag is dangerous! If the kernel was not built with "
+"B<CONFIG_MODULE_FORCE_UNLOAD>, this flag is silently ignored.  (Normally, "
+"B<CONFIG_MODULE_FORCE_UNLOAD> is enabled.)  Using this flag taints the "
+"kernel (TAINT_FORCED_RMMOD)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:129
+msgid ""
+"On success, zero is returned.  On error, -1 is returned and I<errno> is set "
+"appropriately."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:143
+msgid ""
+"The module is not \"live\" (i.e., it is still being initialized or is "
+"already marked for removal); or, the module has an I<init> function but has "
+"no I<exit> function, and B<O_TRUNC> was not specified in I<flags>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/delete_module.2:143
+#, no-wrap
+msgid "B<EFAULT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:147
+msgid ""
+"I<name> refers to a location outside the process's accessible address space."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:150
+msgid "No module by that name exists."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:161
+msgid ""
+"The caller was not privileged (did not have the B<CAP_SYS_MODULE> "
+"capability), or module unloading is disabled (see "
+"I</proc/sys/kernel/modules_disabled> in B<proc>(5))."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/delete_module.2:161
+#, no-wrap
+msgid "B<EWOULDBLOCK>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:172
+msgid ""
+"Other modules depend on this module; or, B<O_NONBLOCK> was specified in "
+"I<flags>, but the reference count of this module is nonzero and B<O_TRUNC> "
+"was not specified in I<flags>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:175
+msgid "B<delete_module>()  is Linux-specific."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:186
+msgid ""
+"The B<delete_module>()  system call is not supported by glibc.  No "
+"declaration is provided in glibc headers, but, through a quirk of history, "
+"glibc versions before 2.23 did export an ABI for this system call.  "
+"Therefore, in order to employ this system call, it is (before glibc 2.23) "
+"sufficient to manually declare the interface in your code; alternatively, "
+"you can invoke the system call using B<syscall>(2)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:196
+msgid ""
+"The uninterruptible sleep that may occur if B<O_NONBLOCK> is omitted from "
+"I<flags> is considered undesirable, because the sleeping process is left in "
+"an unkillable state.  As at Linux 3.7, specifying B<O_NONBLOCK> is optional,"
+" but in future kernels it is likely to become mandatory."
+msgstr ""
+
+#. type: SS
+#: man-pages/man2/delete_module.2:196
+#, no-wrap
+msgid "Linux 2.4 and earlier"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:198
+msgid "In Linux 2.4 and earlier, the system call took only one argument:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:200
+msgid "B< int delete_module(const char *>I<name>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:204
+msgid "If I<name> is NULL, all unused modules marked auto-clean are removed."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:210
+msgid ""
+"Some further details of differences in the behavior of B<delete_module>()  "
+"in Linux 2.4 and earlier are I<not> currently explained in this manual page."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/delete_module.2:216
+msgid ""
+"B<create_module>(2), B<init_module>(2), B<query_module>(2), B<lsmod>(8), "
+"B<modprobe>(8), B<rmmod>(8)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man5/dir_colors.5:12
+#, no-wrap
+msgid "DIR_COLORS"
+msgstr ""
+
+#. type: TH
+#: man-pages/man5/dir_colors.5:12
+#, no-wrap
+msgid "2013-08-09"
+msgstr ""
+
+#. type: TH
+#: man-pages/man5/dir_colors.5:12
+#, no-wrap
+msgid "GNU"
+msgstr ""
+
+#. type: TH
+#: man-pages/man5/dir_colors.5:12
+#, no-wrap
+msgid "Linux User Manual"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:15
+msgid "dir_colors - configuration file for dircolors(1)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:22
+msgid ""
+"The program B<ls>(1)  uses the environment variable B<LS_COLORS> to "
+"determine the colors in which the filenames are to be displayed.  This "
+"environment variable is usually set by a command like"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:25
+msgid "eval \\`dircolors some_path/dir_colors\\`"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:38
+msgid ""
+"found in a system default shell initialization file, like I</etc/profile> or"
+" I</etc/csh.cshrc>.  (See also B<dircolors>(1).)  Usually, the file used "
+"here is I</etc/DIR_COLORS> and can be overridden by a I<.dir_colors> file in"
+" one's home directory."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:44
+msgid ""
+"This configuration file consists of several statements, one per line.  "
+"Anything right of a hash mark (#) is treated as a comment, if the hash mark "
+"is at the beginning of a line or is preceded by at least one whitespace.  "
+"Blank lines are ignored."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:62
+msgid ""
+"The I<global> section of the file consists of any statement before the first"
+" B<TERM> statement.  Any statement in the global section of the file is "
+"considered valid for all terminal types.  Following the global section is "
+"one or more I<terminal-specific> sections, preceded by one or more B<TERM> "
+"statements which specify the terminal types (as given by the B<TERM> "
+"environment variable) the following declarations apply to.  It is always "
+"possible to override a global declaration by a subsequent terminal-specific "
+"one."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:64
+msgid "The following statements are recognized; case is insignificant:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:64
+#, no-wrap
+msgid "B<TERM >I<terminal-type>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:72
+msgid ""
+"Starts a terminal-specific section and specifies which terminal it applies "
+"to.  Multiple B<TERM> statements can be used to create a section which "
+"applies for several terminal types."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:72
+#, no-wrap
+msgid "B<COLOR yes|all|no|none|tty>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:80
+msgid ""
+"(Slackware only; ignored by GNU B<dircolors>(1).)  Specifies that "
+"colorization should always be enabled (I<yes> or I<all>), never enabled "
+"(I<no> or I<none>), or enabled only if the output is a terminal (I<tty>).  "
+"The default is I<no>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:80
+#, no-wrap
+msgid "B<EIGHTBIT yes|no>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:89
+msgid ""
+"(Slackware only; ignored by GNU B<dircolors>(1).)  Specifies that eight-bit "
+"ISO 8859 characters should be enabled by default.  For compatibility "
+"reasons, this can also be specified as 1 for I<yes> or 0 for I<no>.  The "
+"default is I<no>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:89
+#, no-wrap
+msgid "B<OPTIONS >I<options>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:102
+msgid ""
+"(Slackware only; ignored by GNU B<dircolors>(1).)  Adds command-line options"
+" to the default B<ls> command line.  The options can be any valid B<ls> "
+"command-line options, and should include the leading minus sign.  Note that "
+"B<dircolors> does not verify the validity of these options."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:102
+#, no-wrap
+msgid "B<NORMAL >I<color-sequence>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:105
+msgid "Specifies the color used for normal (nonfilename) text."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:108
+msgid "Synonym: B<NORM>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:108
+#, no-wrap
+msgid "B<FILE >I<color-sequence>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:111
+msgid "Specifies the color used for a regular file."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:111
+#, no-wrap
+msgid "B<DIR >I<color-sequence>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:114
+msgid "Specifies the color used for directories."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:114
+#, no-wrap
+msgid "B<LINK >I<color-sequence>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:117
+msgid "Specifies the color used for a symbolic link."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:121
+msgid "Synonyms: B<LNK>, B<SYMLINK>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:121
+#, no-wrap
+msgid "B<ORPHAN >I<color-sequence>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:130
+msgid ""
+"Specifies the color used for an orphaned symbolic link (one which points to "
+"a nonexistent file).  If this is unspecified, B<ls> will use the B<LINK> "
+"color instead."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:130
+#, no-wrap
+msgid "B<MISSING >I<color-sequence>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:139
+msgid ""
+"Specifies the color used for a missing file (a nonexistent file which "
+"nevertheless has a symbolic link pointing to it).  If this is unspecified, "
+"B<ls> will use the B<FILE> color instead."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:139
+#, no-wrap
+msgid "B<FIFO >I<color-sequence>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:142
+msgid "Specifies the color used for a FIFO (named pipe)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:145
+msgid "Synonym: B<PIPE>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:145
+#, no-wrap
+msgid "B<SOCK >I<color-sequence>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:148
+msgid "Specifies the color used for a socket."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:148
+#, no-wrap
+msgid "B<DOOR >I<color-sequence>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:152
+msgid ""
+"(Supported since fileutils 4.1)  Specifies the color used for a door "
+"(Solaris 2.5 and later)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:152
+#, no-wrap
+msgid "B<BLK >I<color-sequence>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:155
+msgid "Specifies the color used for a block device special file."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:158
+msgid "Synonym: B<BLOCK>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:158
+#, no-wrap
+msgid "B<CHR >I<color-sequence>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:161
+msgid "Specifies the color used for a character device special file."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:164
+msgid "Synonym: B<CHAR>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:164
+#, no-wrap
+msgid "B<EXEC >I<color-sequence>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:167
+msgid "Specifies the color used for a file with the executable attribute set."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:167
+#, no-wrap
+msgid "B<SUID >I<color-sequence>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:170
+msgid ""
+"Specifies the color used for a file with the set-user-ID attribute set."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:173
+msgid "Synonym: B<SETUID>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:173
+#, no-wrap
+msgid "B<SGID >I<color-sequence>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:176
+msgid ""
+"Specifies the color used for a file with the set-group-ID attribute set."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:179
+msgid "Synonym: B<SETGID>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:179
+#, no-wrap
+msgid "B<STICKY >I<color-sequence>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:182
+msgid ""
+"Specifies the color used for a directory with the sticky attribute set."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:182
+#, no-wrap
+msgid "B<STICKY_OTHER_WRITABLE >I<color-sequence>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:185
+msgid ""
+"Specifies the color used for an other-writable directory with the executable"
+" attribute set."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:188
+msgid "Synonym: B<OWT>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:188
+#, no-wrap
+msgid "B<OTHER_WRITABLE >I<color-sequence>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:191
+msgid ""
+"Specifies the color used for an other-writable directory without the "
+"executable attribute set."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:194
+msgid "Synonym: B<OWR>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:194
+#, no-wrap
+msgid "B<LEFTCODE >I<color-sequence>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:199
+msgid "Specifies the I<left code> for non-ISO\\ 6429 terminals (see below)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:202
+msgid "Synonym: B<LEFT>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:202
+#, no-wrap
+msgid "B<RIGHTCODE >I<color-sequence>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:207
+msgid "Specifies the I<right code> for non-ISO\\ 6429 terminals (see below)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:210
+msgid "Synonym: B<RIGHT>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:210
+#, no-wrap
+msgid "B<ENDCODE >I<color-sequence>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:215
+msgid "Specifies the I<end code> for non-ISO\\ 6429 terminals (see below)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:218
+msgid "Synonym: B<END>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:218
+#, no-wrap
+msgid "B<*>I<extension> I<color-sequence>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:221
+msgid "Specifies the color used for any file that ends in I<extension>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:221
+#, no-wrap
+msgid " B<.>I<extension> I<color-sequence>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:234
+msgid ""
+"Same as B<*>.I<extension>.  Specifies the color used for any file that ends "
+"in .I<extension>.  Note that the period is included in the extension, which "
+"makes it impossible to specify an extension not starting with a period, such"
+" as B<~> for B<emacs> backup files.  This form should be considered "
+"obsolete."
+msgstr ""
+
+#. type: SS
+#: man-pages/man5/dir_colors.5:234
+#, no-wrap
+msgid "ISO 6429 (ANSI) color sequences"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:242
+msgid ""
+"Most color-capable ASCII terminals today use ISO 6429 (ANSI) color "
+"sequences, and many common terminals without color capability, including "
+"B<xterm> and the widely used and cloned DEC VT100, will recognize ISO 6429 "
+"color codes and harmlessly eliminate them from the output or emulate them.  "
+"B<ls> uses ISO 6429 codes by default, assuming colorization is enabled."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:246
+msgid ""
+"ISO 6429 color sequences are composed of sequences of numbers separated by "
+"semicolons.  The most common codes are:"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:249
+#, no-wrap
+msgid " 0"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:249
+#, no-wrap
+msgid "to restore default color"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:250
+#, no-wrap
+msgid " 1"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:250
+#, no-wrap
+msgid "for brighter colors"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:251
+#, no-wrap
+msgid " 4"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:251
+#, no-wrap
+msgid "for underlined text"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:252
+#, no-wrap
+msgid " 5"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:252
+#, no-wrap
+msgid "for flashing text"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:253
+#, no-wrap
+msgid "30"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:253
+#, no-wrap
+msgid "for black foreground"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:254
+#, no-wrap
+msgid "31"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:254
+#, no-wrap
+msgid "for red foreground"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:255
+#, no-wrap
+msgid "32"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:255
+#, no-wrap
+msgid "for green foreground"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:256
+#, no-wrap
+msgid "33"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:256
+#, no-wrap
+msgid "for yellow (or brown) foreground"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:257
+#, no-wrap
+msgid "34"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:257
+#, no-wrap
+msgid "for blue foreground"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:258
+#, no-wrap
+msgid "35"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:258
+#, no-wrap
+msgid "for purple foreground"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:259
+#, no-wrap
+msgid "36"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:259
+#, no-wrap
+msgid "for cyan foreground"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:260
+#, no-wrap
+msgid "37"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:260
+#, no-wrap
+msgid "for white (or gray) foreground"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:261
+#, no-wrap
+msgid "40"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:261
+#, no-wrap
+msgid "for black background"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:262
+#, no-wrap
+msgid "41"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:262
+#, no-wrap
+msgid "for red background"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:263
+#, no-wrap
+msgid "42"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:263
+#, no-wrap
+msgid "for green background"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:264
+#, no-wrap
+msgid "43"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:264
+#, no-wrap
+msgid "for yellow (or brown) background"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:265
+#, no-wrap
+msgid "44"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:265
+#, no-wrap
+msgid "for blue background"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:266
+#, no-wrap
+msgid "45"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:266
+#, no-wrap
+msgid "for purple background"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:267
+#, no-wrap
+msgid "46"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:267
+#, no-wrap
+msgid "for cyan background"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:268
+#, no-wrap
+msgid "47"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:268
+#, no-wrap
+msgid "for white (or gray) background"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:273
+msgid "Not all commands will work on all systems or display devices."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:276
+msgid "B<ls> uses the following defaults:"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:278
+#, no-wrap
+msgid "NORMAL"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:278 man-pages/man5/dir_colors.5:279
+#, no-wrap
+msgid "0       "
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:278
+#, no-wrap
+msgid "Normal (nonfilename) text"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:279
+#, no-wrap
+msgid "FILE"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:279
+#, no-wrap
+msgid "Regular file"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:280
+#, no-wrap
+msgid "DIR"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:280
+#, no-wrap
+msgid "32      "
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:280
+#, no-wrap
+msgid "Directory"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:281
+#, no-wrap
+msgid "LINK"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:281
+#, no-wrap
+msgid "36      "
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:281
+#, no-wrap
+msgid "Symbolic link"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:282
+#, no-wrap
+msgid "ORPHAN"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:282 man-pages/man5/dir_colors.5:283
+#, no-wrap
+msgid "undefined"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:282
+#, no-wrap
+msgid "Orphaned symbolic link"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:283
+#, no-wrap
+msgid "MISSING"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:283
+#, no-wrap
+msgid "Missing file"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:284
+#, no-wrap
+msgid "FIFO"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:284
+#, no-wrap
+msgid "31      "
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:284
+#, no-wrap
+msgid "Named pipe (FIFO)"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:285
+#, no-wrap
+msgid "SOCK"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:285
+#, no-wrap
+msgid "33      "
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:285
+#, no-wrap
+msgid "Socket"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:286
+#, no-wrap
+msgid "BLK"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:286 man-pages/man5/dir_colors.5:287
+#, no-wrap
+msgid "44;37   "
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:286
+#, no-wrap
+msgid "Block device"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:287
+#, no-wrap
+msgid "CHR"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:287
+#, no-wrap
+msgid "Character device"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:288
+#, no-wrap
+msgid "EXEC"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:288
+#, no-wrap
+msgid "35      "
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:288
+#, no-wrap
+msgid "Executable file"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:300
+msgid ""
+"A few terminal programs do not recognize the default properly.  If all text "
+"gets colorized after you do a directory listing, change the B<NORMAL> and "
+"B<FILE> codes to the numerical codes for your normal foreground and "
+"background colors."
+msgstr ""
+
+#. type: SS
+#: man-pages/man5/dir_colors.5:300
+#, no-wrap
+msgid "Other terminal types (advanced configuration)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:310
+msgid ""
+"If you have a color-capable (or otherwise highlighting) terminal (or "
+"printer!) which uses a different set of codes, you can still generate a "
+"suitable setup.  To do so, you will have to use the B<LEFTCODE>, "
+"B<RIGHTCODE>, and B<ENDCODE> definitions."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:333
+msgid ""
+"When writing out a filename, B<ls> generates the following output sequence: "
+"B<LEFTCODE> I<typecode> B<RIGHTCODE> I<filename> B<ENDCODE>, where the "
+"I<typecode> is the color sequence that depends on the type or name of file."
+"  If the B<ENDCODE> is undefined, the sequence B<LEFTCODE NORMAL RIGHTCODE> "
+"will be used instead.  The purpose of the left- and rightcodes is merely to "
+"reduce the amount of typing necessary (and to hide ugly escape codes away "
+"from the user).  If they are not appropriate for your terminal, you can "
+"eliminate them by specifying the respective keyword on a line by itself."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:346
+msgid ""
+"B<NOTE:> If the B<ENDCODE> is defined in the global section of the setup "
+"file, it I<cannot> be undefined in a terminal-specific section of the file."
+"  This means any B<NORMAL> definition will have no effect.  A different "
+"B<ENDCODE> can, however, be specified, which would have the same effect."
+msgstr ""
+
+#. type: SS
+#: man-pages/man5/dir_colors.5:346
+#, no-wrap
+msgid "Escape sequences"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:353
+msgid ""
+"To specify control- or blank characters in the color sequences or filename "
+"extensions, either C-style \\e-escaped notation or B<stty>-style ^-notation "
+"can be used.  The C-style notation includes the following characters:"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:356
+#, no-wrap
+msgid "\\ea"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:356
+#, no-wrap
+msgid "Bell (ASCII 7)"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:357
+#, no-wrap
+msgid "\\eb"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:357
+#, no-wrap
+msgid "Backspace (ASCII 8)"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:358
+#, no-wrap
+msgid "\\ee"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:358
+#, no-wrap
+msgid "Escape (ASCII 27)"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:359
+#, no-wrap
+msgid "\\ef"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:359
+#, no-wrap
+msgid "Form feed (ASCII 12)"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:360
+#, no-wrap
+msgid "\\en"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:360
+#, no-wrap
+msgid "Newline (ASCII 10)"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:361
+#, no-wrap
+msgid "\\er"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:361
+#, no-wrap
+msgid "Carriage Return (ASCII 13)"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:362
+#, no-wrap
+msgid "\\et"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:362
+#, no-wrap
+msgid "Tab (ASCII 9)"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:363
+#, no-wrap
+msgid "\\ev"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:363
+#, no-wrap
+msgid "Vertical Tab (ASCII 11)"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:364
+#, no-wrap
+msgid "\\e?"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:364
+#, no-wrap
+msgid "Delete (ASCII 127)"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:365
+#, no-wrap
+msgid "\\eI<nnn>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:365
+#, no-wrap
+msgid "I<Any character (octal notation)>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:366
+#, no-wrap
+msgid "I<\\exnnn>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:366
+#, no-wrap
+msgid "I<Any character (hexadecimal notation)>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:367
+#, no-wrap
+msgid "I<\\e_>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:367
+#, no-wrap
+msgid "I<Space>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:368
+#, no-wrap
+msgid "I<\\e\\e>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:368
+#, no-wrap
+msgid "I<Backslash (\\e)>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:369
+#, no-wrap
+msgid "I<\\e^>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:369
+#, no-wrap
+msgid "I<Caret (^)>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:370
+#, no-wrap
+msgid "I<\\e#>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:370
+#, no-wrap
+msgid "I<Hash mark (#)>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:377
+msgid ""
+"Note that escapes are necessary to enter a space, backslash, caret, or any "
+"control character anywhere in the string, as well as a hash mark as the "
+"first character."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:378
+#, no-wrap
+msgid "I</etc/DIR_COLORS>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:381
+msgid "System-wide configuration file."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/dir_colors.5:381
+#, no-wrap
+msgid "I<~/.dir_colors>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:384
+msgid "Per-user configuration file."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:389
+msgid ""
+"This page describes the B<dir_colors> file format as used in the "
+"fileutils-4.1 package; other versions may differ slightly."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:395
+msgid ""
+"The default B<LEFTCODE> and B<RIGHTCODE> definitions, which are used by ISO "
+"6429 terminals are:"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:398
+#, no-wrap
+msgid "LEFTCODE"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:398
+#, no-wrap
+msgid "\\ee["
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:399
+#, no-wrap
+msgid "RIGHTCODE"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man5/dir_colors.5:399
+#, no-wrap
+msgid "m"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:406
+msgid "The default B<ENDCODE> is undefined."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/dir_colors.5:410
+msgid "B<dircolors>(1), B<ls>(1), B<stty>(1), B<xterm>(1)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/des_crypt.3:14
+#, no-wrap
+msgid "DES_CRYPT"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/des_crypt.3:18
+msgid ""
+"des_crypt, ecb_crypt, cbc_crypt, des_setparity, DES_FAILED - fast DES "
+"encryption"
+msgstr ""
+
+#.  Sun version
+#.  .B #include <des_crypt.h>
+#. type: Plain text
+#: man-pages/man3/des_crypt.3:23
+#, no-wrap
+msgid "B<#include E<lt>rpc/des_crypt.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/des_crypt.3:26
+#, no-wrap
+msgid ""
+"B<int ecb_crypt(char *>I<key>B<, char *>I<data>B<, unsigned >I<datalen>B<,>\n"
+"B<              unsigned >I<mode>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/des_crypt.3:29
+#, no-wrap
+msgid ""
+"B<int cbc_crypt(char *>I<key>B<, char *>I<data>B<, unsigned >I<datalen>B<,>\n"
+"B<              unsigned >I<mode>B<, char *>I<ivec>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/des_crypt.3:31
+#, no-wrap
+msgid "B<void des_setparity(char *>I<key>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/des_crypt.3:33
+#, no-wrap
+msgid "B<int DES_FAILED(int >I<status>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/des_crypt.3:63
+msgid ""
+"B<ecb_crypt>()  and B<cbc_crypt>()  implement the NBS DES (Data Encryption "
+"Standard).  These routines are faster and more general purpose than "
+"B<crypt>(3).  They also are able to utilize DES hardware if it is available."
+"  B<ecb_crypt>()  encrypts in ECB (Electronic Code Book)  mode, which "
+"encrypts blocks of data independently.  B<cbc_crypt>()  encrypts in CBC "
+"(Cipher Block Chaining)  mode, which chains together successive blocks.  CBC"
+" mode protects against insertions, deletions and substitutions of blocks.  "
+"Also, regularities in the clear text will not appear in the cipher text."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/des_crypt.3:106
+msgid ""
+"Here is how to use these routines.  The first argument, I<key>, is the "
+"8-byte encryption key with parity.  To set the key's parity, which for DES "
+"is in the low bit of each byte, use B<des_setparity>().  The second "
+"argument, I<data>, contains the data to be encrypted or decrypted.  The "
+"third argument, I<datalen>, is the length in bytes of I<data>, which must be"
+" a multiple of 8.  The fourth argument, I<mode>, is formed by ORing together"
+" some things.  For the encryption direction OR in either B<DES_ENCRYPT> or "
+"B<DES_DECRYPT>.  For software versus hardware encryption, OR in either "
+"B<DES_HW> or B<DES_SW>.  If B<DES_HW> is specified, and there is no "
+"hardware, then the encryption is performed in software and the routine "
+"returns B<DESERR_NOHWDEVICE>.  For B<cbc_crypt>(), the argument I<ivec> is "
+"the 8-byte initialization vector for the chaining.  It is updated to the "
+"next initialization vector upon return."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/des_crypt.3:108
+#, no-wrap
+msgid "B<DESERR_NONE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/des_crypt.3:111
+msgid "No error."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/des_crypt.3:111
+#, no-wrap
+msgid "B<DESERR_NOHWDEVICE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/des_crypt.3:114
+msgid ""
+"Encryption succeeded, but done in software instead of the requested "
+"hardware."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/des_crypt.3:114
+#, no-wrap
+msgid "B<DESERR_HWERROR>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/des_crypt.3:117
+msgid "An error occurred in the hardware or driver."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/des_crypt.3:117
+#, no-wrap
+msgid "B<DESERR_BADPARAM>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/des_crypt.3:120
+msgid "Bad argument to routine."
+msgstr ""
+
+#.  .BR DES_FAILED\c
+#.  .BR ( stat )
+#.  So far the Sun page
+#.  Some additions - aeb
+#. type: Plain text
+#: man-pages/man3/des_crypt.3:131
+msgid ""
+"Given a result status I<stat>, the macro B<DES_FAILED(>I<stat>B<)> is false "
+"only for the first two statuses."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/des_crypt.3:134
+msgid "These functions are present in glibc 2.1 and later."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/des_crypt.3:145
+msgid ""
+"Because they employ the DES block cipher, which is no longer considered "
+"secure, B<ecb_crypt>(), B<ecb_crypt>(), B<crypt_r>(), and B<des_setparity>()"
+"  were removed in glibc 2.28.  Applications should switch to a modern "
+"cryptography library, such as B<libgcrypt>."
+msgstr ""
+
+#. type: SH
+#: man-pages/man3/des_crypt.3:145
+#, no-wrap
+msgid "ATTRIBUTES"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/des_crypt.3:148
+msgid ""
+"For an explanation of the terms used in this section, see B<attributes>(7)."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/des_crypt.3:152
+#, no-wrap
+msgid "Interface"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/des_crypt.3:152
+#, no-wrap
+msgid "Attribute"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/des_crypt.3:152
+#, no-wrap
+msgid "Value"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/des_crypt.3:157
+#, no-wrap
+msgid ""
+"B<ecb_crypt>(),\n"
+"B<cbc_crypt>(),\n"
+"B<des_setparity>()"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/des_crypt.3:157
+#, no-wrap
+msgid "Thread safety"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/des_crypt.3:157
+#, no-wrap
+msgid "MT-Safe"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/des_crypt.3:162
+msgid "4.3BSD.  Not in POSIX.1."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/des_crypt.3:165
+msgid "B<des>(1), B<crypt>(3), B<xcrypt>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/drand48_r.3:27
+#, no-wrap
+msgid "DRAND48_R"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48_r.3:32
+msgid ""
+"drand48_r, erand48_r, lrand48_r, nrand48_r, mrand48_r, jrand48_r, srand48_r,"
+" seed48_r, lcong48_r - generate uniformly distributed pseudo-random numbers "
+"reentrantly"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48_r.3:35
+#, no-wrap
+msgid "B<#include E<lt>stdlib.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48_r.3:37
+#, no-wrap
+msgid ""
+"B<int drand48_r(struct drand48_data *>I<buffer>B<, double *>I<result>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48_r.3:40
+#, no-wrap
+msgid ""
+"B<int erand48_r(unsigned short >I<xsubi>B<[3]>I<,>\n"
+"B<              struct drand48_data *>I<buffer>B<, double *>I<result>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48_r.3:42
+#, no-wrap
+msgid ""
+"B<int lrand48_r(struct drand48_data *>I<buffer>B<, long int "
+"*>I<result>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48_r.3:45
+#, no-wrap
+msgid ""
+"B<int nrand48_r(unsigned short int >I<xsubi[3]>B<,>\n"
+"B<              struct drand48_data *>I<buffer>B<, long int *>I<result>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48_r.3:47
+#, no-wrap
+msgid ""
+"B<int mrand48_r(struct drand48_data *>I<buffer>B<,long int "
+"*>I<result>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48_r.3:50
+#, no-wrap
+msgid ""
+"B<int jrand48_r(unsigned short int >I<xsubi[3]>B<,>\n"
+"B<              struct drand48_data *>I<buffer>B<, long int *>I<result>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48_r.3:52
+#, no-wrap
+msgid ""
+"B<int srand48_r(long int >I<seedval>B<, struct drand48_data "
+"*>I<buffer>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48_r.3:55
+#, no-wrap
+msgid ""
+"B<int seed48_r(unsigned short int >I<seed16v[3]>B<,>\n"
+"B<             struct drand48_data *>I<buffer>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48_r.3:58
+#, no-wrap
+msgid ""
+"B<int lcong48_r(unsigned short int >I<param[7]>B<,>\n"
+"B<              struct drand48_data *>I<buffer>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48_r.3:63
+msgid ""
+"Feature Test Macro Requirements for glibc (see B<feature_test_macros>(7)):"
+msgstr ""
+
+#.  .BR drand48_r (),
+#.  .BR erand48_r (),
+#.  .BR lrand48_r (),
+#.  .BR nrand48_r (),
+#.  .BR mrand48_r (),
+#.  .BR jrand48_r (),
+#.  .BR srand48_r (),
+#.  .BR seed48_r (),
+#.  .BR lcong48_r ():
+#. type: Plain text
+#: man-pages/man3/drand48_r.3:78
+#, no-wrap
+msgid ""
+"All functions shown above:\n"
+"    /* Glibc since 2.19: */ _DEFAULT_SOURCE\n"
+"        || /* Glibc versions E<lt>= 2.19: */ _SVID_SOURCE || _BSD_SOURCE\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48_r.3:85
+msgid ""
+"These functions are the reentrant analogs of the functions described in "
+"B<drand48>(3).  Instead of modifying the global random generator state, they"
+" use the supplied data I<buffer>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48_r.3:92
+msgid ""
+"Before the first use, this struct must be initialized, for example, by "
+"filling it with zeros, or by calling one of the functions B<srand48_r>(), "
+"B<seed48_r>(), or B<lcong48_r>()."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48_r.3:94
+msgid "The return value is 0."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/drand48_r.3:113
+#, no-wrap
+msgid ""
+"B<drand48_r>(),\n"
+"B<erand48_r>(),\n"
+"B<lrand48_r>(),\n"
+"B<nrand48_r>(),\n"
+"B<mrand48_r>(),\n"
+"B<jrand48_r>(),\n"
+"B<srand48_r>(),\n"
+"B<seed48_r>(),\n"
+"B<lcong48_r>()"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/drand48_r.3:113
+#, no-wrap
+msgid "MT-Safe race:buffer"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48_r.3:118
+msgid "These functions are GNU extensions and are not portable."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48_r.3:121
+msgid "B<drand48>(3), B<rand>(3), B<random>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/daemon.3:36
+#, no-wrap
+msgid "DAEMON"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/daemon.3:36
+#, no-wrap
+msgid "2017-11-26"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/daemon.3:39
+msgid "daemon - run in the background"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/daemon.3:41
+msgid "B<#include E<lt>unistd.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/daemon.3:43
+msgid "B<int daemon(int >I<nochdir>B<, int >I<noclose>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/daemon.3:50
+msgid "B<daemon>():"
+msgstr ""
+
+#.              commit 266865c0e7b79d4196e2cc393693463f03c90bd8
+#. type: Plain text
+#: man-pages/man3/daemon.3:58
+#, no-wrap
+msgid ""
+"    Since glibc 2.21:\n"
+"        _DEFAULT_SOURCE\n"
+"    In glibc 2.19 and 2.20:\n"
+"        _DEFAULT_SOURCE || (_XOPEN_SOURCE && _XOPEN_SOURCE\\ E<lt>\\ 500)\n"
+"    Up to and including glibc 2.19:\n"
+"        _BSD_SOURCE || (_XOPEN_SOURCE && _XOPEN_SOURCE\\ E<lt>\\ 500)\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/daemon.3:64
+msgid ""
+"The B<daemon>()  function is for programs wishing to detach themselves from "
+"the controlling terminal and run in the background as system daemons."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/daemon.3:72
+msgid ""
+"If I<nochdir> is zero, B<daemon>()  changes the process's current working "
+"directory to the root directory (\"/\"); otherwise, the current working "
+"directory is left unchanged."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/daemon.3:81
+msgid ""
+"If I<noclose> is zero, B<daemon>()  redirects standard input, standard "
+"output and standard error to I</dev/null>; otherwise, no changes are made to"
+" these file descriptors."
+msgstr ""
+
+#.  not .IR in order not to underline _
+#. type: Plain text
+#: man-pages/man3/daemon.3:99
+msgid ""
+"(This function forks, and if the B<fork>(2)  succeeds, the parent calls "
+"B<_exit>(2), so that further errors are seen by the child only.)  On success"
+" B<daemon>()  returns zero.  If an error occurs, B<daemon>()  returns -1 and"
+" sets I<errno> to any of the errors specified for the B<fork>(2)  and "
+"B<setsid>(2)."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/daemon.3:109
+#, no-wrap
+msgid "B<daemon>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/daemon.3:117
+msgid ""
+"Not in POSIX.1.  A similar function appears on the BSDs.  The B<daemon>()  "
+"function first appeared in 4.4BSD."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/daemon.3:125
+msgid ""
+"The glibc implementation can also return -1 when I</dev/null> exists but is "
+"not a character device with the expected major and minor numbers.  In this "
+"case, I<errno> need not be set."
+msgstr ""
+
+#.  FIXME . https://sourceware.org/bugzilla/show_bug.cgi?id=19144
+#.  Tested using a program that uses daemon() and then opens an
+#.  otherwise unused console device (/dev/ttyN) that does not
+#.  have an associated getty process.
+#. type: Plain text
+#: man-pages/man3/daemon.3:145
+msgid ""
+"The GNU C library implementation of this function was taken from BSD, and "
+"does not employ the double-fork technique (i.e., B<fork>(2), B<setsid>(2), "
+"B<fork>(2))  that is necessary to ensure that the resulting daemon process "
+"is not a session leader.  Instead, the resulting daemon I<is> a session "
+"leader.  On systems that follow System V semantics (e.g., Linux), this means"
+" that if the daemon opens a terminal that is not already a controlling "
+"terminal for another session, then that terminal will inadvertently become "
+"the controlling terminal for the daemon."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/daemon.3:149
+msgid "B<fork>(2), B<setsid>(2), B<daemon>(7), B<logrotate>(8)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/dl_iterate_phdr.3:25
+#, no-wrap
+msgid "DL_ITERATE_PHDR"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:28
+msgid "dl_iterate_phdr - walk through list of shared objects"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:32
+#, no-wrap
+msgid ""
+"B<#define _GNU_SOURCE>         /* See feature_test_macros(7) */\n"
+"B<#include E<lt>link.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:37
+#, no-wrap
+msgid ""
+"B<int dl_iterate_phdr(>\n"
+"B<          int (*>I<callback>B<) (struct dl_phdr_info *>I<info>B<,>\n"
+"B<                           size_t >I<size>B<, void *>I<data>B<),>\n"
+"B<          void *>I<data>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:44
+msgid ""
+"The B<dl_iterate_phdr>()  function allows an application to inquire at run "
+"time to find out which shared objects it has loaded, and the order in which "
+"they were loaded."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:54
+msgid ""
+"The B<dl_iterate_phdr>()  function walks through the list of an "
+"application's shared objects and calls the function I<callback> once for "
+"each object, until either all shared objects have been processed or "
+"I<callback> returns a nonzero value."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:71
+msgid ""
+"Each call to I<callback> receives three arguments: I<info>, which is a "
+"pointer to a structure containing information about the shared object; "
+"I<size>, which is the size of the structure pointed to by I<info>; and "
+"I<data>, which is a copy of whatever value was passed by the calling program"
+" as the second argument (also named I<data>)  in the call to "
+"B<dl_iterate_phdr>()."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:75
+msgid "The I<info> argument is a structure of the following type:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:86
+#, no-wrap
+msgid ""
+"struct dl_phdr_info {\n"
+"    ElfW(Addr)        dlpi_addr;  /* Base address of object */\n"
+"    const char       *dlpi_name;  /* (Null-terminated) name of\n"
+"                                     object */\n"
+"    const ElfW(Phdr) *dlpi_phdr;  /* Pointer to array of\n"
+"                                     ELF program headers\n"
+"                                     for this object */\n"
+"    ElfW(Half)        dlpi_phnum; /* # of items in I<dlpi_phdr> */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:91
+#, no-wrap
+msgid ""
+"    /* The following fields were added in glibc 2.4, after the first\n"
+"       version of this structure was available.  Check the I<size>\n"
+"       argument passed to the dl_iterate_phdr callback to determine\n"
+"       whether or not each later member is available.  */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:107
+#, no-wrap
+msgid ""
+"    unsigned long long int dlpi_adds;\n"
+"                    /* Incremented when a new object may\n"
+"                       have been added */\n"
+"    unsigned long long int dlpi_subs;\n"
+"                    /* Incremented when an object may\n"
+"                       have been removed */\n"
+"    size_t dlpi_tls_modid;\n"
+"                    /* If there is a PT_TLS segment, its module\n"
+"                       ID as used in TLS relocations, else zero */\n"
+"    void  *dlpi_tls_data;\n"
+"                    /* The address of the calling thread's instance\n"
+"                       of this module's PT_TLS segment, if it has\n"
+"                       one and it has been allocated in the calling\n"
+"                       thread, otherwise a null pointer */\n"
+"};\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:121
+msgid ""
+"(The I<ElfW>()  macro definition turns its argument into the name of an ELF "
+"data type suitable for the hardware architecture.  For example, on a 32-bit "
+"platform, I<ElfW(Addr)> yields the data type name I<Elf32_Addr>.  Further "
+"information on these types can be found in the I<E<lt>elf.hE<gt>> and "
+"I<E<lt>link.hE<gt>> header files.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:132
+msgid ""
+"The I<dlpi_addr> field indicates the base address of the shared object "
+"(i.e., the difference between the virtual memory address of the shared "
+"object and the offset of that object in the file from which it was loaded)."
+"  The I<dlpi_name> field is a null-terminated string giving the pathname "
+"from which the shared object was loaded."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:147
+msgid ""
+"To understand the meaning of the I<dlpi_phdr> and I<dlpi_phnum> fields, we "
+"need to be aware that an ELF shared object consists of a number of segments,"
+" each of which has a corresponding program header describing the segment.  "
+"The I<dlpi_phdr> field is a pointer to an array of the program headers for "
+"this shared object.  The I<dlpi_phnum> field indicates the size of this "
+"array."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:149
+msgid "These program headers are structures of the following form:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:162
+#, no-wrap
+msgid ""
+"typedef struct {\n"
+"    Elf32_Word  p_type;    /* Segment type */\n"
+"    Elf32_Off   p_offset;  /* Segment file offset */\n"
+"    Elf32_Addr  p_vaddr;   /* Segment virtual address */\n"
+"    Elf32_Addr  p_paddr;   /* Segment physical address */\n"
+"    Elf32_Word  p_filesz;  /* Segment size in file */\n"
+"    Elf32_Word  p_memsz;   /* Segment size in memory */\n"
+"    Elf32_Word  p_flags;   /* Segment flags */\n"
+"    Elf32_Word  p_align;   /* Segment alignment */\n"
+"} Elf32_Phdr;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:168
+msgid ""
+"Note that we can calculate the location of a particular program header, "
+"I<x>, in virtual memory using the formula:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:172
+#, no-wrap
+msgid "addr == info-E<gt>dlpi_addr + info-E<gt>dlpi_phdr[x].p_vaddr;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:180
+msgid ""
+"Possible values for I<p_type> include the following (see I<E<lt>elf.hE<gt>> "
+"for further details):"
+msgstr ""
+
+#.  For PT_GNU_STACK, see http://www.airs.com/blog/archives/518
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:194
+#, no-wrap
+msgid ""
+"#define PT_LOAD         1    /* Loadable program segment */\n"
+"#define PT_DYNAMIC      2    /* Dynamic linking information */\n"
+"#define PT_INTERP       3    /* Program interpreter */\n"
+"#define PT_NOTE         4    /* Auxiliary information */\n"
+"#define PT_SHLIB        5    /* Reserved */\n"
+"#define PT_PHDR         6    /* Entry for header table itself */\n"
+"#define PT_TLS          7    /* Thread-local storage segment */\n"
+"#define PT_GNU_EH_FRAME 0x6474e550 /* GCC .eh_frame_hdr segment */\n"
+"#define PT_GNU_STACK  0x6474e551 /* Indicates stack executability */\n"
+"#define PT_GNU_RELRO  0x6474e552 /* Read-only after relocation */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:201
+msgid ""
+"The B<dl_iterate_phdr>()  function returns whatever value was returned by "
+"the last call to I<callback>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:204
+msgid "B<dl_iterate_phdr>()  has been supported in glibc since version 2.2.4."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dl_iterate_phdr.3:214
+#, no-wrap
+msgid "B<dl_iterate_phdr>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:232
+msgid ""
+"The B<dl_iterate_phdr>()  function is not specified in any standard.  "
+"Various other systems provide a version of this function, although details "
+"of the returned I<dl_phdr_info> structure differ.  On the BSDs and Solaris, "
+"the structure includes the fields I<dlpi_addr>, I<dlpi_name>, I<dlpi_phdr>, "
+"and I<dlpi_phnum> in addition to other implementation-specific fields."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:239
+msgid ""
+"Future versions of the C library may add further fields to the "
+"I<dl_phdr_info> structure; in that event, the I<size> argument provides a "
+"mechanism for the callback function to discover whether it is running on a "
+"system with added fields."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:246
+msgid ""
+"The first object visited by I<callback> is the main program.  For the main "
+"program, the I<dlpi_name> field will be an empty string."
+msgstr ""
+
+#. type: SH
+#: man-pages/man3/dl_iterate_phdr.3:246
+#, no-wrap
+msgid "EXAMPLE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:252
+msgid ""
+"The following program displays a list of pathnames of the shared objects it "
+"has loaded.  For each shared object, the program lists some information "
+"(virtual address, size, flags, and type)  for each of the objects ELF "
+"segments."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:258
+msgid ""
+"The following shell session demonstrates the output produced by the program "
+"on an x86-64 system.  The first shared object for which output is displayed "
+"(where the name is an empty string)  is the main program."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:296
+#, no-wrap
+msgid ""
+"$ B<./a.out>\n"
+"Name: \"\" (9 segments)\n"
+"     0: [      0x400040; memsz:    1f8] flags: 0x5; PT_PHDR\n"
+"     1: [      0x400238; memsz:     1c] flags: 0x4; PT_INTERP\n"
+"     2: [      0x400000; memsz:    ac4] flags: 0x5; PT_LOAD\n"
+"     3: [      0x600e10; memsz:    240] flags: 0x6; PT_LOAD\n"
+"     4: [      0x600e28; memsz:    1d0] flags: 0x6; PT_DYNAMIC\n"
+"     5: [      0x400254; memsz:     44] flags: 0x4; PT_NOTE\n"
+"     6: [      0x400970; memsz:     3c] flags: 0x4; PT_GNU_EH_FRAME\n"
+"     7: [         (nil); memsz:      0] flags: 0x6; PT_GNU_STACK\n"
+"     8: [      0x600e10; memsz:    1f0] flags: 0x4; PT_GNU_RELRO\n"
+"Name: \"linux-vdso.so.1\" (4 segments)\n"
+"     0: [0x7ffc6edd1000; memsz:    e89] flags: 0x5; PT_LOAD\n"
+"     1: [0x7ffc6edd1360; memsz:    110] flags: 0x4; PT_DYNAMIC\n"
+"     2: [0x7ffc6edd17b0; memsz:     3c] flags: 0x4; PT_NOTE\n"
+"     3: [0x7ffc6edd17ec; memsz:     3c] flags: 0x4; PT_GNU_EH_FRAME\n"
+"Name: \"/lib64/libc.so.6\" (10 segments)\n"
+"     0: [0x7f55712ce040; memsz:    230] flags: 0x5; PT_PHDR\n"
+"     1: [0x7f557145b980; memsz:     1c] flags: 0x4; PT_INTERP\n"
+"     2: [0x7f55712ce000; memsz: 1b6a5c] flags: 0x5; PT_LOAD\n"
+"     3: [0x7f55716857a0; memsz:   9240] flags: 0x6; PT_LOAD\n"
+"     4: [0x7f5571688b80; memsz:    1f0] flags: 0x6; PT_DYNAMIC\n"
+"     5: [0x7f55712ce270; memsz:     44] flags: 0x4; PT_NOTE\n"
+"     6: [0x7f55716857a0; memsz:     78] flags: 0x4; PT_TLS\n"
+"     7: [0x7f557145b99c; memsz:   544c] flags: 0x4; PT_GNU_EH_FRAME\n"
+"     8: [0x7f55712ce000; memsz:      0] flags: 0x6; PT_GNU_STACK\n"
+"     9: [0x7f55716857a0; memsz:   3860] flags: 0x4; PT_GNU_RELRO\n"
+"Name: \"/lib64/ld-linux-x86-64.so.2\" (7 segments)\n"
+"     0: [0x7f557168f000; memsz:  20828] flags: 0x5; PT_LOAD\n"
+"     1: [0x7f55718afba0; memsz:   15a8] flags: 0x6; PT_LOAD\n"
+"     2: [0x7f55718afe10; memsz:    190] flags: 0x6; PT_DYNAMIC\n"
+"     3: [0x7f557168f1c8; memsz:     24] flags: 0x4; PT_NOTE\n"
+"     4: [0x7f55716acec4; memsz:    604] flags: 0x4; PT_GNU_EH_FRAME\n"
+"     5: [0x7f557168f000; memsz:      0] flags: 0x6; PT_GNU_STACK\n"
+"     6: [0x7f55718afba0; memsz:    460] flags: 0x4; PT_GNU_RELRO\n"
+msgstr ""
+
+#. type: SS
+#: man-pages/man3/dl_iterate_phdr.3:299
+#, no-wrap
+msgid "Program source"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:306
+#, no-wrap
+msgid ""
+"#define _GNU_SOURCE\n"
+"#include E<lt>link.hE<gt>\n"
+"#include E<lt>stdlib.hE<gt>\n"
+"#include E<lt>stdio.hE<gt>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:312
+#, no-wrap
+msgid ""
+"static int\n"
+"callback(struct dl_phdr_info *info, size_t size, void *data)\n"
+"{\n"
+"    char *type;\n"
+"    int p_type, j;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:315
+#, no-wrap
+msgid ""
+"    printf(\"Name: \\e\"%s\\e\" (%d segments)\\en\", info-E<gt>dlpi_name,\n"
+"               info-E<gt>dlpi_phnum);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:328
+#, no-wrap
+msgid ""
+"    for (j = 0; j E<lt> info-E<gt>dlpi_phnum; j++) {\n"
+"        p_type = info-E<gt>dlpi_phdr[j].p_type;\n"
+"        type =  (p_type == PT_LOAD) ? \"PT_LOAD\" :\n"
+"                (p_type == PT_DYNAMIC) ? \"PT_DYNAMIC\" :\n"
+"                (p_type == PT_INTERP) ? \"PT_INTERP\" :\n"
+"                (p_type == PT_NOTE) ? \"PT_NOTE\" :\n"
+"                (p_type == PT_INTERP) ? \"PT_INTERP\" :\n"
+"                (p_type == PT_PHDR) ? \"PT_PHDR\" :\n"
+"                (p_type == PT_TLS) ? \"PT_TLS\" :\n"
+"                (p_type == PT_GNU_EH_FRAME) ? \"PT_GNU_EH_FRAME\" :\n"
+"                (p_type == PT_GNU_STACK) ? \"PT_GNU_STACK\" :\n"
+"                (p_type == PT_GNU_RELRO) ? \"PT_GNU_RELRO\" : NULL;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:338
+#, no-wrap
+msgid ""
+"        printf(\"    %2d: [%14p; memsz:%7lx] flags: 0x%x; \", j,\n"
+"                (void *) (info-E<gt>dlpi_addr + info-E<gt>dlpi_phdr[j].p_vaddr),\n"
+"                info-E<gt>dlpi_phdr[j].p_memsz,\n"
+"                info-E<gt>dlpi_phdr[j].p_flags);\n"
+"        if (type != NULL)\n"
+"            printf(\"%s\\en\", type);\n"
+"        else\n"
+"            printf(\"[other (0x%x)]\\en\", p_type);\n"
+"    }\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:341
+#, no-wrap
+msgid ""
+"    return 0;\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:346
+#, no-wrap
+msgid ""
+"int\n"
+"main(int argc, char *argv[])\n"
+"{\n"
+"    dl_iterate_phdr(callback, NULL);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:349
+#, no-wrap
+msgid ""
+"    exit(EXIT_SUCCESS);\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:358
+msgid ""
+"B<ldd>(1), B<objdump>(1), B<readelf>(1), B<dladdr>(3), B<dlopen>(3), "
+"B<elf>(5), B<ld.so>(8)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dl_iterate_phdr.3:360
+msgid ""
+"I<Executable and Linking Format Specification>, available at various "
+"locations online."
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/dbopen.3:36
+#, no-wrap
+msgid "DBOPEN"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:40
+msgid "dbopen - database access methods"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:46
+#, no-wrap
+msgid ""
+"B<#include E<lt>sys/types.hE<gt>>\n"
+"B<#include E<lt>limits.hE<gt>>\n"
+"B<#include E<lt>db.hE<gt>>\n"
+"B<#include E<lt>fcntl.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:50
+#, no-wrap
+msgid ""
+"B<DB *dbopen(const char *>I<file>B<, int >I<flags>B<, int >I<mode>B<, DBTYPE >I<type>B<,>\n"
+"B<           const void *>I<openinfo>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:58
+msgid ""
+"I<Note well>: This page documents interfaces provided in glibc up until "
+"version 2.1.  Since version 2.2, glibc no longer provides these interfaces."
+"  Probably, you are looking for the APIs provided by the I<libdb> library "
+"instead."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:72
+msgid ""
+"B<dbopen>()  is the library interface to database files.  The supported file"
+" formats are btree, hashed and UNIX file oriented.  The btree format is a "
+"representation of a sorted, balanced tree structure.  The hashed format is "
+"an extensible, dynamic hashing scheme.  The flat-file format is a byte "
+"stream file with fixed or variable length records.  The formats and file-"
+"format-specific information are described in detail in their respective "
+"manual pages B<btree>(3), B<hash>(3), and B<recno>(3)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:81
+msgid ""
+"B<dbopen>()  opens I<file> for reading and/or writing.  Files never intended"
+" to be preserved on disk may be created by setting the I<file> argument to "
+"NULL."
+msgstr ""
+
+#. Three additional options may be specified by ORing
+#. them into the
+#. .I flags
+#. argument.
+#. .TP
+#. DB_LOCK
+#. Do the necessary locking in the database to support concurrent access.
+#. If concurrent access isn't needed or the database is read-only this
+#. flag should not be set, as it tends to have an associated performance
+#. penalty.
+#. .TP
+#. DB_SHMEM
+#. Place the underlying memory pool used by the database in shared
+#. memory.
+#. Necessary for concurrent access.
+#. .TP
+#. DB_TXN
+#. Support transactions in the database.
+#. The DB_LOCK and DB_SHMEM flags must be set as well.
+#. type: Plain text
+#: man-pages/man3/dbopen.3:121
+msgid ""
+"The I<flags> and I<mode> arguments are as specified to the B<open>(2)  "
+"routine, however, only the B<O_CREAT>, B<O_EXCL>, B<O_EXLOCK>, "
+"B<O_NONBLOCK>, B<O_RDONLY>, B<O_RDWR>, B<O_SHLOCK>, and B<O_TRUNC> flags are"
+" meaningful.  (Note, opening a database file B<O_WRONLY> is not possible.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:134
+msgid ""
+"The I<type> argument is of type I<DBTYPE> (as defined in the "
+"I<E<lt>db.hE<gt>> include file) and may be set to B<DB_BTREE>, B<DB_HASH>, "
+"or B<DB_RECNO>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:143
+msgid ""
+"The I<openinfo> argument is a pointer to an access-method-specific structure"
+" described in the access method's manual page.  If I<openinfo> is NULL, each"
+" access method will use defaults appropriate for the system and the access "
+"method."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:154
+msgid ""
+"B<dbopen>()  returns a pointer to a I<DB> structure on success and NULL on "
+"error.  The I<DB> structure is defined in the I<E<lt>db.hE<gt>> include "
+"file, and contains at least the following fields:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:170
+#, no-wrap
+msgid ""
+"typedef struct {\n"
+"    DBTYPE type;\n"
+"    int (*close)(const DB *db);\n"
+"    int (*del)(const DB *db, const DBT *key, unsigned int flags);\n"
+"    int (*fd)(const DB *db);\n"
+"    int (*get)(const DB *db, DBT *key, DBT *data,\n"
+"               unsigned int flags);\n"
+"    int (*put)(const DB *db, DBT *key, const DBT *data,\n"
+"               unsigned int flags);\n"
+"    int (*sync)(const DB *db, unsigned int flags);\n"
+"    int (*seq)(const DB *db, DBT *key, DBT *data,\n"
+"               unsigned int flags);\n"
+"} DB;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:178
+msgid ""
+"These elements describe a database type and a set of functions performing "
+"various actions.  These functions take a pointer to a structure as returned "
+"by B<dbopen>(), and sometimes one or more pointers to key/data structures "
+"and a flag value."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dbopen.3:178
+#, no-wrap
+msgid "I<type>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:181
+msgid "The type of the underlying access method (and file format)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dbopen.3:181
+#, no-wrap
+msgid "I<close>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:195
+msgid ""
+"A pointer to a routine to flush any cached information to disk, free any "
+"allocated resources, and close the underlying file(s).  Since key/data pairs"
+" may be cached in memory, failing to sync the file with a I<close> or "
+"I<sync> function may result in inconsistent or lost information.  I<close> "
+"routines return -1 on error (setting I<errno>)  and 0 on success."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dbopen.3:195
+#, no-wrap
+msgid "I<del>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:198
+msgid "A pointer to a routine to remove key/data pairs from the database."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:202
+msgid "The argument I<flag> may be set to the following value:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dbopen.3:203 man-pages/man3/dbopen.3:259
+#: man-pages/man3/dbopen.3:359
+#, no-wrap
+msgid "B<R_CURSOR>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:207
+msgid ""
+"Delete the record referenced by the cursor.  The cursor must have previously"
+" been initialized."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:215
+msgid ""
+"I<delete> routines return -1 on error (setting I<errno>), 0 on success, and "
+"1 if the specified I<key> was not in the file."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dbopen.3:215
+#, no-wrap
+msgid "I<fd>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:237
+msgid ""
+"A pointer to a routine which returns a file descriptor representative of the"
+" underlying database.  A file descriptor referencing the same file will be "
+"returned to all processes which call B<dbopen>()  with the same I<file> "
+"name.  This file descriptor may be safely used as an argument to the "
+"B<fcntl>(2)  and B<flock>(2)  locking functions.  The file descriptor is not"
+" necessarily associated with any of the underlying files used by the access "
+"method.  No file descriptor is available for in memory databases.  I<fd> "
+"routines return -1 on error (setting I<errno>), and the file descriptor on "
+"success."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dbopen.3:237
+#, no-wrap
+msgid "I<get>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:251
+msgid ""
+"A pointer to a routine which is the interface for keyed retrieval from the "
+"database.  The address and length of the data associated with the specified "
+"I<key> are returned in the structure referenced by I<data>.  I<get> routines"
+" return -1 on error (setting I<errno>), 0 on success, and 1 if the I<key> "
+"was not in the file."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dbopen.3:251
+#, no-wrap
+msgid "I<put>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:254
+msgid "A pointer to a routine to store key/data pairs in the database."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:258
+msgid "The argument I<flag> may be set to one of the following values:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:263
+msgid ""
+"Replace the key/data pair referenced by the cursor.  The cursor must have "
+"previously been initialized."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dbopen.3:263
+#, no-wrap
+msgid "B<R_IAFTER>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:274
+msgid ""
+"Append the data immediately after the data referenced by I<key>, creating a "
+"new key/data pair.  The record number of the appended key/data pair is "
+"returned in the I<key> structure.  (Applicable only to the B<DB_RECNO> "
+"access method.)"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dbopen.3:274
+#, no-wrap
+msgid "B<R_IBEFORE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:285
+msgid ""
+"Insert the data immediately before the data referenced by I<key>, creating a"
+" new key/data pair.  The record number of the inserted key/data pair is "
+"returned in the I<key> structure.  (Applicable only to the B<DB_RECNO> "
+"access method.)"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dbopen.3:285
+#, no-wrap
+msgid "B<R_NOOVERWRITE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:288
+msgid "Enter the new key/data pair only if the key does not previously exist."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dbopen.3:288
+#, no-wrap
+msgid "B<R_SETCURSOR>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:297
+msgid ""
+"Store the key/data pair, setting or initializing the position of the cursor "
+"to reference it.  (Applicable only to the B<DB_BTREE> and B<DB_RECNO> access"
+" methods.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:307
+msgid ""
+"B<R_SETCURSOR> is available only for the B<DB_BTREE> and B<DB_RECNO> access "
+"methods because it implies that the keys have an inherent order which does "
+"not change."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:317
+msgid ""
+"B<R_IAFTER> and B<R_IBEFORE> are available only for the B<DB_RECNO> access "
+"method because they each imply that the access method is able to create new "
+"keys.  This is true only if the keys are ordered and independent, record "
+"numbers for example."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:322
+msgid ""
+"The default behavior of the I<put> routines is to enter the new key/data "
+"pair, replacing any previously existing key."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:330
+msgid ""
+"I<put> routines return -1 on error (setting I<errno>), 0 on success, and 1 "
+"if the B<R_NOOVERWRITE> I<flag> was set and the key already exists in the "
+"file."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dbopen.3:330
+#, no-wrap
+msgid "I<seq>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:341
+msgid ""
+"A pointer to a routine which is the interface for sequential retrieval from "
+"the database.  The address and length of the key are returned in the "
+"structure referenced by I<key>, and the address and length of the data are "
+"returned in the structure referenced by I<data>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:354
+msgid ""
+"Sequential key/data pair retrieval may begin at any time, and the position "
+"of the \"cursor\" is not affected by calls to the I<del>, I<get>, I<put>, or"
+" I<sync> routines.  Modifications to the database during a sequential scan "
+"will be reflected in the scan, that is, records inserted behind the cursor "
+"will not be returned while records inserted in front of the cursor will be "
+"returned."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:358
+msgid "The flag value B<must> be set to one of the following values:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:372
+msgid ""
+"The data associated with the specified key is returned.  This differs from "
+"the I<get> routines in that it sets or initializes the cursor to the "
+"location of the key as well.  (Note, for the B<DB_BTREE> access method, the "
+"returned key is not necessarily an exact match for the specified key.  The "
+"returned key is the smallest key greater than or equal to the specified key,"
+" permitting partial key matches and range searches.)"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dbopen.3:372
+#, no-wrap
+msgid "B<R_FIRST>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:376
+msgid ""
+"The first key/data pair of the database is returned, and the cursor is set "
+"or initialized to reference it."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dbopen.3:376
+#, no-wrap
+msgid "B<R_LAST>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:385
+msgid ""
+"The last key/data pair of the database is returned, and the cursor is set or"
+" initialized to reference it.  (Applicable only to the B<DB_BTREE> and "
+"B<DB_RECNO> access methods.)"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dbopen.3:385
+#, no-wrap
+msgid "B<R_NEXT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:391
+msgid ""
+"Retrieve the key/data pair immediately after the cursor.  If the cursor is "
+"not yet set, this is the same as the B<R_FIRST> flag."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dbopen.3:391
+#, no-wrap
+msgid "B<R_PREV>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:402
+msgid ""
+"Retrieve the key/data pair immediately before the cursor.  If the cursor is "
+"not yet set, this is the same as the B<R_LAST> flag.  (Applicable only to "
+"the B<DB_BTREE> and B<DB_RECNO> access methods.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:413
+msgid ""
+"B<R_LAST> and B<R_PREV> are available only for the B<DB_BTREE> and "
+"B<DB_RECNO> access methods because they each imply that the keys have an "
+"inherent order which does not change."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:426
+msgid ""
+"I<seq> routines return -1 on error (setting I<errno>), 0 on success and 1 if"
+" there are no key/data pairs less than or greater than the specified or "
+"current key.  If the B<DB_RECNO> access method is being used, and if the "
+"database file is a character special file and no complete key/data pairs are"
+" currently available, the I<seq> routines return 2."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dbopen.3:426
+#, no-wrap
+msgid "I<sync>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:432
+msgid ""
+"A pointer to a routine to flush any cached information to disk.  If the "
+"database is in memory only, the I<sync> routine has no effect and will "
+"always succeed."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:434
+msgid "The flag value may be set to the following value:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dbopen.3:435
+#, no-wrap
+msgid "B<R_RECNOSYNC>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:447
+msgid ""
+"If the B<DB_RECNO> access method is being used, this flag causes the sync "
+"routine to apply to the btree file which underlies the recno file, not the "
+"recno file itself.  (See the I<bfname> field of the B<recno>(3)  manual page"
+" for more information.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:453
+msgid ""
+"I<sync> routines return -1 on error (setting I<errno>)  and 0 on success."
+msgstr ""
+
+#. type: SS
+#: man-pages/man3/dbopen.3:453
+#, no-wrap
+msgid "Key/data pairs"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:456
+msgid ""
+"Access to all file types is based on key/data pairs.  Both keys and data are"
+" represented by the following data structure:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:463
+#, no-wrap
+msgid ""
+"typedef struct {\n"
+"    void  *data;\n"
+"    size_t size;\n"
+"} DBT;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:469
+msgid "The elements of the I<DBT> structure are defined as follows:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dbopen.3:469
+#, no-wrap
+msgid "I<data>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:472
+msgid "A pointer to a byte string."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dbopen.3:472
+#, no-wrap
+msgid "I<size>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:475
+msgid "The length of the byte string."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:481
+msgid ""
+"Key and data byte strings may reference strings of essentially unlimited "
+"length although any two of them must fit into available memory at the same "
+"time.  It should be noted that the access methods provide no guarantees "
+"about byte string alignment."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:491
+msgid ""
+"The B<dbopen>()  routine may fail and set I<errno> for any of the errors "
+"specified for the library routines B<open>(2)  and B<malloc>(3)  or the "
+"following:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dbopen.3:491
+#, no-wrap
+msgid "B<EFTYPE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:494
+msgid "A file is incorrectly formatted."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:501
+msgid ""
+"A parameter has been specified (hash function, pad byte, etc.) that is "
+"incompatible with the current file specification or which is not meaningful "
+"for the function (for example, use of the cursor without prior "
+"initialization) or there is a mismatch between the version number of file "
+"and the software."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:513
+msgid ""
+"The I<close> routines may fail and set I<errno> for any of the errors "
+"specified for the library routines B<close>(2), B<read>(2), B<write>(2), "
+"B<free>(3), or B<fsync>(2)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:528
+msgid ""
+"The I<del>, I<get>, I<put>, and I<seq> routines may fail and set I<errno> "
+"for any of the errors specified for the library routines B<read>(2), "
+"B<write>(2), B<free>(3)  or B<malloc>(3)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:536
+msgid ""
+"The I<fd> routines will fail and set I<errno> to B<ENOENT> for in memory "
+"databases."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:543
+msgid ""
+"The I<sync> routines may fail and set I<errno> for any of the errors "
+"specified for the library routine B<fsync>(2)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:548
+msgid ""
+"The typedef I<DBT> is a mnemonic for \"data base thang\", and was used "
+"because no one could think of a reasonable name that wasn't already used."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:551
+msgid ""
+"The file descriptor interface is a kludge and will be deleted in a future "
+"version of the interface."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:554
+msgid ""
+"None of the access methods provide any form of concurrent access, locking, "
+"or transactions."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:559
+msgid "B<btree>(3), B<hash>(3), B<mpool>(3), B<recno>(3)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dbopen.3:561
+msgid ""
+"I<LIBTP: Portable, Modular Transactions for UNIX>, Margo Seltzer, Michael "
+"Olson, USENIX proceedings, Winter 1992."
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/dlsym.3:25
+#, no-wrap
+msgid "DLSYM"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlsym.3:28
+msgid ""
+"dlsym, dlvsym - obtain address of a symbol in a shared object or executable"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlsym.3:30 man-pages/man3/dlsym.3:36
+msgid "B<#include E<lt>dlfcn.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlsym.3:32
+msgid "B<void *dlsym(void *>I<handle>B<, const char *>I<symbol>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlsym.3:34
+msgid "B<#define _GNU_SOURCE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlsym.3:38
+msgid ""
+"B<void *dlvsym(void *>I<handle>B<, char *>I<symbol>B<, char "
+"*>I<version>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlsym.3:40
+msgid "Link with I<-ldl>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlsym.3:57
+msgid ""
+"The function B<dlsym>()  takes a \"handle\" of a dynamic loaded shared "
+"object returned by B<dlopen>(3)  along with a null-terminated symbol name, "
+"and returns the address where that symbol is loaded into memory.  If the "
+"symbol is not found, in the specified object or any of the shared objects "
+"that were automatically loaded by B<dlopen>(3)  when that object was loaded,"
+" B<dlsym>()  returns NULL.  (The search performed by B<dlsym>()  is breadth "
+"first through the dependency tree of these shared objects.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlsym.3:71
+msgid ""
+"In unusual cases (see NOTES) the value of the symbol could actually be NULL."
+"  Therefore, a NULL return from B<dlsym>()  need not indicate an error.  The"
+" correct way to distinguish an error from a symbol whose value is NULL is to"
+" call B<dlerror>(3)  to clear any old error conditions, then call "
+"B<dlsym>(), and then call B<dlerror>(3)  again, saving its return value into"
+" a variable, and check whether this saved value is not NULL."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlsym.3:74
+msgid ""
+"There are two special pseudo-handles that may be specified in I<handle>:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dlsym.3:74
+#, no-wrap
+msgid "B<RTLD_DEFAULT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlsym.3:83
+msgid ""
+"Find the first occurrence of the desired symbol using the default shared "
+"object search order.  The search will include global symbols in the "
+"executable and its dependencies, as well as symbols in shared objects that "
+"were dynamically loaded with the B<RTLD_GLOBAL> flag."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dlsym.3:83
+#, no-wrap
+msgid "B<RTLD_NEXT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlsym.3:97
+msgid ""
+"Find the next occurrence of the desired symbol in the search order after the"
+" current object.  This allows one to provide a wrapper around a function in "
+"another shared object, so that, for example, the definition of a function in"
+" a preloaded shared object (see B<LD_PRELOAD> in B<ld.so>(8))  can find and "
+"invoke the \"real\" function provided in another shared object (or for that "
+"matter, the \"next\" definition of the function in cases where there are "
+"multiple layers of preloading)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlsym.3:107
+msgid ""
+"The B<_GNU_SOURCE> feature test macro must be defined in order to obtain the"
+" definitions of B<RTLD_DEFAULT> and B<RTLD_NEXT> from I<E<lt>dlfcn.hE<gt>>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlsym.3:114
+msgid ""
+"The function B<dlvsym>()  does the same as B<dlsym>()  but takes a version "
+"string as an additional argument."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlsym.3:121
+msgid ""
+"On success, these functions return the address associated with I<symbol>.  "
+"On failure, they return NULL; the cause of the error can be diagnosed using "
+"B<dlerror>(3)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlsym.3:126
+msgid ""
+"B<dlsym>()  is present in glibc 2.0 and later.  B<dlvsym>()  first appeared "
+"in glibc 2.1."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dlsym.3:137
+#, no-wrap
+msgid ""
+"B<dlsym>(),\n"
+"B<dlvsym>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlsym.3:145
+msgid ""
+"POSIX.1-2001 describes B<dlsym>().  The B<dlvsym>()  function is a GNU "
+"extension."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlsym.3:157
+msgid ""
+"The value of a symbol returned by B<dlsym>()  will never be NULL if the "
+"shared object is the result of normal compilation, since a global symbol is "
+"never placed at the NULL address.  There are nevertheless cases where a "
+"lookup using B<dlsym>()  may return NULL as the value of a symbol.  For "
+"example, the symbol value may be the result of a GNU indirect function "
+"(IFUNC) resolver function that returns NULL as the resolved value."
+msgstr ""
+
+#. type: SS
+#: man-pages/man3/dlsym.3:157
+#, no-wrap
+msgid "History"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlsym.3:163
+msgid ""
+"The B<dlsym>()  function is part of the dlopen API, derived from SunOS.  "
+"That system does not have B<dlvsym>()."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlsym.3:166
+msgid "See B<dlopen>(3)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlsym.3:172
+msgid ""
+"B<dl_iterate_phdr>(3), B<dladdr>(3), B<dlerror>(3), B<dlinfo>(3), "
+"B<dlopen>(3), B<ld.so>(8)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/duplocale.3:26
+#, no-wrap
+msgid "DUPLOCALE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:29
+msgid "duplocale - duplicate a locale object"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:32
+#, no-wrap
+msgid "B<#include E<lt>locale.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:34
+#, no-wrap
+msgid "B<locale_t duplocale(locale_t >I<locobj>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:42
+msgid "B<duplocale>():"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/duplocale.3:44
+#, no-wrap
+msgid "Since glibc 2.10:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:47
+msgid "_XOPEN_SOURCE\\ E<gt>=\\ 700"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/duplocale.3:47
+#, no-wrap
+msgid "Before glibc 2.10:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:50
+msgid "_GNU_SOURCE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:57
+msgid ""
+"The B<duplocale>()  function creates a duplicate of the locale object "
+"referred to by I<locobj>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:66
+msgid ""
+"If I<locobj> is B<LC_GLOBAL_LOCALE>, B<duplocale>()  creates a locale object"
+" containing a copy of the global locale determined by B<setlocale>(3)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:75
+msgid ""
+"On success, B<duplocale>()  returns a handle for the new locale object.  On "
+"error, it returns I<(locale_t)\\ 0>, and sets I<errno> to indicate the cause"
+" of the error."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/duplocale.3:76
+#, no-wrap
+msgid "B<ENOMEM>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:79
+msgid "Insufficient memory to create the duplicate locale object."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:83
+msgid ""
+"The B<duplocale>()  function first appeared in version 2.3 of the GNU C "
+"library."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:85
+msgid "POSIX.1-2008."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:87
+msgid "Duplicating a locale can serve the following purposes:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:91
+msgid ""
+"To create a copy of a locale object in which one of more categories are to "
+"be modified (using B<newlocale>(3))."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:98
+msgid ""
+"To obtain a handle for the current locale which can used in other functions "
+"that employ a locale handle, such as B<toupper_l>(3).  This is done by "
+"applying B<duplocale>()  to the value returned by the following call:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:100
+#, no-wrap
+msgid "    loc = uselocale((locale_t) 0);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:113
+msgid ""
+"This technique is necessary, because the above B<uselocale>(3)  call may "
+"return the value B<LC_GLOBAL_LOCALE>, which results in undefined behavior if"
+" passed to functions such as B<toupper_l>(3).  Calling B<duplocale>()  can "
+"be used to ensure that the B<LC_GLOBAL_LOCALE> value is converted into a "
+"usable locale object.  See EXAMPLE, below."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:118
+msgid ""
+"Each locale object created by B<duplocale>()  should be deallocated using "
+"B<freelocale>(3)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:129
+msgid ""
+"The program below uses B<uselocale>(3)  and B<duplocale>()  to obtain a "
+"handle for the current locale which is then passed to B<toupper_l>(3).  The "
+"program takes one command-line argument, a string of characters that is "
+"converted to uppercase and displayed on standard output.  An example of its "
+"use is the following:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:134
+#, no-wrap
+msgid ""
+"$ B<./a.out abc>\n"
+"ABC\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:144
+#, no-wrap
+msgid ""
+"#define _XOPEN_SOURCE 700\n"
+"#include E<lt>ctype.hE<gt>\n"
+"#include E<lt>stdio.hE<gt>\n"
+"#include E<lt>stdlib.hE<gt>\n"
+"#include E<lt>locale.hE<gt>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:147
+#, no-wrap
+msgid ""
+"#define errExit(msg)    do { perror(msg); exit(EXIT_FAILURE); \\e\n"
+"                        } while (0)\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:153
+#, no-wrap
+msgid ""
+"int\n"
+"main(int argc, char *argv[])\n"
+"{\n"
+"    locale_t loc, nloc;\n"
+"    char *p;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:158
+#, no-wrap
+msgid ""
+"    if (argc != 2) {\n"
+"        fprintf(stderr, \"Usage: %s string\\en\", argv[0]);\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:162
+#, no-wrap
+msgid ""
+"    /* This sequence is necessary, because uselocale() might return\n"
+"       the value LC_GLOBAL_LOCALE, which can\\(aqt be passed as an\n"
+"       argument to toupper_l() */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:166
+#, no-wrap
+msgid ""
+"    loc = uselocale((locale_t) 0);\n"
+"    if (loc == (locale_t) 0)\n"
+"        errExit(\"uselocale\");\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:170
+#, no-wrap
+msgid ""
+"    nloc = duplocale(loc);\n"
+"    if (nloc == (locale_t) 0)\n"
+"        errExit(\"duplocale\");\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:173
+#, no-wrap
+msgid ""
+"    for (p = argv[1]; *p; p++)\n"
+"        putchar(toupper_l(*p, nloc));\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:175
+#, no-wrap
+msgid "    printf(\"\\en\");\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:177
+#, no-wrap
+msgid "    freelocale(nloc);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/duplocale.3:187
+msgid ""
+"B<freelocale>(3), B<newlocale>(3), B<setlocale>(3), B<uselocale>(3), "
+"B<locale>(5), B<locale>(7)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/drand48.3:30
+#, no-wrap
+msgid "DRAND48"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:34
+msgid ""
+"drand48, erand48, lrand48, nrand48, mrand48, jrand48, srand48, seed48, "
+"lcong48 - generate uniformly distributed pseudo-random numbers"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:39
+#, no-wrap
+msgid "B<double drand48(void);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:41
+#, no-wrap
+msgid "B<double erand48(unsigned short >I<xsubi>B<[3]);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:43
+#, no-wrap
+msgid "B<long int lrand48(void);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:45
+#, no-wrap
+msgid "B<long int nrand48(unsigned short >I<xsubi>B<[3]);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:47
+#, no-wrap
+msgid "B<long int mrand48(void);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:49
+#, no-wrap
+msgid "B<long int jrand48(unsigned short >I<xsubi>B<[3]);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:51
+#, no-wrap
+msgid "B<void srand48(long int >I<seedval>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:53
+#, no-wrap
+msgid "B<unsigned short *seed48(unsigned short >I<seed16v>B<[3]);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:55
+#, no-wrap
+msgid "B<void lcong48(unsigned short >I<param>B<[7]);>\n"
+msgstr ""
+
+#.  .BR drand48 (),
+#.  .BR erand48 (),
+#.  .BR lrand48 (),
+#.  .BR nrand48 (),
+#.  .BR mrand48 (),
+#.  .BR jrand48 (),
+#.  .BR srand48 (),
+#.  .BR seed48 (),
+#.  .BR lcong48 ():
+#. type: Plain text
+#: man-pages/man3/drand48.3:76
+#, no-wrap
+msgid ""
+"All functions shown above:\n"
+"_XOPEN_SOURCE\n"
+"    || /* Glibc since 2.19: */ _DEFAULT_SOURCE\n"
+"    || /* Glibc versions E<lt>= 2.19: */ _SVID_SOURCE\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:80
+msgid ""
+"These functions generate pseudo-random numbers using the linear congruential"
+" algorithm and 48-bit integer arithmetic."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:88
+msgid ""
+"The B<drand48>()  and B<erand48>()  functions return nonnegative double-"
+"precision floating-point values uniformly distributed over the interval "
+"[0.0,\\ 1.0)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:95
+msgid ""
+"The B<lrand48>()  and B<nrand48>()  functions return nonnegative long "
+"integers uniformly distributed over the interval [0,\\ 2^31)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:102
+msgid ""
+"The B<mrand48>()  and B<jrand48>()  functions return signed long integers "
+"uniformly distributed over the interval [-2^31,\\ 2^31)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:121
+msgid ""
+"The B<srand48>(), B<seed48>()  and B<lcong48>()  functions are "
+"initialization functions, one of which should be called before using "
+"B<drand48>(), B<lrand48>()  or B<mrand48>().  The functions B<erand48>(), "
+"B<nrand48>()  and B<jrand48>()  do not require an initialization function to"
+" be called first."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:125
+msgid ""
+"All the functions work by generating a sequence of 48-bit integers, I<Xi>, "
+"according to the linear congruential formula:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:129
+#, no-wrap
+msgid "B<Xn+1 = (aXn + c) mod m, where n E<gt>= 0>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:142
+msgid ""
+"The parameter I<m> = 2^48, hence 48-bit integer arithmetic is performed.  "
+"Unless B<lcong48>()  is called, I<a> and I<c> are given by:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:147
+#, no-wrap
+msgid ""
+"B<a = 0x5DEECE66D>\n"
+"B<c = 0xB>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:167
+msgid ""
+"The value returned by any of the functions B<drand48>(), B<erand48>(), "
+"B<lrand48>(), B<nrand48>(), B<mrand48>()  or B<jrand48>()  is computed by "
+"first generating the next 48-bit I<Xi> in the sequence.  Then the "
+"appropriate number of bits, according to the type of data item to be "
+"returned, is copied from the high-order bits of I<Xi> and transformed into "
+"the returned value."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:193
+msgid ""
+"The functions B<drand48>(), B<lrand48>()  and B<mrand48>()  store the last "
+"48-bit I<Xi> generated in an internal buffer.  The functions B<erand48>(), "
+"B<nrand48>()  and B<jrand48>()  require the calling program to provide "
+"storage for the successive I<Xi> values in the array argument I<xsubi>.  The"
+" functions are initialized by placing the initial value of I<Xi> into the "
+"array before calling the function for the first time."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:202
+msgid ""
+"The initializer function B<srand48>()  sets the high order 32-bits of I<Xi> "
+"to the argument I<seedval>.  The low order 16-bits are set to the arbitrary "
+"value 0x330E."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:216
+msgid ""
+"The initializer function B<seed48>()  sets the value of I<Xi> to the 48-bit "
+"value specified in the array argument I<seed16v>.  The previous value of "
+"I<Xi> is copied into an internal buffer and a pointer to this buffer is "
+"returned by B<seed48>()."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:247
+msgid ""
+"The initialization function B<lcong48>()  allows the user to specify initial"
+" values for I<Xi>, I<a> and I<c>.  Array argument elements I<param[0-2]> "
+"specify I<Xi>, I<param[3-5]> specify I<a>, and I<param[6]> specifies I<c>.  "
+"After B<lcong48>()  has been called, a subsequent call to either "
+"B<srand48>()  or B<seed48>()  will restore the standard values of I<a> and "
+"I<c>."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/drand48.3:266
+#, no-wrap
+msgid ""
+"B<drand48>(),\n"
+"B<erand48>(),\n"
+"B<lrand48>(),\n"
+"B<nrand48>(),\n"
+"B<mrand48>(),\n"
+"B<jrand48>(),\n"
+"B<srand48>(),\n"
+"B<seed48>(),\n"
+"B<lcong48>()"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/drand48.3:268
+#, no-wrap
+msgid "MT-Unsafe race:drand48"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:275
+msgid ""
+"The above functions record global state information for the random number "
+"generator, so they are not thread-safe."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:277
+msgid "POSIX.1-2001, POSIX.1-2008, SVr4."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/drand48.3:279
+msgid "B<rand>(3), B<random>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/dlinfo.3:26
+#, no-wrap
+msgid "DLINFO"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:29
+msgid "dlinfo - obtain information about a dynamically loaded object"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:34
+#, no-wrap
+msgid ""
+"B<#define _GNU_SOURCE>\n"
+"B<#include E<lt>link.hE<gt>>\n"
+"B<#include E<lt>dlfcn.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:36
+#, no-wrap
+msgid "B<int dlinfo(void *>handleB<, int >requestB<, void *>infoB<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:38
+#, no-wrap
+msgid "Link with I<-ldl>.\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:57
+msgid ""
+"The B<dlinfo>()  function obtains information about the dynamically loaded "
+"object referred to by I<handle> (typically obtained by an earlier call to "
+"B<dlopen>(3)  or B<dlmopen>(3)).  The I<request> argument specifies which "
+"information is to be returned.  The I<info> argument is a pointer to a "
+"buffer used to store information returned by the call; the type of this "
+"argument depends on I<request>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:63
+msgid ""
+"The following values are supported for I<request> (with the corresponding "
+"type for I<info> shown in parentheses):"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dlinfo.3:63
+#, no-wrap
+msgid "B<RTLD_DI_LMID> (I<Lmid_t *>)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:68
+msgid ""
+"Obtain the ID of the link-map list (namespace) in which I<handle> is loaded."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dlinfo.3:68
+#, no-wrap
+msgid "B<RTLD_DI_LINKMAP> (I<struct link_map **>)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:81
+msgid ""
+"Obtain a pointer to the I<link_map> structure corresponding to I<handle>.  "
+"The I<info> argument points to a pointer to a I<link_map> structure, defined"
+" in I<E<lt>link.hE<gt>> as:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:94
+#, no-wrap
+msgid ""
+"struct link_map {\n"
+"    ElfW(Addr) l_addr;  /* Difference between the\n"
+"                           address in the ELF file and\n"
+"                           the address in memory */\n"
+"    char      *l_name;  /* Absolute pathname where\n"
+"                           object was found */\n"
+"    ElfW(Dyn) *l_ld;    /* Dynamic section of the\n"
+"                           shared object */\n"
+"    struct link_map *l_next, *l_prev;\n"
+"                        /* Chain of loaded objects */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:98
+#, no-wrap
+msgid ""
+"    /* Plus additional fields private to the\n"
+"       implementation */\n"
+"};\n"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dlinfo.3:100
+#, no-wrap
+msgid "B<RTLD_DI_ORIGIN> (I<char *>)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:106
+msgid ""
+"Copy the pathname of the origin of the shared object corresponding to "
+"I<handle> to the location pointed to by I<info>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dlinfo.3:106
+#, no-wrap
+msgid "B<RTLD_DI_SERINFO> (I<Dl_serinfo *>)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:123
+msgid ""
+"Obtain the library search paths for the shared object referred to by "
+"I<handle>.  The I<info> argument is a pointer to a I<Dl_serinfo> that "
+"contains the search paths.  Because the number of search paths may vary, the"
+" size of the structure pointed to by I<info> can vary.  The "
+"B<RTLD_DI_SERINFOSIZE> request described below allows applications to size "
+"the buffer suitably.  The caller must perform the following steps:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:134
+msgid ""
+"Use a B<RTLD_DI_SERINFOSIZE> request to populate a I<Dl_serinfo> structure "
+"with the size (I<dls_size>)  of the structure needed for the subsequent "
+"B<RTLD_DI_SERINFO> request."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:139
+msgid "Allocate a I<Dl_serinfo> buffer of the correct size (I<dls_size>)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:147
+msgid ""
+"Use a further B<RTLD_DI_SERINFOSIZE> request to populate the I<dls_size> and"
+" I<dls_cnt> fields of the buffer allocated in the previous step."
+msgstr ""
+
+#. type: IP
+#: man-pages/man3/dlinfo.3:147
+#, no-wrap
+msgid "4."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:151
+msgid "Use a B<RTLD_DI_SERINFO> to obtain the library search paths."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:157
+msgid "The I<Dl_serinfo> structure is defined as follows:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:168
+#, no-wrap
+msgid ""
+"typedef struct {\n"
+"    size_t dls_size;           /* Size in bytes of\n"
+"                                  the whole buffer */\n"
+"    unsigned int dls_cnt;      /* Number of elements\n"
+"                                  in 'dls_serpath' */\n"
+"    Dl_serpath dls_serpath[1]; /* Actually longer,\n"
+"                                  'dls_cnt' elements */\n"
+"} Dl_serinfo;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:174
+msgid ""
+"Each of the I<dls_serpath> elements in the above structure is a structure of"
+" the following form:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:183
+#, no-wrap
+msgid ""
+"typedef struct {\n"
+"    char *dls_name;            /* Name of library search\n"
+"                                  path directory */\n"
+"    unsigned int dls_flags;    /* Indicates where this\n"
+"                                  directory came from */\n"
+"} Dl_serpath;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:189
+msgid "The I<dls_flags> field is currently unused, and always contains zero."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dlinfo.3:189
+#, no-wrap
+msgid "B<RTLD_DI_SERINFOSIZE> (I<Dl_serinfo *>)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:202
+msgid ""
+"Populate the I<dls_size> and I<dls_cnt> fields of the I<Dl_serinfo> "
+"structure pointed to by I<info> with values suitable for allocating a buffer"
+" for use in a subsequent B<RTLD_DI_SERINFO> request."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dlinfo.3:202
+#, no-wrap
+msgid "B<RTLD_DI_TLS_MODID> (I<size_t *>, since glibc 2.4)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:208
+msgid ""
+"Obtain the module ID of this shared object's TLS (thread-local storage)  "
+"segment, as used in TLS relocations.  If this object does not define a TLS "
+"segment, zero is placed in I<*info>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dlinfo.3:208
+#, no-wrap
+msgid "B<RTLD_DI_TLS_DATA> (I<void **>, since glibc 2.4)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:216
+msgid ""
+"Obtain a pointer to the calling thread's TLS block corresponding to this "
+"shared object's TLS segment.  If this object does not define a PT_TLS "
+"segment, or if the calling thread has not allocated a block for it, NULL is "
+"placed in I<*info>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:222
+msgid ""
+"On success, B<dlinfo>()  returns 0.  On failure, it returns -1; the cause of"
+" the error can be diagnosed using B<dlerror>(3)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:225
+msgid "B<dlinfo>()  first appeared in glibc 2.3.3."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dlinfo.3:235
+#, no-wrap
+msgid "B<dlinfo>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:239
+msgid "This function is a nonstandard GNU extension."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:244
+msgid ""
+"This function derives from the Solaris function of the same name and also "
+"appears on some other systems.  The sets of requests supported by the "
+"various implementations overlaps only partially."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:253
+msgid ""
+"The program below opens a shared objects using B<dlopen>(3)  and then uses "
+"the B<RTLD_DI_SERINFOSIZE> and B<RTLD_DI_SERINFO> requests to obtain the "
+"library search path list for the library.  Here is an example of what we "
+"might see when running the program:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:259
+#, no-wrap
+msgid ""
+"$ B<./a.out /lib64/libm.so.6>\n"
+"dls_serpath[0].dls_name = /lib64\n"
+"dls_serpath[1].dls_name = /usr/lib64\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:269
+#, no-wrap
+msgid ""
+"#define _GNU_SOURCE\n"
+"#include E<lt>dlfcn.hE<gt>\n"
+"#include E<lt>link.hE<gt>\n"
+"#include E<lt>stdio.hE<gt>\n"
+"#include E<lt>stdlib.hE<gt>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:277
+#, no-wrap
+msgid ""
+"int\n"
+"main(int argc, char *argv[])\n"
+"{\n"
+"    void *handle;\n"
+"    Dl_serinfo serinfo;\n"
+"    Dl_serinfo *sip;\n"
+"    int j;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:282
+#, no-wrap
+msgid ""
+"    if (argc != 2) {\n"
+"        fprintf(stderr, \"Usage: %s E<lt>libpathE<gt>\\en\", argv[0]);\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:284
+#, no-wrap
+msgid "    /* Obtain a handle for shared object specified on command line */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:290
+#, no-wrap
+msgid ""
+"    handle = dlopen(argv[1], RTLD_NOW);\n"
+"    if (handle == NULL) {\n"
+"        fprintf(stderr, \"dlopen() failed: %s\\en\", dlerror());\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:293
+#, no-wrap
+msgid ""
+"    /* Discover the size of the buffer that we must pass to\n"
+"       RTLD_DI_SERINFO */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:298
+#, no-wrap
+msgid ""
+"    if (dlinfo(handle, RTLD_DI_SERINFOSIZE, &serinfo) == -1) {\n"
+"        fprintf(stderr, \"RTLD_DI_SERINFOSIZE failed: %s\\en\", dlerror());\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:300
+#, no-wrap
+msgid "    /* Allocate the buffer for use with RTLD_DI_SERINFO */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:306
+#, no-wrap
+msgid ""
+"    sip = malloc(serinfo.dls_size);\n"
+"    if (sip == NULL) {\n"
+"        perror(\"malloc\");\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:309
+#, no-wrap
+msgid ""
+"    /* Initialize the \\(aqdls_size\\(aq and \\(aqdls_cnt\\(aq fields in the newly\n"
+"       allocated buffer */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:314
+#, no-wrap
+msgid ""
+"    if (dlinfo(handle, RTLD_DI_SERINFOSIZE, sip) == -1) {\n"
+"        fprintf(stderr, \"RTLD_DI_SERINFOSIZE failed: %s\\en\", dlerror());\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:316
+#, no-wrap
+msgid "    /* Fetch and print library search list */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:321
+#, no-wrap
+msgid ""
+"    if (dlinfo(handle, RTLD_DI_SERINFO, sip) == -1) {\n"
+"        fprintf(stderr, \"RTLD_DI_SERINFO failed: %s\\en\", dlerror());\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:325
+#, no-wrap
+msgid ""
+"    for (j = 0; j E<lt> serinfo.dls_cnt; j++)\n"
+"        printf(\"dls_serpath[%d].dls_name = %s\\en\",\n"
+"                j, sip-E<gt>dls_serpath[j].dls_name);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlinfo.3:335
+msgid ""
+"B<dl_iterate_phdr>(3), B<dladdr>(3), B<dlerror>(3), B<dlopen>(3), "
+"B<dlsym>(3), B<ld.so>(8)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/difftime.3:30
+#, no-wrap
+msgid "DIFFTIME"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/difftime.3:30
+#, no-wrap
+msgid "2015-08-08"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/difftime.3:33
+msgid "difftime - calculate time difference"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/difftime.3:36
+#, no-wrap
+msgid "B<#include E<lt>time.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/difftime.3:38
+#, no-wrap
+msgid "B<double difftime(time_t >I<time1>B<, time_t >I<time0>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/difftime.3:48
+msgid ""
+"The B<difftime>()  function returns the number of seconds elapsed between "
+"time I<time1> and time I<time0>, represented as a I<double>.  Each of the "
+"times is specified in calendar time, which means its value is a measurement "
+"(in seconds) relative to the Epoch, 1970-01-01 00:00:00 +0000 (UTC)."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/difftime.3:58
+#, no-wrap
+msgid "B<difftime>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/difftime.3:62
+msgid "POSIX.1-2001, POSIX.1-2008, C89, C99, SVr4, 4.3BSD."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/difftime.3:67
+msgid ""
+"On a POSIX system, I<time_t> is an arithmetic type, and one could just "
+"define"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/difftime.3:71
+#, no-wrap
+msgid "#define difftime(t1,t0) (double)(t1 - t0)\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/difftime.3:75
+msgid "when the possible overflow in the subtraction is not a concern."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/difftime.3:81
+msgid ""
+"B<date>(1), B<gettimeofday>(2), B<time>(2), B<ctime>(3), B<gmtime>(3), "
+"B<localtime>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/dysize.3:26
+#, no-wrap
+msgid "DYSIZE"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/dysize.3:26
+#, no-wrap
+msgid "2016-03-15"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dysize.3:29
+msgid "dysize - get number of days for a given year"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dysize.3:31
+msgid "B<#include E<lt>time.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dysize.3:33
+msgid "B<int dysize(int >I<year>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dysize.3:44
+#, no-wrap
+msgid ""
+"B<dysize>():\n"
+"    Since glibc 2.19:\n"
+"        _DEFAULT_SOURCE\n"
+"    Glibc 2.19 and earlier:\n"
+"        _BSD_SOURCE || _SVID_SOURCE\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dysize.3:47
+msgid ""
+"The function returns 365 for a normal year and 366 for a leap year.  The "
+"calculation for leap year is based on:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dysize.3:51
+#, no-wrap
+msgid "(year) %4 == 0 && ((year) %100 != 0 || (year) %400 == 0)\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dysize.3:58
+msgid ""
+"The formula is defined in the macro I<__isleap(year)> also found in "
+"I<E<lt>time.hE<gt>>."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dysize.3:68
+#, no-wrap
+msgid "B<dysize>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dysize.3:72
+msgid "This function occurs in SunOS 4.x."
+msgstr ""
+
+#.  The SCO version of this function had a year-2000 problem.
+#. type: Plain text
+#: man-pages/man3/dysize.3:76
+msgid "This is a compatibility function only.  Don't use it in new programs."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dysize.3:77
+msgid "B<strftime>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/div.3:34
+#, no-wrap
+msgid "DIV"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/div.3:38
+msgid ""
+"div, ldiv, lldiv, imaxdiv - compute quotient and remainder of an integer "
+"division"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/div.3:45
+#, no-wrap
+msgid ""
+"B<div_t div(int >I<numerator>B<, int >I<denominator>B<);>\n"
+"B<ldiv_t ldiv(long >I<numerator>B<, long >I<denominator>B<);>\n"
+"B<lldiv_t lldiv(long long >I<numerator>B<, long long >I<denominator>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/div.3:47
+#, no-wrap
+msgid "B<#include E<lt>inttypes.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/div.3:49
+#, no-wrap
+msgid ""
+"B<imaxdiv_t imaxdiv(intmax_t >I<numerator>B<, intmax_t "
+">I<denominator>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/div.3:58
+msgid "B<lldiv>():"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/div.3:60
+msgid "_ISOC99_SOURCE || _POSIX_C_SOURCE\\ E<gt>=\\ 200112L"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/div.3:72
+msgid ""
+"The B<div>()  function computes the value I<numerator>/I<denominator> and "
+"returns the quotient and remainder in a structure named I<div_t> that "
+"contains two integer members (in unspecified order) named I<quot> and "
+"I<rem>.  The quotient is rounded toward zero.  The result satisfies "
+"I<quot>*I<denominator>+I<rem> = I<numerator>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/div.3:83
+msgid ""
+"The B<ldiv>(), B<lldiv>(), and B<imaxdiv>()  functions do the same, dividing"
+" numbers of the indicated type and returning the result in a structure of "
+"the indicated name, in all cases with fields I<quot> and I<rem> of the same "
+"type as the function arguments."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/div.3:85
+msgid "The I<div_t> (etc.) structure."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/div.3:98
+#, no-wrap
+msgid ""
+"B<div>(),\n"
+"B<ldiv>(),\n"
+"B<lldiv>(),\n"
+"B<imaxdiv>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/div.3:107
+msgid ""
+"POSIX.1-2001, POSIX.1-2008, C89, C99, SVr4, 4.3BSD.  The functions "
+"B<lldiv>()  and B<imaxdiv>()  were added in C99."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/div.3:109
+msgid "After"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/div.3:113
+#, no-wrap
+msgid "div_t q = div(-5, 3);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/div.3:117
+msgid "the values I<q.quot> and I<q.rem> are -1 and -2, respectively."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/div.3:119
+msgid "B<abs>(3), B<remainder>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/dlopen.3:35
+#, no-wrap
+msgid "DLOPEN"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:39
+msgid "dlclose, dlopen, dlmopen - open and close a shared object"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:43
+msgid "B<void *dlopen(const char *>I<filename>B<, int >I<flags>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:45
+msgid "B<int dlclose(void *>I<handle>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:51
+msgid ""
+"B<void *dlmopen (Lmid_t >I<lmid>B<, const char *>I<filename>B<, int "
+">I<flags>B<);>"
+msgstr ""
+
+#. type: SS
+#: man-pages/man3/dlopen.3:54
+#, no-wrap
+msgid "dlopen()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:68
+msgid ""
+"The function B<dlopen>()  loads the dynamic shared object (shared library)  "
+"file named by the null-terminated string I<filename> and returns an opaque "
+"\"handle\" for the loaded object.  This handle is employed with other "
+"functions in the dlopen API, such as B<dlsym>(3), B<dladdr>(3), "
+"B<dlinfo>(3), and B<dlclose>()."
+msgstr ""
+
+#.  FIXME On Solaris, when handle is NULL, we seem to get back
+#.  a handle for (something like) the root of the namespace.
+#.  The point here is that if we do a dlmopen(LM_ID_NEWLM), then
+#.  the filename==NULL case returns a different handle than
+#.  in the initial namespace. But, on glibc, the same handle is
+#.  returned. This is probably a bug in glibc.
+#. type: Plain text
+#: man-pages/man3/dlopen.3:87
+msgid ""
+"If I<filename> is NULL, then the returned handle is for the main program.  "
+"If I<filename> contains a slash (\"/\"), then it is interpreted as a "
+"(relative or absolute) pathname.  Otherwise, the dynamic linker searches for"
+" the object as follows (see B<ld.so>(8)  for further details):"
+msgstr ""
+
+#. type: IP
+#: man-pages/man3/dlopen.3:87 man-pages/man3/dlopen.3:91
+#: man-pages/man3/dlopen.3:98 man-pages/man3/dlopen.3:102
+#: man-pages/man3/dlopen.3:109
+#, no-wrap
+msgid "o"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:91
+msgid ""
+"(ELF only) If the executable file for the calling program contains a "
+"DT_RPATH tag, and does not contain a DT_RUNPATH tag, then the directories "
+"listed in the DT_RPATH tag are searched."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:98
+msgid ""
+"If, at the time that the program was started, the environment variable "
+"B<LD_LIBRARY_PATH> was defined to contain a colon-separated list of "
+"directories, then these are searched.  (As a security measure, this variable"
+" is ignored for set-user-ID and set-group-ID programs.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:102
+msgid ""
+"(ELF only) If the executable file for the calling program contains a "
+"DT_RUNPATH tag, then the directories listed in that tag are searched."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:109
+msgid ""
+"The cache file I</etc/ld.so.cache> (maintained by B<ldconfig>(8))  is "
+"checked to see whether it contains an entry for I<filename>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:115
+msgid "The directories I</lib> and I</usr/lib> are searched (in that order)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:123
+msgid ""
+"If the object specified by I<filename> has dependencies on other shared "
+"objects, then these are also automatically loaded by the dynamic linker "
+"using the same rules.  (This process may occur recursively, if those objects"
+" in turn have dependencies, and so on.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:126
+msgid "One of the following two values must be included in I<flags>:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dlopen.3:126
+#, no-wrap
+msgid "B<RTLD_LAZY>"
+msgstr ""
+
+#.  commit 12b5b6b7f78ea111e89bbf638294a5413c791072
+#. type: Plain text
+#: man-pages/man3/dlopen.3:139
+msgid ""
+"Perform lazy binding.  Resolve symbols only as the code that references them"
+" is executed.  If the symbol is never referenced, then it is never resolved."
+"  (Lazy binding is performed only for function references; references to "
+"variables are always immediately bound when the shared object is loaded.)  "
+"Since glibc 2.1.1, this flag is overridden by the effect of the "
+"B<LD_BIND_NOW> environment variable."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dlopen.3:139
+#, no-wrap
+msgid "B<RTLD_NOW>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:148
+msgid ""
+"If this value is specified, or the environment variable B<LD_BIND_NOW> is "
+"set to a nonempty string, all undefined symbols in the shared object are "
+"resolved before B<dlopen>()  returns.  If this cannot be done, an error is "
+"returned."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:151
+msgid "Zero or more of the following values may also be ORed in I<flags>:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dlopen.3:151
+#, no-wrap
+msgid "B<RTLD_GLOBAL>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:155
+msgid ""
+"The symbols defined by this shared object will be made available for symbol "
+"resolution of subsequently loaded shared objects."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dlopen.3:155
+#, no-wrap
+msgid "B<RTLD_LOCAL>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:162
+msgid ""
+"This is the converse of B<RTLD_GLOBAL>, and the default if neither flag is "
+"specified.  Symbols defined in this shared object are not made available to "
+"resolve references in subsequently loaded shared objects."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dlopen.3:162
+#, no-wrap
+msgid "B<RTLD_NODELETE> (since glibc 2.2)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:170
+msgid ""
+"Do not unload the shared object during B<dlclose>().  Consequently, the "
+"object's static variables are not reinitialized if the object is reloaded "
+"with B<dlopen>()  at a later time."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dlopen.3:170
+#, no-wrap
+msgid "B<RTLD_NOLOAD> (since glibc 2.2)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:183
+msgid ""
+"Don't load the shared object.  This can be used to test if the object is "
+"already resident (B<dlopen>()  returns NULL if it is not, or the object's "
+"handle if it is resident).  This flag can also be used to promote the flags "
+"on a shared object that is already loaded.  For example, a shared object "
+"that was previously loaded with B<RTLD_LOCAL> can be reopened with "
+"B<RTLD_NOLOAD\\ |\\ RTLD_GLOBAL>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dlopen.3:183
+#, no-wrap
+msgid "B<RTLD_DEEPBIND> (since glibc 2.3.4)"
+msgstr ""
+
+#.  Inimitably described by UD in
+#.  http://sources.redhat.com/ml/libc-hacker/2004-09/msg00083.html.
+#. type: Plain text
+#: man-pages/man3/dlopen.3:192
+msgid ""
+"Place the lookup scope of the symbols in this shared object ahead of the "
+"global scope.  This means that a self-contained object will use its own "
+"symbols in preference to global symbols with the same name contained in "
+"objects that have already been loaded."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:204
+msgid ""
+"If I<filename> is NULL, then the returned handle is for the main program.  "
+"When given to B<dlsym>(), this handle causes a search for a symbol in the "
+"main program, followed by all shared objects loaded at program startup, and "
+"then all shared objects loaded by B<dlopen>()  with the flag B<RTLD_GLOBAL>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:214
+msgid ""
+"External references in the shared object are resolved using the shared "
+"objects in that object's dependency list and any other objects previously "
+"opened with the B<RTLD_GLOBAL> flag.  If the executable was linked with the "
+"flag \"-rdynamic\" (or, synonymously, \"--export-dynamic\"), then the global"
+" symbols in the executable will also be used to resolve references in a "
+"dynamically loaded shared object."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:232
+msgid ""
+"If the same shared object is loaded again with B<dlopen>(), the same object "
+"handle is returned.  The dynamic linker maintains reference counts for "
+"object handles, so a dynamically loaded shared object is not deallocated "
+"until B<dlclose>()  has been called on it as many times as B<dlopen>()  has "
+"succeeded on it.  Any initialization returns (see below) are called just "
+"once.  However, a subsequent B<dlopen>()  call that loads the same shared "
+"object with B<RTLD_NOW> may force symbol resolution for a shared object "
+"earlier loaded with B<RTLD_LAZY>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:237
+msgid "If B<dlopen>()  fails for any reason, it returns NULL."
+msgstr ""
+
+#. type: SS
+#: man-pages/man3/dlopen.3:237
+#, no-wrap
+msgid "dlmopen()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:245
+msgid ""
+"This function performs the same task as B<dlopen>()\\(emthe I<filename> and "
+"I<flags> arguments, as well as the return value, are the same, except for "
+"the differences noted below."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:264
+msgid ""
+"The B<dlmopen>()  function differs from B<dlopen>()  primarily in that it "
+"accepts an additional argument, I<lmid>, that specifies the link-map list "
+"(also referred to as a I<namespace>)  in which the shared object should be "
+"loaded.  (By comparison, B<dlopen>()  adds the dynamically loaded shared "
+"object to the same namespace as the shared object from which the B<dlopen>()"
+"  call is made.)  The I<Lmid_t> type is an opaque handle that refers to a "
+"namespace."
+msgstr ""
+
+#.  FIXME: Is using dlinfo() RTLD_DI_LMID the right technique?
+#. type: Plain text
+#: man-pages/man3/dlopen.3:273
+msgid ""
+"The I<lmid> argument is either the ID of an existing namespace (which can be"
+" obtained using the B<dlinfo>(3)  B<RTLD_DI_LMID> request) or one of the "
+"following special values:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dlopen.3:273
+#, no-wrap
+msgid "B<LM_ID_BASE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:277
+msgid ""
+"Load the shared object in the initial namespace (i.e., the application's "
+"namespace)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dlopen.3:277
+#, no-wrap
+msgid "B<LM_ID_NEWLM>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:283
+msgid ""
+"Create a new namespace and load the shared object in that namespace.  The "
+"object must have been correctly linked to reference all of the other shared "
+"objects that it requires, since the new namespace is initially empty."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:290
+msgid ""
+"If I<filename> is NULL, then the only permitted value for I<lmid> is "
+"B<LM_ID_BASE>."
+msgstr ""
+
+#. type: SS
+#: man-pages/man3/dlopen.3:290
+#, no-wrap
+msgid "dlclose()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:303
+msgid ""
+"The function B<dlclose>()  decrements the reference count on the dynamically"
+" loaded shared object referred to by I<handle>.  If the reference count "
+"drops to zero, then the object is unloaded.  All shared objects that were "
+"automatically loaded when B<dlopen>()  was invoked on the object referred to"
+" by I<handle> are recursively closed in the same manner."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:315
+msgid ""
+"A successful return from B<dlclose>()  does not guarantee that the symbols "
+"associated with I<handle> are removed from the caller's address space.  In "
+"addition to references resulting from explicit B<dlopen>()  calls, a shared "
+"object may have been implicitly loaded (and reference counted) because of "
+"dependencies in other shared objects.  Only when all references have been "
+"released can the shared object be removed from the address space."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:325
+msgid ""
+"On success, B<dlopen>()  and B<dlmopen>()  return a non-NULL handle for the "
+"loaded library.  On error (file could not be found, was not readable, had "
+"the wrong format, or caused errors during loading), these functions return "
+"NULL."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:329
+msgid ""
+"On success, B<dlclose>()  returns 0; on error, it returns a nonzero value."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:332
+msgid "Errors from these functions can be diagnosed using B<dlerror>(3)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:339
+msgid ""
+"B<dlopen>()  and B<dlclose>()  are present in glibc 2.0 and later.  "
+"B<dlmopen>()  first appeared in glibc 2.3.4."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dlopen.3:351
+#, no-wrap
+msgid ""
+"B<dlopen>(),\n"
+"B<dlmopen>(),\n"
+"B<dlclose>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:361
+msgid ""
+"POSIX.1-2001 describes B<dlclose>()  and B<dlopen>().  The B<dlmopen>()  "
+"function is a GNU extension."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:369
+msgid ""
+"The B<RTLD_NOLOAD>, B<RTLD_NODELETE>, and B<RTLD_DEEPBIND> flags are GNU "
+"extensions; the first two of these flags are also present on Solaris."
+msgstr ""
+
+#. type: SS
+#: man-pages/man3/dlopen.3:370
+#, no-wrap
+msgid "dlmopen() and namespaces"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:378
+msgid ""
+"A link-map list defines an isolated namespace for the resolution of symbols "
+"by the dynamic linker.  Within a namespace, dependent shared objects are "
+"implicitly loaded according to the usual rules, and symbol references are "
+"likewise resolved according to the usual rules, but such resolution is "
+"confined to the definitions provided by the objects that have been "
+"(explicitly and implicitly) loaded into the namespace."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:398
+msgid ""
+"The B<dlmopen>()  function permits object-load isolation\\(emthe ability to "
+"load a shared object in a new namespace without exposing the rest of the "
+"application to the symbols made available by the new object.  Note that the "
+"use of the B<RTLD_LOCAL> flag is not sufficient for this purpose, since it "
+"prevents a shared object's symbols from being available to I<any> other "
+"shared object.  In some cases, we may want to make the symbols provided by a"
+" dynamically loaded shared object available to (a subset of) other shared "
+"objects without exposing those symbols to the entire application.  This can "
+"be achieved by using a separate namespace and the B<RTLD_GLOBAL> flag."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:414
+msgid ""
+"The B<dlmopen>()  function also can be used to provide better isolation than"
+" the B<RTLD_LOCAL> flag.  In particular, shared objects loaded with "
+"B<RTLD_LOCAL> may be promoted to B<RTLD_GLOBAL> if they are dependencies of "
+"another shared object loaded with B<RTLD_GLOBAL>.  Thus, B<RTLD_LOCAL> is "
+"insufficient to isolate a loaded shared object except in the (uncommon)  "
+"case where one has explicit control over all shared object dependencies."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:429
+msgid ""
+"Possible uses of B<dlmopen>()  are plugins where the author of the plugin-"
+"loading framework can't trust the plugin authors and does not wish any "
+"undefined symbols from the plugin framework to be resolved to plugin "
+"symbols.  Another use is to load the same object more than once.  Without "
+"the use of B<dlmopen>(), this would require the creation of distinct copies "
+"of the shared object file.  Using B<dlmopen>(), this can be achieved by "
+"loading the same shared object file into different namespaces."
+msgstr ""
+
+#.  DL_NNS
+#. type: Plain text
+#: man-pages/man3/dlopen.3:434
+msgid "The glibc implementation supports a maximum of 16 namespaces."
+msgstr ""
+
+#. type: SS
+#: man-pages/man3/dlopen.3:434
+#, no-wrap
+msgid "Initialization and finalization functions"
+msgstr ""
+
+#.  info gcc "C Extensions" "Function attributes"
+#. type: Plain text
+#: man-pages/man3/dlopen.3:453
+msgid ""
+"Shared objects may export functions using the "
+"B<__attribute__((constructor))> and B<__attribute__((destructor))> function "
+"attributes.  Constructor functions are executed before B<dlopen>()  returns,"
+" and destructor functions are executed before B<dlclose>()  returns.  A "
+"shared object may export multiple constructors and destructors, and "
+"priorities can be associated with each function to determine the order in "
+"which they are executed.  See the B<gcc> info pages (under \"Function "
+"attributes\")  for further information."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:473
+msgid ""
+"An older method of (partially) achieving the same result is via the use of "
+"two special symbols recognized by the linker: B<_init> and B<_fini>.  If a "
+"dynamically loaded shared object exports a routine named B<_init>(), then "
+"that code is executed after loading a shared object, before B<dlopen>()  "
+"returns.  If the shared object exports a routine named B<_fini>(), then that"
+" routine is called just before the object is unloaded.  In this case, one "
+"must avoid linking against the system startup files, which contain default "
+"versions of these files; this can be done by using the B<gcc>(1)  "
+"I<-nostartfiles> command-line option."
+msgstr ""
+
+#.  Using these routines, or the gcc
+#.  .B \-nostartfiles
+#.  or
+#.  .B \-nostdlib
+#.  options, is not recommended.
+#.  Their use may result in undesired behavior,
+#.  since the constructor/destructor routines will not be executed
+#.  (unless special measures are taken).
+#.  .\" void _init(void) __attribute__((constructor));
+#.  .\" void _fini(void) __attribute__((destructor));
+#. type: Plain text
+#: man-pages/man3/dlopen.3:494
+msgid ""
+"Use of B<_init> and B<_fini> is now deprecated in favor of the "
+"aforementioned constructors and destructors, which among other advantages, "
+"permit multiple initialization and finalization functions to be defined."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:499
+msgid ""
+"Since glibc 2.2.3, B<atexit>(3)  can be used to register an exit handler "
+"that is automatically called when a shared object is unloaded."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:501
+msgid "These functions are part of the dlopen API, derived from SunOS."
+msgstr ""
+
+#.  dlerror(): "invalid mode"
+#. type: Plain text
+#: man-pages/man3/dlopen.3:516
+msgid ""
+"As at glibc 2.24, specifying the B<RTLD_GLOBAL> flag when calling "
+"B<dlmopen>()  generates an error.  Furthermore, specifying B<RTLD_GLOBAL> "
+"when calling B<dlopen>()  results in a program crash (B<SIGSEGV>)  if the "
+"call is made from any object loaded in a namespace other than the initial "
+"namespace."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:522
+msgid ""
+"The program below loads the (glibc) math library, looks up the address of "
+"the B<cos>(3)  function, and prints the cosine of 2.0.  The following is an "
+"example of building and running the program:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:528
+#, no-wrap
+msgid ""
+"$ B<cc dlopen_demo.c -ldl>\n"
+"$ B<./a.out>\n"
+"-0.416147\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:544
+#, no-wrap
+msgid ""
+"#include E<lt>stdio.hE<gt>\n"
+"#include E<lt>stdlib.hE<gt>\n"
+"#include E<lt>dlfcn.hE<gt>\n"
+"#include E<lt>gnu/lib-names.hE<gt>  /* Defines LIBM_SO (which will be a\n"
+"                               string such as \"libm.so.6\") */\n"
+"int\n"
+"main(void)\n"
+"{\n"
+"    void *handle;\n"
+"    double (*cosine)(double);\n"
+"    char *error;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:550
+#, no-wrap
+msgid ""
+"    handle = dlopen(LIBM_SO, RTLD_LAZY);\n"
+"    if (!handle) {\n"
+"        fprintf(stderr, \"%s\\en\", dlerror());\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:552
+#, no-wrap
+msgid "    dlerror();    /* Clear any existing error */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:554
+#, no-wrap
+msgid "    cosine = (double (*)(double)) dlsym(handle, \"cos\");\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:559
+#, no-wrap
+msgid ""
+"    /* According to the ISO C standard, casting between function\n"
+"       pointers and 'void *', as done above, produces undefined results.\n"
+"       POSIX.1-2003 and POSIX.1-2008 accepted this state of affairs and\n"
+"       proposed the following workaround:\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:561
+#, no-wrap
+msgid "           *(void **) (&cosine) = dlsym(handle, \"cos\");\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:564
+#, no-wrap
+msgid ""
+"       This (clumsy) cast conforms with the ISO C standard and will\n"
+"       avoid any compiler warnings.\n"
+msgstr ""
+
+#. http://pubs.opengroup.org/onlinepubs/009695399/functions/dlsym.html#tag_03_112_08
+#. http://pubs.opengroup.org/onlinepubs/9699919799/functions/dlsym.html#tag_16_96_07
+#.  http://austingroupbugs.net/view.php?id=74
+#. type: Plain text
+#: man-pages/man3/dlopen.3:573
+#, no-wrap
+msgid ""
+"       The 2013 Technical Corrigendum to POSIX.1-2008 (a.k.a.\n"
+"       POSIX.1-2013) improved matters by requiring that conforming\n"
+"       implementations support casting 'void *' to a function pointer.\n"
+"       Nevertheless, some compilers (e.g., gcc with the '-pedantic'\n"
+"       option) may complain about the cast used in this program. */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:579
+#, no-wrap
+msgid ""
+"    error = dlerror();\n"
+"    if (error != NULL) {\n"
+"        fprintf(stderr, \"%s\\en\", error);\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:584
+#, no-wrap
+msgid ""
+"    printf(\"%f\\en\", (*cosine)(2.0));\n"
+"    dlclose(handle);\n"
+"    exit(EXIT_SUCCESS);\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:597
+msgid ""
+"B<ld>(1), B<ldd>(1), B<pldd>(1), B<dl_iterate_phdr>(3), B<dladdr>(3), "
+"B<dlerror>(3), B<dlinfo>(3), B<dlsym>(3), B<rtld-audit>(7), B<ld.so>(8), "
+"B<ldconfig>(8)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlopen.3:598
+msgid "gcc info pages, ld info pages"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/dladdr.3:27
+#, no-wrap
+msgid "DLADDR"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dladdr.3:30
+msgid "dladdr, dladdr1 - translate address to symbolic information"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dladdr.3:34
+#, no-wrap
+msgid ""
+"B<#define _GNU_SOURCE>\n"
+"B<#include E<lt>dlfcn.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dladdr.3:36
+#, no-wrap
+msgid "B<int dladdr(void *>I<addr>B<, Dl_info *>I<info>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dladdr.3:39
+#, no-wrap
+msgid ""
+"B<int dladdr1(void *>I<addr>B<, Dl_info *>I<info>B<, void "
+"**>I<extra_info>B<, int >I<flags>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dladdr.3:55
+msgid ""
+"The function B<dladdr>()  determines whether the address specified in "
+"I<addr> is located in one of the shared objects loaded by the calling "
+"application.  If it is, then B<dladdr>()  returns information about the "
+"shared object and symbol that overlaps I<addr>.  This information is "
+"returned in a I<Dl_info> structure:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dladdr.3:68
+#, no-wrap
+msgid ""
+"typedef struct {\n"
+"    const char *dli_fname;  /* Pathname of shared object that\n"
+"                               contains address */\n"
+"    void       *dli_fbase;  /* Base address at which shared\n"
+"                               object is loaded */\n"
+"    const char *dli_sname;  /* Name of symbol whose definition\n"
+"                               overlaps I<addr> */\n"
+"    void       *dli_saddr;  /* Exact address of symbol named\n"
+"                               in I<dli_sname> */\n"
+"} Dl_info;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dladdr.3:78
+msgid ""
+"If no symbol matching I<addr> could be found, then I<dli_sname> and "
+"I<dli_saddr> are set to NULL."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dladdr.3:88
+msgid ""
+"The function B<dladdr1>()  is like B<dladdr>(), but returns additional "
+"information via the argument I<extra_info>.  The information returned "
+"depends on the value specified in I<flags>, which can have one of the "
+"following values:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dladdr.3:88
+#, no-wrap
+msgid "B<RTLD_DL_LINKMAP>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dladdr.3:100
+msgid ""
+"Obtain a pointer to the link map for the matched file.  The I<extra_info> "
+"argument points to a pointer to a I<link_map> structure (i.e., I<struct "
+"link_map\\ **>), defined in I<E<lt>link.hE<gt>> as:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dladdr.3:119
+#, no-wrap
+msgid "B<RTLD_DL_SYMENT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dladdr.3:137
+msgid ""
+"Obtain a pointer to the ELF symbol table entry of the matching symbol.  The "
+"I<extra_info> argument is a pointer to a symbol pointer: I<const ElfW(Sym) "
+"**>.  The I<ElfW>()  macro definition turns its argument into the name of an"
+" ELF data type suitable for the hardware architecture.  For example, on a "
+"64-bit platform, I<ElfW(Sym)> yields the data type name I<Elf64_Sym>, which "
+"is defined in I<E<lt>elf.hE<gt>> as:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dladdr.3:148
+#, no-wrap
+msgid ""
+"typedef struct  {\n"
+"    Elf64_Word    st_name;     /* Symbol name */\n"
+"    unsigned char st_info;     /* Symbol type and binding */\n"
+"    unsigned char st_other;    /* Symbol visibility */\n"
+"    Elf64_Section st_shndx;    /* Section index */\n"
+"    Elf64_Addr    st_value;    /* Symbol value */\n"
+"    Elf64_Xword   st_size;     /* Symbol size */\n"
+"} Elf64_Sym;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dladdr.3:154
+msgid "The I<st_name> field is an index into the string table."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dladdr.3:163
+msgid ""
+"The I<st_info> field encodes the symbol's type and binding.  The type can be"
+" extracted using the macro B<ELF64_ST_TYPE(st_info)> (or B<ELF32_ST_TYPE()> "
+"on 32-bit platforms), which yields one of the following values:"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:167 man-pages/man3/dladdr.3:190
+#: man-pages/man3/dladdr.3:209
+#, no-wrap
+msgid "Description"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:168
+#, no-wrap
+msgid "STT_NOTYPE"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:168
+#, no-wrap
+msgid "Symbol type is unspecified"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:169
+#, no-wrap
+msgid "STT_OBJECT"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:169
+#, no-wrap
+msgid "Symbol is a data object"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:170
+#, no-wrap
+msgid "STT_FUNC"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:170
+#, no-wrap
+msgid "Symbol is a code object"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:171
+#, no-wrap
+msgid "STT_SECTION"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:171
+#, no-wrap
+msgid "Symbol associated with a section"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:172
+#, no-wrap
+msgid "STT_FILE"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:172
+#, no-wrap
+msgid "Symbol's name is file name"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:173
+#, no-wrap
+msgid "STT_COMMON"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:173
+#, no-wrap
+msgid "Symbol is a common data object"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:174
+#, no-wrap
+msgid "STT_TLS"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:174
+#, no-wrap
+msgid "Symbol is thread-local data object"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:175
+#, no-wrap
+msgid "STT_GNU_IFUNC"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:175
+#, no-wrap
+msgid "Symbol is indirect code object"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dladdr.3:186
+msgid ""
+"The symbol binding can be extracted from the I<st_info> field using the "
+"macro B<ELF64_ST_BIND(st_info)> (or B<ELF32_ST_BIND()> on 32-bit platforms),"
+" which yields one of the following values:"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:191
+#, no-wrap
+msgid "STB_LOCAL"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:191
+#, no-wrap
+msgid "Local symbol"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:192
+#, no-wrap
+msgid "STB_GLOBAL"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:192
+#, no-wrap
+msgid "Global symbol"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:193
+#, no-wrap
+msgid "STB_WEAK"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:193
+#, no-wrap
+msgid "Weak symbol"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:194
+#, no-wrap
+msgid "STB_GNU_UNIQUE"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:194
+#, no-wrap
+msgid "Unique symbol"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dladdr.3:205
+msgid ""
+"The I<st_other> field contains the symbol's visibility, which can be "
+"extracted using the macro B<ELF64_ST_VISIBILITY(st_info)> (or "
+"B<ELF32_ST_VISIBILITY()> on 32-bit platforms), which yields one of the "
+"following values:"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:210
+#, no-wrap
+msgid "STV_DEFAULT"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:210
+#, no-wrap
+msgid "Default symbol visibility rules"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:211
+#, no-wrap
+msgid "STV_INTERNAL"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:211
+#, no-wrap
+msgid "Processor-specific hidden class"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:212
+#, no-wrap
+msgid "STV_HIDDEN"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:212
+#, no-wrap
+msgid "Symbol unavailable in other modules"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:213
+#, no-wrap
+msgid "STV_PROTECTED"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:213
+#, no-wrap
+msgid "Not preemptible, not exported"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dladdr.3:226
+msgid ""
+"On success, these functions return a nonzero value.  If the address "
+"specified in I<addr> could be matched to a shared object, but not to a "
+"symbol in the shared object, then the I<info-E<gt>dli_sname> and "
+"I<info-E<gt>dli_saddr> fields are set to NULL."
+msgstr ""
+
+#.  According to the FreeBSD man page, dladdr1() does signal an
+#.  error via dlerror() for this case.
+#. type: Plain text
+#: man-pages/man3/dladdr.3:236
+msgid ""
+"If the address specified in I<addr> could not be matched to a shared object,"
+" then these functions return 0.  In this case, an error message is I<not> "
+"available via B<dlerror>(3)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dladdr.3:241
+msgid ""
+"B<dladdr>()  is present in glibc 2.0 and later.  B<dladdr1>()  first "
+"appeared in glibc 2.3.3."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dladdr.3:252
+#, no-wrap
+msgid ""
+"B<dladdr>(),\n"
+"B<dladdr1>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dladdr.3:257
+msgid ""
+"These functions are nonstandard GNU extensions that are also present on "
+"Solaris."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dladdr.3:269
+msgid ""
+"Sometimes, the function pointers you pass to B<dladdr>()  may surprise you."
+"  On some architectures (notably i386 and x86-64), I<dli_fname> and "
+"I<dli_fbase> may end up pointing back at the object from which you called "
+"B<dladdr>(), even if the function used as an argument should come from a "
+"dynamically linked library."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dladdr.3:285
+msgid ""
+"The problem is that the function pointer will still be resolved at compile "
+"time, but merely point to the I<plt> (Procedure Linkage Table)  section of "
+"the original object (which dispatches the call after asking the dynamic "
+"linker to resolve the symbol).  To work around this, you can try to compile "
+"the code to be position-independent: then, the compiler cannot prepare the "
+"pointer at compile time any more and B<gcc>(1)  will generate code that just"
+" loads the final symbol address from the I<got> (Global Offset Table) at run"
+" time before passing it to B<dladdr>()."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dladdr.3:290
+msgid ""
+"B<dl_iterate_phdr>(3), B<dlinfo>(3), B<dlopen>(3), B<dlsym>(3), B<ld.so>(8)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/dlerror.3:25
+#, no-wrap
+msgid "DLERROR"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlerror.3:28
+msgid "dlerror - obtain error diagnostic for functions in the dlopen API"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlerror.3:32
+msgid "B<char *dlerror(void);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlerror.3:45
+msgid ""
+"The B<dlerror>()  function returns a human-readable, null-terminated string "
+"describing the most recent error that occurred from a call to one of the "
+"functions in the dlopen API since the last call to B<dlerror>().  The "
+"returned string does I<not> include a trailing newline."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlerror.3:49
+msgid ""
+"B<dlerror>()  returns NULL if no errors have occurred since initialization "
+"or since it was last called."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlerror.3:52
+msgid "B<dlerror>()  is present in glibc 2.0 and later."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dlerror.3:62
+#, no-wrap
+msgid "B<dlerror>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlerror.3:66
+msgid "POSIX.1-2001."
+msgstr ""
+
+#.  .LP
+#.  The string returned by
+#.  .BR dlerror ()
+#.  should not be modified.
+#.  Some systems give the prototype as
+#.  .sp
+#.  .in +5
+#.  .B "const char *dlerror(void);"
+#.  .in
+#. type: Plain text
+#: man-pages/man3/dlerror.3:82
+msgid ""
+"The message returned by B<dlerror>()  may reside in a statically allocated "
+"buffer that is overwritten by subsequent B<dlerror>()  calls."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlerror.3:84
+msgid "This function is part of the dlopen API, derived from SunOS."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dlerror.3:91
+msgid "B<dladdr>(3), B<dlinfo>(3), B<dlopen>(3), B<dlsym>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/dirfd.3:25
+#, no-wrap
+msgid "DIRFD"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dirfd.3:28
+msgid "dirfd - get directory stream file descriptor"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dirfd.3:30
+msgid "B<#include E<lt>sys/types.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dirfd.3:32
+msgid "B<#include E<lt>dirent.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dirfd.3:34
+msgid "B<int dirfd(DIR *>I<dirp>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dirfd.3:41
+msgid "B<dirfd>():"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dirfd.3:47
+#, no-wrap
+msgid ""
+"/* Since glibc 2.10: */ _POSIX_C_SOURCE\\ E<gt>=\\ 200809L\n"
+"    || /* Glibc versions E<lt>= 2.19: */ _BSD_SOURCE || _SVID_SOURCE\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dirfd.3:55
+msgid ""
+"The function B<dirfd>()  returns the file descriptor associated with the "
+"directory stream I<dirp>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dirfd.3:65
+msgid ""
+"This file descriptor is the one used internally by the directory stream.  As"
+" a result, it is useful only for functions which do not depend on or alter "
+"the file position, such as B<fstat>(2)  and B<fchdir>(2).  It will be "
+"automatically closed when B<closedir>(3)  is called."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dirfd.3:70
+msgid ""
+"On success, a nonnegative file descriptor is returned.  On error, -1 is "
+"returned, and I<errno> is set to indicate the cause of the error."
+msgstr ""
+
+#.  glibc 2.8
+#. type: Plain text
+#: man-pages/man3/dirfd.3:75
+msgid ""
+"POSIX.1-2008 specifies two errors, neither of which is returned by the "
+"current implementation."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dirfd.3:79
+msgid "I<dirp> does not refer to a valid directory stream."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/dirfd.3:79
+#, no-wrap
+msgid "B<ENOTSUP>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dirfd.3:83
+msgid ""
+"The implementation does not support the association of a file descriptor "
+"with a directory."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/dirfd.3:93
+#, no-wrap
+msgid "B<dirfd>()"
+msgstr ""
+
+#.  It is present in libc5 (since 5.1.2) and in glibc2.
+#. type: Plain text
+#: man-pages/man3/dirfd.3:99
+msgid ""
+"POSIX.1-2008.  This function was a BSD extension, present in 4.3BSD-Reno, "
+"not in 4.2BSD."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/dirfd.3:107
+msgid ""
+"B<open>(2), B<closedir>(3), B<opendir>(3), B<readdir>(3), B<rewinddir>(3), "
+"B<scandir>(3), B<seekdir>(3), B<telldir>(3)"
+msgstr ""

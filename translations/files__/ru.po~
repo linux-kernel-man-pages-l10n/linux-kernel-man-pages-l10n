@@ -1,0 +1,624 @@
+# Copyright (C) 2013 Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Yuri Kozlov <yuray@komyakino.ru>, 2011-2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: translation of man-pages\n"
+"POT-Creation-Date: 2012-04-29 11:30+0400\n"
+"PO-Revision-Date: 2013-10-12 11:52+0400\n"
+"Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
+"Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<"
+"=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 1.4\n"
+
+#. type: TH
+#: man-pages/man2/_syscall.2:38
+#, no-wrap
+msgid "_SYSCALL"
+msgstr "_SYSCALL"
+
+#. type: TH
+#: man-pages/man2/_syscall.2:38
+#, no-wrap
+msgid "2007-12-19"
+msgstr "2007-12-19"
+
+#. type: TH
+#: man-pages/man2/_syscall.2:38
+#, no-wrap
+msgid "Linux"
+msgstr "Linux"
+
+#. type: TH
+#: man-pages/man2/_syscall.2:38
+#, no-wrap
+msgid "Linux Programmer's Manual"
+msgstr "Руководство программиста Linux"
+
+#. type: SH
+#: man-pages/man2/_syscall.2:39
+#, no-wrap
+msgid "NAME"
+msgstr "ИМЯ"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:41
+msgid "_syscall - invoking a system call without library support (OBSOLETE)"
+msgstr ""
+"_syscall - выполняет системный вызов, который не поддерживается библиотекой "
+"(УСТАРЕЛ)"
+
+#. type: SH
+#: man-pages/man2/_syscall.2:41
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr "ОБЗОР"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:43
+msgid "B<#include E<lt>linux/unistd.hE<gt>>"
+msgstr "B<#include E<lt>linux/unistd.hE<gt>>"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:45
+msgid "A _syscall macro"
+msgstr "Макрос _syscall"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:47
+msgid "desired system call"
+msgstr "желаемый системный вызов"
+
+#. type: SH
+#: man-pages/man2/_syscall.2:47
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr "ОПИСАНИЕ"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:53
+msgid ""
+"The important thing to know about a system call is its prototype.  You need "
+"to know how many arguments, their types, and the function return type.  "
+"There are seven macros that make the actual call into the system easier.  "
+"They have the form:"
+msgstr ""
+"При использовании системного вызова необходима информация о его прототипе. "
+"Вам нужно знать количество аргументов, их типы и тип возвращаемого значения. "
+"Есть несколько макросов, которые облегчают выполнение системных вызовов. Они "
+"имеют вид:"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:56
+msgid "_syscallI<X>(I<type>,I<name>,I<type1>,I<arg1>,I<type2>,I<arg2>,...)"
+msgstr "_syscallI<X>(I<type>,I<name>,I<type1>,I<arg1>,I<type2>,I<arg2>,...)"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:59
+msgid "where"
+msgstr "где"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:63
+msgid ""
+"I<X> is 0\\(en6, which are the number of arguments taken by the system call"
+msgstr "I<X> 0\\(en6, количество аргументов, принимаемых системным вызовом"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:66
+msgid "I<type> is the return type of the system call"
+msgstr "I<type> \\(em тип возвращаемого значения системного вызова"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:69
+msgid "I<name> is the name of the system call"
+msgstr "I<name> \\(em имя системного вызова"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:72
+msgid "I<typeN> is the Nth argument's type"
+msgstr "I<typeN> \\(em тип N-го аргумента"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:75
+msgid "I<argN> is the name of the Nth argument"
+msgstr "I<argN> \\(em имя N-го аргумента"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:83
+msgid ""
+"These macros create a function called I<name> with the arguments you "
+"specify.  Once you include the _syscall() in your source file, you call the "
+"system call by I<name>."
+msgstr ""
+"Эти макросы создают функцию с именем I<name> и указанными аргументами. После "
+"добавления _syscall() в код, вы можете вызывать системный вызов по имени I<"
+"name>."
+
+#. type: SH
+#: man-pages/man2/_syscall.2:83
+#, no-wrap
+msgid "FILES"
+msgstr "ФАЙЛЫ"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:85
+msgid "I</usr/include/linux/unistd.h>"
+msgstr "I</usr/include/linux/unistd.h>"
+
+#. type: SH
+#: man-pages/man2/_syscall.2:85
+#, no-wrap
+msgid "CONFORMING TO"
+msgstr "СООТВЕТСТВИЕ СТАНДАРТАМ"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:87
+msgid "The use of these macros is Linux-specific, and deprecated."
+msgstr "Эти макросы есть только в Linux и они устарели."
+
+#. type: SH
+#: man-pages/man2/_syscall.2:87
+#, no-wrap
+msgid "NOTES"
+msgstr "ЗАМЕЧАНИЯ"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:97
+msgid ""
+"Starting around kernel 2.6.18, the _syscall macros were removed from header "
+"files supplied to user space.  Use B<syscall>(2)  instead.  (Some "
+"architectures, notably ia64, never provided the _syscall macros; on those "
+"architectures, B<syscall>(2)  was always required.)"
+msgstr ""
+"Начиная, приблизительно, с ядра 2.6.18, макросы _syscall удалены из "
+"заголовочных файлов, используемых в пользовательском пространстве. Вместо них "
+"используйте B<syscall>(2). (Для некоторых архитектур, например ia64, макросы "
+"_syscall никогда не предоставлялись; на таких архитектурах всегда требуется "
+"макрос B<syscall>(2).)"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:103
+msgid ""
+"The _syscall() macros I<do not> produce a prototype.  You may have to create"
+" one, especially for C++ users."
+msgstr ""
+"Макрос _syscall() I<не> создаёт прототип. Вам, вероятно, придётся создавать "
+"его самостоятельно, особенно пользователям C++."
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:124
+msgid ""
+"System calls are not required to return only positive or negative error "
+"codes.  You need to read the source to be sure how it will return errors.  "
+"Usually, it is the negative of a standard error code, for example, "
+"-I<EPERM>.  The _syscall() macros will return the result I<r> of the system "
+"call when I<r> is nonnegative, but will return -1 and set the variable "
+"I<errno> to -I<r> when I<r> is negative.  For the error codes, see "
+"B<errno>(3)."
+msgstr ""
+"Для системных вызовов не требуется возвращать только положительный или "
+"отрицательный код ошибки. Вам нужно прочитать исходный код, чтобы выяснить "
+"как "
+"возвращаются ошибки. Обычно, это отрицательный стандартный код ошибки, "
+"например, "
+"-I<EPERM>. "
+"Макрос _syscall() возвращает результат I<r> из системного вызова, если "
+"I<r> неотрицательно, но вернёт -1 и установит значение I<errno> равное "
+"-I<r>, когда I<r> отрицательно. Коды ошибок смотрите в B<errno>(3)."
+
+#.  The preferred way to invoke system calls that glibc does not know
+#.  about yet is via
+#.  .BR syscall (2).
+#.  However, this mechanism can be used only if using a libc
+#.  (such as glibc) that supports
+#.  .BR syscall (2),
+#.  and if the
+#.  .I <sys/syscall.h>
+#.  header file contains the required SYS_foo definition.
+#.  Otherwise, the use of a _syscall macro is required.
+#. type: Plain text
+#: man-pages/man2/_syscall.2:140
+msgid ""
+"When defining a system call, the argument types I<must> be passed by-value "
+"or by-pointer (for aggregates like structs)."
+msgstr ""
+"При определении системного вызова типы аргументов I<должны> передаваться по "
+"значению или по ссылке (для составных типов, например структур)."
+
+#. type: SH
+#: man-pages/man2/_syscall.2:140
+#, no-wrap
+msgid "EXAMPLE"
+msgstr "ПРИМЕР"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:147
+#, no-wrap
+msgid ""
+"#include E<lt>stdio.hE<gt>\n"
+"#include E<lt>stdlib.hE<gt>\n"
+"#include E<lt>errno.hE<gt>\n"
+"#include E<lt>linux/unistd.hE<gt>       /* for _syscallX macros/related stuff "
+"*/\n"
+"#include E<lt>linux/kernel.hE<gt>       /* for struct sysinfo */\n"
+msgstr ""
+"#include E<lt>stdio.hE<gt>\n#include E<lt>stdlib.hE<gt>\n#include E<lt>"
+"errno.hE<gt>\n#include E<lt>linux/unistd.hE<gt>       /* поддержка _syscallX "
+"*/\n#include E<lt>linux/kernel.hE<gt>       /* struct sysinfo */\n"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:149
+#, no-wrap
+msgid "_syscall1(int, sysinfo, struct sysinfo *, info);\n"
+msgstr "_syscall1(int, sysinfo, struct sysinfo *, info);\n"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:152
+#, no-wrap
+msgid ""
+"/* Note: if you copy directly from the nroff source, remember to\n"
+"REMOVE the extra backslashes in the printf statement. */\n"
+msgstr ""
+"/* Замечание: если вы копируете непосредственно из\nисходного nroff-кода "
+"страницы, не забудьте\nУДАЛИТЬ лишние символы обратной косой черты в "
+"операторе printf. */\n"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:158
+#, no-wrap
+msgid ""
+"int\n"
+"main(void)\n"
+"{\n"
+"    struct sysinfo s_info;\n"
+"    int error;\n"
+msgstr "int\nmain(void)\n{\n    struct sysinfo s_info;\n    int error;\n"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:173
+#, no-wrap
+msgid ""
+"    error = sysinfo(&s_info);\n"
+"    printf(\"code error = %d\\en\", error);\n"
+"    printf(\"Uptime = %lds\\enLoad: 1 min %lu / 5 min %lu / 15 min %lu\\en\"\n"
+"           \"RAM: total %lu / free %lu / shared %lu\\en\"\n"
+"           \"Memory in buffers = %lu\\enSwap: total %lu / free %lu\\en\"\n"
+"           \"Number of processes = %d\\en\",\n"
+"           s_info.uptime, s_info.loads[0],\n"
+"           s_info.loads[1], s_info.loads[2],\n"
+"           s_info.totalram, s_info.freeram,\n"
+"           s_info.sharedram, s_info.bufferram,\n"
+"           s_info.totalswap, s_info.freeswap,\n"
+"           s_info.procs);\n"
+"    exit(EXIT_SUCCESS);\n"
+"}\n"
+msgstr ""
+"    error = sysinfo(&s_info);\n    printf(\"code error = %d\\en\", error);\n  "
+"  printf(\"Uptime = %lds\\enLoad: 1 min %lu / 5 min %lu / 15 min %lu\\en\"\n  "
+"         \"RAM: total %lu / free %lu / shared %lu\\en\"\n           \"Memory "
+"in buffers = %lu\\enSwap: total %lu / free %lu\\en\"\n           \"Number of "
+"processes = %d\\en\",\n           s_info.uptime, s_info.loads[0],\n           "
+"s_info.loads[1], s_info.loads[2],\n           s_info.totalram, "
+"s_info.freeram,\n           s_info.sharedram, s_info.bufferram,\n           "
+"s_info.totalswap, s_info.freeswap,\n           s_info.procs);\n    "
+"exit(EXIT_SUCCESS);\n}\n"
+
+#. type: SS
+#: man-pages/man2/_syscall.2:174
+#, no-wrap
+msgid "Sample output"
+msgstr "Результат работы примера"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:183
+#, no-wrap
+msgid ""
+"code error = 0\n"
+"uptime = 502034s\n"
+"Load: 1 min 13376 / 5 min 5504 / 15 min 1152\n"
+"RAM: total 15343616 / free 827392 / shared 8237056\n"
+"Memory in buffers = 5066752\n"
+"Swap: total 27881472 / free 24698880\n"
+"Number of processes = 40\n"
+msgstr ""
+"code error = 0\nuptime = 502034s\nLoad: 1 min 13376 / 5 min 5504 / 15 min "
+"1152\nRAM: total 15343616 / free 827392 / shared 8237056\nMemory in buffers = "
+"5066752\nSwap: total 27881472 / free 24698880\nNumber of processes = 40\n"
+
+#. type: SH
+#: man-pages/man2/_syscall.2:184
+#, no-wrap
+msgid "SEE ALSO"
+msgstr "СМОТРИТЕ ТАКЖЕ"
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:187
+msgid "B<intro>(2), B<syscall>(2), B<errno>(3)"
+msgstr "B<intro>(2), B<syscall>(2), B<errno>(3)"
+
+#. type: TH
+#: man-pages/man2/_exit.2:29
+#, no-wrap
+msgid "_EXIT"
+msgstr "_EXIT"
+
+#. type: TH
+#: man-pages/man2/_exit.2:29
+#, no-wrap
+msgid "2010-09-20"
+msgstr "2010-09-20"
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:32
+msgid "_exit, _Exit - terminate the calling process"
+msgstr "_exit, _Exit - завершает вызывающий процесс"
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:34
+msgid "B<#include E<lt>unistd.hE<gt>>"
+msgstr "B<#include E<lt>unistd.hE<gt>>"
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:36
+msgid "B<void _exit(int >I<status>B<);>"
+msgstr "B<void _exit(int >I<status>B<);>"
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:38
+msgid "B<#include E<lt>stdlib.hE<gt>>"
+msgstr "B<#include E<lt>stdlib.hE<gt>>"
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:40
+msgid "B<void _Exit(int >I<status>B<);>"
+msgstr "B<void _Exit(int >I<status>B<);>"
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:44
+msgid ""
+"Feature Test Macro Requirements for glibc (see B<feature_test_macros>(7)):"
+msgstr ""
+"Требования макроса тестирования свойств для glibc (см. B<feature_test_macros>"
+"(7)):"
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:48
+msgid "B<_Exit>():"
+msgstr "B<_Exit>():"
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:51
+msgid ""
+"_XOPEN_SOURCE\\ E<gt>=\\ 600 || _ISOC99_SOURCE || _POSIX_C_SOURCE\\ E<gt>=\\"
+" 200112L;"
+msgstr ""
+"_XOPEN_SOURCE\\ E<gt>=\\ 600 || _ISOC99_SOURCE || _POSIX_C_SOURCE\\ E<gt>=\\ "
+"200112L;"
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:54
+msgid "or I<cc\\ -std=c99>"
+msgstr "или I<cc\\ -std=c99>"
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:67
+msgid ""
+"The function B<_exit>()  terminates the calling process \"immediately\".  "
+"Any open file descriptors belonging to the process are closed; any children "
+"of the process are inherited by process 1, I<init>, and the process's parent"
+" is sent a B<SIGCHLD> signal."
+msgstr ""
+"Функция B<_exit>() завершает \"немедленно\" завершает вызывающий процесс. Все "
+"дескрипторы файлов, принадлежащие процессу, закрываются; все его дочерние "
+"процессы начинают управляться процессом 1 (I<init>), а родительскому процессу "
+"посылается сигнал B<SIGCHLD>."
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:74
+msgid ""
+"The value I<status> is returned to the parent process as the process's exit "
+"status, and can be collected using one of the B<wait>(2)  family of calls."
+msgstr ""
+"Значение I<status> возвращается родительскому процессу как код завершаемого "
+"процесса; он может быть получен с помощью одной из функций семейства B<wait>"
+"(2)."
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:79
+msgid "The function B<_Exit>()  is equivalent to B<_exit>()."
+msgstr "Функция B<_Exit>() эквивалентна B<_exit>()."
+
+#. type: SH
+#: man-pages/man2/_exit.2:79
+#, no-wrap
+msgid "RETURN VALUE"
+msgstr "ВОЗВРАЩАЕМОЕ ЗНАЧЕНИЕ"
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:81
+msgid "These functions do not return."
+msgstr "Эти функции не выполняют возврат."
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:86
+msgid ""
+"SVr4, POSIX.1-2001, 4.3BSD.  The function B<_Exit>()  was introduced by C99."
+msgstr ""
+"SVr4, POSIX.1-2001, 4.3BSD. Функция B<_Exit>() была представлена в C99."
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:90
+msgid ""
+"For a discussion on the effects of an exit, the transmission of exit status,"
+" zombie processes, signals sent, and so on, see B<exit>(3)."
+msgstr ""
+"Обсуждение эффектов при завершении работы, передачу кода выхода, "
+"зомби-процессы, сигналы и т. п., смотрите в B<exit>(3)."
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:117
+msgid ""
+"The function B<_exit>()  is like B<exit>(3), but does not call any functions"
+" registered with B<atexit>(3)  or B<on_exit>(3).  Whether it flushes "
+"standard I/O buffers and removes temporary files created with B<tmpfile>(3)"
+"  is implementation-dependent.  On the other hand, B<_exit>()  does close "
+"open file descriptors, and this may cause an unknown delay, waiting for "
+"pending output to finish.  If the delay is undesired, it may be useful to "
+"call functions like B<tcflush>(3)  before calling B<_exit>().  Whether any "
+"pending I/O is canceled, and which pending I/O may be canceled upon "
+"B<_exit>(), is implementation-dependent."
+msgstr ""
+"Функция B<_exit>() подобна B<exit>(3), но не вызывает никаких функций, "
+"зарегистрированных с помощью B<atexit>(3) или B<on_exit>(3). Будет ли "
+"выполняться сброс стандартных буферов ввода-вывода и удаление временных "
+"файлов, созданных с помощью B<tmpfile>(3), зависит от реализации. С другой "
+"стороны, B<_exit>() закрывает открытые дескрипторы файлов, а это может "
+"привести к неопределенной задержке, так происходит ожидание завершения вывода "
+"данных. Если задержка нежелательна, то может быть полезным перед вызовом B<"
+"_exit>() вызывать функции типа B<tcflush>(3). Будет ли отменён ввод-вывод, а "
+"также какие именно ожидающие операции ввода-вывода будут завершены при вызове "
+"B<_exit>, зависит от реализации."
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:124
+msgid ""
+"In glibc up to version 2.3, the B<_exit>()  wrapper function invoked the "
+"kernel system call of the same name.  Since glibc 2.3, the wrapper function "
+"invokes B<exit_group>(2), in order to terminate all of the threads in a "
+"process."
+msgstr ""
+"В glibc до версии 2.3, обёрточная функция B<_exit>() вызывала системный вызов "
+"ядра с тем же именем. Начиная с glibc 2.3, обёрточная функция вызывает B<"
+"exit_group>(2), чтобы завершить все нити процесса."
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:135
+msgid ""
+"B<execve>(2), B<exit_group>(2), B<fork>(2), B<kill>(2), B<wait>(2), "
+"B<wait4>(2), B<waitpid>(2), B<atexit>(3), B<exit>(3), B<on_exit>(3), "
+"B<termios>(3)"
+msgstr ""
+"B<execve>(2), B<exit_group>(2), B<fork>(2), B<kill>(2), B<wait>(2), B<wait4>"
+"(2), B<waitpid>(2), B<atexit>(3), B<exit>(3), B<on_exit>(3), B<termios>(3)"
+
+#. type: TH
+#: man-pages/man3/__setfpucw.3:8
+#, no-wrap
+msgid "__SETFPUCW"
+msgstr "__SETFPUCW"
+
+#. type: TH
+#: man-pages/man3/__setfpucw.3:8
+#, no-wrap
+msgid "2012-12-31"
+msgstr "2012-12-31"
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:11
+msgid "__setfpucw - set FPU control word on i386 architecture (obsolete)"
+msgstr ""
+"__setfpucw - устанавливает слово управления FPU для архитектуры i386 "
+"(устарела)"
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:13
+msgid "B<#include E<lt>i386/fpu_control.hE<gt>>"
+msgstr "B<#include E<lt>i386/fpu_control.hE<gt>>"
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:15
+msgid "B<void __setfpucw(unsigned short >I<control_word>B<);>"
+msgstr "B<void __setfpucw(unsigned short >I<control_word>B<);>"
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:22
+msgid ""
+"B<__setfpucw>()  transfers I<control_word> to the registers of the FPU "
+"(floating-point unit) on the i386 architecture.  This was used to control "
+"floating-point precision, rounding and floating-point exceptions."
+msgstr ""
+"В архитектуре i386 функция B<__setfpucw>() пересылает I<control_word> в "
+"регистр FPU (модуль обработки операций с плавающей точкой). Используется для "
+"управления точностью, округлением и исключениями при операциях с плавающей "
+"точкой."
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:24
+msgid "This function was a nonstandard GNU extension."
+msgstr "Эта функция является нестандартным расширением GNU."
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:43
+msgid ""
+"As of glibc 2.1 this function does not exist anymore.  There are new "
+"functions from C99, with prototypes in I<E<lt>fenv.hE<gt>>, to control FPU "
+"rounding modes, like B<fegetround>(3), B<fesetround>(3), and the floating-"
+"point environment, like B<fegetenv>(3), B<feholdexcept>(3), B<fesetenv>(3), "
+"B<feupdateenv>(3), and FPU exception handling, like B<feclearexcept>(3), "
+"B<fegetexceptflag>(3), B<feraiseexcept>(3), B<fesetexceptflag>(3), and "
+"B<fetestexcept>(3)."
+msgstr ""
+"Начиная с glibc 2.1 эта функция не существует. Для управления режимами "
+"округления FPU в ISO C99 введены новые функции (прототипы объявлены в I<E<lt>"
+"fenv.hE<gt>>): B<fegetround>(3), B<fesetround>(3), окружением при работе с "
+"плавающей точкой: B<fegetenv>(3), B<feholdexcept>(3), B<fesetenv>(3), B<"
+"feupdateenv>(3) и для управления исключениями FPU: B<feclearexcept>(3), B<"
+"fegetexceptflag>(3), B<feraiseexcept>(3), B<fesetexceptflag>(3) и B<"
+"fetestexcept>(3)."
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:51
+msgid ""
+"If direct access to the FPU control word is still needed, the B<_FPU_GETCW> "
+"and B<_FPU_SETCW> macros from I<E<lt>fpu_control.hE<gt>> can be used."
+msgstr ""
+"Если по какой-то причине необходим прямой доступ к слову управления FPU, то "
+"можно использовать макросы B<_FPU_GETCW> и B<_FPU_SETCW> из I<E<lt>"
+"fpu_control.hE<gt>>."
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:53
+msgid "B<__setfpucw(0x1372)>"
+msgstr "B<__setfpucw(0x1372)>"
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:55
+msgid "Set FPU control word on the i386 architecture to"
+msgstr "Устанавливает слово управления FPU на архитектуре i386:"
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:57
+#, no-wrap
+msgid "     - extended precision\n"
+msgstr "     - включает расширенную точность\n"
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:59
+#, no-wrap
+msgid "     - rounding to nearest\n"
+msgstr "     - включает округление к ближайшему\n"
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:61
+#, no-wrap
+msgid "     - exceptions on overflow, zero divide and NaN\n"
+msgstr "     - включает исключение при переполнении, делении на ноль и NaN\n"
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:63
+msgid "B<feclearexcept>(3)"
+msgstr "B<feclearexcept>(3)"
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:64
+msgid "I<E<lt>fpu_control.hE<gt>>"
+msgstr "I<E<lt>fpu_control.hE<gt>>"
+

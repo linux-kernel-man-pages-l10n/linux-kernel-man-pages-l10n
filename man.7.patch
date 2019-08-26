@@ -1,0 +1,11 @@
+--- man-pages-git/man7/man.7	2017-09-05 08:18:47.302327182 +0300
++++ man-pages/man7/man.7	2017-10-14 12:29:21.169411391 +0300
+@@ -269,7 +269,7 @@
+ .B \&.UE
+ macro as the link text.
+ .TP
+-.B \&.UE \c
++.B \&.UE
+ .RI [ trailer ]
+ Terminate the link text of the preceding
+ .B \&.UR

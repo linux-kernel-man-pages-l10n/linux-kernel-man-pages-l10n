@@ -1,0 +1,4327 @@
+# Copyright (C) 2014 Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Konstantin Shvaykovskiy <kot.shv@gmail.com>, 2012.
+# Yuri Kozlov <yuray@komyakino.ru>, 2011-2014.
+# Yuri Kozlov <yuray@komyakino.ru>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: translation of man-pages\n"
+"POT-Creation-Date: 2013-03-23 18:37+0400\n"
+"PO-Revision-Date: 2014-09-11 11:32+0400\n"
+"Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
+"Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<"
+"=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#. type: TH
+#: man-pages/man7/operator.7:40
+#, no-wrap
+msgid "OPERATOR"
+msgstr "OPERATOR"
+
+#. type: TH
+#: man-pages/man7/operator.7:40
+#, no-wrap
+msgid "2011-09-09"
+msgstr "2011-09-09"
+
+#. type: TH
+#: man-pages/man7/operator.7:40
+#, no-wrap
+msgid "Linux"
+msgstr "Linux"
+
+#. type: TH
+#: man-pages/man7/operator.7:40
+#, no-wrap
+msgid "Linux Programmer's Manual"
+msgstr "Руководство программиста Linux"
+
+#. type: SH
+#: man-pages/man7/operator.7:41
+#, no-wrap
+msgid "NAME"
+msgstr "ИМЯ"
+
+#. type: Plain text
+#: man-pages/man7/operator.7:43
+msgid "operator - C operator precedence and order of evaluation"
+msgstr "operator - приоритет и порядок вычисления операторов в Си"
+
+#. type: SH
+#: man-pages/man7/operator.7:43
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr "ОПИСАНИЕ"
+
+#. type: Plain text
+#: man-pages/man7/operator.7:45
+msgid "This manual page lists C operators and their precedence in evaluation."
+msgstr ""
+"В данной справочной странице показан приоритет и порядок вычисления "
+"операторов в языке Си."
+
+#. type: Plain text
+#: man-pages/man7/operator.7:63
+#, no-wrap
+msgid ""
+"B<Operator                             Associativity>\n"
+"() [] -E<gt> .                           left to right\n"
+"! ~ ++ -- + - (type) * & sizeof      right to left\n"
+"* / %                                left to right\n"
+"+ -                                  left to right\n"
+"E<lt>E<lt> E<gt>E<gt>                                left to right\n"
+"E<lt> E<lt>= E<gt> E<gt>=                            left to right\n"
+"== !=                                left to right\n"
+"&                                    left to right\n"
+"^                                    left to right\n"
+"|                                    left to right\n"
+"&&                                   left to right\n"
+"||                                   left to right\n"
+"?:                                   right to left\n"
+"= += -= *= /= %= E<lt>E<lt>= E<gt>E<gt>= &= ^= |=    right to left\n"
+",                                    left to right\n"
+msgstr ""
+"B<Оператор                             Ассоциативность>\n() [] -E<gt> .       "
+"                    слева направо\n! ~ ++ -- + - (тип) * & sizeof       "
+"справа налево\n* / %                                слева направо\n+ -        "
+"                          слева направо\nE<lt>E<lt> E<gt>E<gt>                "
+"                слева направо\nE<lt> E<lt>= E<gt> E<gt>=                      "
+"      слева направо\n== !=                                слева направо\n&    "
+"                                слева направо\n^                              "
+"      слева направо\n|                                    слева направо\n&&   "
+"                                слева направо\n||                             "
+"      слева направо\n?:                                   справа налево\n= += "
+"-= *= /= %= E<lt>E<lt>= E<gt>E<gt>= &= ^= |=    справа налево\n,              "
+"                      слева направо\n"
+
+#. type: TH
+#: man-pages/man2/outb.2:26
+#, no-wrap
+msgid "OUTB"
+msgstr "OUTB"
+
+#. type: TH
+#: man-pages/man2/outb.2:26
+#, no-wrap
+msgid "2012-12-31"
+msgstr "2012-12-31"
+
+#. type: Plain text
+#: man-pages/man2/outb.2:31
+msgid ""
+"outb, outw, outl, outsb, outsw, outsl, inb, inw, inl, insb, insw, insl, "
+"outb_p, outw_p, outl_p, inb_p, inw_p, inl_p - port I/O"
+msgstr ""
+"outb, outw, outl, outsb, outsw, outsl, inb, inw, inl, insb, insw, insl, "
+"outb_p, outw_p, outl_p, inb_p, inw_p, inl_p - ввод/вывод в порт"
+
+#. type: SH
+#: man-pages/man2/outb.2:31
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr "ОБЗОР"
+
+#. type: Plain text
+#: man-pages/man2/outb.2:34
+#, no-wrap
+msgid "B<#include E<lt>sys/io.hE<gt>>\n"
+msgstr "B<#include E<lt>sys/io.hE<gt>>\n"
+
+#. type: Plain text
+#: man-pages/man2/outb.2:41
+#, no-wrap
+msgid ""
+"B<unsigned char inb(unsigned short int >I<port>B<);>\n"
+"B<unsigned char inb_p(unsigned short int >I<port>B<);>\n"
+"B<unsigned short int inw(unsigned short int >I<port>B<);>\n"
+"B<unsigned short int inw_p(unsigned short int >I<port>B<);>\n"
+"B<unsigned int inl(unsigned short int >I<port>B<);>\n"
+"B<unsigned int inl_p(unsigned short int >I<port>B<);>\n"
+msgstr ""
+"B<unsigned char inb(unsigned short int >I<port>B<);>\nB<unsigned char "
+"inb_p(unsigned short int >I<port>B<);>\nB<unsigned short int inw(unsigned "
+"short int >I<port>B<);>\nB<unsigned short int inw_p(unsigned short int >I<"
+"port>B<);>\nB<unsigned int inl(unsigned short int >I<port>B<);>\nB<unsigned "
+"int inl_p(unsigned short int >I<port>B<);>\n"
+
+#. type: Plain text
+#: man-pages/man2/outb.2:48
+#, no-wrap
+msgid ""
+"B<void outb(unsigned char >I<value>B<, unsigned short int >I<port>B<);>\n"
+"B<void outb_p(unsigned char >I<value>B<, unsigned short int >I<port>B<);>\n"
+"B<void outw(unsigned short int >I<value>B<, unsigned short int >I<port>B<);>\n"
+"B<void outw_p(unsigned short int >I<value>B<, unsigned short int >I<port>B<);>"
+"\n"
+"B<void outl(unsigned int >I<value>B<, unsigned short int >I<port>B<);>\n"
+"B<void outl_p(unsigned int >I<value>B<, unsigned short int >I<port>B<);>\n"
+msgstr ""
+"B<void outb(unsigned char >I<value>B<, unsigned short int >I<port>B<);>\nB<"
+"void outb_p(unsigned char >I<value>B<, unsigned short int >I<port>B<);>\nB<"
+"void outw(unsigned short int >I<value>B<, unsigned short int >I<port>B<);>"
+"\nB<void outw_p(unsigned short int >I<value>B<, unsigned short int >I<port>B<"
+");>\nB<void outl(unsigned int >I<value>B<, unsigned short int >I<port>B<);>"
+"\nB<void outl_p(unsigned int >I<value>B<, unsigned short int >I<port>B<);>\n"
+
+#. type: Plain text
+#: man-pages/man2/outb.2:61
+#, no-wrap
+msgid ""
+"B<void insb(unsigned short int >I<port>B<, void *>I<addr>B<,>\n"
+"B<           unsigned long int >I<count>B<);>\n"
+"B<void insw(unsigned short int >I<port>B<, void *>I<addr>B<,>\n"
+"B<           unsigned long int >I<count>B<);>\n"
+"B<void insl(unsigned short int >I<port>B<, void *>I<addr>B<,>\n"
+"B<           unsigned long int >I<count>B<);>\n"
+"B<void outsb(unsigned short int >I<port>B<, const void *>I<addr>B<,>\n"
+"B<           unsigned long int >I<count>B<);>\n"
+"B<void outsw(unsigned short int >I<port>B<, const void *>I<addr>B<,>\n"
+"B<           unsigned long int >I<count>B<);>\n"
+"B<void outsl(unsigned short int >I<port>B<, const void *>I<addr>B<,>\n"
+"B<           unsigned long int >I<count>B<);>\n"
+msgstr ""
+"B<void insb(unsigned short int >I<port>B<, void *>I<addr>B<,>\nB<           "
+"unsigned long int >I<count>B<);>\nB<void insw(unsigned short int >I<port>B<, "
+"void *>I<addr>B<,>\nB<           unsigned long int >I<count>B<);>\nB<void "
+"insl(unsigned short int >I<port>B<, void *>I<addr>B<,>\nB<           unsigned "
+"long int >I<count>B<);>\nB<void outsb(unsigned short int >I<port>B<, const "
+"void *>I<addr>B<,>\nB<           unsigned long int >I<count>B<);>\nB<void "
+"outsw(unsigned short int >I<port>B<, const void *>I<addr>B<,>\nB<           "
+"unsigned long int >I<count>B<);>\nB<void outsl(unsigned short int >I<port>B<, "
+"const void *>I<addr>B<,>\nB<           unsigned long int >I<count>B<);>\n"
+
+#. type: Plain text
+#: man-pages/man2/outb.2:67
+msgid ""
+"This family of functions is used to do low-level port input and output.  The"
+" out* functions do port output, the in* functions do port input; the "
+"b-suffix functions are byte-width and the w-suffix functions word-width; the"
+" _p-suffix functions pause until the I/O completes."
+msgstr ""
+"Это семейство вызовов используется для низкоуровневой работы с портами "
+"ввода/вывода. Вызовы out* выполняют запись в порт, а вызовы in* выполняют "
+"чтение из порта; вызовы с суффиксом b работают с данными шириной один байт, а "
+"вызовы с суффиксом w работают с данными шириной в одно слово; вызовы с "
+"суффиксом _p ждут завершения операции ввода-вывода."
+
+#.  , given the following information
+#.  in addition to that given in
+#.  .BR outb (9).
+#. type: Plain text
+#: man-pages/man2/outb.2:73
+msgid ""
+"They are primarily designed for internal kernel use, but can be used from "
+"user space."
+msgstr ""
+"В основном, они предназначены для использования внутри ядра, но могут быть "
+"вызваны и из пользовательского пространства."
+
+#. type: Plain text
+#: man-pages/man2/outb.2:78
+msgid ""
+"You must compile with B<-O> or B<-O2> or similar.  The functions are defined"
+" as inline macros, and will not be substituted in without optimization "
+"enabled, causing unresolved references at link time."
+msgstr ""
+"Вы должны скомпилировать свою программу с флагами B<-O>, B<-O2> и им "
+"подобными. Данные вызовы определены в виде встроенных макросов и не будут "
+"подставляться без включённой оптимизации, что приводит к появлению "
+"неразрешаемых ссылок в процессе компоновки программы."
+
+#. type: Plain text
+#: man-pages/man2/outb.2:87
+msgid ""
+"You use B<ioperm>(2)  or alternatively B<iopl>(2)  to tell the kernel to "
+"allow the user space application to access the I/O ports in question.  "
+"Failure to do this will cause the application to receive a segmentation "
+"fault."
+msgstr ""
+"Для того, чтобы запросить у ядра разрешение доступа к портам ввода-вывода из "
+"приложения, работающего в пользовательском пространстве, используйте B<ioperm>"
+"(2) или B<iopl>(2). Если этого не сделать, приложение получит сообщение об "
+"ошибке сегментации."
+
+#. type: SH
+#: man-pages/man2/outb.2:87
+#, no-wrap
+msgid "CONFORMING TO"
+msgstr "СООТВЕТСТВИЕ СТАНДАРТАМ"
+
+#. type: Plain text
+#: man-pages/man2/outb.2:96
+msgid ""
+"B<outb>()  and friends are hardware-specific.  The I<value> argument is "
+"passed first and the I<port> argument is passed second, which is the "
+"opposite order from most DOS implementations."
+msgstr ""
+"Вызовы B<outb>() и ему подобные зависят от конкретного оборудования. Аргумент "
+"I<value> передаётся первым, а I<port> \\(em вторым, что является обратным "
+"порядком по сравнению с большинством реализаций этих вызовов в DOS."
+
+#. type: SH
+#: man-pages/man2/outb.2:96
+#, no-wrap
+msgid "SEE ALSO"
+msgstr "СМОТРИТЕ ТАКЖЕ"
+
+#. type: Plain text
+#: man-pages/man2/outb.2:98
+msgid "B<ioperm>(2), B<iopl>(2)"
+msgstr "B<ioperm>(2), B<iopl>(2)"
+
+#. type: TH
+#: man-pages/man2/open_by_handle_at.2:25
+#, no-wrap
+msgid "OPEN_BY_HANDLE_AT"
+msgstr "OPEN_BY_HANDLE_AT"
+
+#. type: TH
+#: man-pages/man2/open_by_handle_at.2:25
+#, no-wrap
+msgid "2014-06-13"
+msgstr "2014-06-13"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:29
+msgid ""
+"name_to_handle_at, open_by_handle_at - obtain handle for a pathname and open"
+" file via a handle"
+msgstr ""
+"name_to_handle_at, open_by_handle_at - получение описателя для пути и "
+"открытие файла через описатель"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:35
+#, no-wrap
+msgid ""
+"B<#define _GNU_SOURCE          /* See feature_test_macros(7) */>\n"
+"B<#include E<lt>sys/types.hE<gt>>\n"
+"B<#include E<lt>sys/stat.hE<gt>>\n"
+"B<#include E<lt>fcntl.hE<gt>>\n"
+msgstr ""
+"B<#define _GNU_SOURCE          /* Смотрите feature_test_macros(7) */>\nB<"
+"#include E<lt>sys/types.hE<gt>>\nB<#include E<lt>sys/stat.hE<gt>>\nB<#include "
+"E<lt>fcntl.hE<gt>>\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:39
+#, no-wrap
+msgid ""
+"B<int name_to_handle_at(int >I<dirfd>B<, const char *>I<pathname>B<,>\n"
+"B<                      struct file_handle *>I<handle>B<,>\n"
+"B<                      int *>I<mount_id>B<, int >I<flags>B<);>\n"
+msgstr ""
+"B<int name_to_handle_at(int >I<dirfd>B<, const char *>I<pathname>B<,>\nB<     "
+"                 struct file_handle *>I<handle>B<,>\nB<                      "
+"int *>I<mount_id>B<, int >I<flags>B<);>\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:42
+#, no-wrap
+msgid ""
+"B<int open_by_handle_at(int >I<mount_fd>B<, struct file_handle *>I<handle>B<,>"
+"\n"
+"B<                      int >I<flags>B<);>\n"
+msgstr ""
+"B<int open_by_handle_at(int >I<mount_fd>B<, struct file_handle *>I<handle>B<,>"
+"\nB<                      int >I<flags>B<);>\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:59
+msgid ""
+"The B<name_to_handle_at>()  and B<open_by_handle_at>()  system calls split "
+"the functionality of B<openat>(2)  into two parts: B<name_to_handle_at>()  "
+"returns an opaque handle that corresponds to a specified file; "
+"B<open_by_handle_at>()  opens the file corresponding to a handle returned by"
+" a previous call to B<name_to_handle_at>()  and returns an open file "
+"descriptor."
+msgstr ""
+"Функциональное назначение B<openat>(2) было разделено на две части и "
+"добавлено в системные вызовы B<name_to_handle_at>() и B<open_by_handle_at>(): "
+"B<name_to_handle_at>() возвращает закрытый (opaque) описатель, который "
+"соответствует указанному файлу; B<open_by_handle_at>() открывает файл по "
+"описателю, который был возвращён предыдущим вызовом B<name_to_handle_at>() и "
+"возвращает дескриптор открытого файла."
+
+#. type: SS
+#: man-pages/man2/open_by_handle_at.2:59
+#, no-wrap
+msgid "name_to_handle_at()"
+msgstr "name_to_handle_at()"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:71
+msgid ""
+"The B<name_to_handle_at>()  system call returns a file handle and a mount ID"
+" corresponding to the file specified by the I<dirfd> and I<pathname> "
+"arguments.  The file handle is returned via the argument I<handle>, which is"
+" a pointer to a structure of the following form:"
+msgstr ""
+"Системный вызов B<name_to_handle_at>() возвращает файловый описатель и "
+"идентификатор монтирования для файла, указанного в аргументах I<dirfd> и I<"
+"pathname>. Файловый описатель возвращается через аргумент I<handle>, который "
+"является указателем на следующую структуру:"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:80
+#, no-wrap
+msgid ""
+"struct file_handle {\n"
+"    unsigned int  handle_bytes;   /* Size of f_handle [in, out] */\n"
+"    int           handle_type;    /* Handle type [out] */\n"
+"    unsigned char f_handle[0];    /* File identifier (sized by\n"
+"                                     caller) [out] */\n"
+"};\n"
+msgstr ""
+"struct file_handle {\n    unsigned int  handle_bytes;   /* размер f_handle "
+"[in, out] */\n    int           handle_type;    /* тип описателя [out] */\n   "
+" unsigned char f_handle[0];    /* идентификатор файла (размер\n               "
+"                      задаёт вызывающий) [out] */\n};\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:99
+msgid ""
+"It is the caller's responsibility to allocate the structure with a size "
+"large enough to hold the handle returned in I<f_handle>.  Before the call, "
+"the I<handle_bytes> field should be initialized to contain the allocated "
+"size for I<f_handle>.  (The constant B<MAX_HANDLE_SZ>, defined in "
+"I<E<lt>fcntl.hE<gt>>, specifies the maximum possible size for a file "
+"handle.)  Upon successful return, the I<handle_bytes> field is updated to "
+"contain the number of bytes actually written to I<f_handle>."
+msgstr ""
+"Вызывающий должен выделить память достаточного размера под структуру "
+"описателя, возвращаемого в I<f_handle>. Перед вызовом поле I<handle_bytes> "
+"должно содержать размер выделенной памяти для I<f_handle> (константа B<"
+"MAX_HANDLE_SZ>, определённая в I<E<lt>fcntl.hE<gt>>, равна максимально "
+"возможному размеру описателя файла). При успешном выполнении поле I<"
+"handle_bytes> обновляется и содержит количество байт действительно занятых "
+"под I<f_handle>."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:112
+msgid ""
+"The caller can discover the required size for the I<file_handle> structure "
+"by making a call in which I<handle-E<gt>handle_bytes> is zero; in this case,"
+" the call fails with the error B<EOVERFLOW> and I<handle-E<gt>handle_bytes> "
+"is set to indicate the required size; the caller can then use this "
+"information to allocate a structure of the correct size (see EXAMPLE below)."
+msgstr ""
+"Вызывающий может определить требуемый размер структуры I<file_handle> указав "
+"при вызове значение I<handle-E<gt>handle_bytes> равное нулю; в этому случае "
+"вызов завершается с ошибкой B<EOVERFLOW>, а в поле I<handle-E<gt>handle_bytes>"
+" записывается требуемый размер; вызывающий затем может использовать эту "
+"информацию для выделения памяти под структуру правильного размера (смотрите "
+"ПРИМЕР ниже)."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:123
+msgid ""
+"Other than the use of the I<handle_bytes> field, the caller should treat the"
+" I<file_handle> structure as an opaque data type: the I<handle_type> and "
+"I<f_handle> fields are needed only by a subsequent call to "
+"B<open_by_handle_at>()."
+msgstr ""
+"Все остальные поля кроме I<handle_bytes> структуры I<file_handle> вызывающий "
+"должен считать неизвестными: поля I<handle_type> и I<f_handle> требуются "
+"только в последующих вызовах B<open_by_handle_at>()."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:131
+msgid ""
+"The I<flags> argument is a bit mask constructed by ORing together zero or "
+"more of B<AT_EMPTY_PATH> and B<AT_SYMLINK_FOLLOW>, described below."
+msgstr ""
+"Аргумент I<flags> представляет собой битовую маску (OR) из комбинации нуля "
+"или более флагов B<AT_EMPTY_PATH> и B<AT_SYMLINK_FOLLOW>, описанных ниже."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:138
+msgid ""
+"Together, the I<pathname> and I<dirfd> arguments identify the file for which"
+" a handle is to be obtained.  There are four distinct cases:"
+msgstr ""
+"Аргументы I<pathname> и I<dirfd> вместе задают файл, для которого будет "
+"получен описатель. Есть четыре различных варианта:"
+
+#. type: IP
+#: man-pages/man2/open_by_handle_at.2:138
+#: man-pages/man2/open_by_handle_at.2:146
+#: man-pages/man2/open_by_handle_at.2:157
+#: man-pages/man2/open_by_handle_at.2:170
+#, no-wrap
+msgid "*"
+msgstr "*"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:146
+msgid ""
+"If I<pathname> is a nonempty string containing an absolute pathname, then a "
+"handle is returned for the file referred to by that pathname.  In this case,"
+" I<dirfd> is ignored."
+msgstr ""
+"Если значение I<pathname> — непустая строка, содержащая абсолютный путь, то "
+"описатель возвращается для файла, на который указывает путь. В этом случае I<"
+"dirfd> игнорируется."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:157
+msgid ""
+"If I<pathname> is a nonempty string containing a relative pathname and "
+"I<dirfd> has the special value B<AT_FDCWD>, then I<pathname> is interpreted "
+"relative to the current working directory of the caller, and a handle is "
+"returned for the file to which it refers."
+msgstr ""
+"Если значение I<pathname> — непустая строка, содержащая относительный путь и "
+"I<dirfd> равно специальному значению B<AT_FDCWD>, то I<pathname> "
+"рассматривается относительно текущего рабочего каталога вызывающего и "
+"описатель возвращается для файла, на который он указывает."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:170
+msgid ""
+"If I<pathname> is a nonempty string containing a relative pathname and "
+"I<dirfd> is a file descriptor referring to a directory, then I<pathname> is "
+"interpreted relative to the directory referred to by I<dirfd>, and a handle "
+"is returned for the file to which it refers.  (See B<openat>(3)  for an "
+"explanation of why \"directory file descriptors\" are useful.)"
+msgstr ""
+"Если значение I<pathname> — непустая строка, содержащая относительный путь и "
+"I<dirfd> равно файловому дескриптору, указывающему на каталог, то I<pathname> "
+"рассматривается относительно каталога, на который указывает I<dirfd>, и "
+"описатель возвращается для файла, на который он указывает (смотрите в B<"
+"openat>(3) объяснение полезности «файловых дескрипторов каталогов»)."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:184
+msgid ""
+"If I<pathname> is an empty string and I<flags> specifies the value "
+"B<AT_EMPTY_PATH>, then I<dirfd> can be an open file descriptor referring to "
+"any type of file, or B<AT_FDCWD>, meaning the current working directory, and"
+" a handle is returned for the file to which it refers."
+msgstr ""
+"Если значение I<pathname> — пустая строка и значение I<flags> равно B<"
+"AT_EMPTY_PATH>, то I<dirfd> может быть открытым файловым дескриптором, "
+"указывающим на файл любого типа, или B<AT_FDCWD>, означающим текущий рабочий "
+"каталог, и описатель возвращается для файла, на который он указывает."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:196
+msgid ""
+"The I<mount_id> argument returns an identifier for the filesystem mount that"
+" corresponds to I<pathname>.  This corresponds to the first field in one of "
+"the records in I</proc/self/mountinfo>.  Opening the pathname in the fifth "
+"field of that record yields a file descriptor for the mount point; that file"
+" descriptor can be used in a subsequent call to B<open_by_handle_at>()."
+msgstr ""
+"В аргументе I<mount_id> возвращается идентификатор точки монтирования в "
+"файловой системе, в которой расположен I<pathname>. Это значение "
+"соответствует первому полю одной из записей в I</proc/self/mountinfo>. "
+"Открытие файла из пятого поля этой записи возвращает файловый дескриптор этой "
+"точки монтирования; этот файловый дескриптор можно использовать в последующем "
+"вызове B<open_by_handle_at>()."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:209
+msgid ""
+"By default, B<name_to_handle_at>()  does not dereference I<pathname> if it "
+"is a symbolic link, and thus returns a handle for the link itself.  If "
+"B<AT_SYMLINK_FOLLOW> is specified in I<flags>, I<pathname> is dereferenced "
+"if it is a symbolic link (so that the call returns a handle for the file "
+"referred to by the link)."
+msgstr ""
+"По умолчанию, B<name_to_handle_at>() не разыменовывает I<pathname>, если это "
+"символическая ссылка, и поэтому возвращается описатель самой ссылки. Если в "
+"I<flags> указан B<AT_SYMLINK_FOLLOW>, то I<pathname> разыменовывается, если "
+"это символическая ссылка (то есть вызов возвращает описатель файла, на "
+"который указывает ссылка)."
+
+#. type: SS
+#: man-pages/man2/open_by_handle_at.2:209
+#, no-wrap
+msgid "open_by_handle_at()"
+msgstr "open_by_handle_at()"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:216
+msgid ""
+"The B<open_by_handle_at>()  system call opens the file referred to by "
+"I<handle>, a file handle returned by a previous call to "
+"B<name_to_handle_at>()."
+msgstr ""
+"Системный вызов B<open_by_handle_at>() открывает файл, на который указывает "
+"I<handle>, файловый описатель, полученный от предшествующего вызова B<"
+"name_to_handle_at>()."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:226
+msgid ""
+"The I<mount_fd> argument is a file descriptor for any object (file, "
+"directory, etc.)  in the mounted filesystem with respect to which I<handle> "
+"should be interpreted.  The special value B<AT_FDCWD> can be specified, "
+"meaning the current working directory of the caller."
+msgstr ""
+"Аргумент I<mount_fd> — это файловый дескриптор любого объекта (файла, "
+"каталога и т. д.) в смонтированной файловой системе, в которой должен "
+"находиться I<handle>. Может быть равен специальному значению B<AT_FDCWD>, "
+"которое обозначает текущий рабочий каталог вызывающего."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:239
+msgid ""
+"The I<flags> argument is as for B<open>(2).  If I<handle> refers to a "
+"symbolic link, the caller must specify the B<O_PATH> flag, and the symbolic "
+"link is not dereferenced; the B<O_NOFOLLOW> flag, if specified, is ignored."
+msgstr ""
+"Значение аргумента I<flags> как у B<open>(2). Если I<handle> указывает на "
+"символическую ссылку, то вызывающий должен указать флаг B<O_PATH>, и "
+"символическая ссылка не разыменовывается; флаг B<O_NOFOLLOW> игнорируется."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:245
+msgid ""
+"The caller must have the B<CAP_DAC_READ_SEARCH> capability to invoke "
+"B<open_by_handle_at>()."
+msgstr ""
+"Для вызова B<open_by_handle_at>() вызывающий должен иметь мандат B<"
+"CAP_DAC_READ_SEARCH>."
+
+#. type: SH
+#: man-pages/man2/open_by_handle_at.2:245
+#, no-wrap
+msgid "RETURN VALUE"
+msgstr "ВОЗВРАЩАЕМОЕ ЗНАЧЕНИЕ"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:252
+msgid ""
+"On success, B<name_to_handle_at>()  returns 0, and B<open_by_handle_at>()  "
+"returns a nonnegative file descriptor."
+msgstr ""
+"При успешном выполнении B<name_to_handle_at>() возвращает 0, а B<"
+"open_by_handle_at>() возвращает неотрицательный файловый дескриптор."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:256
+msgid ""
+"In the event of an error, both system calls return -1 and set I<errno> to "
+"indicate the cause of the error."
+msgstr ""
+"В случае ошибки системные вызовы возвращают -1, а в I<errno> записывается код "
+"ошибки."
+
+#. type: SH
+#: man-pages/man2/open_by_handle_at.2:256
+#, no-wrap
+msgid "ERRORS"
+msgstr "ОШИБКИ"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:263
+msgid ""
+"B<name_to_handle_at>()  and B<open_by_handle_at>()  can fail for the same "
+"errors as B<openat>(2).  In addition, they can fail with the errors noted "
+"below."
+msgstr ""
+"Вызовы B<name_to_handle_at>() и B<open_by_handle_at>() могут завершиться с "
+"теми же ошибками что и B<openat>(2). Также могут возникать следующие ошибки:"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:266
+msgid "B<name_to_handle_at>()  can fail with the following errors:"
+msgstr "Вызов B<name_to_handle_at>() может завершиться со следующими ошибками:"
+
+#. type: TP
+#: man-pages/man2/open_by_handle_at.2:266
+#: man-pages/man2/open_by_handle_at.2:321
+#, no-wrap
+msgid "B<EFAULT>"
+msgstr "B<EFAULT>"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:273
+msgid ""
+"I<pathname>, I<mount_id>, or I<handle> points outside your accessible "
+"address space."
+msgstr ""
+"Значение I<pathname>, I<mount_id> или I<handle> указывает за пределы "
+"доступного адресного пространства."
+
+#. type: TP
+#: man-pages/man2/open_by_handle_at.2:273
+#: man-pages/man2/open_by_handle_at.2:277
+#: man-pages/man2/open_by_handle_at.2:325
+#, no-wrap
+msgid "B<EINVAL>"
+msgstr "B<EINVAL>"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:277
+msgid "I<flags> includes an invalid bit value."
+msgstr "Значение I<flags> содержит некорректно установленный бит."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:282
+msgid "I<handle-E<gt>handle_bytes> is greater than B<MAX_HANDLE_SZ>."
+msgstr "Значение I<handle-E<gt>handle_bytes> больше B<MAX_HANDLE_SZ>."
+
+#. type: TP
+#: man-pages/man2/open_by_handle_at.2:282
+#, no-wrap
+msgid "B<ENOENT>"
+msgstr "B<ENOENT>"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:289
+msgid ""
+"I<pathname> is an empty string, but B<AT_EMPTY_PATH> was not specified in "
+"I<flags>."
+msgstr ""
+"Значение I<pathname> равно пустой строке, но в I<flags> не указано значение "
+"B<AT_EMPTY_PATH>."
+
+#. type: TP
+#: man-pages/man2/open_by_handle_at.2:289
+#, no-wrap
+msgid "B<ENOTDIR>"
+msgstr "B<ENOTDIR>"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:301
+msgid ""
+"The file descriptor supplied in I<dirfd> does not refer to a directory, and "
+"it is not the case that both I<flags> includes B<AT_EMPTY_PATH> and "
+"I<pathname> is an empty string."
+msgstr ""
+"Файловый дескриптор, указанный в I<dirfd>, не ссылается на каталог и это не "
+"тот случай, когда I<flags> содержит B<AT_EMPTY_PATH> и I<pathname> равно "
+"пустой строке."
+
+#. type: TP
+#: man-pages/man2/open_by_handle_at.2:301
+#, no-wrap
+msgid "B<EOPNOTSUPP>"
+msgstr "B<EOPNOTSUPP>"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:304
+msgid ""
+"The filesystem does not support decoding of a pathname to a file handle."
+msgstr ""
+"Файловая система не поддерживает преобразование пути в файловый описатель."
+
+#. type: TP
+#: man-pages/man2/open_by_handle_at.2:304
+#, no-wrap
+msgid "B<EOVERFLOW>"
+msgstr "B<EOVERFLOW>"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:314
+msgid ""
+"The I<handle-E<gt>handle_bytes> value passed into the call was too small.  "
+"When this error occurs, I<handle-E<gt>handle_bytes> is updated to indicate "
+"the required size for the handle."
+msgstr ""
+"Значение I<handle-E<gt>handle_bytes>, переданное в вызов, слишком мало. При "
+"этой ошибке I<handle-E<gt>handle_bytes> присваивается требуемый размер для "
+"описателя."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:317
+msgid "B<open_by_handle_at>()  can fail with the following errors:"
+msgstr "Вызов B<open_by_handle_at>() может завершиться со следующими ошибками:"
+
+#. type: TP
+#: man-pages/man2/open_by_handle_at.2:317
+#, no-wrap
+msgid "B<EBADF>"
+msgstr "B<EBADF>"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:321
+msgid "I<mount_fd> is not an open file descriptor."
+msgstr "Значение I<mount_fd> не является открытым файловым дескриптором."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:325
+msgid "I<handle> points outside your accessible address space."
+msgstr ""
+"Значение I<handle> указывает за пределы доступного адресного пространства."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:331
+msgid ""
+"I<handle-E<gt>handle_bytes> is greater than B<MAX_HANDLE_SZ> or is equal to "
+"zero."
+msgstr ""
+"Значение I<handle-E<gt>handle_bytes> больше B<MAX_HANDLE_SZ> или равно нулю."
+
+#. type: TP
+#: man-pages/man2/open_by_handle_at.2:331
+#, no-wrap
+msgid "B<ELOOP>"
+msgstr "B<ELOOP>"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:338
+msgid ""
+"I<handle> refers to a symbolic link, but B<O_PATH> was not specified in "
+"I<flags>."
+msgstr ""
+"Значение I<handle> указывает на символическую ссылку, но в I<flags> не указан "
+"B<O_PATH>."
+
+#. type: TP
+#: man-pages/man2/open_by_handle_at.2:338
+#, no-wrap
+msgid "B<EPERM>"
+msgstr "B<EPERM>"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:343
+msgid "The caller does not have the B<CAP_DAC_READ_SEARCH> capability."
+msgstr "Вызывающий не имеет мандата B<CAP_DAC_READ_SEARCH>."
+
+#. type: TP
+#: man-pages/man2/open_by_handle_at.2:343
+#, no-wrap
+msgid "B<ESTALE>"
+msgstr "B<ESTALE>"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:349
+msgid ""
+"The specified I<handle> is not valid.  This error will occur if, for "
+"example, the file has been deleted."
+msgstr ""
+"Значение I<handle> некорректно. Эта ошибка возникает, например, из-за "
+"удаления файла."
+
+#. type: SH
+#: man-pages/man2/open_by_handle_at.2:349
+#, no-wrap
+msgid "VERSIONS"
+msgstr "ВЕРСИИ"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:352
+msgid ""
+"These system calls first appeared in Linux 2.6.39.  Library support is "
+"provided in glibc since version 2.14."
+msgstr ""
+"Данные системные вызовы впервые появились в Linux 2.6.39. Поддержка в glibc "
+"появилась в версии 2.14."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:354
+msgid "These system calls are nonstandard Linux extensions."
+msgstr "Данные системные вызовы являются нестандартными расширениями Linux."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:359
+msgid ""
+"FreeBSD has a broadly similar pair of system calls in the form of B<getfh>()"
+"  and B<openfh>()."
+msgstr ""
+"В FreeBSD есть относительно похожая пара системных вызовов B<getfh>() и B<"
+"openfh>()."
+
+#. type: SH
+#: man-pages/man2/open_by_handle_at.2:359
+#, no-wrap
+msgid "NOTES"
+msgstr "ЗАМЕЧАНИЯ"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:364
+msgid ""
+"A file handle can be generated in one process using B<name_to_handle_at>()  "
+"and later used in a different process that calls B<open_by_handle_at>()."
+msgstr ""
+"Файловый описатель может быть сгенерирован с помощью B<name_to_handle_at>() в "
+"одном процессе и использован в вызовах B<open_by_handle_at>() в другом."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:370
+msgid ""
+"Some filesystem don't support the translation of pathnames to file handles, "
+"for example, I</proc>, I</sys>, and various network filesystems."
+msgstr ""
+"Некоторые файловые системы не поддерживают трансляцию путей в файловые "
+"описатели, например: I</proc>, I</sys> и различные сетевые файловые системы."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:377
+msgid ""
+"A file handle may become invalid (\"stale\") if a file is deleted, or for "
+"other filesystem-specific reasons.  Invalid handles are notified by an "
+"B<ESTALE> error from B<open_by_handle_at>()."
+msgstr ""
+"Файловый описатель может стать некорректным («просроченным»), если файл "
+"удалён, или по другим причинам, относящимся к файловой системе. Для "
+"некорректных описателей B<open_by_handle_at>() возвращает ошибку B<ESTALE>."
+
+#.  https://lwn.net/Articles/375888/
+#. 	"Open by handle" - Jonathan Corbet, 2010-02-23
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:387
+msgid ""
+"These system calls are designed for use by user-space file servers.  For "
+"example, a user-space NFS server might generate a file handle and pass it to"
+" an NFS client.  Later, when the client wants to open the file, it could "
+"pass the handle back to the server.  This sort of functionality allows a "
+"user-space file server to operate in a stateless fashion with respect to the"
+" files it serves."
+msgstr ""
+"Данные системные вызовы предназначены для использования в файловых серверах "
+"пространства пользователя. Например, сервер пользовательского пространства "
+"NFS может генерировать файловый описатель и передавать его клиенту NFS. "
+"Позднее, когда клиент захочет открыть файл, он может передать описатель "
+"обратно серверу. Такого рода возможность позволяет файловому серверу "
+"пространства пользователя работать без формирования состояния (stateless "
+"fashion) для файлов, которые они обслуживают."
+
+#.  commit bcda76524cd1fa32af748536f27f674a13e56700
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:409
+msgid ""
+"If I<pathname> refers to a symbolic link and I<flags> does not specify "
+"B<AT_SYMLINK_FOLLOW>, then B<name_to_handle_at>()  returns a handle for the "
+"link (rather than the file to which it refers).  The process receiving the "
+"handle can later perform operations on the symbolic link by converting the "
+"handle to a file descriptor using B<open_by_handle_at>()  with the B<O_PATH>"
+" flag, and then passing the file descriptor as the I<dirfd> argument in "
+"system calls such as B<readlinkat>(2)  and B<fchownat>(2)."
+msgstr ""
+"Если I<pathname> указывает на символическую ссылку и в I<flags> отсутствует "
+"B<AT_SYMLINK_FOLLOW>, то B<name_to_handle_at>() возвращает описатель ссылки "
+"(а не файла, на который она ссылается). Процесс, получивший описатель, может "
+"позднее выполнить операции над символической ссылкой, преобразовав описатель "
+"в файловый дескриптор, используя B<open_by_handle_at>() с флагом B<O_PATH>, и "
+"затем передав файловый дескриптор через аргумент I<dirfd> в системные вызовы "
+"B<readlinkat>(2) и B<fchownat>(2)."
+
+#. type: SS
+#: man-pages/man2/open_by_handle_at.2:409
+#, no-wrap
+msgid "Obtaining a persistent filesystem ID"
+msgstr "Получение постоянного идентификатора файловой системы"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:423
+msgid ""
+"The mount IDs in I</proc/self/mountinfo> can be reused as filesystems are "
+"unmounted and mounted.  Therefore, the mount ID returned by "
+"B<name_to_handle_at>()  (in I<*mount_id>)  should not be treated as a "
+"persistent identifier for the corresponding mounted filesystem.  However, an"
+" application can use the information in the I<mountinfo> record that "
+"corresponds to the mount ID to derive a persistent identifier."
+msgstr ""
+"Идентификаторы монтирования в I</proc/self/mountinfo> могут быть использованы "
+"повторно после размонтирования и монтирования файловой системы. Поэтому, "
+"идентификатор монтирования, возвращаемый B<name_to_handle_at>() (в I<"
+"*mount_id>), не должен считаться постоянным идентификатором соответствующей "
+"файловой системы. Однако, приложение может использовать информацию в записи "
+"I<mountinfo>, которая соответствует идентификатору монтирования, для "
+"получения постоянного идентификатора."
+
+#.  e.g., http://stackoverflow.com/questions/6748429/using-libblkid-to-find-
+#. uuid-of-a-partition
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:439
+msgid ""
+"For example, one can use the device name in the fifth field of the "
+"I<mountinfo> record to search for the corresponding device UUID via the "
+"symbolic links in I</dev/disks/by-uuid>.  (A more comfortable way of "
+"obtaining the UUID is to use the B<libblkid>(3)  library.)  That process can"
+" then be reversed, using the UUID to look up the device name, and then "
+"obtaining the corresponding mount point, in order to produce the I<mount_fd>"
+" argument used by B<open_by_handle_at>()."
+msgstr ""
+"Например, можно использовать имя устройства в пятом поле записи I<mountinfo> "
+"для поиска соответствующего устройству UUID через символические ссылки в I<"
+"/dev/disks/by-uuid> (более удобный способ получения UUID — использовать "
+"библиотеку B<libblkid>(3)). Этот процесс может быть и обратным — используя "
+"UUID найти имя устройства, и затем получить соответствующую точку "
+"монтирования, чтобы создать аргумент I<mount_fd>, используемый для B<"
+"open_by_handle_at>()."
+
+#. type: SH
+#: man-pages/man2/open_by_handle_at.2:439
+#, no-wrap
+msgid "EXAMPLE"
+msgstr "ПРИМЕР"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:451
+msgid ""
+"The two programs below demonstrate the use of B<name_to_handle_at>()  and "
+"B<open_by_handle_at>().  The first program (I<t_name_to_handle_at.c>)  uses "
+"B<name_to_handle_at>()  to obtain the file handle and mount ID for the file "
+"specified in its command-line argument; the handle and mount ID are written "
+"to standard output."
+msgstr ""
+"Две представленные далее программы демонстрируют использование B<"
+"name_to_handle_at>() и B<open_by_handle_at>(). Первая программа (I<"
+"t_name_to_handle_at.c>) использует B<name_to_handle_at>() для получения "
+"файлового описателя и идентификатора монтирования для файла, указанного в "
+"аргументе командной строки; описатель и идентификатор монтирования "
+"записываются в стандартный вывод."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:471
+msgid ""
+"The second program (I<t_open_by_handle_at.c>)  reads a mount ID and file "
+"handle from standard input.  The program then employs B<open_by_handle_at>()"
+"  to open the file using that handle.  If an optional command-line argument "
+"is supplied, then the I<mount_fd> argument for B<open_by_handle_at>()  is "
+"obtained by opening the directory named in that argument.  Otherwise, "
+"I<mount_fd> is obtained by scanning I</proc/self/mountinfo> to find a record"
+" whose mount ID matches the mount ID read from standard input, and the mount"
+" directory specified in that record is opened.  (These programs do not deal "
+"with the fact that mount IDs are not persistent.)"
+msgstr ""
+"Вторая программа (I<t_open_by_handle_at.c>) читает идентификатор монтирования "
+"и файловый описатель из стандартного ввода. Затем программа, используя "
+"описатель, применяет B<open_by_handle_at>() для открытия файла. Если указан "
+"необязательный параметр командной строки, то аргумент I<mount_fd> для B<"
+"open_by_handle_at>() создаётся из открытия каталога, указанного в аргументе. "
+"В противном случае I<mount_fd> заполняется результатом сканированием I<"
+"/proc/self/mountinfo> в целях найти запись, чей идентификатор монтирования "
+"совпадает с идентификатором монтирования из стандартного ввода, и открывается "
+"каталог монтирования, указанный в этой записи (эти программы не учитывают, "
+"что идентификатор монтирования не постоянен)."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:473
+msgid "The following shell session demonstrates the use of these two programs:"
+msgstr ""
+"Следующий сеанс работы в оболочке показывает использование этих программ:"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:483
+#, no-wrap
+msgid ""
+"$ B<echo 'Can you please think about it?' E<gt> cecilia.txt>\n"
+"$ B<./t_name_to_handle_at cecilia.txt E<gt> fh>\n"
+"$ B<./t_open_by_handle_at E<lt> fh>\n"
+"open_by_handle_at: Operation not permitted\n"
+"$ B<sudo ./t_open_by_handle_at E<lt> fh>      # Need CAP_SYS_ADMIN\n"
+"Read 31 bytes\n"
+"$ B<rm cecilia.txt>\n"
+msgstr ""
+"$ B<echo 'Can you please think about it?' E<gt> cecilia.txt>\n$ B<"
+"./t_name_to_handle_at cecilia.txt E<gt> fh>\n$ B<./t_open_by_handle_at E<lt> "
+"fh>\nopen_by_handle_at: Operation not permitted\n$ B<sudo "
+"./t_open_by_handle_at E<lt> fh>      # требуется CAP_SYS_ADMIN\nRead 31 "
+"bytes\n$ B<rm cecilia.txt>\n"
+
+#.  Christoph Hellwig: That's why the file handles contain a generation
+#.  counter that gets incremented in this case.
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:494
+msgid ""
+"Now we delete and (quickly) re-create the file so that it has the same "
+"content and (by chance) the same inode.  Nevertheless, "
+"B<open_by_handle_at>()  recognizes that the original file referred to by the"
+" file handle no longer exists."
+msgstr ""
+"Теперь мы удаляем и (быстро) пересоздаём файл с тем же содержимым и (если "
+"повезёт) с той же инодой. Не смотря на это, B<open_by_handle_at>() "
+"распознаёт, что первоначальный файл, на который указывал файловый описатель, "
+"больше не существует."
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:505
+#, no-wrap
+msgid ""
+"$ B<stat --printf=\"%i\\en\" cecilia.txt>     # Display inode number\n"
+"4072121\n"
+"$ B<rm cecilia.txt>\n"
+"$ B<echo 'Can you please think about it?' E<gt> cecilia.txt>\n"
+"$ B<stat --printf=\"%i\\en\" cecilia.txt>     # Check inode number\n"
+"4072121\n"
+"$ B<sudo ./t_open_by_handle_at E<lt> fh>\n"
+"open_by_handle_at: Stale NFS file handle\n"
+msgstr ""
+"$ B<stat --printf=\"%i\\en\" cecilia.txt>     # вывести номер "
+"иноды\n4072121\n$ B<rm cecilia.txt>\n$ B<echo 'Can you please think about "
+"it?' E<gt> cecilia.txt>\n$ B<stat --printf=\"%i\\en\" cecilia.txt>     # "
+"проверить номер иноды\n4072121\n$ B<sudo ./t_open_by_handle_at E<lt> fh>"
+"\nopen_by_handle_at: Stale NFS file handle\n"
+
+#. type: SS
+#: man-pages/man2/open_by_handle_at.2:507
+#, no-wrap
+msgid "Program source: t_name_to_handle_at.c"
+msgstr "Исходный код программы: t_name_to_handle_at.c"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:519
+#, no-wrap
+msgid ""
+"#define _GNU_SOURCE\n"
+"#include E<lt>sys/types.hE<gt>\n"
+"#include E<lt>sys/stat.hE<gt>\n"
+"#include E<lt>fcntl.hE<gt>\n"
+"#include E<lt>stdio.hE<gt>\n"
+"#include E<lt>stdlib.hE<gt>\n"
+"#include E<lt>unistd.hE<gt>\n"
+"#include E<lt>errno.hE<gt>\n"
+"#include E<lt>string.hE<gt>\n"
+msgstr ""
+"#define _GNU_SOURCE\n#include E<lt>sys/types.hE<gt>\n#include E<lt>"
+"sys/stat.hE<gt>\n#include E<lt>fcntl.hE<gt>\n#include E<lt>stdio.hE<gt>"
+"\n#include E<lt>stdlib.hE<gt>\n#include E<lt>unistd.hE<gt>\n#include E<lt>"
+"errno.hE<gt>\n#include E<lt>string.hE<gt>\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:522
+#: man-pages/man2/open_by_handle_at.2:595
+#, no-wrap
+msgid ""
+"#define errExit(msg)    do { perror(msg); exit(EXIT_FAILURE); \\e\n"
+"                        } while (0)\n"
+msgstr ""
+"#define errExit(msg)    do { perror(msg); exit(EXIT_FAILURE); \\e\n           "
+"             } while (0)\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:529
+#, no-wrap
+msgid ""
+"int\n"
+"main(int argc, char *argv[])\n"
+"{\n"
+"    struct file_handle *fhp;\n"
+"    int mount_id, fhsize, flags, dirfd, j;\n"
+"    char *pathname;\n"
+msgstr ""
+"int\nmain(int argc, char *argv[])\n{\n    struct file_handle *fhp;\n    int "
+"mount_id, fhsize, flags, dirfd, j;\n    char *pathname;\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:534
+#, no-wrap
+msgid ""
+"    if (argc != 2) {\n"
+"        fprintf(stderr, \"Usage: %s pathname\\en\", argv[0]);\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
+msgstr ""
+"    if (argc != 2) {\n        fprintf(stderr, \"Использование: %s путь\\en\", "
+"argv[0]);\n        exit(EXIT_FAILURE);\n    }\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:536
+#, no-wrap
+msgid "    pathname = argv[1];\n"
+msgstr "    pathname = argv[1];\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:538
+#, no-wrap
+msgid "    /* Allocate file_handle structure */\n"
+msgstr "    /* выделяем место под структуру file_handle */\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:543
+#, no-wrap
+msgid ""
+"    fhsize = sizeof(*fhp);\n"
+"    fhp = malloc(fhsize);\n"
+"    if (fhp == NULL)\n"
+"        errExit(\"malloc\");\n"
+msgstr ""
+"    fhsize = sizeof(*fhp);\n    fhp = malloc(fhsize);\n    if (fhp == NULL)\n "
+"       errExit(\"malloc\");\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:546
+#, no-wrap
+msgid ""
+"    /* Make an initial call to name_to_handle_at() to discover\n"
+"       the size required for file handle */\n"
+msgstr ""
+"    /* выполняем первоначальный вызов name_to_handle_at() для\n       "
+"определения требуемого размера файлового описателя */\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:555
+#, no-wrap
+msgid ""
+"    dirfd = AT_FDCWD;           /* For name_to_handle_at() calls */\n"
+"    flags = 0;                  /* For name_to_handle_at() calls */\n"
+"    fhp-E<gt>handle_bytes = 0;\n"
+"    if (name_to_handle_at(dirfd, pathname, fhp,\n"
+"                &mount_id, flags) != -1 || errno != EOVERFLOW) {\n"
+"        fprintf(stderr, \"Unexpected result from name_to_handle_at()\\en\");\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
+msgstr ""
+"    dirfd = AT_FDCWD;           /* для вызовов name_to_handle_at() */\n    "
+"flags = 0;                  /* для вызовов name_to_handle_at() */\n    fhp-E<"
+"gt>handle_bytes = 0;\n    if (name_to_handle_at(dirfd, pathname, fhp,\n       "
+"         &mount_id, flags) != -1 || errno != EOVERFLOW) {\n        "
+"fprintf(stderr, \"Unexpected result from name_to_handle_at()\\en\");\n        "
+"exit(EXIT_FAILURE);\n    }\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:557
+#, no-wrap
+msgid "    /* Reallocate file_handle structure with correct size */\n"
+msgstr ""
+"    /* перераспределяем структуру file_handle с правильным размером */\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:562
+#, no-wrap
+msgid ""
+"    fhsize = sizeof(struct file_handle) + fhp-E<gt>handle_bytes;\n"
+"    fhp = realloc(fhp, fhsize);         /* Copies fhp-E<gt>handle_bytes */\n"
+"    if (fhp == NULL)\n"
+"        errExit(\"realloc\");\n"
+msgstr ""
+"    fhsize = sizeof(struct file_handle) + fhp-E<gt>handle_bytes;\n    fhp = "
+"realloc(fhp, fhsize);         /* копируем fhp-E<gt>handle_bytes */\n    if "
+"(fhp == NULL)\n        errExit(\"realloc\");\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:564
+#, no-wrap
+msgid "    /* Get file handle from pathname supplied on command line */\n"
+msgstr ""
+"    /* получаем файловый описатель из пути, который\n       указан в "
+"командной строке */\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:567
+#, no-wrap
+msgid ""
+"    if (name_to_handle_at(dirfd, pathname, fhp, &mount_id, flags) == -1)\n"
+"        errExit(\"name_to_handle_at\");\n"
+msgstr ""
+"    if (name_to_handle_at(dirfd, pathname, fhp, &mount_id, flags) == -1)\n    "
+"    errExit(\"name_to_handle_at\");\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:570
+#, no-wrap
+msgid ""
+"    /* Write mount ID, file handle size, and file handle to stdout,\n"
+"       for later reuse by t_open_by_handle_at.c */\n"
+msgstr ""
+"    /* пишем идентификатор монтирования, размер файлового описателя\n       и "
+"файловый описатель в stdout\n       для повторного использования в "
+"t_open_by_handle_at.c */\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:576
+#, no-wrap
+msgid ""
+"    printf(\"%d\\en\", mount_id);\n"
+"    printf(\"%d %d   \", fhp-E<gt>handle_bytes, fhp-E<gt>handle_type);\n"
+"    for (j = 0; j E<lt> fhp-E<gt>handle_bytes; j++)\n"
+"        printf(\" %02x\", fhp-E<gt>f_handle[j]);\n"
+"    printf(\"\\en\");\n"
+msgstr ""
+"    printf(\"%d\\en\", mount_id);\n    printf(\"%d %d   \", fhp-E<gt>"
+"handle_bytes, fhp-E<gt>handle_type);\n    for (j = 0; j E<lt> fhp-E<gt>"
+"handle_bytes; j++)\n        printf(\" %02x\", fhp-E<gt>f_handle[j]);\n    "
+"printf(\"\\en\");\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:579
+#: man-pages/man2/open_by_handle_at.2:719
+#, no-wrap
+msgid ""
+"    exit(EXIT_SUCCESS);\n"
+"}\n"
+msgstr "    exit(EXIT_SUCCESS);\n}\n"
+
+#. type: SS
+#: man-pages/man2/open_by_handle_at.2:580
+#, no-wrap
+msgid "Program source: t_open_by_handle_at.c"
+msgstr "Исходный код программы: t_open_by_handle_at.c"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:592
+#, no-wrap
+msgid ""
+"#define _GNU_SOURCE\n"
+"#include E<lt>sys/types.hE<gt>\n"
+"#include E<lt>sys/stat.hE<gt>\n"
+"#include E<lt>fcntl.hE<gt>\n"
+"#include E<lt>limits.hE<gt>\n"
+"#include E<lt>stdio.hE<gt>\n"
+"#include E<lt>stdlib.hE<gt>\n"
+"#include E<lt>unistd.hE<gt>\n"
+"#include E<lt>string.hE<gt>\n"
+msgstr ""
+"#define _GNU_SOURCE\n#include E<lt>sys/types.hE<gt>\n#include E<lt>"
+"sys/stat.hE<gt>\n#include E<lt>fcntl.hE<gt>\n#include E<lt>limits.hE<gt>"
+"\n#include E<lt>stdio.hE<gt>\n#include E<lt>stdlib.hE<gt>\n#include E<lt>"
+"unistd.hE<gt>\n#include E<lt>string.hE<gt>\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:601
+#, no-wrap
+msgid ""
+"/* Scan /proc/self/mountinfo to find the line whose mount ID matches\n"
+"   \\(aqmount_id\\(aq. (An easier way to do this is to install and use the\n"
+"   \\(aqlibmount\\(aq library provided by the \\(aqutil-linux\\(aq project.)\n"
+"   Open the corresponding mount path and return the resulting file\n"
+"   descriptor. */\n"
+msgstr ""
+"/* сканируем /proc/self/mountinfo в поиске строки, чей идентификатор\n   "
+"монтирования совпадает с \\(aqmount_id\\(aq (простейший способ,\n   это "
+"установить и использовать библиотеку\n   «libmount», предоставляемую проектом "
+"«util-linux»).\n   Открываем соответствующий путь монтирования и возвращаем\n "
+"  полученный файловый дескриптор. */\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:611
+#, no-wrap
+msgid ""
+"static int\n"
+"open_mount_path_by_id(int mount_id)\n"
+"{\n"
+"    char *linep;\n"
+"    size_t lsize;\n"
+"    char mount_path[PATH_MAX];\n"
+"    int mi_mount_id, found;\n"
+"    ssize_t nread;\n"
+"    FILE *fp;\n"
+msgstr ""
+"static int\nopen_mount_path_by_id(int mount_id)\n{\n    char *linep;\n    "
+"size_t lsize;\n    char mount_path[PATH_MAX];\n    int mi_mount_id, found;\n  "
+"  ssize_t nread;\n    FILE *fp;\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:615
+#, no-wrap
+msgid ""
+"    fp = fopen(\"/proc/self/mountinfo\", \"r\");\n"
+"    if (fp == NULL)\n"
+"        errExit(\"fopen\");\n"
+msgstr ""
+"    fp = fopen(\"/proc/self/mountinfo\", \"r\");\n    if (fp == NULL)\n       "
+" errExit(\"fopen\");\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:622
+#, no-wrap
+msgid ""
+"    found = 0;\n"
+"    linep = NULL;\n"
+"    while (!found) {\n"
+"        nread = getline(&linep, &lsize, fp);\n"
+"        if (nread == -1)\n"
+"            break;\n"
+msgstr ""
+"    found = 0;\n    linep = NULL;\n    while (!found) {\n        nread = "
+"getline(&linep, &lsize, fp);\n        if (nread == -1)\n            break;\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:629
+#, no-wrap
+msgid ""
+"        nread = sscanf(linep, \"%d %*d %*s %*s %s\",\n"
+"                       &mi_mount_id, mount_path);\n"
+"        if (nread != 2) {\n"
+"            fprintf(stderr, \"Bad sscanf()\\en\");\n"
+"            exit(EXIT_FAILURE);\n"
+"        }\n"
+msgstr ""
+"        nread = sscanf(linep, \"%d %*d %*s %*s %s\",\n                       "
+"&mi_mount_id, mount_path);\n        if (nread != 2) {\n            "
+"fprintf(stderr, \"Bad sscanf()\\en\");\n            exit(EXIT_FAILURE);\n     "
+"   }\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:634
+#, no-wrap
+msgid ""
+"        if (mi_mount_id == mount_id)\n"
+"            found = 1;\n"
+"    }\n"
+"    free(linep);\n"
+msgstr ""
+"        if (mi_mount_id == mount_id)\n            found = 1;\n    }\n    "
+"free(linep);\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:636
+#, no-wrap
+msgid "    fclose(fp);\n"
+msgstr "    fclose(fp);\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:641
+#, no-wrap
+msgid ""
+"    if (!found) {\n"
+"        fprintf(stderr, \"Could not find mount point\\en\");\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
+msgstr ""
+"    if (!found) {\n        fprintf(stderr, \"Could not find mount "
+"point\\en\");\n        exit(EXIT_FAILURE);\n    }\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:644
+#, no-wrap
+msgid ""
+"    return open(mount_path, O_RDONLY);\n"
+"}\n"
+msgstr "    return open(mount_path, O_RDONLY);\n}\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:655
+#, no-wrap
+msgid ""
+"int\n"
+"main(int argc, char *argv[])\n"
+"{\n"
+"    struct file_handle *fhp;\n"
+"    int mount_id, fd, mount_fd, handle_bytes, j;\n"
+"    ssize_t nread;\n"
+"    char buf[1000];\n"
+"#define LINE_SIZE 100\n"
+"    char line1[LINE_SIZE], line2[LINE_SIZE];\n"
+"    char *nextp;\n"
+msgstr ""
+"int\nmain(int argc, char *argv[])\n{\n    struct file_handle *fhp;\n    int "
+"mount_id, fd, mount_fd, handle_bytes, j;\n    ssize_t nread;\n    char "
+"buf[1000];\n#define LINE_SIZE 100\n    char line1[LINE_SIZE], "
+"line2[LINE_SIZE];\n    char *nextp;\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:660
+#, no-wrap
+msgid ""
+"    if ((argc E<gt> 1 && strcmp(argv[1], \"--help\") == 0) || argc E<gt> 2) "
+"{\n"
+"        fprintf(stderr, \"Usage: %s [mount-path]\\en\", argv[0]);\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
+msgstr ""
+"    if ((argc E<gt> 1 && strcmp(argv[1], \"--help\") == 0) || argc E<gt> 2) "
+"{\n        fprintf(stderr, \"Использование: %s [путь-монт.]\\en\", "
+"argv[0]);\n        exit(EXIT_FAILURE);\n    }\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:662
+#, no-wrap
+msgid "    /* Standard input contains mount ID and file handle information:\n"
+msgstr ""
+"    /* Стандартный ввод содержит идентификатор монтирования и\n       "
+"информацию о файловом описателе:\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:666
+#, no-wrap
+msgid ""
+"         Line 1: E<lt>mount_idE<gt>\n"
+"         Line 2: E<lt>handle_bytesE<gt> E<lt>handle_typeE<gt>   E<lt>bytes of "
+"handle in hexE<gt>\n"
+"    */\n"
+msgstr ""
+"         Строка 1: E<lt>идентификатор монтированияE<gt>\n         Строка 2: "
+"E<lt>handle_bytesE<gt> E<lt>handle_typeE<gt>\n                    E<lt>байты "
+"описателя в шестнад. системе счисленияE<gt>\n    */\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:672
+#, no-wrap
+msgid ""
+"    if ((fgets(line1, sizeof(line1), stdin) == NULL) ||\n"
+"           (fgets(line2, sizeof(line2), stdin) == NULL)) {\n"
+"        fprintf(stderr, \"Missing mount_id / file handle\\en\");\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
+msgstr ""
+"    if ((fgets(line1, sizeof(line1), stdin) == NULL) ||\n           "
+"(fgets(line2, sizeof(line2), stdin) == NULL)) {\n        fprintf(stderr, "
+"\"Missing mount_id / file handle\\en\");\n        exit(EXIT_FAILURE);\n    }\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:674
+#, no-wrap
+msgid "    mount_id = atoi(line1);\n"
+msgstr "    mount_id = atoi(line1);\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:676
+#, no-wrap
+msgid "    handle_bytes = strtoul(line2, &nextp, 0);\n"
+msgstr "    handle_bytes = strtoul(line2, &nextp, 0);\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:678
+#, no-wrap
+msgid ""
+"    /* Given handle_bytes, we can now allocate file_handle structure */\n"
+msgstr ""
+"    /* получаем handle_bytes, теперь мы можем выделить место\n       под "
+"структуру file_handle */\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:682
+#, no-wrap
+msgid ""
+"    fhp = malloc(sizeof(struct file_handle) + handle_bytes);\n"
+"    if (fhp == NULL)\n"
+"        errExit(\"malloc\");\n"
+msgstr ""
+"    fhp = malloc(sizeof(struct file_handle) + handle_bytes);\n    if (fhp == "
+"NULL)\n        errExit(\"malloc\");\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:684
+#, no-wrap
+msgid "    fhp-E<gt>handle_bytes = handle_bytes;\n"
+msgstr "    fhp-E<gt>handle_bytes = handle_bytes;\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:686
+#, no-wrap
+msgid "    fhp-E<gt>handle_type = strtoul(nextp, &nextp, 0);\n"
+msgstr "    fhp-E<gt>handle_type = strtoul(nextp, &nextp, 0);\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:689
+#, no-wrap
+msgid ""
+"    for (j = 0; j E<lt> fhp-E<gt>handle_bytes; j++)\n"
+"        fhp-E<gt>f_handle[j] = strtoul(nextp, &nextp, 16);\n"
+msgstr ""
+"    for (j = 0; j E<lt> fhp-E<gt>handle_bytes; j++)\n        fhp-E<gt>"
+"f_handle[j] = strtoul(nextp, &nextp, 16);\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:694
+#, no-wrap
+msgid ""
+"    /* Obtain file descriptor for mount point, either by opening\n"
+"       the pathname specified on the command line, or by scanning\n"
+"       /proc/self/mounts to find a mount that matches the \\(aqmount_id\\(aq\n"
+"       that we received from stdin. */\n"
+msgstr ""
+"    /* получаем файловый дескриптор для точки монтирования, или\n       "
+"открываем путь, указанный в командной строке, или сканируем\n       "
+"/proc/self/mounts в поиске монтирования, которое совпадает с\n       "
+"«mount_id», который мы получили из stdin. */\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:699
+#, no-wrap
+msgid ""
+"    if (argc E<gt> 1)\n"
+"        mount_fd = open(argv[1], O_RDONLY);\n"
+"    else\n"
+"        mount_fd = open_mount_path_by_id(mount_id);\n"
+msgstr ""
+"    if (argc E<gt> 1)\n        mount_fd = open(argv[1], O_RDONLY);\n    "
+"else\n        mount_fd = open_mount_path_by_id(mount_id);\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:702
+#, no-wrap
+msgid ""
+"    if (mount_fd == -1)\n"
+"        errExit(\"opening mount fd\");\n"
+msgstr "    if (mount_fd == -1)\n        errExit(\"opening mount fd\");\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:704
+#, no-wrap
+msgid "    /* Open file using handle and mount point */\n"
+msgstr "    /* открываем файл, используя описатель и точку монтирования */\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:708
+#, no-wrap
+msgid ""
+"    fd = open_by_handle_at(mount_fd, fhp, O_RDONLY);\n"
+"    if (fd == -1)\n"
+"        errExit(\"open_by_handle_at\");\n"
+msgstr ""
+"    fd = open_by_handle_at(mount_fd, fhp, O_RDONLY);\n    if (fd == -1)\n     "
+"   errExit(\"open_by_handle_at\");\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:710
+#, no-wrap
+msgid "    /* Try reading a few bytes from the file */\n"
+msgstr "    /* пытаемся прочитать несколько байт из файла */\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:714
+#, no-wrap
+msgid ""
+"    nread = read(fd, buf, sizeof(buf));\n"
+"    if (nread == -1)\n"
+"        errExit(\"read\");\n"
+msgstr ""
+"    nread = read(fd, buf, sizeof(buf));\n    if (nread == -1)\n        "
+"errExit(\"read\");\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:716
+#, no-wrap
+msgid "    printf(\"Read %zd bytes\\en\", nread);\n"
+msgstr "    printf(\"Read %zd bytes\\en\", nread);\n"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:726
+msgid "B<open>(2), B<libblkid>(3), B<blkid>(8), B<findfs>(8), B<mount>(8)"
+msgstr "B<open>(2), B<libblkid>(3), B<blkid>(8), B<findfs>(8), B<mount>(8)"
+
+#. type: Plain text
+#: man-pages/man2/open_by_handle_at.2:735
+msgid ""
+"The I<libblkid> and I<libmount> documentation in the latest I<util-linux> "
+"release at E<.UR https://www.kernel.org/pub/linux/utils/util-linux/> E<.UE>"
+msgstr ""
+"Документация I<libblkid> и I<libmount> в последнем выпуске I<util-linux> E<"
+".UR https://www.kernel.org/pub/linux/utils/util-linux/> E<.UE>"
+
+#. type: TH
+#: man-pages/man2/open.2:51
+#, no-wrap
+msgid "OPEN"
+msgstr "OPEN"
+
+#. type: TH
+#: man-pages/man2/open.2:51
+#, no-wrap
+msgid "2014-07-08"
+msgstr "2014-07-08"
+
+#. type: Plain text
+#: man-pages/man2/open.2:54
+msgid "open, openat, creat - open and possibly create a file"
+msgstr "open, openat, creat - открывает и, возможно, создаёт файл"
+
+#. type: Plain text
+#: man-pages/man2/open.2:59
+#, no-wrap
+msgid ""
+"B<#include E<lt>sys/types.hE<gt>>\n"
+"B<#include E<lt>sys/stat.hE<gt>>\n"
+"B<#include E<lt>fcntl.hE<gt>>\n"
+msgstr ""
+"B<#include E<lt>sys/types.hE<gt>>\nB<#include E<lt>sys/stat.hE<gt>>\nB<"
+"#include E<lt>fcntl.hE<gt>>\n"
+
+#. type: Plain text
+#: man-pages/man2/open.2:62
+#, no-wrap
+msgid ""
+"B<int open(const char *>I<pathname>B<, int >I<flags>B<);>\n"
+"B<int open(const char *>I<pathname>B<, int >I<flags>B<, mode_t >I<mode>B<);>\n"
+msgstr ""
+"B<int open(const char *>I<pathname>B<, int >I<flags>B<);>\nB<int open(const "
+"char *>I<pathname>B<, int >I<flags>B<, mode_t >I<mode>B<);>\n"
+
+#. type: Plain text
+#: man-pages/man2/open.2:64
+#, no-wrap
+msgid "B<int creat(const char *>I<pathname>B<, mode_t >I<mode>B<);>\n"
+msgstr "B<int creat(const char *>I<pathname>B<, mode_t >I<mode>B<);>\n"
+
+#. type: Plain text
+#: man-pages/man2/open.2:68
+#, no-wrap
+msgid ""
+"B<int openat(int >I<dirfd>B<, const char *>I<pathname>B<, int >I<flags>B<);>\n"
+"B<int openat(int >I<dirfd>B<, const char *>I<pathname>B<, int >I<flags>B<, "
+"mode_t >I<mode>B<);>\n"
+msgstr ""
+"B<int openat(int >I<dirfd>B<, const char *>I<pathname>B<, int >I<flags>B<);>"
+"\nB<int openat(int >I<dirfd>B<, const char *>I<pathname>B<, int >I<flags>B<, "
+"mode_t >I<mode>B<);>\n"
+
+#. type: Plain text
+#: man-pages/man2/open.2:73
+msgid ""
+"Feature Test Macro Requirements for glibc (see B<feature_test_macros>(7)):"
+msgstr ""
+"Требования макроса тестирования свойств для glibc (см. B<feature_test_macros>"
+"(7)):"
+
+#. type: Plain text
+#: man-pages/man2/open.2:76
+msgid "B<openat>():"
+msgstr "B<openat>():"
+
+#. type: TP
+#: man-pages/man2/open.2:79
+#, no-wrap
+msgid "Since glibc 2.10:"
+msgstr "Начиная с glibc 2.10:"
+
+#. type: Plain text
+#: man-pages/man2/open.2:82
+msgid "_XOPEN_SOURCE\\ E<gt>=\\ 700 || _POSIX_C_SOURCE\\ E<gt>=\\ 200809L"
+msgstr "_XOPEN_SOURCE\\ E<gt>=\\ 700 || _POSIX_C_SOURCE\\ E<gt>=\\ 200809L"
+
+#. type: TP
+#: man-pages/man2/open.2:82
+#, no-wrap
+msgid "Before glibc 2.10:"
+msgstr "До glibc 2.10:"
+
+#. type: Plain text
+#: man-pages/man2/open.2:85
+msgid "_ATFILE_SOURCE"
+msgstr "_ATFILE_SOURCE"
+
+#. type: Plain text
+#: man-pages/man2/open.2:98
+msgid ""
+"Given a I<pathname> for a file, B<open>()  returns a file descriptor, a "
+"small, nonnegative integer for use in subsequent system calls (B<read>(2), "
+"B<write>(2), B<lseek>(2), B<fcntl>(2), etc.).  The file descriptor returned "
+"by a successful call will be the lowest-numbered file descriptor not "
+"currently open for the process."
+msgstr ""
+"Получив в I<pathname> имя файла, B<open>() возвращает файловый дескриптор "
+"\\(em небольшое, неотрицательное значение \\(em для использования в "
+"последующих системных вызовах (B<read>(2), B<write>(2), B<lseek>(2), B<fcntl>"
+"(2) и т.д.). Файловый дескриптор, возвращаемый при успешном выполнении "
+"вызова, будет самым маленьким числом из файловых дескрипторов, которые ещё не "
+"открыты процессом."
+
+#. type: Plain text
+#: man-pages/man2/open.2:110
+msgid ""
+"By default, the new file descriptor is set to remain open across an "
+"B<execve>(2)  (i.e., the B<FD_CLOEXEC> file descriptor flag described in "
+"B<fcntl>(2))  is initially disabled; the B<O_CLOEXEC> flag, described below,"
+" can be used to change this default.  The file offset is set to the "
+"beginning of the file (see B<lseek>(2))."
+msgstr ""
+"По умолчанию, новый файловый дескриптор остаётся открытым при вызове B<execve>"
+"(2) (т.е., флаг B<FD_CLOEXEC> файлового дескриптора, описанный в B<fcntl>"
+"(2)), изначально сброшен; для изменения поведения по умолчанию можно "
+"использовать флаг B<O_CLOEXEC>, он описан далее. Файловое смещение "
+"устанавливается на начало файла (смотрите B<lseek>(2))."
+
+#. type: Plain text
+#: man-pages/man2/open.2:123
+msgid ""
+"A call to B<open>()  creates a new I<open file description>, an entry in the"
+" system-wide table of open files.  The open file description records the "
+"file offset and the file status flags (see below).  A file descriptor is a "
+"reference to an open file description; this reference is unaffected if "
+"I<pathname> is subsequently removed or modified to refer to a different "
+"file.  For further details on open file descriptions, see NOTES."
+msgstr ""
+"Вызов B<open>() создаёт новое I<открытое файловое описание> — запись в "
+"системной таблице открытых файлов. В этой записи "
+"хранится смещение и флаги состояния файла (смотрите ниже). Файловый "
+"дескриптор — это ссылка на открытое файловое описание; с "
+"этой ссылкой ничего не происходит при последующем удалении I<pathname> "
+"или переуказании имени на другой файл. Дополнительную информацию об "
+"открытых файловых описаниях смотрите в разделе ЗАМЕЧАНИЯ."
+
+#. type: Plain text
+#: man-pages/man2/open.2:131
+msgid ""
+"The argument I<flags> must include one of the following I<access modes>: "
+"B<O_RDONLY>, B<O_WRONLY>, or B<O_RDWR>.  These request opening the file "
+"read-only, write-only, or read/write, respectively."
+msgstr ""
+"Параметр I<flags> должен содержать один из следующих I<режимов доступа>: B<"
+"O_RDONLY> (только для чтения), B<O_WRONLY> (только для записи) или B<O_RDWR> "
+"(для чтения и записи)."
+
+#.  SUSv4 divides the flags into:
+#.  * Access mode
+#.  * File creation
+#.  * File status
+#.  * Other (O_CLOEXEC, O_DIRECTORY, O_NOFOLLOW)
+#.  though it's not clear what the difference between "other" and
+#.  "File creation" flags is.  I raised an Aardvark to see if this
+#.  can be clarified in SUSv4; 10 Oct 2008.
+#. http://thread.gmane.org/gmane.comp.standards.posix.austin.general/64/focus=67
+#.  TC1 (balloted in 2013), resolved this, so that those three constants
+#.  are also categorized" as file status flags.
+#. type: Plain text
+#: man-pages/man2/open.2:170
+msgid ""
+"In addition, zero or more file creation flags and file status flags can be "
+"bitwise-I<or>'d in I<flags>.  The I<file creation flags> are B<O_CLOEXEC>, "
+"B<O_CREAT>, B<O_DIRECTORY>, B<O_EXCL>, B<O_NOCTTY>, B<O_NOFOLLOW>, "
+"B<O_TMPFILE>, B<O_TRUNC>, and B<O_TTY_INIT>.  The I<file status flags> are "
+"all of the remaining flags listed below.  The distinction between these two "
+"groups of flags is that the file status flags can be retrieved and (in some "
+"cases)  modified; see B<fcntl>(2)  for details."
+msgstr ""
+"Также в I<flags> можно указывать флаги создания и состояния файла, объединяя "
+"их битовой операцией I<ИЛИ>. I<Флаги создания файла>: B<O_CLOEXEC>, B<O_CREAT>"
+", B<O_DIRECTORY>, B<O_EXCL>, B<O_NOCTTY>, B<O_NOFOLLOW>, B<O_TMPFILE>, B<"
+"O_TRUNC> и B<O_TTY_INIT>.I<Флаги состояния файла> — все оставшиеся, "
+"перечислены ниже. Различие между двумя этими группами в том, что флаги "
+"состояния можно запросить и (в некоторых случаях) изменить; смотрите B<fcntl>"
+"(2)."
+
+#. type: Plain text
+#: man-pages/man2/open.2:172
+msgid ""
+"The full list of file creation flags and file status flags is as follows:"
+msgstr "Полный список флагов создания и флагов состояния файла:"
+
+#. type: TP
+#: man-pages/man2/open.2:172
+#, no-wrap
+msgid "B<O_APPEND>"
+msgstr "B<O_APPEND>"
+
+#.  For more background, see
+#.  http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=453946
+#.  http://nfs.sourceforge.net/
+#. type: Plain text
+#: man-pages/man2/open.2:189
+msgid ""
+"The file is opened in append mode.  Before each B<write>(2), the file offset"
+" is positioned at the end of the file, as if with B<lseek>(2).  B<O_APPEND> "
+"may lead to corrupted files on NFS filesystems if more than one process "
+"appends data to a file at once.  This is because NFS does not support "
+"appending to a file, so the client kernel has to simulate it, which can't be"
+" done without a race condition."
+msgstr ""
+"Файл открывается в режиме добавления. Перед каждым вызовом B<write>(2) "
+"файловое смещение устанавливается в конец файла, как если бы это делалось с "
+"помощью B<lseek>(2). Флаг B<O_APPEND> может приводить к повреждению файлов в "
+"файловых системах NFS, если одновременно добавляют данные в файл несколько "
+"процессов. Это происходит из-за того, что NFS не поддерживает добавление в "
+"файл, поэтому клиентское ядро имитирует такое поведение, но при этом нельзя "
+"избежать состязательности процессов."
+
+#. type: TP
+#: man-pages/man2/open.2:189
+#, no-wrap
+msgid "B<O_ASYNC>"
+msgstr "B<O_ASYNC>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:203
+msgid ""
+"Enable signal-driven I/O: generate a signal (B<SIGIO> by default, but this "
+"can be changed via B<fcntl>(2))  when input or output becomes possible on "
+"this file descriptor.  This feature is available only for terminals, "
+"pseudoterminals, sockets, and (since Linux 2.6) pipes and FIFOs.  See "
+"B<fcntl>(2)  for further details.  See also BUGS, below."
+msgstr ""
+"Включает ввод-вывод, управляемый сигналом: генерирует сигнал (по умолчанию B<"
+"SIGIO>, но можно изменить с помощью B<fcntl>(2)), когда становится возможным "
+"ввод или вывод для этого файлового дескриптора. Эта возможность доступна "
+"только для терминалов, псевдо-терминалов, сокетов, каналов (начиная с Linux "
+"2.6) и FIFO. Подробней смотрите B<fcntl>(2). Также смотрите ДЕФЕКТЫ далее."
+
+#. type: TP
+#: man-pages/man2/open.2:203
+#, no-wrap
+msgid "B<O_CLOEXEC> (since Linux 2.6.23)"
+msgstr "B<O_CLOEXEC> (начиная с Linux 2.6.23)"
+
+#.  NOTE! several other man pages refer to this text
+#. type: Plain text
+#: man-pages/man2/open.2:213
+msgid ""
+"Enable the close-on-exec flag for the new file descriptor.  Specifying this "
+"flag permits a program to avoid additional B<fcntl>(2)  B<F_SETFD> "
+"operations to set the B<FD_CLOEXEC> flag."
+msgstr ""
+"Устанавливает флаг close-on-exec на новом файловом дескрипторе. Указание "
+"данного флага позволяет программе избежать дополнительной операции B<fcntl>"
+"(2) B<F_SETFD> для установки флага B<FD_CLOEXEC>."
+
+#.  This flag fixes only one form of the race condition;
+#.  The race can also occur with, for example, descriptors
+#.  returned by accept(), pipe(), etc.
+#. type: Plain text
+#: man-pages/man2/open.2:242
+msgid ""
+"Note that the use of this flag is essential in some multithreaded programs, "
+"because using a separate B<fcntl>(2)  B<F_SETFD> operation to set the "
+"B<FD_CLOEXEC> flag does not suffice to avoid race conditions where one "
+"thread opens a file descriptor and attempts to set its close-on-exec flag "
+"using B<fcntl>(2)  at the same time as another thread does a B<fork>(2)  "
+"plus B<execve>(2).  Depending on the order of execution, the race may lead "
+"to the file descriptor returned by B<open>()  being unintentionally leaked "
+"to the program executed by the child process created by B<fork>(2).  (This "
+"kind of race is in principle possible for any system call that creates a "
+"file descriptor whose close-on-exec flag should be set, and various other "
+"Linux system calls provide an equivalent of the B<O_CLOEXEC> flag to deal "
+"with this problem.)"
+msgstr ""
+"Заметим, что использование этого флага обязательно для некоторых "
+"многонитиевых программ, так как использование отдельной операции B<fcntl>(2) "
+"B<F_SETFD> для установки флага B<FD_CLOEXEC> недостаточно для избежания "
+"состязательности, когда одна нить открывает файловый дескриптор, а в тоже "
+"время другая нить может выполнять B<fork>(2) и B<execve>(2). В зависимости от "
+"порядка выполнения, состязательность может привести к тому, что файловый "
+"дескриптор, возвращённый B<open>(), будет ненамеренно передан программе, "
+"выполняющейся в созданном с помощью B<fork>(2) потомке (такого рода "
+"состязательность, в принципе, возможна для любых системных вызовов, создающих "
+"файловый дескриптор, у которого должен быть установлен флаг close-on-exec, и "
+"различные другие системные вызовы Linux предоставляют эквивалент флагу B<"
+"O_CLOEXEC>, чтобы избежать этой проблемы)."
+
+#. type: TP
+#: man-pages/man2/open.2:242
+#, no-wrap
+msgid "B<O_CREAT>"
+msgstr "B<O_CREAT>"
+
+#.  As at 2.6.25, bsdgroups is supported by ext2, ext3, ext4, and
+#.  XFS (since 2.6.14).
+#. type: Plain text
+#: man-pages/man2/open.2:258
+msgid ""
+"If the file does not exist, it will be created.  The owner (user ID) of the "
+"file is set to the effective user ID of the process.  The group ownership "
+"(group ID) is set either to the effective group ID of the process or to the "
+"group ID of the parent directory (depending on filesystem type and mount "
+"options, and the mode of the parent directory; see the mount options "
+"I<bsdgroups> and I<sysvgroups> described in B<mount>(8))."
+msgstr ""
+"Если файл не существует, то он будет создан. Владелец (идентификатор "
+"пользователя) файла устанавливается в значение эффективного идентификатора "
+"пользователя процесса. Группа (идентификатор группы) устанавливается либо в "
+"значение эффективного идентификатора группы процесса, либо в значение "
+"идентификатора группы родительского каталога (зависит от типа файловой "
+"системы, параметров монтирования и режима родительского каталога; смотрите "
+"параметры монтирования I<bsdgroups> и I<sysvgroups>, описанные в B<mount>(8))."
+
+#. type: Plain text
+#: man-pages/man2/open.2:285
+msgid ""
+"I<mode> specifies the permissions to use in case a new file is created.  "
+"This argument must be supplied when B<O_CREAT> or B<O_TMPFILE> is specified "
+"in I<flags>; if neither B<O_CREAT> nor B<O_TMPFILE> is specified, then "
+"I<mode> is ignored.  The effective permissions are modified by the process's"
+" I<umask> in the usual way: The permissions of the created file are "
+"I<(mode\\ &\\ ~umask)>.  Note that this mode applies only to future accesses"
+" of the newly created file; the B<open>()  call that creates a read-only "
+"file may well return a read/write file descriptor."
+msgstr ""
+"В аргументе I<mode> указываются права использования, которые используются при "
+"создании нового файла. Этот параметр должен указываться, если в I<flags> "
+"устанавливается B<O_CREAT> или B<O_TMPFILE>; если B<O_CREAT> или B<O_TMPFILE> "
+"не указаны, то I<mode> игнорируется. Эффективные права изменяются согласно I<"
+"umask> процесса как обычно: права созданного файла будут установлены согласно "
+"I<(mode\\ &\\ ~umask)>. Заметим, что этот режим будет учтён только при "
+"последующих обращениях к созданному файлу; вызов B<open>(), создающий файл "
+"только для чтения, может вернуть файловый дескриптор доступный на чтение и "
+"запись."
+
+#. type: Plain text
+#: man-pages/man2/open.2:288
+msgid "The following symbolic constants are provided for I<mode>:"
+msgstr "Символьные константы, используемые в I<mode>:"
+
+#. type: TP
+#: man-pages/man2/open.2:288
+#, no-wrap
+msgid "B<S_IRWXU>"
+msgstr "B<S_IRWXU>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:291
+msgid "00700 user (file owner) has read, write and execute permission"
+msgstr ""
+"00700 пользователь (владелец файла) имеет права на чтение, запись и "
+"выполнение файла"
+
+#. type: TP
+#: man-pages/man2/open.2:291
+#, no-wrap
+msgid "B<S_IRUSR>"
+msgstr "B<S_IRUSR>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:294
+msgid "00400 user has read permission"
+msgstr "00400 пользователь имеет права на чтение файла"
+
+#. type: TP
+#: man-pages/man2/open.2:294
+#, no-wrap
+msgid "B<S_IWUSR>"
+msgstr "B<S_IWUSR>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:297
+msgid "00200 user has write permission"
+msgstr "00200 пользователь имеет права на запись в файл"
+
+#. type: TP
+#: man-pages/man2/open.2:297
+#, no-wrap
+msgid "B<S_IXUSR>"
+msgstr "B<S_IXUSR>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:300
+msgid "00100 user has execute permission"
+msgstr "00100 пользователь имеет права на выполнение файла"
+
+#. type: TP
+#: man-pages/man2/open.2:300
+#, no-wrap
+msgid "B<S_IRWXG>"
+msgstr "B<S_IRWXG>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:303
+msgid "00070 group has read, write and execute permission"
+msgstr "00070 группа имеет права на чтение, запись и выполнение файла"
+
+#. type: TP
+#: man-pages/man2/open.2:303
+#, no-wrap
+msgid "B<S_IRGRP>"
+msgstr "B<S_IRGRP>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:306
+msgid "00040 group has read permission"
+msgstr "00040 группа имеет права на чтение файла"
+
+#. type: TP
+#: man-pages/man2/open.2:306
+#, no-wrap
+msgid "B<S_IWGRP>"
+msgstr "B<S_IWGRP>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:309
+msgid "00020 group has write permission"
+msgstr "00020 группа имеет права на запись в файл"
+
+#. type: TP
+#: man-pages/man2/open.2:309
+#, no-wrap
+msgid "B<S_IXGRP>"
+msgstr "B<S_IXGRP>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:312
+msgid "00010 group has execute permission"
+msgstr "00010 группа имеет права на выполнение файла"
+
+#. type: TP
+#: man-pages/man2/open.2:312
+#, no-wrap
+msgid "B<S_IRWXO>"
+msgstr "B<S_IRWXO>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:315
+msgid "00007 others have read, write and execute permission"
+msgstr "00007 все остальные имеют права на чтение, запись и выполнение файла"
+
+#. type: TP
+#: man-pages/man2/open.2:315
+#, no-wrap
+msgid "B<S_IROTH>"
+msgstr "B<S_IROTH>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:318
+msgid "00004 others have read permission"
+msgstr "00004 все остальные имеют права на чтение файла"
+
+#. type: TP
+#: man-pages/man2/open.2:318
+#, no-wrap
+msgid "B<S_IWOTH>"
+msgstr "B<S_IWOTH>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:321
+msgid "00002 others have write permission"
+msgstr "00002 все остальные имеют права на запись в файл"
+
+#. type: TP
+#: man-pages/man2/open.2:321
+#, no-wrap
+msgid "B<S_IXOTH>"
+msgstr "B<S_IXOTH>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:324
+msgid "00001 others have execute permission"
+msgstr "00001 все остальные имеют права на выполнение файла"
+
+#. type: TP
+#: man-pages/man2/open.2:325
+#, no-wrap
+msgid "B<O_DIRECT> (since Linux 2.4.10)"
+msgstr "B<O_DIRECT> (начиная с Linux 2.4.10)"
+
+#. type: Plain text
+#: man-pages/man2/open.2:342
+msgid ""
+"Try to minimize cache effects of the I/O to and from this file.  In general "
+"this will degrade performance, but it is useful in special situations, such "
+"as when applications do their own caching.  File I/O is done directly "
+"to/from user-space buffers.  The B<O_DIRECT> flag on its own makes an effort"
+" to transfer data synchronously, but does not give the guarantees of the "
+"B<O_SYNC> flag that data and necessary metadata are transferred.  To "
+"guarantee synchronous I/O, B<O_SYNC> must be used in addition to "
+"B<O_DIRECT>.  See NOTES below for further discussion."
+msgstr ""
+"Попытаться минимизировать влияние кэширования ввода-вывода при чтении и "
+"записи в файл. Обычно, это ухудшает производительность, но полезно для особых "
+"случаев, например, когда приложение выполняет кэширование самостоятельно. "
+"Файловый ввод-вывод выполняется непосредственно в/из буферов пространства "
+"пользователя. При флаге B<O_DIRECT> предпринимаются все усилия для синхронной "
+"передачи данных, но это не гарантирует, как с флагом B<O_SYNC>, передачу "
+"данных и необходимых метаданных. Чтобы гарантировать синхронный ввод-вывод "
+"вместе с B<O_DIRECT> нужно использовать B<O_SYNC>. Дальнейшее описание "
+"смотрите далее в разделе ЗАМЕЧАНИЯ."
+
+#. type: Plain text
+#: man-pages/man2/open.2:346
+msgid ""
+"A semantically similar (but deprecated) interface for block devices is "
+"described in B<raw>(8)."
+msgstr ""
+"Семантически похожий интерфейс (но устаревший) для блочных устройств описан в "
+"B<raw>(8)."
+
+#. type: TP
+#: man-pages/man2/open.2:346
+#, no-wrap
+msgid "B<O_DIRECTORY>"
+msgstr "B<O_DIRECTORY>"
+
+#.  But see the following and its replies:
+#.  http://marc.theaimsgroup.com/?t=112748702800001&r=1&w=2
+#.  [PATCH] open: O_DIRECTORY and O_CREAT together should fail
+#.  O_DIRECTORY | O_CREAT causes O_DIRECTORY to be ignored.
+#. type: Plain text
+#: man-pages/man2/open.2:358
+msgid ""
+"If I<pathname> is not a directory, cause the open to fail.  This flag was "
+"added in kernel version 2.1.126, to avoid denial-of-service problems if "
+"B<opendir>(3)  is called on a FIFO or tape device."
+msgstr ""
+"Если I<pathname> не является каталогом, то завершить вызов с ошибкой. Этот "
+"флаг был добавлен в ядро версии 2.1.126, чтобы избежать проблем с «отказом в "
+"обслуживании», если B<opendir>(3) был вызван для канала FIFO или ленточного "
+"устройства."
+
+#. type: TP
+#: man-pages/man2/open.2:358
+#, no-wrap
+msgid "B<O_DSYNC>"
+msgstr "B<O_DSYNC>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:364
+msgid ""
+"Write operations on the file will complete according to the requirements of "
+"synchronized I/O I<data> integrity completion."
+msgstr ""
+"Операции записи файла будут выполнены согласно требованиям целостности "
+"синхронизации ввода-вывода I<data>."
+
+#. type: Plain text
+#: man-pages/man2/open.2:376
+msgid ""
+"By the time B<write>(2)  (and similar)  return, the output data has been "
+"transferred to the underlying hardware, along with any file metadata that "
+"would be required to retrieve that data (i.e., as though each B<write>(2)  "
+"was followed by a call to B<fdatasync>(2)).  I<See NOTES below>."
+msgstr ""
+"К времени возврата из B<write>(2) (и подобных) выходные данные уже переданы в "
+"задействованное аппаратное обеспечение вместе со всеми метаданными файла, "
+"которые бы потребовались для получения данных (т. е., как если бы за каждым "
+"B<write>(2) был выполнен вызов B<fdatasync>(2)). I<Смотрите ЗАМЕЧАНИЯ далее>."
+
+#. type: TP
+#: man-pages/man2/open.2:376
+#, no-wrap
+msgid "B<O_EXCL>"
+msgstr "B<O_EXCL>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:386
+msgid ""
+"Ensure that this call creates the file: if this flag is specified in "
+"conjunction with B<O_CREAT>, and I<pathname> already exists, then B<open>()"
+"  will fail."
+msgstr ""
+"Гарантирует, что вызов создаст файл: если этот флаг указан вместе с B<O_CREAT>"
+" и I<pathname> уже существует, то B<open>() завершится с ошибкой."
+
+#.  POSIX.1-2001 explicitly requires this behavior.
+#. type: Plain text
+#: man-pages/man2/open.2:394
+msgid ""
+"When these two flags are specified, symbolic links are not followed: if "
+"I<pathname> is a symbolic link, then B<open>()  fails regardless of where "
+"the symbolic link points to."
+msgstr ""
+"При использовании обоих флагов символьные ссылки не поддерживаются: если I<"
+"pathname> является символьной ссылкой, то B<open>() завершается с ошибкой "
+"независимо от того, куда указывает ссылка."
+
+#. type: Plain text
+#: man-pages/man2/open.2:410
+msgid ""
+"In general, the behavior of B<O_EXCL> is undefined if it is used without "
+"B<O_CREAT>.  There is one exception: on Linux 2.6 and later, B<O_EXCL> can "
+"be used without B<O_CREAT> if I<pathname> refers to a block device.  If the "
+"block device is in use by the system (e.g., mounted), B<open>()  fails with "
+"the error B<EBUSY>."
+msgstr ""
+"Вообще говоря, поведение с B<O_EXCL> не определено, если этот флаг "
+"используется без B<O_CREAT>. Есть одно исключение: в Linux 2.6 и более новых "
+"B<O_EXCL> можно использовать без B<O_CREAT>, если I<pathname> указывает на "
+"блочное устройство. Если блочное устройство используется в системе (например, "
+"смонтировано), то B<open>() завершится с ошибкой B<EBUSY>."
+
+#. type: Plain text
+#: man-pages/man2/open.2:432
+msgid ""
+"On NFS, B<O_EXCL> is supported only when using NFSv3 or later on kernel 2.6 "
+"or later.  In NFS environments where B<O_EXCL> support is not provided, "
+"programs that rely on it for performing locking tasks will contain a race "
+"condition.  Portable programs that want to perform atomic file locking using"
+" a lockfile, and need to avoid reliance on NFS support for B<O_EXCL>, can "
+"create a unique file on the same filesystem (e.g., incorporating hostname "
+"and PID), and use B<link>(2)  to make a link to the lockfile.  If B<link>(2)"
+"  returns 0, the lock is successful.  Otherwise, use B<stat>(2)  on the "
+"unique file to check if its link count has increased to 2, in which case the"
+" lock is also successful."
+msgstr ""
+"Флаг B<O_EXCL> поддерживается для NFS только, если используется NFSv3 или "
+"новее с ядром 2.6 или новее. В средах, где в NFS нет поддержки B<O_EXCL>, "
+"программы, которые полагаются на это для выполнения задач блокировок, будут "
+"создавать состязательность процессов. Переносимым программам, которым нужно "
+"произвести атомарную блокировку файла с помощь файла блокировки, необходимо "
+"избегать зависимости от поддержки в NFS флага B<O_EXCL>. В качестве решения "
+"можно создать уникальный файл в той же файловой системе (например, добавив "
+"имя узла и PID в название), чтобы создать ссылку на файл блокировки с помощью "
+"B<link>(2). Если B<link>(2) возвращает 0, то блокировка выполнена. В "
+"противном случае используйте B<stat>(2), чтобы убедиться, что количество "
+"ссылок на уникальный файл возросло до двух. Это также означает, что "
+"блокировка была успешной."
+
+#. type: TP
+#: man-pages/man2/open.2:432
+#, no-wrap
+msgid "B<O_LARGEFILE>"
+msgstr "B<O_LARGEFILE>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:454
+msgid ""
+"(LFS)  Allow files whose sizes cannot be represented in an I<off_t> (but can"
+" be represented in an I<off64_t>)  to be opened.  The B<_LARGEFILE64_SOURCE>"
+" macro must be defined (before including I<any> header files)  in order to "
+"obtain this definition.  Setting the B<_FILE_OFFSET_BITS> feature test macro"
+" to 64 (rather than using B<O_LARGEFILE>)  is the preferred method of "
+"accessing large files on 32-bit systems (see B<feature_test_macros>(7))."
+msgstr ""
+"(LFS) Позволяет открывать файлы, чей размер нельзя представить типом I<off_t> "
+"(но можно представить типом I<off64_t>). Для получения этого определения "
+"должен быть указан макрос B<_LARGEFILE64_SOURCE> (до включения I<какого-либо> "
+"заголовочного файла). Установка макроса тестирования возможностей B<"
+"_FILE_OFFSET_BITS> в значение 64 (вместо использования B<O_LARGEFILE>) "
+"является предпочтительным методом доступа к большим файлам на 32-битных "
+"системах (см. B<feature_test_macros>(7))."
+
+#. type: TP
+#: man-pages/man2/open.2:454
+#, no-wrap
+msgid "B<O_NOATIME> (since Linux 2.6.8)"
+msgstr "B<O_NOATIME> (начиная с Linux 2.6.8)"
+
+#.  The O_NOATIME flag also affects the treatment of st_atime
+#.  by mmap() and readdir(2), MTK, Dec 04.
+#. type: Plain text
+#: man-pages/man2/open.2:467
+msgid ""
+"Do not update the file last access time (I<st_atime> in the inode)  when the"
+" file is B<read>(2).  This flag is intended for use by indexing or backup "
+"programs, where its use can significantly reduce the amount of disk "
+"activity.  This flag may not be effective on all filesystems.  One example "
+"is NFS, where the server maintains the access time."
+msgstr ""
+"Не обновлять время последнего доступа к файлу (I<st_atime> в inode) при его "
+"чтении B<read>(2). Этот флаг предназначен для использования в программах "
+"индексирования и резервного копирования; он позволяет значительно сократить "
+"количество обращений к диску. Флаг может быть не эффективен на некоторых "
+"файловых системах. Например, на NFS, где запись времени доступа выполняется "
+"сервером."
+
+#. type: TP
+#: man-pages/man2/open.2:467
+#, no-wrap
+msgid "B<O_NOCTTY>"
+msgstr "B<O_NOCTTY>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:475
+msgid ""
+"If I<pathname> refers to a terminal device\\(emsee B<tty>(4)\\(emit will not"
+" become the process's controlling terminal even if the process does not have"
+" one."
+msgstr ""
+"Если I<pathname> указывает на терминальное устройство (см. B<tty>(4)), то оно "
+"не станет управляющим терминалом процесса, даже если процесс такового не "
+"имеет."
+
+#. type: TP
+#: man-pages/man2/open.2:475
+#, no-wrap
+msgid "B<O_NOFOLLOW>"
+msgstr "B<O_NOFOLLOW>"
+
+#.  The headers from glibc 2.0.100 and later include a
+#.  definition of this flag; \fIkernels before 2.1.126 will ignore it if
+#.  used\fP.
+#. type: Plain text
+#: man-pages/man2/open.2:487
+msgid ""
+"If I<pathname> is a symbolic link, then the open fails.  This is a FreeBSD "
+"extension, which was added to Linux in version 2.1.126.  Symbolic links in "
+"earlier components of the pathname will still be followed.  See also "
+"B<O_PATH> below."
+msgstr ""
+"Если I<pathname> является символьной ссылкой, то открытие завершится "
+"неудачно. Это расширение FreeBSD, которое было добавлено в Linux версии "
+"2.1.126. Все прочие символьные ссылки в имени будут обработаны как обычно. "
+"Также смотрите описание B<O_PATH> далее."
+
+#. type: TP
+#: man-pages/man2/open.2:487
+#, no-wrap
+msgid "B<O_NONBLOCK> or B<O_NDELAY>"
+msgstr "B<O_NONBLOCK> или B<O_NDELAY>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:500
+msgid ""
+"When possible, the file is opened in nonblocking mode.  Neither the "
+"B<open>()  nor any subsequent operations on the file descriptor which is "
+"returned will cause the calling process to wait.  For the handling of FIFOs "
+"(named pipes), see also B<fifo>(7).  For a discussion of the effect of "
+"B<O_NONBLOCK> in conjunction with mandatory file locks and with file leases,"
+" see B<fcntl>(2)."
+msgstr ""
+"Если возможно, файл открывается в неблокирующем режиме. Ни B<open>(), ни "
+"другие последующие операции над возвращаемым дескриптором файла не заставят "
+"вызывающий процесс ждать. Для работы с каналами FIFO также смотрите B<fifo>"
+"(7). Обсуждение влияния B<O_NONBLOCK> в сочетании с обязательной файловой "
+"блокировкой или арендой (lease) смотрите в B<fcntl>(2)."
+
+#. type: TP
+#: man-pages/man2/open.2:500
+#, no-wrap
+msgid "B<O_PATH> (since Linux 2.6.39)"
+msgstr "B<O_PATH> (начиная с Linux 2.6.39)"
+
+#.  commit 1abf0c718f15a56a0a435588d1b104c7a37dc9bd
+#.  commit 326be7b484843988afe57566b627fb7a70beac56
+#.  commit 65cfc6722361570bfe255698d9cd4dccaf47570d
+#.  http://thread.gmane.org/gmane.linux.man/2790/focus=3496
+#. 	Subject: Re: [PATCH] open(2): document O_PATH
+#. 	Newsgroups: gmane.linux.man, gmane.linux.kernel
+#. type: Plain text
+#: man-pages/man2/open.2:522
+msgid ""
+"Obtain a file descriptor that can be used for two purposes: to indicate a "
+"location in the filesystem tree and to perform operations that act purely at"
+" the file descriptor level.  The file itself is not opened, and other file "
+"operations (e.g., B<read>(2), B<write>(2), B<fchmod>(2), B<fchown>(2), "
+"B<fgetxattr>(2), B<mmap>(2))  fail with the error B<EBADF>."
+msgstr ""
+"Получить файловый дескриптор, который можно использовать для двух целей: для "
+"указания положения в дереве файловой системы и для выполнения операций, "
+"работающих исключительно на уровне файловых дескрипторов. Сам файл не "
+"открывается и другие файловые операции (например, B<read>(2), B<write>(2), B<"
+"fchmod>(2), B<fchown>(2), B<fgetxattr>(2), B<mmap>(2)) завершатся с ошибкой "
+"B<EBADF>."
+
+#. type: Plain text
+#: man-pages/man2/open.2:526
+msgid ""
+"The following operations I<can> be performed on the resulting file "
+"descriptor:"
+msgstr ""
+"Следующие операции I<могут> выполняться над полученным файловым дескриптором:"
+
+#.  commit 332a2e1244bd08b9e3ecd378028513396a004a24
+#.  fstat(): commit 55815f70147dcfa3ead5738fd56d3574e2e3c1c2
+#. type: Plain text
+#: man-pages/man2/open.2:535
+msgid ""
+"B<close>(2); B<fchdir>(2)  (since Linux 3.5); B<fstat>(2)  (since Linux "
+"3.6)."
+msgstr ""
+"B<close>(2); B<fchdir>(2) (начиная с Linux 3.5); B<fstat>(2) (начиная с Linux "
+"3.6)."
+
+#. type: Plain text
+#: man-pages/man2/open.2:541
+msgid ""
+"Duplicating the file descriptor (B<dup>(2), B<fcntl>(2)  B<F_DUPFD>, etc.)."
+msgstr ""
+"Создание дубликата файлового дескриптора (B<dup>(2), B<fcntl>(2)  B<F_DUPFD> "
+"и т.д.)."
+
+#. type: Plain text
+#: man-pages/man2/open.2:547
+msgid ""
+"Getting and setting file descriptor flags (B<fcntl>(2)  B<F_GETFD> and "
+"B<F_SETFD>)."
+msgstr ""
+"Получение и установка флагов файловых дескрипторов (B<fcntl>(2)  B<F_GETFD> и "
+"B<F_SETFD>)."
+
+#. type: Plain text
+#: man-pages/man2/open.2:553
+msgid ""
+"Retrieving open file status flags using the B<fcntl>(2)  B<F_GETFL> "
+"operation: the returned flags will include the bit B<O_PATH>."
+msgstr ""
+"Получение флагов состояния открытого файла с помощью операции B<fcntl>(2) B<"
+"F_GETFL>: в возвращаемые флаги будет включён бит B<O_PATH>."
+
+#. type: Plain text
+#: man-pages/man2/open.2:566
+msgid ""
+"Passing the file descriptor as the I<dirfd> argument of B<openat>(2)  and "
+"the other \"*at()\" system calls.  This includes B<linkat>(2)  with "
+"B<AT_EMPTY_PATH> (or via procfs using B<AT_SYMLINK_FOLLOW>)  even if the "
+"file is not a directory."
+msgstr ""
+"Передача файлового дескриптора в аргументе I<dirfd> для B<openat>(2) и других "
+"системных вызовов «*at()». К ним относится B<linkat>(2) с флагом B<"
+"AT_EMPTY_PATH> (или через procfs с помощью B<AT_SYMLINK_FOLLOW>) даже, если "
+"файл не является каталогом."
+
+#. type: Plain text
+#: man-pages/man2/open.2:572
+msgid ""
+"Passing the file descriptor to another process via a UNIX domain socket (see"
+" B<SCM_RIGHTS> in B<unix>(7))."
+msgstr ""
+"Передача файлового дескриптора в другой процесс через доменный сокет UNIX "
+"(смотрите B<SCM_RIGHTS> в B<unix>(7))."
+
+#. type: Plain text
+#: man-pages/man2/open.2:584
+msgid ""
+"When B<O_PATH> is specified in I<flags>, flag bits other than B<O_CLOEXEC>, "
+"B<O_DIRECTORY>, and B<O_NOFOLLOW> are ignored."
+msgstr ""
+"Если B<O_PATH> указан в I<flags>, то биты флагов, отличные от B<O_CLOEXEC>, "
+"B<O_DIRECTORY>и B<O_NOFOLLOW>, игнорируются."
+
+#. type: Plain text
+#: man-pages/man2/open.2:600
+msgid ""
+"If I<pathname> is a symbolic link and the B<O_NOFOLLOW> flag is also "
+"specified, then the call returns a file descriptor referring to the symbolic"
+" link.  This file descriptor can be used as the I<dirfd> argument in calls "
+"to B<fchownat>(2), B<fstatat>(2), B<linkat>(2), and B<readlinkat>(2)  with "
+"an empty pathname to have the calls operate on the symbolic link."
+msgstr ""
+"Если I<pathname> является символьной ссылкой и также указан флаг B<O_NOFOLLOW>"
+", то вызов возвращает файловый дескриптор, указывающий на символьную ссылку. "
+"Этот файловый дескриптор можно использовать в аргументе I<dirfd> для вызовов "
+"B<fchownat>(2), B<fstatat>(2), B<linkat>(2) и B<readlinkat>(2) с пустым "
+"именем пути, чтобы выполнить операцию над символьной ссылкой."
+
+#. type: TP
+#: man-pages/man2/open.2:600
+#, no-wrap
+msgid "B<O_SYNC>"
+msgstr "B<O_SYNC>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:612
+msgid ""
+"Write operations on the file will complete according to the requirements of "
+"synchronized I/O I<file> integrity completion (by contrast with contrast "
+"with the synchronized I/O I<data> integrity completion provided by "
+"B<O_DSYNC>.)"
+msgstr ""
+"Операции записи файла будут выполнены согласно требованиям целостности "
+"синхронизации ввода-вывода I<file> (по сравнению с целостностью синхронизации "
+"ввода-вывода I<data>, предоставляемой B<O_DSYNC>)."
+
+#. type: Plain text
+#: man-pages/man2/open.2:623
+msgid ""
+"By the time B<write>(2)  (and similar)  return, the output data and "
+"associated file metadata have been transferred to the underlying hardware "
+"(i.e., as though each B<write>(2)  was followed by a call to B<fsync>(2)).  "
+"I<See NOTES below>."
+msgstr ""
+"К времени возврата из B<write>(2) (и подобных) выходные данные и все "
+"метаданные файла уже переданы в задействованное аппаратное обеспечение (т. "
+"е., как если бы за каждым B<write>(2) был выполнен вызов B<fsync>(2)). I<"
+"Смотрите ЗАМЕЧАНИЯ далее>."
+
+#. type: TP
+#: man-pages/man2/open.2:623
+#, no-wrap
+msgid "B<O_TMPFILE> (since Linux 3.11)"
+msgstr "B<O_TMPFILE> (начиная с Linux 3.11)"
+
+#.  commit 60545d0d4610b02e55f65d141c95b18ccf855b6e
+#.  commit f4e0c30c191f87851c4a53454abb55ee276f4a7e
+#.  commit bb458c644a59dbba3a1fe59b27106c5e68e1c4bd
+#. type: Plain text
+#: man-pages/man2/open.2:635
+msgid ""
+"Create an unnamed temporary file.  The I<pathname> argument specifies a "
+"directory; an unnamed inode will be created in that directory's filesystem."
+"  Anything written to the resulting file will be lost when the last file "
+"descriptor is closed, unless the file is given a name."
+msgstr ""
+"Создание безымянного временного файла. В аргументе I<pathname> указывается "
+"каталог; безымянная inode будет создана в файловой системе этого каталога. "
+"Всё записанное в полученный файл будет потеряно при закрытии последнего "
+"файлового дескриптора, если файлу не будет назначено имя."
+
+#. type: Plain text
+#: man-pages/man2/open.2:649
+msgid ""
+"B<O_TMPFILE> must be specified with one of B<O_RDWR> or B<O_WRONLY> and, "
+"optionally, B<O_EXCL>.  If B<O_EXCL> is not specified, then B<linkat>(2)  "
+"can be used to link the temporary file into the filesystem, making it "
+"permanent, using code like the following:"
+msgstr ""
+"Флаг B<O_TMPFILE> должен быть указан вместе с B<O_RDWR> или B<O_WRONLY> и, "
+"необязательно, B<O_EXCL>. Если B<O_EXCL> не указан, то можно использовать B<"
+"linkat>(2) для ссылки на временный файл в файловой системе, сделав его "
+"постоянным с помощью кода:"
+
+#. type: Plain text
+#: man-pages/man2/open.2:655
+#, no-wrap
+msgid ""
+"char path[PATH_MAX];\n"
+"fd = open(\"/path/to/dir\", O_TMPFILE | O_RDWR,\n"
+"                        S_IRUSR | S_IWUSR);\n"
+msgstr ""
+"char path[PATH_MAX];\nfd = open(\"/path/to/dir\", O_TMPFILE | O_RDWR,\n       "
+"                 S_IRUSR | S_IWUSR);\n"
+
+#. type: Plain text
+#: man-pages/man2/open.2:657
+#, no-wrap
+msgid "/* File I/O on 'fd'... */\n"
+msgstr "/* Файловый ввод-вывод в «fd»… */\n"
+
+#. type: Plain text
+#: man-pages/man2/open.2:661
+#, no-wrap
+msgid ""
+"snprintf(path, PATH_MAX,  \"/proc/self/fd/%d\", fd);\n"
+"linkat(AT_FDCWD, path, AT_FDCWD, \"/path/for/file\",\n"
+"                        AT_SYMLINK_FOLLOW);\n"
+msgstr ""
+"snprintf(path, PATH_MAX,  \"/proc/self/fd/%d\", fd);\nlinkat(AT_FDCWD, path, "
+"AT_FDCWD, \"/path/for/file\",\n                        AT_SYMLINK_FOLLOW);\n"
+
+#. type: Plain text
+#: man-pages/man2/open.2:670
+msgid ""
+"In this case, the B<open>()  I<mode> argument determines the file permission"
+" mode, as with B<O_CREAT>."
+msgstr ""
+"В этом случае аргументом I<mode> у B<open>() определяется режим доступа к "
+"файлу как с B<O_CREAT>."
+
+#. type: Plain text
+#: man-pages/man2/open.2:682
+msgid ""
+"Specifying B<O_EXCL> in conjunction with B<O_TMPFILE> prevents a temporary "
+"file from being linked into the filesystem in the above manner.  (Note that "
+"the meaning of B<O_EXCL> in this case is different from the meaning of "
+"B<O_EXCL> otherwise.)"
+msgstr ""
+"Указание B<O_EXCL> вместе с B<O_TMPFILE> отключает возможность создания "
+"символьной ссылки в файловой системе указанным ранее способом (заметим, что "
+"назначение B<O_EXCL> в этом случае отличается от обычного B<O_EXCL>)."
+
+#.  Inspired by http://lwn.net/Articles/559147/
+#. type: Plain text
+#: man-pages/man2/open.2:687
+msgid "There are two main use cases for B<O_TMPFILE>:"
+msgstr "Есть два основных случая использования B<O_TMPFILE>:"
+
+#. type: Plain text
+#: man-pages/man2/open.2:696
+msgid ""
+"Improved B<tmpfile>(3)  functionality: race-free creation of temporary files"
+" that (1) are automatically deleted when closed; (2) can never be reached "
+"via any pathname; (3) are not subject to symlink attacks; and (4) do not "
+"require the caller to devise unique names."
+msgstr ""
+"Дополнительное свойство B<tmpfile>(3): свободное от состязательности создание "
+"временных файлов, которые: автоматически удаляются при закрытии; недоступны "
+"по имени; не подвержены атаке через символьные ссылки; не требуют от "
+"вызывающего подбирать уникальное имя."
+
+#. type: Plain text
+#: man-pages/man2/open.2:707
+msgid ""
+"Creating a file that is initially invisible, which is then populated with "
+"data and adjusted to have appropriate filesystem attributes (B<chown>(2), "
+"B<chmod>(2), B<fsetxattr>(2), etc.)  before being atomically linked into the"
+" filesystem in a fully formed state (using B<linkat>(2)  as described "
+"above)."
+msgstr ""
+"Создание файла, который изначально не видим, и который затем заполняется "
+"данными и позволяет изменять атрибуты в файловой системе (B<chown>(2), B<"
+"chmod>(2), B<fsetxattr>(2) и т. д.) до автоматического встраивания в файловую "
+"систему в полностью законченном виде (с помощью B<linkat>(2) как описано "
+"ранее)."
+
+#.  commit 99b6436bc29e4f10e4388c27a3e4810191cc4788
+#.  commit ab29743117f9f4c22ac44c13c1647fb24fb2bafe
+#. type: Plain text
+#: man-pages/man2/open.2:718
+msgid ""
+"B<O_TMPFILE> requires support by the underlying filesystem; only a subset of"
+" Linux filesystems provide that support.  In the initial implementation, "
+"support was provided in the ext2, ext3, ext4, UDF, Minix, and shmem "
+"filesystems.  XFS support was added in Linux 3.15."
+msgstr ""
+"Для B<O_TMPFILE> требуется поддержка в файловой системе; она есть только в "
+"нескольких файловых системах Linux. В первой реализации поддержка "
+"предоставлялась в файловых системах ext2, ext3, ext4, UDF, Minix и shmem. "
+"Поддержка в XFS добавлена в Linux 3.15."
+
+#. type: TP
+#: man-pages/man2/open.2:718
+#, no-wrap
+msgid "B<O_TRUNC>"
+msgstr "B<O_TRUNC>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:732
+msgid ""
+"If the file already exists and is a regular file and the access mode allows "
+"writing (i.e., is B<O_RDWR> or B<O_WRONLY>)  it will be truncated to length "
+"0.  If the file is a FIFO or terminal device file, the B<O_TRUNC> flag is "
+"ignored.  Otherwise, the effect of B<O_TRUNC> is unspecified."
+msgstr ""
+"Если файл уже существует и является обычным файлом и режим доступа позволяет "
+"писать в этот файл (т.е. установлен флаг B<O_RDWR> или B<O_WRONLY>), то его "
+"длина будет урезана до нуля. Если файл является FIFO или терминальным "
+"устройством, то этот флаг игнорируется. В других случаях действие флага B<"
+"O_TRUNC> не определено."
+
+#. type: SS
+#: man-pages/man2/open.2:732
+#, no-wrap
+msgid "creat()"
+msgstr "creat()"
+
+#. type: Plain text
+#: man-pages/man2/open.2:740
+msgid ""
+"B<creat>()  is equivalent to B<open>()  with I<flags> equal to "
+"B<O_CREAT|O_WRONLY|O_TRUNC>."
+msgstr ""
+"Вызов B<creat>() эквивалентен B<open>() с I<flags>, имеющим значение B<"
+"O_CREAT|O_WRONLY|O_TRUNC>."
+
+#. type: SS
+#: man-pages/man2/open.2:740
+#, no-wrap
+msgid "openat()"
+msgstr "openat()"
+
+#. type: Plain text
+#: man-pages/man2/open.2:746
+msgid ""
+"The B<openat>()  system call operates in exactly the same way as B<open>(), "
+"except for the differences described here."
+msgstr ""
+"Системный вызов B<openat>() работает также как системный вызов B<open>(), за "
+"исключением случаев, описанных здесь."
+
+#. type: Plain text
+#: man-pages/man2/open.2:756
+msgid ""
+"If the pathname given in I<pathname> is relative, then it is interpreted "
+"relative to the directory referred to by the file descriptor I<dirfd> "
+"(rather than relative to the current working directory of the calling "
+"process, as is done by B<open>()  for a relative pathname)."
+msgstr ""
+"Если в I<pathname> задан относительный путь, то он считается относительно "
+"каталога, на который ссылается файловый дескриптор I<dirfd> (а не "
+"относительно текущего рабочего каталога вызывающего процесса, как это "
+"делается в B<open>())."
+
+#. type: Plain text
+#: man-pages/man2/open.2:768
+msgid ""
+"If I<pathname> is relative and I<dirfd> is the special value B<AT_FDCWD>, "
+"then I<pathname> is interpreted relative to the current working directory of"
+" the calling process (like B<open>())."
+msgstr ""
+"Если в I<pathname> задан относительный путь и I<dirfd> равно специальному "
+"значению B<AT_FDCWD>, то I<pathname> рассматривается относительно текущего "
+"рабочего каталога вызывающего процесса (как B<open>())."
+
+#. type: Plain text
+#: man-pages/man2/open.2:774
+msgid "If I<pathname> is absolute, then I<dirfd> is ignored."
+msgstr "Если в I<pathname> задан абсолютный путь, то I<dirfd> игнорируется."
+
+#. type: Plain text
+#: man-pages/man2/open.2:783
+msgid ""
+"B<open>(), B<openat>(), and B<creat>()  return the new file descriptor, or "
+"-1 if an error occurred (in which case, I<errno> is set appropriately)."
+msgstr ""
+"Вызовы B<open>(), B<openat>() и B<creat>() возвращают новый дескриптор файла "
+"или -1 в случае ошибки (в этом случае I<errno> устанавливается в "
+"соответствующее значение)."
+
+#. type: Plain text
+#: man-pages/man2/open.2:789
+msgid ""
+"B<open>(), B<openat>(), and B<creat>()  can fail with the following errors:"
+msgstr ""
+"Вызовы B<open>(), B<openat>() и B<creat>() могут завершаться со следующими "
+"ошибками:"
+
+#. type: TP
+#: man-pages/man2/open.2:789
+#, no-wrap
+msgid "B<EACCES>"
+msgstr "B<EACCES>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:798
+msgid ""
+"The requested access to the file is not allowed, or search permission is "
+"denied for one of the directories in the path prefix of I<pathname>, or the "
+"file did not exist yet and write access to the parent directory is not "
+"allowed.  (See also B<path_resolution>(7).)"
+msgstr ""
+"Запрошенный доступ к файлу не разрешён, или один из каталогов в I<pathname> "
+"не позволяет поиск, файл ещё не существует, или доступ для записи в "
+"родительский каталог не разрешён (см. также B<path_resolution>(7))."
+
+#. type: TP
+#: man-pages/man2/open.2:798
+#, no-wrap
+msgid "B<EDQUOT>"
+msgstr "B<EDQUOT>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:804
+msgid ""
+"Where B<O_CREAT> is specified, the file does not exist, and the user's quota"
+" of disk blocks or inodes on the filesystem has been exhausted."
+msgstr ""
+"Если указан флаг B<O_CREAT>, файл не существует и исчерпана пользовательская "
+"квота на дисковые блоки или inode файловой системы."
+
+#. type: TP
+#: man-pages/man2/open.2:804
+#, no-wrap
+msgid "B<EEXIST>"
+msgstr "B<EEXIST>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:810
+msgid "I<pathname> already exists and B<O_CREAT> and B<O_EXCL> were used."
+msgstr "I<pathname> уже существует, то были указаны B<O_CREAT> и B<O_EXCL>."
+
+#. type: Plain text
+#: man-pages/man2/open.2:814
+msgid "I<pathname> points outside your accessible address space."
+msgstr ""
+"Аргумент I<pathname> указывает за пределы доступного адресного пространства."
+
+#. type: TP
+#: man-pages/man2/open.2:814
+#, no-wrap
+msgid "B<EFBIG>"
+msgstr "B<EFBIG>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:818
+msgid "See B<EOVERFLOW>."
+msgstr "Смотрите B<EOVERFLOW>."
+
+#. type: TP
+#: man-pages/man2/open.2:818
+#, no-wrap
+msgid "B<EINTR>"
+msgstr "B<EINTR>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:825
+msgid ""
+"While blocked waiting to complete an open of a slow device (e.g., a FIFO; "
+"see B<fifo>(7)), the call was interrupted by a signal handler; see "
+"B<signal>(7)."
+msgstr ""
+"При блокирующем ожидании завершения открытия медленного устройства (например, "
+"FIFO; см. B<fifo>(7)), вызов был прерван обработчиком сигнала; смотрите B<"
+"signal>(7)."
+
+#. type: Plain text
+#: man-pages/man2/open.2:833
+msgid ""
+"The filesystem does not support the B<O_DIRECT> flag.  See B<NOTES> for more"
+" information."
+msgstr ""
+"Файловая система не поддерживает флаг B<O_DIRECT>. Подробности смотрите в B<"
+"ЗАМЕЧАНИЯ>."
+
+#.  In particular, __O_TMPFILE instead of O_TMPFILE
+#. type: Plain text
+#: man-pages/man2/open.2:838
+msgid "Invalid value in I<flags>."
+msgstr "Некорректное значение I<flags>."
+
+#. type: Plain text
+#: man-pages/man2/open.2:848
+msgid ""
+"B<O_TMPFILE> was specified in I<flags>, but neither B<O_WRONLY> nor "
+"B<O_RDWR> was specified."
+msgstr ""
+"В I<flags> указан B<O_TMPFILE>, но не указан B<O_WRONLY> или B<O_RDWR>."
+
+#. type: TP
+#: man-pages/man2/open.2:848 man-pages/man2/open.2:857
+#, no-wrap
+msgid "B<EISDIR>"
+msgstr "B<EISDIR>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:857
+msgid ""
+"I<pathname> refers to a directory and the access requested involved writing "
+"(that is, B<O_WRONLY> or B<O_RDWR> is set)."
+msgstr ""
+"I<pathname> указывает на каталог и тип доступа подразумевает запись ( то есть "
+"установлен флаг B<O_WRONLY> или B<O_RDWR>)."
+
+#. type: Plain text
+#: man-pages/man2/open.2:871
+msgid ""
+"I<pathname> refers to an existing directory, B<O_TMPFILE> and one of "
+"B<O_WRONLY> or B<O_RDWR> were specified in I<flags>, but this kernel version"
+" does not provide the B<O_TMPFILE> functionality."
+msgstr ""
+"Значение I<pathname> ссылается на существующий каталог, в I<flags> указан B<"
+"O_TMPFILE> и один из B<O_WRONLY> или B<O_RDWR>, но версия ядра не "
+"предоставляет свойство B<O_TMPFILE>."
+
+#. type: Plain text
+#: man-pages/man2/open.2:875
+msgid "Too many symbolic links were encountered in resolving I<pathname>."
+msgstr ""
+"Во время определения I<pathname> встретилось слишком много символьных ссылок."
+
+#. type: Plain text
+#: man-pages/man2/open.2:884
+msgid ""
+"I<pathname> was a symbolic link, and I<flags> specified B<O_NOFOLLOW> but "
+"not B<O_PATH>."
+msgstr ""
+"Значение I<pathname> является символьной ссылкой и в I<flags> установлен B<"
+"O_NOFOLLOW>, но отсутствует B<O_PATH>."
+
+#. type: TP
+#: man-pages/man2/open.2:884
+#, no-wrap
+msgid "B<EMFILE>"
+msgstr "B<EMFILE>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:887
+msgid "The process already has the maximum number of files open."
+msgstr "Процесс уже открыл максимально допустимое количество файлов."
+
+#. type: TP
+#: man-pages/man2/open.2:887
+#, no-wrap
+msgid "B<ENAMETOOLONG>"
+msgstr "B<ENAMETOOLONG>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:891
+msgid "I<pathname> was too long."
+msgstr "I<pathname> слишком длинен."
+
+#. type: TP
+#: man-pages/man2/open.2:891
+#, no-wrap
+msgid "B<ENFILE>"
+msgstr "B<ENFILE>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:894
+msgid "The system limit on the total number of open files has been reached."
+msgstr "Достигнуто максимальное количество открытых файлов в системе."
+
+#. type: TP
+#: man-pages/man2/open.2:894
+#, no-wrap
+msgid "B<ENODEV>"
+msgstr "B<ENODEV>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:901
+msgid ""
+"I<pathname> refers to a device special file and no corresponding device "
+"exists.  (This is a Linux kernel bug; in this situation B<ENXIO> must be "
+"returned.)"
+msgstr ""
+"I<pathname> ссылается на специальный файл устройства, но соответствующего "
+"устройства не существует (это ошибка в ядре Linux: должно возвращаться B<"
+"ENXIO>)."
+
+#. type: Plain text
+#: man-pages/man2/open.2:908
+msgid ""
+"B<O_CREAT> is not set and the named file does not exist.  Or, a directory "
+"component in I<pathname> does not exist or is a dangling symbolic link."
+msgstr ""
+"Флаг B<O_CREAT> не задан и файл с таким именем не существует, или же не "
+"существует один из каталогов в I<pathname>, или имеется повисшая символьная "
+"ссылка."
+
+#. type: Plain text
+#: man-pages/man2/open.2:922
+msgid ""
+"I<pathname> refers to a nonexistent directory, B<O_TMPFILE> and one of "
+"B<O_WRONLY> or B<O_RDWR> were specified in I<flags>, but this kernel version"
+" does not provide the B<O_TMPFILE> functionality."
+msgstr ""
+"Значение I<pathname> ссылается на несуществующий каталог, в I<flags> указан "
+"B<O_TMPFILE> и один из B<O_WRONLY> или B<O_RDWR>, но версия ядра не "
+"предоставляет свойство B<O_TMPFILE>."
+
+#. type: TP
+#: man-pages/man2/open.2:922
+#, no-wrap
+msgid "B<ENOMEM>"
+msgstr "B<ENOMEM>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:925
+msgid "Insufficient kernel memory was available."
+msgstr "Недостаточное количество памяти ядра."
+
+#. type: TP
+#: man-pages/man2/open.2:925
+#, no-wrap
+msgid "B<ENOSPC>"
+msgstr "B<ENOSPC>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:931
+msgid ""
+"I<pathname> was to be created but the device containing I<pathname> has no "
+"room for the new file."
+msgstr ""
+"Файл I<pathname> должен быть создан, но на устройстве его содержащем нет "
+"места для нового файла."
+
+#. type: Plain text
+#: man-pages/man2/open.2:938
+msgid ""
+"A component used as a directory in I<pathname> is not, in fact, a directory,"
+" or B<O_DIRECTORY> was specified and I<pathname> was not a directory."
+msgstr ""
+"Компонент, который обозначен как каталог в I<pathname>, таковым не является, "
+"или был указан флаг B<O_DIRECTORY>, но I<pathname> не является каталогом."
+
+#. type: TP
+#: man-pages/man2/open.2:938
+#, no-wrap
+msgid "B<ENXIO>"
+msgstr "B<ENXIO>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:944
+msgid ""
+"B<O_NONBLOCK> | B<O_WRONLY> is set, the named file is a FIFO, and no process"
+" has the FIFO open for reading.  Or, the file is a device special file and "
+"no corresponding device exists."
+msgstr ""
+"Указаны флаги B<O_NONBLOCK> | B<O_WRONLY>, именованным файлом является FIFO, "
+"но нет процесса, который открыл FIFO для чтения. Возможно также, что файл "
+"является специальным файлом устройства, но соответствующее устройство не "
+"существует."
+
+#. type: Plain text
+#: man-pages/man2/open.2:950
+msgid "The filesystem containing I<pathname> does not support B<O_TMPFILE>."
+msgstr ""
+"Файловая система, содержащая I<pathname>, не поддерживает B<O_TMPFILE>."
+
+#.  See http://bugzilla.kernel.org/show_bug.cgi?id=7253
+#.  "Open of a large file on 32-bit fails with EFBIG, should be EOVERFLOW"
+#.  Reported 2006-10-03
+#. type: Plain text
+#: man-pages/man2/open.2:970
+msgid ""
+"I<pathname> refers to a regular file that is too large to be opened.  The "
+"usual scenario here is that an application compiled on a 32-bit platform "
+"without I<-D_FILE_OFFSET_BITS=64> tried to open a file whose size exceeds "
+"I<(2E<lt>E<lt>31)-1> bits; see also B<O_LARGEFILE> above.  This is the error"
+" specified by POSIX.1-2001; in kernels before 2.6.24, Linux gave the error "
+"B<EFBIG> for this case."
+msgstr ""
+"I<pathname> ссылается на обычный файл, который слишком велик для открытия. "
+"Обычно, это случается когда приложение, скомпилированное на 32-битной "
+"платформе без I<-D_FILE_OFFSET_BITS=64>, пытается открыть файл размером более "
+"I<(2E<lt>E<lt>31)-1> бит; смотрите также описание B<O_LARGEFILE> ранее. Эта "
+"ошибка определена в POSIX.1-2001; в ядрах до версии 2.6.24 Linux в этом "
+"случае выдавал ошибку B<EFBIG>."
+
+#.  Strictly speaking, it's the filesystem UID... (MTK)
+#. type: Plain text
+#: man-pages/man2/open.2:978
+msgid ""
+"The B<O_NOATIME> flag was specified, but the effective user ID of the caller"
+" did not match the owner of the file and the caller was not privileged "
+"(B<CAP_FOWNER>)."
+msgstr ""
+"Задан флаг B<O_NOATIME>, но эффективный ID пользователя вызывающего процесса "
+"не совпадает с владельцем файла и вызывающий не имеет прав (B<CAP_FOWNER>)."
+
+#. type: TP
+#: man-pages/man2/open.2:978
+#, no-wrap
+msgid "B<EROFS>"
+msgstr "B<EROFS>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:983
+msgid ""
+"I<pathname> refers to a file on a read-only filesystem and write access was "
+"requested."
+msgstr ""
+"I<pathname> указывает на файл на файловой системе, доступной только на "
+"чтение, но запрашивается доступ на запись."
+
+#. type: TP
+#: man-pages/man2/open.2:983
+#, no-wrap
+msgid "B<ETXTBSY>"
+msgstr "B<ETXTBSY>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:988
+msgid ""
+"I<pathname> refers to an executable image which is currently being executed "
+"and write access was requested."
+msgstr ""
+"I<pathname> указывает на исполняемый файл, который запущен в данный момент, "
+"но запрашивается доступ на запись."
+
+#. type: TP
+#: man-pages/man2/open.2:988
+#, no-wrap
+msgid "B<EWOULDBLOCK>"
+msgstr "B<EWOULDBLOCK>"
+
+#. type: Plain text
+#: man-pages/man2/open.2:995
+msgid ""
+"The B<O_NONBLOCK> flag was specified, and an incompatible lease was held on "
+"the file (see B<fcntl>(2))."
+msgstr ""
+"Указан флаг B<O_NONBLOCK>, но несовместимая аренда (lease) удерживает файл "
+"(смотрите B<fcntl>(2))."
+
+#. type: Plain text
+#: man-pages/man2/open.2:998
+msgid "The following additional errors can occur for B<openat>():"
+msgstr "В B<openat>() дополнительно могут возникнуть следующие ошибки:"
+
+#. type: Plain text
+#: man-pages/man2/open.2:1002
+msgid "I<dirfd> is not a valid file descriptor."
+msgstr "I<dirfd> не является правильным файловым дескриптором."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1008
+msgid ""
+"I<pathname> is a relative pathname and I<dirfd> is a file descriptor "
+"referring to a file other than a directory."
+msgstr ""
+"Значение I<pathname> содержит относительный путь и I<dirfd> содержит файловый "
+"дескриптор, указывающий на файл, а не на каталог."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1012
+msgid ""
+"B<openat>()  was added to Linux in kernel 2.6.16; library support was added "
+"to glibc in version 2.4."
+msgstr ""
+"Вызов B<openat>() был добавлен в ядро Linux версии 2.6.16; поддержка в glibc "
+"доступна с версии 2.4."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1016
+msgid "B<open>(), B<creat>()  SVr4, 4.3BSD, POSIX.1-2001, POSIX.1-2008."
+msgstr "B<open>(), B<creat>() SVr4, 4.3BSD, POSIX.1-2001, POSIX.1-2008."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1019
+msgid "B<openat>(): POSIX.1-2008."
+msgstr "B<openat>(): POSIX.1-2008."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1030
+msgid ""
+"The B<O_DIRECT>, B<O_NOATIME>, B<O_PATH>, and B<O_TMPFILE> flags are Linux-"
+"specific.  One must define B<_GNU_SOURCE> to obtain their definitions."
+msgstr ""
+"Флаги B<O_DIRECT>, B<O_NOATIME>, B<O_PATH> и B<O_TMPFILE> есть только в "
+"Linux. Для их определения может потребоваться задать B<_GNU_SOURCE>."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1045
+msgid ""
+"The B<O_CLOEXEC>, B<O_DIRECTORY>, and B<O_NOFOLLOW> flags are not specified "
+"in POSIX.1-2001, but are specified in POSIX.1-2008.  Since glibc 2.12, one "
+"can obtain their definitions by defining either B<_POSIX_C_SOURCE> with a "
+"value greater than or equal to 200809L or B<_XOPEN_SOURCE> with a value "
+"greater than or equal to 700.  In glibc 2.11 and earlier, one obtains the "
+"definitions by defining B<_GNU_SOURCE>."
+msgstr ""
+"Флаги B<O_CLOEXEC>, B<O_DIRECTORY> и B<O_NOFOLLOW> не указаны в POSIX.1-2001, "
+"но есть в POSIX.1-2008. Начиная с glibc 2.12, их определения можно получить "
+"определив или B<_POSIX_C_SOURCE> со значением большим и равным 200809L, или "
+"B<_XOPEN_SOURCE> со значением большим и равным 700. В glibc 2.11 и старее их "
+"определения можно получить определив B<_GNU_SOURCE>."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1056
+msgid ""
+"As noted in B<feature_test_macros>(7), feature test macros such as "
+"B<_POSIX_C_SOURCE>, B<_XOPEN_SOURCE>, and B<_GNU_SOURCE> must be defined "
+"before including I<any> header files."
+msgstr ""
+"Как было отмечено в B<feature_test_macros>(7), такие макросы тестирования "
+"свойств как B<_POSIX_C_SOURCE>, B<_XOPEN_SOURCE> и B<_GNU_SOURCE>, должны "
+"быть определены до включения I<любых> заголовочных файлов."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1064
+msgid ""
+"Under Linux, the B<O_NONBLOCK> flag indicates that one wants to open but "
+"does not necessarily have the intention to read or write.  This is typically"
+" used to open devices in order to get a file descriptor for use with "
+"B<ioctl>(2)."
+msgstr ""
+"В Linux флаг B<O_NONBLOCK> указывает, что файл нужно открыть, но не "
+"обязательно будет производиться чтение или запись. Обычно это указывается для "
+"открытия устройства, чтобы получить его файловый дескриптор для использования "
+"в B<ioctl>(2)."
+
+#.  Linux 2.0, 2.5: truncate
+#.  Solaris 5.7, 5.8: truncate
+#.  Irix 6.5: truncate
+#.  Tru64 5.1B: truncate
+#.  HP-UX 11.22: truncate
+#.  FreeBSD 4.7: truncate
+#. type: Plain text
+#: man-pages/man2/open.2:1076
+msgid ""
+"The (undefined) effect of B<O_RDONLY | O_TRUNC> varies among "
+"implementations.  On many systems the file is actually truncated."
+msgstr ""
+"Результат работы комбинации флагов B<O_RDONLY | O_TRUNC> в разных реализациях "
+"разный (нигде не определён). Во многих системах файл усекается."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1084
+msgid ""
+"Note that B<open>()  can open device special files, but B<creat>()  cannot "
+"create them; use B<mknod>(2)  instead."
+msgstr ""
+"Заметим, что B<open>() может открывать специальные файлы устройств, но B<"
+"creat>() не может их создавать; вместо этого используйте B<mknod>(2)."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1105
+msgid ""
+"If the file is newly created, its I<st_atime>, I<st_ctime>, I<st_mtime> "
+"fields (respectively, time of last access, time of last status change, and "
+"time of last modification; see B<stat>(2))  are set to the current time, and"
+" so are the I<st_ctime> and I<st_mtime> fields of the parent directory.  "
+"Otherwise, if the file is modified because of the B<O_TRUNC> flag, its "
+"st_ctime and st_mtime fields are set to the current time."
+msgstr ""
+"Если файл только что был создан, его поля I<st_atime>, I<st_ctime>, I<"
+"st_mtime> (время последнего доступа, последней смены состояния и последнего "
+"изменения, соответственно; см. B<stat>(2)) устанавливаются в значение "
+"текущего времени, и оно совпадает с полями I<st_ctime> и I<st_mtime> "
+"родительского каталога. Или же, если файл изменяется из-за установленного "
+"флага B<O_TRUNC>, то его поля st_ctime и st_mtime устанавливаются в значение "
+"текущего времени."
+
+#. type: SS
+#: man-pages/man2/open.2:1105
+#, no-wrap
+msgid "Open file descriptions"
+msgstr "Открытые файловые описания"
+
+#. type: Plain text
+#: man-pages/man2/open.2:1113
+msgid ""
+"The term open file description is the one used by POSIX to refer to the "
+"entries in the system-wide table of open files.  In other contexts, this "
+"object is variously also called an \"open file object\", a \"file handle\", "
+"an \"open file table entry\", or\\(emin kernel-developer parlance\\(ema "
+"I<struct file>."
+msgstr ""
+"Термин «открытое файловое описание» (open file description) используется в "
+"POSIX "
+"для указания на записи в системной таблице открытых файлов. "
+"В других контекстах, этот объект также называется «открытый файловый объект» "
+"(open file object), "
+"«описатель файла» (file handle), «»табличная запись открытого файла (open "
+"file table entry) или "
+"I<struct file> (с точки зрения разработчика ядра)."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1126
+msgid ""
+"When a file descriptor is duplicated (using B<dup>(2)  or similar), the "
+"duplicate refers to the same open file description as the original file "
+"descriptor, and the two file descriptors consequently share the file offset "
+"and file status flags.  Such sharing can also occur between processes: a "
+"child process created via B<fork>(2)  inherits duplicates of its parent's "
+"file descriptors, and those duplicates refer to the same open file "
+"descriptions."
+msgstr ""
+"При создании копии файлового дескриптора (с помощью B<dup>(2) или "
+"подобного вызова), копия ссылается на то же открытое файловое описание что "
+"и изначальный файловый дескриптор, и, следовательно, "
+"два файловых дескриптора имеют общее файловое смещение и флаги "
+"состояния файла. Такая общность может также быть у двух процессов: "
+"процесс-потомок, создаваемый B<fork>(2), наследует копии файловых "
+"дескрипторов своего родителя и эти копии ссылаются на те же открытые файловые "
+"описания."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1134
+msgid ""
+"Each B<open>(2)  of a file creates a new open file description; thus, there "
+"may be multiple open file descriptions corresponding to a file inode."
+msgstr ""
+"При каждом B<open>(2)  файла создаётся новое файловое описание; "
+"таким образом, может быть несколько открытых файловых описаний, "
+"соответствующих inode файла."
+
+#. type: SS
+#: man-pages/man2/open.2:1134
+#, no-wrap
+msgid "Synchronized I/O"
+msgstr "Синхронизированный ввод-вывод"
+
+#. type: Plain text
+#: man-pages/man2/open.2:1149
+msgid ""
+"The POSIX.1-2008 \"synchronized I/O\" option specifies different variants of"
+" synchronized I/O, and specifies the B<open>()  flags B<O_SYNC>, B<O_DSYNC>,"
+" and B<O_RSYNC> for controlling the behavior.  Regardless of whether an "
+"implementation supports this option, it must at least support the use of "
+"B<O_SYNC> for regular files."
+msgstr ""
+"В POSIX.1-2008 способность «синхронизированного ввода-вывода» описана в виде "
+"различных вариантов синхронизированного ввода-вывода и для B<open>() "
+"определяет флаги управления поведением B<O_SYNC>, B<O_DSYNC> и B<O_RSYNC>. "
+"Независимо от того, имеется ли в реализации данная способность, она должна, "
+"как минимум, поддерживать использование флага B<O_SYNC> для обычных файлов."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1160
+msgid ""
+"Linux implements B<O_SYNC> and B<O_DSYNC>, but not B<O_RSYNC>.  (Somewhat "
+"incorrectly, glibc defines B<O_RSYNC> to have the same value as B<O_SYNC>.)"
+msgstr ""
+"В Linux реализованы B<O_SYNC> и B<O_DSYNC>, но не B<O_RSYNC> (немного "
+"некорректно, в glibc определён B<O_RSYNC> со значением как у B<O_SYNC>)."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1178
+msgid ""
+"B<O_SYNC> provides synchronized I/O I<file> integrity completion, meaning "
+"write operations will flush data and all associated metadata to the "
+"underlying hardware.  B<O_DSYNC> provides synchronized I/O I<data> integrity"
+" completion, meaning write operations will flush data to the underlying "
+"hardware, but will only flush metadata updates that are required to allow a "
+"subsequent read operation to complete successfully.  Data integrity "
+"completion can reduce the number of disk operations that are required for "
+"applications that don't need the guarantees of file integrity completion."
+msgstr ""
+"Флаг B<O_SYNC> предоставляет выполнение целостного синхронизованного "
+"ввод-вывода I<file>, то есть операции записи передают данные и все связанные "
+"метаданные в задействованное аппаратное обеспечение. Флаг B<O_DSYNC> "
+"предоставляет выполнение целостного синхронизованного ввод-вывода I<data>, то "
+"есть операции записи передают данные в задействованное аппаратное "
+"обеспечение, но обновляются только те метаданные, которые требуются для "
+"выполнения последующего чтения. Полнота целостности данных может сократить "
+"количество дисковых операций, которые требуются приложениям, не требующим "
+"гарантий целостности файлов."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1195
+msgid ""
+"To understand the difference between the the two types of completion, "
+"consider two pieces of file metadata: the file last modification timestamp "
+"(I<st_mtime>)  and the file length.  All write operations will update the "
+"last file modification timestamp, but only writes that add data to the end "
+"of the file will change the file length.  The last modification timestamp is"
+" not needed to ensure that a read completes successfully, but the file "
+"length is.  Thus, B<O_DSYNC> would only guarantee to flush updates to the "
+"file length metadata (whereas B<O_SYNC> would also always flush the last "
+"modification timestamp metadata)."
+msgstr ""
+"Чтобы понять разницу между двумя типами обеспечения целостности рассмотрим "
+"две части метаданных файла: метка времени последнего изменения файла (I<"
+"st_mtime>) и длину файла. Все операции записи обновляют метку времени "
+"последнего изменения файла, но только при записи, которая добавляет данные в "
+"конец файла, будет изменена длина файла. Метка времени последнего изменения "
+"файла не требуется для корректного чтения файла, чего не скажешь о длине. "
+"Таким образом, B<O_DSYNC> гарантирует только запись обновлений о метаданных "
+"длины файла (в то время как B<O_SYNC> также всегда записывает метаданные о "
+"метки времени последнего изменения файла)."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1207
+msgid ""
+"Before Linux 2.6.33, Linux implemented only the B<O_SYNC> flag for "
+"B<open>().  However, when that flag was specified, most filesystems actually"
+" provided the equivalent of synchronized I/O I<data> integrity completion "
+"(i.e., B<O_SYNC> was actually implemented as the equivalent of B<O_DSYNC>)."
+msgstr ""
+"До Linux версии 2.6.33 в Linux реализован только флаг B<O_SYNC> для B<open>"
+"(). Однако, когда этот флаг указан, большинство файловых систем в "
+"действительности предоставляют эквивалент выполнения целостности "
+"синхронизированного ввода-вывода I<data> (т. е., на самом деле B<O_SYNC>  был "
+"реализован как эквивалент B<O_DSYNC>)."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1226
+msgid ""
+"Since Linux 2.6.33, proper B<O_SYNC> support is provided.  However, to "
+"ensure backward binary compatibility, B<O_DSYNC> was defined with the same "
+"value as the historical B<O_SYNC>, and B<O_SYNC> was defined as a new (two-"
+"bit) flag value that includes the B<O_DSYNC> flag value.  This ensures that "
+"applications compiled against new headers get at least B<O_DSYNC> semantics "
+"on pre-2.6.33 kernels."
+msgstr ""
+"Начиная с Linux 2.6.33, предоставляет корректная поддержка B<O_SYNC>. Однако "
+"для обеспечения обратной двоичной совместимости, B<O_DSYNC> был определён с "
+"тем же значением что и старый B<O_SYNC>, а B<O_SYNC> был определён как новое "
+"значение флага (два бита), которое включает значение флага B<O_DSYNC>. Это "
+"позволяет приложениям, скомпилированным с новыми заголовочными файлами "
+"получать, по крайней мере, семантику B<O_DSYNC> ядер pre-2.6.33."
+
+#. type: SS
+#: man-pages/man2/open.2:1226
+#, no-wrap
+msgid "NFS"
+msgstr "NFS"
+
+#. type: Plain text
+#: man-pages/man2/open.2:1230
+msgid ""
+"There are many infelicities in the protocol underlying NFS, affecting "
+"amongst others B<O_SYNC> and B<O_NDELAY>."
+msgstr ""
+"В протоколе, по которому работает NFS, существует множество недоработок, "
+"оказывающих влияние на многое, в том числе на работу с B<O_SYNC> и B<O_NDELAY>"
+"."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1245
+msgid ""
+"On NFS filesystems with UID mapping enabled, B<open>()  may return a file "
+"descriptor but, for example, B<read>(2)  requests are denied with B<EACCES>."
+"  This is because the client performs B<open>()  by checking the "
+"permissions, but UID mapping is performed by the server upon read and write "
+"requests."
+msgstr ""
+"В файловых системах NFS с включённым проецированием UID, B<open>() может "
+"вернуть файловый дескриптор, но, например, запросы B<read>(2) будут отклонены "
+"с ошибкой B<EACCES>. Это происходит из-за того, что клиент выполняет B<open>"
+"() проверяя одни права, но сервер выполняет проецирование UID только при "
+"запросах чтения и записи."
+
+#. type: SS
+#: man-pages/man2/open.2:1245
+#, no-wrap
+msgid "File access mode"
+msgstr "Режим доступа к файлу"
+
+#. type: Plain text
+#: man-pages/man2/open.2:1260
+msgid ""
+"Unlike the other values that can be specified in I<flags>, the I<access "
+"mode> values B<O_RDONLY>, B<O_WRONLY>, and B<O_RDWR> do not specify "
+"individual bits.  Rather, they define the low order two bits of I<flags>, "
+"and are defined respectively as 0, 1, and 2.  In other words, the "
+"combination B<O_RDONLY | O_WRONLY> is a logical error, and certainly does "
+"not have the same meaning as B<O_RDWR>."
+msgstr ""
+"В отличие от других значений, указываемых в I<flags>, значения I<режима "
+"доступа> B<O_RDONLY>, B<O_WRONLY> и B<O_RDWR>, не определяются отдельными "
+"битами. Точнее, они задаются двумя первыми битами I<flags>, и имеют значения "
+"0, 1 и 2, соответственно. Другими словами, комбинация B<O_RDONLY | O_WRONLY> "
+"приводит к логической ошибке и точно не работает как B<O_RDWR>."
+
+#.  See for example util-linux's disk-utils/setfdprm.c
+#.  For some background on access mode 3, see
+#.  http://thread.gmane.org/gmane.linux.kernel/653123
+#.  "[RFC] correct flags to f_mode conversion in __dentry_open"
+#.  LKML, 12 Mar 2008
+#. type: Plain text
+#: man-pages/man2/open.2:1277
+msgid ""
+"Linux reserves the special, nonstandard access mode 3 (binary 11) in "
+"I<flags> to mean: check for read and write permission on the file and return"
+" a descriptor that can't be used for reading or writing.  This nonstandard "
+"access mode is used by some Linux drivers to return a descriptor that is to "
+"be used only for device-specific B<ioctl>(2)  operations."
+msgstr ""
+"В Linux зарезервирован специальный нестандартный режим доступа 3 (11 "
+"двоичное) в I<flags>, при котором: проверяются права на чтение и запись к "
+"файлу и возвращается дескриптор, который не может использоваться для чтения "
+"или записи. Данный нестандартный режим доступа используется некоторыми "
+"драйверами Linux для получения дескриптора, который будет использоваться в B<"
+"ioctl>(2) только для специальных операций с устройством."
+
+#. type: SS
+#: man-pages/man2/open.2:1277
+#, no-wrap
+msgid "Rationale for openat() and other directory file descriptor APIs"
+msgstr ""
+"Обоснование openat() и остального программного интерфейса файлового "
+"дескриптора каталога"
+
+#. type: Plain text
+#: man-pages/man2/open.2:1305
+msgid ""
+"B<openat>()  and the other system calls and library functions that take a "
+"directory file descriptor argument (i.e., B<faccessat>(2), "
+"B<fanotify_mark>(2), B<fchmodat>(2), B<fchownat>(2), B<fstatat>(2), "
+"B<futimesat>(2), B<linkat>(2), B<mkdirat>(2), B<mknodat>(2), "
+"B<name_to_handle_at>(2), B<readlinkat>(2), B<renameat>(2), B<symlinkat>(2), "
+"B<unlinkat>(2), B<utimensat>(2)  B<mkfifoat>(3), and B<scandirat>(3))  are "
+"supported for two reasons.  Here, the explanation is in terms of the "
+"B<openat>()  call, but the rationale is analogous for the other interfaces."
+msgstr ""
+"Вызов B<openat>() и другие системные вызовы и библиотечные функции, которые "
+"используют файловый дескриптор каталога в качестве аргумента (т. е., B<"
+"faccessat>(2), B<fanotify_mark>(2), B<fchmodat>(2), B<fchownat>(2), B<fstatat>"
+"(2), B<futimesat>(2), B<linkat>(2), B<mkdirat>(2), B<mknodat>(2), B<"
+"name_to_handle_at>(2), B<readlinkat>(2), B<renameat>(2), B<symlinkat>(2), B<"
+"unlinkat>(2), B<utimensat>(2)  B<mkfifoat>(3) и B<scandirat>(3)) "
+"поддерживаются по двум причинам. Вот объяснение применимое к вызову B<openat>"
+"(), но объяснение для других интерфейсов аналогично."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1323
+msgid ""
+"First, B<openat>()  allows an application to avoid race conditions that "
+"could occur when using B<open>()  to open files in directories other than "
+"the current working directory.  These race conditions result from the fact "
+"that some component of the directory prefix given to B<open>()  could be "
+"changed in parallel with the call to B<open>().  Such races can be avoided "
+"by opening a file descriptor for the target directory, and then specifying "
+"that file descriptor as the I<dirfd> argument of B<openat>()."
+msgstr ""
+"Во-первых, B<openat>() позволяет приложению избежать условий "
+"состязательности, которые могут возникнуть, когда B<open>() открывает файлы в "
+"каталогах, отличных от текущего. Состязательность возникает из-за того, что "
+"один из компонентов префикса каталога, указанного B<open>(), может измениться "
+"одновременно с вызовом B<open>(). Этой состязательности можно избежать открыв "
+"файловый дескриптор каталога назначения, и затем указав этот файловый "
+"дескриптор в аргументе I<dirfd> вызова B<openat>()."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1334
+msgid ""
+"Second, B<openat>()  allows the implementation of a per-thread \"current "
+"working directory\", via file descriptor(s) maintained by the application.  "
+"(This functionality can also be obtained by tricks based on the use of "
+"I</proc/self/fd/>dirfd, but less efficiently.)"
+msgstr ""
+"Во-вторых, B<openat>() позволяет реализовать отдельный «текущий рабочий "
+"каталог» для каждой нити посредством файлового дескриптора, сопровождаемого "
+"приложением. Эта возможность также может быть получена с использованием I<"
+"/proc/self/fd/>dirfd, но менее эффективно."
+
+#. type: SS
+#: man-pages/man2/open.2:1334
+#, no-wrap
+msgid "O_DIRECT"
+msgstr "O_DIRECT"
+
+#. type: Plain text
+#: man-pages/man2/open.2:1351
+msgid ""
+"The B<O_DIRECT> flag may impose alignment restrictions on the length and "
+"address of user-space buffers and the file offset of I/Os.  In Linux "
+"alignment restrictions vary by filesystem and kernel version and might be "
+"absent entirely.  However there is currently no filesystem-independent "
+"interface for an application to discover these restrictions for a given file"
+" or filesystem.  Some filesystems provide their own interfaces for doing so,"
+" for example the B<XFS_IOC_DIOINFO> operation in B<xfsctl>(3)."
+msgstr ""
+"Флаг B<O_DIRECT> может накладывать ограничения по выравниванию на длину и "
+"адрес буфера пользовательского пространства и смещения файла при "
+"вводе-выводе. В Linux ограничения по выравниванию различны у разных файловых "
+"систем и версий ядра, и даже могут отсутствовать. Однако сейчас не существует "
+"независимого от файловой системы интерфейса приложения для выявления этих "
+"ограничений на определённый файл или файловую систему. Некоторые файловые "
+"системы предоставляют свои собственные интерфейсы для этого, например, "
+"операция B<XFS_IOC_DIOINFO> в B<xfsctl>(3)."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1361
+msgid ""
+"Under Linux 2.4, transfer sizes, and the alignment of the user buffer and "
+"the file offset must all be multiples of the logical block size of the "
+"filesystem.  Since Linux 2.6.0, alignment to the logical block size of the "
+"underlying storage (typically 512 bytes) suffices.  The logical block size "
+"can be determined using the B<ioctl>(2)  B<BLKSSZGET> operation or from the "
+"shell using the command:"
+msgstr ""
+"В Linux 2.4 размеры передачи, выравнивание пользовательского буфера и "
+"файлового смещения должны быть кратны размеру логического блока файловой "
+"системы. Начиная с Linux 2.6 достаточно выравнивания по 512-байтовой границе. "
+"Размер логического блока можно определить с помощью B<ioctl>(2) и операции B<"
+"BLKSSZGET> или с помощью команды:"
+
+#. type: Plain text
+#: man-pages/man2/open.2:1363
+#, no-wrap
+msgid "    blockdev --getss\n"
+msgstr "    blockdev --getss\n"
+
+#. type: Plain text
+#: man-pages/man2/open.2:1397
+msgid ""
+"B<O_DIRECT> I/Os should never be run concurrently with the B<fork>(2)  "
+"system call, if the memory buffer is a private mapping (i.e., any mapping "
+"created with the B<mmap>(2)  B<MAP_PRIVATE> flag; this includes memory "
+"allocated on the heap and statically allocated buffers).  Any such I/Os, "
+"whether submitted via an asynchronous I/O interface or from another thread "
+"in the process, should be completed before B<fork>(2)  is called.  Failure "
+"to do so can result in data corruption and undefined behavior in parent and "
+"child processes.  This restriction does not apply when the memory buffer for"
+" the B<O_DIRECT> I/Os was created using B<shmat>(2)  or B<mmap>(2)  with the"
+" B<MAP_SHARED> flag.  Nor does this restriction apply when the memory buffer"
+" has been advised as B<MADV_DONTFORK> with B<madvise>(2), ensuring that it "
+"will not be available to the child after B<fork>(2)."
+msgstr ""
+"Ввод-вывод с B<O_DIRECT> никогда не должен запускаться одновременно с "
+"системным вызовом B<fork>(2), если буфер памяти является закрытым "
+"отображением (т. е., любым отображениям, созданным с помощью B<mmap>(2) с "
+"флагом B<MAP_PRIVATE>; к ним относится память, выделенная под кучу и "
+"статически выделенные буферы). Любой подобный ввод-вывод, предоставленный "
+"через асинхронный интерфейс или из другой нити процесса, должен выполниться "
+"полностью до вызова B<fork>(2). В противном случае, может произойти "
+"повреждение данных и непредсказуемое поведение в процессе родителя и "
+"потомка.Данное ограничение не действует, если буфер памяти для ввода-вывода с "
+"B<O_DIRECT> был создан с помощью B<shmat>(2) или B<mmap>(2) с флагом B<"
+"MAP_SHARED>. И при этом это ограничение не действует, когда буфер памяти был "
+"помечен (advised) как B<MADV_DONTFORK> с помощью B<madvise>(2), если точно "
+"известно, что он не будет доступен потомку после B<fork>(2)."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1407
+msgid ""
+"The B<O_DIRECT> flag was introduced in SGI IRIX, where it has alignment "
+"restrictions similar to those of Linux 2.4.  IRIX has also a B<fcntl>(2)  "
+"call to query appropriate alignments, and sizes.  FreeBSD 4.x introduced a "
+"flag of the same name, but without alignment restrictions."
+msgstr ""
+"Флаг B<O_DIRECT> появился в SGI IRIX, где ограничения на выравнивание подобны "
+"Linux 2.4. В IRIX также есть вызов B<fcntl>(2) для запроса значений "
+"соответствующего выравнивания и размеров. В FreeBSD 4.x появился флаг с таким "
+"же именем, но без ограничений на выравнивание."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1416
+msgid ""
+"B<O_DIRECT> support was added under Linux in kernel version 2.4.10.  Older "
+"Linux kernels simply ignore this flag.  Some filesystems may not implement "
+"the flag and B<open>()  will fail with B<EINVAL> if it is used."
+msgstr ""
+"Поддержка B<O_DIRECT> добавлена в ядро Linux версии 2.4.10. Более старые ядра "
+"Linux просто игнорируют этот флаг. В некоторых файловых системах этот флаг "
+"может быть не реализован и B<open>() завершится с ошибкой B<EINVAL> при его "
+"использовании."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1427
+msgid ""
+"Applications should avoid mixing B<O_DIRECT> and normal I/O to the same "
+"file, and especially to overlapping byte regions in the same file.  Even "
+"when the filesystem correctly handles the coherency issues in this "
+"situation, overall I/O throughput is likely to be slower than using either "
+"mode alone.  Likewise, applications should avoid mixing B<mmap>(2)  of files"
+" with direct I/O to the same files."
+msgstr ""
+"Приложения должны избегать смешивания B<O_DIRECT> и обычных операций "
+"ввода-вывода в один файл и особенно перекрывать байтовые области. Даже когда "
+"файловая система правильно обрабатывает проблемы с когерентностью в такой "
+"ситуации, общая пропускная способность ввода-вывода, вероятно, будет "
+"медленнее чем при использовании какого-то одного из этих режимов отдельно. "
+"Аналогично приложения должны избегать смешивания B<mmap>(2) и прямого "
+"ввода-вывода для одинаковых файлов."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1449
+msgid ""
+"The behavior of B<O_DIRECT> with NFS will differ from local filesystems.  "
+"Older kernels, or kernels configured in certain ways, may not support this "
+"combination.  The NFS protocol does not support passing the flag to the "
+"server, so B<O_DIRECT> I/O will bypass the page cache only on the client; "
+"the server may still cache the I/O.  The client asks the server to make the "
+"I/O synchronous to preserve the synchronous semantics of B<O_DIRECT>.  Some "
+"servers will perform poorly under these circumstances, especially if the I/O"
+" size is small.  Some servers may also be configured to lie to clients about"
+" the I/O having reached stable storage; this will avoid the performance "
+"penalty at some risk to data integrity in the event of server power failure."
+"  The Linux NFS client places no alignment restrictions on B<O_DIRECT> I/O."
+msgstr ""
+"Поведение B<O_DIRECT> на NFS отличается от локальных файловых систем. Старые "
+"ядра и ядра, настроенные определёнными способами, могут не поддерживать "
+"такую комбинацию. Протокол NFS не поддерживает передачу флага на сервер, "
+"поэтому ввод-вывод с B<O_DIRECT> будет пропускать кэширование страниц только "
+"на клиенте; сервер всё равно может выполнить кэширование ввода-вывода. "
+"Клиент просит сервер выполнять операции ввода-вывода синхронно для "
+"сохранения синхронной семантики B<O_DIRECT>. Некоторые серверы будут "
+"выполнять это плохо при определённых условиях, особенно если размер данных "
+"ввода-вывод невелик. Некоторые серверы также могут быть настроены на "
+"отправку ложного ответа клиентам о том, что ввод-вывод произведён на "
+"носитель; это позволяет избежать потери производительности, но есть риск "
+"потери целостности данных в случае проблем с электропитанием сервера. В "
+"Linux клиент NFS не устанавливает ограничений по выравниванию при вводе-"
+"выводе с B<O_DIRECT>."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1456
+msgid ""
+"In summary, B<O_DIRECT> is a potentially powerful tool that should be used "
+"with caution.  It is recommended that applications treat use of B<O_DIRECT> "
+"as a performance option which is disabled by default."
+msgstr ""
+"Флаг B<O_DIRECT> является потенциально мощным инструментом, который нужно "
+"использовать с осторожностью. Рекомендуется, чтобы приложения считали "
+"использование B<O_DIRECT> как параметр производительности, который по "
+"умолчанию выключен."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1461
+msgid ""
+"\"The thing that has always disturbed me about O_DIRECT is that the whole "
+"interface is just stupid, and was probably designed by a deranged monkey on "
+"some serious mind-controlling substances.\"\\(emLinus"
+msgstr ""
+"«The thing that has always disturbed me about O_DIRECT is that the whole "
+"interface is just stupid, and was probably designed by a deranged monkey on "
+"some serious mind-controlling substances.» — Linus (Меня всегда беспокоило "
+"кое-что относительно O_DIRECT — то, что вообще в целом этот интерфейс просто "
+"идиотичен. Создаётся впечатление, что он как-бы был создан сумасшедшей "
+"обезьяной под веществами.)"
+
+#. type: SH
+#: man-pages/man2/open.2:1462
+#, no-wrap
+msgid "BUGS"
+msgstr "ДЕФЕКТЫ"
+
+#.  FIXME . Check bugzilla report on open(O_ASYNC)
+#.  See http://bugzilla.kernel.org/show_bug.cgi?id=5993
+#. type: Plain text
+#: man-pages/man2/open.2:1473
+msgid ""
+"Currently, it is not possible to enable signal-driven I/O by specifying "
+"B<O_ASYNC> when calling B<open>(); use B<fcntl>(2)  to enable this flag."
+msgstr ""
+"На данный момент невозможно включить сигнальное управление вводом-выводом, "
+"указав B<O_ASYNC> при вызове B<open>(); чтобы установить этот флаг "
+"используйте B<fcntl>(2)."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1481
+msgid ""
+"One must check for two different error codes, B<EISDIR> and B<ENOENT>, when "
+"trying to determine whether the kernel supports B<O_TMPFILE> functionality."
+msgstr ""
+"Для определения поддержки ядром B<O_TMPFILE> нужно проверять два различных "
+"кода ошибок — B<EISDIR> и B<ENOENT>."
+
+#. type: Plain text
+#: man-pages/man2/open.2:1502
+msgid ""
+"B<chmod>(2), B<chown>(2), B<close>(2), B<dup>(2), B<fcntl>(2), B<link>(2), "
+"B<lseek>(2), B<mknod>(2), B<mmap>(2), B<mount>(2), B<open_by_handle_at>(2), "
+"B<read>(2), B<socket>(2), B<stat>(2), B<umask>(2), B<unlink>(2), "
+"B<write>(2), B<fopen>(3), B<fifo>(7), B<path_resolution>(7), B<symlink>(7)"
+msgstr ""
+"B<chmod>(2), B<chown>(2), B<close>(2), B<dup>(2), B<fcntl>(2), B<link>(2), B<"
+"lseek>(2), B<mknod>(2), B<mmap>(2), B<mount>(2), B<open_by_handle_at>(2), B<"
+"read>(2), B<socket>(2), B<stat>(2), B<umask>(2), B<unlink>(2), B<write>(2), "
+"B<fopen>(3), B<fifo>(7), B<path_resolution>(7), B<symlink>(7)"
+
+#. type: TH
+#: man-pages/man3/opendir.3:32
+#, no-wrap
+msgid "OPENDIR"
+msgstr "OPENDIR"
+
+#. type: TH
+#: man-pages/man3/opendir.3:32
+#, no-wrap
+msgid "2010-06-20"
+msgstr "2010-06-20"
+
+#. type: TH
+#: man-pages/man3/opendir.3:32
+#, no-wrap
+msgid "GNU"
+msgstr "GNU"
+
+#. type: Plain text
+#: man-pages/man3/opendir.3:35
+msgid "opendir, fdopendir - open a directory"
+msgstr "opendir, fdopendir - открывает каталог"
+
+#. type: Plain text
+#: man-pages/man3/opendir.3:38
+#, no-wrap
+msgid "B<#include E<lt>sys/types.hE<gt>>\n"
+msgstr "B<#include E<lt>sys/types.hE<gt>>\n"
+
+#. type: Plain text
+#: man-pages/man3/opendir.3:40
+#, no-wrap
+msgid "B<#include E<lt>dirent.hE<gt>>\n"
+msgstr "B<#include E<lt>dirent.hE<gt>>\n"
+
+#. type: Plain text
+#: man-pages/man3/opendir.3:43
+#, no-wrap
+msgid ""
+"B<DIR *opendir(const char *>I<name>B<);>\n"
+"B<DIR *fdopendir(int >I<fd>B<);>\n"
+msgstr ""
+"B<DIR *opendir(const char *>I<name>B<);>\nB<DIR *fdopendir(int >I<fd>B<);>\n"
+
+#. type: Plain text
+#: man-pages/man3/opendir.3:51
+msgid "B<fdopendir>():"
+msgstr "B<fdopendir>():"
+
+#. type: Plain text
+#: man-pages/man3/opendir.3:60
+msgid "_GNU_SOURCE"
+msgstr "_GNU_SOURCE"
+
+#. type: Plain text
+#: man-pages/man3/opendir.3:69
+msgid ""
+"The B<opendir>()  function opens a directory stream corresponding to the "
+"directory I<name>, and returns a pointer to the directory stream.  The "
+"stream is positioned at the first entry in the directory."
+msgstr ""
+"Функция B<opendir>() открывает поток каталога, соответствующий каталогу с "
+"именем I<name>, и возвращает указатель на поток каталога. Поток "
+"устанавливается на первую запись в каталоге."
+
+#. type: Plain text
+#: man-pages/man3/opendir.3:83
+msgid ""
+"The B<fdopendir>()  function is like B<opendir>(), but returns a directory "
+"stream for the directory referred to by the open file descriptor I<fd>.  "
+"After a successful call to B<fdopendir>(), I<fd> is used internally by the "
+"implementation, and should not otherwise be used by the application."
+msgstr ""
+"Функция B<fdopendir>() похожа на B<opendir>(), но возвращает поток каталога "
+"для каталога, на который ссылается открытый файловый дескриптор I<fd>. После "
+"успешного вызова B<fdopendir>(), дескриптор I<fd> используется только внутри "
+"реализации и не должен использоваться в приложении."
+
+#. type: Plain text
+#: man-pages/man3/opendir.3:92
+msgid ""
+"The B<opendir>()  and B<fdopendir>()  functions return a pointer to the "
+"directory stream.  On error, NULL is returned, and I<errno> is set "
+"appropriately."
+msgstr ""
+"Функции B<opendir>() и B<fdopendir>() возвращают указатель на поток каталога. "
+"В случае ошибки возвращается NULL, а I<errno> присваивается соответствующее "
+"значение."
+
+#. type: Plain text
+#: man-pages/man3/opendir.3:96
+msgid "Permission denied."
+msgstr "Доступ запрещен."
+
+#. type: Plain text
+#: man-pages/man3/opendir.3:100
+msgid "I<fd> is not a valid file descriptor opened for reading."
+msgstr ""
+"Значение I<fd> не является подходящим файловым дескриптором, открытым для "
+"чтения."
+
+#. type: Plain text
+#: man-pages/man3/opendir.3:103
+msgid "Too many file descriptors in use by process."
+msgstr "Процессом задействовано слишком много файловых дескрипторов."
+
+#. type: Plain text
+#: man-pages/man3/opendir.3:106
+msgid "Too many files are currently open in the system."
+msgstr "В системе в настоящий момент открыто слишком много файлов."
+
+#. type: Plain text
+#: man-pages/man3/opendir.3:109
+msgid "Directory does not exist, or I<name> is an empty string."
+msgstr "Каталог не существует, либо I<name> содержит пустую строку."
+
+#. type: Plain text
+#: man-pages/man3/opendir.3:112
+msgid "Insufficient memory to complete the operation."
+msgstr "Недостаточно памяти для завершения операции."
+
+#. type: Plain text
+#: man-pages/man3/opendir.3:115
+msgid "I<name> is not a directory."
+msgstr "Значение I<name> не является каталогом."
+
+#. type: Plain text
+#: man-pages/man3/opendir.3:118
+msgid "B<fdopendir>()  is available in glibc since version 2.4."
+msgstr "Функция B<fdopendir>() доступна в glibc начиная с версии 2.4."
+
+#. type: Plain text
+#: man-pages/man3/opendir.3:123
+msgid ""
+"B<opendir>()  is present on SVr4, 4.3BSD, and specified in POSIX.1-2001.  "
+"B<fdopendir>()  is specified in POSIX.1-2008."
+msgstr ""
+"Функция B<opendir>() присутствует в SVr4, 4.3BSD и описана в стандарте "
+"POSIX.1-2001. Функция B<fdopendir>() описана в POSIX.1-2008."
+
+#. type: Plain text
+#: man-pages/man3/opendir.3:126
+msgid ""
+"The underlying file descriptor of the directory stream can be obtained using"
+" B<dirfd>(3)."
+msgstr ""
+"Задействованный файловый дескриптор потока каталога может быть получен в "
+"помощью B<dirfd>(3)."
+
+#. type: Plain text
+#: man-pages/man3/opendir.3:140
+msgid ""
+"The B<opendir>()  function sets the close-on-exec flag for the file "
+"descriptor underlying the I<DIR *>.  The B<fdopendir>()  function leaves the"
+" setting of the close-on-exec flag unchanged for the file descriptor, I<fd>."
+"  POSIX.1-200x leaves it unspecified whether a successful call to "
+"B<fdopendir>()  will set the close-on-exec flag for the file descriptor, "
+"I<fd>."
+msgstr ""
+"Функция B<opendir>() устанавливает флаг close-on-exec для файлового "
+"дескриптора, указывающего на I<DIR *>. Функция B<fdopendir>() оставляет флаг "
+"close-on-exec не изменённым для файлового дескриптора I<fd>. В POSIX.1-200x "
+"нет точного определения на этот счет, хотя успешный вызов B<fdopendir>() "
+"установит флаг close-on-exec для файлового дескриптора I<fd>."
+
+#. type: Plain text
+#: man-pages/man3/opendir.3:148
+msgid ""
+"B<open>(2), B<closedir>(3), B<dirfd>(3), B<readdir>(3), B<rewinddir>(3), "
+"B<scandir>(3), B<seekdir>(3), B<telldir>(3)"
+msgstr ""
+"B<open>(2), B<closedir>(3), B<dirfd>(3), B<readdir>(3), B<rewinddir>(3), B<"
+"scandir>(3), B<seekdir>(3), B<telldir>(3)"
+
+#. type: TH
+#: man-pages/man3/offsetof.3:28
+#, no-wrap
+msgid "OFFSETOF"
+msgstr "OFFSETOF"
+
+#. type: TH
+#: man-pages/man3/offsetof.3:28
+#, no-wrap
+msgid "2014-04-06"
+msgstr "2014-04-06"
+
+#. type: Plain text
+#: man-pages/man3/offsetof.3:31
+msgid "offsetof - offset of a structure member"
+msgstr "offsetof - смещение элемента структуры"
+
+#. type: Plain text
+#: man-pages/man3/offsetof.3:34
+#, no-wrap
+msgid "B<#include E<lt>stddef.hE<gt>>\n"
+msgstr "B<#include E<lt>stddef.hE<gt>>\n"
+
+#. type: Plain text
+#: man-pages/man3/offsetof.3:36
+#, no-wrap
+msgid "B<size_t offsetof(>I<type>B<, >I<member>B<);>\n"
+msgstr "B<size_t offsetof(>I<type>B<, >I<member>B<);>\n"
+
+#. type: Plain text
+#: man-pages/man3/offsetof.3:44
+msgid ""
+"The macro B<offsetof>()  returns the offset of the field I<member> from the "
+"start of the structure I<type>."
+msgstr ""
+"Макрокоманда B<offsetof>() возвращает смещение поля I<member> от начала "
+"структуры I<type>."
+
+#. type: Plain text
+#: man-pages/man3/offsetof.3:51
+msgid ""
+"This macro is useful because the sizes of the fields that compose a "
+"structure can vary across implementations, and compilers may insert "
+"different numbers of padding bytes between fields.  Consequently, an "
+"element's offset is not necessarily given by the sum of the sizes of the "
+"previous elements."
+msgstr ""
+"Эта макрокоманда удобна, так как размеры полей, составляющих структуру, могут "
+"значительно изменяться в зависимости от реализаций, а компиляторы могут "
+"добавлять различное количество дополнительных байт между полями. "
+"Следовательно, смещение элемента не всегда является суммой размеров "
+"предыдущих элементов."
+
+#. type: Plain text
+#: man-pages/man3/offsetof.3:56
+msgid ""
+"A compiler error will result if I<member> is not aligned to a byte boundary "
+"(i.e., it is a bit field)."
+msgstr ""
+"Если I<member> не выровнен по границе байта (т.е., если это битовое поле), то "
+"компилятор вернёт ошибку."
+
+#. type: Plain text
+#: man-pages/man3/offsetof.3:63
+msgid ""
+"B<offsetof>()  returns the offset of the given I<member> within the given "
+"I<type>, in units of bytes."
+msgstr ""
+"Функция B<offsetof>() возвращает смещение в байтах указанного поля I<member> "
+"внутри указанного I<type>."
+
+#. type: Plain text
+#: man-pages/man3/offsetof.3:65
+msgid "C89, C99, POSIX.1-2001."
+msgstr "C89, C99, POSIX.1-2001."
+
+#. type: Plain text
+#: man-pages/man3/offsetof.3:69
+msgid ""
+"On a Linux/i386 system, when compiled using the default B<gcc>(1)  options, "
+"the program below produces the following output:"
+msgstr ""
+"В системах Linux/i386 при использовании компилятора B<gcc>(1) с параметрами "
+"по умолчанию нижеследующая программа дает следующий результат:"
+
+#. type: Plain text
+#: man-pages/man3/offsetof.3:75
+#, no-wrap
+msgid ""
+"$B< ./a.out>\n"
+"offsets: i=0; c=4; d=8 a=16\n"
+"sizeof(struct s)=16\n"
+msgstr "$B< ./a.out>\noffsets: i=0; c=4; d=8 a=16\nsizeof(struct s)=16\n"
+
+#. type: SS
+#: man-pages/man3/offsetof.3:76
+#, no-wrap
+msgid "Program source"
+msgstr "Исходный код программы"
+
+#. type: Plain text
+#: man-pages/man3/offsetof.3:82
+#, no-wrap
+msgid ""
+"#include E<lt>stddef.hE<gt>\n"
+"#include E<lt>stdio.hE<gt>\n"
+"#include E<lt>stdlib.hE<gt>\n"
+msgstr ""
+"#include E<lt>stddef.hE<gt>\n#include E<lt>stdio.hE<gt>\n#include E<lt>"
+"stdlib.hE<gt>\n"
+
+#. type: Plain text
+#: man-pages/man3/offsetof.3:92
+#, no-wrap
+msgid ""
+"int\n"
+"main(void)\n"
+"{\n"
+"    struct s {\n"
+"        int i;\n"
+"        char c;\n"
+"        double d;\n"
+"        char a[];\n"
+"    };\n"
+msgstr ""
+"int\nmain(void)\n{\n    struct s {\n        int i;\n        char c;\n        "
+"double d;\n        char a[];\n    };\n"
+
+#. type: Plain text
+#: man-pages/man3/offsetof.3:94
+#, no-wrap
+msgid "    /* Output is compiler dependent */\n"
+msgstr "    /* Вывод зависит от компилятора */\n"
+
+#. type: Plain text
+#: man-pages/man3/offsetof.3:99
+#, no-wrap
+msgid ""
+"    printf(\"offsets: i=%zd; c=%zd; d=%zd a=%zd\\en\",\n"
+"            offsetof(struct s, i), offsetof(struct s, c),\n"
+"            offsetof(struct s, d), offsetof(struct s, a));\n"
+"    printf(\"sizeof(struct s)=%zd\\en\", sizeof(struct s));\n"
+msgstr ""
+"    printf(\"offsets: i=%zd; c=%zd; d=%zd a=%zd\\en\",\n            "
+"offsetof(struct s, i), offsetof(struct s, c),\n            offsetof(struct s, "
+"d), offsetof(struct s, a));\n    printf(\"sizeof(struct s)=%zd\\en\", "
+"sizeof(struct s));\n"
+
+#. type: TH
+#: man-pages/man3/openpty.3:34
+#, no-wrap
+msgid "OPENPTY"
+msgstr "OPENPTY"
+
+#. type: TH
+#: man-pages/man3/openpty.3:34
+#, no-wrap
+msgid "2010-06-13"
+msgstr "2010-06-13"
+
+#. type: Plain text
+#: man-pages/man3/openpty.3:37
+msgid "openpty, login_tty, forkpty - terminal utility functions"
+msgstr "openpty, login_tty, forkpty - функции для работы с терминалом"
+
+#. type: Plain text
+#: man-pages/man3/openpty.3:40
+#, no-wrap
+msgid "B<#include E<lt>pty.hE<gt>>\n"
+msgstr "B<#include E<lt>pty.hE<gt>>\n"
+
+#. type: Plain text
+#: man-pages/man3/openpty.3:44
+#, no-wrap
+msgid ""
+"B<int openpty(int *>I<amaster>B<, int *>I<aslave>B<, char *>I<name>B<,>\n"
+"B<            const struct termios *>I<termp>B<,>\n"
+"B<            const struct winsize *>I<winp>B<);>\n"
+msgstr ""
+"B<int openpty(int *>I<amaster>B<, int *>I<aslave>B<, char *>I<name>B<,>\nB<   "
+"         const struct termios *>I<termp>B<,>\nB<            const struct "
+"winsize *>I<winp>B<);>\n"
+
+#. type: Plain text
+#: man-pages/man3/openpty.3:48
+#, no-wrap
+msgid ""
+"B<pid_t forkpty(int *>I<amaster>B<, char *>I<name>B<,>\n"
+"B<              const struct termios *>I<termp>B<,>\n"
+"B<              const struct winsize *>I<winp>B<);>\n"
+msgstr ""
+"B<pid_t forkpty(int *>I<amaster>B<, char *>I<name>B<,>\nB<              const "
+"struct termios *>I<termp>B<,>\nB<              const struct winsize *>I<winp>"
+"B<);>\n"
+
+#. type: Plain text
+#: man-pages/man3/openpty.3:50
+#, no-wrap
+msgid "B<#include E<lt>utmp.hE<gt>>\n"
+msgstr "B<#include E<lt>utmp.hE<gt>>\n"
+
+#. type: Plain text
+#: man-pages/man3/openpty.3:52
+#, no-wrap
+msgid "B<int login_tty(int >I<fd>B<);>\n"
+msgstr "B<int login_tty(int >I<fd>B<);>\n"
+
+#. type: Plain text
+#: man-pages/man3/openpty.3:54
+#, no-wrap
+msgid "Link with I<-lutil>.\n"
+msgstr "Компонуется при указании параметра I<-lutil>.\n"
+
+#. type: Plain text
+#: man-pages/man3/openpty.3:76
+msgid ""
+"The B<openpty>()  function finds an available pseudoterminal and returns "
+"file descriptors for the master and slave in I<amaster> and I<aslave>.  If "
+"I<name> is not NULL, the filename of the slave is returned in I<name>.  If "
+"I<termp> is not NULL, the terminal parameters of the slave will be set to "
+"the values in I<termp>.  If I<winp> is not NULL, the window size of the "
+"slave will be set to the values in I<winp>."
+msgstr ""
+"Функция B<openpty>() ищет доступный псевдотерминал и возвращает файловые "
+"дескрипторы для его основного и подчинённого устройств в I<amaster> и I<"
+"aslave>. Если I<name> не равно NULL, то имя файла подчинённого устройства "
+"возвращается в I<name>. Если I<termp> не равно NULL, то параметры терминала "
+"подчинённого устройства будут установлены в значения, указанные в I<termp>. "
+"Если I<winp> не равно NULL, то размер окна подчинённого устройства будет "
+"установлен согласно значениям, указанным в I<winp>."
+
+#. type: Plain text
+#: man-pages/man3/openpty.3:91
+msgid ""
+"The B<login_tty>()  function prepares for a login on the terminal I<fd> "
+"(which may be a real terminal device, or the slave of a pseudoterminal as "
+"returned by B<openpty>())  by creating a new session, making I<fd> the "
+"controlling terminal for the calling process, setting I<fd> to be the "
+"standard input, output, and error streams of the current process, and "
+"closing I<fd>."
+msgstr ""
+"Функция B<login_tty>() подготавливает терминал I<fd> (который может быть "
+"реальным устройством терминала или подчинённым псевдотерминала, возвращаемым "
+"B<openpty>()) таким образом, чтобы через него можно было войти в систему; для "
+"этого создаётся новый сеанс, I<fd> делается управляющим терминалом для "
+"вызывающего процесса (при этом I<fd> служит в качестве стандартных ввода, "
+"вывода и потока ошибок текущего процесса) и закрывает I<fd>."
+
+#. type: Plain text
+#: man-pages/man3/openpty.3:113
+msgid ""
+"The B<forkpty>()  function combines B<openpty>(), B<fork>(2), and "
+"B<login_tty>()  to create a new process operating in a pseudoterminal.  The "
+"file descriptor of the master side of the pseudoterminal is returned in "
+"I<amaster>, and the filename of the slave in I<name> if it is not NULL.  The"
+" I<termp> and I<winp> arguments, if not NULL, will determine the terminal "
+"attributes and window size of the slave side of the pseudoterminal."
+msgstr ""
+"Функция B<forkpty>() объединяет B<openpty>(), B<fork>(2) и B<login_tty>() для "
+"создания нового процесса, работающего в псевдотерминале. Файловый дескриптор "
+"основной стороны псевдотерминала возвращается в I<amaster>, имя файла "
+"подчинённого устройства — в I<name>, если оно не равно NULL. Аргументы I<"
+"termp> и I<winp>, если они не равны NULL, будут определять атрибуты терминала "
+"и размеры окна подчинённой стороны псевдотерминала."
+
+#. type: Plain text
+#: man-pages/man3/openpty.3:130
+msgid ""
+"If a call to B<openpty>(), B<login_tty>(), or B<forkpty>()  is not "
+"successful, -1 is returned and I<errno> is set to indicate the error.  "
+"Otherwise, B<openpty>(), B<login_tty>(), and the child process of "
+"B<forkpty>()  return 0, and the parent process of B<forkpty>()  returns the "
+"process ID of the child process."
+msgstr ""
+"Если вызов B<openpty>(), B<login_tty>() или B<forkpty>() завершается с "
+"ошибкой, то возвращается -1 и I<errno> указывает на тип ошибки. Иначе, B<"
+"openpty>(), B<login_tty>() и дочерний процесс B<forkpty>() возвращают 0, и "
+"родительский процесс B<forkpty>() возвращает ID дочернего процесса."
+
+#. type: Plain text
+#: man-pages/man3/openpty.3:133
+msgid "B<openpty>()  will fail if:"
+msgstr "Функция B<openpty>() завершается с ошибкой, если:"
+
+#. type: Plain text
+#: man-pages/man3/openpty.3:136
+msgid "There are no available terminals."
+msgstr "Нет доступных терминалов."
+
+#. type: Plain text
+#: man-pages/man3/openpty.3:143
+msgid ""
+"B<login_tty>()  will fail if B<ioctl>(2)  fails to set I<fd> to the "
+"controlling terminal of the calling process."
+msgstr ""
+"Функция B<login_tty>() завершается с ошибкой, если B<ioctl>(2) не сможет "
+"установить I<fd> управляющего терминала вызывающего процесса."
+
+#. type: Plain text
+#: man-pages/man3/openpty.3:150
+msgid "B<forkpty>()  will fail if either B<openpty>()  or B<fork>(2)  fails."
+msgstr ""
+"Функция B<forkpty>() завершается с ошибкой, если завершается с ошибкой хотя "
+"бы одна из функций B<openpty>() или B<fork>(2)."
+
+#. type: Plain text
+#: man-pages/man3/openpty.3:153
+msgid ""
+"These are BSD functions, present in libc5 and glibc2.  They are not "
+"standardized in POSIX."
+msgstr "Эти функции есть в BSD, а также в libc5 и glibc2. Отсутствуют в POSIX."
+
+#. type: Plain text
+#: man-pages/man3/openpty.3:161
+msgid ""
+"The B<const> modifiers were added to the structure pointer arguments of "
+"B<openpty>()  and B<forkpty>()  in glibc 2.8."
+msgstr ""
+"Модификаторы B<const> были добавлены в аргументы указателей на структуры B<"
+"openpty>() и B<forkpty>() в glibc 2.8."
+
+#. type: Plain text
+#: man-pages/man3/openpty.3:168
+msgid ""
+"In versions of glibc before 2.0.92, B<openpty>()  returns file descriptors "
+"for a BSD pseudoterminal pair; since glibc 2.0.92, it first attempts to open"
+" a UNIX 98 pseudoterminal pair, and falls back to opening a BSD "
+"pseudoterminal pair if that fails."
+msgstr ""
+"В версиях glibc до 2.0.92, B<openpty>() возвращает файловые дескрипторы для "
+"псевдотерминальной пары BSD; начиная с glibc 2.0.92, сначала производится "
+"попытка открыть псевдотерминальную пару UNIX 98, а если это не удаётся, то "
+"происходит возвращение к открытию псевдотерминальной пары BSD."
+
+#. type: Plain text
+#: man-pages/man3/openpty.3:178
+msgid ""
+"Nobody knows how much space should be reserved for I<name>.  So, calling "
+"B<openpty>()  or B<forkpty>()  with non-NULL I<name> may not be secure."
+msgstr ""
+"Невозможно определить сколько места должно быть зарезервировано для I<name>. "
+"Поэтому, вызов B<openpty>() или B<forkpty>() со значением I<name> не равным "
+"NULL может быть небезопасен."
+
+#. type: Plain text
+#: man-pages/man3/openpty.3:181
+msgid "B<fork>(2), B<ttyname>(3), B<pty>(7)"
+msgstr "B<fork>(2), B<ttyname>(3), B<pty>(7)"
+
+#. type: TH
+#: man-pages/man3/on_exit.3:31
+#, no-wrap
+msgid "ON_EXIT"
+msgstr "ON_EXIT"
+
+#. type: TH
+#: man-pages/man3/on_exit.3:31
+#, no-wrap
+msgid "2008-12-05"
+msgstr "2008-12-05"
+
+#. type: Plain text
+#: man-pages/man3/on_exit.3:34
+msgid ""
+"on_exit - register a function to be called at normal process termination"
+msgstr ""
+"on_exit - регистрирует функцию для вызова в случае нормального завершения "
+"процесса"
+
+#. type: Plain text
+#: man-pages/man3/on_exit.3:37
+#, no-wrap
+msgid "B<#include E<lt>stdlib.hE<gt>>\n"
+msgstr "B<#include E<lt>stdlib.hE<gt>>\n"
+
+#. type: Plain text
+#: man-pages/man3/on_exit.3:39
+#, no-wrap
+msgid ""
+"B<int on_exit(void (*>I<function>B<)(int , void *), void *>I<arg>B<);>\n"
+msgstr ""
+"B<int on_exit(void (*>I<function>B<)(int , void *), void *>I<arg>B<);>\n"
+
+#. type: Plain text
+#: man-pages/man3/on_exit.3:48
+msgid "B<on_exit>(): _BSD_SOURCE || _SVID_SOURCE"
+msgstr "B<on_exit>(): _BSD_SOURCE || _SVID_SOURCE"
+
+#. type: Plain text
+#: man-pages/man3/on_exit.3:66
+msgid ""
+"The B<on_exit>()  function registers the given I<function> to be called at "
+"normal process termination, whether via B<exit>(3)  or via return from the "
+"program's I<main>().  The I<function> is passed the status argument given to"
+" the last call to B<exit>(3)  and the I<arg> argument from B<on_exit>()."
+msgstr ""
+"Функция B<on_exit>() регистрирует указанную I<function> для вызова в случае "
+"нормального завершения процесса с помощью B<exit>(3) или при выходе из "
+"функции I<main>(). Функции I<function> передаётся аргумент состояния, "
+"указанный в последнем вызове B<exit>(3), а также аргумент I<arg> из B<on_exit>"
+"()."
+
+#. type: Plain text
+#: man-pages/man3/on_exit.3:69
+msgid ""
+"The same function may be registered multiple times: it is called once for "
+"each registration."
+msgstr ""
+"Одна функция может быть зарегистрирована несколько раз: она вызывается один "
+"раз для каждой регистрации."
+
+#. type: Plain text
+#: man-pages/man3/on_exit.3:76
+msgid ""
+"When a child process is created via B<fork>(2), it inherits copies of its "
+"parent's registrations.  Upon a successful call to one of the B<exec>(3)  "
+"functions, all registrations are removed."
+msgstr ""
+"Когда дочерний процесс создаётся через B<fork>(2), он наследует копии "
+"регистраций родителя. При успешном выполнении одной из функций B<exec>(3) все "
+"регистрации снимаются."
+
+#. type: Plain text
+#: man-pages/man3/on_exit.3:81
+msgid ""
+"The B<on_exit>()  function returns the value 0 if successful; otherwise it "
+"returns a nonzero value."
+msgstr ""
+"Функция B<on_exit>() при успешном выполнении возвращает 0, в противном случае "
+"— ненулевое значение."
+
+#. type: Plain text
+#: man-pages/man3/on_exit.3:88
+msgid ""
+"This function comes from SunOS 4, but is also present in libc4, libc5 and "
+"glibc.  It no longer occurs in Solaris (SunOS 5).  Avoid this function, and "
+"use the standard B<atexit>(3)  instead."
+msgstr ""
+"Данная функция появилась в SunOS 4, но она также присутствует в libc4, libc5 "
+"и glibc. Она отсутствует в Solaris (SunOS 5). Избегайте этой функции и "
+"используйте вместо неё стандартную B<atexit>(3)."
+
+#. type: Plain text
+#: man-pages/man3/on_exit.3:91
+msgid "B<_exit>(2), B<atexit>(3), B<exit>(3)"
+msgstr "B<_exit>(2), B<atexit>(3), B<exit>(3)"
+
+

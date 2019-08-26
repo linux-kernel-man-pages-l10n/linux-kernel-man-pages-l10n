@@ -1,0 +1,3908 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2018-01-09 18:51+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: TH
+#: man-pages/man4/hd.4:29
+#, no-wrap
+msgid "HD"
+msgstr ""
+
+#. type: TH
+#: man-pages/man4/hd.4:29
+#, no-wrap
+msgid "2017-09-15"
+msgstr ""
+
+#. type: TH
+#: man-pages/man4/hd.4:29
+#, no-wrap
+msgid "Linux"
+msgstr ""
+
+#. type: TH
+#: man-pages/man4/hd.4:29
+#, no-wrap
+msgid "Linux Programmer's Manual"
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/hd.4:30
+#, no-wrap
+msgid "NAME"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hd.4:32
+msgid "hd - MFM/IDE hard disk devices"
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/hd.4:32
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hd.4:47
+msgid ""
+"The B<hd*> devices are block devices to access MFM/IDE hard disk drives in "
+"raw mode.  The master drive on the primary IDE controller (major device "
+"number 3) is B<hda>; the slave drive is B<hdb>.  The master drive of the "
+"second controller (major device number 22)  is B<hdc> and the slave is "
+"B<hdd>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hd.4:71
+msgid ""
+"General IDE block device names have the form B<hd>I<X>, or B<hd>I<XP>, where "
+"I<X> is a letter denoting the physical drive, and I<P> is a number denoting "
+"the partition on that physical drive.  The first form, B<hd>I<X>, is used to "
+"address the whole drive.  Partition numbers are assigned in the order the "
+"partitions are discovered, and only nonempty, nonextended partitions get a "
+"number.  However, partition numbers 1\\(en4 are given to the four partitions "
+"described in the MBR (the \"primary\" partitions), regardless of whether "
+"they are unused or extended.  Thus, the first logical partition will be "
+"B<hd>I<X>B<5>\\&.  Both DOS-type partitioning and BSD-disklabel partitioning "
+"are supported.  You can have at most 63 partitions on an IDE disk."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hd.4:77
+msgid ""
+"For example, I</dev/hda> refers to all of the first IDE drive in the system; "
+"and I</dev/hdb3> refers to the third DOS \"primary\" partition on the second "
+"one."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hd.4:79
+msgid "They are typically created by:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hd.4:93
+#, no-wrap
+msgid ""
+"mknod -m 660 /dev/hda b 3 0\n"
+"mknod -m 660 /dev/hda1 b 3 1\n"
+"mknod -m 660 /dev/hda2 b 3 2\n"
+"\\&...\n"
+"mknod -m 660 /dev/hda8 b 3 8\n"
+"mknod -m 660 /dev/hdb b 3 64\n"
+"mknod -m 660 /dev/hdb1 b 3 65\n"
+"mknod -m 660 /dev/hdb2 b 3 66\n"
+"\\&...\n"
+"mknod -m 660 /dev/hdb8 b 3 72\n"
+"chown root:disk /dev/hd*\n"
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/hd.4:95
+#, no-wrap
+msgid "FILES"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hd.4:97
+msgid "I</dev/hd*>"
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/hd.4:97
+#, no-wrap
+msgid "SEE ALSO"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hd.4:101
+msgid "B<chown>(1), B<mknod>(1), B<sd>(4), B<mount>(8)"
+msgstr ""
+
+#
+#
+#.  Copyright (C) 2011, Hewlett-Packard Development Company, L.P.
+#.  Written by Stephen M. Cameron <scameron@beardog.cce.hp.com>
+#.  %%%LICENSE_START(GPLv2_ONELINE)
+#.  Licensed under GNU General Public License version 2 (GPLv2)
+#.  %%%LICENSE_END
+#.  shorthand for double quote that works everywhere.
+#. type: ds q
+#: man-pages/man4/hpsa.4:9
+#, no-wrap
+msgid "\\N'34'"
+msgstr ""
+
+#. type: TH
+#: man-pages/man4/hpsa.4:10
+#, no-wrap
+msgid "HPSA"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:13
+msgid "hpsa - HP Smart Array SCSI driver"
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/hpsa.4:13
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:16
+#, no-wrap
+msgid "modprobe hpsa [ hpsa_allow_any=1 ]\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:20
+msgid "B<hpsa> is a SCSI driver for HP Smart Array RAID controllers."
+msgstr ""
+
+#. type: SS
+#: man-pages/man4/hpsa.4:20
+#, no-wrap
+msgid "Options"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:39
+msgid ""
+"I<hpsa_allow_any=1>: This option allows the driver to attempt to operate on "
+"any HP Smart Array hardware RAID controller, even if it is not explicitly "
+"known to the driver.  This allows newer hardware to work with older "
+"drivers.  Typically this is used to allow installation of operating systems "
+"from media that predates the RAID controller, though it may also be used to "
+"enable B<hpsa> to drive older controllers that would normally be handled by "
+"the B<cciss>(4)  driver.  These older boards have not been tested and are "
+"not supported with B<hpsa>, and B<cciss>(4)  should still be used for these."
+msgstr ""
+
+#. type: SS
+#: man-pages/man4/hpsa.4:39
+#, no-wrap
+msgid "Supported hardware"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:43
+msgid "The B<hpsa> driver supports the following Smart Array boards:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:54
+#, no-wrap
+msgid ""
+"    Smart Array P700M\n"
+"    Smart Array P212\n"
+"    Smart Array P410\n"
+"    Smart Array P410i\n"
+"    Smart Array P411\n"
+"    Smart Array P812\n"
+"    Smart Array P712m\n"
+"    Smart Array P711m\n"
+"    StorageWorks P1210m\n"
+msgstr ""
+
+#.  commit 135ae6edeb51979d0998daf1357f149a7d6ebb08
+#. type: Plain text
+#: man-pages/man4/hpsa.4:58
+msgid "Since Linux 4.14, the following Smart Array boards are also supported:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:80
+#, no-wrap
+msgid ""
+"    Smart Array 5300\n"
+"    Smart Array 5312\n"
+"    Smart Array 532\n"
+"    Smart Array 5i\n"
+"    Smart Array 6400\n"
+"    Smart Array 6400 EM\n"
+"    Smart Array 641\n"
+"    Smart Array 642\n"
+"    Smart Array 6i\n"
+"    Smart Array E200\n"
+"    Smart Array E200i\n"
+"    Smart Array E200i\n"
+"    Smart Array E200i\n"
+"    Smart Array E200i\n"
+"    Smart Array E500\n"
+"    Smart Array P400\n"
+"    Smart Array P400i\n"
+"    Smart Array P600\n"
+"    Smart Array P700m\n"
+"    Smart Array P800\n"
+msgstr ""
+
+#. type: SS
+#: man-pages/man4/hpsa.4:81
+#, no-wrap
+msgid "Configuration details"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:89
+msgid ""
+"To configure HP Smart Array controllers, use the HP Array Configuration "
+"Utility (either B<hpacuxe>(8)  or B<hpacucli>(8))  or the Offline ROM-based "
+"Configuration Utility (ORCA)  run from the Smart Array's option ROM at boot "
+"time."
+msgstr ""
+
+#. type: SS
+#: man-pages/man4/hpsa.4:90
+#, no-wrap
+msgid "Device nodes"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:104
+msgid ""
+"Logical drives are accessed via the SCSI disk driver (B<sd>(4)), tape drives "
+"via the SCSI tape driver (B<st>(4)), and the RAID controller via the SCSI "
+"generic driver (B<sg>(4)), with device nodes named I</dev/sd*>, I</dev/st*>, "
+"and I</dev/sg*>, respectively."
+msgstr ""
+
+#. type: SS
+#: man-pages/man4/hpsa.4:104
+#, no-wrap
+msgid "HPSA-specific host attribute files in /sys"
+msgstr ""
+
+#. type: TP
+#: man-pages/man4/hpsa.4:105
+#, no-wrap
+msgid "I</sys/class/scsi_host/host*/rescan>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:119
+msgid ""
+"This is a write-only attribute.  Writing to this attribute will cause the "
+"driver to scan for new, changed, or removed devices (e.g., hot-plugged tape "
+"drives, or newly configured or deleted logical drives, etc.)  and notify the "
+"SCSI midlayer of any changes detected.  Normally a rescan is triggered "
+"automatically by HP's Array Configuration Utility (either the GUI or the "
+"command-line variety); thus, for logical drive changes, the user should not "
+"normally have to use this attribute.  This attribute may be useful when hot "
+"plugging devices like tape drives, or entire storage boxes containing "
+"preconfigured logical drives."
+msgstr ""
+
+#. type: TP
+#: man-pages/man4/hpsa.4:119
+#, no-wrap
+msgid "I</sys/class/scsi_host/host*/firmware_revision>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:122
+msgid "This attribute contains the firmware version of the Smart Array."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:124 man-pages/man4/hpsa.4:139
+#: man-pages/man4/hpsa.4:152 man-pages/man4/hpsa.4:168
+msgid "For example:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:130
+#, no-wrap
+msgid ""
+"# B<cd /sys/class/scsi_host/host4>\n"
+"# B<cat firmware_revision>\n"
+"7.14\n"
+msgstr ""
+
+#. type: SS
+#: man-pages/man4/hpsa.4:133
+#, no-wrap
+msgid "HPSA-specific disk attribute files in /sys"
+msgstr ""
+
+#. type: TP
+#: man-pages/man4/hpsa.4:134
+#, no-wrap
+msgid "I</sys/class/scsi_disk/c:b:t:l/device/unique_id>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:137
+msgid ""
+"This attribute contains a 32 hex-digit unique ID for each logical drive."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:145
+#, no-wrap
+msgid ""
+"# B<cd /sys/class/scsi_disk/4:0:0:0/device>\n"
+"# B<cat unique_id>\n"
+"600508B1001044395355323037570F77\n"
+msgstr ""
+
+#. type: TP
+#: man-pages/man4/hpsa.4:147
+#, no-wrap
+msgid "I</sys/class/scsi_disk/c:b:t:l/device/raid_level>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:150
+msgid "This attribute contains the RAID level of each logical drive."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:158
+#, no-wrap
+msgid ""
+"# B<cd /sys/class/scsi_disk/4:0:0:0/device>\n"
+"# B<cat raid_level>\n"
+"RAID 0\n"
+msgstr ""
+
+#. type: TP
+#: man-pages/man4/hpsa.4:160
+#, no-wrap
+msgid "I</sys/class/scsi_disk/c:b:t:l/device/lunid>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:166
+msgid ""
+"This attribute contains the 16 hex-digit (8 byte) LUN ID by which a logical "
+"drive or physical device can be addressed.  I<c>:I<b>:I<t>:I<l> are the "
+"controller, bus, target, and lun of the device."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:174
+#, no-wrap
+msgid ""
+"# B<cd /sys/class/scsi_disk/4:0:0:0/device>\n"
+"# B<cat lunid>\n"
+"0x0000004000000000\n"
+msgstr ""
+
+#. type: SS
+#: man-pages/man4/hpsa.4:177
+#, no-wrap
+msgid "Supported ioctl() operations"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:189
+msgid ""
+"For compatibility with applications written for the B<cciss>(4)  driver, "
+"many, but not all of the ioctls supported by the B<cciss>(4)  driver are "
+"also supported by the B<hpsa> driver.  The data structures used by these "
+"ioctls are described in the Linux kernel source file I<include/linux/"
+"cciss_ioctl.h>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man4/hpsa.4:189
+#, no-wrap
+msgid "B<CCISS_DEREGDISK>, B<CCISS_REGNEWDISK>, B<CCISS_REGNEWD>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:195
+msgid ""
+"These three ioctls all do exactly the same thing, which is to cause the "
+"driver to rescan for new devices.  This does exactly the same thing as "
+"writing to the hpsa-specific host \"rescan\" attribute."
+msgstr ""
+
+#. type: TP
+#: man-pages/man4/hpsa.4:195
+#, no-wrap
+msgid "B<CCISS_GETPCIINFO>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:198
+msgid ""
+"Returns PCI domain, bus, device and function and \"board ID\" (PCI subsystem "
+"ID)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man4/hpsa.4:198
+#, no-wrap
+msgid "B<CCISS_GETDRIVVER>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:201
+msgid "Returns driver version in three bytes encoded as:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:206
+#, no-wrap
+msgid ""
+"(major_version E<lt>E<lt> 16) | (minor_version E<lt>E<lt> 8) |\n"
+"    (subminor_version)\n"
+msgstr ""
+
+#. type: TP
+#: man-pages/man4/hpsa.4:208
+#, no-wrap
+msgid "B<CCISS_PASSTHRU>, B<CCISS_BIG_PASSTHRU>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:219
+msgid ""
+"Allows \"BMIC\" and \"CISS\" commands to be passed through to the Smart "
+"Array.  These are used extensively by the HP Array Configuration Utility, "
+"SNMP storage agents, and so on.  See I<cciss_vol_status> at E<.UR http://"
+"cciss.sf.net> E<.UE> for some examples."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:226
+msgid ""
+"B<cciss>(4), B<sd>(4), B<st>(4), B<cciss_vol_status>(8), B<hpacucli>(8), "
+"B<hpacuxe>(8),"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/hpsa.4:233
+msgid ""
+"E<.UR http://cciss.sf.net> E<.UE ,> and I<Documentation/scsi/hpsa.txt> and "
+"I<Documentation/ABI/testing/sysfs-bus-pci-devices-cciss> in the Linux kernel "
+"source tree"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/hostname.7:39
+#, no-wrap
+msgid "HOSTNAME"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/hostname.7:39
+#, no-wrap
+msgid "2017-05-03"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hostname.7:42
+msgid "hostname - hostname resolution description"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hostname.7:46
+msgid ""
+"Hostnames are domains, where a domain is a hierarchical, dot-separated list "
+"of subdomains; for example, the machine \"monet\", in the \"example\" "
+"subdomain of the \"com\" domain would be represented as \"monet.example.com"
+"\"."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hostname.7:61
+msgid ""
+"Each element of the hostname must be from 1 to 63 characters long and the "
+"entire hostname, including the dots, can be at most 253 characters long.  "
+"Valid characters for hostnames are B<ASCII>(7)  letters from I<a> to I<z>, "
+"the digits from I<0> to I<9>, and the hyphen (-).  A hostname may not start "
+"with a hyphen."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hostname.7:70
+msgid ""
+"Hostnames are often used with network client and server programs, which must "
+"generally translate the name to an address for use.  (This task is generally "
+"performed by either B<getaddrinfo>(3)  or the obsolete "
+"B<gethostbyname>(3).)  Hostnames are resolved by the Internet name resolver "
+"in the following fashion."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hostname.7:83
+msgid ""
+"If the name consists of a single component, that is, contains no dot, and if "
+"the environment variable B<HOSTALIASES> is set to the name of a file, that "
+"file is searched for any string matching the input hostname.  The file "
+"should consist of lines made up of two white-space separated strings, the "
+"first of which is the hostname alias, and the second of which is the "
+"complete hostname to be substituted for that alias.  If a case-insensitive "
+"match is found between the hostname to be resolved and the first field of a "
+"line in the file, the substituted name is looked up with no further "
+"processing."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hostname.7:87
+msgid ""
+"If the input name ends with a trailing dot, the trailing dot is removed, and "
+"the remaining name is looked up with no further processing."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hostname.7:100
+msgid ""
+"If the input name does not end with a trailing dot, it is looked up by "
+"searching through a list of domains until a match is found.  The default "
+"search list includes first the local domain, then its parent domains with at "
+"least 2 name components (longest first).  For example, in the domain cs."
+"example.com, the name lithium.cchem will be checked first as lithium.cchem."
+"cs.example and then as lithium.cchem.example.com.  lithium.cchem.com will "
+"not be tried, as there is only one component remaining from the local "
+"domain.  The search path can be changed from the default by a system-wide "
+"configuration file (see B<resolver>(5))."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hostname.7:106
+msgid ""
+"B<getaddrinfo>(3), B<gethostbyname>(3), B<resolver>(5), B<mailaddr>(7), "
+"B<named>(8)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hostname.7:110
+msgid "E<.UR http://www.ietf.org\\:/rfc\\:/rfc1123.txt> IETF RFC\\ 1123 E<.UE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hostname.7:113
+msgid "E<.UR http://www.ietf.org\\:/rfc\\:/rfc1178.txt> IETF RFC\\ 1178 E<.UE>"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/hier.7:31
+#, no-wrap
+msgid "HIER"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/hier.7:31
+#, no-wrap
+msgid "2017-11-26"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:34
+msgid "hier - description of the filesystem hierarchy"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:36
+msgid "A typical Linux system has, among others, the following directories:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:36
+#, no-wrap
+msgid "I</>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:40
+msgid "This is the root directory.  This is where the whole tree starts."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:40
+#, no-wrap
+msgid "I</bin>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:44
+msgid ""
+"This directory contains executable programs which are needed in single user "
+"mode and to bring the system up or repair it."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:44
+#, no-wrap
+msgid "I</boot>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:58
+msgid ""
+"Contains static files for the boot loader.  This directory holds only the "
+"files which are needed during the boot process.  The map installer and "
+"configuration files should go to I</sbin> and I</etc>.  The operating system "
+"kernel (initrd for example) must be located in either I</> or I</boot>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:58
+#, no-wrap
+msgid "I</dev>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:63
+msgid ""
+"Special or device files, which refer to physical devices.  See B<mknod>(1)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:63
+#, no-wrap
+msgid "I</etc>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:76
+msgid ""
+"Contains configuration files which are local to the machine.  Some larger "
+"software packages, like X11, can have their own subdirectories below I</"
+"etc>.  Site-wide configuration files may be placed here or in I</usr/etc>.  "
+"Nevertheless, programs should always look for these files in I</etc> and you "
+"may have links for these files to I</usr/etc>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:76
+#, no-wrap
+msgid "I</etc/opt>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:81
+msgid ""
+"Host-specific configuration files for add-on applications installed in I</"
+"opt>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:81
+#, no-wrap
+msgid "I</etc/sgml>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:84
+msgid "This directory contains the configuration files for SGML (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:84
+#, no-wrap
+msgid "I</etc/skel>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:88
+msgid ""
+"When a new user account is created, files from this directory are usually "
+"copied into the user's home directory."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:88
+#, no-wrap
+msgid "I</etc/X11>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:91
+msgid "Configuration files for the X11 window system (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:91
+#, no-wrap
+msgid "I</etc/xml>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:94
+msgid "This directory contains the configuration files for XML (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:94
+#, no-wrap
+msgid "I</home>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:100
+msgid ""
+"On machines with home directories for users, these are usually beneath this "
+"directory, directly or not.  The structure of this directory depends on "
+"local administration decisions (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:100
+#, no-wrap
+msgid "I</lib>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:104
+msgid ""
+"This directory should hold those shared libraries that are necessary to boot "
+"the system and to run the commands in the root filesystem."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:104
+#, no-wrap
+msgid "I</libE<lt>qualE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:110
+msgid ""
+"These directories are variants of I</lib> on system which support more than "
+"one binary format requiring separate libraries (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:110
+#, no-wrap
+msgid "I</lib/modules>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:113
+msgid "Loadable kernel modules (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:113
+#, no-wrap
+msgid "I</lost+found>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:118
+msgid ""
+"This directory contains items lost in the filesystem.  These items are "
+"usually chunks of files mangled as a consequence of a faulty disk or a "
+"system crash."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:118
+#, no-wrap
+msgid "I</media>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:127
+msgid ""
+"This directory contains mount points for removable media such as CD and DVD "
+"disks or USB sticks.  On systems where more than one device exists for "
+"mounting a certain type of media, mount directories can be created by "
+"appending a digit to the name of those available above starting with '0', "
+"but the unqualified name must also exist."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:127
+#, no-wrap
+msgid "I</media/floppy[1-9]>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:130
+msgid "Floppy drive (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:130
+#, no-wrap
+msgid "I</media/cdrom[1-9]>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:133
+msgid "CD-ROM drive (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:133
+#, no-wrap
+msgid "I</media/cdrecorder[1-9]>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:136
+msgid "CD writer (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:136
+#, no-wrap
+msgid "I</media/zip[1-9]>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:139
+msgid "Zip drive (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:139
+#, no-wrap
+msgid "I</media/usb[1-9]>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:142
+msgid "USB drive (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:142
+#, no-wrap
+msgid "I</mnt>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:149
+msgid ""
+"This directory is a mount point for a temporarily mounted filesystem.  In "
+"some distributions, I</mnt> contains subdirectories intended to be used as "
+"mount points for several temporary filesystems."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:149
+#, no-wrap
+msgid "I</opt>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:152
+msgid ""
+"This directory should contain add-on packages that contain static files."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:152
+#, no-wrap
+msgid "I</proc>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:160
+msgid ""
+"This is a mount point for the I<proc> filesystem, which provides information "
+"about running processes and the kernel.  This pseudo-filesystem is described "
+"in more detail in B<proc>(5)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:160
+#, no-wrap
+msgid "I</root>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:163
+msgid ""
+"This directory is usually the home directory for the root user (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:163
+#, no-wrap
+msgid "I</sbin>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:169
+msgid ""
+"Like I</bin>, this directory holds commands needed to boot the system, but "
+"which are usually not executed by normal users."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:169
+#, no-wrap
+msgid "I</srv>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:172
+msgid ""
+"This directory contains site-specific data that is served by this system."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:172
+#, no-wrap
+msgid "I</sys>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:178
+msgid ""
+"This is a mount point for the sysfs filesystem, which provides information "
+"about the kernel like I</proc>, but better structured, following the "
+"formalism of kobject infrastructure."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:178
+#, no-wrap
+msgid "I</tmp>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:182
+msgid ""
+"This directory contains temporary files which may be deleted with no notice, "
+"such as by a regular job or at system boot up."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:182
+#, no-wrap
+msgid "I</usr>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:187
+msgid ""
+"This directory is usually mounted from a separate partition.  It should hold "
+"only shareable, read-only data, so that it can be mounted by various "
+"machines running Linux."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:187
+#, no-wrap
+msgid "I</usr/X11R6>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:190
+msgid "The X-Window system, version 11 release 6 (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:190
+#, no-wrap
+msgid "I</usr/X11R6/bin>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:196
+msgid ""
+"Binaries which belong to the X-Window system; often, there is a symbolic "
+"link from the more traditional I</usr/bin/X11> to here."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:196
+#, no-wrap
+msgid "I</usr/X11R6/lib>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:199
+msgid "Data files associated with the X-Window system."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:199
+#, no-wrap
+msgid "I</usr/X11R6/lib/X11>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:205
+msgid ""
+"These contain miscellaneous files needed to run X; Often, there is a "
+"symbolic link from I</usr/lib/X11> to this directory."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:205
+#, no-wrap
+msgid "I</usr/X11R6/include/X11>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:212
+msgid ""
+"Contains include files needed for compiling programs using the X11 window "
+"system.  Often, there is a symbolic link from I</usr/include/X11> to this "
+"directory."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:212
+#, no-wrap
+msgid "I</usr/bin>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:219
+msgid ""
+"This is the primary directory for executable programs.  Most programs "
+"executed by normal users which are not needed for booting or for repairing "
+"the system and which are not installed locally should be placed in this "
+"directory."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:219
+#, no-wrap
+msgid "I</usr/bin/mh>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:222
+msgid "Commands for the MH mail handling system (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:222
+#, no-wrap
+msgid "I</usr/bin/X11>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:227
+msgid ""
+"is the traditional place to look for X11 executables; on Linux, it usually "
+"is a symbolic link to I</usr/X11R6/bin>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:227
+#, no-wrap
+msgid "I</usr/dict>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:231
+msgid "Replaced by I</usr/share/dict>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:231
+#, no-wrap
+msgid "I</usr/doc>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:235
+msgid "Replaced by I</usr/share/doc>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:235
+#, no-wrap
+msgid "I</usr/etc>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:247
+msgid ""
+"Site-wide configuration files to be shared between several machines may be "
+"stored in this directory.  However, commands should always reference those "
+"files using the I</etc> directory.  Links from files in I</etc> should point "
+"to the appropriate files in I</usr/etc>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:247
+#, no-wrap
+msgid "I</usr/games>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:250
+msgid "Binaries for games and educational programs (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:250
+#, no-wrap
+msgid "I</usr/include>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:253
+msgid "Include files for the C compiler."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:253
+#, no-wrap
+msgid "I</usr/include/bsd>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:256
+msgid "BSD compatibility include files (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:256
+#, no-wrap
+msgid "I</usr/include/X11>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:262
+msgid ""
+"Include files for the C compiler and the X-Window system.  This is usually a "
+"symbolic link to I</usr/X11R6/include/X11>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:262
+#, no-wrap
+msgid "I</usr/include/asm>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:268
+msgid ""
+"Include files which declare some assembler functions.  This used to be a "
+"symbolic link to I</usr/src/linux/include/asm>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:268
+#, no-wrap
+msgid "I</usr/include/linux>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:274
+msgid ""
+"This contains information which may change from system release to system "
+"release and used to be a symbolic link to I</usr/src/linux/include/linux> to "
+"get at operating-system-specific information."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:289
+msgid ""
+"(Note that one should have include files there that work correctly with the "
+"current libc and in user space.  However, Linux kernel source is not "
+"designed to be used with user programs and does not know anything about the "
+"libc you are using.  It is very likely that things will break if you let I</"
+"usr/include/asm> and I</usr/include/linux> point at a random kernel tree.  "
+"Debian systems don't do this and use headers from a known good kernel "
+"version, provided in the libc*-dev package.)"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:289
+#, no-wrap
+msgid "I</usr/include/g++>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:292
+msgid "Include files to use with the GNU C++ compiler."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:292
+#, no-wrap
+msgid "I</usr/lib>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:298
+msgid ""
+"Object libraries, including dynamic libraries, plus some executables which "
+"usually are not invoked directly.  More complicated programs may have whole "
+"subdirectories there."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:298
+#, no-wrap
+msgid "I</usr/libE<lt>qualE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:306
+msgid ""
+"These directories are variants of I</usr/lib> on system which support more "
+"than one binary format requiring separate libraries, except that the "
+"symbolic link I</usr/libE<lt>qualE<gt>/X11> is not required (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:306
+#, no-wrap
+msgid "I</usr/lib/X11>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:313
+msgid ""
+"The usual place for data files associated with X programs, and configuration "
+"files for the X system itself.  On Linux, it usually is a symbolic link to "
+"I</usr/X11R6/lib/X11>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:313
+#, no-wrap
+msgid "I</usr/lib/gcc-lib>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:317
+msgid ""
+"contains executables and include files for the GNU C compiler, B<gcc>(1)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:317
+#, no-wrap
+msgid "I</usr/lib/groff>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:320
+msgid "Files for the GNU groff document formatting system."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:320
+#, no-wrap
+msgid "I</usr/lib/uucp>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:324
+msgid "Files for B<uucp>(1)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:324
+#, no-wrap
+msgid "I</usr/local>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:327
+msgid "This is where programs which are local to the site typically go."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:327
+#, no-wrap
+msgid "I</usr/local/bin>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:330
+msgid "Binaries for programs local to the site."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:330
+#, no-wrap
+msgid "I</usr/local/doc>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:333
+msgid "Local documentation."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:333
+#, no-wrap
+msgid "I</usr/local/etc>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:336
+msgid "Configuration files associated with locally installed programs."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:336
+#, no-wrap
+msgid "I</usr/local/games>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:339
+msgid "Binaries for locally installed games."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:339
+#, no-wrap
+msgid "I</usr/local/lib>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:342
+msgid "Files associated with locally installed programs."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:342
+#, no-wrap
+msgid "I</usr/local/libE<lt>qualE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:348
+msgid ""
+"These directories are variants of I</usr/local/lib> on system which support "
+"more than one binary format requiring separate libraries (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:348
+#, no-wrap
+msgid "I</usr/local/include>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:351
+msgid "Header files for the local C compiler."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:351
+#, no-wrap
+msgid "I</usr/local/info>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:354
+msgid "Info pages associated with locally installed programs."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:354
+#, no-wrap
+msgid "I</usr/local/man>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:357
+msgid "Man pages associated with locally installed programs."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:357
+#, no-wrap
+msgid "I</usr/local/sbin>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:360
+msgid "Locally installed programs for system administration."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:360
+#, no-wrap
+msgid "I</usr/local/share>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:364
+msgid ""
+"Local application data that can be shared among different architectures of "
+"the same OS."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:364
+#, no-wrap
+msgid "I</usr/local/src>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:367
+msgid "Source code for locally installed software."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:367
+#, no-wrap
+msgid "I</usr/man>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:371
+msgid "Replaced by I</usr/share/man>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:371
+#, no-wrap
+msgid "I</usr/sbin>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:377
+msgid ""
+"This directory contains program binaries for system administration which are "
+"not essential for the boot process, for mounting I</usr>, or for system "
+"repair."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:377
+#, no-wrap
+msgid "I</usr/share>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:387
+msgid ""
+"This directory contains subdirectories with specific application data, that "
+"can be shared among different architectures of the same OS.  Often one finds "
+"stuff here that used to live in I</usr/doc> or I</usr/lib> or I</usr/man>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:387
+#, no-wrap
+msgid "I</usr/share/dict>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:390
+msgid "Contains the word lists used by spell checkers (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:390
+#, no-wrap
+msgid "I</usr/share/dict/words>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:393
+msgid "List of English words (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:393
+#, no-wrap
+msgid "I</usr/share/doc>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:396
+msgid "Documentation about installed programs (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:396
+#, no-wrap
+msgid "I</usr/share/games>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:401
+msgid "Static data files for games in I</usr/games> (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:401
+#, no-wrap
+msgid "I</usr/share/info>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:404
+msgid "Info pages go here (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:404
+#, no-wrap
+msgid "I</usr/share/locale>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:407
+msgid "Locale information goes here (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:407
+#, no-wrap
+msgid "I</usr/share/man>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:410
+msgid ""
+"Manual pages go here in subdirectories according to the man page sections."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:410
+#, no-wrap
+msgid "I</usr/share/man/E<lt>localeE<gt>/man[1-9]>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:416
+msgid ""
+"These directories contain manual pages for the specific locale in source "
+"code form.  Systems which use a unique language and code set for all manual "
+"pages may omit the E<lt>localeE<gt> substring."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:416
+#, no-wrap
+msgid "I</usr/share/misc>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:420
+msgid ""
+"Miscellaneous data that can be shared among different architectures of the "
+"same OS."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:420
+#, no-wrap
+msgid "I</usr/share/nls>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:423
+msgid "The message catalogs for native language support go here (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:423
+#, no-wrap
+msgid "I</usr/share/sgml>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:426
+msgid "Files for SGML (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:426
+#, no-wrap
+msgid "I</usr/share/sgml/docbook>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:429 man-pages/man7/hier.7:450
+msgid "DocBook DTD (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:429
+#, no-wrap
+msgid "I</usr/share/sgml/tei>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:432
+msgid "TEI DTD (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:432
+#, no-wrap
+msgid "I</usr/share/sgml/html>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:435
+msgid "HTML DTD (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:435
+#, no-wrap
+msgid "I</usr/share/sgml/mathtml>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:438 man-pages/man7/hier.7:456
+msgid "MathML DTD (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:438
+#, no-wrap
+msgid "I</usr/share/terminfo>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:441
+msgid "The database for terminfo (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:441
+#, no-wrap
+msgid "I</usr/share/tmac>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:444
+msgid "Troff macros that are not distributed with groff (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:444
+#, no-wrap
+msgid "I</usr/share/xml>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:447
+msgid "Files for XML (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:447
+#, no-wrap
+msgid "I</usr/share/xml/docbook>"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:450
+#, no-wrap
+msgid "I</usr/share/xml/xhtml>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:453
+msgid "XHTML DTD (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:453
+#, no-wrap
+msgid "I</usr/share/xml/mathml>"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:456
+#, no-wrap
+msgid "I</usr/share/zoneinfo>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:459
+msgid "Files for timezone information (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:459
+#, no-wrap
+msgid "I</usr/src>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:465
+msgid ""
+"Source files for different parts of the system, included with some packages "
+"for reference purposes.  Don't work here with your own projects, as files "
+"below /usr should be read-only except when installing software (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:465
+#, no-wrap
+msgid "I</usr/src/linux>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:470
+msgid ""
+"This was the traditional place for the kernel source.  Some distributions "
+"put here the source for the default kernel they ship.  You should probably "
+"use another directory when building your own kernel."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:470
+#, no-wrap
+msgid "I</usr/tmp>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:477
+msgid ""
+"Obsolete.  This should be a link to I</var/tmp>.  This link is present only "
+"for compatibility reasons and shouldn't be used."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:477
+#, no-wrap
+msgid "I</var>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:481
+msgid ""
+"This directory contains files which may change in size, such as spool and "
+"log files."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:481
+#, no-wrap
+msgid "I</var/account>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:484
+msgid "Process accounting logs (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:484
+#, no-wrap
+msgid "I</var/adm>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:490
+msgid ""
+"This directory is superseded by I</var/log> and should be a symbolic link to "
+"I</var/log>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:490
+#, no-wrap
+msgid "I</var/backups>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:493 man-pages/man7/hier.7:519
+#: man-pages/man7/hier.7:577 man-pages/man7/hier.7:580
+msgid "Reserved for historical reasons."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:493
+#, no-wrap
+msgid "I</var/cache>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:496
+msgid "Data cached for programs."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:496
+#, no-wrap
+msgid "I</var/cache/fonts>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:499
+msgid "Locally-generated fonts (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:499
+#, no-wrap
+msgid "I</var/cache/man>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:502
+msgid "Locally-formatted man pages (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:502
+#, no-wrap
+msgid "I</var/cache/www>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:505
+msgid "WWW proxy or cache data (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:505
+#, no-wrap
+msgid "I</var/cache/E<lt>packageE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:508
+msgid "Package specific cache data (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:508
+#, no-wrap
+msgid "I</var/catman/cat[1-9]> or I</var/cache/man/cat[1-9]>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:513
+msgid ""
+"These directories contain preformatted manual pages according to their man "
+"page section.  (The use of preformatted manual pages is deprecated.)"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:513
+#, no-wrap
+msgid "I</var/crash>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:516
+msgid "System crash dumps (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:516
+#, no-wrap
+msgid "I</var/cron>"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:519
+#, no-wrap
+msgid "I</var/games>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:522
+msgid "Variable game data (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:522
+#, no-wrap
+msgid "I</var/lib>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:525
+msgid "Variable state information for programs."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:525
+#, no-wrap
+msgid "I</var/lib/hwclock>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:528
+msgid "State directory for hwclock (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:528
+#, no-wrap
+msgid "I</var/lib/misc>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:531
+msgid "Miscellaneous state data."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:531
+#, no-wrap
+msgid "I</var/lib/xdm>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:534
+msgid "X display manager variable data (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:534
+#, no-wrap
+msgid "I</var/lib/E<lt>editorE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:537
+msgid "Editor backup files and state (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:537
+#, no-wrap
+msgid "I</var/lib/E<lt>nameE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:540
+msgid "These directories must be used for all distribution packaging support."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:540
+#, no-wrap
+msgid "I</var/lib/E<lt>packageE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:543
+msgid "State data for packages and subsystems (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:543
+#, no-wrap
+msgid "I</var/lib/E<lt>pkgtoolE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:546
+msgid "Packaging support files (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:546
+#, no-wrap
+msgid "I</var/local>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:550
+msgid "Variable data for I</usr/local>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:550
+#, no-wrap
+msgid "I</var/lock>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:562
+msgid ""
+"Lock files are placed in this directory.  The naming convention for device "
+"lock files is I<LCK..E<lt>deviceE<gt>> where I<E<lt>deviceE<gt>> is the "
+"device's name in the filesystem.  The format used is that of HDU UUCP lock "
+"files, that is, lock files contain a PID as a 10-byte ASCII decimal number, "
+"followed by a newline character."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:562
+#, no-wrap
+msgid "I</var/log>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:565
+msgid "Miscellaneous log files."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:565
+#, no-wrap
+msgid "I</var/opt>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:569
+msgid "Variable data for I</opt>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:569
+#, no-wrap
+msgid "I</var/mail>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:574
+msgid "Users' mailboxes.  Replaces I</var/spool/mail>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:574
+#, no-wrap
+msgid "I</var/msgs>"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:577
+#, no-wrap
+msgid "I</var/preserve>"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:580
+#, no-wrap
+msgid "I</var/run>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:586
+msgid ""
+"Run-time variable files, like files holding process identifiers (PIDs)  and "
+"logged user information I<(utmp)>.  Files in this directory are usually "
+"cleared when the system boots."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:586
+#, no-wrap
+msgid "I</var/spool>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:589
+msgid "Spooled (or queued) files for various programs."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:589
+#, no-wrap
+msgid "I</var/spool/at>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:593
+msgid "Spooled jobs for B<at>(1)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:593
+#, no-wrap
+msgid "I</var/spool/cron>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:597
+msgid "Spooled jobs for B<cron>(8)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:597
+#, no-wrap
+msgid "I</var/spool/lpd>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:600
+msgid "Spooled files for printing (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:600
+#, no-wrap
+msgid "I</var/spool/lpd/printer>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:603
+msgid "Spools for a specific printer (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:603
+#, no-wrap
+msgid "I</var/spool/mail>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:607
+msgid "Replaced by I</var/mail>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:607
+#, no-wrap
+msgid "I</var/spool/mqueue>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:610
+msgid "Queued outgoing mail (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:610
+#, no-wrap
+msgid "I</var/spool/news>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:613
+msgid "Spool directory for news (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:613
+#, no-wrap
+msgid "I</var/spool/rwho>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:618
+msgid "Spooled files for B<rwhod>(8)  (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:618
+#, no-wrap
+msgid "I</var/spool/smail>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:623
+msgid "Spooled files for the B<smail>(1)  mail delivery program."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:623
+#, no-wrap
+msgid "I</var/spool/uucp>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:628
+msgid "Spooled files for B<uucp>(1)  (optional)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:628
+#, no-wrap
+msgid "I</var/tmp>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:633
+msgid ""
+"Like I</tmp>, this directory holds temporary files stored for an unspecified "
+"duration."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/hier.7:633
+#, no-wrap
+msgid "I</var/yp>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:637
+msgid "Database files for NIS, formerly known as the Sun Yellow Pages (YP)."
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/hier.7:637
+#, no-wrap
+msgid "CONFORMING TO"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:641
+msgid ""
+"The Filesystem Hierarchy Standard, Version 2.3 E<.UR http://www.pathname.com"
+"\\:/fhs/> E<.UE .>"
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/hier.7:641
+#, no-wrap
+msgid "BUGS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:644
+msgid ""
+"This list is not exhaustive; different systems may be configured differently."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:650
+msgid "B<find>(1), B<ln>(1), B<proc>(5), B<file-hierarchy>(7), B<mount>(8)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/hier.7:651
+msgid "The Filesystem Hierarchy Standard"
+msgstr ""
+
+#. type: TH
+#: man-pages/man5/hosts.5:27
+#, no-wrap
+msgid "HOSTS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.5:30
+msgid "hosts - static table lookup for hostnames"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.5:32
+msgid "B</etc/hosts>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.5:40
+msgid ""
+"This manual page describes the format of the I</etc/hosts> file.  This file "
+"is a simple text file that associates IP addresses with hostnames, one line "
+"per IP address.  For each host a single line should be present with the "
+"following information:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.5:43
+msgid "IP_address canonical_hostname [aliases...]"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.5:56
+msgid ""
+"Fields of the entry are separated by any number of blanks and/or tab "
+"characters.  Text from a \"#\" character until the end of the line is a "
+"comment, and is ignored.  Host names may contain only alphanumeric "
+"characters, minus signs (\"-\"), and periods (\".\").  They must begin with "
+"an alphabetic character and end with an alphanumeric character.  Optional "
+"aliases provide for name changes, alternate spellings, shorter hostnames, or "
+"generic hostnames (for example, I<localhost>)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.5:64
+msgid ""
+"The Berkeley Internet Name Domain (BIND) Server implements the Internet name "
+"server for UNIX systems.  It augments or replaces the I</etc/hosts> file or "
+"hostname lookup, and frees a host from relying on I</etc/hosts> being up to "
+"date and complete."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.5:67
+msgid ""
+"In modern systems, even though the host table has been superseded by DNS, it "
+"is still widely used for:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/hosts.5:67
+#, no-wrap
+msgid "B<bootstrapping>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.5:73
+msgid ""
+"Most systems have a small host table containing the name and address "
+"information for important hosts on the local network.  This is useful when "
+"DNS is not running, for example during system bootup."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/hosts.5:73
+#, no-wrap
+msgid "B<NIS>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.5:79
+msgid ""
+"Sites that use NIS use the host table as input to the NIS host database.  "
+"Even though NIS can be used with DNS, most NIS sites still use the host "
+"table with an entry for all local hosts as a backup."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/hosts.5:79
+#, no-wrap
+msgid "B<isolated nodes>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.5:86
+msgid ""
+"Very small sites that are isolated from the network use the host table "
+"instead of DNS.  If the local information rarely changes, and the network is "
+"not connected to the Internet, DNS offers little advantage."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.5:88
+msgid "I</etc/hosts>"
+msgstr ""
+
+#. type: SH
+#: man-pages/man5/hosts.5:88
+#, no-wrap
+msgid "NOTES"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.5:91
+msgid ""
+"Modifications to this file normally take effect immediately, except in cases "
+"where the file is cached by applications."
+msgstr ""
+
+#. type: SS
+#: man-pages/man5/hosts.5:91
+#, no-wrap
+msgid "Historical notes"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.5:94
+msgid ""
+"RFC\\ 952 gave the original format for the host table, though it has since "
+"changed."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.5:107
+msgid ""
+"Before the advent of DNS, the host table was the only way of resolving "
+"hostnames on the fledgling Internet.  Indeed, this file could be created "
+"from the official host data base maintained at the Network Information "
+"Control Center (NIC), though local changes were often required to bring it "
+"up to date regarding unofficial aliases and/or unknown hosts.  The NIC no "
+"longer maintains the hosts.txt files, though looking around at the time of "
+"writing (circa 2000), there are historical hosts.txt files on the WWW.  I "
+"just found three, from 92, 94, and 95."
+msgstr ""
+
+#. type: SH
+#: man-pages/man5/hosts.5:107
+#, no-wrap
+msgid "EXAMPLE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.5:111
+#, no-wrap
+msgid ""
+"# The following lines are desirable for IPv4 capable hosts\n"
+"127.0.0.1       localhost\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.5:118
+#, no-wrap
+msgid ""
+"# 127.0.1.1 is often used for the FQDN of the machine\n"
+"127.0.1.1       thishost.mydomain.org  thishost\n"
+"192.168.1.10    foo.mydomain.org       foo\n"
+"192.168.1.13    bar.mydomain.org       bar\n"
+"146.82.138.7    master.debian.org      master\n"
+"209.237.226.90  www.opensource.org\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.5:123
+#, no-wrap
+msgid ""
+"# The following lines are desirable for IPv6 capable hosts\n"
+"::1             localhost ip6-localhost ip6-loopback\n"
+"ff02::1         ip6-allnodes\n"
+"ff02::2         ip6-allrouters\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.5:132
+msgid ""
+"B<hostname>(1), B<resolver>(3), B<host.conf>(5), B<resolv.conf>(5), "
+"B<resolver>(5), B<hostname>(7), B<named>(8)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.5:133
+msgid "Internet RFC\\ 952"
+msgstr ""
+
+#. type: TH
+#: man-pages/man5/host.conf.5:26
+#, no-wrap
+msgid "HOST.CONF"
+msgstr ""
+
+#. type: TH
+#: man-pages/man5/host.conf.5:26
+#, no-wrap
+msgid "2019-03-06"
+msgstr ""
+
+#. type: TH
+#: man-pages/man5/host.conf.5:26
+#, no-wrap
+msgid "Linux System Administration"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/host.conf.5:29
+msgid "host.conf - resolver configuration file"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/host.conf.5:36
+msgid ""
+"The file I</etc/host.conf> contains configuration information specific to "
+"the resolver library.  It should contain one configuration keyword per line, "
+"followed by appropriate configuration information.  The following keywords "
+"are recognized:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/host.conf.5:36
+#, no-wrap
+msgid "I<trim>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/host.conf.5:56
+msgid ""
+"This keyword may be listed more than once.  Each time it should be followed "
+"by a list of domains, separated by colons (\\(aq:\\(aq), semicolons (\\(aq;"
+"\\(aq) or commas (\\(aq,\\(aq), with the leading dot.  When set, the "
+"resolver library will automatically trim the given domain name from the end "
+"of any hostname resolved via DNS.  This is intended for use with local hosts "
+"and domains.  (Related note: I<trim> will not affect hostnames gathered via "
+"NIS or the B<hosts>(5)  file.  Care should be taken to ensure that the first "
+"hostname for each entry in the hosts file is fully qualified or unqualified, "
+"as appropriate for the local installation.)"
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/host.conf.5:56
+#, no-wrap
+msgid "I<multi>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/host.conf.5:71
+msgid ""
+"Valid values are I<on> and I<off>.  If set to I<on>, the resolver library "
+"will return all valid addresses for a host that appears in the I</etc/hosts> "
+"file, instead of only the first.  This is I<off> by default, as it may cause "
+"a substantial performance loss at sites with large hosts files."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/host.conf.5:71
+#, no-wrap
+msgid "I<reorder>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/host.conf.5:85
+msgid ""
+"Valid values are I<on> and I<off>.  If set to I<on>, the resolver library "
+"will attempt to reorder host addresses so that local addresses (i.e., on the "
+"same subnet) are listed first when a B<gethostbyname>(3)  is performed.  "
+"Reordering is done for all lookup methods.  The default value is I<off>."
+msgstr ""
+
+#. type: SH
+#: man-pages/man5/host.conf.5:85
+#, no-wrap
+msgid "ENVIRONMENT"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/host.conf.5:89
+msgid ""
+"The following environment variables can be used to allow users to override "
+"the behavior which is configured in I</etc/host.conf>:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/host.conf.5:89
+#, no-wrap
+msgid "B<RESOLV_HOST_CONF>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/host.conf.5:93
+msgid ""
+"If set, this variable points to a file that should be read instead of I</etc/"
+"host.conf>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/host.conf.5:93
+#, no-wrap
+msgid "B<RESOLV_MULTI>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/host.conf.5:98
+msgid "Overrides the I<multi> command."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/host.conf.5:98
+#, no-wrap
+msgid "B<RESOLV_REORDER>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/host.conf.5:103
+msgid "Overrides the I<reorder> command."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/host.conf.5:103
+#, no-wrap
+msgid "B<RESOLV_ADD_TRIM_DOMAINS>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/host.conf.5:108
+msgid ""
+"A list of domains, separated by colons (\\(aq:\\(aq), semicolons (\\(aq;"
+"\\(aq) or commas (\\(aq,\\(aq), with the leading dot, which will be added to "
+"the list of domains that should be trimmed."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/host.conf.5:108
+#, no-wrap
+msgid "B<RESOLV_OVERRIDE_TRIM_DOMAINS>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/host.conf.5:116
+msgid ""
+"A list of domains, separated by colons (\\(aq:\\(aq), semicolons (\\(aq;"
+"\\(aq) or commas (\\(aq,\\(aq), with the leading dot, which will replace the "
+"list of domains that should be trimmed.  Overrides the I<trim> command."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/host.conf.5:117
+#, no-wrap
+msgid "I</etc/host.conf>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/host.conf.5:120 man-pages/man5/host.conf.5:123
+msgid "Resolver configuration file"
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/host.conf.5:120
+#, no-wrap
+msgid "I</etc/resolv.conf>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/host.conf.5:126
+msgid "Local hosts database"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/host.conf.5:135
+msgid ""
+"The following differences exist compared to the original implementation.  A "
+"new command I<spoof> and a new environment variable B<RESOLV_SPOOF_CHECK> "
+"can take arguments like I<off>, I<nowarn>, and I<warn>.  Line comments can "
+"appear anywhere and not only at the beginning of a line."
+msgstr ""
+
+#. type: SS
+#: man-pages/man5/host.conf.5:135
+#, no-wrap
+msgid "Historical"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/host.conf.5:139
+msgid ""
+"The B<nsswitch.conf>(5)  file is the modern way of controlling the order of "
+"host lookups."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/host.conf.5:141
+msgid "In glibc 2.4 and earlier, the following keyword is recognized:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/host.conf.5:141
+#, no-wrap
+msgid "I<order>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/host.conf.5:147
+msgid ""
+"This keyword specifies how host lookups are to be performed.  It should be "
+"followed by one or more lookup methods, separated by commas.  Valid methods "
+"are I<bind>, I<hosts>, and I<nis>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/host.conf.5:147
+#, no-wrap
+msgid "B<RESOLV_SERV_ORDER>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/host.conf.5:152
+msgid "Overrides the I<order> command."
+msgstr ""
+
+#.  commit 7d68cdaa4f748e87ee921f587ee2d483db624b3d
+#. type: Plain text
+#: man-pages/man5/host.conf.5:156
+msgid ""
+"Since glibc 2.0.7, and up through glibc 2.24, the following keywords and "
+"environment variable have been recognized but never implemented:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/host.conf.5:156
+#, no-wrap
+msgid "I<nospoof>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/host.conf.5:171
+msgid ""
+"Valid values are I<on> and I<off>.  If set to I<on>, the resolver library "
+"will attempt to prevent hostname spoofing to enhance the security of "
+"B<rlogin> and B<rsh>.  It works as follows: after performing a host address "
+"lookup, the resolver library will perform a hostname lookup for that "
+"address.  If the two hostnames do not match, the query fails.  The default "
+"value is I<off>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/host.conf.5:171
+#, no-wrap
+msgid "I<spoofalert>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/host.conf.5:184
+msgid ""
+"Valid values are I<on> and I<off>.  If this option is set to I<on> and the "
+"I<nospoof> option is also set, the resolver library will log a warning of "
+"the error via the syslog facility.  The default value is I<off>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/host.conf.5:184
+#, no-wrap
+msgid "I<spoof>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/host.conf.5:203
+msgid ""
+"Valid values are I<off>, I<nowarn>, and I<warn>.  If this option is set to "
+"I<off>, spoofed addresses are permitted and no warnings will be emitted via "
+"the syslog facility.  If this option is set to I<warn>, the resolver library "
+"will attempt to prevent hostname spoofing to enhance the security and log a "
+"warning of the error via the syslog facility.  If this option is set to "
+"I<nowarn>, the resolver library will attempt to prevent hostname spoofing to "
+"enhance the security but not emit warnings via the syslog facility.  Setting "
+"this option to anything else is equal to setting it to I<nowarn>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/host.conf.5:203
+#, no-wrap
+msgid "B<RESOLV_SPOOF_CHECK>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/host.conf.5:212
+msgid ""
+"Overrides the I<nospoof>, I<spoofalert>, and I<spoof> commands in the same "
+"way as the I<spoof> command is parsed.  Valid values are I<off>, I<nowarn>, "
+"and I<warn>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/host.conf.5:218
+msgid ""
+"B<gethostbyname>(3), B<hosts>(5), B<nsswitch.conf>(5), B<resolv.conf>(5), "
+"B<hostname>(7), B<named>(8)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man5/hosts.equiv.5:6
+#, no-wrap
+msgid "HOSTS.EQUIV"
+msgstr ""
+
+#. type: TH
+#: man-pages/man5/hosts.equiv.5:6
+#, no-wrap
+msgid "2015-07-23"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:11
+msgid ""
+"hosts.equiv - list of hosts and users that are granted \"trusted\" B<r> "
+"command access to your system"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:22
+msgid ""
+"The file I</etc/hosts.equiv> allows or denies hosts and users to use the "
+"B<r>-commands (e.g., B<rlogin>, B<rsh>, or B<rcp>)  without supplying a "
+"password."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:24
+msgid "The file uses the following format:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man5/hosts.equiv.5:24
+#, no-wrap
+msgid "I<+|[-]hostname|+@netgroup|-@netgroup> I<[+|[-]username|+@netgroup|-@netgroup]>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:43
+msgid ""
+"The I<hostname> is the name of a host which is logically equivalent to the "
+"local host.  Users logged into that host are allowed to access like-named "
+"user accounts on the local host without supplying a password.  The "
+"I<hostname> may be (optionally) preceded by a plus (+) sign.  If the plus "
+"sign is used alone, it allows any host to access your system.  You can "
+"explicitly deny access to a host by preceding the I<hostname> by a minus (-) "
+"sign.  Users from that host must always supply additional credentials, "
+"including possibly a password. For security reasons you should always use "
+"the FQDN of the hostname and not the short hostname."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:61
+msgid ""
+"The I<username> entry grants a specific user access to all user accounts "
+"(except root) without supplying a password.  That means the user is NOT "
+"restricted to like-named accounts.  The I<username> may be (optionally) "
+"preceded by a plus (+) sign.  You can also explicitly deny access to a "
+"specific user by preceding the I<username> with a minus (-) sign.  This says "
+"that the user is not trusted no matter what other entries for that host "
+"exist."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:63
+msgid "Netgroups can be specified by preceding the netgroup by an @ sign."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:69
+msgid ""
+"Be extremely careful when using the plus (+) sign.  A simple typographical "
+"error could result in a standalone plus sign.  A standalone plus sign is a "
+"wildcard character that means \"any host\"!"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:71
+msgid "I</etc/hosts.equiv>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:76
+msgid ""
+"Some systems will honor the contents of this file only when it has owner "
+"root and no write permission for anybody else.  Some exceptionally paranoid "
+"systems even require that there be no other hard links to the file."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:84
+msgid ""
+"Modern systems use the Pluggable Authentication Modules library (PAM).  With "
+"PAM a standalone plus sign is considered a wildcard character which means "
+"\"any host\" only when the word I<promiscuous> is added to the auth "
+"component line in your PAM file for the particular service (e.g., B<rlogin>)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:90
+msgid "Below are some example I</etc/host.equiv> or I<~/.rhosts> files."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:92
+msgid "Allow any user to log in from any host:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:94
+#, no-wrap
+msgid "    +\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:98
+msgid "Allow any user from I<host> with a matching local account to log in:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:100
+#, no-wrap
+msgid "    host\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:105
+msgid ""
+"Note: the use of I<+host> is never a valid syntax, including attempting to "
+"specify that any user from the host is allowed."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:109
+msgid "Allow any user from I<host> to log in:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:111
+#, no-wrap
+msgid "    host +\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:114
+msgid ""
+"Note: this is distinct from the previous example since it does not require a "
+"matching local account."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:120
+msgid "Allow I<user> from I<host> to log in as any non-root user:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:122
+#, no-wrap
+msgid "    host user\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:127
+msgid ""
+"Allow all users with matching local accounts from I<host> to log in except "
+"for I<baduser>:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:130
+#, no-wrap
+msgid ""
+"    host -baduser\n"
+"    host\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:133
+msgid "Deny all users from I<host>:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:135
+#, no-wrap
+msgid "    -host\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:141
+msgid ""
+"Note: the use of I<-host\\ -user> is never a valid syntax, including "
+"attempting to specify that a particular user from the host is not trusted."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:144
+msgid ""
+"Allow all users with matching local accounts on all hosts in a I<netgroup>:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:146
+#, no-wrap
+msgid "    +@netgroup\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:149
+msgid "Disallow all users on all hosts in a I<netgroup>:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:151
+#, no-wrap
+msgid "    -@netgroup\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:157
+msgid ""
+"Allow all users in a I<netgroup> to log in from I<host> as any non-root user:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:159
+#, no-wrap
+msgid "    host +@netgroup\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:164
+msgid ""
+"Allow all users with matching local accounts on all hosts in a I<netgroup> "
+"except I<baduser>:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:167
+#, no-wrap
+msgid ""
+"    +@netgroup -baduser\n"
+"    +@netgroup\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:170
+msgid ""
+"Note: the deny statements must always precede the allow statements because "
+"the file is processed sequentially until the first matching rule is found."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man5/hosts.equiv.5:173
+msgid "B<rhosts>(5), B<rlogind>(8), B<rshd>(8)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/hash.3:36
+#, no-wrap
+msgid "HASH"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hash.3:40
+msgid "hash - hash database access method"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hash.3:45
+#, no-wrap
+msgid ""
+"B<#include E<lt>sys/types.hE<gt>\n"
+"#include E<lt>db.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hash.3:54
+msgid ""
+"I<Note well>: This page documents interfaces provided in glibc up until "
+"version 2.1.  Since version 2.2, glibc no longer provides these interfaces.  "
+"Probably, you are looking for the APIs provided by the I<libdb> library "
+"instead."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hash.3:62
+msgid ""
+"The routine B<dbopen>(3)  is the library interface to database files.  One "
+"of the supported file formats is hash files.  The general description of the "
+"database access methods is in B<dbopen>(3), this manual page describes only "
+"the hash-specific information."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hash.3:64
+msgid "The hash data structure is an extensible, dynamic hashing scheme."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hash.3:70
+msgid ""
+"The access-method-specific data structure provided to B<dbopen>(3)  is "
+"defined in the I<E<lt>db.hE<gt>> include file as follows:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hash.3:81
+#, no-wrap
+msgid ""
+"typedef struct {\n"
+"    unsigned int       bsize;\n"
+"    unsigned int       ffactor;\n"
+"    unsigned int       nelem;\n"
+"    unsigned int       cachesize;\n"
+"    uint32_t         (*hash)(const void *, size_t);\n"
+"    int         lorder;\n"
+"} HASHINFO;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hash.3:85
+msgid "The elements of this structure are as follows:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/hash.3:85
+#, no-wrap
+msgid "I<bsize>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hash.3:90
+msgid ""
+"defines the hash table bucket size, and is, by default, 256 bytes.  It may "
+"be preferable to increase the page size for disk-resident tables and tables "
+"with large data items."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/hash.3:90
+#, no-wrap
+msgid "I<ffactor>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hash.3:96
+msgid ""
+"indicates a desired density within the hash table.  It is an approximation "
+"of the number of keys allowed to accumulate in any one bucket, determining "
+"when the hash table grows or shrinks.  The default value is 8."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/hash.3:96
+#, no-wrap
+msgid "I<nelem>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hash.3:102
+msgid ""
+"is an estimate of the final size of the hash table.  If not set or set too "
+"low, hash tables will expand gracefully as keys are entered, although a "
+"slight performance degradation may be noticed.  The default value is 1."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/hash.3:102
+#, no-wrap
+msgid "I<cachesize>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hash.3:108
+msgid ""
+"is the suggested maximum size, in bytes, of the memory cache.  This value is "
+"I<only advisory>, and the access method will allocate more memory rather "
+"than fail."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/hash.3:108
+#, no-wrap
+msgid "I<hash>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hash.3:117
+msgid ""
+"is a user-defined hash function.  Since no hash function performs equally "
+"well on all possible data, the user may find that the built-in hash function "
+"does poorly on a particular data set.  A user-specified hash functions must "
+"take two arguments (a pointer to a byte string and a length) and return a 32-"
+"bit quantity to be used as the hash value."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/hash.3:117
+#, no-wrap
+msgid "I<lorder>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hash.3:127
+msgid ""
+"is the byte order for integers in the stored database metadata.  The number "
+"should represent the order as an integer; for example, big endian order "
+"would be the number 4,321.  If I<lorder> is 0 (no order is specified), the "
+"current host order is used.  If the file already exists, the specified value "
+"is ignored and the value specified when the tree was created is used."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hash.3:139
+msgid ""
+"If the file already exists (and the B<O_TRUNC> flag is not specified), the "
+"values specified for I<bsize>, I<ffactor>, I<lorder>, and I<nelem> are "
+"ignored and the values specified when the tree was created are used."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hash.3:144
+msgid ""
+"If a hash function is specified, I<hash_open> attempts to determine if the "
+"hash function specified is the same as the one with which the database was "
+"created, and fails if it is not."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hash.3:151
+msgid ""
+"Backward-compatible interfaces to the routines described in B<dbm>(3), and "
+"B<ndbm>(3)  are provided, however these interfaces are not compatible with "
+"previous file formats."
+msgstr ""
+
+#. type: SH
+#: man-pages/man3/hash.3:151
+#, no-wrap
+msgid "ERRORS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hash.3:158
+msgid ""
+"The I<hash> access method routines may fail and set I<errno> for any of the "
+"errors specified for the library routine B<dbopen>(3)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hash.3:160
+msgid "Only big and little endian byte order are supported."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hash.3:165
+msgid "B<btree>(3), B<dbopen>(3), B<mpool>(3), B<recno>(3)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hash.3:168
+msgid ""
+"I<Dynamic Hash Tables>, Per-Ake Larson, Communications of the ACM, April "
+"1988."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hash.3:170
+msgid ""
+"I<A New Hash Package for UNIX>, Margo Seltzer, USENIX Proceedings, Winter "
+"1991."
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/hypot.3:33
+#, no-wrap
+msgid "HYPOT"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hypot.3:36
+msgid "hypot, hypotf, hypotl - Euclidean distance function"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hypot.3:39
+#, no-wrap
+msgid "B<#include E<lt>math.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hypot.3:43
+#, no-wrap
+msgid ""
+"B<double hypot(double >I<x>B<, double >I<y>B<);>\n"
+"B<float hypotf(float >I<x>B<, float >I<y>B<);>\n"
+"B<long double hypotl(long double >I<x>B<, long double >I<y>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hypot.3:46
+msgid "Link with I<-lm>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hypot.3:50
+msgid ""
+"Feature Test Macro Requirements for glibc (see B<feature_test_macros>(7)):"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hypot.3:54
+msgid "B<hypot>():"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hypot.3:59
+#, no-wrap
+msgid ""
+"_ISOC99_SOURCE || _POSIX_C_SOURCE\\ E<gt>=\\ 200112L\n"
+"    || _XOPEN_SOURCE\n"
+"    || /* Since glibc 2.19: */ _DEFAULT_SOURCE\n"
+"    || /* Glibc versions E<lt>= 2.19: */ _BSD_SOURCE || _SVID_SOURCE\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hypot.3:63
+msgid "B<hypotf>(), B<hypotl>():"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hypot.3:67
+#, no-wrap
+msgid ""
+"_ISOC99_SOURCE || _POSIX_C_SOURCE\\ E<gt>=\\ 200112L\n"
+"    || /* Since glibc 2.19: */ _DEFAULT_SOURCE\n"
+"    || /* Glibc versions E<lt>= 2.19: */ _BSD_SOURCE || _SVID_SOURCE\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hypot.3:80
+msgid ""
+"These functions return sqrt(I<x>*I<x>+I<y>*I<y>).  This is the length of the "
+"hypotenuse of a right-angled triangle with sides of length I<x> and I<y>, or "
+"the distance of the point (I<x>,I<y>)  from the origin."
+msgstr ""
+
+#.  e.g., hypot(DBL_MIN, DBL_MIN) does the right thing, as does, say
+#.  hypot(DBL_MAX/2.0, DBL_MAX/2.0).
+#. type: Plain text
+#: man-pages/man3/hypot.3:85
+msgid ""
+"The calculation is performed without undue overflow or underflow during the "
+"intermediate steps of the calculation."
+msgstr ""
+
+#. type: SH
+#: man-pages/man3/hypot.3:85
+#, no-wrap
+msgid "RETURN VALUE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hypot.3:91
+msgid ""
+"On success, these functions return the length of a right-angled triangle "
+"with sides of length I<x> and I<y>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hypot.3:98
+msgid "If I<x> or I<y> is an infinity, positive infinity is returned."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hypot.3:106
+msgid ""
+"If I<x> or I<y> is a NaN, and the other argument is not an infinity, a NaN "
+"is returned."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hypot.3:115
+msgid ""
+"If the result overflows, a range error occurs, and the functions return "
+"B<HUGE_VAL>, B<HUGE_VALF>, or B<HUGE_VALL>, respectively."
+msgstr ""
+
+#.  Actually, could the result not be subnormal if both arguments
+#.  are subnormal?  I think not -- mtk, Jul 2008
+#. type: Plain text
+#: man-pages/man3/hypot.3:121
+msgid ""
+"If both arguments are subnormal, and the result is subnormal, a range error "
+"occurs, and the correct result is returned."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hypot.3:126
+msgid ""
+"See B<math_error>(7)  for information on how to determine whether an error "
+"has occurred when calling these functions."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hypot.3:128
+msgid "The following errors can occur:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/hypot.3:128
+#, no-wrap
+msgid "Range error: result overflow"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hypot.3:136
+msgid ""
+"I<errno> is set to B<ERANGE>.  An overflow floating-point exception "
+"(B<FE_OVERFLOW>)  is raised."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/hypot.3:136
+#, no-wrap
+msgid "Range error: result underflow"
+msgstr ""
+
+#.  .I errno
+#.  is set to
+#.  .BR ERANGE .
+#. type: Plain text
+#: man-pages/man3/hypot.3:144
+msgid "An underflow floating-point exception (B<FE_UNDERFLOW>)  is raised."
+msgstr ""
+
+#.  FIXME . Is it intentional that these functions do not set errno?
+#.  They do set errno for the overflow case.
+#.  Bug raised: http://sources.redhat.com/bugzilla/show_bug.cgi?id=6795
+#. type: Plain text
+#: man-pages/man3/hypot.3:151
+msgid "These functions do not set I<errno> for this case."
+msgstr ""
+
+#. type: SH
+#: man-pages/man3/hypot.3:151
+#, no-wrap
+msgid "ATTRIBUTES"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hypot.3:154
+msgid ""
+"For an explanation of the terms used in this section, see B<attributes>(7)."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/hypot.3:158
+#, no-wrap
+msgid "Interface"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/hypot.3:158
+#, no-wrap
+msgid "Attribute"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/hypot.3:158
+#, no-wrap
+msgid "Value"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/hypot.3:163
+#, no-wrap
+msgid ""
+"B<hypot>(),\n"
+"B<hypotf>(),\n"
+"B<hypotl>()"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/hypot.3:163
+#, no-wrap
+msgid "Thread safety"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/hypot.3:163
+#, no-wrap
+msgid "MT-Safe"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hypot.3:168
+msgid "C99, POSIX.1-2001, POSIX.1-2008."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hypot.3:173
+msgid "The variant returning I<double> also conforms to SVr4, 4.3BSD."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hypot.3:175
+msgid "B<cabs>(3), B<sqrt>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/hsearch.3:35
+#, no-wrap
+msgid "HSEARCH"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/hsearch.3:35
+#, no-wrap
+msgid "GNU"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:39
+msgid ""
+"hcreate, hdestroy, hsearch, hcreate_r, hdestroy_r, hsearch_r - hash table "
+"management"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:42
+#, no-wrap
+msgid "B<#include E<lt>search.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:44
+#, no-wrap
+msgid "B<int hcreate(size_t >I<nel>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:46
+#, no-wrap
+msgid "B<ENTRY *hsearch(ENTRY >I<item>B<, ACTION >I<action>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:48
+#, no-wrap
+msgid "B<void hdestroy(void);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:51
+#, no-wrap
+msgid ""
+"B<#define _GNU_SOURCE>         /* See feature_test_macros(7) */\n"
+"B<#include E<lt>search.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:53
+#, no-wrap
+msgid "B<int hcreate_r(size_t >I<nel>B<, struct hsearch_data *>I<htab>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:56
+#, no-wrap
+msgid ""
+"B<int hsearch_r(ENTRY >I<item>B<, ACTION >I<action>B<, ENTRY **>I<retval>B<,>\n"
+"B<              struct hsearch_data *>I<htab>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:58
+#, no-wrap
+msgid "B<void hdestroy_r(struct hsearch_data *>I<htab>B<);>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:68
+msgid ""
+"The three functions B<hcreate>(), B<hsearch>(), and B<hdestroy>()  allow the "
+"caller to create and manage a hash search table containing entries "
+"consisting of a key (a string) and associated data.  Using these functions, "
+"only one hash table can be used at a time."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:82
+msgid ""
+"The three functions B<hcreate_r>(), B<hsearch_r>(), B<hdestroy_r>()  are "
+"reentrant versions that allow a program to use more than one hash search "
+"table at the same time.  The last argument, I<htab>, points to a structure "
+"that describes the table on which the function is to operate.  The "
+"programmer should treat this structure as opaque (i.e., do not attempt to "
+"directly access or modify the fields in this structure)."
+msgstr ""
+
+#.  e.g., in glibc it is raised to the next higher prime number
+#. type: Plain text
+#: man-pages/man3/hsearch.3:91
+msgid ""
+"First a hash table must be created using B<hcreate>().  The argument I<nel> "
+"specifies the maximum number of entries in the table.  (This maximum cannot "
+"be changed later, so choose it wisely.)  The implementation may adjust this "
+"value upward to improve the performance of the resulting hash table."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:102
+msgid ""
+"The B<hcreate_r>()  function performs the same task as B<hcreate>(), but for "
+"the table described by the structure I<*htab>.  The structure pointed to by "
+"I<htab> must be zeroed before the first call to B<hcreate_r>()."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:117
+msgid ""
+"The function B<hdestroy>()  frees the memory occupied by the hash table that "
+"was created by B<hcreate>().  After calling B<hdestroy>(), a new hash table "
+"can be created using B<hcreate>().  The B<hdestroy_r>()  function performs "
+"the analogous task for a hash table described by I<*htab>, which was "
+"previously created using B<hcreate_r>()."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:124
+msgid ""
+"The B<hsearch>()  function searches the hash table for an item with the same "
+"key as I<item> (where \"the same\" is determined using B<strcmp>(3)), and if "
+"successful returns a pointer to it."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:127
+msgid ""
+"The argument I<item> is of type I<ENTRY>, which is defined in I<E<lt>search."
+"hE<gt>> as follows:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:134
+#, no-wrap
+msgid ""
+"typedef struct entry {\n"
+"    char *key;\n"
+"    void *data;\n"
+"} ENTRY;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:140
+msgid ""
+"The field I<key> points to a null-terminated string which is the search "
+"key.  The field I<data> points to data that is associated with that key."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:159
+msgid ""
+"The argument I<action> determines what B<hsearch>()  does after an "
+"unsuccessful search.  This argument must either have the value B<ENTER>, "
+"meaning insert a copy of I<item> (and return a pointer to the new hash table "
+"entry as the function result), or the value B<FIND>, meaning that NULL "
+"should be returned.  (If I<action> is B<FIND>, then I<data> is ignored.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:173
+msgid ""
+"The B<hsearch_r>()  function is like B<hsearch>()  but operates on the hash "
+"table described by I<*htab>.  The B<hsearch_r>()  function differs from "
+"B<hsearch>()  in that a pointer to the found item is returned in I<*retval>, "
+"rather than as the function result."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:181
+msgid ""
+"B<hcreate>()  and B<hcreate_r>()  return nonzero on success.  They return 0 "
+"on error, with I<errno> set to indicate the cause of the error."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:195
+msgid ""
+"On success, B<hsearch>()  returns a pointer to an entry in the hash table.  "
+"B<hsearch>()  returns NULL on error, that is, if I<action> is B<ENTER> and "
+"the hash table is full, or I<action> is B<FIND> and I<item> cannot be found "
+"in the hash table.  B<hsearch_r>()  returns nonzero on success, and 0 on "
+"error.  In the event of an error, these two functions set I<errno> to "
+"indicate the cause of the error."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:201
+msgid ""
+"B<hcreate_r>()  and B<hdestroy_r>()  can fail for the following reasons:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/hsearch.3:201
+#, no-wrap
+msgid "B<EINVAL>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:205
+msgid "I<htab> is NULL."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:210
+msgid "B<hsearch>()  and B<hsearch_r>()  can fail for the following reasons:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/hsearch.3:210
+#, no-wrap
+msgid "B<ENOMEM>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:218
+msgid ""
+"I<action> was B<ENTER>, I<key> was not found in the table, and there was no "
+"room in the table to add a new entry."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/hsearch.3:218
+#, no-wrap
+msgid "B<ESRCH>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:226
+msgid "I<action> was B<FIND>, and I<key> was not found in the table."
+msgstr ""
+
+#.  PROX.1-2001, POSIX.1-2008
+#. type: Plain text
+#: man-pages/man3/hsearch.3:231
+msgid "POSIX.1 specifies only the B<ENOMEM> error."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/hsearch.3:242
+#, no-wrap
+msgid ""
+"B<hcreate>(),\n"
+"B<hsearch>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/hsearch.3:242 man-pages/man3/hsearch.3:248
+#, no-wrap
+msgid ".br\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/hsearch.3:244
+#, no-wrap
+msgid "B<hdestroy>()"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/hsearch.3:244
+#, no-wrap
+msgid "MT-Unsafe race:hsearch"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/hsearch.3:248
+#, no-wrap
+msgid ""
+"B<hcreate_r>(),\n"
+"B<hsearch_r>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/hsearch.3:250
+#, no-wrap
+msgid "B<hdestroy_r>()"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/hsearch.3:250
+#, no-wrap
+msgid "MT-Safe race:htab"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:259
+msgid ""
+"The functions B<hcreate>(), B<hsearch>(), and B<hdestroy>()  are from SVr4, "
+"and are described in POSIX.1-2001 and POSIX.1-2008."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:266
+msgid ""
+"The functions B<hcreate_r>(), B<hsearch_r>(), and B<hdestroy_r>()  are GNU "
+"extensions."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:273
+msgid ""
+"Hash table implementations are usually more efficient when the table "
+"contains enough free space to minimize collisions.  Typically, this means "
+"that I<nel> should be at least 25% larger than the maximum number of "
+"elements that the caller expects to store in the table."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:291
+msgid ""
+"The B<hdestroy>()  and B<hdestroy_r>()  functions do not free the buffers "
+"pointed to by the I<key> and I<data> elements of the hash table entries.  "
+"(It can't do this because it doesn't know whether these buffers were "
+"allocated dynamically.)  If these buffers need to be freed (perhaps because "
+"the program is repeatedly creating and destroying hash tables, rather than "
+"creating a single table whose lifetime matches that of the program), then "
+"the program must maintain bookkeeping data structures that allow it to free "
+"them."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:298
+msgid ""
+"SVr4 and POSIX.1-2001 specify that I<action> is significant only for "
+"unsuccessful searches, so that an B<ENTER> should not do anything for a "
+"successful search.  In libc and glibc (before version 2.3), the "
+"implementation violates the specification, updating the I<data> for the "
+"given I<key> in this case."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:300
+msgid "Individual hash table entries can be added, but not deleted."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:304
+msgid ""
+"The following program inserts 24 items into a hash table, then prints some "
+"of them."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:309
+#, no-wrap
+msgid ""
+"#include E<lt>stdio.hE<gt>\n"
+"#include E<lt>stdlib.hE<gt>\n"
+"#include E<lt>search.hE<gt>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:316
+#, no-wrap
+msgid ""
+"static char *data[] = { \"alpha\", \"bravo\", \"charlie\", \"delta\",\n"
+"     \"echo\", \"foxtrot\", \"golf\", \"hotel\", \"india\", \"juliet\",\n"
+"     \"kilo\", \"lima\", \"mike\", \"november\", \"oscar\", \"papa\",\n"
+"     \"quebec\", \"romeo\", \"sierra\", \"tango\", \"uniform\",\n"
+"     \"victor\", \"whisky\", \"x-ray\", \"yankee\", \"zulu\"\n"
+"};\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:322
+#, no-wrap
+msgid ""
+"int\n"
+"main(void)\n"
+"{\n"
+"    ENTRY e, *ep;\n"
+"    int i;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:324
+#, no-wrap
+msgid "    hcreate(30);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:337
+#, no-wrap
+msgid ""
+"    for (i = 0; i E<lt> 24; i++) {\n"
+"        e.key = data[i];\n"
+"        /* data is just an integer, instead of a\n"
+"           pointer to something */\n"
+"        e.data = (void *) i;\n"
+"        ep = hsearch(e, ENTER);\n"
+"        /* there should be no failures */\n"
+"        if (ep == NULL) {\n"
+"            fprintf(stderr, \"entry failed\\en\");\n"
+"            exit(EXIT_FAILURE);\n"
+"        }\n"
+"    }\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:349
+#, no-wrap
+msgid ""
+"    for (i = 22; i E<lt> 26; i++) {\n"
+"        /* print two entries from the table, and\n"
+"           show that two are not in the table */\n"
+"        e.key = data[i];\n"
+"        ep = hsearch(e, FIND);\n"
+"        printf(\"%9.9s -E<gt> %9.9s:%d\\en\", e.key,\n"
+"               ep ? ep-E<gt>key : \"NULL\", ep ? (int)(ep-E<gt>data) : 0);\n"
+"    }\n"
+"    hdestroy();\n"
+"    exit(EXIT_SUCCESS);\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/hsearch.3:354
+msgid "B<bsearch>(3), B<lsearch>(3), B<malloc>(3), B<tsearch>(3)"
+msgstr ""

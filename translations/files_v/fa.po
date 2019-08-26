@@ -1,0 +1,2438 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: translation of man-pages\n"
+"POT-Creation-Date: 2019-04-01 18:52+0300\n"
+"PO-Revision-Date: 2019-04-02 15:56+0000\n"
+"Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
+"Language-Team: Persian (http://www.transifex.com/kruvalig/man-pages/language/fa/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fa\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. type: TH
+#: man-pages/man4/vcs.4:29
+#, no-wrap
+msgid "VCS"
+msgstr ""
+
+#. type: TH
+#: man-pages/man4/vcs.4:29
+#, no-wrap
+msgid "2019-03-06"
+msgstr ""
+
+#. type: TH
+#: man-pages/man4/vcs.4:29
+#, no-wrap
+msgid "Linux"
+msgstr ""
+
+#. type: TH
+#: man-pages/man4/vcs.4:29
+#, no-wrap
+msgid "Linux Programmer's Manual"
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/vcs.4:30
+#, no-wrap
+msgid "NAME"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/vcs.4:32
+msgid "vcs, vcsa - virtual console memory"
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/vcs.4:32
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/vcs.4:38
+msgid ""
+"I</dev/vcs0> is a character device with major number 7 and minor number 0, "
+"usually with mode 0644 and ownership root:tty.  It refers to the memory of "
+"the currently displayed virtual console terminal."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/vcs.4:58
+msgid ""
+"I</dev/vcs[1-63]> are character devices for virtual console terminals, they "
+"have major number 7 and minor number 1 to 63, usually mode 0644 and "
+"ownership root:tty.  I</dev/vcsa[0-63]> are the same, but using I<unsigned "
+"short>s (in host byte order) that include attributes, and prefixed with four"
+" bytes giving the screen dimensions and cursor position: I<lines>, "
+"I<columns>, I<x>, I<y>.  (I<x> = I<y> = 0 at the top left corner of the "
+"screen.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/vcs.4:72
+msgid ""
+"When a 512-character font is loaded, the 9th bit position can be fetched by "
+"applying the B<ioctl>(2)  B<VT_GETHIFONTMASK> operation (available in Linux "
+"kernels 2.6.18 and above)  on I</dev/tty[1-63]>; the value is returned in "
+"the I<unsigned short> pointed to by the third B<ioctl>(2)  argument."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/vcs.4:79
+msgid ""
+"These devices replace the screendump B<ioctl>(2)  operations of "
+"B<ioctl_console>(2), so the system administrator can control access using "
+"filesystem permissions."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/vcs.4:81
+msgid "The devices for the first eight virtual consoles may be created by:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/vcs.4:89
+#, no-wrap
+msgid ""
+"for x in 0 1 2 3 4 5 6 7 8; do\n"
+"    mknod -m 644 /dev/vcs$x c 7 $x;\n"
+"    mknod -m 644 /dev/vcsa$x c 7 $[$x+128];\n"
+"done\n"
+"chown root:tty /dev/vcs*\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/vcs.4:95
+msgid "No B<ioctl>(2)  requests are supported."
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/vcs.4:95
+#, no-wrap
+msgid "FILES"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/vcs.4:97
+msgid "I</dev/vcs[0-63]>"
+msgstr ""
+
+#.  .SH AUTHOR
+#.  Andries Brouwer <aeb@cwi.nl>
+#. type: Plain text
+#: man-pages/man4/vcs.4:101
+msgid "I</dev/vcsa[0-63]>"
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/vcs.4:101
+#, no-wrap
+msgid "VERSIONS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/vcs.4:103
+msgid "Introduced with version 1.1.92 of the Linux kernel."
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/vcs.4:103
+#, no-wrap
+msgid "EXAMPLE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/vcs.4:105
+msgid "You may do a screendump on vt3 by switching to vt1 and typing"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/vcs.4:109
+#, no-wrap
+msgid "cat /dev/vcs3 E<gt>foo\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/vcs.4:115
+msgid ""
+"Note that the output does not contain newline characters, so some processing"
+" may be required, like in"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/vcs.4:119
+#, no-wrap
+msgid "fold -w 81 /dev/vcs3 | lpr\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/vcs.4:123
+msgid "or (horrors)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/vcs.4:127
+#, no-wrap
+msgid "setterm -dump 3 -file /proc/self/fd/1\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/vcs.4:133
+msgid "The I</dev/vcsa0> device is used for Braille support."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/vcs.4:137
+msgid ""
+"This program displays the character and screen attributes under the cursor "
+"of the second virtual console, then changes the background color there:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/vcs.4:145
+#, no-wrap
+msgid ""
+"#include E<lt>unistd.hE<gt>\n"
+"#include E<lt>stdlib.hE<gt>\n"
+"#include E<lt>stdio.hE<gt>\n"
+"#include E<lt>fcntl.hE<gt>\n"
+"#include E<lt>sys/ioctl.hE<gt>\n"
+"#include E<lt>linux/vt.hE<gt>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/vcs.4:157
+#, no-wrap
+msgid ""
+"int\n"
+"main(void)\n"
+"{\n"
+"    int fd;\n"
+"    char *device = \"/dev/vcsa2\";\n"
+"    char *console = \"/dev/tty2\";\n"
+"    struct {unsigned char lines, cols, x, y;} scrn;\n"
+"    unsigned short s;\n"
+"    unsigned short mask;\n"
+"    unsigned char attrib;\n"
+"    int ch;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/vcs.4:186
+#, no-wrap
+msgid ""
+"    fd = open(console, O_RDWR);\n"
+"    if (fd E<lt> 0) {\n"
+"        perror(console);\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
+"    if (ioctl(fd, VT_GETHIFONTMASK, &mask) E<lt> 0) {\n"
+"        perror(\"VT_GETHIFONTMASK\");\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
+"    (void) close(fd);\n"
+"    fd = open(device, O_RDWR);\n"
+"    if (fd E<lt> 0) {\n"
+"        perror(device);\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
+"    (void) read(fd, &scrn, 4);\n"
+"    (void) lseek(fd, 4 + 2*(scrn.y*scrn.cols + scrn.x), SEEK_SET);\n"
+"    (void) read(fd, &s, 2);\n"
+"    ch = s & 0xff;\n"
+"    if (s & mask)\n"
+"        ch |= 0x100;\n"
+"    attrib = ((s & ~mask) E<gt>E<gt> 8);\n"
+"    printf(\"ch=0x%03x attrib=0x%02x\\en\", ch, attrib);\n"
+"    s ^= 0x1000;\n"
+"    (void) lseek(fd, -2, SEEK_CUR);\n"
+"    (void) write(fd, &s, 2);\n"
+"    exit(EXIT_SUCCESS);\n"
+"}\n"
+msgstr ""
+
+#. type: SH
+#: man-pages/man4/vcs.4:187
+#, no-wrap
+msgid "SEE ALSO"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/vcs.4:191
+msgid "B<ioctl_console>(2), B<tty>(4), B<ttyS>(4), B<gpm>(8)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man4/veth.4:28
+#, no-wrap
+msgid "veth"
+msgstr ""
+
+#. type: TH
+#: man-pages/man4/veth.4:28
+#, no-wrap
+msgid "2018-02-02"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/veth.4:31
+msgid "veth - Virtual Ethernet Device"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/veth.4:38
+msgid ""
+"The B<veth> devices are virtual Ethernet devices.  They can act as tunnels "
+"between network namespaces to create a bridge to a physical network device "
+"in another namespace, but can also be used as standalone network devices."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/veth.4:42
+msgid ""
+"B<veth> devices are always created in interconnected pairs.  A pair can be "
+"created using the command:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/veth.4:46
+#, no-wrap
+msgid "# ip link add E<lt>p1-nameE<gt> type veth peer name E<lt>p2-nameE<gt>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/veth.4:54
+msgid ""
+"In the above, I<p1-name> and I<p2-name> are the names assigned to the two "
+"connected end points."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/veth.4:58
+msgid ""
+"Packets transmitted on one device in the pair are immediately received on "
+"the other device.  When either devices is down the link state of the pair is"
+" down."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/veth.4:69
+msgid ""
+"B<veth> device pairs are useful for combining the network facilities of the "
+"kernel together in interesting ways.  A particularly interesting use case is"
+" to place one end of a B<veth> pair in one network namespace and the other "
+"end in another network namespace, thus allowing communication between "
+"network namespaces.  To do this, one first creates the B<veth> device as "
+"above and then moves one side of the pair to the other namespace:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/veth.4:73
+#, no-wrap
+msgid "# ip link set E<lt>p2-nameE<gt> netns E<lt>p2-namespaceE<gt>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/veth.4:80
+msgid ""
+"B<ethtool>(8)  can be used to find the peer of a B<veth> network interface, "
+"using commands something like:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/veth.4:89
+#, no-wrap
+msgid ""
+"# B<ip link add ve_A type veth peer name ve_B>   # Create veth pair\n"
+"# B<ethtool -S ve_A>         # Discover interface index of peer\n"
+"NIC statistics:\n"
+"     peer_ifindex: 16\n"
+"# B<ip link | grep '^16:'>   # Look up interface\n"
+"16: ve_B@ve_A: E<lt>BROADCAST,MULTICAST,M-DOWNE<gt> mtu 1500 qdisc ...\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man4/veth.4:97
+msgid ""
+"B<clone>(2), B<network_namespaces>(7), B<ip>(8), B<ip-link>(8), B<ip-"
+"netns>(8)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/vdso.7:13
+#, no-wrap
+msgid "VDSO"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/vdso.7:13
+#, no-wrap
+msgid "2018-04-30"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:16
+msgid "vdso - overview of the virtual ELF dynamic shared object"
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/vdso.7:16
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:18
+msgid "B<#include E<lt>sys/auxv.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:20
+msgid "B<void *vdso = (uintptr_t) getauxval(AT_SYSINFO_EHDR);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:29
+msgid ""
+"The \"vDSO\" (virtual dynamic shared object) is a small shared library that "
+"the kernel automatically maps into the address space of all user-space "
+"applications.  Applications usually do not need to concern themselves with "
+"these details as the vDSO is most commonly called by the C library.  This "
+"way you can code in the normal way using standard functions and the C "
+"library will take care of using any functionality that is available via the "
+"vDSO."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:37
+msgid ""
+"Why does the vDSO exist at all? There are some system calls the kernel "
+"provides that user-space code ends up using frequently, to the point that "
+"such calls can dominate overall performance.  This is due both to the "
+"frequency of the call as well as the context-switch overhead that results "
+"from exiting user space and entering the kernel."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:42
+msgid ""
+"The rest of this documentation is geared toward the curious and/or C library"
+" writers rather than general developers.  If you're trying to call the vDSO "
+"in your own application rather than using the C library, you're most likely "
+"doing it wrong."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vdso.7:42
+#, no-wrap
+msgid "Example background"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:56
+msgid ""
+"Making system calls can be slow.  In x86 32-bit systems, you can trigger a "
+"software interrupt (I<int $0x80>)  to tell the kernel you wish to make a "
+"system call.  However, this instruction is expensive: it goes through the "
+"full interrupt-handling paths in the processor's microcode as well as in the"
+" kernel.  Newer processors have faster (but backward incompatible) "
+"instructions to initiate system calls.  Rather than require the C library to"
+" figure out if this functionality is available at run time, the C library "
+"can use functions provided by the kernel in the vDSO."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:63
+msgid ""
+"Note that the terminology can be confusing.  On x86 systems, the vDSO "
+"function used to determine the preferred method of making a system call is "
+"named \"__kernel_vsyscall\", but on x86-64, the term \"vsyscall\" also "
+"refers to an obsolete way to ask the kernel what time it is or what CPU the "
+"caller is on."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:79
+msgid ""
+"One frequently used system call is B<gettimeofday>(2).  This system call is "
+"called both directly by user-space applications as well as indirectly by the"
+" C library.  Think timestamps or timing loops or polling\\(emall of these "
+"frequently need to know what time it is right now.  This information is also"
+" not secret\\(emany application in any privilege mode (root or any "
+"unprivileged user) will get the same answer.  Thus the kernel arranges for "
+"the information required to answer this question to be placed in memory the "
+"process can access.  Now a call to B<gettimeofday>(2)  changes from a system"
+" call to a normal function call and a few memory accesses."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vdso.7:79
+#, no-wrap
+msgid "Finding the vDSO"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:86
+msgid ""
+"The base address of the vDSO (if one exists) is passed by the kernel to each"
+" program in the initial auxiliary vector (see B<getauxval>(3)), via the "
+"B<AT_SYSINFO_EHDR> tag."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:95
+msgid ""
+"You must not assume the vDSO is mapped at any particular location in the "
+"user's memory map.  The base address will usually be randomized at run time "
+"every time a new process image is created (at B<execve>(2)  time).  This is "
+"done for security reasons, to prevent \"return-to-libc\" attacks."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:104
+msgid ""
+"For some architectures, there is also an B<AT_SYSINFO> tag.  This is used "
+"only for locating the vsyscall entry point and is frequently omitted or set "
+"to 0 (meaning it's not available).  This tag is a throwback to the initial "
+"vDSO work (see I<History> below) and its use should be avoided."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vdso.7:104
+#, no-wrap
+msgid "File format"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:111
+msgid ""
+"Since the vDSO is a fully formed ELF image, you can do symbol lookups on it."
+"  This allows new symbols to be added with newer kernel releases, and allows"
+" the C library to detect available functionality at run time when running "
+"under different kernel versions.  Oftentimes the C library will do detection"
+" with the first call and then cache the result for subsequent calls."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:120
+msgid ""
+"All symbols are also versioned (using the GNU version format).  This allows "
+"the kernel to update the function signature without breaking backward "
+"compatibility.  This means changing the arguments that the function accepts "
+"as well as the return value.  Thus, when looking up a symbol in the vDSO, "
+"you must always include the version to match the ABI you expect."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:125
+msgid ""
+"Typically the vDSO follows the naming convention of prefixing all symbols "
+"with \"__vdso_\" or \"__kernel_\" so as to distinguish them from other "
+"standard symbols.  For example, the \"gettimeofday\" function is named "
+"\"__vdso_gettimeofday\"."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:129
+msgid ""
+"You use the standard C calling conventions when calling any of these "
+"functions.  No need to worry about weird register or stack behavior."
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/vdso.7:129
+#, no-wrap
+msgid "NOTES"
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vdso.7:130
+#, no-wrap
+msgid "Source"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:134
+msgid ""
+"When you compile the kernel, it will automatically compile and link the vDSO"
+" code for you.  You will frequently find it under the architecture-specific "
+"directory:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:137
+#, no-wrap
+msgid "    find arch/$ARCH/ -name \\(aq*vdso*.so*\\(aq -o -name \\(aq*gate*.so*\\(aq\n"
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vdso.7:137
+#, no-wrap
+msgid "vDSO names"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:143
+msgid ""
+"The name of the vDSO varies across architectures.  It will often show up in "
+"things like glibc's B<ldd>(1)  output.  The exact name should not matter to "
+"any code, so do not hardcode it."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:146 man-pages/man7/vdso.7:195
+#: man-pages/man7/vdso.7:224 man-pages/man7/vdso.7:261
+#: man-pages/man7/vdso.7:279 man-pages/man7/vdso.7:307
+#: man-pages/man7/vdso.7:343 man-pages/man7/vdso.7:365
+#: man-pages/man7/vdso.7:404 man-pages/man7/vdso.7:442
+#: man-pages/man7/vdso.7:460 man-pages/man7/vdso.7:478
+#: man-pages/man7/vdso.7:496 man-pages/man7/vdso.7:521
+#: man-pages/man7/vdso.7:540
+msgid "CW<\\}>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:148
+#, no-wrap
+msgid "CW<user ABI>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:148
+#, no-wrap
+msgid "CW<vDSO name>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:149 man-pages/man7/vdso.7:198
+#: man-pages/man7/vdso.7:227 man-pages/man7/vdso.7:264
+#: man-pages/man7/vdso.7:282 man-pages/man7/vdso.7:310
+#: man-pages/man7/vdso.7:346 man-pages/man7/vdso.7:368
+#: man-pages/man7/vdso.7:407 man-pages/man7/vdso.7:445
+#: man-pages/man7/vdso.7:463 man-pages/man7/vdso.7:481
+#: man-pages/man7/vdso.7:499 man-pages/man7/vdso.7:524
+#: man-pages/man7/vdso.7:543
+#, no-wrap
+msgid "CW<_>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:150
+#, no-wrap
+msgid "CW<aarch64>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:150 man-pages/man7/vdso.7:151
+#: man-pages/man7/vdso.7:153 man-pages/man7/vdso.7:160
+#: man-pages/man7/vdso.7:161
+#, no-wrap
+msgid "CW<linux-vdso.so.1>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:151
+#, no-wrap
+msgid "CW<arm>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:152
+#, no-wrap
+msgid "CW<ia64>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:152 man-pages/man7/vdso.7:158
+#: man-pages/man7/vdso.7:159
+#, no-wrap
+msgid "CW<linux-gate.so.1>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:153
+#, no-wrap
+msgid "CW<mips>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:154
+#, no-wrap
+msgid "CW<ppc/32>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:154 man-pages/man7/vdso.7:156
+#, no-wrap
+msgid "CW<linux-vdso32.so.1>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:155
+#, no-wrap
+msgid "CW<ppc/64>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:155 man-pages/man7/vdso.7:157
+#, no-wrap
+msgid "CW<linux-vdso64.so.1>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:156
+#, no-wrap
+msgid "CW<s390>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:157
+#, no-wrap
+msgid "CW<s390x>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:158
+#, no-wrap
+msgid "CW<sh>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:159
+#, no-wrap
+msgid "CW<i386>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:160
+#, no-wrap
+msgid "CW<x86-64>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:161
+#, no-wrap
+msgid "CW<x86/x32>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:167 man-pages/man7/vdso.7:206
+#: man-pages/man7/vdso.7:237 man-pages/man7/vdso.7:272
+#: man-pages/man7/vdso.7:291 man-pages/man7/vdso.7:322
+#: man-pages/man7/vdso.7:355 man-pages/man7/vdso.7:423
+#: man-pages/man7/vdso.7:454 man-pages/man7/vdso.7:472
+#: man-pages/man7/vdso.7:490 man-pages/man7/vdso.7:513
+#: man-pages/man7/vdso.7:534 man-pages/man7/vdso.7:553
+msgid "\\}"
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vdso.7:167
+#, no-wrap
+msgid "strace(1), seccomp(2), and the vDSO"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:176
+msgid ""
+"When tracing systems calls with B<strace>(1), symbols (system calls) that "
+"are exported by the vDSO will I<not> appear in the trace output.  Those "
+"system calls will likewise not be visible to B<seccomp>(2)  filters."
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/vdso.7:176
+#, no-wrap
+msgid "ARCHITECTURE-SPECIFIC NOTES"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:179
+msgid "The subsections below provide architecture-specific notes on the vDSO."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:188
+msgid ""
+"Note that the vDSO that is used is based on the ABI of your user-space code "
+"and not the ABI of the kernel.  Thus, for example, when you run an i386 "
+"32-bit ELF binary, you'll get the same vDSO regardless of whether you run it"
+" under an i386 32-bit kernel or under an x86-64 64-bit kernel.  Therefore, "
+"the name of the user-space ABI should be used to determine which of the "
+"sections below is relevant."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vdso.7:188
+#, no-wrap
+msgid "ARM functions"
+msgstr ""
+
+#.  See linux/arch/x86/vdso/vdso32.lds.S
+#. type: Plain text
+#: man-pages/man7/vdso.7:192 man-pages/man7/vdso.7:221
+#: man-pages/man7/vdso.7:258 man-pages/man7/vdso.7:276
+#: man-pages/man7/vdso.7:401 man-pages/man7/vdso.7:439
+#: man-pages/man7/vdso.7:457 man-pages/man7/vdso.7:475
+#: man-pages/man7/vdso.7:493 man-pages/man7/vdso.7:537
+msgid "The table below lists the symbols exported by the vDSO."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:197 man-pages/man7/vdso.7:226
+#: man-pages/man7/vdso.7:263 man-pages/man7/vdso.7:281
+#: man-pages/man7/vdso.7:367 man-pages/man7/vdso.7:406
+#: man-pages/man7/vdso.7:444 man-pages/man7/vdso.7:462
+#: man-pages/man7/vdso.7:480 man-pages/man7/vdso.7:498
+#: man-pages/man7/vdso.7:523 man-pages/man7/vdso.7:542
+#, no-wrap
+msgid "CW<symbol>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:197 man-pages/man7/vdso.7:226
+#: man-pages/man7/vdso.7:263 man-pages/man7/vdso.7:281
+#: man-pages/man7/vdso.7:367 man-pages/man7/vdso.7:406
+#: man-pages/man7/vdso.7:444 man-pages/man7/vdso.7:462
+#: man-pages/man7/vdso.7:480 man-pages/man7/vdso.7:498
+#: man-pages/man7/vdso.7:523 man-pages/man7/vdso.7:542
+#, no-wrap
+msgid "CW<version>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:199 man-pages/man7/vdso.7:506
+#: man-pages/man7/vdso.7:527 man-pages/man7/vdso.7:546
+#, no-wrap
+msgid "CW<__vdso_gettimeofday>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:199 man-pages/man7/vdso.7:200
+#, no-wrap
+msgid "CW<LINUX_2.6 (exported since Linux 4.1)>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:200 man-pages/man7/vdso.7:505
+#: man-pages/man7/vdso.7:525 man-pages/man7/vdso.7:544
+#, no-wrap
+msgid "CW<__vdso_clock_gettime>"
+msgstr ""
+
+#.  See linux/arch/arm/kernel/entry-armv.S
+#.  See linux/Documentation/arm/kernel_user_helpers.txt
+#. type: Plain text
+#: man-pages/man7/vdso.7:213
+msgid ""
+"Additionally, the ARM port has a code page full of utility functions.  Since"
+" it's just a raw page of code, there is no ELF information for doing symbol "
+"lookups or versioning.  It does provide support for different versions "
+"though."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:218
+msgid ""
+"For information on this code page, it's best to refer to the kernel "
+"documentation as it's extremely detailed and covers everything you need to "
+"know: I<Documentation/arm/kernel_user_helpers.txt>."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vdso.7:218
+#, no-wrap
+msgid "aarch64 functions"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:228 man-pages/man7/vdso.7:482
+#: man-pages/man7/vdso.7:501
+#, no-wrap
+msgid "CW<__kernel_rt_sigreturn>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:228 man-pages/man7/vdso.7:229
+#: man-pages/man7/vdso.7:230 man-pages/man7/vdso.7:231
+#, no-wrap
+msgid "CW<LINUX_2.6.39>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:229 man-pages/man7/vdso.7:265
+#: man-pages/man7/vdso.7:414 man-pages/man7/vdso.7:448
+#: man-pages/man7/vdso.7:466
+#, no-wrap
+msgid "CW<__kernel_gettimeofday>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:230 man-pages/man7/vdso.7:266
+#: man-pages/man7/vdso.7:370 man-pages/man7/vdso.7:409
+#: man-pages/man7/vdso.7:447 man-pages/man7/vdso.7:465
+#, no-wrap
+msgid "CW<__kernel_clock_gettime>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:231 man-pages/man7/vdso.7:369
+#: man-pages/man7/vdso.7:408 man-pages/man7/vdso.7:446
+#: man-pages/man7/vdso.7:464
+#, no-wrap
+msgid "CW<__kernel_clock_getres>"
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vdso.7:237
+#, no-wrap
+msgid "bfin (Blackfin) functions"
+msgstr ""
+
+#.  See linux/arch/blackfin/kernel/fixed_code.S
+#.  See http://docs.blackfin.uclinux.org/doku.php?id=linux-kernel:fixed-code
+#. type: Plain text
+#: man-pages/man7/vdso.7:249
+msgid ""
+"As this CPU lacks a memory management unit (MMU), it doesn't set up a vDSO "
+"in the normal sense.  Instead, it maps at boot time a few raw functions into"
+" a fixed location in memory.  User-space applications then call directly "
+"into that region.  There is no provision for backward compatibility beyond "
+"sniffing raw opcodes, but as this is an embedded CPU, it can get away with "
+"things\\(emsome of the object formats it runs aren't even ELF based (they're"
+" bFLT/FLAT)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:252
+msgid ""
+"For information on this code page, it's best to refer to the public "
+"documentation:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:254
+msgid "http://docs.blackfin.uclinux.org/doku.php?id=linux-kernel:fixed-code"
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vdso.7:254
+#, no-wrap
+msgid "mips functions"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:265 man-pages/man7/vdso.7:266
+#, no-wrap
+msgid "CW<LINUX_2.6 (exported since Linux 4.4)>"
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vdso.7:272
+#, no-wrap
+msgid "ia64 (Itanium) functions"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:283
+#, no-wrap
+msgid "CW<__kernel_sigtramp>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:283 man-pages/man7/vdso.7:284
+#: man-pages/man7/vdso.7:285 man-pages/man7/vdso.7:500
+#: man-pages/man7/vdso.7:501 man-pages/man7/vdso.7:502
+#, no-wrap
+msgid "CW<LINUX_2.5>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:284
+#, no-wrap
+msgid "CW<__kernel_syscall_via_break>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:285
+#, no-wrap
+msgid "CW<__kernel_syscall_via_epc>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:304
+msgid ""
+"The Itanium port is somewhat tricky.  In addition to the vDSO above, it also"
+" has \"light-weight system calls\" (also known as \"fast syscalls\" or "
+"\"fsys\").  You can invoke these via the I<__kernel_syscall_via_epc> vDSO "
+"helper.  The system calls listed here have the same semantics as if you "
+"called them directly via B<syscall>(2), so refer to the relevant "
+"documentation for each.  The table below lists the functions available via "
+"this mechanism."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:309 man-pages/man7/vdso.7:345
+#, no-wrap
+msgid "CW<function>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:311
+#, no-wrap
+msgid "CW<clock_gettime>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:312
+#, no-wrap
+msgid "CW<getcpu>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:313
+#, no-wrap
+msgid "CW<getpid>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:314
+#, no-wrap
+msgid "CW<getppid>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:315
+#, no-wrap
+msgid "CW<gettimeofday>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:316
+#, no-wrap
+msgid "CW<set_tid_address>"
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vdso.7:322
+#, no-wrap
+msgid "parisc (hppa) functions"
+msgstr ""
+
+#.  See linux/arch/parisc/kernel/syscall.S
+#.  See linux/Documentation/parisc/registers
+#. type: Plain text
+#: man-pages/man7/vdso.7:333
+msgid ""
+"The parisc port has a code page with utility functions called a gateway "
+"page.  Rather than use the normal ELF auxiliary vector approach, it passes "
+"the address of the page to the process via the SR2 register.  The "
+"permissions on the page are such that merely executing those addresses "
+"automatically executes with kernel privileges and not in user space.  This "
+"is done to match the way HP-UX works."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:338
+msgid ""
+"Since it's just a raw page of code, there is no ELF information for doing "
+"symbol lookups or versioning.  Simply call into the appropriate offset via "
+"the branch instruction, for example:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:340
+#, no-wrap
+msgid "    ble E<lt>offsetE<gt>(%sr2, %r0)\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:345
+#, no-wrap
+msgid "CW<offset>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:347
+#, no-wrap
+msgid "CW<00b0>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:347
+#, no-wrap
+msgid "CW<lws_entry (CAS operations)>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:348
+#, no-wrap
+msgid "CW<00e0>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:348
+#, no-wrap
+msgid "CW<set_thread_pointer (used by glibc)>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:349
+#, no-wrap
+msgid "CW<0100>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:349
+#, no-wrap
+msgid "CW<linux_gateway_entry (syscall)>"
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vdso.7:355
+#, no-wrap
+msgid "ppc/32 functions"
+msgstr ""
+
+#.  See linux/arch/powerpc/kernel/vdso32/vdso32.lds.S
+#. type: Plain text
+#: man-pages/man7/vdso.7:362
+msgid ""
+"The table below lists the symbols exported by the vDSO.  The functions "
+"marked with a I<*> are available only when the kernel is a PowerPC64 "
+"(64-bit) kernel."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:369 man-pages/man7/vdso.7:370
+#: man-pages/man7/vdso.7:371 man-pages/man7/vdso.7:372
+#: man-pages/man7/vdso.7:373 man-pages/man7/vdso.7:408
+#: man-pages/man7/vdso.7:409 man-pages/man7/vdso.7:410
+#: man-pages/man7/vdso.7:411 man-pages/man7/vdso.7:412
+#: man-pages/man7/vdso.7:413 man-pages/man7/vdso.7:414
+#: man-pages/man7/vdso.7:415 man-pages/man7/vdso.7:416
+#: man-pages/man7/vdso.7:417
+#, no-wrap
+msgid "CW<LINUX_2.6.15>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:371 man-pages/man7/vdso.7:410
+#, no-wrap
+msgid "CW<__kernel_datapage_offset>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:372 man-pages/man7/vdso.7:411
+#, no-wrap
+msgid "CW<__kernel_get_syscall_map>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:373 man-pages/man7/vdso.7:412
+#, no-wrap
+msgid "CW<__kernel_get_tbfreq>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:374
+#, no-wrap
+msgid "CW<__kernel_getcpu >I<*>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:374 man-pages/man7/vdso.7:375
+#: man-pages/man7/vdso.7:376 man-pages/man7/vdso.7:377
+#: man-pages/man7/vdso.7:378 man-pages/man7/vdso.7:379
+#, no-wrap
+msgid "LINUX_2.6.15"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:375
+#, no-wrap
+msgid "__kernel_gettimeofday"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:376
+#, no-wrap
+msgid "__kernel_sigtramp_rt32"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:377
+#, no-wrap
+msgid "__kernel_sigtramp32"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:378
+#, no-wrap
+msgid "__kernel_sync_dicache"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:379
+#, no-wrap
+msgid "__kernel_sync_dicache_p5"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:385
+msgid "I<\\}>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:398 man-pages/man7/vdso.7:436
+msgid ""
+"The B<CLOCK_REALTIME_COARSE> and B<CLOCK_MONOTONIC_COARSE> clocks are I<not>"
+" supported by the I<__kernel_clock_getres> and I<__kernel_clock_gettime> "
+"interfaces; the kernel falls back to the real system call."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vdso.7:398
+#, no-wrap
+msgid "ppc/64 functions"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:413
+#, no-wrap
+msgid "CW<__kernel_getcpu>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:415
+#, no-wrap
+msgid "CW<__kernel_sigtramp_rt64>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:416
+#, no-wrap
+msgid "CW<__kernel_sync_dicache>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:417
+#, no-wrap
+msgid "CW<__kernel_sync_dicache_p5>"
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vdso.7:436
+#, no-wrap
+msgid "s390 functions"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:446 man-pages/man7/vdso.7:447
+#: man-pages/man7/vdso.7:448 man-pages/man7/vdso.7:464
+#: man-pages/man7/vdso.7:465 man-pages/man7/vdso.7:466
+#, no-wrap
+msgid "CW<LINUX_2.6.29>"
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vdso.7:454
+#, no-wrap
+msgid "s390x functions"
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vdso.7:472
+#, no-wrap
+msgid "sh (SuperH) functions"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:482 man-pages/man7/vdso.7:483
+#: man-pages/man7/vdso.7:484 man-pages/man7/vdso.7:525
+#: man-pages/man7/vdso.7:526 man-pages/man7/vdso.7:527
+#: man-pages/man7/vdso.7:528 man-pages/man7/vdso.7:544
+#: man-pages/man7/vdso.7:545 man-pages/man7/vdso.7:546
+#: man-pages/man7/vdso.7:547
+#, no-wrap
+msgid "CW<LINUX_2.6>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:483 man-pages/man7/vdso.7:500
+#, no-wrap
+msgid "CW<__kernel_sigreturn>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:484 man-pages/man7/vdso.7:502
+#, no-wrap
+msgid "CW<__kernel_vsyscall>"
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vdso.7:490
+#, no-wrap
+msgid "i386 functions"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:505 man-pages/man7/vdso.7:506
+#: man-pages/man7/vdso.7:507
+#, no-wrap
+msgid "CW<LINUX_2.6 (exported since Linux 3.15)>"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:507 man-pages/man7/vdso.7:528
+#: man-pages/man7/vdso.7:547
+#, no-wrap
+msgid "CW<__vdso_time>"
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vdso.7:513
+#, no-wrap
+msgid "x86-64 functions"
+msgstr ""
+
+#.  See linux/arch/x86/vdso/vdso.lds.S
+#. type: Plain text
+#: man-pages/man7/vdso.7:518
+msgid ""
+"The table below lists the symbols exported by the vDSO.  All of these "
+"symbols are also available without the \"__vdso_\" prefix, but you should "
+"ignore those and stick to the names below."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/vdso.7:526 man-pages/man7/vdso.7:545
+#, no-wrap
+msgid "CW<__vdso_getcpu>"
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vdso.7:534
+#, no-wrap
+msgid "x86/x32 functions"
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vdso.7:553
+#, no-wrap
+msgid "History"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:560
+msgid ""
+"The vDSO was originally just a single function\\(emthe vsyscall.  In older "
+"kernels, you might see that name in a process's memory map rather than "
+"\"vdso\".  Over time, people realized that this mechanism was a great way to"
+" pass more functionality to user space, so it was reconceived as a vDSO in "
+"the current format."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:564
+msgid "B<syscalls>(2), B<getauxval>(3), B<proc>(5)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:566
+msgid ""
+"The documents, examples, and source code in the Linux source code tree:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:572
+#, no-wrap
+msgid ""
+"Documentation/ABI/stable/vdso\n"
+"Documentation/ia64/fsys.txt\n"
+"Documentation/vDSO/* (includes examples of using the vDSO)\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vdso.7:574
+#, no-wrap
+msgid "find arch/ -iname \\(aq*vdso*\\(aq -o -iname \\(aq*gate*\\(aq\n"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/vsock.7:25
+#, no-wrap
+msgid "VSOCK"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/vsock.7:25
+#, no-wrap
+msgid "2017-11-30"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:28
+msgid "vsock - Linux VSOCK address family"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:30
+msgid "B<#include E<lt>sys/socket.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:32
+msgid "B<#include E<lt>linux/vm_sockets.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:34
+msgid "I<stream_socket>B< = socket(AF_VSOCK, SOCK_STREAM, 0);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:36
+msgid "I<datagram_socket>B< = socket(AF_VSOCK, SOCK_DGRAM, 0);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:42
+msgid ""
+"The VSOCK address family facilitates communication between virtual machines "
+"and the host they are running on.  This address family is used by guest "
+"agents and hypervisor services that need a communications channel that is "
+"independent of virtual machine network configuration."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:54
+msgid ""
+"Valid socket types are B<SOCK_STREAM> and B<SOCK_DGRAM>.  B<SOCK_STREAM> "
+"provides connection-oriented byte streams with guaranteed, in-order "
+"delivery.  B<SOCK_DGRAM> provides a connectionless datagram packet service "
+"with best-effort delivery and best-effort ordering.  Availability of these "
+"socket types is dependent on the underlying hypervisor."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:56
+msgid "A new socket is created with"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:60
+#, no-wrap
+msgid "socket(AF_VSOCK, socket_type, 0);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:67
+msgid ""
+"When a process wants to establish a connection, it calls B<connect>(2)  with"
+" a given destination socket address.  The socket is automatically bound to a"
+" free port if unbound."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:73
+msgid ""
+"A process can listen for incoming connections by first binding to a socket "
+"address using B<bind>(2)  and then calling B<listen>(2)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:83
+msgid ""
+"Data is transmitted using the B<send>(2)  or B<write>(2)  families of system"
+" calls and data is received using the B<recv>(2)  or B<read>(2)  families of"
+" system calls."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vsock.7:83
+#, no-wrap
+msgid "Address format"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:90
+msgid ""
+"A socket address is defined as a combination of a 32-bit Context Identifier "
+"(CID) and a 32-bit port number.  The CID identifies the source or "
+"destination, which is either a virtual machine or the host.  The port number"
+" differentiates between multiple services running on a single machine."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:99
+#, no-wrap
+msgid ""
+"struct sockaddr_vm {\n"
+"    sa_family_t    svm_family;     /* Address family: AF_VSOCK */\n"
+"    unsigned short svm_reserved1;\n"
+"    unsigned int   svm_port;       /* Port # in host byte order */\n"
+"    unsigned int   svm_cid;        /* Address in host byte order */\n"
+"};\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:116
+msgid ""
+"I<svm_family> is always set to B<AF_VSOCK>.  I<svm_reserved1> is always set "
+"to 0.  I<svm_port> contains the port number in host byte order.  The port "
+"numbers below 1024 are called I<privileged ports>.  Only a process with the "
+"B<CAP_NET_BIND_SERVICE> capability may B<bind>(2)  to these port numbers."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:128
+msgid ""
+"There are several special addresses: B<VMADDR_CID_ANY> (-1U)  means any "
+"address for binding; B<VMADDR_CID_HYPERVISOR> (0) is reserved for services "
+"built into the hypervisor; B<VMADDR_CID_RESERVED> (1) must not be used; "
+"B<VMADDR_CID_HOST> (2)  is the well-known address of the host."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:133
+msgid ""
+"The special constant B<VMADDR_PORT_ANY> (-1U)  means any port number for "
+"binding."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vsock.7:133
+#, no-wrap
+msgid "Live migration"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:139
+msgid ""
+"Sockets are affected by live migration of virtual machines.  Connected "
+"B<SOCK_STREAM> sockets become disconnected when the virtual machine migrates"
+" to a new host.  Applications must reconnect when this happens."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:143
+msgid ""
+"The local CID may change across live migration if the old CID is not "
+"available on the new host.  Bound sockets are automatically updated to the "
+"new CID."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/vsock.7:143
+#, no-wrap
+msgid "Ioctls"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/vsock.7:144
+#, no-wrap
+msgid "B<IOCTL_VM_SOCKETS_GET_LOCAL_CID>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:149
+msgid ""
+"Get the CID of the local machine.  The argument is a pointer to an "
+"I<unsigned int>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:153
+#, no-wrap
+msgid "ioctl(socket, IOCTL_VM_SOCKETS_GET_LOCAL_CID, &cid);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:160
+msgid ""
+"Consider using B<VMADDR_CID_ANY> when binding instead of getting the local "
+"CID with B<IOCTL_VM_SOCKETS_GET_LOCAL_CID>."
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/vsock.7:160
+#, no-wrap
+msgid "ERRORS"
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/vsock.7:161
+#, no-wrap
+msgid "B<EACCES>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:166
+msgid ""
+"Unable to bind to a privileged port without the B<CAP_NET_BIND_SERVICE> "
+"capability."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/vsock.7:166
+#, no-wrap
+msgid "B<EADDRINUSE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:169
+msgid "Unable to bind to a port that is already in use."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/vsock.7:169
+#, no-wrap
+msgid "B<EADDRNOTAVAIL>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:172
+msgid ""
+"Unable to find a free port for binding or unable to bind to a nonlocal CID."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/vsock.7:172
+#, no-wrap
+msgid "B<EINVAL>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:179
+msgid ""
+"Invalid parameters.  This includes: attempting to bind a socket that is "
+"already bound, providing an invalid struct I<sockaddr_vm>, and other input "
+"validation errors."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/vsock.7:179
+#, no-wrap
+msgid "B<ENOPROTOOPT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:185
+msgid "Invalid socket option in B<setsockopt>(2)  or B<getsockopt>(2)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/vsock.7:185
+#, no-wrap
+msgid "B<ENOTCONN>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:188
+msgid "Unable to perform operation on an unconnected socket."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/vsock.7:188
+#, no-wrap
+msgid "B<EOPNOTSUPP>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:201
+msgid ""
+"Operation not supported.  This includes: the B<MSG_OOB> flag that is not "
+"implemented for the B<send>(2)  family of syscalls and B<MSG_PEEK> for the "
+"B<recv>(2)  family of syscalls."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/vsock.7:201
+#, no-wrap
+msgid "B<EPROTONOSUPPORT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:205
+msgid "Invalid socket protocol number.  The protocol should always be 0."
+msgstr ""
+
+#. type: TP
+#: man-pages/man7/vsock.7:205
+#, no-wrap
+msgid "B<ESOCKTNOSUPPORT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:214
+msgid ""
+"Unsupported socket type in B<socket>(2).  Only B<SOCK_STREAM> and "
+"B<SOCK_DGRAM> are valid."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:218
+msgid ""
+"Support for VMware (VMCI) has been available since Linux 3.9.  KVM (virtio) "
+"is supported since Linux 4.8.  Hyper-V is supported since Linux 4.14."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/vsock.7:225
+msgid ""
+"B<bind>(2), B<connect>(2), B<listen>(2), B<recv>(2), B<send>(2), "
+"B<socket>(2), B<capabilities>(7)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/vmsplice.2:26
+#, no-wrap
+msgid "VMSPLICE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vmsplice.2:29
+msgid "vmsplice - splice user pages to/from a pipe"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vmsplice.2:34
+#, no-wrap
+msgid ""
+"B<#define _GNU_SOURCE>         /* See feature_test_macros(7) */\n"
+"B<#include E<lt>fcntl.hE<gt>>\n"
+"B<#include E<lt>sys/uio.hE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vmsplice.2:37
+#, no-wrap
+msgid ""
+"B<ssize_t vmsplice(int >I<fd>B<, const struct iovec *>I<iov>B<,>\n"
+"B<                 unsigned long >I<nr_segs>B<, unsigned int >I<flags>B<);>\n"
+msgstr ""
+
+#.  Linus: vmsplice() system call to basically do a "write to
+#.  the buffer", but using the reference counting and VM traversal
+#.  to actually fill the buffer. This means that the user needs to
+#.  be careful not to reuse the user-space buffer it spliced into
+#.  the kernel-space one (contrast this to "write()", which copies
+#.  the actual data, and you can thus reuse the buffer immediately
+#.  after a successful write), but that is often easy to do.
+#.  Since Linux 2.6.23
+#.  commit 6a14b90bb6bc7cd83e2a444bf457a2ea645cbfe7
+#. type: Plain text
+#: man-pages/man2/vmsplice.2:71
+msgid ""
+"If I<fd> is opened for writing, the B<vmsplice>()  system call maps "
+"I<nr_segs> ranges of user memory described by I<iov> into a pipe.  If I<fd> "
+"is opened for reading, the B<vmsplice>()  system call fills I<nr_segs> "
+"ranges of user memory described by I<iov> from a pipe.  The file descriptor "
+"I<fd> must refer to a pipe."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vmsplice.2:78
+msgid ""
+"The pointer I<iov> points to an array of I<iovec> structures as defined in "
+"I<E<lt>sys/uio.hE<gt>>:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vmsplice.2:85
+#, no-wrap
+msgid ""
+"struct iovec {\n"
+"    void  *iov_base;        /* Starting address */\n"
+"    size_t iov_len;         /* Number of bytes */\n"
+"};\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vmsplice.2:92
+msgid ""
+"The I<flags> argument is a bit mask that is composed by ORing together zero "
+"or more of the following values:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/vmsplice.2:92
+#, no-wrap
+msgid "B<SPLICE_F_MOVE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vmsplice.2:98
+msgid "Unused for B<vmsplice>(); see B<splice>(2)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/vmsplice.2:98
+#, no-wrap
+msgid "B<SPLICE_F_NONBLOCK>"
+msgstr ""
+
+#.  Not used for vmsplice
+#.  May be in the future -- therefore EAGAIN
+#. type: Plain text
+#: man-pages/man2/vmsplice.2:105
+msgid "Do not block on I/O; see B<splice>(2)  for further details."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/vmsplice.2:105
+#, no-wrap
+msgid "B<SPLICE_F_MORE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vmsplice.2:111
+msgid ""
+"Currently has no effect for B<vmsplice>(), but may be implemented in the "
+"future; see B<splice>(2)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/vmsplice.2:111
+#, no-wrap
+msgid "B<SPLICE_F_GIFT>"
+msgstr ""
+
+#.  FIXME . Explain the following line in a little more detail:
+#.  FIXME
+#.  It looks like the page-alignment requirement went away with
+#.  commit bd1a68b59c8e3bce45fb76632c64e1e063c3962d
+#.  .... if we expect to later SPLICE_F_MOVE to the cache.
+#. type: Plain text
+#: man-pages/man2/vmsplice.2:131
+msgid ""
+"The user pages are a gift to the kernel.  The application may not modify "
+"this memory ever, otherwise the page cache and on-disk data may differ.  "
+"Gifting pages to the kernel means that a subsequent B<splice>(2)  "
+"B<SPLICE_F_MOVE> can successfully move the pages; if this flag is not "
+"specified, then a subsequent B<splice>(2)  B<SPLICE_F_MOVE> must copy the "
+"pages.  Data must also be properly page aligned, both in memory and length."
+msgstr ""
+
+#. type: SH
+#: man-pages/man2/vmsplice.2:131
+#, no-wrap
+msgid "RETURN VALUE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vmsplice.2:140
+msgid ""
+"Upon successful completion, B<vmsplice>()  returns the number of bytes "
+"transferred to the pipe.  On error, B<vmsplice>()  returns -1 and I<errno> "
+"is set to indicate the error."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/vmsplice.2:141
+#, no-wrap
+msgid "B<EAGAIN>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vmsplice.2:147
+msgid ""
+"B<SPLICE_F_NONBLOCK> was specified in I<flags>, and the operation would "
+"block."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/vmsplice.2:147
+#, no-wrap
+msgid "B<EBADF>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vmsplice.2:151
+msgid "I<fd> either not valid, or doesn't refer to a pipe."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vmsplice.2:159
+msgid ""
+"I<nr_segs> is greater than B<IOV_MAX>; or memory not aligned if "
+"B<SPLICE_F_GIFT> set."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/vmsplice.2:159
+#, no-wrap
+msgid "B<ENOMEM>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vmsplice.2:162
+msgid "Out of memory."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vmsplice.2:167
+msgid ""
+"The B<vmsplice>()  system call first appeared in Linux 2.6.17; library "
+"support was added to glibc in version 2.5."
+msgstr ""
+
+#. type: SH
+#: man-pages/man2/vmsplice.2:167
+#, no-wrap
+msgid "CONFORMING TO"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vmsplice.2:169
+msgid "This system call is Linux-specific."
+msgstr ""
+
+#.  UIO_MAXIOV in kernel source
+#. type: Plain text
+#: man-pages/man2/vmsplice.2:180
+msgid ""
+"B<vmsplice>()  follows the other vectorized read/write type functions when "
+"it comes to limitations on the number of segments being passed in.  This "
+"limit is B<IOV_MAX> as defined in I<E<lt>limits.hE<gt>>.  Currently, this "
+"limit is 1024."
+msgstr ""
+
+#.  commit 6a14b90bb6bc7cd83e2a444bf457a2ea645cbfe7
+#. type: Plain text
+#: man-pages/man2/vmsplice.2:188
+msgid ""
+"B<vmsplice>()  really supports true splicing only from user memory to a "
+"pipe.  In the opposite direction, it actually just copies the data to "
+"userspace.  But this makes the interface nice and symmetric and enables "
+"people to build on B<vmsplice>()  with room for future improvement in "
+"performance."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vmsplice.2:191
+msgid "B<splice>(2), B<tee>(2), B<pipe>(7)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/vhangup.2:28
+#, no-wrap
+msgid "VHANGUP"
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/vhangup.2:28
+#, no-wrap
+msgid "2016-03-15"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vhangup.2:31
+msgid "vhangup - virtually hangup the current terminal"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vhangup.2:33
+msgid "B<#include E<lt>unistd.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vhangup.2:35
+msgid "B<int vhangup(void);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vhangup.2:39
+msgid ""
+"Feature Test Macro Requirements for glibc (see B<feature_test_macros>(7)):"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vhangup.2:43
+msgid "B<vhangup>():"
+msgstr ""
+
+#. 		commit 266865c0e7b79d4196e2cc393693463f03c90bd8
+#. type: Plain text
+#: man-pages/man2/vhangup.2:51
+#, no-wrap
+msgid ""
+"    Since glibc 2.21:\n"
+"        _DEFAULT_SOURCE\n"
+"    In glibc 2.19 and 2.20:\n"
+"        _DEFAULT_SOURCE || (_XOPEN_SOURCE && _XOPEN_SOURCE\\ E<lt>\\ 500)\n"
+"    Up to and including glibc 2.19:\n"
+"        _BSD_SOURCE || (_XOPEN_SOURCE && _XOPEN_SOURCE\\ E<lt>\\ 500)\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vhangup.2:58
+msgid ""
+"B<vhangup>()  simulates a hangup on the current terminal.  This call "
+"arranges for other users to have a ``clean'' terminal at login time."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vhangup.2:63
+msgid ""
+"On success, zero is returned.  On error, -1 is returned, and I<errno> is set"
+" appropriately."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/vhangup.2:64
+#, no-wrap
+msgid "B<EPERM>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vhangup.2:71
+msgid ""
+"The calling process has insufficient privilege to call B<vhangup>(); the "
+"B<CAP_SYS_TTY_CONFIG> capability is required."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vhangup.2:74
+msgid ""
+"This call is Linux-specific, and should not be used in programs intended to "
+"be portable."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vhangup.2:76
+msgid "B<init>(1), B<capabilities>(7)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/vfork.2:29
+#, no-wrap
+msgid "VFORK"
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/vfork.2:29
+#, no-wrap
+msgid "2017-09-15"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vfork.2:32
+msgid "vfork - create a child process and block parent"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vfork.2:34
+msgid "B<#include E<lt>sys/types.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vfork.2:38
+msgid "B<pid_t vfork(void);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vfork.2:45
+msgid "B<vfork>():"
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/vfork.2:48
+#, no-wrap
+msgid "Since glibc 2.12:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vfork.2:54
+#, no-wrap
+msgid ""
+"(_XOPEN_SOURCE\\ E<gt>=\\ 500) && ! (_POSIX_C_SOURCE\\ E<gt>=\\ 200809L)\n"
+"    || /* Since glibc 2.19: */ _DEFAULT_SOURCE\n"
+"    || /* Glibc versions E<lt>= 2.19: */ _BSD_SOURCE\n"
+msgstr ""
+
+#.      || _XOPEN_SOURCE\ &&\ _XOPEN_SOURCE_EXTENDED
+#. type: Plain text
+#: man-pages/man2/vfork.2:59
+msgid "Before glibc 2.12: _BSD_SOURCE || _XOPEN_SOURCE\\ E<gt>=\\ 500"
+msgstr ""
+
+#. type: SS
+#: man-pages/man2/vfork.2:63
+#, no-wrap
+msgid "Standard description"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vfork.2:82
+msgid ""
+"(From POSIX.1)  The B<vfork>()  function has the same effect as B<fork>(2), "
+"except that the behavior is undefined if the process created by B<vfork>()  "
+"either modifies any data other than a variable of type I<pid_t> used to "
+"store the return value from B<vfork>(), or returns from the function in "
+"which B<vfork>()  was called, or calls any other function before "
+"successfully calling B<_exit>(2)  or one of the B<exec>(3)  family of "
+"functions."
+msgstr ""
+
+#. type: SS
+#: man-pages/man2/vfork.2:82
+#, no-wrap
+msgid "Linux description"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vfork.2:89
+msgid ""
+"B<vfork>(), just like B<fork>(2), creates a child process of the calling "
+"process.  For details and return value and errors, see B<fork>(2)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vfork.2:98
+msgid ""
+"B<vfork>()  is a special case of B<clone>(2).  It is used to create new "
+"processes without copying the page tables of the parent process.  It may be "
+"useful in performance-sensitive applications where a child is created which "
+"then immediately issues an B<execve>(2)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vfork.2:118
+msgid ""
+"B<vfork>()  differs from B<fork>(2)  in that the calling thread is suspended"
+" until the child terminates (either normally, by calling B<_exit>(2), or "
+"abnormally, after delivery of a fatal signal), or it makes a call to "
+"B<execve>(2).  Until that point, the child shares all memory with its "
+"parent, including the stack.  The child must not return from the current "
+"function or call B<exit>(3)  (which would have the effect of calling exit "
+"handlers established by the parent process and flushing the parent's "
+"B<stdio>(3)  buffers), but may call B<_exit>(2)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vfork.2:129
+msgid ""
+"As with B<fork>(2), the child process created by B<vfork>()  inherits copies"
+" of various of the caller's process attributes (e.g., file descriptors, "
+"signal dispositions, and current working directory); the B<vfork>()  call "
+"differs only in the treatment of the virtual address space, as described "
+"above."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vfork.2:135
+msgid ""
+"Signals sent to the parent arrive after the child releases the parent's "
+"memory (i.e., after the child terminates or calls B<execve>(2))."
+msgstr ""
+
+#. type: SS
+#: man-pages/man2/vfork.2:135
+#, no-wrap
+msgid "Historic description"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vfork.2:162
+msgid ""
+"Under Linux, B<fork>(2)  is implemented using copy-on-write pages, so the "
+"only penalty incurred by B<fork>(2)  is the time and memory required to "
+"duplicate the parent's page tables, and to create a unique task structure "
+"for the child.  However, in the bad old days a B<fork>(2)  would require "
+"making a complete copy of the caller's data space, often needlessly, since "
+"usually immediately afterward an B<exec>(3)  is done.  Thus, for greater "
+"efficiency, BSD introduced the B<vfork>()  system call, which did not fully "
+"copy the address space of the parent process, but borrowed the parent's "
+"memory and thread of control until a call to B<execve>(2)  or an exit "
+"occurred.  The parent process was suspended while the child was using its "
+"resources.  The use of B<vfork>()  was tricky: for example, not modifying "
+"data in the parent process depended on knowing which variables were held in "
+"a register."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vfork.2:166
+msgid ""
+"4.3BSD; POSIX.1-2001 (but marked OBSOLETE).  POSIX.1-2008 removes the "
+"specification of B<vfork>()."
+msgstr ""
+
+#.  In AIXv3.1 vfork is equivalent to fork.
+#. type: Plain text
+#: man-pages/man2/vfork.2:177
+msgid ""
+"The requirements put on B<vfork>()  by the standards are weaker than those "
+"put on B<fork>(2), so an implementation where the two are synonymous is "
+"compliant.  In particular, the programmer cannot rely on the parent "
+"remaining blocked until the child either terminates or calls B<execve>(2), "
+"and cannot rely on any specific behavior with respect to shared memory."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vfork.2:196
+msgid ""
+"Some consider the semantics of B<vfork>()  to be an architectural blemish, "
+"and the 4.2BSD man page stated: \"This system call will be eliminated when "
+"proper system sharing mechanisms are implemented.  Users should not depend "
+"on the memory sharing semantics of B<vfork>()  as it will, in that case, be "
+"made synonymous to B<fork>(2).\" However, even though modern memory "
+"management hardware has decreased the performance difference between "
+"B<fork>(2)  and B<vfork>(), there are various reasons why Linux and other "
+"systems have retained B<vfork>():"
+msgstr ""
+
+#. type: IP
+#: man-pages/man2/vfork.2:196 man-pages/man2/vfork.2:200
+#: man-pages/man2/vfork.2:217
+#, no-wrap
+msgid "*"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vfork.2:200
+msgid ""
+"Some performance-critical applications require the small performance "
+"advantage conferred by B<vfork>()."
+msgstr ""
+
+#.  http://stackoverflow.com/questions/4259629/what-is-the-difference-between-
+#. fork-and-vfork
+#.  http://developers.sun.com/solaris/articles/subprocess/subprocess.html
+#.  http://mailman.uclinux.org/pipermail/uclinux-dev/2009-April/000684.html
+#. type: Plain text
+#: man-pages/man2/vfork.2:217
+msgid ""
+"B<vfork>()  can be implemented on systems that lack a memory-management unit"
+" (MMU), but B<fork>(2)  can't be implemented on such systems.  (POSIX.1-2008"
+" removed B<vfork>()  from the standard; the POSIX rationale for the "
+"B<posix_spawn>(3)  function notes that that function, which provides "
+"functionality equivalent to B<fork>(2)+B<exec>(3), is designed to be "
+"implementable on systems that lack an MMU.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vfork.2:234
+msgid ""
+"On systems where memory is constrained, B<vfork>()  avoids the need to "
+"temporarily commit memory (see the description of "
+"I</proc/sys/vm/overcommit_memory> in B<proc>(5))  in order to execute a new "
+"program.  (This can be especially beneficial where a large parent process "
+"wishes to execute a small helper program in a child process.)  By contrast, "
+"using B<fork>(2)  in this scenario requires either committing an amount of "
+"memory equal to the size of the parent process (if strict overcommitting is "
+"in force)  or overcommitting memory with the risk that a process is "
+"terminated by the out-of-memory (OOM) killer."
+msgstr ""
+
+#. type: SS
+#: man-pages/man2/vfork.2:234
+#, no-wrap
+msgid "Caveats"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vfork.2:245
+msgid ""
+"The child process should take care not to modify the memory in unintended "
+"ways, since such changes will be seen by the parent process once the child "
+"terminates or executes another program.  In this regard, signal handlers can"
+" be especially problematic: if a signal handler that is invoked in the child"
+" of B<vfork>()  changes memory, those changes may result in an inconsistent "
+"process state from the perspective of the parent process (e.g., memory "
+"changes would be visible in the parent, but changes to the state of open "
+"file descriptors would not be visible)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vfork.2:271
+msgid ""
+"When B<vfork>()  is called in a multithreaded process, only the calling "
+"thread is suspended until the child terminates or executes a new program.  "
+"This means that the child is sharing an address space with other running "
+"code.  This can be dangerous if another thread in the parent process changes"
+" credentials (using B<setuid>(2)  or similar), since there are now two "
+"processes with different privilege levels running in the same address space."
+"  As an example of the dangers, suppose that a multithreaded program running"
+" as root creates a child using B<vfork>().  After the B<vfork>(), a thread "
+"in the parent process drops the process to an unprivileged user in order to "
+"run some untrusted code (e.g., perhaps via plug-in opened with "
+"B<dlopen>(3)).  In this case, attacks are possible where the parent process "
+"uses B<mmap>(2)  to map in code that will be executed by the privileged "
+"child process."
+msgstr ""
+
+#. type: SS
+#: man-pages/man2/vfork.2:271
+#, no-wrap
+msgid "Linux notes"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vfork.2:282
+msgid ""
+"Fork handlers established using B<pthread_atfork>(3)  are not called when a "
+"multithreaded program employing the NPTL threading library calls B<vfork>()."
+"  Fork handlers are called in this case in a program using the LinuxThreads "
+"threading library.  (See B<pthreads>(7)  for a description of Linux "
+"threading libraries.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vfork.2:290
+msgid ""
+"A call to B<vfork>()  is equivalent to calling B<clone>(2)  with I<flags> "
+"specified as:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vfork.2:292
+#, no-wrap
+msgid "     CLONE_VM | CLONE_VFORK | SIGCHLD\n"
+msgstr ""
+
+#.  In the release notes for 4.2BSD Sam Leffler wrote: `vfork: Is still
+#.  present, but definitely on its way out'.
+#. type: Plain text
+#: man-pages/man2/vfork.2:310
+msgid ""
+"The B<vfork>()  system call appeared in 3.0BSD.  In 4.4BSD it was made "
+"synonymous to B<fork>(2)  but NetBSD introduced it again; see E<.UR "
+"http://www.netbsd.org\\:/Documentation\\:/kernel\\:/vfork.html> E<.UE .> In "
+"Linux, it has been equivalent to B<fork>(2)  until 2.2.0-pre6 or so.  Since "
+"2.2.0-pre9 (on i386, somewhat later on other architectures) it is an "
+"independent system call.  Support was added in glibc 2.0.112."
+msgstr ""
+
+#. type: SH
+#: man-pages/man2/vfork.2:310
+#, no-wrap
+msgid "BUGS"
+msgstr ""
+
+#.  As far as I can tell, the following is not true in 2.6.19:
+#.  Currently (Linux 2.3.25),
+#.  .BR strace (1)
+#.  cannot follow
+#.  .BR vfork ()
+#.  and requires a kernel patch.
+#. type: Plain text
+#: man-pages/man2/vfork.2:331
+msgid ""
+"Details of the signal handling are obscure and differ between systems.  The "
+"BSD man page states: \"To avoid a possible deadlock situation, processes "
+"that are children in the middle of a B<vfork>()  are never sent B<SIGTTOU> "
+"or B<SIGTTIN> signals; rather, output or I<ioctl>s are allowed and input "
+"attempts result in an end-of-file indication.\""
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vfork.2:337
+msgid ""
+"B<clone>(2), B<execve>(2), B<_exit>(2), B<fork>(2), B<unshare>(2), "
+"B<wait>(2)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/vm86.2:26
+#, no-wrap
+msgid "VM86"
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/vm86.2:26
+#, no-wrap
+msgid "2009-02-20"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vm86.2:29
+msgid "vm86old, vm86 - enter virtual 8086 mode"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vm86.2:31
+msgid "B<#include E<lt>sys/vm86.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vm86.2:33
+msgid "B<int vm86old(struct vm86_struct *>I<info>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vm86.2:35
+msgid ""
+"B<int vm86(unsigned long >I<fn>B<, struct vm86plus_struct *>I<v86>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vm86.2:48
+msgid ""
+"The system call B<vm86>()  was introduced in Linux 0.97p2.  In Linux 2.1.15 "
+"and 2.0.28, it was renamed to B<vm86old>(), and a new B<vm86>()  was "
+"introduced.  The definition of I<struct vm86_struct> was changed in 1.1.8 "
+"and 1.1.9."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vm86.2:52
+msgid ""
+"These calls cause the process to enter VM86 mode (virtual-8086 in Intel "
+"literature), and are used by B<dosemu>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vm86.2:54
+msgid "VM86 mode is an emulation of real mode within a protected mode task."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/vm86.2:60
+#, no-wrap
+msgid "B<EFAULT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vm86.2:64
+msgid ""
+"This return value is specific to i386 and indicates a problem with getting "
+"user-space data."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/vm86.2:64
+#, no-wrap
+msgid "B<ENOSYS>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vm86.2:68
+msgid ""
+"This return value indicates the call is not implemented on the present "
+"architecture."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vm86.2:73
+msgid ""
+"Saved kernel stack exists.  (This is a kernel sanity check; the saved stack "
+"should exist only within vm86 mode itself.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/vm86.2:75
+msgid ""
+"This call is specific to Linux on 32-bit Intel processors, and should not be"
+" used in programs intended to be portable."
+msgstr ""

@@ -1,0 +1,1040 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2017-03-04 13:09+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: TH
+#: man-pages/man2/_syscall.2:38
+#, no-wrap
+msgid "_SYSCALL"
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/_syscall.2:38
+#, no-wrap
+msgid "2019-03-06"
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/_syscall.2:38
+#, no-wrap
+msgid "Linux"
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/_syscall.2:38
+#, no-wrap
+msgid "Linux Programmer's Manual"
+msgstr ""
+
+#. type: SH
+#: man-pages/man2/_syscall.2:39
+#, no-wrap
+msgid "NAME"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:41
+msgid "_syscall - invoking a system call without library support (OBSOLETE)"
+msgstr ""
+
+#. type: SH
+#: man-pages/man2/_syscall.2:41
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:43
+msgid "B<#include E<lt>linux/unistd.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:45
+msgid "A _syscall macro"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:47
+msgid "desired system call"
+msgstr ""
+
+#. type: SH
+#: man-pages/man2/_syscall.2:47
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:53
+msgid ""
+"The important thing to know about a system call is its prototype.  You need "
+"to know how many arguments, their types, and the function return type.  "
+"There are seven macros that make the actual call into the system easier.  "
+"They have the form:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:57
+#, no-wrap
+msgid "_syscallI<X>(I<type>,I<name>,I<type1>,I<arg1>,I<type2>,I<arg2>,...)\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:61
+msgid "where"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:65
+msgid ""
+"I<X> is 0\\(en6, which are the number of arguments taken by the system call"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:68
+msgid "I<type> is the return type of the system call"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:71
+msgid "I<name> is the name of the system call"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:74
+msgid "I<typeN> is the Nth argument's type"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:77
+msgid "I<argN> is the name of the Nth argument"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:85
+msgid ""
+"These macros create a function called I<name> with the arguments you "
+"specify.  Once you include the _syscall() in your source file, you call the "
+"system call by I<name>."
+msgstr ""
+
+#. type: SH
+#: man-pages/man2/_syscall.2:85
+#, no-wrap
+msgid "FILES"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:87
+msgid "I</usr/include/linux/unistd.h>"
+msgstr ""
+
+#. type: SH
+#: man-pages/man2/_syscall.2:87
+#, no-wrap
+msgid "CONFORMING TO"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:89
+msgid "The use of these macros is Linux-specific, and deprecated."
+msgstr ""
+
+#. type: SH
+#: man-pages/man2/_syscall.2:89
+#, no-wrap
+msgid "NOTES"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:99
+msgid ""
+"Starting around kernel 2.6.18, the _syscall macros were removed from header "
+"files supplied to user space.  Use B<syscall>(2)  instead.  (Some "
+"architectures, notably ia64, never provided the _syscall macros; on those "
+"architectures, B<syscall>(2)  was always required.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:105
+msgid ""
+"The _syscall() macros I<do not> produce a prototype.  You may have to create "
+"one, especially for C++ users."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:126
+msgid ""
+"System calls are not required to return only positive or negative error "
+"codes.  You need to read the source to be sure how it will return errors.  "
+"Usually, it is the negative of a standard error code, for example, -"
+"I<EPERM>.  The _syscall() macros will return the result I<r> of the system "
+"call when I<r> is nonnegative, but will return -1 and set the variable "
+"I<errno> to -I<r> when I<r> is negative.  For the error codes, see "
+"B<errno>(3)."
+msgstr ""
+
+#.  The preferred way to invoke system calls that glibc does not know
+#.  about yet is via
+#.  .BR syscall (2).
+#.  However, this mechanism can be used only if using a libc
+#.  (such as glibc) that supports
+#.  .BR syscall (2),
+#.  and if the
+#.  .I <sys/syscall.h>
+#.  header file contains the required SYS_foo definition.
+#.  Otherwise, the use of a _syscall macro is required.
+#. type: Plain text
+#: man-pages/man2/_syscall.2:142
+msgid ""
+"When defining a system call, the argument types I<must> be passed by-value "
+"or by-pointer (for aggregates like structs)."
+msgstr ""
+
+#. type: SH
+#: man-pages/man2/_syscall.2:142
+#, no-wrap
+msgid "EXAMPLE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:149
+#, no-wrap
+msgid ""
+"#include E<lt>stdio.hE<gt>\n"
+"#include E<lt>stdlib.hE<gt>\n"
+"#include E<lt>errno.hE<gt>\n"
+"#include E<lt>linux/unistd.hE<gt>       /* for _syscallX macros/related stuff */\n"
+"#include E<lt>linux/kernel.hE<gt>       /* for struct sysinfo */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:151
+#, no-wrap
+msgid "_syscall1(int, sysinfo, struct sysinfo *, info);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:157
+#, no-wrap
+msgid ""
+"int\n"
+"main(void)\n"
+"{\n"
+"    struct sysinfo s_info;\n"
+"    int error;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:172
+#, no-wrap
+msgid ""
+"    error = sysinfo(&s_info);\n"
+"    printf(\"code error = %d\\en\", error);\n"
+"    printf(\"Uptime = %lds\\enLoad: 1 min %lu / 5 min %lu / 15 min %lu\\en\"\n"
+"           \"RAM: total %lu / free %lu / shared %lu\\en\"\n"
+"           \"Memory in buffers = %lu\\enSwap: total %lu / free %lu\\en\"\n"
+"           \"Number of processes = %d\\en\",\n"
+"           s_info.uptime, s_info.loads[0],\n"
+"           s_info.loads[1], s_info.loads[2],\n"
+"           s_info.totalram, s_info.freeram,\n"
+"           s_info.sharedram, s_info.bufferram,\n"
+"           s_info.totalswap, s_info.freeswap,\n"
+"           s_info.procs);\n"
+"    exit(EXIT_SUCCESS);\n"
+"}\n"
+msgstr ""
+
+#. type: SS
+#: man-pages/man2/_syscall.2:173
+#, no-wrap
+msgid "Sample output"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:182
+#, no-wrap
+msgid ""
+"code error = 0\n"
+"uptime = 502034s\n"
+"Load: 1 min 13376 / 5 min 5504 / 15 min 1152\n"
+"RAM: total 15343616 / free 827392 / shared 8237056\n"
+"Memory in buffers = 5066752\n"
+"Swap: total 27881472 / free 24698880\n"
+"Number of processes = 40\n"
+msgstr ""
+
+#. type: SH
+#: man-pages/man2/_syscall.2:183
+#, no-wrap
+msgid "SEE ALSO"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_syscall.2:186
+msgid "B<intro>(2), B<syscall>(2), B<errno>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/_exit.2:29
+#, no-wrap
+msgid "_EXIT"
+msgstr ""
+
+#. type: TH
+#: man-pages/man2/_exit.2:29
+#, no-wrap
+msgid "2017-05-03"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:32
+msgid "_exit, _Exit - terminate the calling process"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:34
+msgid "B<#include E<lt>unistd.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:36
+msgid "B<void _exit(int >I<status>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:38
+msgid "B<#include E<lt>stdlib.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:40
+msgid "B<void _Exit(int >I<status>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:44
+msgid ""
+"Feature Test Macro Requirements for glibc (see B<feature_test_macros>(7)):"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:48
+msgid "B<_Exit>():"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:50
+msgid "_ISOC99_SOURCE || _POSIX_C_SOURCE\\ E<gt>=\\ 200112L"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:66
+msgid ""
+"The function B<_exit>()  terminates the calling process \"immediately\".  "
+"Any open file descriptors belonging to the process are closed.  Any children "
+"of the process are inherited by B<init>(1)  (or by the nearest \"subreaper\" "
+"process as defined through the use of the B<prctl>(2)  "
+"B<PR_SET_CHILD_SUBREAPER> operation).  The process's parent is sent a "
+"B<SIGCHLD> signal."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:73
+msgid ""
+"The value I<status & 0377> is returned to the parent process as the "
+"process's exit status, and can be collected using one of the B<wait>(2)  "
+"family of calls."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:78
+msgid "The function B<_Exit>()  is equivalent to B<_exit>()."
+msgstr ""
+
+#. type: SH
+#: man-pages/man2/_exit.2:78
+#, no-wrap
+msgid "RETURN VALUE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:80
+msgid "These functions do not return."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:85
+msgid ""
+"POSIX.1-2001, POSIX.1-2008, SVr4, 4.3BSD.  The function B<_Exit>()  was "
+"introduced by C99."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:89
+msgid ""
+"For a discussion on the effects of an exit, the transmission of exit status, "
+"zombie processes, signals sent, and so on, see B<exit>(3)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:115
+msgid ""
+"The function B<_exit>()  is like B<exit>(3), but does not call any functions "
+"registered with B<atexit>(3)  or B<on_exit>(3).  Open B<stdio>(3)  streams "
+"are not flushed.  On the other hand, B<_exit>()  does close open file "
+"descriptors, and this may cause an unknown delay, waiting for pending output "
+"to finish.  If the delay is undesired, it may be useful to call functions "
+"like B<tcflush>(3)  before calling B<_exit>().  Whether any pending I/O is "
+"canceled, and which pending I/O may be canceled upon B<_exit>(), is "
+"implementation-dependent."
+msgstr ""
+
+#. type: SS
+#: man-pages/man2/_exit.2:115
+#, no-wrap
+msgid "C library/kernel differences"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:122
+msgid ""
+"In glibc up to version 2.3, the B<_exit>()  wrapper function invoked the "
+"kernel system call of the same name.  Since glibc 2.3, the wrapper function "
+"invokes B<exit_group>(2), in order to terminate all of the threads in a "
+"process."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/_exit.2:133
+msgid ""
+"B<execve>(2), B<exit_group>(2), B<fork>(2), B<kill>(2), B<wait>(2), "
+"B<wait4>(2), B<waitpid>(2), B<atexit>(3), B<exit>(3), B<on_exit>(3), "
+"B<termios>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/__ppc_yield.3:25
+#, no-wrap
+msgid "__PPC_YIELD"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/__ppc_yield.3:25
+#, no-wrap
+msgid "2017-09-15"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/__ppc_yield.3:25
+#, no-wrap
+msgid "GNU C Library"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/__ppc_yield.3:25
+#, no-wrap
+msgid "Linux Programmer'sManual"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_yield.3:30
+msgid ""
+"__ppc_yield, __ppc_mdoio, __ppc_mdoom - Hint the processor to release shared "
+"resources"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_yield.3:32
+msgid "B<#include E<lt>sys/platform/ppc.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_yield.3:34
+msgid "B<void __ppc_yield(void);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_yield.3:36
+msgid "B<void __ppc_mdoio(void);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_yield.3:38
+msgid "B<void __ppc_mdoom(void);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_yield.3:44
+msgid ""
+"These functions provide hints about the usage of resources that are shared "
+"with other processors on the Power architecture.  They can be used, for "
+"example, if a program waiting on a lock intends to divert the shared "
+"resources to be used by other processors."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_yield.3:49
+msgid ""
+"B<__ppc_yield>()  provides a hint that performance will probably be improved "
+"if shared resources dedicated to the executing processor are released for "
+"use by other processors."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_yield.3:55
+msgid ""
+"B<__ppc_mdoio>()  provides a hint that performance will probably be improved "
+"if shared resources dedicated to the executing processor are released until "
+"all outstanding storage accesses to caching-inhibited storage have been "
+"completed."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_yield.3:61
+msgid ""
+"B<__ppc_mdoom>()  provides a hint that performance will probably be improved "
+"if shared resources dedicated to the executing processor are released until "
+"all outstanding storage accesses to cacheable storage for which the data is "
+"not in the cache have been completed."
+msgstr ""
+
+#. type: SH
+#: man-pages/man3/__ppc_yield.3:61
+#, no-wrap
+msgid "VERSIONS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_yield.3:63
+msgid "These functions first appeared in glibc in version 2.18."
+msgstr ""
+
+#. type: SH
+#: man-pages/man3/__ppc_yield.3:63
+#, no-wrap
+msgid "ATTRIBUTES"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_yield.3:66
+msgid ""
+"For an explanation of the terms used in this section, see B<attributes>(7)."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/__ppc_yield.3:71
+#, no-wrap
+msgid "Interface"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/__ppc_yield.3:71
+#, no-wrap
+msgid "Attribute"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/__ppc_yield.3:71
+#, no-wrap
+msgid "Value"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/__ppc_yield.3:76
+#, no-wrap
+msgid ""
+"B<__ppc_yield>(),\n"
+"B<__ppc_mdoio>(),\n"
+"B<__ppc_mdoom>()"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/__ppc_yield.3:76
+#, no-wrap
+msgid "Thread safety"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/__ppc_yield.3:76
+#, no-wrap
+msgid "MT-Safe"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_yield.3:81
+msgid "These functions are nonstandard GNU extensions."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_yield.3:83
+msgid "B<__ppc_set_ppr_med>(3)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_yield.3:84
+msgid "I<Power ISA, Book\\ II - Section\\ 3.2 (\"or\" architecture)>"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/__ppc_set_ppr_med.3:25
+#, no-wrap
+msgid "__PPC_SET_PPR_MED"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/__ppc_set_ppr_med.3:25
+#, no-wrap
+msgid "LinuxProgrammer's Manual"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_set_ppr_med.3:30
+msgid ""
+"__ppc_set_ppr_med, __ppc_set_ppr_very_low, __ppc_set_ppr_low, "
+"__ppc_set_ppr_med_low, __ppc_set_ppr_med_high - Set the Program Priority "
+"Register"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_set_ppr_med.3:34
+msgid "B<void __ppc_set_ppr_med(void);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_set_ppr_med.3:36
+msgid "B<void __ppc_set_ppr_very_low(void);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_set_ppr_med.3:38
+msgid "B<void __ppc_set_ppr_low(void);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_set_ppr_med.3:40
+msgid "B<void __ppc_set_ppr_med_low(void);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_set_ppr_med.3:42
+msgid "B<void __ppc_set_ppr_med_high(void);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_set_ppr_med.3:46
+msgid ""
+"These functions provide access to the I<Program Priority Register> (PPR) on "
+"the Power architecture."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_set_ppr_med.3:52
+msgid ""
+"The PPR is a 64-bit register that controls the program's priority.  By "
+"adjusting the PPR value the programmer may improve system throughput by "
+"causing system resources to be used more efficiently, especially in "
+"contention situations.  The available unprivileged states are covered by the "
+"following functions:"
+msgstr ""
+
+#. type: IP
+#: man-pages/man3/__ppc_set_ppr_med.3:52 man-pages/man3/__ppc_set_ppr_med.3:57
+#: man-pages/man3/__ppc_set_ppr_med.3:61 man-pages/man3/__ppc_set_ppr_med.3:65
+#: man-pages/man3/__ppc_set_ppr_med.3:74
+#, no-wrap
+msgid "*"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_set_ppr_med.3:57
+msgid ""
+"B<__ppc_set_ppr_med>()  sets the Program Priority Register value to "
+"I<medium> (default)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_set_ppr_med.3:61
+msgid ""
+"B<__ppc_set_ppr_very_low>()  sets the Program Priority Register value to "
+"I<very low>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_set_ppr_med.3:65
+msgid ""
+"B<__ppc_set_ppr_low>()  sets the Program Priority Register value to I<low>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_set_ppr_med.3:69
+msgid ""
+"B<__ppc_set_ppr_med_low>()  sets the Program Priority Register value to "
+"I<medium low>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_set_ppr_med.3:74
+msgid ""
+"The privileged state I<medium high> may also be set during certain time "
+"intervals by problem-state (unprivileged)  programs, with the following "
+"function:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_set_ppr_med.3:78
+msgid ""
+"B<__ppc_set_ppr_med_high>()  sets the Program Priority to I<medium high>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_set_ppr_med.3:82
+msgid ""
+"If the program priority is medium high when the time interval expires or if "
+"an attempt is made to set the priority to medium high when it is not "
+"allowed, the priority is set to medium."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_set_ppr_med.3:94
+msgid ""
+"The functions B<__ppc_set_ppr_med>(), B<__ppc_set_ppr_low>()  and "
+"B<__ppc_set_ppr_med_low>()  are provided by glibc since version 2.18.  The "
+"functions B<__ppc_set_ppr_very_low>()  and B<__ppc_set_ppr_med_high>()  "
+"first appeared in glibc in version 2.23."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/__ppc_set_ppr_med.3:105
+#, no-wrap
+msgid "B<__ppc_set_ppr_med>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/__ppc_set_ppr_med.3:105
+#: man-pages/man3/__ppc_set_ppr_med.3:107
+#: man-pages/man3/__ppc_set_ppr_med.3:109
+#: man-pages/man3/__ppc_set_ppr_med.3:111
+#, no-wrap
+msgid ".br\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/__ppc_set_ppr_med.3:107
+#, no-wrap
+msgid "B<__ppc_set_ppr_very_low>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/__ppc_set_ppr_med.3:109
+#, no-wrap
+msgid "B<__ppc_set_ppr_low>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/__ppc_set_ppr_med.3:111
+#, no-wrap
+msgid "B<__ppc_set_ppr_med_low>(),\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man3/__ppc_set_ppr_med.3:113
+#, no-wrap
+msgid "B<__ppc_set_ppr_med_high>()"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_set_ppr_med.3:130
+msgid ""
+"The functions B<__ppc_set_ppr_very_low>()  and B<__ppc_set_ppr_med_high>()  "
+"will be defined by I<E<lt>sys/platform/ppc.hE<gt>> if B<_ARCH_PWR8> is "
+"defined.  Availability of these functions can be tested using B<#ifdef "
+"_ARCH_PWR8>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_set_ppr_med.3:132
+msgid "B<__ppc_yield>(3)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_set_ppr_med.3:133
+msgid "I<Power ISA, Book\\ II - Section\\ 3.1 (Program Priority Registers)>"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/__ppc_get_timebase.3:25
+#, no-wrap
+msgid "__PPC_GET_TIMEBASE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_get_timebase.3:30
+#, no-wrap
+msgid ""
+"__ppc_get_timebase, __ppc_get_timebase_freq - get the current value\n"
+" of the Time Base Register on Power architecture and its frequency.\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_get_timebase.3:34
+msgid "B<uint64_t __ppc_get_timebase(void)>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_get_timebase.3:36
+msgid "B<uint64_t __ppc_get_timebase_freq(void);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_get_timebase.3:42
+msgid ""
+"B<__ppc_get_timebase>()  reads the current value of the Time Base Register "
+"and returns its value, while B<__ppc_get_timebase_freq>()  returns the "
+"frequency in which the Time Base Register is updated."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_get_timebase.3:48
+msgid ""
+"The Time Base Register is a 64-bit register provided by Power Architecture "
+"processors.  It stores a monotonically incremented value that is updated at "
+"a system-dependent frequency that may be different from the processor "
+"frequency."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_get_timebase.3:52
+msgid ""
+"B<__ppc_get_timebase>()  returns a 64-bit unsigned integer that represents "
+"the current value of the Time Base Register."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_get_timebase.3:56
+msgid ""
+"B<__ppc_get_timebase_freq>()  returns a 64-bit unsigned integer that "
+"represents the frequency at which the Time Base Register is updated."
+msgstr ""
+
+#.  commit d9dc34cd569bcfe714fe8c708e58c028106e8b2e
+#.  commit 8ad11b9a9cf1de82bd7771306b42070b91417c11
+#. type: Plain text
+#: man-pages/man3/__ppc_get_timebase.3:64
+msgid ""
+"GNU C Library support for B<__ppc_get_timebase>()  has been provided since "
+"version 2.16 and B<__ppc_get_timebase_freq>()  has been available since "
+"version 2.17."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_get_timebase.3:66
+msgid "Both functions are nonstandard GNU extensions."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_get_timebase.3:70
+msgid ""
+"The following program will calculate the time, in microseconds, spent "
+"between two calls to B<__ppc_get_timebase>()."
+msgstr ""
+
+#. type: SS
+#: man-pages/man3/__ppc_get_timebase.3:70
+#, no-wrap
+msgid "Program source"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_get_timebase.3:78
+#, no-wrap
+msgid ""
+"#include E<lt>inttypes.hE<gt>\n"
+"#include E<lt>stdint.hE<gt>\n"
+"#include E<lt>stdio.hE<gt>\n"
+"#include E<lt>stdlib.hE<gt>\n"
+"#include E<lt>sys/platform/ppc.hE<gt>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_get_timebase.3:82
+#, no-wrap
+msgid ""
+"/* Maximum value of the Time Base Register: 2^60 - 1.\n"
+"   Source: POWER ISA.  */\n"
+"#define MAX_TB 0xFFFFFFFFFFFFFFF\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_get_timebase.3:87
+#, no-wrap
+msgid ""
+"int\n"
+"main(void)\n"
+"{\n"
+"    uint64_t tb1, tb2, diff;\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_get_timebase.3:90
+#, no-wrap
+msgid ""
+"    uint64_t freq = __ppc_get_timebase_freq();\n"
+"    printf(\"Time Base frequency = %\"PRIu64\" Hz\\en\", freq);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_get_timebase.3:92
+#, no-wrap
+msgid "    tb1 = __ppc_get_timebase();\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_get_timebase.3:94
+#, no-wrap
+msgid "    // Do some stuff...\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_get_timebase.3:96
+#, no-wrap
+msgid "    tb2 = __ppc_get_timebase();\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_get_timebase.3:103
+#, no-wrap
+msgid ""
+"    if (tb2 E<gt> tb1) {\n"
+"        diff = tb2 - tb1;\n"
+"    } else {\n"
+"        /* Treat Time Base Register overflow.  */\n"
+"        diff = (MAX_TB - tb2) + tb1;\n"
+"    }\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_get_timebase.3:106
+#, no-wrap
+msgid ""
+"    printf(\"Elapsed time  = %1.2f usecs\\en\",\n"
+"            (double) diff * 1000000 / freq );\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_get_timebase.3:109
+#, no-wrap
+msgid ""
+"    exit(EXIT_SUCCESS);\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__ppc_get_timebase.3:112
+msgid "B<time>(2), B<usleep>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/__setfpucw.3:8
+#, no-wrap
+msgid "__SETFPUCW"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:11
+msgid "__setfpucw - set FPU control word on i386 architecture (obsolete)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:13
+msgid "B<#include E<lt>i386/fpu_control.hE<gt>>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:15
+msgid "B<void __setfpucw(unsigned short >I<control_word>B<);>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:22
+msgid ""
+"B<__setfpucw>()  transfers I<control_word> to the registers of the FPU "
+"(floating-point unit) on the i386 architecture.  This was used to control "
+"floating-point precision, rounding and floating-point exceptions."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:24
+msgid "This function was a nonstandard GNU extension."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:43
+msgid ""
+"As of glibc 2.1 this function does not exist anymore.  There are new "
+"functions from C99, with prototypes in I<E<lt>fenv.hE<gt>>, to control FPU "
+"rounding modes, like B<fegetround>(3), B<fesetround>(3), and the floating-"
+"point environment, like B<fegetenv>(3), B<feholdexcept>(3), B<fesetenv>(3), "
+"B<feupdateenv>(3), and FPU exception handling, like B<feclearexcept>(3), "
+"B<fegetexceptflag>(3), B<feraiseexcept>(3), B<fesetexceptflag>(3), and "
+"B<fetestexcept>(3)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:51
+msgid ""
+"If direct access to the FPU control word is still needed, the B<_FPU_GETCW> "
+"and B<_FPU_SETCW> macros from I<E<lt>fpu_control.hE<gt>> can be used."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:53
+msgid "B<__setfpucw(0x1372)>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:55
+msgid "Set FPU control word on the i386 architecture to"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:57
+#, no-wrap
+msgid "     - extended precision\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:59
+#, no-wrap
+msgid "     - rounding to nearest\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:61
+#, no-wrap
+msgid "     - exceptions on overflow, zero divide and NaN\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:63
+msgid "B<feclearexcept>(3)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/__setfpucw.3:64
+msgid "I<E<lt>fpu_control.hE<gt>>"
+msgstr ""
