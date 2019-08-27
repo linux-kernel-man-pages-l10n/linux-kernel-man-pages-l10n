@@ -1,4 +1,4 @@
 *.swp
-*.po~
+translations/files_?/*.po~
 man-pages/
 po/
