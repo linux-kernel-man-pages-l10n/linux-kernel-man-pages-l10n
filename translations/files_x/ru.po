@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Azamat Hackimov <azamat.hackimov@gmail.com>, 2016
 # Yuri Kozlov <yuray@komyakino.ru>, 2011-2014,2016-2018
@@ -13,12 +13,15 @@ msgstr ""
 "POT-Creation-Date: 2019-08-26 09:27+0300\n"
 "PO-Revision-Date: 2019-08-26 06:22+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
-"Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/ru/)\n"
+"Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/"
+"ru/)\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #. type: TH
 #: man-pages/man7/x25.7:12
@@ -88,22 +91,38 @@ msgid ""
 "X25 sockets provide an interface to the X.25 packet layer protocol.  This "
 "allows applications to communicate over a public X.25 data network as "
 "standardized by International Telecommunication Union's recommendation X.25 "
-"(X.25 DTE-DCE mode).  X25 sockets can also be used for communication without"
-" an intermediate X.25 network (X.25 DTE-DTE mode) as described in ISO-8208."
-msgstr "Сокеты X25 предоставляют интерфейс для пакетного слоя протокола X.25. Это позволяет приложениям связываться через открытые сети передачи данных X.25 в соответствии с рекомендациями Международного Телекоммуникационного Общества (International Telecommunication Union) по X.25 (режим X.25 DTE-DCE). Сокеты X25 также можно использовать для связи без наличия промежуточной сети X.25 (режим X.25 DTE-DTE) как описано в стандарте ISO-8208."
+"(X.25 DTE-DCE mode).  X25 sockets can also be used for communication without "
+"an intermediate X.25 network (X.25 DTE-DTE mode) as described in ISO-8208."
+msgstr ""
+"Сокеты X25 предоставляют интерфейс для пакетного слоя протокола X.25. Это "
+"позволяет приложениям связываться через открытые сети передачи данных X.25 в "
+"соответствии с рекомендациями Международного Телекоммуникационного Общества "
+"(International Telecommunication Union) по X.25 (режим X.25 DTE-DCE). Сокеты "
+"X25 также можно использовать для связи без наличия промежуточной сети X.25 "
+"(режим X.25 DTE-DTE) как описано в стандарте ISO-8208."
 
 #. type: Plain text
 #: man-pages/man7/x25.7:47
 msgid ""
 "Message boundaries are preserved \\(em a B<read>(2)  from a socket will "
-"retrieve the same chunk of data as output with the corresponding B<write>(2)"
-"  to the peer socket.  When necessary, the kernel takes care of segmenting "
-"and reassembling long messages by means of the X.25 M-bit.  There is no "
-"hard-coded upper limit for the message size.  However, reassembling of a "
-"long message might fail if there is a temporary lack of system resources or "
-"when other constraints (such as socket memory or buffer size limits) become "
-"effective.  If that occurs, the X.25 connection will be reset."
-msgstr "При работе выполняется сохранение границ сообщения \\(em вызов B<read>(2) вернёт кусок данных той же величины, что записала в сокет в помощью B<write>(2) сторона-партнёр. Когда это необходимо, ядро следит за сегментированием и перебирает (reassembling) длинные сообщения руководствуясь появлением бита M в X.25. Не существует жёсткого ограничения на максимальный размер сообщения. Однако, переборка длинного сообщения может закончиться неудачно, если возникнет временная нехватка системных ресурсов или когда включатся другие ограничения (например, на память сокета или размер буфера). Если возникает такая ситуация, то соединение X.25 разрывается."
+"retrieve the same chunk of data as output with the corresponding "
+"B<write>(2)  to the peer socket.  When necessary, the kernel takes care of "
+"segmenting and reassembling long messages by means of the X.25 M-bit.  There "
+"is no hard-coded upper limit for the message size.  However, reassembling of "
+"a long message might fail if there is a temporary lack of system resources "
+"or when other constraints (such as socket memory or buffer size limits) "
+"become effective.  If that occurs, the X.25 connection will be reset."
+msgstr ""
+"При работе выполняется сохранение границ сообщения \\(em вызов B<read>(2) "
+"вернёт кусок данных той же величины, что записала в сокет в помощью "
+"B<write>(2) сторона-партнёр. Когда это необходимо, ядро следит за "
+"сегментированием и перебирает (reassembling) длинные сообщения "
+"руководствуясь появлением бита M в X.25. Не существует жёсткого ограничения "
+"на максимальный размер сообщения. Однако, переборка длинного сообщения может "
+"закончиться неудачно, если возникнет временная нехватка системных ресурсов "
+"или когда включатся другие ограничения (например, на память сокета или "
+"размер буфера). Если возникает такая ситуация, то соединение X.25 "
+"разрывается."
 
 #. type: SS
 #: man-pages/man7/x25.7:47
@@ -116,7 +135,10 @@ msgstr "Адреса сокетов"
 msgid ""
 "The B<AF_X25> socket address family uses the I<struct sockaddr_x25> for "
 "representing network addresses as defined in ITU-T recommendation X.121."
-msgstr "Для представления сетевого адреса в семействе адресов сокета B<AF_X25> используется структура I<struct sockaddr_x25>, которая описана в рекомендации ITU-T X.121."
+msgstr ""
+"Для представления сетевого адреса в семействе адресов сокета B<AF_X25> "
+"используется структура I<struct sockaddr_x25>, которая описана в "
+"рекомендации ITU-T X.121."
 
 #. type: Plain text
 #: man-pages/man7/x25.7:61
@@ -126,17 +148,26 @@ msgid ""
 "    sa_family_t sx25_family;    /* must be AF_X25 */\n"
 "    x25_address sx25_addr;      /* X.121 Address */\n"
 "};\n"
-msgstr "struct sockaddr_x25 {\n    sa_family_t sx25_family;    /* должно быть AF_X25 */\n    x25_address sx25_addr;      /* адрес X.121 */\n};\n"
+msgstr ""
+"struct sockaddr_x25 {\n"
+"    sa_family_t sx25_family;    /* должно быть AF_X25 */\n"
+"    x25_address sx25_addr;      /* адрес X.121 */\n"
+"};\n"
 
 #. type: Plain text
 #: man-pages/man7/x25.7:72
 msgid ""
-"I<sx25_addr> contains a char array I<x25_addr[]> to be interpreted as a "
-"null-terminated string.  I<sx25_addr.x25_addr[]> consists of up to 15 (not "
+"I<sx25_addr> contains a char array I<x25_addr[]> to be interpreted as a null-"
+"terminated string.  I<sx25_addr.x25_addr[]> consists of up to 15 (not "
 "counting the terminating null byte) ASCII characters forming the X.121 "
 "address.  Only the decimal digit characters from \\(aq0\\(aq to \\(aq9\\(aq "
 "are allowed."
-msgstr "В I<sx25_addr> содержится массив символов I<x25_addr[]>, который интерпретируется как строка, завершающаяся null. Значение I<sx25_addr.x25_addr[]> содержит до 15-ти (не считая завершающего байта null) ASCII, из которых формируется адрес X.121. Разрешаются только десятичные цифры от «0» до «9»."
+msgstr ""
+"В I<sx25_addr> содержится массив символов I<x25_addr[]>, который "
+"интерпретируется как строка, завершающаяся null. Значение I<sx25_addr."
+"x25_addr[]> содержит до 15-ти (не считая завершающего байта null) ASCII, из "
+"которых формируется адрес X.121. Разрешаются только десятичные цифры от «0» "
+"до «9»."
 
 #. type: SS
 #: man-pages/man7/x25.7:72
@@ -148,9 +179,12 @@ msgstr "Параметры сокета"
 #: man-pages/man7/x25.7:81
 msgid ""
 "The following X.25-specific socket options can be set by using "
-"B<setsockopt>(2)  and read with B<getsockopt>(2)  with the I<level> argument"
-" set to B<SOL_X25>."
-msgstr "Специальные параметры сокета X.25 могут быть установлены с помощью B<setsockopt>(2) и прочитаны с помощью B<getsockopt>(2), если в аргументе I<level> указать значение B<SOL_X25>:"
+"B<setsockopt>(2)  and read with B<getsockopt>(2)  with the I<level> argument "
+"set to B<SOL_X25>."
+msgstr ""
+"Специальные параметры сокета X.25 могут быть установлены с помощью "
+"B<setsockopt>(2) и прочитаны с помощью B<getsockopt>(2), если в аргументе "
+"I<level> указать значение B<SOL_X25>:"
 
 #. type: TP
 #: man-pages/man7/x25.7:81
@@ -163,15 +197,27 @@ msgstr "B<X25_QBITINCL>"
 msgid ""
 "Controls whether the X.25 Q-bit (Qualified Data Bit) is accessible by the "
 "user.  It expects an integer argument.  If set to 0 (default), the Q-bit is "
-"never set for outgoing packets and the Q-bit of incoming packets is ignored."
-"  If set to 1, an additional first byte is prepended to each message read "
-"from or written to the socket.  For data read from the socket, a 0 first "
-"byte indicates that the Q-bits of the corresponding incoming data packets "
-"were not set.  A first byte with value 1 indicates that the Q-bit of the "
-"corresponding incoming data packets was set.  If the first byte of the data "
-"written to the socket is 1, the Q-bit of the corresponding outgoing data "
-"packets will be set.  If the first byte is 0, the Q-bit will not be set."
-msgstr "Управляет доступностью пользователю бита Q в X.25 (Qualified Data Bit — бит пригодности данных). В качестве аргумента указывается целое число. Если указан 0 (по умолчанию), то бит Q никогда не устанавливается в исходящих пакетах, а во входящих бит Q игнорируется. Если указана 1, то каждое прочитываемое или записываемое в сокет сообщение предваряется дополнительным байтом. Для данных, которые читаются из сокета, нулевой первый байт говорит означает, что биты Q в соответствующих входящих пакетах данных не установлены. Если первый байт имеет значение 1, то это говорит о том, что в соответствующих входящих пакетах данных установлены биты Q. Если первый байт данных, записанный в сокет, имеет значение 1, то для соответствующих исходящих пакетов данных будет установлен бит Q. Если первый байт имеет значение 0, то бит Q установлен не будет."
+"never set for outgoing packets and the Q-bit of incoming packets is "
+"ignored.  If set to 1, an additional first byte is prepended to each message "
+"read from or written to the socket.  For data read from the socket, a 0 "
+"first byte indicates that the Q-bits of the corresponding incoming data "
+"packets were not set.  A first byte with value 1 indicates that the Q-bit of "
+"the corresponding incoming data packets was set.  If the first byte of the "
+"data written to the socket is 1, the Q-bit of the corresponding outgoing "
+"data packets will be set.  If the first byte is 0, the Q-bit will not be set."
+msgstr ""
+"Управляет доступностью пользователю бита Q в X.25 (Qualified Data Bit — бит "
+"пригодности данных). В качестве аргумента указывается целое число. Если "
+"указан 0 (по умолчанию), то бит Q никогда не устанавливается в исходящих "
+"пакетах, а во входящих бит Q игнорируется. Если указана 1, то каждое "
+"прочитываемое или записываемое в сокет сообщение предваряется дополнительным "
+"байтом. Для данных, которые читаются из сокета, нулевой первый байт говорит "
+"означает, что биты Q в соответствующих входящих пакетах данных не "
+"установлены. Если первый байт имеет значение 1, то это говорит о том, что в "
+"соответствующих входящих пакетах данных установлены биты Q. Если первый байт "
+"данных, записанный в сокет, имеет значение 1, то для соответствующих "
+"исходящих пакетов данных будет установлен бит Q. Если первый байт имеет "
+"значение 0, то бит Q установлен не будет."
 
 #. type: SH
 #: man-pages/man7/x25.7:100
@@ -193,7 +239,9 @@ msgstr "ДЕФЕКТЫ"
 #. type: Plain text
 #: man-pages/man7/x25.7:105
 msgid "Plenty, as the X.25 PLP implementation is B<CONFIG_EXPERIMENTAL>."
-msgstr "Имеются в наличии, так как реализация PLP X.25 помечена как B<CONFIG_EXPERIMENTAL>."
+msgstr ""
+"Имеются в наличии, так как реализация PLP X.25 помечена как "
+"B<CONFIG_EXPERIMENTAL>."
 
 #. type: Plain text
 #: man-pages/man7/x25.7:107
@@ -207,14 +255,20 @@ msgid ""
 "include the kernel header file I<E<lt>linux/x25.hE<gt>>.  "
 "B<CONFIG_EXPERIMENTAL> might also imply that future versions of the "
 "interface are not binary compatible."
-msgstr "Пока не существует заголовочных файлов, предназначенных для использования в приложениях; вам необходимо включать заголовочный файл ядра I<E<lt>linux/x25.hE<gt>>. B<CONFIG_EXPERIMENTAL> также может неявно означать, что будущие версии данного интерфейса не будут двоично совместимы."
+msgstr ""
+"Пока не существует заголовочных файлов, предназначенных для использования в "
+"приложениях; вам необходимо включать заголовочный файл ядра I<E<lt>linux/x25."
+"hE<gt>>. B<CONFIG_EXPERIMENTAL> также может неявно означать, что будущие "
+"версии данного интерфейса не будут двоично совместимы."
 
 #. type: Plain text
 #: man-pages/man7/x25.7:118
 msgid ""
 "X.25 N-Reset events are not propagated to the user process yet.  Thus, if a "
 "reset occurred, data might be lost without notice."
-msgstr "События X.25 N-Reset пока не передаются пользовательскому процессу. Поэтому, если случится сброс соединения, данные могут быть потеряны без уведомления."
+msgstr ""
+"События X.25 N-Reset пока не передаются пользовательскому процессу. Поэтому, "
+"если случится сброс соединения, данные могут быть потеряны без уведомления."
 
 #. type: SH
 #: man-pages/man7/x25.7:118
@@ -230,10 +284,13 @@ msgstr "B<socket>(2), B<socket>(7)"
 #. type: Plain text
 #: man-pages/man7/x25.7:126
 msgid ""
-"Jonathan Simon Naylor: \\(lqThe Re-Analysis and Re-Implementation of "
-"X.25.\\(rq The URL is E<.UR "
-"ftp://ftp.pspt.fi\\:/pub\\:/ham\\:/linux\\:/ax25\\:/x25doc.tgz> E<.UE .>"
-msgstr "Jonathan Simon Naylor: «The Re-Analysis and Re-Implementation of X.25». URL: E<.UR ftp://ftp.pspt.fi\\:/pub\\:/ham\\:/linux\\:/ax25\\:/x25doc.tgz> E<.UE .>"
+"Jonathan Simon Naylor: \\(lqThe Re-Analysis and Re-Implementation of X.25."
+"\\(rq The URL is E<.UR ftp://ftp.pspt.fi\\:/pub\\:/ham\\:/linux\\:/ax25\\:/"
+"x25doc.tgz> E<.UE .>"
+msgstr ""
+"Jonathan Simon Naylor: «The Re-Analysis and Re-Implementation of X.25». URL: "
+"E<.UR ftp://ftp.pspt.fi\\:/pub\\:/ham\\:/linux\\:/ax25\\:/x25doc.tgz> E<.UE ."
+">"
 
 #. type: TH
 #: man-pages/man7/xattr.7:28
@@ -259,40 +316,58 @@ msgid ""
 "and directories, similar to the environment strings associated with a "
 "process.  An attribute may be defined or undefined.  If it is defined, its "
 "value may be empty or non-empty."
-msgstr "Расширенные атрибуты представляют собой пары имя:значение, которые постоянно связаны с файлами и каталогами, подобно тому как строки окружения связаны с процессом. Атрибут может быть определён или не определён. Если он определён, то его значение может быть или пустым, или не пустым."
+msgstr ""
+"Расширенные атрибуты представляют собой пары имя:значение, которые постоянно "
+"связаны с файлами и каталогами, подобно тому как строки окружения связаны с "
+"процессом. Атрибут может быть определён или не определён. Если он определён, "
+"то его значение может быть или пустым, или не пустым."
 
 #. type: Plain text
 #: man-pages/man7/xattr.7:45
 msgid ""
 "Extended attributes are extensions to the normal attributes which are "
-"associated with all inodes in the system (i.e., the B<stat>(2)  data).  They"
-" are often used to provide additional functionality to a filesystem\\(emfor "
+"associated with all inodes in the system (i.e., the B<stat>(2)  data).  They "
+"are often used to provide additional functionality to a filesystem\\(emfor "
 "example, additional security features such as Access Control Lists (ACLs) "
 "may be implemented using extended attributes."
-msgstr "Расширенные атрибуты дополняют обычные атрибуты, которые связаны со всеми inode в файловой системе (т. е., данные B<stat>(2)). Часто они используются для предоставления дополнительных возможностей файловой системы, например, дополнительные возможности безопасности, такие как списки контроля доступа (ACL), могут быть реализованы через расширенные атрибуты."
+msgstr ""
+"Расширенные атрибуты дополняют обычные атрибуты, которые связаны со всеми "
+"inode в файловой системе (т. е., данные B<stat>(2)). Часто они используются "
+"для предоставления дополнительных возможностей файловой системы, например, "
+"дополнительные возможности безопасности, такие как списки контроля доступа "
+"(ACL), могут быть реализованы через расширенные атрибуты."
 
 #. type: Plain text
 #: man-pages/man7/xattr.7:49
 msgid ""
 "Users with search access to a file or directory may use B<listxattr>(2)  to "
 "retrieve a list of attribute names defined for that file or directory."
-msgstr "Пользователи, у которых доступ к поиску для файла или каталога могут использовать B<listxattr>(2) для получения списка имён атрибутов, определённых для этого файла или каталога."
+msgstr ""
+"Пользователи, у которых доступ к поиску для файла или каталога могут "
+"использовать B<listxattr>(2) для получения списка имён атрибутов, "
+"определённых для этого файла или каталога."
 
 #. type: Plain text
 #: man-pages/man7/xattr.7:57
 msgid ""
 "Extended attributes are accessed as atomic objects.  Reading "
-"(B<getxattr>(2))  retrieves the whole value of an attribute and stores it in"
-" a buffer.  Writing (B<setxattr>(2))  replaces any previous value with the "
+"(B<getxattr>(2))  retrieves the whole value of an attribute and stores it in "
+"a buffer.  Writing (B<setxattr>(2))  replaces any previous value with the "
 "new value."
-msgstr "Расширенные атрибуты доступны как атомарные объекты. При чтении (B<getxattr>(2)) возвращается всё значение атрибута и происходит его сохранение в буфер. При записи (B<setxattr>(2)) происходит замещение старого значения на новое."
+msgstr ""
+"Расширенные атрибуты доступны как атомарные объекты. При чтении "
+"(B<getxattr>(2)) возвращается всё значение атрибута и происходит его "
+"сохранение в буфер. При записи (B<setxattr>(2)) происходит замещение старого "
+"значения на новое."
 
 #. type: Plain text
 #: man-pages/man7/xattr.7:60
 msgid ""
 "Space consumed for extended attributes may be counted towards the disk "
 "quotas of the file owner and file group."
-msgstr "Место под расширенные атрибуты может быть учтено в дисковой квоте владельца файла и файловой группы."
+msgstr ""
+"Место под расширенные атрибуты может быть учтено в дисковой квоте владельца "
+"файла и файловой группы."
 
 #. type: SS
 #: man-pages/man7/xattr.7:60
@@ -307,24 +382,34 @@ msgid ""
 "specified in the fully qualified I<namespace.attribute> form, for example, "
 "I<user.mime_type>, I<trusted.md5sum>, I<system.posix_acl_access>, or "
 "I<security.selinux>."
-msgstr "Имена атрибутов представляют собой строки с null в конце. Имя атрибута всегда указывается в полной форме — I<пространство_имён.атрибут>, например, I<user.mime_type>, I<trusted.md5sum>, I<system.posix_acl_access> или I<security.selinux>."
+msgstr ""
+"Имена атрибутов представляют собой строки с null в конце. Имя атрибута "
+"всегда указывается в полной форме — I<пространство_имён.атрибут>, например, "
+"I<user.mime_type>, I<trusted.md5sum>, I<system.posix_acl_access> или "
+"I<security.selinux>."
 
 #. type: Plain text
 #: man-pages/man7/xattr.7:77
 msgid ""
 "The namespace mechanism is used to define different classes of extended "
-"attributes.  These different classes exist for several reasons; for example,"
-" the permissions and capabilities required for manipulating extended "
+"attributes.  These different classes exist for several reasons; for example, "
+"the permissions and capabilities required for manipulating extended "
 "attributes of one namespace may differ to another."
-msgstr "Механизм пространства имён используется для определения различных классов расширенных атрибутов. Эти различные классы существуют по нескольким причинам; например, права доступа и мандаты, требуемые для работы с расширенными атрибутами в одном пространстве имён, могут отличаться в другом."
+msgstr ""
+"Механизм пространства имён используется для определения различных классов "
+"расширенных атрибутов. Эти различные классы существуют по нескольким "
+"причинам; например, права доступа и мандаты, требуемые для работы с "
+"расширенными атрибутами в одном пространстве имён, могут отличаться в другом."
 
 #. type: Plain text
 #: man-pages/man7/xattr.7:86
 msgid ""
 "Currently, the I<security>, I<system>, I<trusted>, and I<user> extended "
-"attribute classes are defined as described below.  Additional classes may be"
-" added in the future."
-msgstr "В настоящее время определены следующие классы: I<security>, I<system>, I<trusted> и I<user>. В будущем могут появиться дополнительные классы."
+"attribute classes are defined as described below.  Additional classes may be "
+"added in the future."
+msgstr ""
+"В настоящее время определены следующие классы: I<security>, I<system>, "
+"I<trusted> и I<user>. В будущем могут появиться дополнительные классы."
 
 #. type: SS
 #: man-pages/man7/xattr.7:86
@@ -335,14 +420,21 @@ msgstr "Расширенные атрибуты безопасности"
 #. type: Plain text
 #: man-pages/man7/xattr.7:97
 msgid ""
-"The security attribute namespace is used by kernel security modules, such as"
-" Security Enhanced Linux, and also to implement file capabilities (see "
+"The security attribute namespace is used by kernel security modules, such as "
+"Security Enhanced Linux, and also to implement file capabilities (see "
 "B<capabilities>(7)).  Read and write access permissions to security "
 "attributes depend on the policy implemented for each security attribute by "
 "the security module.  When no security module is loaded, all processes have "
 "read access to extended security attributes, and write access is limited to "
 "processes that have the B<CAP_SYS_ADMIN> capability."
-msgstr "Пространство имён атрибутов безопасности используется модулями безопасности ядра, такими как Security Enhanced Linux, а также для реализации мандатов файлов (смотрите B<capabilities>(7)). Доступ на чтение и запись атрибутов безопасности зависит от политики, реализуемой модулем безопасности для каждого атрибута безопасности. Если модуль безопасности не загружен, то все процессы могут читать расширенные атрибуты безопасности, а запись доступна только процессам с мандатом B<CAP_SYS_ADMIN>."
+msgstr ""
+"Пространство имён атрибутов безопасности используется модулями безопасности "
+"ядра, такими как Security Enhanced Linux, а также для реализации мандатов "
+"файлов (смотрите B<capabilities>(7)). Доступ на чтение и запись атрибутов "
+"безопасности зависит от политики, реализуемой модулем безопасности для "
+"каждого атрибута безопасности. Если модуль безопасности не загружен, то все "
+"процессы могут читать расширенные атрибуты безопасности, а запись доступна "
+"только процессам с мандатом B<CAP_SYS_ADMIN>."
 
 #. type: SS
 #: man-pages/man7/xattr.7:97
@@ -373,7 +465,12 @@ msgid ""
 "used to implement mechanisms in user space (i.e., outside the kernel) which "
 "keep information in extended attributes to which ordinary processes should "
 "not have access."
-msgstr "Доверительные расширенные атрибуты видимы и доступны только для процессов с мандатом B<CAP_SYS_ADMIN>. Атрибуты этого класса используются при реализации механизмов в пользовательском пространстве (т. е., вне ядра) для хранения информации в расширенных атрибутах, к которым у обычных процессов не должно быть доступа."
+msgstr ""
+"Доверительные расширенные атрибуты видимы и доступны только для процессов с "
+"мандатом B<CAP_SYS_ADMIN>. Атрибуты этого класса используются при реализации "
+"механизмов в пользовательском пространстве (т. е., вне ядра) для хранения "
+"информации в расширенных атрибутах, к которым у обычных процессов не должно "
+"быть доступа."
 
 #. type: SS
 #: man-pages/man7/xattr.7:111
@@ -387,8 +484,8 @@ msgid ""
 "User extended attributes may be assigned to files and directories for "
 "storing arbitrary additional information such as the mime type, character "
 "set or encoding of a file.  The access permissions for user attributes are "
-"defined by the file permission bits: read permission is required to retrieve"
-" the attribute value, and writer permission is required to change it."
+"defined by the file permission bits: read permission is required to retrieve "
+"the attribute value, and writer permission is required to change it."
 msgstr ""
 
 #. type: Plain text
@@ -398,20 +495,28 @@ msgid ""
 "differently from the file permission bits of special files and symbolic "
 "links.  For regular files and directories the file permission bits define "
 "access to the file's contents, while for device special files they define "
-"access to the device described by the special file.  The file permissions of"
-" symbolic links are not used in access checks.  These differences would "
-"allow users to consume filesystem resources in a way not controllable by "
-"disk quotas for group or world writable special files and directories."
-msgstr "Биты прав по разному учитываются между обычными файлами и каталогами и специальными файлами и символическими ссылками. У обычных файлов и каталогов битами прав определяется доступ к содержимому файлов, а у специальных файлов ими определяется доступ к устройству, которое описывает специальный файл. Файловые права на символические ссылки не используются при проверке доступа. Эти различия позволили бы пользователям использовать ресурсы файловой системы без учёта выделенных дисковых квот для группы или всем остальным, имеющим доступ на запись в специальные файлы и каталоги."
+"access to the device described by the special file.  The file permissions of "
+"symbolic links are not used in access checks.  These differences would allow "
+"users to consume filesystem resources in a way not controllable by disk "
+"quotas for group or world writable special files and directories."
+msgstr ""
+"Биты прав по разному учитываются между обычными файлами и каталогами и "
+"специальными файлами и символическими ссылками. У обычных файлов и каталогов "
+"битами прав определяется доступ к содержимому файлов, а у специальных файлов "
+"ими определяется доступ к устройству, которое описывает специальный файл. "
+"Файловые права на символические ссылки не используются при проверке доступа. "
+"Эти различия позволили бы пользователям использовать ресурсы файловой "
+"системы без учёта выделенных дисковых квот для группы или всем остальным, "
+"имеющим доступ на запись в специальные файлы и каталоги."
 
 #. type: Plain text
 #: man-pages/man7/xattr.7:138
 msgid ""
-"For this reason, user extended attributes are allowed only for regular files"
-" and directories, and access to user extended attributes is restricted to "
-"the owner and to users with appropriate capabilities for directories with "
-"the sticky bit set (see the B<chmod>(1)  manual page for an explanation of "
-"the sticky bit)."
+"For this reason, user extended attributes are allowed only for regular files "
+"and directories, and access to user extended attributes is restricted to the "
+"owner and to users with appropriate capabilities for directories with the "
+"sticky bit set (see the B<chmod>(1)  manual page for an explanation of the "
+"sticky bit)."
 msgstr ""
 
 #. type: SS
@@ -426,9 +531,15 @@ msgid ""
 "The kernel and the filesystem may place limits on the maximum number and "
 "size of extended attributes that can be associated with a file.  The VFS "
 "imposes limitations that an attribute names is limited to 255 bytes and an "
-"attribute value is limited to 64\\ kB.  The list of attribute names that can"
-" be returned is also limited to 64\\ kB (see BUGS in B<listxattr>(2))."
-msgstr "Ядро и файловая система могут ограничивать максимальное количество и размер расширенных атрибутов, которые можно связать с файлом. size of extended attributes that can be associated with a file. VFS налагает ограничение на длину имени атрибута в 255 байт и на значение атрибута в 64\\ КБ. Размер возвращаемого списка имён атрибутов также ограничивается 64\\ КБ (смотрите раздел ДЕФЕКТЫ в B<listxattr>(2))."
+"attribute value is limited to 64\\ kB.  The list of attribute names that can "
+"be returned is also limited to 64\\ kB (see BUGS in B<listxattr>(2))."
+msgstr ""
+"Ядро и файловая система могут ограничивать максимальное количество и размер "
+"расширенных атрибутов, которые можно связать с файлом. size of extended "
+"attributes that can be associated with a file. VFS налагает ограничение на "
+"длину имени атрибута в 255 байт и на значение атрибута в 64\\ КБ. Размер "
+"возвращаемого списка имён атрибутов также ограничивается 64\\ КБ (смотрите "
+"раздел ДЕФЕКТЫ в B<listxattr>(2))."
 
 #. type: Plain text
 #: man-pages/man7/xattr.7:152
@@ -445,23 +556,33 @@ msgid ""
 "bytes used by the names and values of all of a file's extended attributes "
 "must fit in a single filesystem block (1024, 2048 or 4096 bytes, depending "
 "on the block size specified when the filesystem was created)."
-msgstr "В текущих реализациях файловых систем ext2, ext3 и ext4 общее количество байт, используемое для имён и значений расширенных атрибутов всех файлов, должно помещаться в один блок файловой системы (1024, 2048 или 4096 байт, в зависимости от размера блока, указанного при создании файловой системы)."
+msgstr ""
+"В текущих реализациях файловых систем ext2, ext3 и ext4 общее количество "
+"байт, используемое для имён и значений расширенных атрибутов всех файлов, "
+"должно помещаться в один блок файловой системы (1024, 2048 или 4096 байт, в "
+"зависимости от размера блока, указанного при создании файловой системы)."
 
 #. type: Plain text
 #: man-pages/man7/xattr.7:163
 msgid ""
 "In the Btrfs, XFS, and Reiserfs filesystem implementations, there is no "
-"practical limit on the number of extended attributes associated with a file,"
-" and the algorithms used to store extended attribute information on disk are"
-" scalable."
-msgstr "В реализациях файловых систем Btrfs, XFS и Reiserfs нет ограничения на количество расширенных атрибутов, связанных с файлом, а для хранения информации о расширенных атрибутах на диске используются масштабируемые алгоритмы."
+"practical limit on the number of extended attributes associated with a file, "
+"and the algorithms used to store extended attribute information on disk are "
+"scalable."
+msgstr ""
+"В реализациях файловых систем Btrfs, XFS и Reiserfs нет ограничения на "
+"количество расширенных атрибутов, связанных с файлом, а для хранения "
+"информации о расширенных атрибутах на диске используются масштабируемые "
+"алгоритмы."
 
 #. type: Plain text
 #: man-pages/man7/xattr.7:166
 msgid ""
-"In the JFS, XFS, and Reiserfs filesystem implementations, the limit on bytes"
-" used in an EA value is the ceiling imposed by the VFS."
-msgstr "В реализациях файловых систем JFS, XFS и Reiserfs ограничение на количество байт, используемых для значения EA, задаётся потолком VFS."
+"In the JFS, XFS, and Reiserfs filesystem implementations, the limit on bytes "
+"used in an EA value is the ceiling imposed by the VFS."
+msgstr ""
+"В реализациях файловых систем JFS, XFS и Reiserfs ограничение на количество "
+"байт, используемых для значения EA, задаётся потолком VFS."
 
 #. type: Plain text
 #: man-pages/man7/xattr.7:172
@@ -469,7 +590,10 @@ msgid ""
 "In the Btrfs filesystem implementation, the total bytes used for the name, "
 "value, and implementation overhead bytes is limited to the filesystem "
 "I<nodesize> value (16\\ kB by default)."
-msgstr "В реализации файловой системы Btrfs общее количество байт, используемое для имени, значения и расходов реализации, ограничено значением файловой системы I<nodesize> (по умолчанию 16\\ КБ)."
+msgstr ""
+"В реализации файловой системы Btrfs общее количество байт, используемое для "
+"имени, значения и расходов реализации, ограничено значением файловой системы "
+"I<nodesize> (по умолчанию 16\\ КБ)."
 
 #. type: SH
 #: man-pages/man7/xattr.7:172
@@ -480,9 +604,11 @@ msgstr "СООТВЕТСТВИЕ СТАНДАРТАМ"
 #. type: Plain text
 #: man-pages/man7/xattr.7:175
 msgid ""
-"Extended attributes are not specified in POSIX.1, but some other systems "
-"(e.g., the BSDs and Solaris) provide a similar feature."
-msgstr "Расширенные атрибуты не описаны в POSIX.1, но некоторых других системах (например, BSD и Solaris) есть подобное свойство."
+"Extended attributes are not specified in POSIX.1, but some other systems (e."
+"g., the BSDs and Solaris) provide a similar feature."
+msgstr ""
+"Расширенные атрибуты не описаны в POSIX.1, но некоторых других системах "
+"(например, BSD и Solaris) есть подобное свойство."
 
 #. type: SH
 #: man-pages/man7/xattr.7:175
@@ -497,7 +623,11 @@ msgid ""
 "used on architectures with a different byte order and machine word size, "
 "care should be taken to store attribute values in an architecture-"
 "independent format."
-msgstr "Так как файловые системы, на которых хранятся расширенные атрибуты, также могут использоваться на архитектурах с разным порядком байт и размером машинного слова, нужно позаботиться о том, чтобы сохраняемые значения атрибутов были в архитектуро-независимом формате."
+msgstr ""
+"Так как файловые системы, на которых хранятся расширенные атрибуты, также "
+"могут использоваться на архитектурах с разным порядком байт и размером "
+"машинного слова, нужно позаботиться о том, чтобы сохраняемые значения "
+"атрибутов были в архитектуро-независимом формате."
 
 #.  .SH AUTHORS
 #.  Andreas Gruenbacher,
@@ -515,7 +645,10 @@ msgid ""
 "B<getfattr>(1), B<setfattr>(1), B<getxattr>(2), B<ioctl_iflags>(2), "
 "B<listxattr>(2), B<removexattr>(2), B<setxattr>(2), B<acl>(5), "
 "B<capabilities>(7)  B<selinux>(8)"
-msgstr "B<getfattr>(1), B<setfattr>(1), B<getxattr>(2), B<ioctl_iflags>(2), B<listxattr>(2), B<removexattr>(2), B<setxattr>(2), B<acl>(5), B<capabilities>(7)  B<selinux>(8)"
+msgstr ""
+"B<getfattr>(1), B<setfattr>(1), B<getxattr>(2), B<ioctl_iflags>(2), "
+"B<listxattr>(2), B<removexattr>(2), B<setxattr>(2), B<acl>(5), "
+"B<capabilities>(7)  B<selinux>(8)"
 
 #. type: TH
 #: man-pages/man3/xdr.3:11
@@ -540,14 +673,19 @@ msgid ""
 "These routines allow C programmers to describe arbitrary data structures in "
 "a machine-independent fashion.  Data for remote procedure calls are "
 "transmitted using these routines."
-msgstr "Эти процедуры позволяют программистам на C описывать произвольные структуры данных машинонезависимым способом. Данные для дистанционного вызова процедур передаются с помощью этих процедур."
+msgstr ""
+"Эти процедуры позволяют программистам на C описывать произвольные структуры "
+"данных машинонезависимым способом. Данные для дистанционного вызова процедур "
+"передаются с помощью этих процедур."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:24
 msgid ""
 "The prototypes below are declared in I<E<lt>rpc/xdr.hE<gt>> and make use of "
 "the following types:"
-msgstr "Представленные ниже прототипы объявлены в I<E<lt>rpc/xdr.hE<gt>> и позволяют использовать следующие типы:"
+msgstr ""
+"Представленные ниже прототипы объявлены в I<E<lt>rpc/xdr.hE<gt>> и позволяют "
+"использовать следующие типы:"
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:28
@@ -573,20 +711,31 @@ msgid ""
 "B<bool_t xdr_array(XDR *>I<xdrs>B<, char **>I<arrp>B<, unsigned int *>I<sizep>B<,>\n"
 "B<                 unsigned int >I<maxsize>B<, unsigned int >I<elsize>B<,>\n"
 "B<                 xdrproc_t >I<elproc>B<);>\n"
-msgstr "B<bool_t xdr_array(XDR *>I<xdrs>B<, char **>I<arrp>B<, unsigned int *>I<sizep>B<,>\nB<                 unsigned int >I<maxsize>B<, unsigned int >I<elsize>B<,>\nB<                 xdrproc_t >I<elproc>B<);>\n"
+msgstr ""
+"B<bool_t xdr_array(XDR *>I<xdrs>B<, char **>I<arrp>B<, unsigned int *>I<sizep>B<,>\n"
+"B<                 unsigned int >I<maxsize>B<, unsigned int >I<elsize>B<,>\n"
+"B<                 xdrproc_t >I<elproc>B<);>\n"
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:63
 msgid ""
 "A filter primitive that translates between variable-length arrays and their "
-"corresponding external representations.  The argument I<arrp> is the address"
-" of the pointer to the array, while I<sizep> is the address of the element "
+"corresponding external representations.  The argument I<arrp> is the address "
+"of the pointer to the array, while I<sizep> is the address of the element "
 "count of the array; this element count cannot exceed I<maxsize>.  The "
 "argument I<elsize> is the I<sizeof> each of the array's elements, and "
 "I<elproc> is an XDR filter that translates between the array elements' C "
 "form, and their external representation.  This routine returns one if it "
 "succeeds, zero otherwise."
-msgstr "Фильтр-примитив, преобразует массивы переменной длины в соответствующее им внешнее представление (и наоборот). В параметре I<arrp> указывается адрес указателя на массив, а в I<sizep> адрес счётчика элементов в массиве; этот счётчик не может превышать значение I<maxsize>. В параметре I<elsize> указывается I<sizeof> каждого из элементов массива, а в I<elproc> указывается фильтр XDR, который преобразует массив элементов формата С в их внешнее представление (и наоборот). Процедура возвращает 1 при успешном выполнении работы, иначе 0."
+msgstr ""
+"Фильтр-примитив, преобразует массивы переменной длины в соответствующее им "
+"внешнее представление (и наоборот). В параметре I<arrp> указывается адрес "
+"указателя на массив, а в I<sizep> адрес счётчика элементов в массиве; этот "
+"счётчик не может превышать значение I<maxsize>. В параметре I<elsize> "
+"указывается I<sizeof> каждого из элементов массива, а в I<elproc> "
+"указывается фильтр XDR, который преобразует массив элементов формата С в их "
+"внешнее представление (и наоборот). Процедура возвращает 1 при успешном "
+"выполнении работы, иначе 0."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:66
@@ -601,7 +750,11 @@ msgid ""
 "external representations.  When encoding data, this filter produces values "
 "of either one or zero.  This routine returns one if it succeeds, zero "
 "otherwise."
-msgstr "Фильтр-примитив, преобразует логические переменные (целочисленные в С) в их внешнее представление (и наоборот). Перекодируя данные, этот фильтр выдает либо единицу, либо ноль. Процедура возвращает 1 при успешном выполнении работы, иначе 0."
+msgstr ""
+"Фильтр-примитив, преобразует логические переменные (целочисленные в С) в их "
+"внешнее представление (и наоборот). Перекодируя данные, этот фильтр выдает "
+"либо единицу, либо ноль. Процедура возвращает 1 при успешном выполнении "
+"работы, иначе 0."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:78
@@ -609,7 +762,9 @@ msgstr "Фильтр-примитив, преобразует логически
 msgid ""
 "B<bool_t xdr_bytes(XDR *>I<xdrs>B<, char **>I<sp>B<, unsigned int *>I<sizep>B<,>\n"
 "B<                 unsigned int >I<maxsize>B<);>\n"
-msgstr "B<bool_t xdr_bytes(XDR *>I<xdrs>B<, char **>I<sp>B<, unsigned int *>I<sizep>B<,>\nB<                 unsigned int >I<maxsize>B<);>\n"
+msgstr ""
+"B<bool_t xdr_bytes(XDR *>I<xdrs>B<, char **>I<sp>B<, unsigned int *>I<sizep>B<,>\n"
+"B<                 unsigned int >I<maxsize>B<);>\n"
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:91
@@ -619,7 +774,12 @@ msgid ""
 "pointer.  The length of the string is located at address I<sizep>; strings "
 "cannot be longer than I<maxsize>.  This routine returns one if it succeeds, "
 "zero otherwise."
-msgstr "Фильтр-примитив, преобразует строки с известной длиной в их внешнее представление (и наоборот). В аргументе I<sp> указывается адрес указателя строки. Длина строки указывается по адресу I<sizep>; строки не могут быть длиннее I<maxsize>. Процедура возвращает 1 при успешном выполнении работы, иначе 0."
+msgstr ""
+"Фильтр-примитив, преобразует строки с известной длиной в их внешнее "
+"представление (и наоборот). В аргументе I<sp> указывается адрес указателя "
+"строки. Длина строки указывается по адресу I<sizep>; строки не могут быть "
+"длиннее I<maxsize>. Процедура возвращает 1 при успешном выполнении работы, "
+"иначе 0."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:94
@@ -635,7 +795,12 @@ msgid ""
 "Note: encoded characters are not packed, and occupy 4 bytes each.  For "
 "arrays of characters, it is worthwhile to consider B<xdr_bytes>(), "
 "B<xdr_opaque>()  or B<xdr_string>()."
-msgstr "Фильтр-примитив, преобразует символы языка C в их внешнее представление (и наоборот). Эта процедура возвращает 1 при успешном выполнении работы, иначе 0. Замечание: закодированные символы не упакованы, и каждый занимает 4 байта. В случае с массивом символов целесообразнее использовать B<xdr_bytes>(), B<xdr_opaque>() или B<xdr_string>()."
+msgstr ""
+"Фильтр-примитив, преобразует символы языка C в их внешнее представление (и "
+"наоборот). Эта процедура возвращает 1 при успешном выполнении работы, иначе "
+"0. Замечание: закодированные символы не упакованы, и каждый занимает 4 "
+"байта. В случае с массивом символов целесообразнее использовать "
+"B<xdr_bytes>(), B<xdr_opaque>() или B<xdr_string>()."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:109
@@ -650,7 +815,11 @@ msgid ""
 "I<xdrs>.  Destruction usually involves freeing private data structures "
 "associated with the stream.  Using I<xdrs> after invoking B<xdr_destroy>()  "
 "is undefined."
-msgstr "Макрос, который запускает процедуру уничтожения, связанную с потоком XDR I<xdrs>. Уничтожение обычно включает в себя освобождение структур частных данных, связанных с потоком. Результат использования I<xdrs> после запуска B<xdr_destroy>() непредсказуем."
+msgstr ""
+"Макрос, который запускает процедуру уничтожения, связанную с потоком XDR "
+"I<xdrs>. Уничтожение обычно включает в себя освобождение структур частных "
+"данных, связанных с потоком. Результат использования I<xdrs> после запуска "
+"B<xdr_destroy>() непредсказуем."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:123
@@ -661,10 +830,13 @@ msgstr "B<bool_t xdr_double(XDR *>I<xdrs>B<, double *>I<dp>B<);>\n"
 #. type: Plain text
 #: man-pages/man3/xdr.3:129
 msgid ""
-"A filter primitive that translates between C I<double> precision numbers and"
-" their external representations.  This routine returns one if it succeeds, "
+"A filter primitive that translates between C I<double> precision numbers and "
+"their external representations.  This routine returns one if it succeeds, "
 "zero otherwise."
-msgstr "Фильтр-примитив, преобразует значение чисел с точностью типа I<double> языка C в их внешнее представление (и наоборот). Эта процедура возвращает 1 при успешном выполнении работы, иначе 0."
+msgstr ""
+"Фильтр-примитив, преобразует значение чисел с точностью типа I<double> языка "
+"C в их внешнее представление (и наоборот). Эта процедура возвращает 1 при "
+"успешном выполнении работы, иначе 0."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:132
@@ -678,7 +850,10 @@ msgid ""
 "A filter primitive that translates between C I<enum>s (actually integers) "
 "and their external representations.  This routine returns one if it "
 "succeeds, zero otherwise."
-msgstr "Фильтр-примитив, преобразует значения типа I<enum> (представляющие собой целые числа) языка C в их внешнее представление (и наоборот). Эта процедура возвращает 1 при успешном выполнении работы, иначе 0."
+msgstr ""
+"Фильтр-примитив, преобразует значения типа I<enum> (представляющие собой "
+"целые числа) языка C в их внешнее представление (и наоборот). Эта процедура "
+"возвращает 1 при успешном выполнении работы, иначе 0."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:141
@@ -691,7 +866,10 @@ msgstr "B<bool_t xdr_float(XDR *>I<xdrs>B<, float *>I<fp>B<);>\n"
 msgid ""
 "A filter primitive that translates between C I<float>s and their external "
 "representations.  This routine returns one if it succeeds, zero otherwise."
-msgstr "Фильтр-примитив, преобразует значения типа I<float> языка C в их внешнее представление (и наоборот). Эта процедура возвращает 1 при успешном выполнении работы, иначе 0."
+msgstr ""
+"Фильтр-примитив, преобразует значения типа I<float> языка C в их внешнее "
+"представление (и наоборот). Эта процедура возвращает 1 при успешном "
+"выполнении работы, иначе 0."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:150
@@ -703,10 +881,14 @@ msgstr "B<void xdr_free(xdrproc_t >I<proc>B<, char *>I<objp>B<);>\n"
 #: man-pages/man3/xdr.3:160
 msgid ""
 "Generic freeing routine.  The first argument is the XDR routine for the "
-"object being freed.  The second argument is a pointer to the object itself."
-"  Note: the pointer passed to this routine is I<not> freed, but what it "
-"points to I<is> freed (recursively)."
-msgstr "Общая процедура высвобождения. Первым параметром для освобождаемого объекта является процедура XDR. Вторым параметром является указатель на сам объект. Замечание: указатель, переданный этой программе, I<не> освобождается, освобождается (рекурсивно) объект, на который он I<указывает>."
+"object being freed.  The second argument is a pointer to the object itself.  "
+"Note: the pointer passed to this routine is I<not> freed, but what it points "
+"to I<is> freed (recursively)."
+msgstr ""
+"Общая процедура высвобождения. Первым параметром для освобождаемого объекта "
+"является процедура XDR. Вторым параметром является указатель на сам объект. "
+"Замечание: указатель, переданный этой программе, I<не> освобождается, "
+"освобождается (рекурсивно) объект, на который он I<указывает>."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:163
@@ -722,7 +904,12 @@ msgid ""
 "the position of the XDR byte stream.  A desirable feature of XDR streams is "
 "that simple arithmetic works with this number, although the XDR stream "
 "instances need not guarantee this."
-msgstr "Макрос, который запускает процедуру получения позиции, связанной с потоком XDR I<xdrs>. Процедура возвращает беззнаковое целое, которое указывает на позицию XDR потока байтов. Удобное свойство потока XDR: с этим числом можно выполнять простые арифметические действия, хотя экземплярам потоков XDR этого можно не гарантировать."
+msgstr ""
+"Макрос, который запускает процедуру получения позиции, связанной с потоком "
+"XDR I<xdrs>. Процедура возвращает беззнаковое целое, которое указывает на "
+"позицию XDR потока байтов. Удобное свойство потока XDR: с этим числом можно "
+"выполнять простые арифметические действия, хотя экземплярам потоков XDR "
+"этого можно не гарантировать."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:176
@@ -737,7 +924,11 @@ msgid ""
 "I<xdrs>.  The routine returns a pointer to a contiguous piece of the "
 "stream's buffer; I<len> is the byte length of the desired buffer.  Note: "
 "pointer is cast to I<long\\ *>."
-msgstr "Макрос, который запускает встроенную процедуру, связанную с потоком XDR I<xdrs>. Процедура возвращает указатель на непрерывную часть буфера потока; в I<len> задаётся длина нужного буфера в байтах. Замечание: указатель приводится к I<long\\ *>."
+msgstr ""
+"Макрос, который запускает встроенную процедуру, связанную с потоком XDR "
+"I<xdrs>. Процедура возвращает указатель на непрерывную часть буфера потока; "
+"в I<len> задаётся длина нужного буфера в байтах. Замечание: указатель "
+"приводится к I<long\\ *>."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:193
@@ -745,7 +936,11 @@ msgid ""
 "Warning: B<xdr_inline>()  may return NULL (0)  if it cannot allocate a "
 "contiguous piece of a buffer.  Therefore the behavior may vary among stream "
 "instances; it exists for the sake of efficiency."
-msgstr "Предупреждение: B<xdr_inline>() может возвратить NULL (0), если не сможет выделить непрерывную часть буфера. Следовательно, поведение может меняться в разных экземплярах потока; вообще, она предназначена для обеспечения общей эффективности работы."
+msgstr ""
+"Предупреждение: B<xdr_inline>() может возвратить NULL (0), если не сможет "
+"выделить непрерывную часть буфера. Следовательно, поведение может меняться в "
+"разных экземплярах потока; вообще, она предназначена для обеспечения общей "
+"эффективности работы."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:196
@@ -758,7 +953,10 @@ msgstr "B<bool_t xdr_int(XDR *>I<xdrs>B<, int *>I<ip>B<);>\n"
 msgid ""
 "A filter primitive that translates between C integers and their external "
 "representations.  This routine returns one if it succeeds, zero otherwise."
-msgstr "Фильтр-примитив, преобразует значения целого типа языка C в их внешнее представление (и наоборот). Эта процедура возвращает 1 при успешном выполнении работы, иначе 0."
+msgstr ""
+"Фильтр-примитив, преобразует значения целого типа языка C в их внешнее "
+"представление (и наоборот). Эта процедура возвращает 1 при успешном "
+"выполнении работы, иначе 0."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:204
@@ -772,7 +970,10 @@ msgid ""
 "A filter primitive that translates between C I<long> integers and their "
 "external representations.  This routine returns one if it succeeds, zero "
 "otherwise."
-msgstr "Фильтр-примитив, преобразует значения типа I<long> языка C в их внешнее представление (и наоборот). Эта процедура возвращает 1 при успешном выполнении работы, иначе 0."
+msgstr ""
+"Фильтр-примитив, преобразует значения типа I<long> языка C в их внешнее "
+"представление (и наоборот). Эта процедура возвращает 1 при успешном "
+"выполнении работы, иначе 0."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:214
@@ -780,7 +981,9 @@ msgstr "Фильтр-примитив, преобразует значения �
 msgid ""
 "B<void xdrmem_create(XDR *>I<xdrs>B<, char *>I<addr>B<, unsigned int >I<size>B<,>\n"
 "B<                   enum xdr_op >I<op>B<);>\n"
-msgstr "B<void xdrmem_create(XDR *>I<xdrs>B<, char *>I<addr>B<, unsigned int >I<size>B<,>\nB<                   enum xdr_op >I<op>B<);>\n"
+msgstr ""
+"B<void xdrmem_create(XDR *>I<xdrs>B<, char *>I<addr>B<, unsigned int >I<size>B<,>\n"
+"B<                   enum xdr_op >I<op>B<);>\n"
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:231
@@ -790,14 +993,17 @@ msgid ""
 "I<addr> whose length is no more than I<size> bytes long.  The I<op> "
 "determines the direction of the XDR stream (either B<XDR_ENCODE>, "
 "B<XDR_DECODE>, or B<XDR_FREE>)."
-msgstr "Эта процедура инициализирует объект потока XDR, на который указывает I<xdrs>. Данные потока считываются из куска памяти или записываются в него с позиции I<addr>, длина которого не больше I<size> байтов. В I<op> указывается направление потока XDR (B<XDR_ENCODE>, B<XDR_DECODE> или B<XDR_FREE>)."
+msgstr ""
+"Эта процедура инициализирует объект потока XDR, на который указывает "
+"I<xdrs>. Данные потока считываются из куска памяти или записываются в него с "
+"позиции I<addr>, длина которого не больше I<size> байтов. В I<op> "
+"указывается направление потока XDR (B<XDR_ENCODE>, B<XDR_DECODE> или "
+"B<XDR_FREE>)."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:234
 #, no-wrap
-msgid ""
-"B<bool_t xdr_opaque(XDR *>I<xdrs>B<, char *>I<cp>B<, unsigned int "
-">I<cnt>B<);>\n"
+msgid "B<bool_t xdr_opaque(XDR *>I<xdrs>B<, char *>I<cp>B<, unsigned int >I<cnt>B<);>\n"
 msgstr "B<bool_t xdr_opaque(XDR *>I<xdrs>B<, char *>I<cp>B<, unsigned int >I<cnt>B<);>\n"
 
 #. type: Plain text
@@ -807,7 +1013,12 @@ msgid ""
 "external representation.  The argument I<cp> is the address of the opaque "
 "object, and I<cnt> is its size in bytes.  This routine returns one if it "
 "succeeds, zero otherwise."
-msgstr "Фильтр-примитив, преобразует значения типа со скрытым форматом фиксированного размера(«чёрным ящиком») в их внешнее представление и наоборот. В аргументе I<cp> указывает адрес с «чёрным ящиком», а в I<cnt> указывается его размер в байтах. Эта процедура возвращает 1 при успешном выполнении работы, иначе 0."
+msgstr ""
+"Фильтр-примитив, преобразует значения типа со скрытым форматом "
+"фиксированного размера(«чёрным ящиком») в их внешнее представление и "
+"наоборот. В аргументе I<cp> указывает адрес с «чёрным ящиком», а в I<cnt> "
+"указывается его размер в байтах. Эта процедура возвращает 1 при успешном "
+"выполнении работы, иначе 0."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:248
@@ -815,7 +1026,9 @@ msgstr "Фильтр-примитив, преобразует значения �
 msgid ""
 "B<bool_t xdr_pointer(XDR *>I<xdrs>B<, char **>I<objpp>B<,>\n"
 "B<                   unsigned int >I<objsize>B<, xdrproc_t >I<xdrobj>B<);>\n"
-msgstr "B<bool_t xdr_pointer(XDR *>I<xdrs>B<, char **>I<objpp>B<,>\nB<                   unsigned int >I<objsize>B<, xdrproc_t >I<xdrobj>B<);>\n"
+msgstr ""
+"B<bool_t xdr_pointer(XDR *>I<xdrs>B<, char **>I<objpp>B<,>\n"
+"B<                   unsigned int >I<objsize>B<, xdrproc_t >I<xdrobj>B<);>\n"
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:260
@@ -823,7 +1036,11 @@ msgid ""
 "Like B<xdr_reference>()  except that it serializes null pointers, whereas "
 "B<xdr_reference>()  does not.  Thus, B<xdr_pointer>()  can represent "
 "recursive data structures, such as binary trees or linked lists."
-msgstr "Работает аналогично B<xdr_reference>(), за исключением того, что может обрабатывать указатели null, в отличие от B<xdr_reference>(). Таким образом, B<xdr_pointer>() может представлять рекурсивные структуры данных, например, двоичные деревья или связанные списки."
+msgstr ""
+"Работает аналогично B<xdr_reference>(), за исключением того, что может "
+"обрабатывать указатели null, в отличие от B<xdr_reference>(). Таким образом, "
+"B<xdr_pointer>() может представлять рекурсивные структуры данных, например, "
+"двоичные деревья или связанные списки."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:266
@@ -833,7 +1050,11 @@ msgid ""
 "B<                   unsigned int >I<recvsize>B<, char *>I<handle>B<,>\n"
 "B<                   int (*>I<readit>B<) (char *, char *, int),>\n"
 "B<                   int (*>I<writeit>B<) (char *, char *, int));>\n"
-msgstr "B<void xdrrec_create(XDR *>I<xdrs>B<, unsigned int >I<sendsize>B<,>\nB<                   unsigned int >I<recvsize>B<, char *>I<handle>B<,>\nB<                   int (*>I<readit>B<) (char *, char *, int),>\nB<                   int (*>I<writeit>B<) (char *, char *, int));>\n"
+msgstr ""
+"B<void xdrrec_create(XDR *>I<xdrs>B<, unsigned int >I<sendsize>B<,>\n"
+"B<                   unsigned int >I<recvsize>B<, char *>I<handle>B<,>\n"
+"B<                   int (*>I<readit>B<) (char *, char *, int),>\n"
+"B<                   int (*>I<writeit>B<) (char *, char *, int));>\n"
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:293
@@ -845,20 +1066,36 @@ msgid ""
 "default by passing a zero value.  When a stream's output buffer is full, "
 "I<writeit> is called.  Similarly, when a stream's input buffer is empty, "
 "I<readit> is called.  The behavior of these two routines is similar to the "
-"system calls B<read>(2)  and B<write>(2), except that I<handle> is passed to"
-" the former routines as the first argument.  Note: the XDR stream's I<op> "
+"system calls B<read>(2)  and B<write>(2), except that I<handle> is passed to "
+"the former routines as the first argument.  Note: the XDR stream's I<op> "
 "field must be set by the caller."
-msgstr "Эта процедура инициализирует объект потока XDR, на который указывает I<xdrs>. Данные потока записываются в буфер размером I<sendsize>; значение ноль указывает на то, что система должна использовать значение, подходящее по умолчанию. Данные потока считываются из буфера размером I<recvsize>; его размер также может быть равно нулю, что указывает на значение, подходящее по умолчанию. Когда буфер записи потока заполнен, вызывается I<writeit>. Аналогично этому, когда буфер чтения потока пуст, вызывается I<readit>. Поведение этих двух процедур аналогично системным вызовам B<read>(2) и B<write>(2), исключая то, что I<handle> передается вызывающей процедуре в качестве первого параметра. Замечание: у потока XDR поле I<op> должно быть установлено вызывающим."
+msgstr ""
+"Эта процедура инициализирует объект потока XDR, на который указывает "
+"I<xdrs>. Данные потока записываются в буфер размером I<sendsize>; значение "
+"ноль указывает на то, что система должна использовать значение, подходящее "
+"по умолчанию. Данные потока считываются из буфера размером I<recvsize>; его "
+"размер также может быть равно нулю, что указывает на значение, подходящее по "
+"умолчанию. Когда буфер записи потока заполнен, вызывается I<writeit>. "
+"Аналогично этому, когда буфер чтения потока пуст, вызывается I<readit>. "
+"Поведение этих двух процедур аналогично системным вызовам B<read>(2) и "
+"B<write>(2), исключая то, что I<handle> передается вызывающей процедуре в "
+"качестве первого параметра. Замечание: у потока XDR поле I<op> должно быть "
+"установлено вызывающим."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:303
 msgid ""
-"Warning: to read from an XDR stream created by this API, you'll need to call"
-" B<xdrrec_skiprecord>()  first before calling any other XDR APIs.  This "
+"Warning: to read from an XDR stream created by this API, you'll need to call "
+"B<xdrrec_skiprecord>()  first before calling any other XDR APIs.  This "
 "inserts additional bytes in the stream to provide record boundary "
 "information.  Also, XDR streams created with different B<xdr*_create> APIs "
 "are not compatible for the same reason."
-msgstr "Предупреждение: для чтения из потока XDR, созданного данным программным интерфейсом, самым первым должен быть вызов B<xdrrec_skiprecord>(). Это вставит дополнительные байты в поток для предоставления информации о границе записи. Также, потоки XDR, созданные разными программными интерфейсами B<xdr*_create>, не совместимы по той же причине."
+msgstr ""
+"Предупреждение: для чтения из потока XDR, созданного данным программным "
+"интерфейсом, самым первым должен быть вызов B<xdrrec_skiprecord>(). Это "
+"вставит дополнительные байты в поток для предоставления информации о границе "
+"записи. Также, потоки XDR, созданные разными программными интерфейсами "
+"B<xdr*_create>, не совместимы по той же причине."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:306
@@ -873,7 +1110,11 @@ msgid ""
 "The data in the output buffer is marked as a completed record, and the "
 "output buffer is optionally written out if I<sendnow> is nonzero.  This "
 "routine returns one if it succeeds, zero otherwise."
-msgstr "Эта процедура может запускаться только для потоков, созданных B<xdrrec_create>(). Данные в буфере вывода помечены как полная запись; буфер вывода также записывается, если параметр I<sendnow> не равен нулю. Эта процедура возвращает 1 при успешном завершении работы, иначе возвращается 0."
+msgstr ""
+"Эта процедура может запускаться только для потоков, созданных "
+"B<xdrrec_create>(). Данные в буфере вывода помечены как полная запись; буфер "
+"вывода также записывается, если параметр I<sendnow> не равен нулю. Эта "
+"процедура возвращает 1 при успешном завершении работы, иначе возвращается 0."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:318
@@ -887,7 +1128,11 @@ msgid ""
 "This routine can be invoked only on streams created by B<xdrrec_create>().  "
 "After consuming the rest of the current record in the stream, this routine "
 "returns one if the stream has no more input, zero otherwise."
-msgstr "Эта процедура может запускаться только для потоков, созданных B<xdrrec_create>(). После поглощения остатка текущей записи в потоке процедура возвращает 1, если на входе потока нет больше данных; иначе возвращается 0."
+msgstr ""
+"Эта процедура может запускаться только для потоков, созданных "
+"B<xdrrec_create>(). После поглощения остатка текущей записи в потоке "
+"процедура возвращает 1, если на входе потока нет больше данных; иначе "
+"возвращается 0."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:328
@@ -902,7 +1147,11 @@ msgid ""
 "It tells the XDR implementation that the rest of the current record in the "
 "stream's input buffer should be discarded.  This routine returns one if it "
 "succeeds, zero otherwise."
-msgstr "Эта процедура может запускаться только для потоков, созданных B<xdrrec_create>(). Она сообщает реализации XDR, что оставшаяся часть текущей записи в буфере ввода потока должна быть отброшена. Эта процедура возвращает 1 при успешном завершении работы, иначе возвращается 0."
+msgstr ""
+"Эта процедура может запускаться только для потоков, созданных "
+"B<xdrrec_create>(). Она сообщает реализации XDR, что оставшаяся часть "
+"текущей записи в буфере ввода потока должна быть отброшена. Эта процедура "
+"возвращает 1 при успешном завершении работы, иначе возвращается 0."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:340
@@ -910,7 +1159,9 @@ msgstr "Эта процедура может запускаться только
 msgid ""
 "B<bool_t xdr_reference(XDR *>I<xdrs>B<, char **>I<pp>B<, unsigned int >I<size>B<,>\n"
 "B<                     xdrproc_t >I<proc>B<);>\n"
-msgstr "B<bool_t xdr_reference(XDR *>I<xdrs>B<, char **>I<pp>B<, unsigned int >I<size>B<,>\nB<                     xdrproc_t >I<proc>B<);>\n"
+msgstr ""
+"B<bool_t xdr_reference(XDR *>I<xdrs>B<, char **>I<pp>B<, unsigned int >I<size>B<,>\n"
+"B<                     xdrproc_t >I<proc>B<);>\n"
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:356
@@ -920,14 +1171,21 @@ msgid ""
 "that I<*pp> points to; and I<proc> is an XDR procedure that filters the "
 "structure between its C form and its external representation.  This routine "
 "returns one if it succeeds, zero otherwise."
-msgstr "Примитив, обеспечивающий курсирование указателя по структурам. В аргументе I<pp> указывается адрес указателя; I<size> задаётся в виде I<sizeof> структуры, на которую указывает I<*pp>; в I<proc> указывается процедура XDR, которая преобразует структуру языка С в её внешнее представление. Программа возвращает 1 при успешном завершении работы, иначе возвращается 0."
+msgstr ""
+"Примитив, обеспечивающий курсирование указателя по структурам. В аргументе "
+"I<pp> указывается адрес указателя; I<size> задаётся в виде I<sizeof> "
+"структуры, на которую указывает I<*pp>; в I<proc> указывается процедура XDR, "
+"которая преобразует структуру языка С в её внешнее представление. Программа "
+"возвращает 1 при успешном завершении работы, иначе возвращается 0."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:361
 msgid ""
 "Warning: this routine does not understand null pointers.  Use "
 "B<xdr_pointer>()  instead."
-msgstr "Предупреждение: эта процедура не работает с указателями null. Используйте вместо неё B<xdr_pointer>()."
+msgstr ""
+"Предупреждение: эта процедура не работает с указателями null. Используйте "
+"вместо неё B<xdr_pointer>()."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:364
@@ -938,18 +1196,25 @@ msgstr "B<xdr_setpos(XDR *>I<xdrs>B<, unsigned int >I<pos>B<);>\n"
 #. type: Plain text
 #: man-pages/man3/xdr.3:375
 msgid ""
-"A macro that invokes the set position routine associated with the XDR stream"
-" I<xdrs>.  The argument I<pos> is a position value obtained from "
+"A macro that invokes the set position routine associated with the XDR stream "
+"I<xdrs>.  The argument I<pos> is a position value obtained from "
 "B<xdr_getpos>().  This routine returns one if the XDR stream could be "
 "repositioned, and zero otherwise."
-msgstr "Макрос, вызываемый для установки позиции процедуры, связанной с потоком XDR I<xdrs>. В аргументе I<pos> задаётся значение позиции, полученное с помощью B<xdr_getpos>(). Эта процедура возвращает 1, если по потоку XDR можно перемещаться, иначе возвращается 0."
+msgstr ""
+"Макрос, вызываемый для установки позиции процедуры, связанной с потоком XDR "
+"I<xdrs>. В аргументе I<pos> задаётся значение позиции, полученное с помощью "
+"B<xdr_getpos>(). Эта процедура возвращает 1, если по потоку XDR можно "
+"перемещаться, иначе возвращается 0."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:379
 msgid ""
 "Warning: it is difficult to reposition some types of XDR streams, so this "
 "routine may fail with one type of stream and succeed with another."
-msgstr "Предупреждение: очень трудно изменить положение некоторых типов потока XDR, так что эта процедура может не работать с одним типом потока, но успешно работать с другим."
+msgstr ""
+"Предупреждение: очень трудно изменить положение некоторых типов потока XDR, "
+"так что эта процедура может не работать с одним типом потока, но успешно "
+"работать с другим."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:382
@@ -963,14 +1228,15 @@ msgid ""
 "A filter primitive that translates between C I<short> integers and their "
 "external representations.  This routine returns one if it succeeds, zero "
 "otherwise."
-msgstr "Фильтр-примитив, преобразует значения типа I<short> языка C в их внешнее представление (и наоборот). Эта процедура возвращает 1 при успешном выполнении работы, иначе 0."
+msgstr ""
+"Фильтр-примитив, преобразует значения типа I<short> языка C в их внешнее "
+"представление (и наоборот). Эта процедура возвращает 1 при успешном "
+"выполнении работы, иначе 0."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:391
 #, no-wrap
-msgid ""
-"B<void xdrstdio_create(XDR *>I<xdrs>B<, FILE *>I<file>B<, enum xdr_op "
-">I<op>B<);>\n"
+msgid "B<void xdrstdio_create(XDR *>I<xdrs>B<, FILE *>I<file>B<, enum xdr_op >I<op>B<);>\n"
 msgstr "B<void xdrstdio_create(XDR *>I<xdrs>B<, FILE *>I<file>B<, enum xdr_op >I<op>B<);>\n"
 
 #. type: Plain text
@@ -980,31 +1246,39 @@ msgid ""
 "XDR stream data is written to, or read from, the I<stdio> stream I<file>.  "
 "The argument I<op> determines the direction of the XDR stream (either "
 "B<XDR_ENCODE>, B<XDR_DECODE>, or B<XDR_FREE>)."
-msgstr "Эта процедура инициализирует объект потока XDR, на который указывает I<xdrs>. Данные потока XDR записываются или считываются из I<stdio> потока, указанного в I<file>. В I<op> указывается направление потока XDR (B<XDR_ENCODE>, B<XDR_DECODE> или B<XDR_FREE>)."
+msgstr ""
+"Эта процедура инициализирует объект потока XDR, на который указывает "
+"I<xdrs>. Данные потока XDR записываются или считываются из I<stdio> потока, "
+"указанного в I<file>. В I<op> указывается направление потока XDR "
+"(B<XDR_ENCODE>, B<XDR_DECODE> или B<XDR_FREE>)."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:413
 msgid ""
 "Warning: the destroy routine associated with such XDR streams calls "
 "B<fflush>(3)  on the I<file> stream, but never B<fclose>(3)."
-msgstr "Предупреждение: процедура уничтожения, связанная с такими потоками XDR, вызывает B<fflush>(3) для потока I<file>, но не вызывает B<fclose>(3)."
+msgstr ""
+"Предупреждение: процедура уничтожения, связанная с такими потоками XDR, "
+"вызывает B<fflush>(3) для потока I<file>, но не вызывает B<fclose>(3)."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:416
 #, no-wrap
-msgid ""
-"B<bool_t xdr_string(XDR *>I<xdrs>B<, char **>I<sp>B<, unsigned int "
-">I<maxsize>B<);>\n"
+msgid "B<bool_t xdr_string(XDR *>I<xdrs>B<, char **>I<sp>B<, unsigned int >I<maxsize>B<);>\n"
 msgstr "B<bool_t xdr_string(XDR *>I<xdrs>B<, char **>I<sp>B<, unsigned int >I<maxsize>B<);>\n"
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:426
 msgid ""
-"A filter primitive that translates between C strings and their corresponding"
-" external representations.  Strings cannot be longer than I<maxsize>.  Note:"
-" I<sp> is the address of the string's pointer.  This routine returns one if "
+"A filter primitive that translates between C strings and their corresponding "
+"external representations.  Strings cannot be longer than I<maxsize>.  Note: "
+"I<sp> is the address of the string's pointer.  This routine returns one if "
 "it succeeds, zero otherwise."
-msgstr "Фильтр-примитив, преобразует значения строк языка C в их внешнее представление (и наоборот). Длина строк не может быть больше чем I<maxsize>. Замечание: значение I<sp> представляет собой адрес на указатель строки. Эта процедура возвращает 1 при успешном выполнении работы, иначе 0."
+msgstr ""
+"Фильтр-примитив, преобразует значения строк языка C в их внешнее "
+"представление (и наоборот). Длина строк не может быть больше чем I<maxsize>. "
+"Замечание: значение I<sp> представляет собой адрес на указатель строки. Эта "
+"процедура возвращает 1 при успешном выполнении работы, иначе 0."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:429
@@ -1018,7 +1292,10 @@ msgid ""
 "A filter primitive that translates between I<unsigned> C characters and "
 "their external representations.  This routine returns one if it succeeds, "
 "zero otherwise."
-msgstr "Фильтр-примитив, преобразует I<unsigned> символы языка C в их внешнее представление (и наоборот). Эта процедура возвращает 1 при успешном выполнении работы, иначе 0."
+msgstr ""
+"Фильтр-примитив, преобразует I<unsigned> символы языка C в их внешнее "
+"представление (и наоборот). Эта процедура возвращает 1 при успешном "
+"выполнении работы, иначе 0."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:438
@@ -1032,7 +1309,10 @@ msgid ""
 "A filter primitive that translates between C I<unsigned> integers and their "
 "external representations.  This routine returns one if it succeeds, zero "
 "otherwise."
-msgstr "Фильтр-примитив, преобразует I<беззнаковые> целые языка C в их внешнее представление (и наоборот). Эта процедура возвращает 1 при успешном выполнении работы, иначе 0."
+msgstr ""
+"Фильтр-примитив, преобразует I<беззнаковые> целые языка C в их внешнее "
+"представление (и наоборот). Эта процедура возвращает 1 при успешном "
+"выполнении работы, иначе 0."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:447
@@ -1046,7 +1326,10 @@ msgid ""
 "A filter primitive that translates between C I<unsigned long> integers and "
 "their external representations.  This routine returns one if it succeeds, "
 "zero otherwise."
-msgstr "Фильтр-примитив, преобразует целые I<unsigned long> языка C в их внешнее представление (и наоборот). Эта процедура возвращает 1 при успешном выполнении работы, иначе 0."
+msgstr ""
+"Фильтр-примитив, преобразует целые I<unsigned long> языка C в их внешнее "
+"представление (и наоборот). Эта процедура возвращает 1 при успешном "
+"выполнении работы, иначе 0."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:456
@@ -1060,7 +1343,10 @@ msgid ""
 "A filter primitive that translates between C I<unsigned short> integers and "
 "their external representations.  This routine returns one if it succeeds, "
 "zero otherwise."
-msgstr "Фильтр-примитив, преобразует значения типа I<unsigned short> языка C в их внешнее представление (и наоборот). Эта процедура возвращает 1 при успешном выполнении работы, иначе 0."
+msgstr ""
+"Фильтр-примитив, преобразует значения типа I<unsigned short> языка C в их "
+"внешнее представление (и наоборот). Эта процедура возвращает 1 при успешном "
+"выполнении работы, иначе 0."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:467
@@ -1069,7 +1355,10 @@ msgid ""
 "B<bool_t xdr_union(XDR *>I<xdrs>B<, int *>I<dscmp>B<, char *>I<unp>B<,>\n"
 "B<                 struct xdr_discrim *>I<choices>B<,>\n"
 "B<                 xdrproc_t >I<defaultarm>B<);     /* may equal NULL */>\n"
-msgstr "B<bool_t xdr_union(XDR *>I<xdrs>B<, int *>I<dscmp>B<, char *>I<unp>B<,>\nB<                 struct xdr_discrim *>I<choices>B<,>\nB<                 xdrproc_t >I<defaultarm>B<);     /* может равняться NULL */>\n"
+msgstr ""
+"B<bool_t xdr_union(XDR *>I<xdrs>B<, int *>I<dscmp>B<, char *>I<unp>B<,>\n"
+"B<                 struct xdr_discrim *>I<choices>B<,>\n"
+"B<                 xdrproc_t >I<defaultarm>B<);     /* может равняться NULL */>\n"
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:501
@@ -1077,15 +1366,27 @@ msgid ""
 "A filter primitive that translates between a discriminated C I<union> and "
 "its corresponding external representation.  It first translates the "
 "discriminant of the union located at I<dscmp>.  This discriminant is always "
-"an I<enum_t>.  Next the union located at I<unp> is translated.  The argument"
-" I<choices> is a pointer to an array of B<xdr_discrim>()  structures.  Each "
+"an I<enum_t>.  Next the union located at I<unp> is translated.  The argument "
+"I<choices> is a pointer to an array of B<xdr_discrim>()  structures.  Each "
 "structure contains an ordered pair of [I<value>,I<proc>].  If the union's "
-"discriminant is equal to the associated I<value>, then the I<proc> is called"
-" to translate the union.  The end of the B<xdr_discrim>()  structure array "
-"is denoted by a routine of value NULL.  If the discriminant is not found in "
-"the I<choices> array, then the I<defaultarm> procedure is called (if it is "
-"not NULL).  Returns one if it succeeds, zero otherwise."
-msgstr "Фильтр-примитив, преобразует различимые (discriminated) I<объединения> языка C в их внешнее представление (и наоборот). Сначала преобразуется дискриминант объединения, расположенный в I<dscmp>. Этот дискриминант всегда имеет тип I<enum_t>. Затем преобразуется объединение, расположенное в I<unp>. Параметр I<choices> представляет собой указатель на массив структур B<xdr_discrim>(). Каждая структура содержит упорядоченную пару [I<значение>,I<процедура>]. Если дискриминант объединения равен соответствующему I<значению>, то для преобразования объединения вызывается I<процедура>. Конец массива структур B<xdr_discrim>() обозначается процедурой со значением NULL. Если дискриминант не найден в массиве I<choices>, то вызывается процедура I<defaultarm> (если данное значение не равно NULL). Возвращает 1 при успешном завершении работы, иначе возвращается 0."
+"discriminant is equal to the associated I<value>, then the I<proc> is called "
+"to translate the union.  The end of the B<xdr_discrim>()  structure array is "
+"denoted by a routine of value NULL.  If the discriminant is not found in the "
+"I<choices> array, then the I<defaultarm> procedure is called (if it is not "
+"NULL).  Returns one if it succeeds, zero otherwise."
+msgstr ""
+"Фильтр-примитив, преобразует различимые (discriminated) I<объединения> языка "
+"C в их внешнее представление (и наоборот). Сначала преобразуется "
+"дискриминант объединения, расположенный в I<dscmp>. Этот дискриминант всегда "
+"имеет тип I<enum_t>. Затем преобразуется объединение, расположенное в "
+"I<unp>. Параметр I<choices> представляет собой указатель на массив структур "
+"B<xdr_discrim>(). Каждая структура содержит упорядоченную пару [I<значение>,"
+"I<процедура>]. Если дискриминант объединения равен соответствующему "
+"I<значению>, то для преобразования объединения вызывается I<процедура>. "
+"Конец массива структур B<xdr_discrim>() обозначается процедурой со значением "
+"NULL. Если дискриминант не найден в массиве I<choices>, то вызывается "
+"процедура I<defaultarm> (если данное значение не равно NULL). Возвращает 1 "
+"при успешном завершении работы, иначе возвращается 0."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:505
@@ -1093,19 +1394,28 @@ msgstr "Фильтр-примитив, преобразует различимы
 msgid ""
 "B<bool_t xdr_vector(XDR *>I<xdrs>B<, char *>I<arrp>B<, unsigned int >I<size>B<,>\n"
 "B<                  unsigned int >I<elsize>B<, xdrproc_t >I<elproc>B<);>\n"
-msgstr "B<bool_t xdr_vector(XDR *>I<xdrs>B<, char *>I<arrp>B<, unsigned int >I<size>B<,>\nB<                  unsigned int >I<elsize>B<, xdrproc_t >I<elproc>B<);>\n"
+msgstr ""
+"B<bool_t xdr_vector(XDR *>I<xdrs>B<, char *>I<arrp>B<, unsigned int >I<size>B<,>\n"
+"B<                  unsigned int >I<elsize>B<, xdrproc_t >I<elproc>B<);>\n"
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:524
 msgid ""
 "A filter primitive that translates between fixed-length arrays and their "
-"corresponding external representations.  The argument I<arrp> is the address"
-" of the pointer to the array, while I<size> is the element count of the "
+"corresponding external representations.  The argument I<arrp> is the address "
+"of the pointer to the array, while I<size> is the element count of the "
 "array.  The argument I<elsize> is the I<sizeof> each of the array's "
 "elements, and I<elproc> is an XDR filter that translates between the array "
 "elements' C form, and their external representation.  This routine returns "
 "one if it succeeds, zero otherwise."
-msgstr "Фильтр-примитив, преобразует массивы постоянной длины в соответствующее им внешнее представление (и наоборот). В параметре I<arrp> указывается адрес указателя на массив, а в I<size> — адрес счётчика элементов в массиве. В параметре I<elsize> указывается I<sizeof> каждого из элементов массива, а в I<elproc> указывается фильтр XDR, который преобразует массив элементов формата С в их внешнее представление (и наоборот). Процедура возвращает 1 при успешном выполнении работы, иначе 0."
+msgstr ""
+"Фильтр-примитив, преобразует массивы постоянной длины в соответствующее им "
+"внешнее представление (и наоборот). В параметре I<arrp> указывается адрес "
+"указателя на массив, а в I<size> — адрес счётчика элементов в массиве. В "
+"параметре I<elsize> указывается I<sizeof> каждого из элементов массива, а в "
+"I<elproc> указывается фильтр XDR, который преобразует массив элементов "
+"формата С в их внешнее представление (и наоборот). Процедура возвращает 1 "
+"при успешном выполнении работы, иначе 0."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:527
@@ -1118,7 +1428,10 @@ msgstr "B<bool_t xdr_void(void);>\n"
 msgid ""
 "This routine always returns one.  It may be passed to RPC routines that "
 "require a function argument, where nothing is to be done."
-msgstr "Процедура всегда возвращает 1. Она может передаваться процедурам RPC, которые обязательно требуют функцию в аргументе и в которых не должно производиться никаких действий."
+msgstr ""
+"Процедура всегда возвращает 1. Она может передаваться процедурам RPC, "
+"которые обязательно требуют функцию в аргументе и в которых не должно "
+"производиться никаких действий."
 
 #. type: Plain text
 #: man-pages/man3/xdr.3:535
@@ -1135,7 +1448,13 @@ msgid ""
 "two XDR routines as arguments, and B<xdr_string>(), one of the most "
 "frequently used primitives, requires three.  Returns one if it succeeds, "
 "zero otherwise."
-msgstr "Примитив, вызывающий B<xdr_string(xdrs, sp, MAXUN.UNSIGNED)>; где B<MAXUN.UNSIGNED> равно максимальному значению беззнакового целого. Процедура B<xdr_wrapstring>() удобна, потому что пакет RPC передаёт максимум две процедуры XDR в качестве параметров, а для B<xdr_string>(), являющейся одной из наиболее часто используемых процедур, требует три. Процедура возвращает 1 при успешном завершении работы, иначе возвращается 0."
+msgstr ""
+"Примитив, вызывающий B<xdr_string(xdrs, sp, MAXUN.UNSIGNED)>; где B<MAXUN."
+"UNSIGNED> равно максимальному значению беззнакового целого. Процедура "
+"B<xdr_wrapstring>() удобна, потому что пакет RPC передаёт максимум две "
+"процедуры XDR в качестве параметров, а для B<xdr_string>(), являющейся одной "
+"из наиболее часто используемых процедур, требует три. Процедура возвращает 1 "
+"при успешном завершении работы, иначе возвращается 0."
 
 #. type: SH
 #: man-pages/man3/xdr.3:548
@@ -1173,7 +1492,9 @@ msgstr "Значение"
 msgid ""
 "B<xdr_array>(),\n"
 "B<xdr_bool>(),\n"
-msgstr "B<xdr_array>(),\nB<xdr_bool>(),\n"
+msgstr ""
+"B<xdr_array>(),\n"
+"B<xdr_bool>(),\n"
 
 #. type: tbl table
 #: man-pages/man3/xdr.3:559 man-pages/man3/xdr.3:562 man-pages/man3/xdr.3:565
@@ -1192,7 +1513,9 @@ msgstr ".br\n"
 msgid ""
 "B<xdr_bytes>(),\n"
 "B<xdr_char>(),\n"
-msgstr "B<xdr_bytes>(),\nB<xdr_char>(),\n"
+msgstr ""
+"B<xdr_bytes>(),\n"
+"B<xdr_char>(),\n"
 
 #. type: tbl table
 #: man-pages/man3/xdr.3:565
@@ -1200,7 +1523,9 @@ msgstr "B<xdr_bytes>(),\nB<xdr_char>(),\n"
 msgid ""
 "B<xdr_destroy>(),\n"
 "B<xdr_double>(),\n"
-msgstr "B<xdr_destroy>(),\nB<xdr_double>(),\n"
+msgstr ""
+"B<xdr_destroy>(),\n"
+"B<xdr_double>(),\n"
 
 #. type: tbl table
 #: man-pages/man3/xdr.3:568
@@ -1208,7 +1533,9 @@ msgstr "B<xdr_destroy>(),\nB<xdr_double>(),\n"
 msgid ""
 "B<xdr_enum>(),\n"
 "B<xdr_float>(),\n"
-msgstr "B<xdr_enum>(),\nB<xdr_float>(),\n"
+msgstr ""
+"B<xdr_enum>(),\n"
+"B<xdr_float>(),\n"
 
 #. type: tbl table
 #: man-pages/man3/xdr.3:571
@@ -1216,7 +1543,9 @@ msgstr "B<xdr_enum>(),\nB<xdr_float>(),\n"
 msgid ""
 "B<xdr_free>(),\n"
 "B<xdr_getpos>(),\n"
-msgstr "B<xdr_free>(),\nB<xdr_getpos>(),\n"
+msgstr ""
+"B<xdr_free>(),\n"
+"B<xdr_getpos>(),\n"
 
 #. type: tbl table
 #: man-pages/man3/xdr.3:574
@@ -1224,7 +1553,9 @@ msgstr "B<xdr_free>(),\nB<xdr_getpos>(),\n"
 msgid ""
 "B<xdr_inline>(),\n"
 "B<xdr_int>(),\n"
-msgstr "B<xdr_inline>(),\nB<xdr_int>(),\n"
+msgstr ""
+"B<xdr_inline>(),\n"
+"B<xdr_int>(),\n"
 
 #. type: tbl table
 #: man-pages/man3/xdr.3:577
@@ -1232,7 +1563,9 @@ msgstr "B<xdr_inline>(),\nB<xdr_int>(),\n"
 msgid ""
 "B<xdr_long>(),\n"
 "B<xdrmem_create>(),\n"
-msgstr "B<xdr_long>(),\nB<xdrmem_create>(),\n"
+msgstr ""
+"B<xdr_long>(),\n"
+"B<xdrmem_create>(),\n"
 
 #. type: tbl table
 #: man-pages/man3/xdr.3:580
@@ -1240,7 +1573,9 @@ msgstr "B<xdr_long>(),\nB<xdrmem_create>(),\n"
 msgid ""
 "B<xdr_opaque>(),\n"
 "B<xdr_pointer>(),\n"
-msgstr "B<xdr_opaque>(),\nB<xdr_pointer>(),\n"
+msgstr ""
+"B<xdr_opaque>(),\n"
+"B<xdr_pointer>(),\n"
 
 #. type: tbl table
 #: man-pages/man3/xdr.3:583
@@ -1248,7 +1583,9 @@ msgstr "B<xdr_opaque>(),\nB<xdr_pointer>(),\n"
 msgid ""
 "B<xdrrec_create>(),\n"
 "B<xdrrec_eof>(),\n"
-msgstr "B<xdrrec_create>(),\nB<xdrrec_eof>(),\n"
+msgstr ""
+"B<xdrrec_create>(),\n"
+"B<xdrrec_eof>(),\n"
 
 #. type: tbl table
 #: man-pages/man3/xdr.3:585
@@ -1268,7 +1605,9 @@ msgstr "B<xdrrec_skiprecord>(),\n"
 msgid ""
 "B<xdr_reference>(),\n"
 "B<xdr_setpos>(),\n"
-msgstr "B<xdr_reference>(),\nB<xdr_setpos>(),\n"
+msgstr ""
+"B<xdr_reference>(),\n"
+"B<xdr_setpos>(),\n"
 
 #. type: tbl table
 #: man-pages/man3/xdr.3:593
@@ -1276,7 +1615,9 @@ msgstr "B<xdr_reference>(),\nB<xdr_setpos>(),\n"
 msgid ""
 "B<xdr_short>(),\n"
 "B<xdrstdio_create>(),\n"
-msgstr "B<xdr_short>(),\nB<xdrstdio_create>(),\n"
+msgstr ""
+"B<xdr_short>(),\n"
+"B<xdrstdio_create>(),\n"
 
 #. type: tbl table
 #: man-pages/man3/xdr.3:596
@@ -1284,7 +1625,9 @@ msgstr "B<xdr_short>(),\nB<xdrstdio_create>(),\n"
 msgid ""
 "B<xdr_string>(),\n"
 "B<xdr_u_char>(),\n"
-msgstr "B<xdr_string>(),\nB<xdr_u_char>(),\n"
+msgstr ""
+"B<xdr_string>(),\n"
+"B<xdr_u_char>(),\n"
 
 #. type: tbl table
 #: man-pages/man3/xdr.3:599
@@ -1292,7 +1635,9 @@ msgstr "B<xdr_string>(),\nB<xdr_u_char>(),\n"
 msgid ""
 "B<xdr_u_int>(),\n"
 "B<xdr_u_long>(),\n"
-msgstr "B<xdr_u_int>(),\nB<xdr_u_long>(),\n"
+msgstr ""
+"B<xdr_u_int>(),\n"
+"B<xdr_u_long>(),\n"
 
 #. type: tbl table
 #: man-pages/man3/xdr.3:602
@@ -1300,7 +1645,9 @@ msgstr "B<xdr_u_int>(),\nB<xdr_u_long>(),\n"
 msgid ""
 "B<xdr_u_short>(),\n"
 "B<xdr_union>(),\n"
-msgstr "B<xdr_u_short>(),\nB<xdr_union>(),\n"
+msgstr ""
+"B<xdr_u_short>(),\n"
+"B<xdr_union>(),\n"
 
 #. type: tbl table
 #: man-pages/man3/xdr.3:605
@@ -1308,7 +1655,9 @@ msgstr "B<xdr_u_short>(),\nB<xdr_union>(),\n"
 msgid ""
 "B<xdr_vector>(),\n"
 "B<xdr_void>(),\n"
-msgstr "B<xdr_vector>(),\nB<xdr_void>(),\n"
+msgstr ""
+"B<xdr_vector>(),\n"
+"B<xdr_void>(),\n"
 
 #. type: tbl table
 #: man-pages/man3/xdr.3:607
@@ -1351,9 +1700,11 @@ msgstr "Представление внешних данных: техничес
 #. type: Plain text
 #: man-pages/man3/xdr.3:622
 msgid ""
-"I<XDR: External Data Representation Standard>, RFC\\ 1014, Sun Microsystems,"
-" Inc., USC-ISI."
-msgstr "I<XDR: External Data Representation Standard>, RFC\\ 1014, Sun Microsystems, Inc., USC-ISI."
+"I<XDR: External Data Representation Standard>, RFC\\ 1014, Sun Microsystems, "
+"Inc., USC-ISI."
+msgstr ""
+"I<XDR: External Data Representation Standard>, RFC\\ 1014, Sun Microsystems, "
+"Inc., USC-ISI."
 
 #. type: TH
 #: man-pages/man3/xcrypt.3:13
@@ -1397,7 +1748,9 @@ msgstr "B<int xdecrypt(char *>I<secret>B<, char *>I<passwd>B<);>"
 msgid ""
 "B<WARNING>: Do not use these functions in new code. They do not achieve any "
 "type of acceptable cryptographic security guarantees."
-msgstr "B<WARNING>: Не используйте эти функции в новом коде. Они не получили каких либо гарантий криптографической безопасности."
+msgstr ""
+"B<WARNING>: Не используйте эти функции в новом коде. Они не получили каких "
+"либо гарантий криптографической безопасности."
 
 #. type: Plain text
 #: man-pages/man3/xcrypt.3:44
@@ -1407,18 +1760,28 @@ msgid ""
 "I<key> is suitable for use as DES key.  It has odd parity set in bit 0 of "
 "each byte.  Both other functions described here use this function to turn "
 "their argument I<passwd> into a DES key."
-msgstr "Функция B<passwd2des>() принимает строку символов I<passwd> заданной длины и заполняет массив символов I<key> с 8 элементами, который подходит для использования в качестве ключа DES. Для каждого байта выставляется нулевой бит нечетности. Остальные две описанные здесь функции используют эту функцию для преобразования своего аргумента I<passwd> в ключ DES."
+msgstr ""
+"Функция B<passwd2des>() принимает строку символов I<passwd> заданной длины и "
+"заполняет массив символов I<key> с 8 элементами, который подходит для "
+"использования в качестве ключа DES. Для каждого байта выставляется нулевой "
+"бит нечетности. Остальные две описанные здесь функции используют эту функцию "
+"для преобразования своего аргумента I<passwd> в ключ DES."
 
 #.  (over the alphabet 0123456789abcdefABCDEF),
 #.  (over the alphabet 0123456789abcdef)
 #. type: Plain text
 #: man-pages/man3/xcrypt.3:61
 msgid ""
-"The B<xencrypt>()  function takes the ASCII character string I<secret> given"
-" in hex, which must have a length that is a multiple of 16, encrypts it "
-"using the DES key derived from I<passwd> by B<passwd2des>(), and outputs the"
-" result again in I<secret> as a hex string of the same length."
-msgstr "Функция B<xencrypt>() принимает строку из ASCII-символов I<secret> в виде шестнадцатеричной последовательности, длина которой должна быть кратна 16, шифрует её с помощью ключа DES, полученного из I<passwd> с помощью функции B<passwd2des>() и выводит результат снова в I<secret> в виде шестнадцатеричной строки той же длины."
+"The B<xencrypt>()  function takes the ASCII character string I<secret> given "
+"in hex, which must have a length that is a multiple of 16, encrypts it using "
+"the DES key derived from I<passwd> by B<passwd2des>(), and outputs the "
+"result again in I<secret> as a hex string of the same length."
+msgstr ""
+"Функция B<xencrypt>() принимает строку из ASCII-символов I<secret> в виде "
+"шестнадцатеричной последовательности, длина которой должна быть кратна 16, "
+"шифрует её с помощью ключа DES, полученного из I<passwd> с помощью функции "
+"B<passwd2des>() и выводит результат снова в I<secret> в виде "
+"шестнадцатеричной строки той же длины."
 
 #. type: Plain text
 #: man-pages/man3/xcrypt.3:65
@@ -1434,9 +1797,11 @@ msgstr "ВОЗВРАЩАЕМОЕ ЗНАЧЕНИЕ"
 #. type: Plain text
 #: man-pages/man3/xcrypt.3:71
 msgid ""
-"The functions B<xencrypt>()  and B<xdecrypt>()  return 1 on success and 0 on"
-" error."
-msgstr "При успешном выполнении функции B<xencrypt>() и B<xdecrypt>() возвращают 1 и 0 при ошибке."
+"The functions B<xencrypt>()  and B<xdecrypt>()  return 1 on success and 0 on "
+"error."
+msgstr ""
+"При успешном выполнении функции B<xencrypt>() и B<xdecrypt>() возвращают 1 и "
+"0 при ошибке."
 
 #. type: Plain text
 #: man-pages/man3/xcrypt.3:73
@@ -1450,7 +1815,10 @@ msgid ""
 "B<passwd2des>(),\n"
 "B<xencrypt>(),\n"
 "B<xdecrypt>()"
-msgstr "B<passwd2des>(),\nB<xencrypt>(),\nB<xdecrypt>()"
+msgstr ""
+"B<passwd2des>(),\n"
+"B<xencrypt>(),\n"
+"B<xdecrypt>()"
 
 #. type: Plain text
 #: man-pages/man3/xcrypt.3:90

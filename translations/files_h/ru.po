@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Yuri Kozlov <yuray@komyakino.ru>, 2012-2018
 # Yuri Kozlov <yuray@komyakino.ru>, 2014
@@ -12,12 +12,15 @@ msgstr ""
 "POT-Creation-Date: 2019-08-26 09:25+0300\n"
 "PO-Revision-Date: 2019-08-26 06:20+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
-"Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/ru/)\n"
+"Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/"
+"ru/)\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #. type: TH
 #: man-pages/man4/hd.4:29
@@ -68,30 +71,49 @@ msgid ""
 "number 3) is B<hda>; the slave drive is B<hdb>.  The master drive of the "
 "second controller (major device number 22)  is B<hdc> and the slave is "
 "B<hdd>."
-msgstr "Устройства B<hd*> — это блочные устройства для прямого доступа к жёстким дискам MFM/IDE. Для главного (master) диска на первичном контроллере IDE (старший номер 3) назначается имя B<hda>; для зависимого (slave) диска — B<hdb>. Для главного диска на вторичном контроллере (старший номер 22) — B<hdc>, а для зависимого — B<hdd>."
+msgstr ""
+"Устройства B<hd*> — это блочные устройства для прямого доступа к жёстким "
+"дискам MFM/IDE. Для главного (master) диска на первичном контроллере IDE "
+"(старший номер 3) назначается имя B<hda>; для зависимого (slave) диска — "
+"B<hdb>. Для главного диска на вторичном контроллере (старший номер 22) — "
+"B<hdc>, а для зависимого — B<hdd>."
 
 #. type: Plain text
 #: man-pages/man4/hd.4:71
 msgid ""
-"General IDE block device names have the form B<hd>I<X>, or B<hd>I<XP>, where"
-" I<X> is a letter denoting the physical drive, and I<P> is a number denoting"
-" the partition on that physical drive.  The first form, B<hd>I<X>, is used "
-"to address the whole drive.  Partition numbers are assigned in the order the"
-" partitions are discovered, and only nonempty, nonextended partitions get a "
-"number.  However, partition numbers 1\\(en4 are given to the four partitions"
-" described in the MBR (the \"primary\" partitions), regardless of whether "
+"General IDE block device names have the form B<hd>I<X>, or B<hd>I<XP>, where "
+"I<X> is a letter denoting the physical drive, and I<P> is a number denoting "
+"the partition on that physical drive.  The first form, B<hd>I<X>, is used to "
+"address the whole drive.  Partition numbers are assigned in the order the "
+"partitions are discovered, and only nonempty, nonextended partitions get a "
+"number.  However, partition numbers 1\\(en4 are given to the four partitions "
+"described in the MBR (the \"primary\" partitions), regardless of whether "
 "they are unused or extended.  Thus, the first logical partition will be "
-"B<hd>I<X>B<5>\\&.  Both DOS-type partitioning and BSD-disklabel partitioning"
-" are supported.  You can have at most 63 partitions on an IDE disk."
-msgstr "Названия блочных устройств IDE имеют вид B<hd>I<X> или B<hd>I<XP>, где I<X> — буква, указывающая на физический диск, а I<P> — номер, указывающий на раздел этого физического диска. Первая форма, B<hd>I<X>, используется для обращения ко всему диску. Номера разделов назначаются в порядке их обнаружения, и номера присваиваются только «не пустым», не расширенным разделам. Однако, номера с первого по четвертый присваиваются разделам, описанным в MBR («основным» (primary) разделам), независимо от того, используются ли они или являются ли расширенными (extended). Поэтому первым логическим разделом будет B<hd>I<X>B<5>\\&. Поддерживается как таблица разделов DOS, так и BSD-disklabel. На IDE-диске может быть не более 63-х разделов."
+"B<hd>I<X>B<5>\\&.  Both DOS-type partitioning and BSD-disklabel partitioning "
+"are supported.  You can have at most 63 partitions on an IDE disk."
+msgstr ""
+"Названия блочных устройств IDE имеют вид B<hd>I<X> или B<hd>I<XP>, где I<X> "
+"— буква, указывающая на физический диск, а I<P> — номер, указывающий на "
+"раздел этого физического диска. Первая форма, B<hd>I<X>, используется для "
+"обращения ко всему диску. Номера разделов назначаются в порядке их "
+"обнаружения, и номера присваиваются только «не пустым», не расширенным "
+"разделам. Однако, номера с первого по четвертый присваиваются разделам, "
+"описанным в MBR («основным» (primary) разделам), независимо от того, "
+"используются ли они или являются ли расширенными (extended). Поэтому первым "
+"логическим разделом будет B<hd>I<X>B<5>\\&. Поддерживается как таблица "
+"разделов DOS, так и BSD-disklabel. На IDE-диске может быть не более 63-х "
+"разделов."
 
 #. type: Plain text
 #: man-pages/man4/hd.4:77
 msgid ""
-"For example, I</dev/hda> refers to all of the first IDE drive in the system;"
-" and I</dev/hdb3> refers to the third DOS \"primary\" partition on the "
-"second one."
-msgstr "Например, I</dev/hda> ссылается на весь первый физический диск IDE, а I</dev/hdb3> ссылается на третий, \"основной\", раздел DOS второго физического диска."
+"For example, I</dev/hda> refers to all of the first IDE drive in the system; "
+"and I</dev/hdb3> refers to the third DOS \"primary\" partition on the second "
+"one."
+msgstr ""
+"Например, I</dev/hda> ссылается на весь первый физический диск IDE, а I</dev/"
+"hdb3> ссылается на третий, \"основной\", раздел DOS второго физического "
+"диска."
 
 #. type: Plain text
 #: man-pages/man4/hd.4:79
@@ -113,7 +135,18 @@ msgid ""
 "\\&...\n"
 "mknod -m 660 /dev/hdb8 b 3 72\n"
 "chown root:disk /dev/hd*\n"
-msgstr "mknod -m 660 /dev/hda b 3 0\nmknod -m 660 /dev/hda1 b 3 1\nmknod -m 660 /dev/hda2 b 3 2\n\\&...\nmknod -m 660 /dev/hda8 b 3 8\nmknod -m 660 /dev/hdb b 3 64\nmknod -m 660 /dev/hdb1 b 3 65\nmknod -m 660 /dev/hdb2 b 3 66\n\\&...\nmknod -m 660 /dev/hdb8 b 3 72\nchown root:disk /dev/hd*\n"
+msgstr ""
+"mknod -m 660 /dev/hda b 3 0\n"
+"mknod -m 660 /dev/hda1 b 3 1\n"
+"mknod -m 660 /dev/hda2 b 3 2\n"
+"\\&...\n"
+"mknod -m 660 /dev/hda8 b 3 8\n"
+"mknod -m 660 /dev/hdb b 3 64\n"
+"mknod -m 660 /dev/hdb1 b 3 65\n"
+"mknod -m 660 /dev/hdb2 b 3 66\n"
+"\\&...\n"
+"mknod -m 660 /dev/hdb8 b 3 72\n"
+"chown root:disk /dev/hd*\n"
 
 #. type: SH
 #: man-pages/man4/hd.4:95
@@ -188,13 +221,22 @@ msgstr "Параметры"
 msgid ""
 "I<hpsa_allow_any=1>: This option allows the driver to attempt to operate on "
 "any HP Smart Array hardware RAID controller, even if it is not explicitly "
-"known to the driver.  This allows newer hardware to work with older drivers."
-"  Typically this is used to allow installation of operating systems from "
-"media that predates the RAID controller, though it may also be used to "
+"known to the driver.  This allows newer hardware to work with older "
+"drivers.  Typically this is used to allow installation of operating systems "
+"from media that predates the RAID controller, though it may also be used to "
 "enable B<hpsa> to drive older controllers that would normally be handled by "
 "the B<cciss>(4)  driver.  These older boards have not been tested and are "
 "not supported with B<hpsa>, and B<cciss>(4)  should still be used for these."
-msgstr "I<hpsa_allow_any=1>: Этот параметр разрешает драйверу попытаться управлять аппаратурой любого контроллера RAID HP Smart Array, даже если его модель неизвестна драйверу. Это позволяет новому оборудованию работать через старые драйверы. Обычно, данный параметр используется для того, чтобы позволить установить операционную систему с носителя, который был создан раньше контроллера RAID, а также он может использоваться для обслуживания драйвером B<hpsa> старых контроллеров, которые, обычно, работают через драйвер B<cciss>(4). Такие старые карты не тестировались и не поддерживаются B<hpsa>; для них пока всё же лучше использовать B<cciss>(4)."
+msgstr ""
+"I<hpsa_allow_any=1>: Этот параметр разрешает драйверу попытаться управлять "
+"аппаратурой любого контроллера RAID HP Smart Array, даже если его модель "
+"неизвестна драйверу. Это позволяет новому оборудованию работать через старые "
+"драйверы. Обычно, данный параметр используется для того, чтобы позволить "
+"установить операционную систему с носителя, который был создан раньше "
+"контроллера RAID, а также он может использоваться для обслуживания драйвером "
+"B<hpsa> старых контроллеров, которые, обычно, работают через драйвер "
+"B<cciss>(4). Такие старые карты не тестировались и не поддерживаются "
+"B<hpsa>; для них пока всё же лучше использовать B<cciss>(4)."
 
 #. type: SS
 #: man-pages/man4/hpsa.4:39
@@ -220,7 +262,16 @@ msgid ""
 "    Smart Array P712m\n"
 "    Smart Array P711m\n"
 "    StorageWorks P1210m\n"
-msgstr "    Smart Array P700M\n    Smart Array P212\n    Smart Array P410\n    Smart Array P410i\n    Smart Array P411\n    Smart Array P812\n    Smart Array P712m\n    Smart Array P711m\n    StorageWorks P1210m\n"
+msgstr ""
+"    Smart Array P700M\n"
+"    Smart Array P212\n"
+"    Smart Array P410\n"
+"    Smart Array P410i\n"
+"    Smart Array P411\n"
+"    Smart Array P812\n"
+"    Smart Array P712m\n"
+"    Smart Array P711m\n"
+"    StorageWorks P1210m\n"
 
 #.  commit 135ae6edeb51979d0998daf1357f149a7d6ebb08
 #. type: Plain text
@@ -252,7 +303,27 @@ msgid ""
 "    Smart Array P600\n"
 "    Smart Array P700m\n"
 "    Smart Array P800\n"
-msgstr "    Smart Array 5300\n    Smart Array 5312\n    Smart Array 532\n    Smart Array 5i\n    Smart Array 6400\n    Smart Array 6400 EM\n    Smart Array 641\n    Smart Array 642\n    Smart Array 6i\n    Smart Array E200\n    Smart Array E200i\n    Smart Array E200i\n    Smart Array E200i\n    Smart Array E200i\n    Smart Array E500\n    Smart Array P400\n    Smart Array P400i\n    Smart Array P600\n    Smart Array P700m\n    Smart Array P800\n"
+msgstr ""
+"    Smart Array 5300\n"
+"    Smart Array 5312\n"
+"    Smart Array 532\n"
+"    Smart Array 5i\n"
+"    Smart Array 6400\n"
+"    Smart Array 6400 EM\n"
+"    Smart Array 641\n"
+"    Smart Array 642\n"
+"    Smart Array 6i\n"
+"    Smart Array E200\n"
+"    Smart Array E200i\n"
+"    Smart Array E200i\n"
+"    Smart Array E200i\n"
+"    Smart Array E200i\n"
+"    Smart Array E500\n"
+"    Smart Array P400\n"
+"    Smart Array P400i\n"
+"    Smart Array P600\n"
+"    Smart Array P700m\n"
+"    Smart Array P800\n"
 
 #. type: SS
 #: man-pages/man4/hpsa.4:81
@@ -267,7 +338,11 @@ msgid ""
 "Utility (either B<hpacuxe>(8)  or B<hpacucli>(8))  or the Offline ROM-based "
 "Configuration Utility (ORCA)  run from the Smart Array's option ROM at boot "
 "time."
-msgstr "Для настройки контроллеров HP Smart Array используйте HP Array Configuration Utility (B<hpacuxe>(8) или B<hpacucli>(8)) или Offline ROM-based Configuration Utility (ORCA), которую можно запустить из ROM Smart Array при старте машины."
+msgstr ""
+"Для настройки контроллеров HP Smart Array используйте HP Array Configuration "
+"Utility (B<hpacuxe>(8) или B<hpacucli>(8)) или Offline ROM-based "
+"Configuration Utility (ORCA), которую можно запустить из ROM Smart Array при "
+"старте машины."
 
 #. type: SS
 #: man-pages/man4/hpsa.4:90
@@ -278,11 +353,15 @@ msgstr "Узлы устройства"
 #. type: Plain text
 #: man-pages/man4/hpsa.4:104
 msgid ""
-"Logical drives are accessed via the SCSI disk driver (B<sd>(4)), tape drives"
-" via the SCSI tape driver (B<st>(4)), and the RAID controller via the SCSI "
-"generic driver (B<sg>(4)), with device nodes named I</dev/sd*>, I</dev/st*>,"
-" and I</dev/sg*>, respectively."
-msgstr "Логические диски доступны через драйвер дисков SCSI (B<sd>(4)), ленточные устройства — через драйвер лент SCSI (B<st>(4)), а контроллеры RAID — через общий драйвер SCSI (B<sg>(4)); имена узлов устройств называются I</dev/sd*,> I</dev/st*> и I</dev/sg*>, соответственно."
+"Logical drives are accessed via the SCSI disk driver (B<sd>(4)), tape drives "
+"via the SCSI tape driver (B<st>(4)), and the RAID controller via the SCSI "
+"generic driver (B<sg>(4)), with device nodes named I</dev/sd*>, I</dev/st*>, "
+"and I</dev/sg*>, respectively."
+msgstr ""
+"Логические диски доступны через драйвер дисков SCSI (B<sd>(4)), ленточные "
+"устройства — через драйвер лент SCSI (B<st>(4)), а контроллеры RAID — через "
+"общий драйвер SCSI (B<sg>(4)); имена узлов устройств называются I</dev/sd*,> "
+"I</dev/st*> и I</dev/sg*>, соответственно."
 
 #. type: SS
 #: man-pages/man4/hpsa.4:104
@@ -301,14 +380,24 @@ msgstr "I</sys/class/scsi_host/host*/rescan>"
 msgid ""
 "This is a write-only attribute.  Writing to this attribute will cause the "
 "driver to scan for new, changed, or removed devices (e.g., hot-plugged tape "
-"drives, or newly configured or deleted logical drives, etc.)  and notify the"
-" SCSI midlayer of any changes detected.  Normally a rescan is triggered "
+"drives, or newly configured or deleted logical drives, etc.)  and notify the "
+"SCSI midlayer of any changes detected.  Normally a rescan is triggered "
 "automatically by HP's Array Configuration Utility (either the GUI or the "
 "command-line variety); thus, for logical drive changes, the user should not "
 "normally have to use this attribute.  This attribute may be useful when hot "
 "plugging devices like tape drives, or entire storage boxes containing "
 "preconfigured logical drives."
-msgstr "Атрибут только для записи. Факт записи заставляет драйвер выполнить сканирование на предмет появления новых, изменившихся или удалённых устройств (например, подключаемых на ходу ленточных накопителей или только что настроенных или удалённых логических дисков и т. д.) и уведомить прослойку (midlayer)  SCSI об обнаруженных изменениях. Обычно, пересканирование выполняется автоматически утилитой настройки HP Array (из графического интерфейса или командной строки); поэтому при изменении логических дисков, обычно, пользователь не должен использовать этот атрибут. Данный атрибут полезен при подключении на ходу устройств, таких как ленточные накопители или хранилищ с уже настроенными логическими дисками."
+msgstr ""
+"Атрибут только для записи. Факт записи заставляет драйвер выполнить "
+"сканирование на предмет появления новых, изменившихся или удалённых "
+"устройств (например, подключаемых на ходу ленточных накопителей или только "
+"что настроенных или удалённых логических дисков и т. д.) и уведомить "
+"прослойку (midlayer)  SCSI об обнаруженных изменениях. Обычно, "
+"пересканирование выполняется автоматически утилитой настройки HP Array (из "
+"графического интерфейса или командной строки); поэтому при изменении "
+"логических дисков, обычно, пользователь не должен использовать этот атрибут. "
+"Данный атрибут полезен при подключении на ходу устройств, таких как "
+"ленточные накопители или хранилищ с уже настроенными логическими дисками."
 
 #. type: TP
 #: man-pages/man4/hpsa.4:119
@@ -334,7 +423,10 @@ msgid ""
 "# B<cd /sys/class/scsi_host/host4>\n"
 "# B<cat firmware_revision>\n"
 "7.14\n"
-msgstr "# B<cd /sys/class/scsi_host/host4>\n# B<cat firmware_revision>\n7.14\n"
+msgstr ""
+"# B<cd /sys/class/scsi_host/host4>\n"
+"# B<cat firmware_revision>\n"
+"7.14\n"
 
 #. type: SS
 #: man-pages/man4/hpsa.4:133
@@ -352,7 +444,9 @@ msgstr "I</sys/class/scsi_disk/c:b:t:l/device/unique_id>"
 #: man-pages/man4/hpsa.4:137
 msgid ""
 "This attribute contains a 32 hex-digit unique ID for each logical drive."
-msgstr "В данном атрибуте хранится 32 шестнадцатеричных цифры уникального идентификатора для каждого логического диска."
+msgstr ""
+"В данном атрибуте хранится 32 шестнадцатеричных цифры уникального "
+"идентификатора для каждого логического диска."
 
 #. type: Plain text
 #: man-pages/man4/hpsa.4:145
@@ -361,7 +455,10 @@ msgid ""
 "# B<cd /sys/class/scsi_disk/4:0:0:0/device>\n"
 "# B<cat unique_id>\n"
 "600508B1001044395355323037570F77\n"
-msgstr "# B<cd /sys/class/scsi_disk/4:0:0:0/device>\n# B<cat unique_id>\n600508B1001044395355323037570F77\n"
+msgstr ""
+"# B<cd /sys/class/scsi_disk/4:0:0:0/device>\n"
+"# B<cat unique_id>\n"
+"600508B1001044395355323037570F77\n"
 
 #. type: TP
 #: man-pages/man4/hpsa.4:147
@@ -381,7 +478,10 @@ msgid ""
 "# B<cd /sys/class/scsi_disk/4:0:0:0/device>\n"
 "# B<cat raid_level>\n"
 "RAID 0\n"
-msgstr "# B<cd /sys/class/scsi_disk/4:0:0:0/device>\n# B<cat raid_level>\nRAID 0\n"
+msgstr ""
+"# B<cd /sys/class/scsi_disk/4:0:0:0/device>\n"
+"# B<cat raid_level>\n"
+"RAID 0\n"
 
 #. type: TP
 #: man-pages/man4/hpsa.4:160
@@ -395,7 +495,11 @@ msgid ""
 "This attribute contains the 16 hex-digit (8 byte) LUN ID by which a logical "
 "drive or physical device can be addressed.  I<c>:I<b>:I<t>:I<l> are the "
 "controller, bus, target, and lun of the device."
-msgstr "В данном атрибуте хранится 16 шестнадцатеричных цифры (8 байт) идентификатора LUN, который может адресовать логический или физический диск. Форматом I<c>:I<b>:I<t>:I<l> описывается контроллер, шина, целевое устройство (target) и lun устройства."
+msgstr ""
+"В данном атрибуте хранится 16 шестнадцатеричных цифры (8 байт) "
+"идентификатора LUN, который может адресовать логический или физический диск. "
+"Форматом I<c>:I<b>:I<t>:I<l> описывается контроллер, шина, целевое "
+"устройство (target) и lun устройства."
 
 #. type: Plain text
 #: man-pages/man4/hpsa.4:174
@@ -404,7 +508,10 @@ msgid ""
 "# B<cd /sys/class/scsi_disk/4:0:0:0/device>\n"
 "# B<cat lunid>\n"
 "0x0000004000000000\n"
-msgstr "# B<cd /sys/class/scsi_disk/4:0:0:0/device>\n# B<cat lunid>\n0x0000004000000000\n"
+msgstr ""
+"# B<cd /sys/class/scsi_disk/4:0:0:0/device>\n"
+"# B<cat lunid>\n"
+"0x0000004000000000\n"
 
 #. type: SS
 #: man-pages/man4/hpsa.4:177
@@ -418,9 +525,13 @@ msgid ""
 "For compatibility with applications written for the B<cciss>(4)  driver, "
 "many, but not all of the ioctls supported by the B<cciss>(4)  driver are "
 "also supported by the B<hpsa> driver.  The data structures used by these "
-"ioctls are described in the Linux kernel source file "
-"I<include/linux/cciss_ioctl.h>."
-msgstr "Для совместимости с приложениями, написанными для драйвера B<cciss>(4), в драйвере B<hpsa> поддерживаются многие ioctl из драйвера B<cciss>(4) (но не все). Структуры данных, используемые в ioctl, описаны в файле исходного кода ядра Linux I<include/linux/cciss_ioctl.h>."
+"ioctls are described in the Linux kernel source file I<include/linux/"
+"cciss_ioctl.h>."
+msgstr ""
+"Для совместимости с приложениями, написанными для драйвера B<cciss>(4), в "
+"драйвере B<hpsa> поддерживаются многие ioctl из драйвера B<cciss>(4) (но не "
+"все). Структуры данных, используемые в ioctl, описаны в файле исходного кода "
+"ядра Linux I<include/linux/cciss_ioctl.h>."
 
 #. type: TP
 #: man-pages/man4/hpsa.4:189
@@ -434,7 +545,10 @@ msgid ""
 "These three ioctls all do exactly the same thing, which is to cause the "
 "driver to rescan for new devices.  This does exactly the same thing as "
 "writing to the hpsa-specific host \"rescan\" attribute."
-msgstr "Это три ioctl выполняют одинаковую работу — заставляют драйвер искать новые устройства. Это тоже самое, как если выполнить запись в hpsa-атрибут узла «rescan»."
+msgstr ""
+"Это три ioctl выполняют одинаковую работу — заставляют драйвер искать новые "
+"устройства. Это тоже самое, как если выполнить запись в hpsa-атрибут узла "
+"«rescan»."
 
 #. type: TP
 #: man-pages/man4/hpsa.4:195
@@ -445,9 +559,11 @@ msgstr "B<CCISS_GETPCIINFO>"
 #. type: Plain text
 #: man-pages/man4/hpsa.4:198
 msgid ""
-"Returns PCI domain, bus, device and function and \"board ID\" (PCI subsystem"
-" ID)."
-msgstr "Возвращает домен PCI, шину, устройство, функцию и «board ID» (ID подсистемы PCI)."
+"Returns PCI domain, bus, device and function and \"board ID\" (PCI subsystem "
+"ID)."
+msgstr ""
+"Возвращает домен PCI, шину, устройство, функцию и «board ID» (ID подсистемы "
+"PCI)."
 
 #. type: TP
 #: man-pages/man4/hpsa.4:198
@@ -466,7 +582,9 @@ msgstr "Возвращает версию драйвера в виде трёх 
 msgid ""
 "(major_version E<lt>E<lt> 16) | (minor_version E<lt>E<lt> 8) |\n"
 "    (subminor_version)\n"
-msgstr "(major_version E<lt>E<lt> 16) | (minor_version E<lt>E<lt> 8) |\n    (subminor_version)\n"
+msgstr ""
+"(major_version E<lt>E<lt> 16) | (minor_version E<lt>E<lt> 8) |\n"
+"    (subminor_version)\n"
 
 #. type: TP
 #: man-pages/man4/hpsa.4:208
@@ -479,24 +597,33 @@ msgstr "B<CCISS_PASSTHRU>, B<CCISS_BIG_PASSTHRU>"
 msgid ""
 "Allows \"BMIC\" and \"CISS\" commands to be passed through to the Smart "
 "Array.  These are used extensively by the HP Array Configuration Utility, "
-"SNMP storage agents, and so on.  See I<cciss_vol_status> at E<.UR "
-"http://cciss.sf.net> E<.UE> for some examples."
-msgstr "Разрешает передавать команды «BMIC» и «CISS» в Smart Array. Они часто используются в HP Array Configuration Utility, SNMP-агентах хранилищ и т. д. Примеры смотрите в E<.UR http://cciss.sf.net> E<.UE> в разделе о I<cciss_vol_status>."
+"SNMP storage agents, and so on.  See I<cciss_vol_status> at E<.UR http://"
+"cciss.sf.net> E<.UE> for some examples."
+msgstr ""
+"Разрешает передавать команды «BMIC» и «CISS» в Smart Array. Они часто "
+"используются в HP Array Configuration Utility, SNMP-агентах хранилищ и т. д. "
+"Примеры смотрите в E<.UR http://cciss.sf.net> E<.UE> в разделе о "
+"I<cciss_vol_status>."
 
 #. type: Plain text
 #: man-pages/man4/hpsa.4:226
 msgid ""
 "B<cciss>(4), B<sd>(4), B<st>(4), B<cciss_vol_status>(8), B<hpacucli>(8), "
 "B<hpacuxe>(8),"
-msgstr "B<cciss>(4), B<sd>(4), B<st>(4), B<cciss_vol_status>(8), B<hpacucli>(8), B<hpacuxe>(8),"
+msgstr ""
+"B<cciss>(4), B<sd>(4), B<st>(4), B<cciss_vol_status>(8), B<hpacucli>(8), "
+"B<hpacuxe>(8),"
 
 #. type: Plain text
 #: man-pages/man4/hpsa.4:233
 msgid ""
 "E<.UR http://cciss.sf.net> E<.UE ,> and I<Documentation/scsi/hpsa.txt> and "
-"I<Documentation/ABI/testing/sysfs-bus-pci-devices-cciss> in the Linux kernel"
-" source tree"
-msgstr "E<.UR http://cciss.sf.net> E<.UE ,> and I<Documentation/scsi/hpsa.txt> и I<Documentation/ABI/testing/sysfs-bus-pci-devices-cciss> в дереве исходного кода ядра Linux"
+"I<Documentation/ABI/testing/sysfs-bus-pci-devices-cciss> in the Linux kernel "
+"source tree"
+msgstr ""
+"E<.UR http://cciss.sf.net> E<.UE ,> and I<Documentation/scsi/hpsa.txt> и "
+"I<Documentation/ABI/testing/sysfs-bus-pci-devices-cciss> в дереве исходного "
+"кода ядра Linux"
 
 #. type: TH
 #: man-pages/man7/hostname.7:39
@@ -520,9 +647,12 @@ msgstr "hostname - определение имени узла"
 msgid ""
 "Hostnames are domains, where a domain is a hierarchical, dot-separated list "
 "of subdomains; for example, the machine \"monet\", in the \"example\" "
-"subdomain of the \"com\" domain would be represented as "
-"\"monet.example.com\"."
-msgstr "Имена узлов (hostnames) представляют собой домены; домен — это иерархический список поддоменов, перечисленных через точку; например, имя машины «monet» в поддомене «example» домена «com» записывалось бы в виде «monet.example.com»."
+"subdomain of the \"com\" domain would be represented as \"monet.example.com"
+"\"."
+msgstr ""
+"Имена узлов (hostnames) представляют собой домены; домен — это иерархический "
+"список поддоменов, перечисленных через точку; например, имя машины «monet» в "
+"поддомене «example» домена «com» записывалось бы в виде «monet.example.com»."
 
 #. type: Plain text
 #: man-pages/man7/hostname.7:61
@@ -532,30 +662,33 @@ msgid ""
 "Valid characters for hostnames are B<ASCII>(7)  letters from I<a> to I<z>, "
 "the digits from I<0> to I<9>, and the hyphen (-).  A hostname may not start "
 "with a hyphen."
-msgstr "Каждый элемент имени узла должен быть от 1 до 63 символов, а полное имя узла, включая точки, может быть не более 253 символов. Допустимые символы в именах: буквы B<ASCII>(7) от I<a> до I<z>, цифры от I<0> до I<9> и символ переноса (-). Имя узла не может начинаться с переноса."
+msgstr ""
+"Каждый элемент имени узла должен быть от 1 до 63 символов, а полное имя "
+"узла, включая точки, может быть не более 253 символов. Допустимые символы в "
+"именах: буквы B<ASCII>(7) от I<a> до I<z>, цифры от I<0> до I<9> и символ "
+"переноса (-). Имя узла не может начинаться с переноса."
 
 #. type: Plain text
 #: man-pages/man7/hostname.7:68
 msgid ""
-"Hostnames are often used with network client and server programs, which must"
-" generally translate the name to an address for use.  (This task is "
-"generally performed by either B<getaddrinfo>(3)  or the obsolete "
-"B<gethostbyname>(3).)"
+"Hostnames are often used with network client and server programs, which must "
+"generally translate the name to an address for use.  (This task is generally "
+"performed by either B<getaddrinfo>(3)  or the obsolete B<gethostbyname>(3).)"
 msgstr ""
 
 #. type: Plain text
 #: man-pages/man7/hostname.7:78
 msgid ""
 "Hostnames are resolved by the NSS framework in glibc according to the "
-"B<hosts> configuration in B<nsswitch.conf>.  The DNS-based name resolver (in"
-" the B<dns> NSS service module) resolves them in the following fashion."
+"B<hosts> configuration in B<nsswitch.conf>.  The DNS-based name resolver (in "
+"the B<dns> NSS service module) resolves them in the following fashion."
 msgstr ""
 
 #. type: Plain text
 #: man-pages/man7/hostname.7:91
 msgid ""
-"If the name consists of a single component, that is, contains no dot, and if"
-" the environment variable B<HOSTALIASES> is set to the name of a file, that "
+"If the name consists of a single component, that is, contains no dot, and if "
+"the environment variable B<HOSTALIASES> is set to the name of a file, that "
 "file is searched for any string matching the input hostname.  The file "
 "should consist of lines made up of two white-space separated strings, the "
 "first of which is the hostname alias, and the second of which is the "
@@ -563,45 +696,66 @@ msgid ""
 "match is found between the hostname to be resolved and the first field of a "
 "line in the file, the substituted name is looked up with no further "
 "processing."
-msgstr "Если имя состоит из одного компонента, то есть не содержит точки, и если в значении переменной окружения B<HOSTALIASES> указано имя файла, то в этом файле выполняется поиск строки, совпадающей с именем узла. Файл должен содержать строки, которые состоят из двух частей, разделённых пробелом; в первой части задаётся псевдоним узла, а во второй — полное имя узла, которое используется вместо псевдонима. Если при поиске без учёта регистра найден искомый узел в первой части, то обработка останавливается и для поиска используется имя из второй части."
+msgstr ""
+"Если имя состоит из одного компонента, то есть не содержит точки, и если в "
+"значении переменной окружения B<HOSTALIASES> указано имя файла, то в этом "
+"файле выполняется поиск строки, совпадающей с именем узла. Файл должен "
+"содержать строки, которые состоят из двух частей, разделённых пробелом; в "
+"первой части задаётся псевдоним узла, а во второй — полное имя узла, которое "
+"используется вместо псевдонима. Если при поиске без учёта регистра найден "
+"искомый узел в первой части, то обработка останавливается и для поиска "
+"используется имя из второй части."
 
 #. type: Plain text
 #: man-pages/man7/hostname.7:95
 msgid ""
-"If the input name ends with a trailing dot, the trailing dot is removed, and"
-" the remaining name is looked up with no further processing."
-msgstr "Если искомое имя оканчивается точкой, то эта точка удаляется и оставшееся имя ищется без дальнейшей обработки."
+"If the input name ends with a trailing dot, the trailing dot is removed, and "
+"the remaining name is looked up with no further processing."
+msgstr ""
+"Если искомое имя оканчивается точкой, то эта точка удаляется и оставшееся "
+"имя ищется без дальнейшей обработки."
 
 #. type: Plain text
 #: man-pages/man7/hostname.7:108
 msgid ""
 "If the input name does not end with a trailing dot, it is looked up by "
 "searching through a list of domains until a match is found.  The default "
-"search list includes first the local domain, then its parent domains with at"
-" least 2 name components (longest first).  For example, in the domain "
-"cs.example.com, the name lithium.cchem will be checked first as "
-"lithium.cchem.cs.example and then as lithium.cchem.example.com.  "
-"lithium.cchem.com will not be tried, as there is only one component "
-"remaining from the local domain.  The search path can be changed from the "
-"default by a system-wide configuration file (see B<resolver>(5))."
-msgstr "Если искомое имя не оканчивается точкой, то оно ищется со всеми доменами из списка до первого совпадения. По умолчанию, список поиска сначала содержит локальный домен, затем его родительские домены, имеющие не менее 2 компонентов в имени (от длинных к коротким). Например, в домене cs.example.com имя lithium.cchem сначала будет искаться как lithium.cchem.cs.example, а затем как lithium.cchem.example.com. lithium.cchem.com не будет искаться, так как в локальном домене остался только один компонент. Путь поиска по умолчанию можно изменить через системный файл настройки (смотрите B<resolver>(5))."
+"search list includes first the local domain, then its parent domains with at "
+"least 2 name components (longest first).  For example, in the domain cs."
+"example.com, the name lithium.cchem will be checked first as lithium.cchem."
+"cs.example and then as lithium.cchem.example.com.  lithium.cchem.com will "
+"not be tried, as there is only one component remaining from the local "
+"domain.  The search path can be changed from the default by a system-wide "
+"configuration file (see B<resolver>(5))."
+msgstr ""
+"Если искомое имя не оканчивается точкой, то оно ищется со всеми доменами из "
+"списка до первого совпадения. По умолчанию, список поиска сначала содержит "
+"локальный домен, затем его родительские домены, имеющие не менее 2 "
+"компонентов в имени (от длинных к коротким). Например, в домене cs.example."
+"com имя lithium.cchem сначала будет искаться как lithium.cchem.cs.example, а "
+"затем как lithium.cchem.example.com. lithium.cchem.com не будет искаться, "
+"так как в локальном домене остался только один компонент. Путь поиска по "
+"умолчанию можно изменить через системный файл настройки (смотрите "
+"B<resolver>(5))."
 
 #. type: Plain text
 #: man-pages/man7/hostname.7:115
 msgid ""
-"B<getaddrinfo>(3), B<gethostbyname>(3), B<nsswitch.conf>(5), B<resolver>(5),"
-" B<mailaddr>(7), B<named>(8)"
+"B<getaddrinfo>(3), B<gethostbyname>(3), B<nsswitch.conf>(5), B<resolver>(5), "
+"B<mailaddr>(7), B<named>(8)"
 msgstr ""
 
 #. type: Plain text
 #: man-pages/man7/hostname.7:119
 msgid "E<.UR http://www.ietf.org\\:/rfc\\:/rfc1123.txt> IETF RFC\\ 1123 E<.UE>"
-msgstr "E<.UR http://www.ietf.org\\:/rfc\\:/rfc1123.txt> IETF RFC\\ 1123 E<.UE>"
+msgstr ""
+"E<.UR http://www.ietf.org\\:/rfc\\:/rfc1123.txt> IETF RFC\\ 1123 E<.UE>"
 
 #. type: Plain text
 #: man-pages/man7/hostname.7:122
 msgid "E<.UR http://www.ietf.org\\:/rfc\\:/rfc1178.txt> IETF RFC\\ 1178 E<.UE>"
-msgstr "E<.UR http://www.ietf.org\\:/rfc\\:/rfc1178.txt> IETF RFC\\ 1178 E<.UE>"
+msgstr ""
+"E<.UR http://www.ietf.org\\:/rfc\\:/rfc1178.txt> IETF RFC\\ 1178 E<.UE>"
 
 #. type: TH
 #: man-pages/man7/hier.7:31
@@ -647,7 +801,9 @@ msgstr "I</bin>"
 msgid ""
 "This directory contains executable programs which are needed in single user "
 "mode and to bring the system up or repair it."
-msgstr "Каталог, содержащий исполняемые программы, необходимые для работы в однопользовательском режиме и для запуска или ремонта системы."
+msgstr ""
+"Каталог, содержащий исполняемые программы, необходимые для работы в "
+"однопользовательском режиме и для запуска или ремонта системы."
 
 #. type: TP
 #: man-pages/man7/hier.7:44
@@ -660,9 +816,13 @@ msgstr "I</boot>"
 msgid ""
 "Contains static files for the boot loader.  This directory holds only the "
 "files which are needed during the boot process.  The map installer and "
-"configuration files should go to I</sbin> and I</etc>.  The operating system"
-" kernel (initrd for example) must be located in either I</> or I</boot>."
-msgstr "Содержит статические файлы загрузчика системы. В этом каталоге содержатся файлы, необходимые только во время загрузки системы. Установщик карты и файлы настройки должны находиться в I</sbin> и I</etc>. Ядро операционной системы (например, initrd) должно располагаться в I</> или I</boot>."
+"configuration files should go to I</sbin> and I</etc>.  The operating system "
+"kernel (initrd for example) must be located in either I</> or I</boot>."
+msgstr ""
+"Содержит статические файлы загрузчика системы. В этом каталоге содержатся "
+"файлы, необходимые только во время загрузки системы. Установщик карты и "
+"файлы настройки должны находиться в I</sbin> и I</etc>. Ядро операционной "
+"системы (например, initrd) должно располагаться в I</> или I</boot>."
 
 #. type: TP
 #: man-pages/man7/hier.7:58
@@ -674,7 +834,9 @@ msgstr "I</dev>"
 #: man-pages/man7/hier.7:63
 msgid ""
 "Special or device files, which refer to physical devices.  See B<mknod>(1)."
-msgstr "Специальные файлы и файлы устройств, ссылающиеся на физические устройства. См. B<mknod>(1)."
+msgstr ""
+"Специальные файлы и файлы устройств, ссылающиеся на физические устройства. "
+"См. B<mknod>(1)."
 
 #. type: TP
 #: man-pages/man7/hier.7:63
@@ -686,11 +848,16 @@ msgstr "I</etc>"
 #: man-pages/man7/hier.7:76
 msgid ""
 "Contains configuration files which are local to the machine.  Some larger "
-"software packages, like X11, can have their own subdirectories below "
-"I</etc>.  Site-wide configuration files may be placed here or in "
-"I</usr/etc>.  Nevertheless, programs should always look for these files in "
-"I</etc> and you may have links for these files to I</usr/etc>."
-msgstr "Содержит файлы настройки машины. Некоторые большие пакеты программ, например X11, могут иметь свои собственные подкаталоги в I</etc>. Общесистемные файлы настройки могут быть размещены либо в этом каталоге, либо в I</usr/etc>. Тем не менее, программы всегда должны искать эти файлы в I</etc>, и у вас могут быть ссылки на эти файлы в I</usr/etc>."
+"software packages, like X11, can have their own subdirectories below I</"
+"etc>.  Site-wide configuration files may be placed here or in I</usr/etc>.  "
+"Nevertheless, programs should always look for these files in I</etc> and you "
+"may have links for these files to I</usr/etc>."
+msgstr ""
+"Содержит файлы настройки машины. Некоторые большие пакеты программ, например "
+"X11, могут иметь свои собственные подкаталоги в I</etc>. Общесистемные файлы "
+"настройки могут быть размещены либо в этом каталоге, либо в I</usr/etc>. Тем "
+"не менее, программы всегда должны искать эти файлы в I</etc>, и у вас могут "
+"быть ссылки на эти файлы в I</usr/etc>."
 
 #. type: TP
 #: man-pages/man7/hier.7:76
@@ -701,9 +868,10 @@ msgstr "I</etc/opt>"
 #. type: Plain text
 #: man-pages/man7/hier.7:81
 msgid ""
-"Host-specific configuration files for add-on applications installed in "
-"I</opt>."
-msgstr "Файлы настройки дополнительных приложений узла, установленных в I</opt>."
+"Host-specific configuration files for add-on applications installed in I</"
+"opt>."
+msgstr ""
+"Файлы настройки дополнительных приложений узла, установленных в I</opt>."
 
 #. type: TP
 #: man-pages/man7/hier.7:81
@@ -727,7 +895,9 @@ msgstr "I</etc/skel>"
 msgid ""
 "When a new user account is created, files from this directory are usually "
 "copied into the user's home directory."
-msgstr "При создании новой учётной записи пользователя файлы из этого каталога, как правило, копируются в домашний каталог пользователя."
+msgstr ""
+"При создании новой учётной записи пользователя файлы из этого каталога, как "
+"правило, копируются в домашний каталог пользователя."
 
 #. type: TP
 #: man-pages/man7/hier.7:88
@@ -763,7 +933,9 @@ msgid ""
 "On machines with home directories for users, these are usually beneath this "
 "directory, directly or not.  The structure of this directory depends on "
 "local administration decisions (optional)."
-msgstr "Содержит домашние каталоги пользователей, если они расположены на этой машине. Его структура зависит от администратора системы (необязательный)."
+msgstr ""
+"Содержит домашние каталоги пользователей, если они расположены на этой "
+"машине. Его структура зависит от администратора системы (необязательный)."
 
 #. type: TP
 #: man-pages/man7/hier.7:100
@@ -774,9 +946,11 @@ msgstr "I</lib>"
 #. type: Plain text
 #: man-pages/man7/hier.7:104
 msgid ""
-"This directory should hold those shared libraries that are necessary to boot"
-" the system and to run the commands in the root filesystem."
-msgstr "Этот каталог должен содержать разделяемые библиотеки, необходимые для загрузки системы и запуска команд, содержащихся в корневой файловой системе."
+"This directory should hold those shared libraries that are necessary to boot "
+"the system and to run the commands in the root filesystem."
+msgstr ""
+"Этот каталог должен содержать разделяемые библиотеки, необходимые для "
+"загрузки системы и запуска команд, содержащихся в корневой файловой системе."
 
 #. type: TP
 #: man-pages/man7/hier.7:104
@@ -789,7 +963,10 @@ msgstr "I</libE<lt>уточнениеE<gt>>"
 msgid ""
 "These directories are variants of I</lib> on system which support more than "
 "one binary format requiring separate libraries (optional)."
-msgstr "Эти каталоги являются вариантами I</lib> в системе, которая поддерживает более одного формата двоичных файлов, требующих отдельных библиотек (необязательные)."
+msgstr ""
+"Эти каталоги являются вариантами I</lib> в системе, которая поддерживает "
+"более одного формата двоичных файлов, требующих отдельных библиотек "
+"(необязательные)."
 
 #. type: TP
 #: man-pages/man7/hier.7:110
@@ -814,7 +991,10 @@ msgid ""
 "This directory contains items lost in the filesystem.  These items are "
 "usually chunks of files mangled as a consequence of a faulty disk or a "
 "system crash."
-msgstr "В этом каталоге содержатся потерянные элементы файловой системы. Обычно, данные элементы представляют собой куски  испорченных файлов в следствии ошибок диска или падений системы."
+msgstr ""
+"В этом каталоге содержатся потерянные элементы файловой системы. Обычно, "
+"данные элементы представляют собой куски  испорченных файлов в следствии "
+"ошибок диска или падений системы."
 
 #. type: TP
 #: man-pages/man7/hier.7:118
@@ -830,7 +1010,12 @@ msgid ""
 "mounting a certain type of media, mount directories can be created by "
 "appending a digit to the name of those available above starting with '0', "
 "but the unqualified name must also exist."
-msgstr "В этом каталоге содержатся точки монтирования съёмных носителей, таких как диски CD и DVD или устройства памяти USB. В системах, в которых существует более устройства для монтирования определённого типа носителя, каталоги монтирования могут создаваться добавлением к имени цифры, начиная с «0», но неполное имя также должно существовать."
+msgstr ""
+"В этом каталоге содержатся точки монтирования съёмных носителей, таких как "
+"диски CD и DVD или устройства памяти USB. В системах, в которых существует "
+"более устройства для монтирования определённого типа носителя, каталоги "
+"монтирования могут создаваться добавлением к имени цифры, начиная с «0», но "
+"неполное имя также должно существовать."
 
 #. type: TP
 #: man-pages/man7/hier.7:127
@@ -899,7 +1084,11 @@ msgid ""
 "This directory is a mount point for a temporarily mounted filesystem.  In "
 "some distributions, I</mnt> contains subdirectories intended to be used as "
 "mount points for several temporary filesystems."
-msgstr "Этот каталог является точкой для временного монтирования файловой системы. В некоторых дистрибутивах I</mnt> содержит подкаталоги, предназначенные для использования в качестве точек временного монтирования нескольких файловых систем."
+msgstr ""
+"Этот каталог является точкой для временного монтирования файловой системы. В "
+"некоторых дистрибутивах I</mnt> содержит подкаталоги, предназначенные для "
+"использования в качестве точек временного монтирования нескольких файловых "
+"систем."
 
 #. type: TP
 #: man-pages/man7/hier.7:149
@@ -922,10 +1111,13 @@ msgstr "I</proc>"
 #. type: Plain text
 #: man-pages/man7/hier.7:160
 msgid ""
-"This is a mount point for the I<proc> filesystem, which provides information"
-" about running processes and the kernel.  This pseudo-filesystem is "
-"described in more detail in B<proc>(5)."
-msgstr "Точка подключения файловой системы I<proc>, предоставляющей пользователю доступ к информации о запущенных процессах и ядре. Это псевдофайловая система, более подробно описанная в B<proc>(5)."
+"This is a mount point for the I<proc> filesystem, which provides information "
+"about running processes and the kernel.  This pseudo-filesystem is described "
+"in more detail in B<proc>(5)."
+msgstr ""
+"Точка подключения файловой системы I<proc>, предоставляющей пользователю "
+"доступ к информации о запущенных процессах и ядре. Это псевдофайловая "
+"система, более подробно описанная в B<proc>(5)."
 
 #. type: TP
 #: man-pages/man7/hier.7:160
@@ -950,7 +1142,9 @@ msgstr "I</sbin>"
 msgid ""
 "Like I</bin>, this directory holds commands needed to boot the system, but "
 "which are usually not executed by normal users."
-msgstr "Как и I</bin>, содержит команды, необходимые для запуска системы, но, как правило, не запускаемые обычными пользователями."
+msgstr ""
+"Как и I</bin>, содержит команды, необходимые для запуска системы, но, как "
+"правило, не запускаемые обычными пользователями."
 
 #. type: TP
 #: man-pages/man7/hier.7:169
@@ -976,7 +1170,10 @@ msgid ""
 "This is a mount point for the sysfs filesystem, which provides information "
 "about the kernel like I</proc>, but better structured, following the "
 "formalism of kobject infrastructure."
-msgstr "Это точка монтирования файловой системы sysfs, предоставляющей информацию о ядре; подобна I</proc>, но лучше структурирована, следует правилам инфраструктуры kobject."
+msgstr ""
+"Это точка монтирования файловой системы sysfs, предоставляющей информацию о "
+"ядре; подобна I</proc>, но лучше структурирована, следует правилам "
+"инфраструктуры kobject."
 
 #. type: TP
 #: man-pages/man7/hier.7:178
@@ -987,9 +1184,11 @@ msgstr "I</tmp>"
 #. type: Plain text
 #: man-pages/man7/hier.7:182
 msgid ""
-"This directory contains temporary files which may be deleted with no notice,"
-" such as by a regular job or at system boot up."
-msgstr "Этот каталог содержит временные файлы, которые можно удалить без всяких проблем в любое время, например, по расписанию или при загрузке системы."
+"This directory contains temporary files which may be deleted with no notice, "
+"such as by a regular job or at system boot up."
+msgstr ""
+"Этот каталог содержит временные файлы, которые можно удалить без всяких "
+"проблем в любое время, например, по расписанию или при загрузке системы."
 
 #. type: TP
 #: man-pages/man7/hier.7:182
@@ -1000,10 +1199,13 @@ msgstr "I</usr>"
 #. type: Plain text
 #: man-pages/man7/hier.7:187
 msgid ""
-"This directory is usually mounted from a separate partition.  It should hold"
-" only shareable, read-only data, so that it can be mounted by various "
+"This directory is usually mounted from a separate partition.  It should hold "
+"only shareable, read-only data, so that it can be mounted by various "
 "machines running Linux."
-msgstr "К этому каталогу обычно монтируется отдельный раздел. В нём должны содержаться общие, предназначенные только для чтения данные, так что он может быть смонтирован несколькими машинами, работающими в Linux."
+msgstr ""
+"К этому каталогу обычно монтируется отдельный раздел. В нём должны "
+"содержаться общие, предназначенные только для чтения данные, так что он "
+"может быть смонтирован несколькими машинами, работающими в Linux."
 
 #. type: TP
 #: man-pages/man7/hier.7:187
@@ -1027,7 +1229,9 @@ msgstr "I</usr/X11R6/bin>"
 msgid ""
 "Binaries which belong to the X-Window system; often, there is a symbolic "
 "link from the more traditional I</usr/bin/X11> to here."
-msgstr "Исполняемые файлы, принадлежащие системе X-Window. Часто на него имеется символьная ссылка из более привычного каталога — I</usr/bin/X11>."
+msgstr ""
+"Исполняемые файлы, принадлежащие системе X-Window. Часто на него имеется "
+"символьная ссылка из более привычного каталога — I</usr/bin/X11>."
 
 #. type: TP
 #: man-pages/man7/hier.7:196
@@ -1051,7 +1255,9 @@ msgstr "I</usr/X11R6/lib/X11>"
 msgid ""
 "These contain miscellaneous files needed to run X; Often, there is a "
 "symbolic link from I</usr/lib/X11> to this directory."
-msgstr "Содержит различные файлы, необходимые для запуска X. В каталоге I</usr/lib/X11> часто имеется символьная ссылка на вышеуказанный каталог."
+msgstr ""
+"Содержит различные файлы, необходимые для запуска X. В каталоге I</usr/lib/"
+"X11> часто имеется символьная ссылка на вышеуказанный каталог."
 
 #. type: TP
 #: man-pages/man7/hier.7:205
@@ -1065,7 +1271,10 @@ msgid ""
 "Contains include files needed for compiling programs using the X11 window "
 "system.  Often, there is a symbolic link from I</usr/include/X11> to this "
 "directory."
-msgstr "Содержит заголовочные файлы для компиляции программ, использующих систему X11. Часто имеется символьная ссылка на этот каталог в каталоге I</usr/include/X11>."
+msgstr ""
+"Содержит заголовочные файлы для компиляции программ, использующих систему "
+"X11. Часто имеется символьная ссылка на этот каталог в каталоге I</usr/"
+"include/X11>."
 
 #. type: TP
 #: man-pages/man7/hier.7:212
@@ -1080,7 +1289,11 @@ msgid ""
 "executed by normal users which are not needed for booting or for repairing "
 "the system and which are not installed locally should be placed in this "
 "directory."
-msgstr "Это основной каталог для исполняемых программ. Большая часть программ, не требующихся при загрузке или для ремонта системы, не устанавливаемых локально и запускаемых обычными пользователями, должна быть помещена в этот каталог."
+msgstr ""
+"Это основной каталог для исполняемых программ. Большая часть программ, не "
+"требующихся при загрузке или для ремонта системы, не устанавливаемых "
+"локально и запускаемых обычными пользователями, должна быть помещена в этот "
+"каталог."
 
 #. type: TP
 #: man-pages/man7/hier.7:219
@@ -1104,7 +1317,9 @@ msgstr "I</usr/bin/X11>"
 msgid ""
 "is the traditional place to look for X11 executables; on Linux, it usually "
 "is a symbolic link to I</usr/X11R6/bin>."
-msgstr "обычное место для исполняемых файлов X11; в Linux это обычно символьная ссылка на I</usr/X11R6/bin>."
+msgstr ""
+"обычное место для исполняемых файлов X11; в Linux это обычно символьная "
+"ссылка на I</usr/X11R6/bin>."
 
 #. type: TP
 #: man-pages/man7/hier.7:227
@@ -1139,9 +1354,13 @@ msgstr "I</usr/etc>"
 msgid ""
 "Site-wide configuration files to be shared between several machines may be "
 "stored in this directory.  However, commands should always reference those "
-"files using the I</etc> directory.  Links from files in I</etc> should point"
-" to the appropriate files in I</usr/etc>."
-msgstr "В этом каталоге можно хранить системные файлы настройки, которые могут использоваться несколькими машинами одновременно. Однако, команды должны искать эти файлы в каталоге I</etc>. Ссылки из каталога I</etc> должны указывать на соответствующие файлы в I</usr/etc>."
+"files using the I</etc> directory.  Links from files in I</etc> should point "
+"to the appropriate files in I</usr/etc>."
+msgstr ""
+"В этом каталоге можно хранить системные файлы настройки, которые могут "
+"использоваться несколькими машинами одновременно. Однако, команды должны "
+"искать эти файлы в каталоге I</etc>. Ссылки из каталога I</etc> должны "
+"указывать на соответствующие файлы в I</usr/etc>."
 
 #. type: TP
 #: man-pages/man7/hier.7:247
@@ -1185,9 +1404,11 @@ msgstr "I</usr/include/X11>"
 #. type: Plain text
 #: man-pages/man7/hier.7:262
 msgid ""
-"Include files for the C compiler and the X-Window system.  This is usually a"
-" symbolic link to I</usr/X11R6/include/X11>."
-msgstr "Заголовочные файлы для компилятора C и системы X-Window. Как правило, это символьная ссылка на I</usr/X11R6/include/X11>."
+"Include files for the C compiler and the X-Window system.  This is usually a "
+"symbolic link to I</usr/X11R6/include/X11>."
+msgstr ""
+"Заголовочные файлы для компилятора C и системы X-Window. Как правило, это "
+"символьная ссылка на I</usr/X11R6/include/X11>."
 
 #. type: TP
 #: man-pages/man7/hier.7:262
@@ -1200,7 +1421,9 @@ msgstr "I</usr/include/asm>"
 msgid ""
 "Include files which declare some assembler functions.  This used to be a "
 "symbolic link to I</usr/src/linux/include/asm>."
-msgstr "Заголовочные файлы, определяющие некоторые ассемблерные функции. Это символьная ссылка на I</usr/src/linux/include/asm>."
+msgstr ""
+"Заголовочные файлы, определяющие некоторые ассемблерные функции. Это "
+"символьная ссылка на I</usr/src/linux/include/asm>."
 
 #. type: TP
 #: man-pages/man7/hier.7:268
@@ -1212,9 +1435,12 @@ msgstr "I</usr/include/linux>"
 #: man-pages/man7/hier.7:274
 msgid ""
 "This contains information which may change from system release to system "
-"release and used to be a symbolic link to I</usr/src/linux/include/linux> to"
-" get at operating-system-specific information."
-msgstr "Содержит информацию, которая может меняться от выпуска к выпуску. Это символьная ссылка на I</usr/src/linux/include/linux> для получения информации, предназначенной только для данной системы."
+"release and used to be a symbolic link to I</usr/src/linux/include/linux> to "
+"get at operating-system-specific information."
+msgstr ""
+"Содержит информацию, которая может меняться от выпуска к выпуску. Это "
+"символьная ссылка на I</usr/src/linux/include/linux> для получения "
+"информации, предназначенной только для данной системы."
 
 #. type: Plain text
 #: man-pages/man7/hier.7:289
@@ -1222,11 +1448,19 @@ msgid ""
 "(Note that one should have include files there that work correctly with the "
 "current libc and in user space.  However, Linux kernel source is not "
 "designed to be used with user programs and does not know anything about the "
-"libc you are using.  It is very likely that things will break if you let "
-"I</usr/include/asm> and I</usr/include/linux> point at a random kernel tree."
-"  Debian systems don't do this and use headers from a known good kernel "
+"libc you are using.  It is very likely that things will break if you let I</"
+"usr/include/asm> and I</usr/include/linux> point at a random kernel tree.  "
+"Debian systems don't do this and use headers from a known good kernel "
 "version, provided in the libc*-dev package.)"
-msgstr "(Заметим, что необходимо иметь заголовочные файлы, корректно работающие с текущей libc и в пространстве пользователя. Однако, исходный код ядра Linux не рассчитан на включение в пользовательскую программу и ничего не знает о работающей libc. Весьма вероятно, что появятся ошибки, если I</usr/include/asm> и I</usr/include/linux> будут указывать на произвольное дерево ядра. Системы Debian не делают этого, а используют заголовочные файлы тех версий ядра, которые себя хорошо зарекомендовали. Они поставляются в пакете libc*-dev.)"
+msgstr ""
+"(Заметим, что необходимо иметь заголовочные файлы, корректно работающие с "
+"текущей libc и в пространстве пользователя. Однако, исходный код ядра Linux "
+"не рассчитан на включение в пользовательскую программу и ничего не знает о "
+"работающей libc. Весьма вероятно, что появятся ошибки, если I</usr/include/"
+"asm> и I</usr/include/linux> будут указывать на произвольное дерево ядра. "
+"Системы Debian не делают этого, а используют заголовочные файлы тех версий "
+"ядра, которые себя хорошо зарекомендовали. Они поставляются в пакете libc*-"
+"dev.)"
 
 #. type: TP
 #: man-pages/man7/hier.7:289
@@ -1251,7 +1485,10 @@ msgid ""
 "Object libraries, including dynamic libraries, plus some executables which "
 "usually are not invoked directly.  More complicated programs may have whole "
 "subdirectories there."
-msgstr "Объектные библиотеки, в том числе и динамические, а также некоторые программы, обычно не запускаемые вручную. Более сложные программы могут иметь в этом каталоге свои подкаталоги."
+msgstr ""
+"Объектные библиотеки, в том числе и динамические, а также некоторые "
+"программы, обычно не запускаемые вручную. Более сложные программы могут "
+"иметь в этом каталоге свои подкаталоги."
 
 #. type: TP
 #: man-pages/man7/hier.7:298
@@ -1265,7 +1502,11 @@ msgid ""
 "These directories are variants of I</usr/lib> on system which support more "
 "than one binary format requiring separate libraries, except that the "
 "symbolic link I</usr/libE<lt>qualE<gt>/X11> is not required (optional)."
-msgstr "Эти каталоги являются вариантами I</usr/lib> в системе, которая поддерживает более одного формата двоичных файлов, требующих отдельных библиотек, за исключением того, что символьная ссылка I</usr/libE<lt>уточнениеE<gt>/X11> не требуется (необязательные)."
+msgstr ""
+"Эти каталоги являются вариантами I</usr/lib> в системе, которая поддерживает "
+"более одного формата двоичных файлов, требующих отдельных библиотек, за "
+"исключением того, что символьная ссылка I</usr/libE<lt>уточнениеE<gt>/X11> "
+"не требуется (необязательные)."
 
 #. type: TP
 #: man-pages/man7/hier.7:306
@@ -1276,10 +1517,13 @@ msgstr "I</usr/lib/X11>"
 #. type: Plain text
 #: man-pages/man7/hier.7:313
 msgid ""
-"The usual place for data files associated with X programs, and configuration"
-" files for the X system itself.  On Linux, it usually is a symbolic link to "
+"The usual place for data files associated with X programs, and configuration "
+"files for the X system itself.  On Linux, it usually is a symbolic link to "
 "I</usr/X11R6/lib/X11>."
-msgstr "Стандартная область для файлов данных, связанных с программами X, а также для файлов настройки самой X. В Linux это обычно символьная ссылка на I</usr/X11R6/lib/X11>."
+msgstr ""
+"Стандартная область для файлов данных, связанных с программами X, а также "
+"для файлов настройки самой X. В Linux это обычно символьная ссылка на I</usr/"
+"X11R6/lib/X11>."
 
 #. type: TP
 #: man-pages/man7/hier.7:313
@@ -1291,7 +1535,8 @@ msgstr "I</usr/lib/gcc-lib>"
 #: man-pages/man7/hier.7:317
 msgid ""
 "contains executables and include files for the GNU C compiler, B<gcc>(1)."
-msgstr "Содержит исполняемые и заголовочные файлы для компилятора GNU C, B<gcc>(1)."
+msgstr ""
+"Содержит исполняемые и заголовочные файлы для компилятора GNU C, B<gcc>(1)."
 
 #. type: TP
 #: man-pages/man7/hier.7:317
@@ -1392,7 +1637,10 @@ msgstr "I</usr/local/libE<lt>уточнениеE<gt>>"
 msgid ""
 "These directories are variants of I</usr/local/lib> on system which support "
 "more than one binary format requiring separate libraries (optional)."
-msgstr "Эти каталоги являются вариантами I</usr/local/lib> в системе, которая поддерживает более одного формата двоичных файлов, требующих отдельных библиотек (необязательные)."
+msgstr ""
+"Эти каталоги являются вариантами I</usr/local/lib> в системе, которая "
+"поддерживает более одного формата двоичных файлов, требующих отдельных "
+"библиотек (необязательные)."
 
 #. type: TP
 #: man-pages/man7/hier.7:348
@@ -1449,7 +1697,9 @@ msgstr "I</usr/local/share>"
 msgid ""
 "Local application data that can be shared among different architectures of "
 "the same OS."
-msgstr "Данные локально установленных приложений, которые могут быть общими между различными архитектурами одной ОС."
+msgstr ""
+"Данные локально установленных приложений, которые могут быть общими между "
+"различными архитектурами одной ОС."
 
 #. type: TP
 #: man-pages/man7/hier.7:364
@@ -1482,10 +1732,13 @@ msgstr "I</usr/sbin>"
 #. type: Plain text
 #: man-pages/man7/hier.7:377
 msgid ""
-"This directory contains program binaries for system administration which are"
-" not essential for the boot process, for mounting I</usr>, or for system "
+"This directory contains program binaries for system administration which are "
+"not essential for the boot process, for mounting I</usr>, or for system "
 "repair."
-msgstr "В этом каталоге содержатся исполняемые программы для системного администрирования, не относящиеся к процессу загрузки, монтированию I</usr> или восстановлению системы."
+msgstr ""
+"В этом каталоге содержатся исполняемые программы для системного "
+"администрирования, не относящиеся к процессу загрузки, монтированию I</usr> "
+"или восстановлению системы."
 
 #. type: TP
 #: man-pages/man7/hier.7:377
@@ -1497,9 +1750,12 @@ msgstr "I</usr/share>"
 #: man-pages/man7/hier.7:387
 msgid ""
 "This directory contains subdirectories with specific application data, that "
-"can be shared among different architectures of the same OS.  Often one finds"
-" stuff here that used to live in I</usr/doc> or I</usr/lib> or I</usr/man>."
-msgstr "Этот каталог содержит подкаталоги с данными приложений, которые могут быть использованы на различных аппаратных архитектурах в одной и той же ОС. Часто, в нём содержатся данные из I</usr/doc>, I</usr/lib> или I</usr/man>."
+"can be shared among different architectures of the same OS.  Often one finds "
+"stuff here that used to live in I</usr/doc> or I</usr/lib> or I</usr/man>."
+msgstr ""
+"Этот каталог содержит подкаталоги с данными приложений, которые могут быть "
+"использованы на различных аппаратных архитектурах в одной и той же ОС. "
+"Часто, в нём содержатся данные из I</usr/doc>, I</usr/lib> или I</usr/man>."
 
 #. type: TP
 #: man-pages/man7/hier.7:387
@@ -1591,7 +1847,10 @@ msgid ""
 "These directories contain manual pages for the specific locale in source "
 "code form.  Systems which use a unique language and code set for all manual "
 "pages may omit the E<lt>localeE<gt> substring."
-msgstr "Эти каталоги содержат исходный код справочных страниц для определённой локали.  Системы, в которых используется один язык и кодировочная таблица, не содержат часть E<lt>локальE<gt>."
+msgstr ""
+"Эти каталоги содержат исходный код справочных страниц для определённой "
+"локали.  Системы, в которых используется один язык и кодировочная таблица, "
+"не содержат часть E<lt>локальE<gt>."
 
 #. type: TP
 #: man-pages/man7/hier.7:416
@@ -1604,7 +1863,9 @@ msgstr "I</usr/share/misc>"
 msgid ""
 "Miscellaneous data that can be shared among different architectures of the "
 "same OS."
-msgstr "Различные данные, которые могут совместно использоваться для различных архитектур одной ОС."
+msgstr ""
+"Различные данные, которые могут совместно использоваться для различных "
+"архитектур одной ОС."
 
 #. type: TP
 #: man-pages/man7/hier.7:420
@@ -1751,7 +2012,11 @@ msgid ""
 "Source files for different parts of the system, included with some packages "
 "for reference purposes.  Don't work here with your own projects, as files "
 "below /usr should be read-only except when installing software (optional)."
-msgstr "Файлы с исходным кодом различных частей системы, которые входят в состав различных пакетов. Не используйте этот каталог для работы над своими проектами, так как файлы в подкаталогах /usr предназначены только для чтения, кроме случаев установки программного обеспечения (необязательный)."
+msgstr ""
+"Файлы с исходным кодом различных частей системы, которые входят в состав "
+"различных пакетов. Не используйте этот каталог для работы над своими "
+"проектами, так как файлы в подкаталогах /usr предназначены только для "
+"чтения, кроме случаев установки программного обеспечения (необязательный)."
 
 #. type: TP
 #: man-pages/man7/hier.7:465
@@ -1765,7 +2030,10 @@ msgid ""
 "This was the traditional place for the kernel source.  Some distributions "
 "put here the source for the default kernel they ship.  You should probably "
 "use another directory when building your own kernel."
-msgstr "Этот каталог всегда был традиционным местоположением файлов с исходным кодом ядра. Многие дистрибутивы размещают тут исходный код используемого в системе ядра. Для сборки ядра рекомендуется использовать другой каталог."
+msgstr ""
+"Этот каталог всегда был традиционным местоположением файлов с исходным кодом "
+"ядра. Многие дистрибутивы размещают тут исходный код используемого в системе "
+"ядра. Для сборки ядра рекомендуется использовать другой каталог."
 
 #. type: TP
 #: man-pages/man7/hier.7:470
@@ -1778,7 +2046,9 @@ msgstr "I</usr/tmp>"
 msgid ""
 "Obsolete.  This should be a link to I</var/tmp>.  This link is present only "
 "for compatibility reasons and shouldn't be used."
-msgstr "Устарел. Должен быть ссылкой на I</var/tmp>. Эта ссылка оставлена только для совместимости, её не следует использовать."
+msgstr ""
+"Устарел. Должен быть ссылкой на I</var/tmp>. Эта ссылка оставлена только для "
+"совместимости, её не следует использовать."
 
 #. type: TP
 #: man-pages/man7/hier.7:477
@@ -1791,7 +2061,9 @@ msgstr "I</var>"
 msgid ""
 "This directory contains files which may change in size, such as spool and "
 "log files."
-msgstr "Каталог, содержащий файлы, размер которых может меняться, например файлы очередей и журнала."
+msgstr ""
+"Каталог, содержащий файлы, размер которых может меняться, например файлы "
+"очередей и журнала."
 
 #. type: TP
 #: man-pages/man7/hier.7:481
@@ -1813,9 +2085,11 @@ msgstr "I</var/adm>"
 #. type: Plain text
 #: man-pages/man7/hier.7:490
 msgid ""
-"This directory is superseded by I</var/log> and should be a symbolic link to"
-" I</var/log>."
-msgstr "Вместо этого каталога используется I</var/log> и он должен быть символьной ссылкой на I</var/log>."
+"This directory is superseded by I</var/log> and should be a symbolic link to "
+"I</var/log>."
+msgstr ""
+"Вместо этого каталога используется I</var/log> и он должен быть символьной "
+"ссылкой на I</var/log>."
 
 #. type: TP
 #: man-pages/man7/hier.7:490
@@ -1895,7 +2169,10 @@ msgstr "I</var/catman/cat[1-9]> или I</var/cache/man/cat[1-9]>"
 msgid ""
 "These directories contain preformatted manual pages according to their man "
 "page section.  (The use of preformatted manual pages is deprecated.)"
-msgstr "Эти каталоги содержат предварительно отформатированные справочные страницы в соответствии с их разделами (категорически запрещается использовать их в работе)."
+msgstr ""
+"Эти каталоги содержат предварительно отформатированные справочные страницы в "
+"соответствии с их разделами (категорически запрещается использовать их в "
+"работе)."
 
 #. type: TP
 #: man-pages/man7/hier.7:513
@@ -1989,7 +2266,9 @@ msgstr "I</var/lib/E<lt>имяE<gt>>"
 #. type: Plain text
 #: man-pages/man7/hier.7:540
 msgid "These directories must be used for all distribution packaging support."
-msgstr "Эти каталоги должны использоваться для поддержки распространения в пакетном виде."
+msgstr ""
+"Эти каталоги должны использоваться для поддержки распространения в пакетном "
+"виде."
 
 #. type: TP
 #: man-pages/man7/hier.7:540
@@ -2038,7 +2317,13 @@ msgid ""
 "device's name in the filesystem.  The format used is that of HDU UUCP lock "
 "files, that is, lock files contain a PID as a 10-byte ASCII decimal number, "
 "followed by a newline character."
-msgstr "В этом каталоге содержатся файлы блокировки. Соглашения об именах файлов, блокирующих устройства, следующие: I<LCK..E<lt>устройствоE<gt>>, где устройство — имя устройства в файловой системе. Используется формат файлов блокировки HDU UUCP, то есть файлы блокировки содержат PID в виде 10-байтного десятичного числа ASCII; после этого числа стоит символ новой строки."
+msgstr ""
+"В этом каталоге содержатся файлы блокировки. Соглашения об именах файлов, "
+"блокирующих устройства, следующие: I<LCK..E<lt>устройствоE<gt>>, где "
+"устройство — имя устройства в файловой системе. Используется формат файлов "
+"блокировки HDU UUCP, то есть файлы блокировки содержат PID в виде 10-"
+"байтного десятичного числа ASCII; после этого числа стоит символ новой "
+"строки."
 
 #. type: TP
 #: man-pages/man7/hier.7:562
@@ -2097,7 +2382,10 @@ msgid ""
 "Run-time variable files, like files holding process identifiers (PIDs)  and "
 "logged user information I<(utmp)>.  Files in this directory are usually "
 "cleared when the system boots."
-msgstr "Временные файлы, создаваемые во время работы. В них содержатся идентификаторы процессов (PID) и журнал регистрации пользователей I<utmp>. Файлы из этого каталога обычно удаляются в процессе загрузки системы."
+msgstr ""
+"Временные файлы, создаваемые во время работы. В них содержатся "
+"идентификаторы процессов (PID) и журнал регистрации пользователей I<utmp>. "
+"Файлы из этого каталога обычно удаляются в процессе загрузки системы."
 
 #. type: TP
 #: man-pages/man7/hier.7:586
@@ -2229,9 +2517,11 @@ msgstr "I</var/tmp>"
 #. type: Plain text
 #: man-pages/man7/hier.7:633
 msgid ""
-"Like I</tmp>, this directory holds temporary files stored for an unspecified"
-" duration."
-msgstr "Как и I</tmp>, этот каталог содержит временные файлы, но которые могут храниться неопределённое время."
+"Like I</tmp>, this directory holds temporary files stored for an unspecified "
+"duration."
+msgstr ""
+"Как и I</tmp>, этот каталог содержит временные файлы, но которые могут "
+"храниться неопределённое время."
 
 #. type: TP
 #: man-pages/man7/hier.7:633
@@ -2253,9 +2543,11 @@ msgstr "СООТВЕТСТВИЕ СТАНДАРТАМ"
 #. type: Plain text
 #: man-pages/man7/hier.7:641
 msgid ""
-"The Filesystem Hierarchy Standard, Version 2.3 E<.UR "
-"http://www.pathname.com\\:/fhs/> E<.UE .>"
-msgstr "Стандарт иерархии файловой системы, версия 2.3 E<.UR http://www.pathname.com\\:/fhs/> E<.UE .>"
+"The Filesystem Hierarchy Standard, Version 2.3 E<.UR http://www.pathname.com"
+"\\:/fhs/> E<.UE .>"
+msgstr ""
+"Стандарт иерархии файловой системы, версия 2.3 E<.UR http://www.pathname.com"
+"\\:/fhs/> E<.UE .>"
 
 #. type: SH
 #: man-pages/man7/hier.7:641
@@ -2266,9 +2558,10 @@ msgstr "ДЕФЕКТЫ"
 #. type: Plain text
 #: man-pages/man7/hier.7:644
 msgid ""
-"This list is not exhaustive; different systems may be configured "
-"differently."
-msgstr "Этот список далеко не полон; разные системы могут быть настроены различным образом."
+"This list is not exhaustive; different systems may be configured differently."
+msgstr ""
+"Этот список далеко не полон; разные системы могут быть настроены различным "
+"образом."
 
 #. type: Plain text
 #: man-pages/man7/hier.7:650
@@ -2303,7 +2596,11 @@ msgid ""
 "is a simple text file that associates IP addresses with hostnames, one line "
 "per IP address.  For each host a single line should be present with the "
 "following information:"
-msgstr "Данная справочная страница описывает формат файла I</etc/hosts>. Это простой текстовый файл, который связывает IP-адреса с именами узлов (по одному IP-адресу на строку). Для каждого узла в отдельной строке должна быть представлена запись со следующей информацией:"
+msgstr ""
+"Данная справочная страница описывает формат файла I</etc/hosts>. Это простой "
+"текстовый файл, который связывает IP-адреса с именами узлов (по одному IP-"
+"адресу на строку). Для каждого узла в отдельной строке должна быть "
+"представлена запись со следующей информацией:"
 
 #. type: Plain text
 #: man-pages/man5/hosts.5:43
@@ -2318,25 +2615,38 @@ msgid ""
 "comment, and is ignored.  Host names may contain only alphanumeric "
 "characters, minus signs (\"-\"), and periods (\".\").  They must begin with "
 "an alphabetic character and end with an alphanumeric character.  Optional "
-"aliases provide for name changes, alternate spellings, shorter hostnames, or"
-" generic hostnames (for example, I<localhost>)."
-msgstr "Поля записи разделяются пробелами и/или символами табуляции. Текст, начинающийся с символа \"#\" до конца строки считается комментарием и игнорируется. Имена узлов могут содержать только буквы, цифры, знаки минус (\"-\") и точки (\".\"). Они должны начинаться с буквы и заканчиваться буквой или цифрой. Псевдонимы предоставляются для возможности выбора более одного имени, альтернативного произношения, сокращения имени узла или для указания наиболее общего имени узла (например, I<localhost>)."
+"aliases provide for name changes, alternate spellings, shorter hostnames, or "
+"generic hostnames (for example, I<localhost>)."
+msgstr ""
+"Поля записи разделяются пробелами и/или символами табуляции. Текст, "
+"начинающийся с символа \"#\" до конца строки считается комментарием и "
+"игнорируется. Имена узлов могут содержать только буквы, цифры, знаки минус "
+"(\"-\") и точки (\".\"). Они должны начинаться с буквы и заканчиваться "
+"буквой или цифрой. Псевдонимы предоставляются для возможности выбора более "
+"одного имени, альтернативного произношения, сокращения имени узла или для "
+"указания наиболее общего имени узла (например, I<localhost>)."
 
 #. type: Plain text
 #: man-pages/man5/hosts.5:64
 msgid ""
-"The Berkeley Internet Name Domain (BIND) Server implements the Internet name"
-" server for UNIX systems.  It augments or replaces the I</etc/hosts> file or"
-" hostname lookup, and frees a host from relying on I</etc/hosts> being up to"
-" date and complete."
-msgstr "DNS сервер Berkeley Internet Name Domain (BIND) реализует сервер службы имён для UNIX систем. Он расширяет или замещает файл I</etc/hosts> при операциях поиска имени узла, а также освобождает от необходимости поддерживать актуальность и полноту I</etc/hosts>."
+"The Berkeley Internet Name Domain (BIND) Server implements the Internet name "
+"server for UNIX systems.  It augments or replaces the I</etc/hosts> file or "
+"hostname lookup, and frees a host from relying on I</etc/hosts> being up to "
+"date and complete."
+msgstr ""
+"DNS сервер Berkeley Internet Name Domain (BIND) реализует сервер службы имён "
+"для UNIX систем. Он расширяет или замещает файл I</etc/hosts> при операциях "
+"поиска имени узла, а также освобождает от необходимости поддерживать "
+"актуальность и полноту I</etc/hosts>."
 
 #. type: Plain text
 #: man-pages/man5/hosts.5:67
 msgid ""
-"In modern systems, even though the host table has been superseded by DNS, it"
-" is still widely used for:"
-msgstr "В современных системах, даже таблица узлов может быть заменена на DNS, это широко используется в следующих случаях:"
+"In modern systems, even though the host table has been superseded by DNS, it "
+"is still widely used for:"
+msgstr ""
+"В современных системах, даже таблица узлов может быть заменена на DNS, это "
+"широко используется в следующих случаях:"
 
 #. type: TP
 #: man-pages/man5/hosts.5:67
@@ -2350,7 +2660,10 @@ msgid ""
 "Most systems have a small host table containing the name and address "
 "information for important hosts on the local network.  This is useful when "
 "DNS is not running, for example during system bootup."
-msgstr "Большинство систем имеют маленькую таблицу узлов, которая обычно содержит имена и адреса наиболее важных узлов локальной сети. Это полезно, когда служба DNS не запущена, например во время загрузки системы."
+msgstr ""
+"Большинство систем имеют маленькую таблицу узлов, которая обычно содержит "
+"имена и адреса наиболее важных узлов локальной сети. Это полезно, когда "
+"служба DNS не запущена, например во время загрузки системы."
 
 #. type: TP
 #: man-pages/man5/hosts.5:73
@@ -2364,7 +2677,11 @@ msgid ""
 "Sites that use NIS use the host table as input to the NIS host database.  "
 "Even though NIS can be used with DNS, most NIS sites still use the host "
 "table with an entry for all local hosts as a backup."
-msgstr "Сайты, которые используют NIS, хранят таблицу узлов в базе данных узлов NIS. Но даже при работе с NIS остаётся возможность использовать DNS, большинство NIS сайтов также используют для целей резервирования и таблицу узлов, где размещаются записи о всех локальных узлах."
+msgstr ""
+"Сайты, которые используют NIS, хранят таблицу узлов в базе данных узлов NIS. "
+"Но даже при работе с NIS остаётся возможность использовать DNS, большинство "
+"NIS сайтов также используют для целей резервирования и таблицу узлов, где "
+"размещаются записи о всех локальных узлах."
 
 #. type: TP
 #: man-pages/man5/hosts.5:79
@@ -2376,9 +2693,12 @@ msgstr "B<изолированные узлы>"
 #: man-pages/man5/hosts.5:86
 msgid ""
 "Very small sites that are isolated from the network use the host table "
-"instead of DNS.  If the local information rarely changes, and the network is"
-" not connected to the Internet, DNS offers little advantage."
-msgstr "Очень маленькие сайты, которые изолированы от сети, используют таблицу узлов вместо DNS. Если локальная информация меняется редко и сеть не подключена к Интернет, DNS не даёт ощутимых преимуществ."
+"instead of DNS.  If the local information rarely changes, and the network is "
+"not connected to the Internet, DNS offers little advantage."
+msgstr ""
+"Очень маленькие сайты, которые изолированы от сети, используют таблицу узлов "
+"вместо DNS. Если локальная информация меняется редко и сеть не подключена к "
+"Интернет, DNS не даёт ощутимых преимуществ."
 
 #. type: Plain text
 #: man-pages/man5/hosts.5:88
@@ -2394,9 +2714,11 @@ msgstr "ЗАМЕЧАНИЯ"
 #. type: Plain text
 #: man-pages/man5/hosts.5:91
 msgid ""
-"Modifications to this file normally take effect immediately, except in cases"
-" where the file is cached by applications."
-msgstr "Изменения этого файла сразу начинают действовать, если этот файл не кэшируется используемым его приложением."
+"Modifications to this file normally take effect immediately, except in cases "
+"where the file is cached by applications."
+msgstr ""
+"Изменения этого файла сразу начинают действовать, если этот файл не "
+"кэшируется используемым его приложением."
 
 #. type: SS
 #: man-pages/man5/hosts.5:91
@@ -2409,7 +2731,9 @@ msgstr "Исторические замечания"
 msgid ""
 "RFC\\ 952 gave the original format for the host table, though it has since "
 "changed."
-msgstr "В RFC\\ 952 показан первоначальный формат таблицы узлов, хотя позднее он был изменён."
+msgstr ""
+"В RFC\\ 952 показан первоначальный формат таблицы узлов, хотя позднее он был "
+"изменён."
 
 #. type: Plain text
 #: man-pages/man5/hosts.5:107
@@ -2422,7 +2746,16 @@ msgid ""
 "longer maintains the hosts.txt files, though looking around at the time of "
 "writing (circa 2000), there are historical hosts.txt files on the WWW.  I "
 "just found three, from 92, 94, and 95."
-msgstr "Перед появлением DNS, таблица узлов была единственным способом определения IP-адресов по именам узлов в развивающейся сети Интернет. В самом деле, этот файл мог быть создан из официальной базы данных узлов, которая обслуживалась Центром управления сетевой информацией (Network Information Control Center (NIC)), и внесения локальных изменений, которые часто требовались для поддержки актуальности данных и добавления неофициальных псевдонимов и/или неизвестных узлов. NIC больше не поддерживает файлы hosts.txt (приблизительно с 2000 года), но на их WWW существуют исторические файлы hosts.txt. Я обнаружил три: от 92, 94 и 95 годов."
+msgstr ""
+"Перед появлением DNS, таблица узлов была единственным способом определения "
+"IP-адресов по именам узлов в развивающейся сети Интернет. В самом деле, этот "
+"файл мог быть создан из официальной базы данных узлов, которая обслуживалась "
+"Центром управления сетевой информацией (Network Information Control Center "
+"(NIC)), и внесения локальных изменений, которые часто требовались для "
+"поддержки актуальности данных и добавления неофициальных псевдонимов и/или "
+"неизвестных узлов. NIC больше не поддерживает файлы hosts.txt "
+"(приблизительно с 2000 года), но на их WWW существуют исторические файлы "
+"hosts.txt. Я обнаружил три: от 92, 94 и 95 годов."
 
 #. type: SH
 #: man-pages/man5/hosts.5:107
@@ -2436,7 +2769,9 @@ msgstr "ПРИМЕР"
 msgid ""
 "# The following lines are desirable for IPv4 capable hosts\n"
 "127.0.0.1       localhost\n"
-msgstr "# Следующие строки желательно иметь для узлов, поддерживающих IPv4\n127.0.0.1       localhost\n"
+msgstr ""
+"# Следующие строки желательно иметь для узлов, поддерживающих IPv4\n"
+"127.0.0.1       localhost\n"
 
 #. type: Plain text
 #: man-pages/man5/hosts.5:118
@@ -2448,7 +2783,13 @@ msgid ""
 "192.168.1.13    bar.mydomain.org       bar\n"
 "146.82.138.7    master.debian.org      master\n"
 "209.237.226.90  www.opensource.org\n"
-msgstr "# 127.0.1.1 часто используется для FQDN машины\n127.0.1.1       thishost.mydomain.org  thishost\n192.168.1.10    foo.mydomain.org       foo\n192.168.1.13    bar.mydomain.org       bar\n146.82.138.7    master.debian.org      master\n209.237.226.90  www.opensource.org\n"
+msgstr ""
+"# 127.0.1.1 часто используется для FQDN машины\n"
+"127.0.1.1       thishost.mydomain.org  thishost\n"
+"192.168.1.10    foo.mydomain.org       foo\n"
+"192.168.1.13    bar.mydomain.org       bar\n"
+"146.82.138.7    master.debian.org      master\n"
+"209.237.226.90  www.opensource.org\n"
 
 #. type: Plain text
 #: man-pages/man5/hosts.5:123
@@ -2458,14 +2799,20 @@ msgid ""
 "::1             localhost ip6-localhost ip6-loopback\n"
 "ff02::1         ip6-allnodes\n"
 "ff02::2         ip6-allrouters\n"
-msgstr "# Следующие строки желательно иметь для узлов, поддерживающих IPv6\n::1             localhost ip6-localhost ip6-loopback\nff02::1         ip6-allnodes\nff02::2         ip6-allrouters\n"
+msgstr ""
+"# Следующие строки желательно иметь для узлов, поддерживающих IPv6\n"
+"::1             localhost ip6-localhost ip6-loopback\n"
+"ff02::1         ip6-allnodes\n"
+"ff02::2         ip6-allrouters\n"
 
 #. type: Plain text
 #: man-pages/man5/hosts.5:132
 msgid ""
 "B<hostname>(1), B<resolver>(3), B<host.conf>(5), B<resolv.conf>(5), "
 "B<resolver>(5), B<hostname>(7), B<named>(8)"
-msgstr "B<hostname>(1), B<resolver>(3), B<host.conf>(5), B<resolv.conf>(5), B<resolver>(5), B<hostname>(7), B<named>(8)"
+msgstr ""
+"B<hostname>(1), B<resolver>(3), B<host.conf>(5), B<resolv.conf>(5), "
+"B<resolver>(5), B<hostname>(7), B<named>(8)"
 
 #. type: Plain text
 #: man-pages/man5/hosts.5:133
@@ -2499,10 +2846,14 @@ msgstr "host.conf - файл с настройками для резолвера
 #: man-pages/man5/host.conf.5:36
 msgid ""
 "The file I</etc/host.conf> contains configuration information specific to "
-"the resolver library.  It should contain one configuration keyword per line,"
-" followed by appropriate configuration information.  The following keywords "
+"the resolver library.  It should contain one configuration keyword per line, "
+"followed by appropriate configuration information.  The following keywords "
 "are recognized:"
-msgstr "В файле I</etc/host.conf> содержатся настройки для библиотеки резолвера (resolver). Данный файл должен содержать в каждой строке одно ключевое слово, за которым следует информация о соответствующей этому ключевому слову настройке. Ключевые слова:"
+msgstr ""
+"В файле I</etc/host.conf> содержатся настройки для библиотеки резолвера "
+"(resolver). Данный файл должен содержать в каждой строке одно ключевое "
+"слово, за которым следует информация о соответствующей этому ключевому слову "
+"настройке. Ключевые слова:"
 
 #. type: TP
 #: man-pages/man5/host.conf.5:36
@@ -2514,15 +2865,27 @@ msgstr "I<trim>"
 #: man-pages/man5/host.conf.5:56
 msgid ""
 "This keyword may be listed more than once.  Each time it should be followed "
-"by a list of domains, separated by colons (\\(aq:\\(aq), semicolons "
-"(\\(aq;\\(aq) or commas (\\(aq,\\(aq), with the leading dot.  When set, the "
+"by a list of domains, separated by colons (\\(aq:\\(aq), semicolons (\\(aq;"
+"\\(aq) or commas (\\(aq,\\(aq), with the leading dot.  When set, the "
 "resolver library will automatically trim the given domain name from the end "
-"of any hostname resolved via DNS.  This is intended for use with local hosts"
-" and domains.  (Related note: I<trim> will not affect hostnames gathered via"
-" NIS or the B<hosts>(5)  file.  Care should be taken to ensure that the "
-"first hostname for each entry in the hosts file is fully qualified or "
-"unqualified, as appropriate for the local installation.)"
-msgstr "Данное ключевое слово может быть использовано более одного раза. Каждый раз, когда указывается это слово, за ним должен следовать список доменов, начинающихся с точки и разделённых двоеточием (\\(aq:\\(aq), точкой с запятой (\\(aq;\\(aq) или запятой (\\(aq,\\(aq). Эта настройка говорит библиотеке резолвера отсекать указанное имя домена из конца всех имен узлов, которые преобразуются в адреса через DNS. Этот параметр задумывался для использования с локальными узлами и доменами. (Важное замечание: I<trim> не будет учитываться для имён узлов, обрабатываемых через NIS или файл B<hosts>(5). Вы должны побеспокоиться о том, чтобы первое имя узла в каждой записи в файле узлов являлось полностью (имя узла с доменом) или не полностью (только имя узла) заданным, в зависимости от того как это необходимо для ваших правил.)"
+"of any hostname resolved via DNS.  This is intended for use with local hosts "
+"and domains.  (Related note: I<trim> will not affect hostnames gathered via "
+"NIS or the B<hosts>(5)  file.  Care should be taken to ensure that the first "
+"hostname for each entry in the hosts file is fully qualified or unqualified, "
+"as appropriate for the local installation.)"
+msgstr ""
+"Данное ключевое слово может быть использовано более одного раза. Каждый раз, "
+"когда указывается это слово, за ним должен следовать список доменов, "
+"начинающихся с точки и разделённых двоеточием (\\(aq:\\(aq), точкой с "
+"запятой (\\(aq;\\(aq) или запятой (\\(aq,\\(aq). Эта настройка говорит "
+"библиотеке резолвера отсекать указанное имя домена из конца всех имен узлов, "
+"которые преобразуются в адреса через DNS. Этот параметр задумывался для "
+"использования с локальными узлами и доменами. (Важное замечание: I<trim> не "
+"будет учитываться для имён узлов, обрабатываемых через NIS или файл "
+"B<hosts>(5). Вы должны побеспокоиться о том, чтобы первое имя узла в каждой "
+"записи в файле узлов являлось полностью (имя узла с доменом) или не "
+"полностью (только имя узла) заданным, в зависимости от того как это "
+"необходимо для ваших правил.)"
 
 #. type: TP
 #: man-pages/man5/host.conf.5:56
@@ -2534,10 +2897,15 @@ msgstr "I<multi>"
 #: man-pages/man5/host.conf.5:71
 msgid ""
 "Valid values are I<on> and I<off>.  If set to I<on>, the resolver library "
-"will return all valid addresses for a host that appears in the I</etc/hosts>"
-" file, instead of only the first.  This is I<off> by default, as it may "
-"cause a substantial performance loss at sites with large hosts files."
-msgstr "Допустимыми для этого ключевого слова являются значения I<on> и I<off>. Если задано I<on>, то библиотека резолвера будет возвращать все допустимые адреса узла, которые встретились в файле I</etc/hosts>, а не только первый из них. По умолчанию используется I<off>, так как в противном случае возможно существенное снижение производительности на машинах с большими файлами узлов."
+"will return all valid addresses for a host that appears in the I</etc/hosts> "
+"file, instead of only the first.  This is I<off> by default, as it may cause "
+"a substantial performance loss at sites with large hosts files."
+msgstr ""
+"Допустимыми для этого ключевого слова являются значения I<on> и I<off>. Если "
+"задано I<on>, то библиотека резолвера будет возвращать все допустимые адреса "
+"узла, которые встретились в файле I</etc/hosts>, а не только первый из них. "
+"По умолчанию используется I<off>, так как в противном случае возможно "
+"существенное снижение производительности на машинах с большими файлами узлов."
 
 #. type: TP
 #: man-pages/man5/host.conf.5:71
@@ -2549,10 +2917,16 @@ msgstr "I<reorder>"
 #: man-pages/man5/host.conf.5:85
 msgid ""
 "Valid values are I<on> and I<off>.  If set to I<on>, the resolver library "
-"will attempt to reorder host addresses so that local addresses (i.e., on the"
-" same subnet) are listed first when a B<gethostbyname>(3)  is performed.  "
+"will attempt to reorder host addresses so that local addresses (i.e., on the "
+"same subnet) are listed first when a B<gethostbyname>(3)  is performed.  "
 "Reordering is done for all lookup methods.  The default value is I<off>."
-msgstr "Допустимыми для этого ключевого слова являются значения I<on> и I<off>. Если задано I<on>, то библиотека резолвера будет пытаться перегруппировать адреса узлов так, чтобы локальные адреса (т. е. адреса в той же подсети) были выданы первыми, когда выполняется вызов B<gethostbyname>(3). Перегруппировка выполняется для всех методов поиска. По умолчанию значение установлено в I<off>."
+msgstr ""
+"Допустимыми для этого ключевого слова являются значения I<on> и I<off>. Если "
+"задано I<on>, то библиотека резолвера будет пытаться перегруппировать адреса "
+"узлов так, чтобы локальные адреса (т. е. адреса в той же подсети) были "
+"выданы первыми, когда выполняется вызов B<gethostbyname>(3). Перегруппировка "
+"выполняется для всех методов поиска. По умолчанию значение установлено в "
+"I<off>."
 
 #. type: SH
 #: man-pages/man5/host.conf.5:85
@@ -2565,7 +2939,10 @@ msgstr "ОКРУЖЕНИЕ"
 msgid ""
 "The following environment variables can be used to allow users to override "
 "the behavior which is configured in I</etc/host.conf>:"
-msgstr "Существуют переменные окружения, которые могут быть использованы, чтобы позволить пользователям изменить поведение, настроенное через I</etc/host.conf>:"
+msgstr ""
+"Существуют переменные окружения, которые могут быть использованы, чтобы "
+"позволить пользователям изменить поведение, настроенное через I</etc/host."
+"conf>:"
 
 #. type: TP
 #: man-pages/man5/host.conf.5:89
@@ -2576,9 +2953,11 @@ msgstr "B<RESOLV_HOST_CONF>"
 #. type: Plain text
 #: man-pages/man5/host.conf.5:93
 msgid ""
-"If set, this variable points to a file that should be read instead of "
-"I</etc/host.conf>."
-msgstr "Если значение этой переменной является именем файла, то он будет прочитан вместо файла I</etc/host.conf>."
+"If set, this variable points to a file that should be read instead of I</etc/"
+"host.conf>."
+msgstr ""
+"Если значение этой переменной является именем файла, то он будет прочитан "
+"вместо файла I</etc/host.conf>."
 
 #. type: TP
 #: man-pages/man5/host.conf.5:93
@@ -2611,10 +2990,13 @@ msgstr "B<RESOLV_ADD_TRIM_DOMAINS>"
 #. type: Plain text
 #: man-pages/man5/host.conf.5:108
 msgid ""
-"A list of domains, separated by colons (\\(aq:\\(aq), semicolons "
-"(\\(aq;\\(aq) or commas (\\(aq,\\(aq), with the leading dot, which will be "
-"added to the list of domains that should be trimmed."
-msgstr "Список доменов, начинающихся с точки, разделённых двоеточием (\\(aq:\\(aq), точкой с запятой (\\(aq;\\(aq) или запятой (\\(aq,\\(aq), который будет добавлен к списку доменов для отсечения."
+"A list of domains, separated by colons (\\(aq:\\(aq), semicolons (\\(aq;"
+"\\(aq) or commas (\\(aq,\\(aq), with the leading dot, which will be added to "
+"the list of domains that should be trimmed."
+msgstr ""
+"Список доменов, начинающихся с точки, разделённых двоеточием (\\(aq:\\(aq), "
+"точкой с запятой (\\(aq;\\(aq) или запятой (\\(aq,\\(aq), который будет "
+"добавлен к списку доменов для отсечения."
 
 #. type: TP
 #: man-pages/man5/host.conf.5:108
@@ -2625,11 +3007,13 @@ msgstr "B<RESOLV_OVERRIDE_TRIM_DOMAINS>"
 #. type: Plain text
 #: man-pages/man5/host.conf.5:116
 msgid ""
-"A list of domains, separated by colons (\\(aq:\\(aq), semicolons "
-"(\\(aq;\\(aq) or commas (\\(aq,\\(aq), with the leading dot, which will "
-"replace the list of domains that should be trimmed.  Overrides the I<trim> "
-"command."
-msgstr "Список доменов, начинающихся с точки, разделённых двоеточием (\\(aq:\\(aq), точкой с запятой (\\(aq;\\(aq) или запятой (\\(aq,\\(aq), который заменит список доменов для отсечения. Заменяет значение ключа I<trim>."
+"A list of domains, separated by colons (\\(aq:\\(aq), semicolons (\\(aq;"
+"\\(aq) or commas (\\(aq,\\(aq), with the leading dot, which will replace the "
+"list of domains that should be trimmed.  Overrides the I<trim> command."
+msgstr ""
+"Список доменов, начинающихся с точки, разделённых двоеточием (\\(aq:\\(aq), "
+"точкой с запятой (\\(aq;\\(aq) или запятой (\\(aq,\\(aq), который заменит "
+"список доменов для отсечения. Заменяет значение ключа I<trim>."
 
 #. type: TP
 #: man-pages/man5/host.conf.5:117
@@ -2660,7 +3044,11 @@ msgid ""
 "new command I<spoof> and a new environment variable B<RESOLV_SPOOF_CHECK> "
 "can take arguments like I<off>, I<nowarn>, and I<warn>.  Line comments can "
 "appear anywhere and not only at the beginning of a line."
-msgstr "Существуют следующие различия с первоначальной реализацией: новая команда I<spoof> и новая переменная окружения B<RESOLV_SPOOF_CHECK> могут быть установлены в значение I<off>, I<nowarn> и I<warn>. Комментарии могут вставляться везде, а не только в начале строки."
+msgstr ""
+"Существуют следующие различия с первоначальной реализацией: новая команда "
+"I<spoof> и новая переменная окружения B<RESOLV_SPOOF_CHECK> могут быть "
+"установлены в значение I<off>, I<nowarn> и I<warn>. Комментарии могут "
+"вставляться везде, а не только в начале строки."
 
 #. type: SS
 #: man-pages/man5/host.conf.5:135
@@ -2673,7 +3061,9 @@ msgstr "Историческая справка"
 msgid ""
 "The B<nsswitch.conf>(5)  file is the modern way of controlling the order of "
 "host lookups."
-msgstr "Современным способом управления порядком поиска узлов является файл B<nsswitch.conf>(5)."
+msgstr ""
+"Современным способом управления порядком поиска узлов является файл "
+"B<nsswitch.conf>(5)."
 
 #. type: Plain text
 #: man-pages/man5/host.conf.5:141
@@ -2692,7 +3082,11 @@ msgid ""
 "This keyword specifies how host lookups are to be performed.  It should be "
 "followed by one or more lookup methods, separated by commas.  Valid methods "
 "are I<bind>, I<hosts>, and I<nis>."
-msgstr "Данное ключевое слово задает метод, с помощью которого будет осуществляться поиск адреса узла. За этим словом должно следовать одно или несколько названий методов, разделённых запятыми. Допустимы следующие названия методов: I<bind>, I<hosts> и I<nis>."
+msgstr ""
+"Данное ключевое слово задает метод, с помощью которого будет осуществляться "
+"поиск адреса узла. За этим словом должно следовать одно или несколько "
+"названий методов, разделённых запятыми. Допустимы следующие названия "
+"методов: I<bind>, I<hosts> и I<nis>."
 
 #. type: TP
 #: man-pages/man5/host.conf.5:147
@@ -2711,7 +3105,9 @@ msgstr "Заменяет команду I<order>."
 msgid ""
 "Since glibc 2.0.7, and up through glibc 2.24, the following keywords and "
 "environment variable have been recognized but never implemented:"
-msgstr "Начиная с glibc 2.0.7 и до версии 2.24 не обрабатываются, но распознаются следующие ключевые слова и переменная окружения:"
+msgstr ""
+"Начиная с glibc 2.0.7 и до версии 2.24 не обрабатываются, но распознаются "
+"следующие ключевые слова и переменная окружения:"
 
 #. type: TP
 #: man-pages/man5/host.conf.5:156
@@ -2728,7 +3124,13 @@ msgid ""
 "lookup, the resolver library will perform a hostname lookup for that "
 "address.  If the two hostnames do not match, the query fails.  The default "
 "value is I<off>."
-msgstr "Допустимыми для этого ключевого слова являются значения I<on> и I<off> Если задано I<on>, то библиотека резолвера будет пытаться предотвратить подмену имён узлов для усиления безопасности B<rlogin> and B<rsh>. Это работает так: после выполнения поиска адреса узла по имени, библиотека резолвера будет выполнять поиск имени узла по адресу. Если два имени не совпадут, то запрос завершается ошибкой. По умолчанию значение установлено в I<off>."
+msgstr ""
+"Допустимыми для этого ключевого слова являются значения I<on> и I<off> Если "
+"задано I<on>, то библиотека резолвера будет пытаться предотвратить подмену "
+"имён узлов для усиления безопасности B<rlogin> and B<rsh>. Это работает так: "
+"после выполнения поиска адреса узла по имени, библиотека резолвера будет "
+"выполнять поиск имени узла по адресу. Если два имени не совпадут, то запрос "
+"завершается ошибкой. По умолчанию значение установлено в I<off>."
 
 #. type: TP
 #: man-pages/man5/host.conf.5:171
@@ -2742,7 +3144,11 @@ msgid ""
 "Valid values are I<on> and I<off>.  If this option is set to I<on> and the "
 "I<nospoof> option is also set, the resolver library will log a warning of "
 "the error via the syslog facility.  The default value is I<off>."
-msgstr "Допустимыми для этого ключевого слова являются значения I<on> и I<off>. Если задано I<on> и при этом также установлен параметр I<nospoof>, то библиотека резолвера будет записывать в системный журнал предупреждения об ошибках через syslog. По умолчанию значение установлено в I<off>."
+msgstr ""
+"Допустимыми для этого ключевого слова являются значения I<on> и I<off>. Если "
+"задано I<on> и при этом также установлен параметр I<nospoof>, то библиотека "
+"резолвера будет записывать в системный журнал предупреждения об ошибках "
+"через syslog. По умолчанию значение установлено в I<off>."
 
 #. type: TP
 #: man-pages/man5/host.conf.5:184
@@ -2755,13 +3161,23 @@ msgstr "I<spoof>"
 msgid ""
 "Valid values are I<off>, I<nowarn>, and I<warn>.  If this option is set to "
 "I<off>, spoofed addresses are permitted and no warnings will be emitted via "
-"the syslog facility.  If this option is set to I<warn>, the resolver library"
-" will attempt to prevent hostname spoofing to enhance the security and log a"
-" warning of the error via the syslog facility.  If this option is set to "
-"I<nowarn>, the resolver library will attempt to prevent hostname spoofing to"
-" enhance the security but not emit warnings via the syslog facility.  "
-"Setting this option to anything else is equal to setting it to I<nowarn>."
-msgstr "Допустимыми для этого ключевого слова являются значения I<off>, I<nowarn> и I<warn>. Если задано I<off>, то подмена адресов допускается и в системный журнал через syslog не будет попадать никаких предупреждающих сообщений. Если значение параметра равно I<warn>, то библиотека резолвера будет пытаться предотвратить обман по именам узлов для усиления безопасности и в системный журнал через syslog будут записываться предупреждения об ошибках. Если значение параметра равно I<nowarn>, то библиотека резолвера будет пытаться предотвратить обман по именам узлов для усиления безопасности, но предупреждающие сообщения генерироваться не будут. Присвоение других значений будет считаться установкой в значение I<nowarn>."
+"the syslog facility.  If this option is set to I<warn>, the resolver library "
+"will attempt to prevent hostname spoofing to enhance the security and log a "
+"warning of the error via the syslog facility.  If this option is set to "
+"I<nowarn>, the resolver library will attempt to prevent hostname spoofing to "
+"enhance the security but not emit warnings via the syslog facility.  Setting "
+"this option to anything else is equal to setting it to I<nowarn>."
+msgstr ""
+"Допустимыми для этого ключевого слова являются значения I<off>, I<nowarn> и "
+"I<warn>. Если задано I<off>, то подмена адресов допускается и в системный "
+"журнал через syslog не будет попадать никаких предупреждающих сообщений. "
+"Если значение параметра равно I<warn>, то библиотека резолвера будет "
+"пытаться предотвратить обман по именам узлов для усиления безопасности и в "
+"системный журнал через syslog будут записываться предупреждения об ошибках. "
+"Если значение параметра равно I<nowarn>, то библиотека резолвера будет "
+"пытаться предотвратить обман по именам узлов для усиления безопасности, но "
+"предупреждающие сообщения генерироваться не будут. Присвоение других "
+"значений будет считаться установкой в значение I<nowarn>."
 
 #. type: TP
 #: man-pages/man5/host.conf.5:203
@@ -2775,14 +3191,19 @@ msgid ""
 "Overrides the I<nospoof>, I<spoofalert>, and I<spoof> commands in the same "
 "way as the I<spoof> command is parsed.  Valid values are I<off>, I<nowarn>, "
 "and I<warn>."
-msgstr "Заменяет значение ключей I<nospoof>, I<spoofalert> и I<spoof> тем же способом как задаётся значение для ключа I<spoof>. Допустимыми являются значения I<off>, I<nowarn> и I<warn>."
+msgstr ""
+"Заменяет значение ключей I<nospoof>, I<spoofalert> и I<spoof> тем же "
+"способом как задаётся значение для ключа I<spoof>. Допустимыми являются "
+"значения I<off>, I<nowarn> и I<warn>."
 
 #. type: Plain text
 #: man-pages/man5/host.conf.5:218
 msgid ""
 "B<gethostbyname>(3), B<hosts>(5), B<nsswitch.conf>(5), B<resolv.conf>(5), "
 "B<hostname>(7), B<named>(8)"
-msgstr "B<gethostbyname>(3), B<hosts>(5), B<nsswitch.conf>(5), B<resolv.conf>(5), B<hostname>(7), B<named>(8)"
+msgstr ""
+"B<gethostbyname>(3), B<hosts>(5), B<nsswitch.conf>(5), B<resolv.conf>(5), "
+"B<hostname>(7), B<named>(8)"
 
 #. type: TH
 #: man-pages/man5/hosts.equiv.5:6
@@ -2801,7 +3222,9 @@ msgstr "2015-07-23"
 msgid ""
 "hosts.equiv - list of hosts and users that are granted \"trusted\" B<r> "
 "command access to your system"
-msgstr "hosts.equiv - список узлов и пользователей, которым предоставляется \"доверительный\" доступ к вашей системе через B<r>-команды"
+msgstr ""
+"hosts.equiv - список узлов и пользователей, которым предоставляется "
+"\"доверительный\" доступ к вашей системе через B<r>-команды"
 
 #. type: Plain text
 #: man-pages/man5/hosts.equiv.5:22
@@ -2809,7 +3232,10 @@ msgid ""
 "The file I</etc/hosts.equiv> allows or denies hosts and users to use the "
 "B<r>-commands (e.g., B<rlogin>, B<rsh>, or B<rcp>)  without supplying a "
 "password."
-msgstr "Файл B</etc/hosts.equiv> разрешает или запрещает узлам и пользователям использовать B<r>-команды (например, B<rlogin>, B<rsh> или B<rcp>) без ввода пароля."
+msgstr ""
+"Файл B</etc/hosts.equiv> разрешает или запрещает узлам и пользователям "
+"использовать B<r>-команды (например, B<rlogin>, B<rsh> или B<rcp>) без ввода "
+"пароля."
 
 #. type: Plain text
 #: man-pages/man5/hosts.equiv.5:24
@@ -2819,9 +3245,7 @@ msgstr "Файл имеет следующий формат:"
 #. type: TP
 #: man-pages/man5/hosts.equiv.5:24
 #, no-wrap
-msgid ""
-"I<+|[-]hostname|+@netgroup|-@netgroup> "
-"I<[+|[-]username|+@netgroup|-@netgroup]>"
+msgid "I<+|[-]hostname|+@netgroup|-@netgroup> I<[+|[-]username|+@netgroup|-@netgroup]>"
 msgstr "I<+|[-]hostname|+@netgroup|-@netgroup> I<[+|[-]username|+@netgroup|-@netgroup]>"
 
 #. type: Plain text
@@ -2832,11 +3256,21 @@ msgid ""
 "user accounts on the local host without supplying a password.  The "
 "I<hostname> may be (optionally) preceded by a plus (+) sign.  If the plus "
 "sign is used alone, it allows any host to access your system.  You can "
-"explicitly deny access to a host by preceding the I<hostname> by a minus (-)"
-" sign.  Users from that host must always supply additional credentials, "
+"explicitly deny access to a host by preceding the I<hostname> by a minus (-) "
+"sign.  Users from that host must always supply additional credentials, "
 "including possibly a password. For security reasons you should always use "
 "the FQDN of the hostname and not the short hostname."
-msgstr "В I<hostname> задаётся имя узла, которое логически эквивалентно локальному узлу. Пользователям, которые вошли на этот узел, разрешается доступ к локальному узлу под их собственным именем без ввода пароля. Значение I<hostname> может (необязательно) начинаться со знака плюс (+). Если на месте имени узла указан только плюс, то доступ к вашей системе разрешён с любого узла. Вы можете явно запретить доступ для какого-либо узла, если перед I<hostname> поставите знак минус (-). Пользователи с этого узла всегда будут должны предоставлять параметры доступа, возможно включая пароль. Из соображений безопасности вы всегда должны использовать полностью заданные имена узлов (FQDN) и не использовать коротких имён."
+msgstr ""
+"В I<hostname> задаётся имя узла, которое логически эквивалентно локальному "
+"узлу. Пользователям, которые вошли на этот узел, разрешается доступ к "
+"локальному узлу под их собственным именем без ввода пароля. Значение "
+"I<hostname> может (необязательно) начинаться со знака плюс (+). Если на "
+"месте имени узла указан только плюс, то доступ к вашей системе разрешён с "
+"любого узла. Вы можете явно запретить доступ для какого-либо узла, если "
+"перед I<hostname> поставите знак минус (-). Пользователи с этого узла всегда "
+"будут должны предоставлять параметры доступа, возможно включая пароль. Из "
+"соображений безопасности вы всегда должны использовать полностью заданные "
+"имена узлов (FQDN) и не использовать коротких имён."
 
 #. type: Plain text
 #: man-pages/man5/hosts.equiv.5:61
@@ -2845,10 +3279,17 @@ msgid ""
 "(except root) without supplying a password.  That means the user is NOT "
 "restricted to like-named accounts.  The I<username> may be (optionally) "
 "preceded by a plus (+) sign.  You can also explicitly deny access to a "
-"specific user by preceding the I<username> with a minus (-) sign.  This says"
-" that the user is not trusted no matter what other entries for that host "
+"specific user by preceding the I<username> with a minus (-) sign.  This says "
+"that the user is not trusted no matter what other entries for that host "
 "exist."
-msgstr "Элементом I<username> предоставляется доступ заданному пользователю ко всем учётным записям (исключая root) без ввода пароля. Это означает, что пользователь может использовать любые имена на локальной машине. I<username>может (необязательно) предваряться знаком плюс (+). Вы можете явно запретить доступ для какого-либо пользователя, если перед I<username> поставите знак минус (-). Это будет означать, что этому пользователю нет доверия, независимо от других существующих на этом узле настроек."
+msgstr ""
+"Элементом I<username> предоставляется доступ заданному пользователю ко всем "
+"учётным записям (исключая root) без ввода пароля. Это означает, что "
+"пользователь может использовать любые имена на локальной машине. "
+"I<username>может (необязательно) предваряться знаком плюс (+). Вы можете "
+"явно запретить доступ для какого-либо пользователя, если перед I<username> "
+"поставите знак минус (-). Это будет означать, что этому пользователю нет "
+"доверия, независимо от других существующих на этом узле настроек."
 
 #. type: Plain text
 #: man-pages/man5/hosts.equiv.5:63
@@ -2861,7 +3302,10 @@ msgid ""
 "Be extremely careful when using the plus (+) sign.  A simple typographical "
 "error could result in a standalone plus sign.  A standalone plus sign is a "
 "wildcard character that means \"any host\"!"
-msgstr "Будьте очень осторожны, когда используете знак плюс (+). Простая описка может привести к тому, что этот плюс будет стоять в строке в полном одиночестве, и в этом случае он будет означать \"любой узел\"!"
+msgstr ""
+"Будьте очень осторожны, когда используете знак плюс (+). Простая описка "
+"может привести к тому, что этот плюс будет стоять в строке в полном "
+"одиночестве, и в этом случае он будет означать \"любой узел\"!"
 
 #. type: Plain text
 #: man-pages/man5/hosts.equiv.5:71
@@ -2874,17 +3318,25 @@ msgid ""
 "Some systems will honor the contents of this file only when it has owner "
 "root and no write permission for anybody else.  Some exceptionally paranoid "
 "systems even require that there be no other hard links to the file."
-msgstr "Некоторые системы используют содержимое данного файла, только когда его владельцем является root и при этом отсутствуют права на запись для всех остальных. Некоторые исключительно параноидальные системы даже требуют, чтобы для данного файла не существовало других жёстких ссылок."
+msgstr ""
+"Некоторые системы используют содержимое данного файла, только когда его "
+"владельцем является root и при этом отсутствуют права на запись для всех "
+"остальных. Некоторые исключительно параноидальные системы даже требуют, "
+"чтобы для данного файла не существовало других жёстких ссылок."
 
 #. type: Plain text
 #: man-pages/man5/hosts.equiv.5:84
 msgid ""
-"Modern systems use the Pluggable Authentication Modules library (PAM).  With"
-" PAM a standalone plus sign is considered a wildcard character which means "
+"Modern systems use the Pluggable Authentication Modules library (PAM).  With "
+"PAM a standalone plus sign is considered a wildcard character which means "
 "\"any host\" only when the word I<promiscuous> is added to the auth "
-"component line in your PAM file for the particular service (e.g., "
-"B<rlogin>)."
-msgstr "Современные системы используют библиотеку Pluggable Authentication Modules ( PAM) (подключаемые модули аутентификации). При использовании PAM одиночный знак плюса рассматривается как символ шаблона, который означает только «любой узел», когда слово I<promiscuous> добавляется к компоненту auth в вашем файле PAM для конкретной службы (например B<rlogin>)."
+"component line in your PAM file for the particular service (e.g., B<rlogin>)."
+msgstr ""
+"Современные системы используют библиотеку Pluggable Authentication Modules "
+"( PAM) (подключаемые модули аутентификации). При использовании PAM одиночный "
+"знак плюса рассматривается как символ шаблона, который означает только "
+"«любой узел», когда слово I<promiscuous> добавляется к компоненту auth в "
+"вашем файле PAM для конкретной службы (например B<rlogin>)."
 
 #. type: Plain text
 #: man-pages/man5/hosts.equiv.5:90
@@ -2905,7 +3357,9 @@ msgstr "    +\n"
 #. type: Plain text
 #: man-pages/man5/hosts.equiv.5:98
 msgid "Allow any user from I<host> with a matching local account to log in:"
-msgstr "Разрешить всем пользователям с I<host> входить при совпадении с локальной учётной записью:"
+msgstr ""
+"Разрешить всем пользователям с I<host> входить при совпадении с локальной "
+"учётной записью:"
 
 #. type: Plain text
 #: man-pages/man5/hosts.equiv.5:100
@@ -2918,7 +3372,9 @@ msgstr "    host\n"
 msgid ""
 "Note: the use of I<+host> is never a valid syntax, including attempting to "
 "specify that any user from the host is allowed."
-msgstr "Замечание: указание I<+host> является синтаксически некорректным при попытке задать, что разрешён доступ всем пользователям с узла."
+msgstr ""
+"Замечание: указание I<+host> является синтаксически некорректным при попытке "
+"задать, что разрешён доступ всем пользователям с узла."
 
 #. type: Plain text
 #: man-pages/man5/hosts.equiv.5:109
@@ -2934,9 +3390,11 @@ msgstr "    host +\n"
 #. type: Plain text
 #: man-pages/man5/hosts.equiv.5:114
 msgid ""
-"Note: this is distinct from the previous example since it does not require a"
-" matching local account."
-msgstr "Замечание: это отличается от предыдущего примера тем, что здесь не требуется совпадения с локальной учётной записью."
+"Note: this is distinct from the previous example since it does not require a "
+"matching local account."
+msgstr ""
+"Замечание: это отличается от предыдущего примера тем, что здесь не требуется "
+"совпадения с локальной учётной записью."
 
 #. type: Plain text
 #: man-pages/man5/hosts.equiv.5:120
@@ -2954,7 +3412,9 @@ msgstr "    host user\n"
 msgid ""
 "Allow all users with matching local accounts from I<host> to log in except "
 "for I<baduser>:"
-msgstr "Разрешить всем пользователям при совпадении с локальной учётной записью входить с I<host>, но исключить доступ для I<baduser>:"
+msgstr ""
+"Разрешить всем пользователям при совпадении с локальной учётной записью "
+"входить с I<host>, но исключить доступ для I<baduser>:"
 
 #. type: Plain text
 #: man-pages/man5/hosts.equiv.5:130
@@ -2962,7 +3422,9 @@ msgstr "Разрешить всем пользователям при совпа
 msgid ""
 "    host -baduser\n"
 "    host\n"
-msgstr "    host -baduser\n    host\n"
+msgstr ""
+"    host -baduser\n"
+"    host\n"
 
 #. type: Plain text
 #: man-pages/man5/hosts.equiv.5:133
@@ -2980,13 +3442,17 @@ msgstr "    -host\n"
 msgid ""
 "Note: the use of I<-host\\ -user> is never a valid syntax, including "
 "attempting to specify that a particular user from the host is not trusted."
-msgstr "Замечание: указание I<-host\\ -user> является синтаксически некорректным при попытке запретить доступ определённому пользователю с узла."
+msgstr ""
+"Замечание: указание I<-host\\ -user> является синтаксически некорректным при "
+"попытке запретить доступ определённому пользователю с узла."
 
 #. type: Plain text
 #: man-pages/man5/hosts.equiv.5:144
 msgid ""
 "Allow all users with matching local accounts on all hosts in a I<netgroup>:"
-msgstr "Разрешить всем пользователям при совпадении с локальной учётной записью входить на все узлы, включённые в I<netgroup>:"
+msgstr ""
+"Разрешить всем пользователям при совпадении с локальной учётной записью "
+"входить на все узлы, включённые в I<netgroup>:"
 
 #. type: Plain text
 #: man-pages/man5/hosts.equiv.5:146
@@ -3008,9 +3474,10 @@ msgstr "    -@netgroup\n"
 #. type: Plain text
 #: man-pages/man5/hosts.equiv.5:157
 msgid ""
-"Allow all users in a I<netgroup> to log in from I<host> as any non-root "
-"user:"
-msgstr "Разрешить всем пользователям из I<netgroup> входить с I<host> в качестве не-root пользователя:"
+"Allow all users in a I<netgroup> to log in from I<host> as any non-root user:"
+msgstr ""
+"Разрешить всем пользователям из I<netgroup> входить с I<host> в качестве не-"
+"root пользователя:"
 
 #. type: Plain text
 #: man-pages/man5/hosts.equiv.5:159
@@ -3023,7 +3490,9 @@ msgstr "    host +@netgroup\n"
 msgid ""
 "Allow all users with matching local accounts on all hosts in a I<netgroup> "
 "except I<baduser>:"
-msgstr "Разрешить всем пользователям, за исключением I<baduser>, при совпадении с локальной учётной записью входить на все узлы, включённые в I<netgroup>:"
+msgstr ""
+"Разрешить всем пользователям, за исключением I<baduser>, при совпадении с "
+"локальной учётной записью входить на все узлы, включённые в I<netgroup>:"
 
 #. type: Plain text
 #: man-pages/man5/hosts.equiv.5:167
@@ -3031,14 +3500,18 @@ msgstr "Разрешить всем пользователям, за исклю�
 msgid ""
 "    +@netgroup -baduser\n"
 "    +@netgroup\n"
-msgstr "    +@netgroup -baduser\n    +@netgroup\n"
+msgstr ""
+"    +@netgroup -baduser\n"
+"    +@netgroup\n"
 
 #. type: Plain text
 #: man-pages/man5/hosts.equiv.5:170
 msgid ""
 "Note: the deny statements must always precede the allow statements because "
 "the file is processed sequentially until the first matching rule is found."
-msgstr "Замечание: записи о запрете всегда должны стоять раньше записей разрешения, так как файл обрабатывается последовательно до первого найденного совпадения."
+msgstr ""
+"Замечание: записи о запрете всегда должны стоять раньше записей разрешения, "
+"так как файл обрабатывается последовательно до первого найденного совпадения."
 
 #. type: Plain text
 #: man-pages/man5/hosts.equiv.5:173
@@ -3062,25 +3535,34 @@ msgstr "hash - метод доступа к базе данных ассоциа
 msgid ""
 "B<#include E<lt>sys/types.hE<gt>\n"
 "#include E<lt>db.hE<gt>>\n"
-msgstr "B<#include E<lt>sys/types.hE<gt>\n#include E<lt>db.hE<gt>>\n"
+msgstr ""
+"B<#include E<lt>sys/types.hE<gt>\n"
+"#include E<lt>db.hE<gt>>\n"
 
 #. type: Plain text
 #: man-pages/man3/hash.3:54
 msgid ""
 "I<Note well>: This page documents interfaces provided in glibc up until "
-"version 2.1.  Since version 2.2, glibc no longer provides these interfaces."
-"  Probably, you are looking for the APIs provided by the I<libdb> library "
+"version 2.1.  Since version 2.2, glibc no longer provides these interfaces.  "
+"Probably, you are looking for the APIs provided by the I<libdb> library "
 "instead."
-msgstr "I<Примечание>: В этой странице описаны интерфейсы, предоставляемые glibc до версии 2.1. Начиная с версии 2.2, glibc больше не поддерживает эти интерфейсы. Вероятно, вы ищите API, предоставляемое библиотекой I<libdb>."
+msgstr ""
+"I<Примечание>: В этой странице описаны интерфейсы, предоставляемые glibc до "
+"версии 2.1. Начиная с версии 2.2, glibc больше не поддерживает эти "
+"интерфейсы. Вероятно, вы ищите API, предоставляемое библиотекой I<libdb>."
 
 #. type: Plain text
 #: man-pages/man3/hash.3:62
 msgid ""
 "The routine B<dbopen>(3)  is the library interface to database files.  One "
-"of the supported file formats is hash files.  The general description of the"
-" database access methods is in B<dbopen>(3), this manual page describes only"
-" the hash-specific information."
-msgstr "Функция B<dbopen>(3) — это библиотечный интерфейс к файлам баз данных. Один из поддерживаемых форматов файлов — hash. Общее описание методов доступа к базам данных находится в B<dbopen>(3). Эта справочная страница содержит только информацию, относящуюся к ассоциативным массивам."
+"of the supported file formats is hash files.  The general description of the "
+"database access methods is in B<dbopen>(3), this manual page describes only "
+"the hash-specific information."
+msgstr ""
+"Функция B<dbopen>(3) — это библиотечный интерфейс к файлам баз данных. Один "
+"из поддерживаемых форматов файлов — hash. Общее описание методов доступа к "
+"базам данных находится в B<dbopen>(3). Эта справочная страница содержит "
+"только информацию, относящуюся к ассоциативным массивам."
 
 #. type: Plain text
 #: man-pages/man3/hash.3:64
@@ -3092,7 +3574,9 @@ msgstr "Структура данных ассоциативных массив�
 msgid ""
 "The access-method-specific data structure provided to B<dbopen>(3)  is "
 "defined in the I<E<lt>db.hE<gt>> include file as follows:"
-msgstr "Специальная структура метода доступа данных, к которой обращается B<dbopen>(3), задана в I<E<lt>db.hE<gt>> следующим образом:"
+msgstr ""
+"Специальная структура метода доступа данных, к которой обращается "
+"B<dbopen>(3), задана в I<E<lt>db.hE<gt>> следующим образом:"
 
 #. type: Plain text
 #: man-pages/man3/hash.3:81
@@ -3106,7 +3590,15 @@ msgid ""
 "    uint32_t         (*hash)(const void *, size_t);\n"
 "    int         lorder;\n"
 "} HASHINFO;\n"
-msgstr "typedef struct {\n    unsigned int       bsize;\n    unsigned int       ffactor;\n    unsigned int       nelem;\n    unsigned int       cachesize;\n    uint32_t         (*hash)(const void *, size_t);\n    int         lorder;\n} HASHINFO;\n"
+msgstr ""
+"typedef struct {\n"
+"    unsigned int       bsize;\n"
+"    unsigned int       ffactor;\n"
+"    unsigned int       nelem;\n"
+"    unsigned int       cachesize;\n"
+"    uint32_t         (*hash)(const void *, size_t);\n"
+"    int         lorder;\n"
+"} HASHINFO;\n"
 
 #. type: Plain text
 #: man-pages/man3/hash.3:85
@@ -3125,7 +3617,10 @@ msgid ""
 "defines the hash table bucket size, and is, by default, 256 bytes.  It may "
 "be preferable to increase the page size for disk-resident tables and tables "
 "with large data items."
-msgstr "определяет размер корзины хэш-таблицы, по умолчанию равный 256 байтам. Этот параметр может быть изменён, чтобы увеличить размер для таблиц, расположенных на диске, или таблиц с элементами большого размера."
+msgstr ""
+"определяет размер корзины хэш-таблицы, по умолчанию равный 256 байтам. Этот "
+"параметр может быть изменён, чтобы увеличить размер для таблиц, "
+"расположенных на диске, или таблиц с элементами большого размера."
 
 #. type: TP
 #: man-pages/man3/hash.3:90
@@ -3139,7 +3634,11 @@ msgid ""
 "indicates a desired density within the hash table.  It is an approximation "
 "of the number of keys allowed to accumulate in any one bucket, determining "
 "when the hash table grows or shrinks.  The default value is 8."
-msgstr "указывает на желаемую плотность хэш-таблицы. Плотность — это максимальное количество ключей, которые могут находиться в одной корзине, определяющей, на какую величину увеличивается или уменьшается таблица. Значение по умолчанию — 8."
+msgstr ""
+"указывает на желаемую плотность хэш-таблицы. Плотность — это максимальное "
+"количество ключей, которые могут находиться в одной корзине, определяющей, "
+"на какую величину увеличивается или уменьшается таблица. Значение по "
+"умолчанию — 8."
 
 #. type: TP
 #: man-pages/man3/hash.3:96
@@ -3153,7 +3652,11 @@ msgid ""
 "is an estimate of the final size of the hash table.  If not set or set too "
 "low, hash tables will expand gracefully as keys are entered, although a "
 "slight performance degradation may be noticed.  The default value is 1."
-msgstr "предполагаемый окончательный размер хэш-таблицы. Если значение не указано, или установлено слишком маленьким, то размер хэш-таблиц увеличивается каждый раз, когда добавляется новый ключ. Это может привести к снижению производительности. Значение по умолчанию — 1."
+msgstr ""
+"предполагаемый окончательный размер хэш-таблицы. Если значение не указано, "
+"или установлено слишком маленьким, то размер хэш-таблиц увеличивается каждый "
+"раз, когда добавляется новый ключ. Это может привести к снижению "
+"производительности. Значение по умолчанию — 1."
 
 #. type: TP
 #: man-pages/man3/hash.3:102
@@ -3164,10 +3667,13 @@ msgstr "I<cachesize>"
 #. type: Plain text
 #: man-pages/man3/hash.3:108
 msgid ""
-"is the suggested maximum size, in bytes, of the memory cache.  This value is"
-" I<only advisory>, and the access method will allocate more memory rather "
+"is the suggested maximum size, in bytes, of the memory cache.  This value is "
+"I<only advisory>, and the access method will allocate more memory rather "
 "than fail."
-msgstr "предполагаемый максимальный размер кэша памяти в байтах. Эта величина I<только рекомендация>, метод доступа скорее выделит больше памяти, чем завершится с ошибкой."
+msgstr ""
+"предполагаемый максимальный размер кэша памяти в байтах. Эта величина "
+"I<только рекомендация>, метод доступа скорее выделит больше памяти, чем "
+"завершится с ошибкой."
 
 #. type: TP
 #: man-pages/man3/hash.3:108
@@ -3179,11 +3685,16 @@ msgstr "I<hash>"
 #: man-pages/man3/hash.3:117
 msgid ""
 "is a user-defined hash function.  Since no hash function performs equally "
-"well on all possible data, the user may find that the built-in hash function"
-" does poorly on a particular data set.  A user-specified hash functions must"
-" take two arguments (a pointer to a byte string and a length) and return a "
-"32-bit quantity to be used as the hash value."
-msgstr "пользовательская функция хэширования. Так как не существует функции, которая подходит для любых данных, пользователю может показаться, что встроенная хэш-функция слишком проста для некоторых типов данных. Определяемая пользователем функция должна иметь два аргумента (указатель на строку байтов и длина) и возвращать 32-битную величину, используемую как хэш-значение."
+"well on all possible data, the user may find that the built-in hash function "
+"does poorly on a particular data set.  A user-specified hash functions must "
+"take two arguments (a pointer to a byte string and a length) and return a 32-"
+"bit quantity to be used as the hash value."
+msgstr ""
+"пользовательская функция хэширования. Так как не существует функции, которая "
+"подходит для любых данных, пользователю может показаться, что встроенная хэш-"
+"функция слишком проста для некоторых типов данных. Определяемая "
+"пользователем функция должна иметь два аргумента (указатель на строку байтов "
+"и длина) и возвращать 32-битную величину, используемую как хэш-значение."
 
 #. type: TP
 #: man-pages/man3/hash.3:117
@@ -3197,9 +3708,15 @@ msgid ""
 "is the byte order for integers in the stored database metadata.  The number "
 "should represent the order as an integer; for example, big endian order "
 "would be the number 4,321.  If I<lorder> is 0 (no order is specified), the "
-"current host order is used.  If the file already exists, the specified value"
-" is ignored and the value specified when the tree was created is used."
-msgstr "порядок байт для целых чисел, хранящихся в метаданных базы данных. Значение должно представлять порядок байт в виде целом числе, например, для прямого порядка (big endian) будет использовано значение 4321. Если I<lorder> равно 0 (т. е. порядок не определён), то используется порядок байт машины. Если файл уже существует, то указываемое значение игнорируется и будет использоваться порядок байт, определённый при создании."
+"current host order is used.  If the file already exists, the specified value "
+"is ignored and the value specified when the tree was created is used."
+msgstr ""
+"порядок байт для целых чисел, хранящихся в метаданных базы данных. Значение "
+"должно представлять порядок байт в виде целом числе, например, для прямого "
+"порядка (big endian) будет использовано значение 4321. Если I<lorder> равно "
+"0 (т. е. порядок не определён), то используется порядок байт машины. Если "
+"файл уже существует, то указываемое значение игнорируется и будет "
+"использоваться порядок байт, определённый при создании."
 
 #. type: Plain text
 #: man-pages/man3/hash.3:139
@@ -3207,7 +3724,11 @@ msgid ""
 "If the file already exists (and the B<O_TRUNC> flag is not specified), the "
 "values specified for I<bsize>, I<ffactor>, I<lorder>, and I<nelem> are "
 "ignored and the values specified when the tree was created are used."
-msgstr "Если файл уже существует (и не задан флаг B<O_TRUNC>), то значения, определённые в параметрах I<bsize>, I<ffactor>, I<lorder> и I<nelem>, игнорируются, и используются значения, которые были указаны при создании дерева."
+msgstr ""
+"Если файл уже существует (и не задан флаг B<O_TRUNC>), то значения, "
+"определённые в параметрах I<bsize>, I<ffactor>, I<lorder> и I<nelem>, "
+"игнорируются, и используются значения, которые были указаны при создании "
+"дерева."
 
 #. type: Plain text
 #: man-pages/man3/hash.3:144
@@ -3215,7 +3736,10 @@ msgid ""
 "If a hash function is specified, I<hash_open> attempts to determine if the "
 "hash function specified is the same as the one with which the database was "
 "created, and fails if it is not."
-msgstr "Если определена хэш-функция, то I<hash_open> пытается определить, совпадает ли эта функция с той, что использовалась при создании файла, и завершается ошибкой, если это не так."
+msgstr ""
+"Если определена хэш-функция, то I<hash_open> пытается определить, совпадает "
+"ли эта функция с той, что использовалась при создании файла, и завершается "
+"ошибкой, если это не так."
 
 #. type: Plain text
 #: man-pages/man3/hash.3:151
@@ -3223,7 +3747,9 @@ msgid ""
 "Backward-compatible interfaces to the routines described in B<dbm>(3), and "
 "B<ndbm>(3)  are provided, however these interfaces are not compatible with "
 "previous file formats."
-msgstr "Обратно совместимый интерфейс, определённый в B<dbm>(3) и B<ndbm>(3), также существует, но он не совместим с предыдущими реализациями по формату файлов."
+msgstr ""
+"Обратно совместимый интерфейс, определённый в B<dbm>(3) и B<ndbm>(3), также "
+"существует, но он не совместим с предыдущими реализациями по формату файлов."
 
 #. type: SH
 #: man-pages/man3/hash.3:151
@@ -3236,7 +3762,9 @@ msgstr "ОШИБКИ"
 msgid ""
 "The I<hash> access method routines may fail and set I<errno> for any of the "
 "errors specified for the library routine B<dbopen>(3)."
-msgstr "Функции метода доступа I<hash> могут завершиться с ошибкой и присвоить I<errno> любое значение из определённых для библиотеки функций B<dbopen>(3)."
+msgstr ""
+"Функции метода доступа I<hash> могут завершиться с ошибкой и присвоить "
+"I<errno> любое значение из определённых для библиотеки функций B<dbopen>(3)."
 
 #. type: Plain text
 #: man-pages/man3/hash.3:160
@@ -3253,14 +3781,18 @@ msgstr "B<btree>(3), B<dbopen>(3), B<mpool>(3), B<recno>(3)"
 msgid ""
 "I<Dynamic Hash Tables>, Per-Ake Larson, Communications of the ACM, April "
 "1988."
-msgstr "I<Dynamic Hash Tables>, Per-Ake Larson, Communications of the ACM, April 1988."
+msgstr ""
+"I<Dynamic Hash Tables>, Per-Ake Larson, Communications of the ACM, April "
+"1988."
 
 #. type: Plain text
 #: man-pages/man3/hash.3:170
 msgid ""
 "I<A New Hash Package for UNIX>, Margo Seltzer, USENIX Proceedings, Winter "
 "1991."
-msgstr "I<A New Hash Package for UNIX>, Margo Seltzer, USENIX Proceedings, Winter 1991."
+msgstr ""
+"I<A New Hash Package for UNIX>, Margo Seltzer, USENIX Proceedings, Winter "
+"1991."
 
 #. type: TH
 #: man-pages/man3/hypot.3:33
@@ -3271,7 +3803,9 @@ msgstr "HYPOT"
 #. type: Plain text
 #: man-pages/man3/hypot.3:36
 msgid "hypot, hypotf, hypotl - Euclidean distance function"
-msgstr "hypot, hypotf, hypotl - функция, вычисляющая расстояния на евклидовой плоскости"
+msgstr ""
+"hypot, hypotf, hypotl - функция, вычисляющая расстояния на евклидовой "
+"плоскости"
 
 #. type: Plain text
 #: man-pages/man3/hypot.3:39
@@ -3286,7 +3820,10 @@ msgid ""
 "B<double hypot(double >I<x>B<, double >I<y>B<);>\n"
 "B<float hypotf(float >I<x>B<, float >I<y>B<);>\n"
 "B<long double hypotl(long double >I<x>B<, long double >I<y>B<);>\n"
-msgstr "B<double hypot(double >I<x>B<, double >I<y>B<);>\nB<float hypotf(float >I<x>B<, float >I<y>B<);>\nB<long double hypotl(long double >I<x>B<, long double >I<y>B<);>\n"
+msgstr ""
+"B<double hypot(double >I<x>B<, double >I<y>B<);>\n"
+"B<float hypotf(float >I<x>B<, float >I<y>B<);>\n"
+"B<long double hypotl(long double >I<x>B<, long double >I<y>B<);>\n"
 
 #. type: Plain text
 #: man-pages/man3/hypot.3:46
@@ -3297,7 +3834,9 @@ msgstr "Компонуется при указании параметра I<-lm>
 #: man-pages/man3/hypot.3:50
 msgid ""
 "Feature Test Macro Requirements for glibc (see B<feature_test_macros>(7)):"
-msgstr "Требования макроса тестирования свойств для glibc (см. B<feature_test_macros>(7)):"
+msgstr ""
+"Требования макроса тестирования свойств для glibc (см. "
+"B<feature_test_macros>(7)):"
 
 #. type: Plain text
 #: man-pages/man3/hypot.3:54
@@ -3312,7 +3851,11 @@ msgid ""
 "    || _XOPEN_SOURCE\n"
 "    || /* Since glibc 2.19: */ _DEFAULT_SOURCE\n"
 "    || /* Glibc versions E<lt>= 2.19: */ _BSD_SOURCE || _SVID_SOURCE\n"
-msgstr "_ISOC99_SOURCE || _POSIX_C_SOURCE\\ E<gt>=\\ 200112L\n    || _XOPEN_SOURCE\n    || /* начиная с glibc 2.19: */ _DEFAULT_SOURCE\n    || /* версии glibc E<lt>= 2.19: */ _BSD_SOURCE || _SVID_SOURCE\n"
+msgstr ""
+"_ISOC99_SOURCE || _POSIX_C_SOURCE\\ E<gt>=\\ 200112L\n"
+"    || _XOPEN_SOURCE\n"
+"    || /* начиная с glibc 2.19: */ _DEFAULT_SOURCE\n"
+"    || /* версии glibc E<lt>= 2.19: */ _BSD_SOURCE || _SVID_SOURCE\n"
 
 #. type: Plain text
 #: man-pages/man3/hypot.3:63
@@ -3326,15 +3869,21 @@ msgid ""
 "_ISOC99_SOURCE || _POSIX_C_SOURCE\\ E<gt>=\\ 200112L\n"
 "    || /* Since glibc 2.19: */ _DEFAULT_SOURCE\n"
 "    || /* Glibc versions E<lt>= 2.19: */ _BSD_SOURCE || _SVID_SOURCE\n"
-msgstr "_ISOC99_SOURCE || _POSIX_C_SOURCE\\ E<gt>=\\ 200112L\n    || /* начиная с glibc 2.19: */ _DEFAULT_SOURCE\n    || /* версии glibc E<lt>= 2.19: */ _BSD_SOURCE || _SVID_SOURCE\n"
+msgstr ""
+"_ISOC99_SOURCE || _POSIX_C_SOURCE\\ E<gt>=\\ 200112L\n"
+"    || /* начиная с glibc 2.19: */ _DEFAULT_SOURCE\n"
+"    || /* версии glibc E<lt>= 2.19: */ _BSD_SOURCE || _SVID_SOURCE\n"
 
 #. type: Plain text
 #: man-pages/man3/hypot.3:80
 msgid ""
-"These functions return sqrt(I<x>*I<x>+I<y>*I<y>).  This is the length of the"
-" hypotenuse of a right-angled triangle with sides of length I<x> and I<y>, "
-"or the distance of the point (I<x>,I<y>)  from the origin."
-msgstr "Эти функции возвращают sqrt(I<x>*I<x>+I<y>*I<y>). Это длина гипотенузы прямоугольного треугольника с катетами I<x> и I<y>, или расстояние от начала координат до точки (I<x>,I<y>)."
+"These functions return sqrt(I<x>*I<x>+I<y>*I<y>).  This is the length of the "
+"hypotenuse of a right-angled triangle with sides of length I<x> and I<y>, or "
+"the distance of the point (I<x>,I<y>)  from the origin."
+msgstr ""
+"Эти функции возвращают sqrt(I<x>*I<x>+I<y>*I<y>). Это длина гипотенузы "
+"прямоугольного треугольника с катетами I<x> и I<y>, или расстояние от начала "
+"координат до точки (I<x>,I<y>)."
 
 #.  e.g., hypot(DBL_MIN, DBL_MIN) does the right thing, as does, say
 #.  hypot(DBL_MAX/2.0, DBL_MAX/2.0).
@@ -3343,7 +3892,9 @@ msgstr "Эти функции возвращают sqrt(I<x>*I<x>+I<y>*I<y>). Э
 msgid ""
 "The calculation is performed without undue overflow or underflow during the "
 "intermediate steps of the calculation."
-msgstr "Вычисление выполняется без ненадлежащего переполнения или исчерпал степень при промежуточных шагах вычисления."
+msgstr ""
+"Вычисление выполняется без ненадлежащего переполнения или исчерпал степень "
+"при промежуточных шагах вычисления."
 
 #. type: SH
 #: man-pages/man3/hypot.3:85
@@ -3356,26 +3907,35 @@ msgstr "ВОЗВРАЩАЕМОЕ ЗНАЧЕНИЕ"
 msgid ""
 "On success, these functions return the length of a right-angled triangle "
 "with sides of length I<x> and I<y>."
-msgstr "При успешном выполнении функции возвращают длину прямоугольного треугольника с длинами сторон I<x> и I<y>."
+msgstr ""
+"При успешном выполнении функции возвращают длину прямоугольного треугольника "
+"с длинами сторон I<x> и I<y>."
 
 #. type: Plain text
 #: man-pages/man3/hypot.3:98
 msgid "If I<x> or I<y> is an infinity, positive infinity is returned."
-msgstr "Если I<x> или I<y> стремится к бесконечности, то будет возвращена плюс бесконечность."
+msgstr ""
+"Если I<x> или I<y> стремится к бесконечности, то будет возвращена плюс "
+"бесконечность."
 
 #. type: Plain text
 #: man-pages/man3/hypot.3:106
 msgid ""
 "If I<x> or I<y> is a NaN, and the other argument is not an infinity, a NaN "
 "is returned."
-msgstr "Если I<x> или I<y> имеет значение NaN, а другой аргумент не бесконечность, будет возвращено NaN."
+msgstr ""
+"Если I<x> или I<y> имеет значение NaN, а другой аргумент не бесконечность, "
+"будет возвращено NaN."
 
 #. type: Plain text
 #: man-pages/man3/hypot.3:115
 msgid ""
 "If the result overflows, a range error occurs, and the functions return "
 "B<HUGE_VAL>, B<HUGE_VALF>, or B<HUGE_VALL>, respectively."
-msgstr "Если в результате превышена разрядность, то возникает ошибка диапазона и функции возвращают B<HUGE_VAL>, B<HUGE_VALF> или B<HUGE_VALL>, соответственно."
+msgstr ""
+"Если в результате превышена разрядность, то возникает ошибка диапазона и "
+"функции возвращают B<HUGE_VAL>, B<HUGE_VALF> или B<HUGE_VALL>, "
+"соответственно."
 
 #.  Actually, could the result not be subnormal if both arguments
 #.  are subnormal?  I think not -- mtk, Jul 2008
@@ -3384,14 +3944,18 @@ msgstr "Если в результате превышена разрядност
 msgid ""
 "If both arguments are subnormal, and the result is subnormal, a range error "
 "occurs, and the correct result is returned."
-msgstr "Если оба аргумента субнормальны и результат субнормален, то возникает ошибка диапазона, и возвращается правильный результат."
+msgstr ""
+"Если оба аргумента субнормальны и результат субнормален, то возникает ошибка "
+"диапазона, и возвращается правильный результат."
 
 #. type: Plain text
 #: man-pages/man3/hypot.3:126
 msgid ""
 "See B<math_error>(7)  for information on how to determine whether an error "
 "has occurred when calling these functions."
-msgstr "Смотрите B<math_error>(7), чтобы определить, какие ошибки могут возникать при вызове этих функций."
+msgstr ""
+"Смотрите B<math_error>(7), чтобы определить, какие ошибки могут возникать "
+"при вызове этих функций."
 
 #. type: Plain text
 #: man-pages/man3/hypot.3:128
@@ -3409,7 +3973,9 @@ msgstr "Ошибка диапазона: результат превысил р�
 msgid ""
 "I<errno> is set to B<ERANGE>.  An overflow floating-point exception "
 "(B<FE_OVERFLOW>)  is raised."
-msgstr "Значение I<errno> устанавливается в B<ERANGE>. Возникает исключение переполнения плавающей точки (B<FE_OVERFLOW>)."
+msgstr ""
+"Значение I<errno> устанавливается в B<ERANGE>. Возникает исключение "
+"переполнения плавающей точки (B<FE_OVERFLOW>)."
 
 #. type: TP
 #: man-pages/man3/hypot.3:136
@@ -3423,7 +3989,8 @@ msgstr "Ошибка диапазона: результат исчерпал с�
 #. type: Plain text
 #: man-pages/man3/hypot.3:144
 msgid "An underflow floating-point exception (B<FE_UNDERFLOW>)  is raised."
-msgstr "Возникает исключение исчерпание степени плавающей точки (B<FE_UNDERFLOW>)."
+msgstr ""
+"Возникает исключение исчерпание степени плавающей точки (B<FE_UNDERFLOW>)."
 
 #.  FIXME . Is it intentional that these functions do not set errno?
 #.  They do set errno for the overflow case.
@@ -3470,7 +4037,10 @@ msgid ""
 "B<hypot>(),\n"
 "B<hypotf>(),\n"
 "B<hypotl>()"
-msgstr "B<hypot>(),\nB<hypotf>(),\nB<hypotl>()"
+msgstr ""
+"B<hypot>(),\n"
+"B<hypotf>(),\n"
+"B<hypotl>()"
 
 #. type: tbl table
 #: man-pages/man3/hypot.3:163
@@ -3492,7 +4062,9 @@ msgstr "C99, POSIX.1-2001, POSIX.1-2008."
 #. type: Plain text
 #: man-pages/man3/hypot.3:173
 msgid "The variant returning I<double> also conforms to SVr4, 4.3BSD."
-msgstr "Вариант, возвращающий значение типа I<double>, также соответствует SVr4, 4.3BSD."
+msgstr ""
+"Вариант, возвращающий значение типа I<double>, также соответствует SVr4, "
+"4.3BSD."
 
 #. type: Plain text
 #: man-pages/man3/hypot.3:175
@@ -3516,7 +4088,9 @@ msgstr "GNU"
 msgid ""
 "hcreate, hdestroy, hsearch, hcreate_r, hdestroy_r, hsearch_r - hash table "
 "management"
-msgstr "hcreate, hdestroy, hsearch, hcreate_r, hdestroy_r, hsearch_r - операции над ассоциативными массивами"
+msgstr ""
+"hcreate, hdestroy, hsearch, hcreate_r, hdestroy_r, hsearch_r - операции над "
+"ассоциативными массивами"
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:42
@@ -3548,7 +4122,9 @@ msgstr "B<void hdestroy(void);>\n"
 msgid ""
 "B<#define _GNU_SOURCE>         /* See feature_test_macros(7) */\n"
 "B<#include E<lt>search.hE<gt>>\n"
-msgstr "B<#define _GNU_SOURCE>         /* смотрите feature_test_macros(7) */\nB<#include E<lt>search.hE<gt>>\n"
+msgstr ""
+"B<#define _GNU_SOURCE>         /* смотрите feature_test_macros(7) */\n"
+"B<#include E<lt>search.hE<gt>>\n"
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:53
@@ -3562,7 +4138,9 @@ msgstr "B<int hcreate_r(size_t >I<nel>B<, struct hsearch_data *>I<htab>B<);>\n"
 msgid ""
 "B<int hsearch_r(ENTRY >I<item>B<, ACTION >I<action>B<, ENTRY **>I<retval>B<,>\n"
 "B<              struct hsearch_data *>I<htab>B<);>\n"
-msgstr "B<int hsearch_r(ENTRY >I<item>B<, ACTION >I<action>B<, ENTRY **>I<retval>B<,>\nB<              struct hsearch_data *>I<htab>B<);>\n"
+msgstr ""
+"B<int hsearch_r(ENTRY >I<item>B<, ACTION >I<action>B<, ENTRY **>I<retval>B<,>\n"
+"B<              struct hsearch_data *>I<htab>B<);>\n"
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:58
@@ -3573,11 +4151,15 @@ msgstr "B<void hdestroy_r(struct hsearch_data *>I<htab>B<);>\n"
 #. type: Plain text
 #: man-pages/man3/hsearch.3:68
 msgid ""
-"The three functions B<hcreate>(), B<hsearch>(), and B<hdestroy>()  allow the"
-" caller to create and manage a hash search table containing entries "
+"The three functions B<hcreate>(), B<hsearch>(), and B<hdestroy>()  allow the "
+"caller to create and manage a hash search table containing entries "
 "consisting of a key (a string) and associated data.  Using these functions, "
 "only one hash table can be used at a time."
-msgstr "Функции B<hcreate>(), B<hsearch>() и B<hdestroy>() позволяют создать и работать с ассоциативным массивом поиска (хэшем), который содержит элементы, состоящие из ключа (строки) и связанных с ним данных. Функции позволяют работать одномоментно только с одним массивом."
+msgstr ""
+"Функции B<hcreate>(), B<hsearch>() и B<hdestroy>() позволяют создать и "
+"работать с ассоциативным массивом поиска (хэшем), который содержит элементы, "
+"состоящие из ключа (строки) и связанных с ним данных. Функции позволяют "
+"работать одномоментно только с одним массивом."
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:82
@@ -3588,7 +4170,13 @@ msgid ""
 "that describes the table on which the function is to operate.  The "
 "programmer should treat this structure as opaque (i.e., do not attempt to "
 "directly access or modify the fields in this structure)."
-msgstr "Функции B<hcreate_r>(), B<hsearch_r>() и B<hdestroy_r>() являются реентерабильными версиями, позволяющими программе создавать более одного массива поиска одномоментно. Последний параметр, I<htab>, указывает на структуру, описывающую массив, с которым работает функция. Программист должен считать, что не знает её формат (т. е., не должен пытаться напрямую читать и изменять её поля)."
+msgstr ""
+"Функции B<hcreate_r>(), B<hsearch_r>() и B<hdestroy_r>() являются "
+"реентерабильными версиями, позволяющими программе создавать более одного "
+"массива поиска одномоментно. Последний параметр, I<htab>, указывает на "
+"структуру, описывающую массив, с которым работает функция. Программист "
+"должен считать, что не знает её формат (т. е., не должен пытаться напрямую "
+"читать и изменять её поля)."
 
 #.  e.g., in glibc it is raised to the next higher prime number
 #. type: Plain text
@@ -3598,40 +4186,57 @@ msgid ""
 "specifies the maximum number of entries in the table.  (This maximum cannot "
 "be changed later, so choose it wisely.)  The implementation may adjust this "
 "value upward to improve the performance of the resulting hash table."
-msgstr "Сначала, хэш должен быть создан с помощью функции B<hcreate>(). В аргументе I<nel> указывается предполагаемое максимальное количество элементов в массиве (данный максимум нельзя изменить позже, указывайте значение с запасом). Реализация функции может изменить этот параметр для повышения быстродействия массива."
+msgstr ""
+"Сначала, хэш должен быть создан с помощью функции B<hcreate>(). В аргументе "
+"I<nel> указывается предполагаемое максимальное количество элементов в "
+"массиве (данный максимум нельзя изменить позже, указывайте значение с "
+"запасом). Реализация функции может изменить этот параметр для повышения "
+"быстродействия массива."
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:102
 msgid ""
-"The B<hcreate_r>()  function performs the same task as B<hcreate>(), but for"
-" the table described by the structure I<*htab>.  The structure pointed to by"
-" I<htab> must be zeroed before the first call to B<hcreate_r>()."
-msgstr "Функция B<hcreate_r>() выполняет тоже, что и B<hcreate>(), но для массива, описанного в структуре I<*htab>. Перед вызовом B<hcreate_r>() структура, на которую указывает I<htab>, должна быть обнулена."
+"The B<hcreate_r>()  function performs the same task as B<hcreate>(), but for "
+"the table described by the structure I<*htab>.  The structure pointed to by "
+"I<htab> must be zeroed before the first call to B<hcreate_r>()."
+msgstr ""
+"Функция B<hcreate_r>() выполняет тоже, что и B<hcreate>(), но для массива, "
+"описанного в структуре I<*htab>. Перед вызовом B<hcreate_r>() структура, на "
+"которую указывает I<htab>, должна быть обнулена."
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:117
 msgid ""
-"The function B<hdestroy>()  frees the memory occupied by the hash table that"
-" was created by B<hcreate>().  After calling B<hdestroy>(), a new hash table"
-" can be created using B<hcreate>().  The B<hdestroy_r>()  function performs "
+"The function B<hdestroy>()  frees the memory occupied by the hash table that "
+"was created by B<hcreate>().  After calling B<hdestroy>(), a new hash table "
+"can be created using B<hcreate>().  The B<hdestroy_r>()  function performs "
 "the analogous task for a hash table described by I<*htab>, which was "
 "previously created using B<hcreate_r>()."
-msgstr "Функция B<hdestroy>() освобождает память, занимаемую массивом, созданным B<hcreate>(). После вызова B<hdestroy>() функцией B<hcreate>() можно создать новый массив. Функция B<hdestroy_r>() выполняет аналогичную задачу для массива, описанного в I<*htab>, который был ранее создан B<hcreate_r>()."
+msgstr ""
+"Функция B<hdestroy>() освобождает память, занимаемую массивом, созданным "
+"B<hcreate>(). После вызова B<hdestroy>() функцией B<hcreate>() можно создать "
+"новый массив. Функция B<hdestroy_r>() выполняет аналогичную задачу для "
+"массива, описанного в I<*htab>, который был ранее создан B<hcreate_r>()."
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:124
 msgid ""
-"The B<hsearch>()  function searches the hash table for an item with the same"
-" key as I<item> (where \"the same\" is determined using B<strcmp>(3)), and "
-"if successful returns a pointer to it."
-msgstr "Функция B<hsearch>() ищет в массиве элемент с ключом, равным I<item> («равенство» определяется функцией B<strcmp>(3)), и, в случае удачного завершения операции, возвращает указатель на него."
+"The B<hsearch>()  function searches the hash table for an item with the same "
+"key as I<item> (where \"the same\" is determined using B<strcmp>(3)), and if "
+"successful returns a pointer to it."
+msgstr ""
+"Функция B<hsearch>() ищет в массиве элемент с ключом, равным I<item> "
+"(«равенство» определяется функцией B<strcmp>(3)), и, в случае удачного "
+"завершения операции, возвращает указатель на него."
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:127
 msgid ""
-"The argument I<item> is of type I<ENTRY>, which is defined in "
-"I<E<lt>search.hE<gt>> as follows:"
-msgstr "Аргумент I<item> имеет тип I<ENTRY>, который определён в I<E<lt>search.hE<gt>> следующим образом:"
+"The argument I<item> is of type I<ENTRY>, which is defined in I<E<lt>search."
+"hE<gt>> as follows:"
+msgstr ""
+"Аргумент I<item> имеет тип I<ENTRY>, который определён в I<E<lt>search."
+"hE<gt>> следующим образом:"
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:134
@@ -3641,40 +4246,58 @@ msgid ""
 "    char *key;\n"
 "    void *data;\n"
 "} ENTRY;\n"
-msgstr "typedef struct entry {\n    char *key;\n    void *data;\n} ENTRY;\n"
+msgstr ""
+"typedef struct entry {\n"
+"    char *key;\n"
+"    void *data;\n"
+"} ENTRY;\n"
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:140
 msgid ""
-"The field I<key> points to a null-terminated string which is the search key."
-"  The field I<data> points to data that is associated with that key."
-msgstr "Поле I<key> указывает на оканчивающуюся null строку, используемую в качестве ключа для поиска. Поле I<data> указывает на данные, связанные с ключом."
+"The field I<key> points to a null-terminated string which is the search "
+"key.  The field I<data> points to data that is associated with that key."
+msgstr ""
+"Поле I<key> указывает на оканчивающуюся null строку, используемую в качестве "
+"ключа для поиска. Поле I<data> указывает на данные, связанные с ключом."
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:159
 msgid ""
 "The argument I<action> determines what B<hsearch>()  does after an "
 "unsuccessful search.  This argument must either have the value B<ENTER>, "
-"meaning insert a copy of I<item> (and return a pointer to the new hash table"
-" entry as the function result), or the value B<FIND>, meaning that NULL "
+"meaning insert a copy of I<item> (and return a pointer to the new hash table "
+"entry as the function result), or the value B<FIND>, meaning that NULL "
 "should be returned.  (If I<action> is B<FIND>, then I<data> is ignored.)"
-msgstr "Аргумент I<action> определяет действие, выполняемое B<hsearch>() после неудачного поиска. Его значением должно быть B<ENTER> (указывает, что нужно вставить копию I<item> и вернуть указатель на новый элемент массива) или B<FIND> (нужно вернуть NULL). Если значение I<action> равно B<FIND>, то поле I<data> игнорируется."
+msgstr ""
+"Аргумент I<action> определяет действие, выполняемое B<hsearch>() после "
+"неудачного поиска. Его значением должно быть B<ENTER> (указывает, что нужно "
+"вставить копию I<item> и вернуть указатель на новый элемент массива) или "
+"B<FIND> (нужно вернуть NULL). Если значение I<action> равно B<FIND>, то поле "
+"I<data> игнорируется."
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:173
 msgid ""
 "The B<hsearch_r>()  function is like B<hsearch>()  but operates on the hash "
 "table described by I<*htab>.  The B<hsearch_r>()  function differs from "
-"B<hsearch>()  in that a pointer to the found item is returned in I<*retval>,"
-" rather than as the function result."
-msgstr "Функция B<hsearch_r>() подобна B<hsearch>(), но работает с массивом, указанным в I<*htab>. Функция B<hsearch_r>() отлична от B<hsearch>() в том, что указатель найденного элемента возвращается в I<*retval>, а не как результат работы функции."
+"B<hsearch>()  in that a pointer to the found item is returned in I<*retval>, "
+"rather than as the function result."
+msgstr ""
+"Функция B<hsearch_r>() подобна B<hsearch>(), но работает с массивом, "
+"указанным в I<*htab>. Функция B<hsearch_r>() отлична от B<hsearch>() в том, "
+"что указатель найденного элемента возвращается в I<*retval>, а не как "
+"результат работы функции."
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:181
 msgid ""
 "B<hcreate>()  and B<hcreate_r>()  return nonzero on success.  They return 0 "
 "on error, with I<errno> set to indicate the cause of the error."
-msgstr "Функции B<hcreate>() и B<hcreate_r>() возвращают ненулевое значение при успешном выполнении. При ошибке возвращается 0, а I<errno> устанавливается в соответствующее значение."
+msgstr ""
+"Функции B<hcreate>() и B<hcreate_r>() возвращают ненулевое значение при "
+"успешном выполнении. При ошибке возвращается 0, а I<errno> устанавливается в "
+"соответствующее значение."
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:195
@@ -3685,13 +4308,21 @@ msgid ""
 "in the hash table.  B<hsearch_r>()  returns nonzero on success, and 0 on "
 "error.  In the event of an error, these two functions set I<errno> to "
 "indicate the cause of the error."
-msgstr "Функция B<hsearch>() при успешном выполнении возвращает указатель на элемент массива. При ошибке возвращается NULL, то есть, если I<action> равно B<ENTER> массив полон, или, если I<action> равно B<FIND> и I<item> не может быть найден в массиве. Функция B<hsearch_r>() возвращает 0 в случае ошибки или ненулевое значение при успешном выполнении. При ошибке данные функции присваивают I<errno> код ошибки."
+msgstr ""
+"Функция B<hsearch>() при успешном выполнении возвращает указатель на элемент "
+"массива. При ошибке возвращается NULL, то есть, если I<action> равно "
+"B<ENTER> массив полон, или, если I<action> равно B<FIND> и I<item> не может "
+"быть найден в массиве. Функция B<hsearch_r>() возвращает 0 в случае ошибки "
+"или ненулевое значение при успешном выполнении. При ошибке данные функции "
+"присваивают I<errno> код ошибки."
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:201
 msgid ""
 "B<hcreate_r>()  and B<hdestroy_r>()  can fail for the following reasons:"
-msgstr "Функции B<hcreate_r>() и B<hdestroy_r>() могут завершиться с ошибкой по следующим причинам:"
+msgstr ""
+"Функции B<hcreate_r>() и B<hdestroy_r>() могут завершиться с ошибкой по "
+"следующим причинам:"
 
 #. type: TP
 #: man-pages/man3/hsearch.3:201
@@ -3707,7 +4338,9 @@ msgstr "Значение I<htab> равно NULL."
 #. type: Plain text
 #: man-pages/man3/hsearch.3:210
 msgid "B<hsearch>()  and B<hsearch_r>()  can fail for the following reasons:"
-msgstr "Функции B<hsearch>() и B<hsearch_r>() могут завершиться с ошибкой по следующим причинам:"
+msgstr ""
+"Функции B<hsearch>() и B<hsearch_r>() могут завершиться с ошибкой по "
+"следующим причинам:"
 
 #. type: TP
 #: man-pages/man3/hsearch.3:210
@@ -3720,7 +4353,9 @@ msgstr "B<ENOMEM>"
 msgid ""
 "I<action> was B<ENTER>, I<key> was not found in the table, and there was no "
 "room in the table to add a new entry."
-msgstr "Значение I<action> равно B<ENTER>, значение I<key> не найдено в массиве и в массиве нет места под новый элемент."
+msgstr ""
+"Значение I<action> равно B<ENTER>, значение I<key> не найдено в массиве и в "
+"массиве нет места под новый элемент."
 
 #. type: TP
 #: man-pages/man3/hsearch.3:218
@@ -3731,7 +4366,8 @@ msgstr "B<ESRCH>"
 #. type: Plain text
 #: man-pages/man3/hsearch.3:226
 msgid "I<action> was B<FIND>, and I<key> was not found in the table."
-msgstr "Значение I<action> равно B<FIND> и значение I<key> не найдено в массиве."
+msgstr ""
+"Значение I<action> равно B<FIND> и значение I<key> не найдено в массиве."
 
 #.  PROX.1-2001, POSIX.1-2008
 #. type: Plain text
@@ -3745,7 +4381,9 @@ msgstr "В POSIX.1 определена только ошибка B<ENOMEM>."
 msgid ""
 "B<hcreate>(),\n"
 "B<hsearch>(),\n"
-msgstr "B<hcreate>(),\nB<hsearch>(),\n"
+msgstr ""
+"B<hcreate>(),\n"
+"B<hsearch>(),\n"
 
 #. type: tbl table
 #: man-pages/man3/hsearch.3:242 man-pages/man3/hsearch.3:248
@@ -3771,7 +4409,9 @@ msgstr "MT-Unsafe race:hsearch"
 msgid ""
 "B<hcreate_r>(),\n"
 "B<hsearch_r>(),\n"
-msgstr "B<hcreate_r>(),\nB<hsearch_r>(),\n"
+msgstr ""
+"B<hcreate_r>(),\n"
+"B<hsearch_r>(),\n"
 
 #. type: tbl table
 #: man-pages/man3/hsearch.3:250
@@ -3790,14 +4430,18 @@ msgstr "MT-Safe race:htab"
 msgid ""
 "The functions B<hcreate>(), B<hsearch>(), and B<hdestroy>()  are from SVr4, "
 "and are described in POSIX.1-2001 and POSIX.1-2008."
-msgstr "Функции B<hcreate>(), B<hsearch>() и B<hdestroy>() взяты из SVr4 и описаны в POSIX.1-2001 и POSIX.1-2008."
+msgstr ""
+"Функции B<hcreate>(), B<hsearch>() и B<hdestroy>() взяты из SVr4 и описаны в "
+"POSIX.1-2001 и POSIX.1-2008."
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:266
 msgid ""
 "The functions B<hcreate_r>(), B<hsearch_r>(), and B<hdestroy_r>()  are GNU "
 "extensions."
-msgstr "Функции B<hcreate_r>(), B<hsearch_r>() и B<hdestroy_r>() являются расширениями GNU."
+msgstr ""
+"Функции B<hcreate_r>(), B<hsearch_r>() и B<hdestroy_r>() являются "
+"расширениями GNU."
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:273
@@ -3806,7 +4450,11 @@ msgid ""
 "contains enough free space to minimize collisions.  Typically, this means "
 "that I<nel> should be at least 25% larger than the maximum number of "
 "elements that the caller expects to store in the table."
-msgstr "Реализации ассоциативных массивов более эффективны, если массив содержит достаточно свободного места, чтобы не искать незанятое пространство. Это означает, что обычно, значение I<nel> нужно увеличить на, как минимум, 25% от максимального количества элементов, ожидаемых в массиве."
+msgstr ""
+"Реализации ассоциативных массивов более эффективны, если массив содержит "
+"достаточно свободного места, чтобы не искать незанятое пространство. Это "
+"означает, что обычно, значение I<nel> нужно увеличить на, как минимум, 25% "
+"от максимального количества элементов, ожидаемых в массиве."
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:291
@@ -3819,7 +4467,14 @@ msgid ""
 "creating a single table whose lifetime matches that of the program), then "
 "the program must maintain bookkeeping data structures that allow it to free "
 "them."
-msgstr "Функции B<hdestroy>() и B<hdestroy_r>() не освобождают буферы, на которые указывают элементы I<key> и I<data> в массиве (это невозможно сделать, так как неизвестно, были ли выделены эти буферы динамически). Если эти буферы требуется освобождать (возможно, из-за того, что программа много раз создаёт и удаляет массивы, а не создаёт один массив на всё время работы), то программа должна предусмотреть хранилище под используемые структуры, которое позволило бы их освободить."
+msgstr ""
+"Функции B<hdestroy>() и B<hdestroy_r>() не освобождают буферы, на которые "
+"указывают элементы I<key> и I<data> в массиве (это невозможно сделать, так "
+"как неизвестно, были ли выделены эти буферы динамически). Если эти буферы "
+"требуется освобождать (возможно, из-за того, что программа много раз создаёт "
+"и удаляет массивы, а не создаёт один массив на всё время работы), то "
+"программа должна предусмотреть хранилище под используемые структуры, которое "
+"позволило бы их освободить."
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:298
@@ -3829,7 +4484,11 @@ msgid ""
 "successful search.  In libc and glibc (before version 2.3), the "
 "implementation violates the specification, updating the I<data> for the "
 "given I<key> in this case."
-msgstr "В SVr4 и POSIX 1003.1-2001 указано, что I<action> имеет смысл только при неудачном поиске, поэтому при B<ENTER> не нужно ничего делать, если что-то найдено. В библиотеках libc и glibc (до версии 2.3) реализация функций обновляет I<data> для указанного I<key> в этом случае."
+msgstr ""
+"В SVr4 и POSIX 1003.1-2001 указано, что I<action> имеет смысл только при "
+"неудачном поиске, поэтому при B<ENTER> не нужно ничего делать, если что-то "
+"найдено. В библиотеках libc и glibc (до версии 2.3) реализация функций "
+"обновляет I<data> для указанного I<key> в этом случае."
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:300
@@ -3841,7 +4500,9 @@ msgstr "Можно добавлять элементы массива, но не
 msgid ""
 "The following program inserts 24 items into a hash table, then prints some "
 "of them."
-msgstr "Следующая программа вставляет в массив 24 элемента, а затем выводит на печать некоторые из них:"
+msgstr ""
+"Следующая программа вставляет в массив 24 элемента, а затем выводит на "
+"печать некоторые из них:"
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:309
@@ -3850,7 +4511,10 @@ msgid ""
 "#include E<lt>stdio.hE<gt>\n"
 "#include E<lt>stdlib.hE<gt>\n"
 "#include E<lt>search.hE<gt>\n"
-msgstr "#include E<lt>stdio.hE<gt>\n#include E<lt>stdlib.hE<gt>\n#include E<lt>search.hE<gt>\n"
+msgstr ""
+"#include E<lt>stdio.hE<gt>\n"
+"#include E<lt>stdlib.hE<gt>\n"
+"#include E<lt>search.hE<gt>\n"
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:316
@@ -3862,7 +4526,13 @@ msgid ""
 "     \"quebec\", \"romeo\", \"sierra\", \"tango\", \"uniform\",\n"
 "     \"victor\", \"whisky\", \"x-ray\", \"yankee\", \"zulu\"\n"
 "};\n"
-msgstr "static char *data[] = { \"alpha\", \"bravo\", \"charlie\", \"delta\",\n     \"echo\", \"foxtrot\", \"golf\", \"hotel\", \"india\", \"juliet\",\n     \"kilo\", \"lima\", \"mike\", \"november\", \"oscar\", \"papa\",\n     \"quebec\", \"romeo\", \"sierra\", \"tango\", \"uniform\",\n     \"victor\", \"whisky\", \"x-ray\", \"yankee\", \"zulu\"\n};\n"
+msgstr ""
+"static char *data[] = { \"alpha\", \"bravo\", \"charlie\", \"delta\",\n"
+"     \"echo\", \"foxtrot\", \"golf\", \"hotel\", \"india\", \"juliet\",\n"
+"     \"kilo\", \"lima\", \"mike\", \"november\", \"oscar\", \"papa\",\n"
+"     \"quebec\", \"romeo\", \"sierra\", \"tango\", \"uniform\",\n"
+"     \"victor\", \"whisky\", \"x-ray\", \"yankee\", \"zulu\"\n"
+"};\n"
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:322
@@ -3873,7 +4543,12 @@ msgid ""
 "{\n"
 "    ENTRY e, *ep;\n"
 "    int i;\n"
-msgstr "int\nmain(void)\n{\n    ENTRY e, *ep;\n    int i;\n"
+msgstr ""
+"int\n"
+"main(void)\n"
+"{\n"
+"    ENTRY e, *ep;\n"
+"    int i;\n"
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:324
@@ -3897,7 +4572,19 @@ msgid ""
 "            exit(EXIT_FAILURE);\n"
 "        }\n"
 "    }\n"
-msgstr "    for (i = 0; i E<lt> 24; i++) {\n        e.key = data[i];\n        /* data — это просто целое число, а не\n           указатель на что-то */\n        e.data = (void *) i;\n        ep = hsearch(e, ENTER);\n        /* здесь ошибки быть не должно */\n        if (ep == NULL) {\n            fprintf(stderr, \"ошибка элемента\\en\");\n            exit(EXIT_FAILURE);\n        }\n    }\n"
+msgstr ""
+"    for (i = 0; i E<lt> 24; i++) {\n"
+"        e.key = data[i];\n"
+"        /* data — это просто целое число, а не\n"
+"           указатель на что-то */\n"
+"        e.data = (void *) i;\n"
+"        ep = hsearch(e, ENTER);\n"
+"        /* здесь ошибки быть не должно */\n"
+"        if (ep == NULL) {\n"
+"            fprintf(stderr, \"ошибка элемента\\en\");\n"
+"            exit(EXIT_FAILURE);\n"
+"        }\n"
+"    }\n"
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:349
@@ -3914,7 +4601,18 @@ msgid ""
 "    hdestroy();\n"
 "    exit(EXIT_SUCCESS);\n"
 "}\n"
-msgstr "    for (i = 22; i E<lt> 26; i++) {\n        /* показать два элемента массива и\n           два не из массива */\n        e.key = data[i];\n        ep = hsearch(e, FIND);\n        printf(\"%9.9s -E<gt> %9.9s:%d\\en\", e.key,\n               ep ? ep-E<gt>key : \"NULL\", ep ? (int)(ep-E<gt>data) : 0);\n    }\n    hdestroy();\n    exit(EXIT_SUCCESS);\n}\n"
+msgstr ""
+"    for (i = 22; i E<lt> 26; i++) {\n"
+"        /* показать два элемента массива и\n"
+"           два не из массива */\n"
+"        e.key = data[i];\n"
+"        ep = hsearch(e, FIND);\n"
+"        printf(\"%9.9s -E<gt> %9.9s:%d\\en\", e.key,\n"
+"               ep ? ep-E<gt>key : \"NULL\", ep ? (int)(ep-E<gt>data) : 0);\n"
+"    }\n"
+"    hdestroy();\n"
+"    exit(EXIT_SUCCESS);\n"
+"}\n"
 
 #. type: Plain text
 #: man-pages/man3/hsearch.3:354

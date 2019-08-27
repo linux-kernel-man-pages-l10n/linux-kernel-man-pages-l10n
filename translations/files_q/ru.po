@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Artyom Kunyov <artkun@guitarplayer.ru>, 2012
 # Azamat Hackimov <azamat.hackimov@gmail.com>, 2016
@@ -11,15 +11,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
-"POT-Creation-Date: 2017-10-19 18:57+0300\n"
+"POT-Creation-Date: 2019-08-26 09:26+0300\n"
 "PO-Revision-Date: 2019-07-20 06:57+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
-"Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/ru/)\n"
+"Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/"
+"ru/)\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #. type: TH
 #: man-pages/man2/query_module.2:10
@@ -54,7 +57,8 @@ msgstr "ИМЯ"
 #. type: Plain text
 #: man-pages/man2/query_module.2:13
 msgid "query_module - query the kernel for various bits pertaining to modules"
-msgstr "query_module - запросить ядро о различных параметрах, касающихся модулей"
+msgstr ""
+"query_module - запросить ядро о различных параметрах, касающихся модулей"
 
 #. type: SH
 #: man-pages/man2/query_module.2:13
@@ -74,14 +78,18 @@ msgstr "B<#include E<lt>linux/module.hE<gt>>\n"
 msgid ""
 "B<int query_module(const char *>I<name>B<, int >I<which>B<, void *>I<buf>B<,>\n"
 "B<                 size_t >I<bufsize>B<, size_t *>I<ret>B<);>\n"
-msgstr "B<int query_module(const char *>I<name>B<, int >I<which>B<, void *>I<buf>B<,>\nB<                 size_t >I<bufsize>B<, size_t *>I<ret>B<);>\n"
+msgstr ""
+"B<int query_module(const char *>I<name>B<, int >I<which>B<, void *>I<buf>B<,>\n"
+"B<                 size_t >I<bufsize>B<, size_t *>I<ret>B<);>\n"
 
 #. type: Plain text
 #: man-pages/man2/query_module.2:23
 msgid ""
 "I<Note>: No declaration of this system call is provided in glibc headers; "
 "see NOTES."
-msgstr "I<Замечание>: В заголовочных файлах glibc этой системный вызов отсутствует; смотрите ЗАМЕЧАНИЯ."
+msgstr ""
+"I<Замечание>: В заголовочных файлах glibc этой системный вызов отсутствует; "
+"смотрите ЗАМЕЧАНИЯ."
 
 #. type: SH
 #: man-pages/man2/query_module.2:23
@@ -92,7 +100,8 @@ msgstr "ОПИСАНИЕ"
 #. type: Plain text
 #: man-pages/man2/query_module.2:26
 msgid "I<Note>: This system call is present only in kernels before Linux 2.6."
-msgstr "I<Замечание>: Данный системный вызов доступен только в ядрах до Linux 2.6."
+msgstr ""
+"I<Замечание>: Данный системный вызов доступен только в ядрах до Linux 2.6."
 
 #. type: Plain text
 #: man-pages/man2/query_module.2:43
@@ -104,7 +113,14 @@ msgid ""
 "operation specified by I<which>.  Some operations require I<name> to "
 "identify a currently loaded module, some allow I<name> to be NULL, "
 "indicating the kernel proper."
-msgstr "B<query_module>() запрашивает информацию у ядра о загружаемых модулях. Возвращаемая информация помещается в буфер, указанный в I<buf>. Вызывающий должен указать размер I<buf> в I<bufsize>. Смысл и формат возвращаемой информации зависит от операции, задаваемой в I<which>. Для некоторых операций требуется заполнить I<name> для указания на уже загруженный модуль, для некоторых в I<name> можно указать NULL, что указывает на получения свойства ядра."
+msgstr ""
+"B<query_module>() запрашивает информацию у ядра о загружаемых модулях. "
+"Возвращаемая информация помещается в буфер, указанный в I<buf>. Вызывающий "
+"должен указать размер I<buf> в I<bufsize>. Смысл и формат возвращаемой "
+"информации зависит от операции, задаваемой в I<which>. Для некоторых "
+"операций требуется заполнить I<name> для указания на уже загруженный модуль, "
+"для некоторых в I<name> можно указать NULL, что указывает на получения "
+"свойства ядра."
 
 #. type: Plain text
 #: man-pages/man2/query_module.2:46
@@ -122,7 +138,9 @@ msgstr "B<0>"
 msgid ""
 "Returns success, if the kernel supports B<query_module>().  Used to probe "
 "for availability of the system call."
-msgstr "Завершается успешно, если ядро поддерживает B<query_module>(). Используется для проверки доступности системного вызова."
+msgstr ""
+"Завершается успешно, если ядро поддерживает B<query_module>(). Используется "
+"для проверки доступности системного вызова."
 
 #. type: TP
 #: man-pages/man2/query_module.2:51
@@ -136,7 +154,10 @@ msgstr "B<QM_MODULES>"
 msgid ""
 "Returns the names of all loaded modules.  The returned buffer consists of a "
 "sequence of null-terminated strings; I<ret> is set to the number of modules."
-msgstr "Возвращает имена всех загруженных модулей. Возвращаемый буфер содержит последовательность строк, оканчивающихся null; в I<ret> указано количество модулей."
+msgstr ""
+"Возвращает имена всех загруженных модулей. Возвращаемый буфер содержит "
+"последовательность строк, оканчивающихся null; в I<ret> указано количество "
+"модулей."
 
 #. type: TP
 #: man-pages/man2/query_module.2:59
@@ -148,10 +169,13 @@ msgstr "B<QM_DEPS>"
 #. type: Plain text
 #: man-pages/man2/query_module.2:66
 msgid ""
-"Returns the names of all modules used by the indicated module.  The returned"
-" buffer consists of a sequence of null-terminated strings; I<ret> is set to "
+"Returns the names of all modules used by the indicated module.  The returned "
+"buffer consists of a sequence of null-terminated strings; I<ret> is set to "
 "the number of modules."
-msgstr "Возвращает имена всех модулей, используемых указанным модулем. Возвращаемый буфер содержит последовательность строк, оканчивающихся null; в I<ret> указано количество модулей."
+msgstr ""
+"Возвращает имена всех модулей, используемых указанным модулем. Возвращаемый "
+"буфер содержит последовательность строк, оканчивающихся null; в I<ret> "
+"указано количество модулей."
 
 #. type: TP
 #: man-pages/man2/query_module.2:66
@@ -166,7 +190,11 @@ msgid ""
 "Returns the names of all modules using the indicated module.  This is the "
 "inverse of B<QM_DEPS>.  The returned buffer consists of a sequence of null-"
 "terminated strings; I<ret> is set to the number of modules."
-msgstr "Возвращает имена всех модулей, использующих указанный модуль. Это обратная по отношению к B<QM_DEPS> операция. Возвращаемый буфер содержит последовательность строк, оканчивающихся null; в I<ret> указано количество модулей."
+msgstr ""
+"Возвращает имена всех модулей, использующих указанный модуль. Это обратная "
+"по отношению к B<QM_DEPS> операция. Возвращаемый буфер содержит "
+"последовательность строк, оканчивающихся null; в I<ret> указано количество "
+"модулей."
 
 #. type: TP
 #: man-pages/man2/query_module.2:75
@@ -180,7 +208,9 @@ msgstr "B<QM_SYMBOLS>"
 msgid ""
 "Returns the symbols and values exported by the kernel or the indicated "
 "module.  The returned buffer is an array of structures of the following form"
-msgstr "Возвращает символы и значения, экспортируемые ядром или указанным модулем. Возвращаемый буфер содержит массив структур следующего формата:"
+msgstr ""
+"Возвращает символы и значения, экспортируемые ядром или указанным модулем. "
+"Возвращаемый буфер содержит массив структур следующего формата:"
 
 #. type: Plain text
 #: man-pages/man2/query_module.2:88
@@ -190,7 +220,11 @@ msgid ""
 "    unsigned long value;\n"
 "    unsigned long name;\n"
 "};\n"
-msgstr "struct module_symbol {\n    unsigned long value;\n    unsigned long name;\n};\n"
+msgstr ""
+"struct module_symbol {\n"
+"    unsigned long value;\n"
+"    unsigned long name;\n"
+"};\n"
 
 #. type: Plain text
 #: man-pages/man2/query_module.2:98
@@ -198,7 +232,10 @@ msgid ""
 "followed by null-terminated strings.  The value of I<name> is the character "
 "offset of the string relative to the start of I<buf>; I<ret> is set to the "
 "number of symbols."
-msgstr "завершаемого строками, оканчивающимися null. Значение I<name> содержит смещение строки в знаках относительно начала I<buf>; в I<ret> указано количество символов."
+msgstr ""
+"завершаемого строками, оканчивающимися null. Значение I<name> содержит "
+"смещение строки в знаках относительно начала I<buf>; в I<ret> указано "
+"количество символов."
 
 #. type: TP
 #: man-pages/man2/query_module.2:98
@@ -211,7 +248,9 @@ msgstr "B<QM_INFO>"
 msgid ""
 "Returns miscellaneous information about the indicated module.  The output "
 "buffer format is:"
-msgstr "Возвращает различную информацию об указанном модуле. Формат результата в буфере:"
+msgstr ""
+"Возвращает различную информацию об указанном модуле. Формат результата в "
+"буфере:"
 
 #. type: Plain text
 #: man-pages/man2/query_module.2:110
@@ -222,7 +261,12 @@ msgid ""
 "    unsigned long size;\n"
 "    unsigned long flags;\n"
 "};\n"
-msgstr "struct module_info {\n    unsigned long address;\n    unsigned long size;\n    unsigned long flags;\n};\n"
+msgstr ""
+"struct module_info {\n"
+"    unsigned long address;\n"
+"    unsigned long size;\n"
+"    unsigned long flags;\n"
+"};\n"
 
 #. type: Plain text
 #: man-pages/man2/query_module.2:129
@@ -230,10 +274,14 @@ msgid ""
 "where I<address> is the kernel address at which the module resides, I<size> "
 "is the size of the module in bytes, and I<flags> is a mask of "
 "B<MOD_RUNNING>, B<MOD_AUTOCLEAN>, and so on, that indicates the current "
-"status of the module (see the Linux kernel source file "
-"I<include/linux/module.h>).  I<ret> is set to the size of the I<module_info>"
-" structure."
-msgstr "где I<address> — это адрес ядра, где располагается модуль, I<size> — размер модуля в байтах, I<flags> — маска B<MOD_RUNNING>, B<MOD_AUTOCLEAN> и т. п., показывающая текущее состояние модуля (смотрите файл исходного кода ядра Linux I<include/linux/module.h>). В I<ret> указан размер структуры I<module_info>."
+"status of the module (see the Linux kernel source file I<include/linux/"
+"module.h>).  I<ret> is set to the size of the I<module_info> structure."
+msgstr ""
+"где I<address> — это адрес ядра, где располагается модуль, I<size> — размер "
+"модуля в байтах, I<flags> — маска B<MOD_RUNNING>, B<MOD_AUTOCLEAN> и т. п., "
+"показывающая текущее состояние модуля (смотрите файл исходного кода ядра "
+"Linux I<include/linux/module.h>). В I<ret> указан размер структуры "
+"I<module_info>."
 
 #. type: SH
 #: man-pages/man2/query_module.2:129
@@ -246,7 +294,9 @@ msgstr "ВОЗВРАЩАЕМОЕ ЗНАЧЕНИЕ"
 msgid ""
 "On success, zero is returned.  On error, -1 is returned and I<errno> is set "
 "appropriately."
-msgstr "При успешном выполнении возвращается ноль. В случае ошибки возвращается -1, а I<errno> устанавливается в соответствующее значение."
+msgstr ""
+"При успешном выполнении возвращается ноль. В случае ошибки возвращается -1, "
+"а I<errno> устанавливается в соответствующее значение."
 
 #. type: SH
 #: man-pages/man2/query_module.2:134
@@ -265,7 +315,9 @@ msgstr "B<EFAULT>"
 msgid ""
 "At least one of I<name>, I<buf>, or I<ret> was outside the program's "
 "accessible address space."
-msgstr "Одно из значений в I<name>, I<buf> или I<ret> находится вне доступного программного адресного пространства."
+msgstr ""
+"Одно из значений в I<name>, I<buf> или I<ret> находится вне доступного "
+"программного адресного пространства."
 
 #. type: TP
 #: man-pages/man2/query_module.2:143
@@ -279,7 +331,9 @@ msgstr "B<EINVAL>"
 msgid ""
 "Invalid I<which>; or I<name> is NULL (indicating \"the kernel\"), but this "
 "is not permitted with the specified value of I<which>."
-msgstr "Неправильное значение I<which>; I<name> равно NULL (указывающее \"параметры ядра\"), но оно не разрешено для указанного значения I<which>."
+msgstr ""
+"Неправильное значение I<which>; I<name> равно NULL (указывающее \"параметры "
+"ядра\"), но оно не разрешено для указанного значения I<which>."
 
 #. type: TP
 #: man-pages/man2/query_module.2:153
@@ -303,7 +357,9 @@ msgstr "B<ENOSPC>"
 msgid ""
 "The buffer size provided was too small.  I<ret> is set to the minimum size "
 "needed."
-msgstr "Указанный размер буфера слишком мал. В I<ret> возвращается минимальный необходимый размер."
+msgstr ""
+"Указанный размер буфера слишком мал. В I<ret> возвращается минимальный "
+"необходимый размер."
 
 #. type: TP
 #: man-pages/man2/query_module.2:163
@@ -314,9 +370,11 @@ msgstr "B<ENOSYS>"
 #. type: Plain text
 #: man-pages/man2/query_module.2:168
 msgid ""
-"B<query_module>()  is not supported in this version of the kernel (e.g., the"
-" kernel is version 2.6 or later)."
-msgstr "B<query_module>() не поддерживается в этой версии ядра (например, в 2.6 или более поздних)."
+"B<query_module>()  is not supported in this version of the kernel (e.g., the "
+"kernel is version 2.6 or later)."
+msgstr ""
+"B<query_module>() не поддерживается в этой версии ядра (например, в 2.6 или "
+"более поздних)."
 
 #. type: SH
 #: man-pages/man2/query_module.2:168
@@ -330,7 +388,9 @@ msgstr "ВЕРСИИ"
 msgid ""
 "This system call is present on Linux only up until kernel 2.4; it was "
 "removed in Linux 2.6."
-msgstr "Данный системный вызов есть только в Linux до версии 2.4; он был удалён в Linux 2.6."
+msgstr ""
+"Данный системный вызов есть только в Linux до версии 2.4; он был удалён в "
+"Linux 2.6."
 
 #. type: SH
 #: man-pages/man2/query_module.2:172
@@ -355,7 +415,10 @@ msgid ""
 "Some of the information that was formerly available via B<query_module>()  "
 "can be obtained from I</proc/modules>, I</proc/kallsyms>, and the files "
 "under the directory I</sys/module>."
-msgstr "Некоторую информацию, которая была ранее доступна через B<query_module>(), можно получить из I</proc/modules>, I</proc/kallsyms> и файлов из каталога I</sys/modules>."
+msgstr ""
+"Некоторую информацию, которая была ранее доступна через B<query_module>(), "
+"можно получить из I</proc/modules>, I</proc/kallsyms> и файлов из каталога "
+"I</sys/modules>."
 
 #. type: Plain text
 #: man-pages/man2/query_module.2:193
@@ -366,7 +429,12 @@ msgid ""
 "employ this system call, it is sufficient to manually declare the interface "
 "in your code; alternatively, you can invoke the system call using "
 "B<syscall>(2)."
-msgstr "Системный вызов B<query_module>() не поддерживается glibc. В заголовочных файлах glibc он не объявлен, но в недавнем прошлом glibc экспортировал ABI для этого системного вызова. Поэтому чтобы получить данный системный вызов достаточно вручную объявить интерфейс в своём коде; или же вы можете вызвать его через B<syscall>(2)."
+msgstr ""
+"Системный вызов B<query_module>() не поддерживается glibc. В заголовочных "
+"файлах glibc он не объявлен, но в недавнем прошлом glibc экспортировал ABI "
+"для этого системного вызова. Поэтому чтобы получить данный системный вызов "
+"достаточно вручную объявить интерфейс в своём коде; или же вы можете вызвать "
+"его через B<syscall>(2)."
 
 #. type: SH
 #: man-pages/man2/query_module.2:193
@@ -379,7 +447,9 @@ msgstr "СМОТРИТЕ ТАКЖЕ"
 msgid ""
 "B<create_module>(2), B<delete_module>(2), B<get_kernel_syms>(2), "
 "B<init_module>(2), B<lsmod>(8), B<modinfo>(8)"
-msgstr "B<create_module>(2), B<delete_module>(2), B<get_kernel_syms>(2), B<init_module>(2), B<lsmod>(8), B<modinfo>(8)"
+msgstr ""
+"B<create_module>(2), B<delete_module>(2), B<get_kernel_syms>(2), "
+"B<init_module>(2), B<lsmod>(8), B<modinfo>(8)"
 
 #. type: TH
 #: man-pages/man2/quotactl.2:27
@@ -398,27 +468,35 @@ msgstr "quotactl - управление дисковыми квотами"
 msgid ""
 "B<#include E<lt>sys/quota.hE<gt>>\n"
 "B<#include E<lt>xfs/xqm.hE<gt> /* for XFS quotas */>\n"
-msgstr "B<#include E<lt>sys/quota.hE<gt>>\nB<#include E<lt>xfs/xqm.hE<gt> /* для квот XFS */>\n"
+msgstr ""
+"B<#include E<lt>sys/quota.hE<gt>>\n"
+"B<#include E<lt>xfs/xqm.hE<gt> /* для квот XFS */>\n"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:37
 #, no-wrap
-msgid ""
-"B<int quotactl(int >I<cmd>B<, const char *>I<special>B<, int >I<id>B<, "
-"caddr_t >I<addr>B<);>\n"
+msgid "B<int quotactl(int >I<cmd>B<, const char *>I<special>B<, int >I<id>B<, caddr_t >I<addr>B<);>\n"
 msgstr "B<int quotactl(int >I<cmd>B<, const char *>I<special>B<, int >I<id>B<, caddr_t >I<addr>B<);>\n"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:49
 msgid ""
 "The quota system can be used to set per-user, per-group, and per-project "
-"limits on the amount of disk space used on a filesystem.  For each user "
-"and/or group, a soft limit and a hard limit can be set for each filesystem."
-"  The hard limit can't be exceeded.  The soft limit can be exceeded, but "
-"warnings will ensue.  Moreover, the user can't exceed the soft limit for "
-"more than grace period duration (one week by default) at a time; after this,"
-" the soft limit counts as a hard limit."
-msgstr "С помощью системы квот можно задать каждому пользователю, группе или проекту лимит использования дискового пространства. Для пользователя или группы в каждой файловой системе можно указать необязательный (soft) и обязательный (hard) лимиты. Обязательный лимит не может быть превышен. Необязательный лимит превышать можно, но будет выдано соответствующее предостережение. Более того, пользователь может превышать необязательный лимит только в течении льготного срока (по умолчанию,одна неделя); после этого необязательный лимит будет считаться обязательным."
+"limits on the amount of disk space used on a filesystem.  For each user and/"
+"or group, a soft limit and a hard limit can be set for each filesystem.  The "
+"hard limit can't be exceeded.  The soft limit can be exceeded, but warnings "
+"will ensue.  Moreover, the user can't exceed the soft limit for more than "
+"grace period duration (one week by default) at a time; after this, the soft "
+"limit counts as a hard limit."
+msgstr ""
+"С помощью системы квот можно задать каждому пользователю, группе или проекту "
+"лимит использования дискового пространства. Для пользователя или группы в "
+"каждой файловой системе можно указать необязательный (soft) и обязательный "
+"(hard) лимиты. Обязательный лимит не может быть превышен. Необязательный "
+"лимит превышать можно, но будет выдано соответствующее предостережение. "
+"Более того, пользователь может превышать необязательный лимит только в "
+"течении льготного срока (по умолчанию,одна неделя); после этого "
+"необязательный лимит будет считаться обязательным."
 
 #.  847aac644e92e5624f2c153bab409bf713d5ff9a
 #. type: Plain text
@@ -430,7 +508,14 @@ msgid ""
 "macro.  The I<type> value is either B<USRQUOTA>, for user quotas, "
 "B<GRPQUOTA>, for group quotas, or (since Linux 4.1)  B<PRJQUOTA>, for "
 "project quotas.  The I<subcmd> value is described below."
-msgstr "Управление квотами выполняется с помощью вызова B<quotactl>(). В аргументе I<cmd> задаётся команда, которая должна быть применена для пользовательского или группового идентификатора, указанного в I<id>. Для инициализации значения аргумента I<cmd> используйте макрос I<QCMD(subcmd, type)>. Значение I<type> может быть B<USRQUOTA> (для пользовательских квот), B<GRPQUOTA> (для групповых квот) или (начиная с Linux 4.1)  B<PRJQUOTA> (для проектных квот). Значение I<subcmd> описано ниже."
+msgstr ""
+"Управление квотами выполняется с помощью вызова B<quotactl>(). В аргументе "
+"I<cmd> задаётся команда, которая должна быть применена для пользовательского "
+"или группового идентификатора, указанного в I<id>. Для инициализации "
+"значения аргумента I<cmd> используйте макрос I<QCMD(subcmd, type)>. Значение "
+"I<type> может быть B<USRQUOTA> (для пользовательских квот), B<GRPQUOTA> (для "
+"групповых квот) или (начиная с Linux 4.1)  B<PRJQUOTA> (для проектных квот). "
+"Значение I<subcmd> описано ниже."
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:81
@@ -438,7 +523,10 @@ msgid ""
 "The I<special> argument is a pointer to a null-terminated string containing "
 "the pathname of the (mounted) block special device for the filesystem being "
 "manipulated."
-msgstr "Аргумент I<special> представляет собой указатель на строку, завершающуюся null и содержащую путь к блочному устройству (смонтированному) с файловой системой, на которую накладывается квота."
+msgstr ""
+"Аргумент I<special> представляет собой указатель на строку, завершающуюся "
+"null и содержащую путь к блочному устройству (смонтированному) с файловой "
+"системой, на которую накладывается квота."
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:89
@@ -446,7 +534,10 @@ msgid ""
 "The I<addr> argument is the address of an optional, command-specific, data "
 "structure that is copied in or out of the system.  The interpretation of "
 "I<addr> is given with each command below."
-msgstr "Аргумент I<addr> представляет собой адрес необязательной, зависящей от команды, структуры данных, которые копируются в или из системы. Интерпретация I<addr> указана ниже (для каждой команды)."
+msgstr ""
+"Аргумент I<addr> представляет собой адрес необязательной, зависящей от "
+"команды, структуры данных, которые копируются в или из системы. "
+"Интерпретация I<addr> указана ниже (для каждой команды)."
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:93
@@ -463,9 +554,12 @@ msgstr "B<Q_QUOTAON>"
 #: man-pages/man2/quotactl.2:100
 msgid ""
 "Turn on quotas for a filesystem.  The I<id> argument is the identification "
-"number of the quota format to be used.  Currently, there are three supported"
-" quota formats:"
-msgstr "Включает учёт квот в файловой системе. В аргументе I<id> задаётся используемый идентификационный номер формата квот. В настоящее время поддерживается три формата квот:"
+"number of the quota format to be used.  Currently, there are three supported "
+"quota formats:"
+msgstr ""
+"Включает учёт квот в файловой системе. В аргументе I<id> задаётся "
+"используемый идентификационный номер формата квот. В настоящее время "
+"поддерживается три формата квот:"
 
 #. type: TP
 #: man-pages/man2/quotactl.2:101
@@ -489,7 +583,9 @@ msgstr "B<QFMT_VFS_V0>"
 msgid ""
 "The standard VFS v0 quota format, which can handle 32-bit UIDs and GIDs and "
 "quota limits up to 2^42 bytes and 2^32 inodes."
-msgstr "Стандартный формат квот VFS v0, позволяет работать с  32-битными UID и GID и ограничениями по квотам до 2^42 байт и 2^32 inode."
+msgstr ""
+"Стандартный формат квот VFS v0, позволяет работать с  32-битными UID и GID и "
+"ограничениями по квотам до 2^42 байт и 2^32 inode."
 
 #. type: TP
 #: man-pages/man2/quotactl.2:108
@@ -500,9 +596,11 @@ msgstr "B<QFMT_VFS_V1>"
 #. type: Plain text
 #: man-pages/man2/quotactl.2:112
 msgid ""
-"A quota format that can handle 32-bit UIDs and GIDs and quota limits of 2^64"
-" bytes and 2^64 inodes."
-msgstr "Данный формат квот позволяет работать с 32-битными UID и GID и ограничениями по квотам до 2^64 байт и 2^64 inode."
+"A quota format that can handle 32-bit UIDs and GIDs and quota limits of 2^64 "
+"bytes and 2^64 inodes."
+msgstr ""
+"Данный формат квот позволяет работать с 32-битными UID и GID и ограничениями "
+"по квотам до 2^64 байт и 2^64 inode."
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:123
@@ -511,7 +609,11 @@ msgid ""
 "for the filesystem.  The quota file must exist; it is normally created with "
 "the B<quotacheck>(8)  program.  This operation requires privilege "
 "(B<CAP_SYS_ADMIN>)."
-msgstr "Аргумент I<addr> представляет собой указатель на путь к файлу, в котором содержатся квоты файловой системы. Файл квот должен существовать; обычно он создаётся с помощью программы B<quotacheck>(8). Данная операция требует дополнительных прав (B<CAP_SYS_ADMIN>)."
+msgstr ""
+"Аргумент I<addr> представляет собой указатель на путь к файлу, в котором "
+"содержатся квоты файловой системы. Файл квот должен существовать; обычно он "
+"создаётся с помощью программы B<quotacheck>(8). Данная операция требует "
+"дополнительных прав (B<CAP_SYS_ADMIN>)."
 
 #. type: TP
 #: man-pages/man2/quotactl.2:123
@@ -524,7 +626,9 @@ msgstr "B<Q_QUOTAOFF>"
 msgid ""
 "Turn off quotas for a filesystem.  The I<addr> and I<id> arguments are "
 "ignored.  This operation requires privilege (B<CAP_SYS_ADMIN>)."
-msgstr "Выключает учёт квот в файловой системе. Аргументы I<addr> и I<id> игнорируются. Данная операция требует дополнительных прав (B<CAP_SYS_ADMIN>)."
+msgstr ""
+"Выключает учёт квот в файловой системе. Аргументы I<addr> и I<id> "
+"игнорируются. Данная операция требует дополнительных прав (B<CAP_SYS_ADMIN>)."
 
 #. type: TP
 #: man-pages/man2/quotactl.2:133
@@ -536,9 +640,13 @@ msgstr "B<Q_GETQUOTA>"
 #: man-pages/man2/quotactl.2:144
 msgid ""
 "Get disk quota limits and current usage for user or group I<id>.  The "
-"I<addr> argument is a pointer to a I<dqblk> structure defined in "
-"I<E<lt>sys/quota.hE<gt>> as follows:"
-msgstr "Возвращает данные по лимитам и текущее значение использованного пространства для пользователя или группы с заданным I<id>. Аргумент I<addr> является указателем на структуру I<dqblk>, определённую в I<E<lt>sys/quota.hE<gt>> следующим образом:"
+"I<addr> argument is a pointer to a I<dqblk> structure defined in I<E<lt>sys/"
+"quota.hE<gt>> as follows:"
+msgstr ""
+"Возвращает данные по лимитам и текущее значение использованного пространства "
+"для пользователя или группы с заданным I<id>. Аргумент I<addr> является "
+"указателем на структуру I<dqblk>, определённую в I<E<lt>sys/quota.hE<gt>> "
+"следующим образом:"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:149 man-pages/man2/quotactl.2:272
@@ -546,7 +654,9 @@ msgstr "Возвращает данные по лимитам и текущее 
 msgid ""
 "/* uint64_t is an unsigned 64-bit integer;\n"
 "   uint32_t is an unsigned 32-bit integer */\n"
-msgstr "/* uint64_t имеет тип unsigned 64-bit integer;\n   uint32_t имеет тип unsigned 32-bit integer */\n"
+msgstr ""
+"/* uint64_t имеет тип unsigned 64-bit integer;\n"
+"   uint32_t имеет тип unsigned 32-bit integer */\n"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:169
@@ -571,7 +681,26 @@ msgid ""
 "    uint32_t dqb_valid;       /* Bit mask of QIF_*\n"
 "                                 constants */\n"
 "};\n"
-msgstr "struct dqblk {      /* определение, действующее с Linux 2.4.22 */\n    uint64_t dqb_bhardlimit;  /* абсолютный лимит на выделяемые\n                                 блоки дисковых квот */\n    uint64_t dqb_bsoftlimit;  /* предпочтительный лимит на выделяемые\n                                 блоки дисковых квот */\n    uint64_t dqb_curspace;    /* занятое в данный момент пространство\n                                 (в байтах) */\n    uint64_t dqb_ihardlimit;  /* максимальное количество\n                                 выделенных инод */\n    uint64_t dqb_isoftlimit;  /* предпочтительный лимит на иноды */\n    uint64_t dqb_curinodes;   /* текущее количество\n                                 выделенных инод */\n    uint64_t dqb_btime;       /* временной лимит по превышению\n                                 использования диска */\n    uint64_t dqb_itime;       /* временной лимит по превышению\n                                 файлов */\n    uint32_t dqb_valid;       /* битовая маска констант\n                                 QIF_* */\n};\n"
+msgstr ""
+"struct dqblk {      /* определение, действующее с Linux 2.4.22 */\n"
+"    uint64_t dqb_bhardlimit;  /* абсолютный лимит на выделяемые\n"
+"                                 блоки дисковых квот */\n"
+"    uint64_t dqb_bsoftlimit;  /* предпочтительный лимит на выделяемые\n"
+"                                 блоки дисковых квот */\n"
+"    uint64_t dqb_curspace;    /* занятое в данный момент пространство\n"
+"                                 (в байтах) */\n"
+"    uint64_t dqb_ihardlimit;  /* максимальное количество\n"
+"                                 выделенных инод */\n"
+"    uint64_t dqb_isoftlimit;  /* предпочтительный лимит на иноды */\n"
+"    uint64_t dqb_curinodes;   /* текущее количество\n"
+"                                 выделенных инод */\n"
+"    uint64_t dqb_btime;       /* временной лимит по превышению\n"
+"                                 использования диска */\n"
+"    uint64_t dqb_itime;       /* временной лимит по превышению\n"
+"                                 файлов */\n"
+"    uint32_t dqb_valid;       /* битовая маска констант\n"
+"                                 QIF_* */\n"
+"};\n"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:172
@@ -579,7 +708,9 @@ msgstr "struct dqblk {      /* определение, действующее с
 msgid ""
 "/* Flags in dqb_valid that indicate which fields in\n"
 "   dqblk structure are valid. */\n"
-msgstr "/* Флаги в dqb_valid указывают, какие поля в\n   структуре dqblk являются рабочими. */\n"
+msgstr ""
+"/* Флаги в dqb_valid указывают, какие поля в\n"
+"   структуре dqblk являются рабочими. */\n"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:183
@@ -595,7 +726,17 @@ msgid ""
 "#define QIF_USAGE     (QIF_SPACE | QIF_INODES)\n"
 "#define QIF_TIMES     (QIF_BTIME | QIF_ITIME)\n"
 "#define QIF_ALL       (QIF_LIMITS | QIF_USAGE | QIF_TIMES)\n"
-msgstr "#define QIF_BLIMITS   1\n#define QIF_SPACE     2\n#define QIF_ILIMITS   4\n#define QIF_INODES    8\n#define QIF_BTIME     16\n#define QIF_ITIME     32\n#define QIF_LIMITS    (QIF_BLIMITS | QIF_ILIMITS)\n#define QIF_USAGE     (QIF_SPACE | QIF_INODES)\n#define QIF_TIMES     (QIF_BTIME | QIF_ITIME)\n#define QIF_ALL       (QIF_LIMITS | QIF_USAGE | QIF_TIMES)\n"
+msgstr ""
+"#define QIF_BLIMITS   1\n"
+"#define QIF_SPACE     2\n"
+"#define QIF_ILIMITS   4\n"
+"#define QIF_INODES    8\n"
+"#define QIF_BTIME     16\n"
+"#define QIF_ITIME     32\n"
+"#define QIF_LIMITS    (QIF_BLIMITS | QIF_ILIMITS)\n"
+"#define QIF_USAGE     (QIF_SPACE | QIF_INODES)\n"
+"#define QIF_TIMES     (QIF_BTIME | QIF_ITIME)\n"
+"#define QIF_ALL       (QIF_LIMITS | QIF_USAGE | QIF_TIMES)\n"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:200
@@ -605,7 +746,13 @@ msgid ""
 "entries of the I<dqblk> structure and marks them as valid in the "
 "I<dqb_valid> field.  Unprivileged users may retrieve only their own quotas; "
 "a privileged user (B<CAP_SYS_ADMIN>)  can retrieve the quotas of any user."
-msgstr "Поле I<dqb_valid> представляет собой битовую маску, показывающую какие поля в структуре I<dqblk> являются рабочими. В настоящее время ядро заполняется все поля структуры I<dqblk> и маркирует их как рабочие в поле I<dqb_valid>. Непривилегированные пользователи могут получить данные только по своим квотам; привилегированный пользователь (имеющий мандат B<CAP_SYS_ADMIN>) может получить данные по квотам любого пользователя."
+msgstr ""
+"Поле I<dqb_valid> представляет собой битовую маску, показывающую какие поля "
+"в структуре I<dqblk> являются рабочими. В настоящее время ядро заполняется "
+"все поля структуры I<dqblk> и маркирует их как рабочие в поле I<dqb_valid>. "
+"Непривилегированные пользователи могут получить данные только по своим "
+"квотам; привилегированный пользователь (имеющий мандат B<CAP_SYS_ADMIN>) "
+"может получить данные по квотам любого пользователя."
 
 #. type: TP
 #: man-pages/man2/quotactl.2:200
@@ -620,7 +767,9 @@ msgid ""
 "This operation is the same as B<Q_GETQUOTA>, but it returns quota "
 "information for the next ID greater than or equal to I<id> that has a quota "
 "set."
-msgstr "Эта операция подобна B<Q_GETQUOTA>, но возвращает информацию о квоте для следующего ID, большего или равного I<id>, у которого установлена квота."
+msgstr ""
+"Эта операция подобна B<Q_GETQUOTA>, но возвращает информацию о квоте для "
+"следующего ID, большего или равного I<id>, у которого установлена квота."
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:219
@@ -628,7 +777,10 @@ msgid ""
 "The I<addr> argument is a pointer to a I<nextdqblk> structure whose fields "
 "are as for the I<dqblk>, except for the addition of a I<dqb_id> field that "
 "is used to return the ID for which quota information is being returned:"
-msgstr "Аргумент I<addr> представляет собой указатель на структуру I<nextdqblk> с полями как у I<dqblk>, но имеющей дополнительное поле I<dqb_id>, используемое для возврата ID, для которого возвращается информация по квоте:"
+msgstr ""
+"Аргумент I<addr> представляет собой указатель на структуру I<nextdqblk> с "
+"полями как у I<dqblk>, но имеющей дополнительное поле I<dqb_id>, "
+"используемое для возврата ID, для которого возвращается информация по квоте:"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:234
@@ -646,7 +798,19 @@ msgid ""
 "    uint32_t dqb_valid;\n"
 "    uint32_t dqb_id;\n"
 "};\n"
-msgstr "struct nextdqblk {\n    uint64_t dqb_bhardlimit;\n    uint64_t dqb_bsoftlimit;\n    uint64_t dqb_curspace;\n    uint64_t dqb_ihardlimit;\n    uint64_t dqb_isoftlimit;\n    uint64_t dqb_curinodes;\n    uint64_t dqb_btime;\n    uint64_t dqb_itime;\n    uint32_t dqb_valid;\n    uint32_t dqb_id;\n};\n"
+msgstr ""
+"struct nextdqblk {\n"
+"    uint64_t dqb_bhardlimit;\n"
+"    uint64_t dqb_bsoftlimit;\n"
+"    uint64_t dqb_curspace;\n"
+"    uint64_t dqb_ihardlimit;\n"
+"    uint64_t dqb_isoftlimit;\n"
+"    uint64_t dqb_curinodes;\n"
+"    uint64_t dqb_btime;\n"
+"    uint64_t dqb_itime;\n"
+"    uint32_t dqb_valid;\n"
+"    uint32_t dqb_id;\n"
+"};\n"
 
 #. type: TP
 #: man-pages/man2/quotactl.2:236
@@ -660,10 +824,16 @@ msgid ""
 "Set quota information for user or group I<id>, using the information "
 "supplied in the I<dqblk> structure pointed to by I<addr>.  The I<dqb_valid> "
 "field of the I<dqblk> structure indicates which entries in the structure "
-"have been set by the caller.  This operation supersedes the B<Q_SETQLIM> and"
-" B<Q_SETUSE> operations in the previous quota interfaces.  This operation "
+"have been set by the caller.  This operation supersedes the B<Q_SETQLIM> and "
+"B<Q_SETUSE> operations in the previous quota interfaces.  This operation "
 "requires privilege (B<CAP_SYS_ADMIN>)."
-msgstr "Устанавливает квоты для пользователя или группы с указанным I<id>, используя информацию из структуры I<dqblk>, на которую указывает I<addr>. Полем I<dqb_valid> в структуре I<dqblk> определяется какие элементы структуры установлены вызывающим. Эта операция заменяет предоставляемые прежде операции работы с квотами B<Q_SETQLIM> и B<Q_SETUSE>. Эта операция требует дополнительных прав (B<CAP_SYS_ADMIN>)."
+msgstr ""
+"Устанавливает квоты для пользователя или группы с указанным I<id>, используя "
+"информацию из структуры I<dqblk>, на которую указывает I<addr>. Полем "
+"I<dqb_valid> в структуре I<dqblk> определяется какие элементы структуры "
+"установлены вызывающим. Эта операция заменяет предоставляемые прежде "
+"операции работы с квотами B<Q_SETQLIM> и B<Q_SETUSE>. Эта операция требует "
+"дополнительных прав (B<CAP_SYS_ADMIN>)."
 
 #. type: TP
 #: man-pages/man2/quotactl.2:256
@@ -677,7 +847,10 @@ msgid ""
 "Get information (like grace times) about quotafile.  The I<addr> argument "
 "should be a pointer to a I<dqinfo> structure.  This structure is defined in "
 "I<E<lt>sys/quota.hE<gt>> as follows:"
-msgstr "Возвращает информацию (например, льготное время (grace times)) о quotafile. Аргумент I<addr> должен содержать указатель на структуру I<dqinfo>. Эта структура определена в I<E<lt>sys/quota.hE<gt>> следующим образом:"
+msgstr ""
+"Возвращает информацию (например, льготное время (grace times)) о quotafile. "
+"Аргумент I<addr> должен содержать указатель на структуру I<dqinfo>. Эта "
+"структура определена в I<E<lt>sys/quota.hE<gt>> следующим образом:"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:282
@@ -692,7 +865,16 @@ msgid ""
 "                             (DQF_*) */\n"
 "    uint32_t dqi_valid;\n"
 "};\n"
-msgstr "struct dqinfo {         /* определена начиная с ядра 2.4.22 */\n    uint64_t dqi_bgrace;  /* период времени, после которого блоковый\n                             необязательный лимит становится обязательным */\n    uint64_t dqi_igrace;  /* период времени, после которого инодовый\n                             необязательный лимит становится обязательным */\n    uint32_t dqi_flags;   /* флаги quotafile\n                             (DQF_*) */\n    uint32_t dqi_valid;\n};\n"
+msgstr ""
+"struct dqinfo {         /* определена начиная с ядра 2.4.22 */\n"
+"    uint64_t dqi_bgrace;  /* период времени, после которого блоковый\n"
+"                             необязательный лимит становится обязательным */\n"
+"    uint64_t dqi_igrace;  /* период времени, после которого инодовый\n"
+"                             необязательный лимит становится обязательным */\n"
+"    uint32_t dqi_flags;   /* флаги quotafile\n"
+"                             (DQF_*) */\n"
+"    uint32_t dqi_valid;\n"
+"};\n"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:284
@@ -713,7 +895,10 @@ msgid ""
 "#define DQF_ROOT_SQUASH (1 E<lt>E<lt> 0) /* Root squash enabled */\n"
 "              /* Before Linux v4.0, this had been defined\n"
 "                 privately as V1_DQF_RSQUASH */\n"
-msgstr "#define DQF_ROOT_SQUASH (1 E<lt>E<lt> 0) /* включено ограничение для */\n              /* суперпользователя; до Linux v4.0 это было закрытым\n                 определением с именем V1_DQF_RSQUASH */\n"
+msgstr ""
+"#define DQF_ROOT_SQUASH (1 E<lt>E<lt> 0) /* включено ограничение для */\n"
+"              /* суперпользователя; до Linux v4.0 это было закрытым\n"
+"                 определением с именем V1_DQF_RSQUASH */\n"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:292
@@ -727,7 +912,9 @@ msgstr "/* формат квот QFMT_VFS_V0 / QFMT_VFS_V1 */\n"
 msgid ""
 "#define DQF_SYS_FILE    (1 E<lt>E<lt> 16)   /* Quota stored in\n"
 "                                       a system file */\n"
-msgstr "#define DQF_SYS_FILE    (1 E<lt>E<lt> 16)   /* квота хранится в\n                                       системном файле */\n"
+msgstr ""
+"#define DQF_SYS_FILE    (1 E<lt>E<lt> 16)   /* квота хранится в\n"
+"                                       системном файле */\n"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:298
@@ -735,7 +922,9 @@ msgstr "#define DQF_SYS_FILE    (1 E<lt>E<lt> 16)   /* квота хранитс
 msgid ""
 "/* Flags in dqi_valid that indicate which fields in\n"
 "   dqinfo structure are valid. */\n"
-msgstr "/* флаги в dqi_valid, которые показывают какие поля в\n   структуре dqinfo рабочие. */\n"
+msgstr ""
+"/* флаги в dqi_valid, которые показывают какие поля в\n"
+"   структуре dqinfo рабочие. */\n"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:303
@@ -745,16 +934,23 @@ msgid ""
 "#define IIF_IGRACE  2\n"
 "#define IIF_FLAGS   4\n"
 "#define IIF_ALL     (IIF_BGRACE | IIF_IGRACE | IIF_FLAGS)\n"
-msgstr "#define IIF_BGRACE  1\n#define IIF_IGRACE  2\n#define IIF_FLAGS   4\n#define IIF_ALL     (IIF_BGRACE | IIF_IGRACE | IIF_FLAGS)\n"
+msgstr ""
+"#define IIF_BGRACE  1\n"
+"#define IIF_IGRACE  2\n"
+"#define IIF_FLAGS   4\n"
+"#define IIF_ALL     (IIF_BGRACE | IIF_IGRACE | IIF_FLAGS)\n"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:319
 msgid ""
 "The I<dqi_valid> field in the I<dqinfo> structure indicates the entries in "
-"the structure that are valid.  Currently, the kernel fills in all entries of"
-" the I<dqinfo> structure and marks them all as valid in the I<dqi_valid> "
+"the structure that are valid.  Currently, the kernel fills in all entries of "
+"the I<dqinfo> structure and marks them all as valid in the I<dqi_valid> "
 "field.  The I<id> argument is ignored."
-msgstr "Значение поля I<dqi_valid> в структуре I<dqinfo> указывает на рабочие элементы. В настоящее время ядро заполняет все элементы структуры I<dqinfo> и помечает их как рабочие в поле I<dqi_valid>. Аргумент I<id> игнорируется."
+msgstr ""
+"Значение поля I<dqi_valid> в структуре I<dqinfo> указывает на рабочие "
+"элементы. В настоящее время ядро заполняет все элементы структуры I<dqinfo> "
+"и помечает их как рабочие в поле I<dqi_valid>. Аргумент I<id> игнорируется."
 
 #. type: TP
 #: man-pages/man2/quotactl.2:319
@@ -766,12 +962,18 @@ msgstr "B<Q_SETINFO> (начиная с Linux 2.4.22)"
 #: man-pages/man2/quotactl.2:343
 msgid ""
 "Set information about quotafile.  The I<addr> argument should be a pointer "
-"to a I<dqinfo> structure.  The I<dqi_valid> field of the I<dqinfo> structure"
-" indicates the entries in the structure that have been set by the caller.  "
+"to a I<dqinfo> structure.  The I<dqi_valid> field of the I<dqinfo> structure "
+"indicates the entries in the structure that have been set by the caller.  "
 "This operation supersedes the B<Q_SETGRACE> and B<Q_SETFLAGS> operations in "
 "the previous quota interfaces.  The I<id> argument is ignored.  This "
 "operation requires privilege (B<CAP_SYS_ADMIN>)."
-msgstr "Задаёт информацию о quotafile. Значение аргумента I<addr> должно быть указателем на структуру I<dqinfo>. Полем I<dqi_valid> в структуре I<dqinfo> определяется, какие элементы структуры установлены вызывающим. Эта операция заменяет операции B<Q_SETGRACE> и B<Q_SETFLAGS> из предоставляемых прежде операций работы с квотами. Аргумент I<id> игнорируется. Эта операция требует дополнительных прав (B<CAP_SYS_ADMIN>)."
+msgstr ""
+"Задаёт информацию о quotafile. Значение аргумента I<addr> должно быть "
+"указателем на структуру I<dqinfo>. Полем I<dqi_valid> в структуре I<dqinfo> "
+"определяется, какие элементы структуры установлены вызывающим. Эта операция "
+"заменяет операции B<Q_SETGRACE> и B<Q_SETFLAGS> из предоставляемых прежде "
+"операций работы с квотами. Аргумент I<id> игнорируется. Эта операция требует "
+"дополнительных прав (B<CAP_SYS_ADMIN>)."
 
 #. type: TP
 #: man-pages/man2/quotactl.2:343
@@ -785,7 +987,10 @@ msgid ""
 "Get quota format used on the specified filesystem.  The I<addr> argument "
 "should be a pointer to a 4-byte buffer where the format number will be "
 "stored."
-msgstr "Возвращает формат квоты, используемый в указанной файловой системе. В аргументе I<addr> должен содержаться указатель на 4-байтовый буфер, в который будет записан номер формата."
+msgstr ""
+"Возвращает формат квоты, используемый в указанной файловой системе. В "
+"аргументе I<addr> должен содержаться указатель на 4-байтовый буфер, в "
+"который будет записан номер формата."
 
 #. type: TP
 #: man-pages/man2/quotactl.2:350
@@ -799,7 +1004,10 @@ msgid ""
 "Update the on-disk copy of quota usages for a filesystem.  If I<special> is "
 "NULL, then all filesystems with active quotas are sync'ed.  The I<addr> and "
 "I<id> arguments are ignored."
-msgstr "Обновляет дисковую копию используемых квот в файловой системе. Если значение I<special> равно NULL, то действующие квоты будут синхронизированы на всех файловых системах. Аргументы I<addr> и I<id> игнорируются."
+msgstr ""
+"Обновляет дисковую копию используемых квот в файловой системе. Если значение "
+"I<special> равно NULL, то действующие квоты будут синхронизированы на всех "
+"файловых системах. Аргументы I<addr> и I<id> игнорируются."
 
 #. type: TP
 #: man-pages/man2/quotactl.2:361
@@ -810,25 +1018,33 @@ msgstr "B<Q_GETSTATS> (поддерживалась до Linux 2.4.21)"
 #. type: Plain text
 #: man-pages/man2/quotactl.2:376
 msgid ""
-"Get statistics and other generic information about the quota subsystem.  The"
-" I<addr> argument should be a pointer to a I<dqstats> structure in which "
-"data should be stored.  This structure is defined in "
-"I<E<lt>sys/quota.hE<gt>>.  The I<special> and I<id> arguments are ignored."
-msgstr "Возвращает статистику и другую общую информацию о подсистеме квот. Аргумент I<addr> должен содержать указатель на структуру I<dqstats>, в которую нужно сохранить данные. Эта структура определена в I<E<lt>sys/quota.hE<gt>>. Аргументы I<special> и I<id> игнорируются."
+"Get statistics and other generic information about the quota subsystem.  The "
+"I<addr> argument should be a pointer to a I<dqstats> structure in which data "
+"should be stored.  This structure is defined in I<E<lt>sys/quota.hE<gt>>.  "
+"The I<special> and I<id> arguments are ignored."
+msgstr ""
+"Возвращает статистику и другую общую информацию о подсистеме квот. Аргумент "
+"I<addr> должен содержать указатель на структуру I<dqstats>, в которую нужно "
+"сохранить данные. Эта структура определена в I<E<lt>sys/quota.hE<gt>>. "
+"Аргументы I<special> и I<id> игнорируются."
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:381
 msgid ""
-"This operation is obsolete and was removed in Linux 2.4.22.  Files in "
-"I</proc/sys/fs/quota/> carry the information instead."
-msgstr "Эта операция устарела и была удалена в Linux 2.4.22. Информацию можно получить из файлов в I</proc/sys/fs/quota/>."
+"This operation is obsolete and was removed in Linux 2.4.22.  Files in I</"
+"proc/sys/fs/quota/> carry the information instead."
+msgstr ""
+"Эта операция устарела и была удалена в Linux 2.4.22. Информацию можно "
+"получить из файлов в I</proc/sys/fs/quota/>."
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:384
 msgid ""
 "For XFS filesystems making use of the XFS Quota Manager (XQM), the above "
 "commands are bypassed and the following commands are used:"
-msgstr "Для файловых систем XFS, использующих XFS Quota Manager (XQM), приведённые выше команды не выполняются, а используются следующие команды:"
+msgstr ""
+"Для файловых систем XFS, использующих XFS Quota Manager (XQM), приведённые "
+"выше команды не выполняются, а используются следующие команды:"
 
 #. type: TP
 #: man-pages/man2/quotactl.2:384
@@ -839,11 +1055,15 @@ msgstr "B<Q_XQUOTAON>"
 #. type: Plain text
 #: man-pages/man2/quotactl.2:395
 msgid ""
-"Turn on quotas for an XFS filesystem.  XFS provides the ability to turn "
-"on/off quota limit enforcement with quota accounting.  Therefore, XFS "
-"expects I<addr> to be a pointer to an I<unsigned int> that contains a "
-"combination of the following flags (defined in I<E<lt>xfs/xqm.hE<gt>>):"
-msgstr "Включает квоты в файловой системе XFS. XFS позволяет включать/выключать лимиты по квотам с ведением учёта. Поэтому для XFS в I<addr> ожидается указатель на I<unsigned int>, который представляет собой комбинацию следующих флагов (определены в I<E<lt>xfs/xqm.hE<gt>>):"
+"Turn on quotas for an XFS filesystem.  XFS provides the ability to turn on/"
+"off quota limit enforcement with quota accounting.  Therefore, XFS expects "
+"I<addr> to be a pointer to an I<unsigned int> that contains a combination of "
+"the following flags (defined in I<E<lt>xfs/xqm.hE<gt>>):"
+msgstr ""
+"Включает квоты в файловой системе XFS. XFS позволяет включать/выключать "
+"лимиты по квотам с ведением учёта. Поэтому для XFS в I<addr> ожидается "
+"указатель на I<unsigned int>, который представляет собой комбинацию "
+"следующих флагов (определены в I<E<lt>xfs/xqm.hE<gt>>):"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:410
@@ -861,14 +1081,28 @@ msgid ""
 "                                     accounting */\n"
 "#define XFS_QUOTA_PDQ_ENFD (1E<lt>E<lt>5) /* Project quota limits\n"
 "                                     enforcement */\n"
-msgstr "#define XFS_QUOTA_UDQ_ACCT (1E<lt>E<lt>0) /* учёт пользовательских\n                                     квот */\n#define XFS_QUOTA_UDQ_ENFD (1E<lt>E<lt>1) /* применение лимитов\n                                     пользовательских квот */\n#define XFS_QUOTA_GDQ_ACCT (1E<lt>E<lt>2) /* учёт групповых\n                                     квот */\n#define XFS_QUOTA_GDQ_ENFD (1E<lt>E<lt>3) /* применение лимитов\n                                     групповых квот */\n#define XFS_QUOTA_PDQ_ACCT (1E<lt>E<lt>4) /* учёт проектных\n                                     квот */\n#define XFS_QUOTA_PDQ_ENFD (1E<lt>E<lt>5) /* применение лимитов\n                                     проектных квот */\n"
+msgstr ""
+"#define XFS_QUOTA_UDQ_ACCT (1E<lt>E<lt>0) /* учёт пользовательских\n"
+"                                     квот */\n"
+"#define XFS_QUOTA_UDQ_ENFD (1E<lt>E<lt>1) /* применение лимитов\n"
+"                                     пользовательских квот */\n"
+"#define XFS_QUOTA_GDQ_ACCT (1E<lt>E<lt>2) /* учёт групповых\n"
+"                                     квот */\n"
+"#define XFS_QUOTA_GDQ_ENFD (1E<lt>E<lt>3) /* применение лимитов\n"
+"                                     групповых квот */\n"
+"#define XFS_QUOTA_PDQ_ACCT (1E<lt>E<lt>4) /* учёт проектных\n"
+"                                     квот */\n"
+"#define XFS_QUOTA_PDQ_ENFD (1E<lt>E<lt>5) /* применение лимитов\n"
+"                                     проектных квот */\n"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:418
 msgid ""
-"This operation requires privilege (B<CAP_SYS_ADMIN>).  The I<id> argument is"
-" ignored."
-msgstr "Для этой операции требуются права (B<CAP_SYS_ADMIN>). Аргумент I<id> игнорируется."
+"This operation requires privilege (B<CAP_SYS_ADMIN>).  The I<id> argument is "
+"ignored."
+msgstr ""
+"Для этой операции требуются права (B<CAP_SYS_ADMIN>). Аргумент I<id> "
+"игнорируется."
 
 #. type: TP
 #: man-pages/man2/quotactl.2:418
@@ -884,7 +1118,12 @@ msgid ""
 "quota accounting and/or limit enforcement need to be turned off (using the "
 "same flags as for B<Q_XQUOTAON> subcommand).  This operation requires "
 "privilege (B<CAP_SYS_ADMIN>).  The I<id> argument is ignored."
-msgstr "Выключает квоты для файловой системы XFS. Как в B<Q_QUOTAON>, для файловых систем XFS ожидается указатель на I<unsigned int>, в котором задаётся что нужно отключить: учёт или применение квот (используются флаги из операции B<Q_XQUOTAON>). Эта операция требует прав (B<CAP_SYS_ADMIN>). Аргумент I<id> игнорируется."
+msgstr ""
+"Выключает квоты для файловой системы XFS. Как в B<Q_QUOTAON>, для файловых "
+"систем XFS ожидается указатель на I<unsigned int>, в котором задаётся что "
+"нужно отключить: учёт или применение квот (используются флаги из операции "
+"B<Q_XQUOTAON>). Эта операция требует прав (B<CAP_SYS_ADMIN>). Аргумент I<id> "
+"игнорируется."
 
 #. type: TP
 #: man-pages/man2/quotactl.2:434
@@ -898,7 +1137,10 @@ msgid ""
 "Get disk quota limits and current usage for user I<id>.  The I<addr> "
 "argument is a pointer to an I<fs_disk_quota> structure, which is defined in "
 "I<E<lt>xfs/xqm.hE<gt>> as follows:"
-msgstr "Возвращает данные по лимитам и текущее значение использованного пространства для пользователя I<id>. Аргумент I<addr> является указателем на структуру I<fs_disk_quota>, определённую в I<E<lt>xfs/xqm.hE<gt>> следующим образом:"
+msgstr ""
+"Возвращает данные по лимитам и текущее значение использованного пространства "
+"для пользователя I<id>. Аргумент I<addr> является указателем на структуру "
+"I<fs_disk_quota>, определённую в I<E<lt>xfs/xqm.hE<gt>> следующим образом:"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:450
@@ -906,7 +1148,9 @@ msgstr "Возвращает данные по лимитам и текущее 
 msgid ""
 "/* All the blk units are in BBs (Basic Blocks) of\n"
 "   512 bytes. */\n"
-msgstr "/* все части blk в BB (Basic Blocks) \n   размером 512 байт */\n"
+msgstr ""
+"/* все части blk в BB (Basic Blocks) \n"
+"   размером 512 байт */\n"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:452
@@ -921,7 +1165,10 @@ msgid ""
 "#define XFS_USER_QUOTA    (1E<lt>E<lt>0)  /* User quota type */\n"
 "#define XFS_PROJ_QUOTA    (1E<lt>E<lt>1)  /* Project quota type */\n"
 "#define XFS_GROUP_QUOTA   (1E<lt>E<lt>2)  /* Group quota type */\n"
-msgstr "#define XFS_USER_QUOTA    (1E<lt>E<lt>0)  /* тип пользовательской квоты */\n#define XFS_PROJ_QUOTA    (1E<lt>E<lt>1)  /* тип проектной квоты */\n#define XFS_GROUP_QUOTA   (1E<lt>E<lt>2)  /* тип групповой квоты */\n"
+msgstr ""
+"#define XFS_USER_QUOTA    (1E<lt>E<lt>0)  /* тип пользовательской квоты */\n"
+"#define XFS_PROJ_QUOTA    (1E<lt>E<lt>1)  /* тип проектной квоты */\n"
+"#define XFS_GROUP_QUOTA   (1E<lt>E<lt>2)  /* тип групповой квоты */\n"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:493
@@ -963,14 +1210,53 @@ msgid ""
 "    int16_t  d_padding3;  /* Padding - for future use */\n"
 "    char     d_padding4[8];   /* Yet more padding */\n"
 "};\n"
-msgstr "struct fs_disk_quota {\n    int8_t   d_version;   /* версия данной структуры */\n    int8_t   d_flags;     /* XFS_{USER,PROJ,GROUP}_QUOTA */\n    uint16_t d_fieldmask; /* определитель поля */\n    uint32_t d_id;        /* ID пользователя, группы или проекта */\n    uint64_t d_blk_hardlimit; /* абсолютный лимит на\n                                 дисковые блоки */\n    uint64_t d_blk_softlimit; /* предпочтительный лимит на\n                                 дисковые блоки */\n    uint64_t d_ino_hardlimit; /* максимальное кол-во выделяемых\n                                 инод */\n    uint64_t d_ino_softlimit; /* предпочтительный лимит на иноды */\n    uint64_t d_bcount;    /* # кол-во дисковых блоков,\n                             принадлежащих пользователю */\n    uint64_t d_icount;    /* # кол-во инод, принадлежащих пользователю */\n    int32_t  d_itimer;    /* ноль, если лимит на иноды не превышен */\n                          /* если нет, то нам отказывают */\n    int32_t  d_btimer;    /* подобное предыдущему, но для\n                             дисковых блоков */\n    uint16_t d_iwarns;    /* кол-во предупреждений в соответствии с\n                             кол-вом инод */\n    uint16_t d_bwarns;    /* кол-во предупреждений в соответствии с\n                             кол-вом дисковых блоков */\n    int32_t  d_padding2;  /* заполнитель, для использования в будущем */\n    uint64_t d_rtb_hardlimit; /* абсолютный лимит на работу с дисковыми\n                                 блоками в реальном времени (RT) */\n    uint64_t d_rtb_softlimit; /* предпочтительный лимит на дисковые блоки\n                                 в RT */\n    uint64_t d_rtbcount;  /* кол-во дисковых блоков под реальное время */\n    int32_t  d_rtbtimer;  /* подобное предыдущему, но\n                             для дисковых блоков RT */\n    uint16_t d_rtbwarns;  /*  кол-во предупреждений в соответствии с\n                             дисковыми блоками RT */\n    int16_t  d_padding3;  /* заполнитель, для использования в будущем */\n    char     d_padding4[8];   /* ещё заполнитель */\n};\n"
+msgstr ""
+"struct fs_disk_quota {\n"
+"    int8_t   d_version;   /* версия данной структуры */\n"
+"    int8_t   d_flags;     /* XFS_{USER,PROJ,GROUP}_QUOTA */\n"
+"    uint16_t d_fieldmask; /* определитель поля */\n"
+"    uint32_t d_id;        /* ID пользователя, группы или проекта */\n"
+"    uint64_t d_blk_hardlimit; /* абсолютный лимит на\n"
+"                                 дисковые блоки */\n"
+"    uint64_t d_blk_softlimit; /* предпочтительный лимит на\n"
+"                                 дисковые блоки */\n"
+"    uint64_t d_ino_hardlimit; /* максимальное кол-во выделяемых\n"
+"                                 инод */\n"
+"    uint64_t d_ino_softlimit; /* предпочтительный лимит на иноды */\n"
+"    uint64_t d_bcount;    /* # кол-во дисковых блоков,\n"
+"                             принадлежащих пользователю */\n"
+"    uint64_t d_icount;    /* # кол-во инод, принадлежащих пользователю */\n"
+"    int32_t  d_itimer;    /* ноль, если лимит на иноды не превышен */\n"
+"                          /* если нет, то нам отказывают */\n"
+"    int32_t  d_btimer;    /* подобное предыдущему, но для\n"
+"                             дисковых блоков */\n"
+"    uint16_t d_iwarns;    /* кол-во предупреждений в соответствии с\n"
+"                             кол-вом инод */\n"
+"    uint16_t d_bwarns;    /* кол-во предупреждений в соответствии с\n"
+"                             кол-вом дисковых блоков */\n"
+"    int32_t  d_padding2;  /* заполнитель, для использования в будущем */\n"
+"    uint64_t d_rtb_hardlimit; /* абсолютный лимит на работу с дисковыми\n"
+"                                 блоками в реальном времени (RT) */\n"
+"    uint64_t d_rtb_softlimit; /* предпочтительный лимит на дисковые блоки\n"
+"                                 в RT */\n"
+"    uint64_t d_rtbcount;  /* кол-во дисковых блоков под реальное время */\n"
+"    int32_t  d_rtbtimer;  /* подобное предыдущему, но\n"
+"                             для дисковых блоков RT */\n"
+"    uint16_t d_rtbwarns;  /*  кол-во предупреждений в соответствии с\n"
+"                             дисковыми блоками RT */\n"
+"    int16_t  d_padding3;  /* заполнитель, для использования в будущем */\n"
+"    char     d_padding4[8];   /* ещё заполнитель */\n"
+"};\n"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:500
 msgid ""
 "Unprivileged users may retrieve only their own quotas; a privileged user "
 "(B<CAP_SYS_ADMIN>)  may retrieve the quotas of any user."
-msgstr "Непривилегированные пользователи могут получить данные только по своим квотам; привилегированный пользователь (с B<CAP_SYS_ADMIN>) может получить информацию о квотах любого пользователя."
+msgstr ""
+"Непривилегированные пользователи могут получить данные только по своим "
+"квотам; привилегированный пользователь (с B<CAP_SYS_ADMIN>) может получить "
+"информацию о квотах любого пользователя."
 
 #. type: TP
 #: man-pages/man2/quotactl.2:500
@@ -985,9 +1271,14 @@ msgid ""
 "This operation is the same as B<Q_XGETQUOTA>, but it returns (in the "
 "I<fs_disk_quota> structure pointed by I<addr>)  quota information for the "
 "next ID greater than or equal to I<id> that has a quota set.  Note that "
-"since I<fs_disk_quota> already has I<q_id> field, no separate structure type"
-" is needed (in contrast with B<Q_GETQUOTA> and B<Q_GETNEXTQUOTA> commands)"
-msgstr "Эта операция подобна B<Q_XGETQUOTA>, но возвращает (in the I<fs_disk_quota> structure pointed by I<addr>) информацию о квоте для следующего ID, большего или равного I<id>, у которого установлена квота. Заметим, что так как в I<fs_disk_quota> уже есть поле I<q_id>, то отдельного типа для структуры не требуется (как для B<Q_GETQUOTA> и B<Q_GETNEXTQUOTA>)."
+"since I<fs_disk_quota> already has I<q_id> field, no separate structure type "
+"is needed (in contrast with B<Q_GETQUOTA> and B<Q_GETNEXTQUOTA> commands)"
+msgstr ""
+"Эта операция подобна B<Q_XGETQUOTA>, но возвращает (in the I<fs_disk_quota> "
+"structure pointed by I<addr>) информацию о квоте для следующего ID, большего "
+"или равного I<id>, у которого установлена квота. Заметим, что так как в "
+"I<fs_disk_quota> уже есть поле I<q_id>, то отдельного типа для структуры не "
+"требуется (как для B<Q_GETQUOTA> и B<Q_GETNEXTQUOTA>)."
 
 #. type: TP
 #: man-pages/man2/quotactl.2:521
@@ -1001,7 +1292,10 @@ msgid ""
 "Set disk quota limits for user I<id>.  The I<addr> argument is a pointer to "
 "an I<fs_disk_quota> structure.  This operation requires privilege "
 "(B<CAP_SYS_ADMIN>)."
-msgstr "Устанавливает дисковую квоту для пользователя с указанным I<id>. В аргументе I<addr> задаётся указатель на структуру I<fs_disk_quota>. Эта операция требует прав (B<CAP_SYS_ADMIN>)."
+msgstr ""
+"Устанавливает дисковую квоту для пользователя с указанным I<id>. В аргументе "
+"I<addr> задаётся указатель на структуру I<fs_disk_quota>. Эта операция "
+"требует прав (B<CAP_SYS_ADMIN>)."
 
 #. type: TP
 #: man-pages/man2/quotactl.2:532
@@ -1013,11 +1307,17 @@ msgstr "B<Q_XGETQSTAT>"
 #: man-pages/man2/quotactl.2:544
 msgid ""
 "Returns XFS filesystem-specific quota information in the I<fs_quota_stat> "
-"structure pointed by I<addr>.  This is useful for finding out how much space"
-" is used to store quota information, and also to get the quota on/off status"
-" of a given local XFS filesystem.  The I<fs_quota_stat> structure itself is "
+"structure pointed by I<addr>.  This is useful for finding out how much space "
+"is used to store quota information, and also to get the quota on/off status "
+"of a given local XFS filesystem.  The I<fs_quota_stat> structure itself is "
 "defined as follows:"
-msgstr "Возвращает доступную только в XFS информацию о квоте в структуре I<fs_quota_stat>, на которую указывает I<addr>. Это полезно для определения количества пространства, использованного для хранения информации о квоте, а также для получения состояния включения/отключения квоты определённой локальной файловой системы XFS. Структура I<fs_quota_stat> определена следующим образом:"
+msgstr ""
+"Возвращает доступную только в XFS информацию о квоте в структуре "
+"I<fs_quota_stat>, на которую указывает I<addr>. Это полезно для определения "
+"количества пространства, использованного для хранения информации о квоте, а "
+"также для получения состояния включения/отключения квоты определённой "
+"локальной файловой системы XFS. Структура I<fs_quota_stat> определена "
+"следующим образом:"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:548
@@ -1035,7 +1335,13 @@ msgid ""
 "                               512-byte-blocks */\n"
 "    uint32_t qfs_nextents;  /* Number of extents */\n"
 "};\n"
-msgstr "struct fs_qfilestat {\n    uint64_t qfs_ino;       /* номер иноды */\n    uint64_t qfs_nblks;     /* количество BB блоков \n                               размером 512 байт */\n    uint32_t qfs_nextents;  /* количество экстентов */\n};\n"
+msgstr ""
+"struct fs_qfilestat {\n"
+"    uint64_t qfs_ino;       /* номер иноды */\n"
+"    uint64_t qfs_nblks;     /* количество BB блоков \n"
+"                               размером 512 байт */\n"
+"    uint32_t qfs_nextents;  /* количество экстентов */\n"
+"};\n"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:573
@@ -1058,7 +1364,24 @@ msgid ""
 "    uint16_t qs_bwarnlimit;  /* Limit for # of warnings */\n"
 "    uint16_t qs_iwarnlimit;  /* Limit for # of warnings */\n"
 "};\n"
-msgstr "struct fs_quota_stat {\n    int8_t   qs_version; /* номер версии\n                            для изменений в будущем */\n    uint16_t qs_flags; /* XFS_QUOTA_{U,P,G}DQ_{ACCT,ENFD} */\n    int8_t   qs_pad;   /* не используется */\n    struct fs_qfilestat qs_uquota;  /* информация о хранилище\n                                       пользовательской квоты */\n    struct fs_qfilestat qs_gquota;  /* информация о хранилище\n                                       групповой квоты */\n    uint32_t qs_incoredqs;   /* количество dquots в ядре */\n    int32_t  qs_btimelimit;  /* лимит для таймера на блоки*/\n    int32_t  qs_itimelimit;  /* лимит для таймера на иноды */\n    int32_t  qs_rtbtimelimit;/* лимит для таймера на \n                                блоки RT */\n    uint16_t qs_bwarnlimit;  /* лимит на количество предупреждений */\n    uint16_t qs_iwarnlimit;  /* лимит на количество предупреждений */\n};\n"
+msgstr ""
+"struct fs_quota_stat {\n"
+"    int8_t   qs_version; /* номер версии\n"
+"                            для изменений в будущем */\n"
+"    uint16_t qs_flags; /* XFS_QUOTA_{U,P,G}DQ_{ACCT,ENFD} */\n"
+"    int8_t   qs_pad;   /* не используется */\n"
+"    struct fs_qfilestat qs_uquota;  /* информация о хранилище\n"
+"                                       пользовательской квоты */\n"
+"    struct fs_qfilestat qs_gquota;  /* информация о хранилище\n"
+"                                       групповой квоты */\n"
+"    uint32_t qs_incoredqs;   /* количество dquots в ядре */\n"
+"    int32_t  qs_btimelimit;  /* лимит для таймера на блоки*/\n"
+"    int32_t  qs_itimelimit;  /* лимит для таймера на иноды */\n"
+"    int32_t  qs_rtbtimelimit;/* лимит для таймера на \n"
+"                                блоки RT */\n"
+"    uint16_t qs_bwarnlimit;  /* лимит на количество предупреждений */\n"
+"    uint16_t qs_iwarnlimit;  /* лимит на количество предупреждений */\n"
+"};\n"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:579
@@ -1080,7 +1403,13 @@ msgid ""
 "naturally aligned) and padding to avoiding special compat handling; it also "
 "provides the ability to get statistics regarding the project quota file.  "
 "The I<fs_quota_statv> structure itself is defined as follows:"
-msgstr "Возвращает доступную только в XFS информацию о квоте в структуре I<fs_quota_statv>, на которую указывает I<addr>. Данная версия операции учитывается версию структуры, а также соответствие расположения (все поля корректно выровнены) и заполнителей, чтобы не выполнять обработку совместимости; также она предоставляет возможность получения статистики оп файлу квот проекта. Структура I<fs_quota_statv> определена следующим образом:"
+msgstr ""
+"Возвращает доступную только в XFS информацию о квоте в структуре "
+"I<fs_quota_statv>, на которую указывает I<addr>. Данная версия операции "
+"учитывается версию структуры, а также соответствие расположения (все поля "
+"корректно выровнены) и заполнителей, чтобы не выполнять обработку "
+"совместимости; также она предоставляет возможность получения статистики оп "
+"файлу квот проекта. Структура I<fs_quota_statv> определена следующим образом:"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:597
@@ -1099,7 +1428,14 @@ msgid ""
 "    uint32_t qfs_nextents;  /* Number of extents */\n"
 "    uint32_t qfs_pad;       /* Pad for 8-byte alignment */\n"
 "};\n"
-msgstr "struct fs_qfilestatv {\n    uint64_t qfs_ino;       /* номер иноды */\n    uint64_t qfs_nblks;     /* количество BB блоков \n                               размером 512 байт */\n    uint32_t qfs_nextents;  /* количество экстентов */\n    uint32_t qfs_pad;       /* заполнитель для 8-байтового выравнивания */\n};\n"
+msgstr ""
+"struct fs_qfilestatv {\n"
+"    uint64_t qfs_ino;       /* номер иноды */\n"
+"    uint64_t qfs_nblks;     /* количество BB блоков \n"
+"                               размером 512 байт */\n"
+"    uint32_t qfs_nextents;  /* количество экстентов */\n"
+"    uint32_t qfs_pad;       /* заполнитель для 8-байтового выравнивания */\n"
+"};\n"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:626
@@ -1125,16 +1461,39 @@ msgid ""
 "    uint16_t qs_iwarnlimit;   /* Limit for # of warnings */\n"
 "    uint64_t qs_pad2[8];      /* For future proofing */\n"
 "};\n"
-msgstr "struct fs_quota_statv {\n    int8_t   qs_version;    /* версия для изменений\n                               в будущем */\n    uint8_t  qs_pad1;       /* заполнитель для 16-битного выравнивания */\n    uint16_t qs_flags;      /* флаги XFS_QUOTA_.* */\n    uint32_t qs_incoredqs;  /* количество dquots incore */\n    struct fs_qfilestatv qs_uquota;  /* информация\n                                        о пользовательской квоте */\n    struct fs_qfilestatv qs_gquota;  /* информация\n                                        о групповой квоте */\n    struct fs_qfilestatv qs_pquota;  /* информация\n                                        о проектной квоте */\n    int32_t  qs_btimelimit;   /* лимит по таймеру на блоки */\n    int32_t  qs_itimelimit;   /* лимит по таймеру на иноды */\n    int32_t  qs_rtbtimelimit; /* лимит по таймеру\n                                 на блоки RT */\n    uint16_t qs_bwarnlimit;   /* лимит на кол-во предупреждений */\n    uint16_t qs_iwarnlimit;   /* лимит на кол-во предупреждений */\n    uint64_t qs_pad2[8];      /* для использования в будущем */\n};\n"
+msgstr ""
+"struct fs_quota_statv {\n"
+"    int8_t   qs_version;    /* версия для изменений\n"
+"                               в будущем */\n"
+"    uint8_t  qs_pad1;       /* заполнитель для 16-битного выравнивания */\n"
+"    uint16_t qs_flags;      /* флаги XFS_QUOTA_.* */\n"
+"    uint32_t qs_incoredqs;  /* количество dquots incore */\n"
+"    struct fs_qfilestatv qs_uquota;  /* информация\n"
+"                                        о пользовательской квоте */\n"
+"    struct fs_qfilestatv qs_gquota;  /* информация\n"
+"                                        о групповой квоте */\n"
+"    struct fs_qfilestatv qs_pquota;  /* информация\n"
+"                                        о проектной квоте */\n"
+"    int32_t  qs_btimelimit;   /* лимит по таймеру на блоки */\n"
+"    int32_t  qs_itimelimit;   /* лимит по таймеру на иноды */\n"
+"    int32_t  qs_rtbtimelimit; /* лимит по таймеру\n"
+"                                 на блоки RT */\n"
+"    uint16_t qs_bwarnlimit;   /* лимит на кол-во предупреждений */\n"
+"    uint16_t qs_iwarnlimit;   /* лимит на кол-во предупреждений */\n"
+"    uint64_t qs_pad2[8];      /* для использования в будущем */\n"
+"};\n"
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:640
 msgid ""
 "The I<qs_version> field of the structure should be filled with the version "
-"of the structure supported by the callee (for now, only I<FS_QSTAT_VERSION1>"
-" is supported).  The kernel will fill the structure in accordance with "
+"of the structure supported by the callee (for now, only I<FS_QSTAT_VERSION1> "
+"is supported).  The kernel will fill the structure in accordance with "
 "version provided.  The I<id> argument is ignored."
-msgstr "Поле I<qs_version> должно быть заполнено версией структуры, поддерживаемой вызываемым (пока поддерживается только I<FS_QSTAT_VERSION1>). Ядро заполнит структуру согласно предоставленной версии. Аргумент I<id> игнорируется."
+msgstr ""
+"Поле I<qs_version> должно быть заполнено версией структуры, поддерживаемой "
+"вызываемым (пока поддерживается только I<FS_QSTAT_VERSION1>). Ядро заполнит "
+"структуру согласно предоставленной версии. Аргумент I<id> игнорируется."
 
 #. type: TP
 #: man-pages/man2/quotactl.2:640
@@ -1147,17 +1506,24 @@ msgstr "B<Q_XQUOTARM>"
 msgid ""
 "Free the disk space taken by disk quotas. The I<addr> argument should be a "
 "pointer to an I<unsigned int> value containing flags (the same as in "
-"I<d_flags> field of I<fs_disk_quota> structure) which identify what types of"
-" quota should be removed (note that the quota type passed in the I<cmd> "
+"I<d_flags> field of I<fs_disk_quota> structure) which identify what types of "
+"quota should be removed (note that the quota type passed in the I<cmd> "
 "argument is ignored, but should remain valid in order to pass preliminary "
 "quotactl syscall handler checks)."
-msgstr "Освободить место на диске, занятое квотами. В аргументе I<addr> должен быть указатель на значение I<unsigned int>, содержащее флаги (те же, что и для поля I<d_flags> структуры I<fs_disk_quota>), которые показывают какие типы квот должны быть удалены (заметим, что тип квот, передаваемый в аргументе I<cmd>, игнорируется, но должен быть корректным, чтобы пройти предварительные проверки обработчика системного вызова quotactl)."
+msgstr ""
+"Освободить место на диске, занятое квотами. В аргументе I<addr> должен быть "
+"указатель на значение I<unsigned int>, содержащее флаги (те же, что и для "
+"поля I<d_flags> структуры I<fs_disk_quota>), которые показывают какие типы "
+"квот должны быть удалены (заметим, что тип квот, передаваемый в аргументе "
+"I<cmd>, игнорируется, но должен быть корректным, чтобы пройти "
+"предварительные проверки обработчика системного вызова quotactl)."
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:660
 msgid ""
 "Quotas must have already been turned off.  The I<id> argument is ignored."
-msgstr "Квоты должны быть предварительно выключены. Аргумент I<id> игнорируется."
+msgstr ""
+"Квоты должны быть предварительно выключены. Аргумент I<id> игнорируется."
 
 #. type: TP
 #: man-pages/man2/quotactl.2:660
@@ -1170,18 +1536,24 @@ msgstr "B<Q_XQUOTASYNC> (начиная с Linux 2.6.15; ничего не де�
 #. type: Plain text
 #: man-pages/man2/quotactl.2:674
 msgid ""
-"This command was an XFS quota equivalent to I<Q_SYNC>, but it is no-op since"
-" Linux 3.4, as B<sync>(1)  writes quota information to disk now (in addition"
-" to the other filesystem metadata that it writes out).  The I<special>, "
-"I<id> and I<addr> arguments are ignored."
-msgstr "Данная команда была эквивалентом I<Q_SYNC> в XFS, но начиная с Linux 3.4 она ничего не делает, так как информации о квоте на диск теперь записывает B<sync>(1) (вместе с записью других метаданных файловой системы). Аргументы I<special>, I<id> и I<addr> игнорируются."
+"This command was an XFS quota equivalent to I<Q_SYNC>, but it is no-op since "
+"Linux 3.4, as B<sync>(1)  writes quota information to disk now (in addition "
+"to the other filesystem metadata that it writes out).  The I<special>, I<id> "
+"and I<addr> arguments are ignored."
+msgstr ""
+"Данная команда была эквивалентом I<Q_SYNC> в XFS, но начиная с Linux 3.4 она "
+"ничего не делает, так как информации о квоте на диск теперь записывает "
+"B<sync>(1) (вместе с записью других метаданных файловой системы). Аргументы "
+"I<special>, I<id> и I<addr> игнорируются."
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:682
 msgid ""
 "On success, B<quotactl>()  returns 0; on error -1 is returned, and I<errno> "
 "is set to indicate the error."
-msgstr "При успешном выполнении B<quotactl>() возвращается 0; при ошибке возвращается -1, а в I<errno> содержится код ошибки."
+msgstr ""
+"При успешном выполнении B<quotactl>() возвращается 0; при ошибке "
+"возвращается -1, а в I<errno> содержится код ошибки."
 
 #. type: TP
 #: man-pages/man2/quotactl.2:683
@@ -1192,9 +1564,12 @@ msgstr "B<EACCES>"
 #. type: Plain text
 #: man-pages/man2/quotactl.2:693
 msgid ""
-"I<cmd> is B<Q_QUOTAON>, and the quota file pointed to by I<addr> exists, but"
-" is not a regular file or is not on the filesystem pointed to by I<special>."
-msgstr "Значение I<cmd> равно B<Q_QUOTAON> и файл квот, указанный в I<addr>, существует, но не является обычным файлом или находится не в файловой системе, указанной в I<special>."
+"I<cmd> is B<Q_QUOTAON>, and the quota file pointed to by I<addr> exists, but "
+"is not a regular file or is not on the filesystem pointed to by I<special>."
+msgstr ""
+"Значение I<cmd> равно B<Q_QUOTAON> и файл квот, указанный в I<addr>, "
+"существует, но не является обычным файлом или находится не в файловой "
+"системе, указанной в I<special>."
 
 #. type: TP
 #: man-pages/man2/quotactl.2:693
@@ -1206,7 +1581,9 @@ msgstr "B<EBUSY>"
 #: man-pages/man2/quotactl.2:701
 msgid ""
 "I<cmd> is B<Q_QUOTAON>, but another B<Q_QUOTAON> had already been performed."
-msgstr "Значение I<cmd> равно B<Q_QUOTAON>, но уже выполняется другой запуск B<Q_QUOTAON>."
+msgstr ""
+"Значение I<cmd> равно B<Q_QUOTAON>, но уже выполняется другой запуск "
+"B<Q_QUOTAON>."
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:707
@@ -1255,7 +1632,9 @@ msgstr "B<EPERM>"
 msgid ""
 "The caller lacked the required privilege (B<CAP_SYS_ADMIN>)  for the "
 "specified operation."
-msgstr "Вызывающий не имеет необходимых прав (B<CAP_SYS_ADMIN>) для выполнения указанной операции."
+msgstr ""
+"Вызывающий не имеет необходимых прав (B<CAP_SYS_ADMIN>) для выполнения "
+"указанной операции."
 
 #. type: TP
 #: man-pages/man2/quotactl.2:740
@@ -1268,7 +1647,9 @@ msgstr "B<ERANGE>"
 msgid ""
 "I<cmd> is B<Q_SETQUOTA>, but the specified limits are out of the range "
 "allowed by the quota format."
-msgstr "Значение I<cmd> равно B<Q_SETQUOTA>, но заданный лимит вне диапазона допустимого форматом квот."
+msgstr ""
+"Значение I<cmd> равно B<Q_SETQUOTA>, но заданный лимит вне диапазона "
+"допустимого форматом квот."
 
 #. type: TP
 #: man-pages/man2/quotactl.2:746 man-pages/man2/quotactl.2:750
@@ -1282,7 +1663,9 @@ msgstr "B<ESRCH>"
 msgid ""
 "No disk quota is found for the indicated user.  Quotas have not been turned "
 "on for this filesystem."
-msgstr "Не найдена дисковая квота для заданного пользователя. Квоты выключены в файловой системе."
+msgstr ""
+"Не найдена дисковая квота для заданного пользователя. Квоты выключены в "
+"файловой системе."
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:756
@@ -1294,15 +1677,18 @@ msgstr "Значение I<cmd> равно B<Q_QUOTAON>, но заданный �
 msgid ""
 "I<cmd> is B<Q_GETNEXTQUOTA> or B<Q_XGETNEXTQUOTA>, but there is no ID "
 "greater than or equal to I<id> that has an active quota."
-msgstr "Значение I<cmd> равно B<Q_GETNEXTQUOTA> или B<Q_XGETNEXTQUOTA>, но нет ID, который больше или равен I<id> с активной квотой."
+msgstr ""
+"Значение I<cmd> равно B<Q_GETNEXTQUOTA> или B<Q_XGETNEXTQUOTA>, но нет ID, "
+"который больше или равен I<id> с активной квотой."
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:772
 msgid ""
-"Instead of I<E<lt>xfs/xqm.hE<gt>> one can use "
-"I<E<lt>linux/dqblk_xfs.hE<gt>>, taking into account that there are several "
-"naming discrepancies:"
-msgstr "Вместо I<E<lt>xfs/xqm.hE<gt>> может быть использован I<E<lt>linux/dqblk_xfs.hE<gt>>, но следует учесть, что есть несколько несоответствий названий:"
+"Instead of I<E<lt>xfs/xqm.hE<gt>> one can use I<E<lt>linux/dqblk_xfs."
+"hE<gt>>, taking into account that there are several naming discrepancies:"
+msgstr ""
+"Вместо I<E<lt>xfs/xqm.hE<gt>> может быть использован I<E<lt>linux/dqblk_xfs."
+"hE<gt>>, но следует учесть, что есть несколько несоответствий названий:"
 
 #. type: IP
 #: man-pages/man2/quotactl.2:772 man-pages/man2/quotactl.2:777
@@ -1316,14 +1702,18 @@ msgstr "\\(bu"
 msgid ""
 "Quota enabling flags (of format B<XFS_QUOTA_[UGP]DQ_{ACCT,ENFD}>)  are "
 "defined without a leading \"X\", as B<FS_QUOTA_[UGP]DQ_{ACCT,ENFD}>."
-msgstr "Флаги включения квот (формата B<XFS_QUOTA_[UGP]DQ_{ACCT,ENFD}>) определены без начального «X» в виде B<FS_QUOTA_[UGP]DQ_{ACCT,ENFD}>."
+msgstr ""
+"Флаги включения квот (формата B<XFS_QUOTA_[UGP]DQ_{ACCT,ENFD}>) определены "
+"без начального «X» в виде B<FS_QUOTA_[UGP]DQ_{ACCT,ENFD}>."
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:782
 msgid ""
 "The same is true for B<XFS_{USER,GROUP,PROJ}_QUOTA> quota type flags, which "
 "are defined as B<FS_{USER,GROUP,PROJ}_QUOTA>."
-msgstr "Это же верно и для флагов типов квот B<XFS_{USER,GROUP,PROJ}_QUOTA>, которые определены как B<FS_{USER,GROUP,PROJ}_QUOTA>."
+msgstr ""
+"Это же верно и для флагов типов квот B<XFS_{USER,GROUP,PROJ}_QUOTA>, которые "
+"определены как B<FS_{USER,GROUP,PROJ}_QUOTA>."
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:794
@@ -1332,7 +1722,10 @@ msgid ""
 "B<XQM_GRPQUOTA>, and B<XQM_PRJQUOTA> constants for the available quota "
 "types, but their values are the same as for constants without the B<XQM_> "
 "prefix."
-msgstr "В заголовочном файле I<dqblk_xfs.h> определены свои константы B<XQM_USRQUOTA>, B<XQM_GRPQUOTA> и B<XQM_PRJQUOTA> для доступных типов квот, но их значения совпадают с константами без префикса B<XQM_>."
+msgstr ""
+"В заголовочном файле I<dqblk_xfs.h> определены свои константы "
+"B<XQM_USRQUOTA>, B<XQM_GRPQUOTA> и B<XQM_PRJQUOTA> для доступных типов квот, "
+"но их значения совпадают с константами без префикса B<XQM_>."
 
 #. type: Plain text
 #: man-pages/man2/quotactl.2:798
@@ -1368,7 +1761,9 @@ msgstr "B<#include E<lt>stdlib.hE<gt>>\n"
 msgid ""
 "B<void qsort(void *>I<base>B<, size_t >I<nmemb>B<, size_t >I<size>B<,>\n"
 "B<           int (*>I<compar>B<)(const void *, const void *));>\n"
-msgstr "B<void qsort(void *>I<base>B<, size_t >I<nmemb>B<, size_t >I<size>B<,>\nB<           int (*>I<compar>B<)(const void *, const void *));>\n"
+msgstr ""
+"B<void qsort(void *>I<base>B<, size_t >I<nmemb>B<, size_t >I<size>B<,>\n"
+"B<           int (*>I<compar>B<)(const void *, const void *));>\n"
 
 #. type: Plain text
 #: man-pages/man3/qsort.3:50
@@ -1377,13 +1772,18 @@ msgid ""
 "B<void qsort_r(void *>I<base>B<, size_t >I<nmemb>B<, size_t >I<size>B<,>\n"
 "B<           int (*>I<compar>B<)(const void *, const void *, void *),>\n"
 "B<           void *>I<arg>B<);>\n"
-msgstr "B<void qsort_r(void *>I<base>B<, size_t >I<nmemb>B<, size_t >I<size>B<,>\nB<           int (*>I<compar>B<)(const void *, const void *, void *),>\nB<           void *>I<arg>B<);>\n"
+msgstr ""
+"B<void qsort_r(void *>I<base>B<, size_t >I<nmemb>B<, size_t >I<size>B<,>\n"
+"B<           int (*>I<compar>B<)(const void *, const void *, void *),>\n"
+"B<           void *>I<arg>B<);>\n"
 
 #. type: Plain text
 #: man-pages/man3/qsort.3:55
 msgid ""
 "Feature Test Macro Requirements for glibc (see B<feature_test_macros>(7)):"
-msgstr "Требования макроса тестирования свойств для glibc (см. B<feature_test_macros>(7)):"
+msgstr ""
+"Требования макроса тестирования свойств для glibc (см. "
+"B<feature_test_macros>(7)):"
 
 #. type: Plain text
 #: man-pages/man3/qsort.3:60
@@ -1395,7 +1795,9 @@ msgstr "B<qsort_r>(): _GNU_SOURCE"
 msgid ""
 "The B<qsort>()  function sorts an array with I<nmemb> elements of size "
 "I<size>.  The I<base> argument points to the start of the array."
-msgstr "Функция B<qsort>() сортирует массив из I<nmemb> размером I<size>. Аргумент I<base> указывает на начало массива."
+msgstr ""
+"Функция B<qsort>() сортирует массив из I<nmemb> размером I<size>. Аргумент "
+"I<base> указывает на начало массива."
 
 #. type: Plain text
 #: man-pages/man3/qsort.3:72
@@ -1403,7 +1805,10 @@ msgid ""
 "The contents of the array are sorted in ascending order according to a "
 "comparison function pointed to by I<compar>, which is called with two "
 "arguments that point to the objects being compared."
-msgstr "Содержимое массива сортируется в соответствии с функцией сравнения, на которую ссылается I<compar>, вызываемой вместе с двумя аргументами, которые ссылаются на сравниваемые объекты."
+msgstr ""
+"Содержимое массива сортируется в соответствии с функцией сравнения, на "
+"которую ссылается I<compar>, вызываемой вместе с двумя аргументами, которые "
+"ссылаются на сравниваемые объекты."
 
 #. type: Plain text
 #: man-pages/man3/qsort.3:78
@@ -1412,17 +1817,26 @@ msgid ""
 "greater than zero if the first argument is considered to be respectively "
 "less than, equal to, or greater than the second.  If two members compare as "
 "equal, their order in the sorted array is undefined."
-msgstr "Функция сравнения должна вернуть целое, меньшее, равное и большее нуля для случаев, когда первый аргумент меньше, равен или больше второго соответственно. Если оба элемента сравнения равны, порядок их сортировки в массиве не будет определен."
+msgstr ""
+"Функция сравнения должна вернуть целое, меньшее, равное и большее нуля для "
+"случаев, когда первый аргумент меньше, равен или больше второго "
+"соответственно. Если оба элемента сравнения равны, порядок их сортировки в "
+"массиве не будет определен."
 
 #. type: Plain text
 #: man-pages/man3/qsort.3:91
 msgid ""
 "The B<qsort_r>()  function is identical to B<qsort>()  except that the "
 "comparison function I<compar> takes a third argument.  A pointer is passed "
-"to the comparison function via I<arg>.  In this way, the comparison function"
-" does not need to use global variables to pass through arbitrary arguments, "
+"to the comparison function via I<arg>.  In this way, the comparison function "
+"does not need to use global variables to pass through arbitrary arguments, "
 "and is therefore reentrant and safe to use in threads."
-msgstr "Функция B<qsort_r>() идентична B<qsort>(), за исключением того, что в функцию сравнения I<compar> добавлен третий аргумент. Указатель передаётся в функцию сравнения через аргумент I<arg>. Таким образом, функции сравнения не требуется глобальные переменные для передачи произвольных аргументов, и поэтому она реентерабельна и её можно безопасно использовать в нитях."
+msgstr ""
+"Функция B<qsort_r>() идентична B<qsort>(), за исключением того, что в "
+"функцию сравнения I<compar> добавлен третий аргумент. Указатель передаётся в "
+"функцию сравнения через аргумент I<arg>. Таким образом, функции сравнения не "
+"требуется глобальные переменные для передачи произвольных аргументов, и "
+"поэтому она реентерабельна и её можно безопасно использовать в нитях."
 
 #. type: Plain text
 #: man-pages/man3/qsort.3:97
@@ -1470,7 +1884,9 @@ msgstr "Значение"
 msgid ""
 "B<qsort>(),\n"
 "B<qsort_r>()"
-msgstr "B<qsort>(),\nB<qsort_r>()"
+msgstr ""
+"B<qsort>(),\n"
+"B<qsort_r>()"
 
 #. type: tbl table
 #: man-pages/man3/qsort.3:111
@@ -1494,7 +1910,9 @@ msgstr "B<qsort>(): POSIX.1-2001, POSIX.1-2008, C89, C99, SVr4, 4.3BSD."
 msgid ""
 "To compare C strings, the comparison function can call B<strcmp>(3), as "
 "shown in the example below."
-msgstr "Для сравнения C-строк в качестве функции сравнения можно использовать B<strcmp>(3), как это указано ниже."
+msgstr ""
+"Для сравнения C-строк в качестве функции сравнения можно использовать "
+"B<strcmp>(3), как это указано ниже."
 
 #. type: SH
 #: man-pages/man3/qsort.3:121
@@ -1512,7 +1930,9 @@ msgstr "Для примера использования смотрите при
 msgid ""
 "Another example is the following program, which sorts the strings given in "
 "its command-line arguments:"
-msgstr "Еще один пример программы, сортирующей строки, переданные в качестве аргументов через командную строку:"
+msgstr ""
+"Еще один пример программы, сортирующей строки, переданные в качестве "
+"аргументов через командную строку:"
 
 #. type: Plain text
 #: man-pages/man3/qsort.3:132
@@ -1521,7 +1941,10 @@ msgid ""
 "#include E<lt>stdio.hE<gt>\n"
 "#include E<lt>stdlib.hE<gt>\n"
 "#include E<lt>string.hE<gt>\n"
-msgstr "#include E<lt>stdio.hE<gt>\n#include E<lt>stdlib.hE<gt>\n#include E<lt>string.hE<gt>\n"
+msgstr ""
+"#include E<lt>stdio.hE<gt>\n"
+"#include E<lt>stdlib.hE<gt>\n"
+"#include E<lt>string.hE<gt>\n"
 
 #. type: Plain text
 #: man-pages/man3/qsort.3:139
@@ -1533,7 +1956,14 @@ msgid ""
 "    /* The actual arguments to this function are \"pointers to\n"
 "       pointers to char\", but strcmp(3) arguments are \"pointers\n"
 "       to char\", hence the following cast plus dereference */\n"
-msgstr "static int\ncmpstringp(const void *p1, const void *p2)\n{\n    /* Аргументами данной функции являются \"pointers to\n       pointers to char\", однако аргументами strcmp(3) \n       являются \"pointers to char\", так что здесь происходит\n       преобразование и разыменовывание ссылок */\n"
+msgstr ""
+"static int\n"
+"cmpstringp(const void *p1, const void *p2)\n"
+"{\n"
+"    /* Аргументами данной функции являются \"pointers to\n"
+"       pointers to char\", однако аргументами strcmp(3) \n"
+"       являются \"pointers to char\", так что здесь происходит\n"
+"       преобразование и разыменовывание ссылок */\n"
 
 #. type: Plain text
 #: man-pages/man3/qsort.3:142
@@ -1541,7 +1971,9 @@ msgstr "static int\ncmpstringp(const void *p1, const void *p2)\n{\n    /* Арг
 msgid ""
 "    return strcmp(* (char * const *) p1, * (char * const *) p2);\n"
 "}\n"
-msgstr "    return strcmp(* (char * const *) p1, * (char * const *) p2);\n}\n"
+msgstr ""
+"    return strcmp(* (char * const *) p1, * (char * const *) p2);\n"
+"}\n"
 
 #. type: Plain text
 #: man-pages/man3/qsort.3:147
@@ -1551,7 +1983,11 @@ msgid ""
 "main(int argc, char *argv[])\n"
 "{\n"
 "    int j;\n"
-msgstr "int\nmain(int argc, char *argv[])\n{\n    int j;\n"
+msgstr ""
+"int\n"
+"main(int argc, char *argv[])\n"
+"{\n"
+"    int j;\n"
 
 #. type: Plain text
 #: man-pages/man3/qsort.3:152
@@ -1561,7 +1997,11 @@ msgid ""
 "        fprintf(stderr, \"Usage: %s E<lt>stringE<gt>...\\en\", argv[0]);\n"
 "        exit(EXIT_FAILURE);\n"
 "    }\n"
-msgstr "    if (argc E<lt> 2) {\n        fprintf(stderr, \"Использование: %s E<lt>stringE<gt>...\\en\", argv[0]);\n        exit(EXIT_FAILURE);\n    }\n"
+msgstr ""
+"    if (argc E<lt> 2) {\n"
+"        fprintf(stderr, \"Использование: %s E<lt>stringE<gt>...\\en\", argv[0]);\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
 
 #. type: Plain text
 #: man-pages/man3/qsort.3:154
@@ -1577,7 +2017,11 @@ msgid ""
 "        puts(argv[j]);\n"
 "    exit(EXIT_SUCCESS);\n"
 "}\n"
-msgstr "    for (j = 1; j E<lt> argc; j++)\n        puts(argv[j]);\n    exit(EXIT_SUCCESS);\n}\n"
+msgstr ""
+"    for (j = 1; j E<lt> argc; j++)\n"
+"        puts(argv[j]);\n"
+"    exit(EXIT_SUCCESS);\n"
+"}\n"
 
 #. type: Plain text
 #: man-pages/man3/qsort.3:164
@@ -1627,19 +2071,37 @@ msgid ""
 "SLIST_NEXT>, E<.Nm SLIST_REMOVE_HEAD>, E<.Nm SLIST_REMOVE>, E<.Nm "
 "STAILQ_CONCAT>, E<.Nm STAILQ_EMPTY>, E<.Nm STAILQ_ENTRY>, E<.Nm "
 "STAILQ_FIRST>, E<.Nm STAILQ_FOREACH>, E<.Nm STAILQ_HEAD>, E<.Nm "
-"STAILQ_HEAD_INITIALIZER>, E<.Nm STAILQ_INIT>, E<.Nm STAILQ_INSERT_AFTER>, "
-"E<.Nm STAILQ_INSERT_HEAD>, E<.Nm STAILQ_INSERT_TAIL>, E<.Nm STAILQ_NEXT>, "
-"E<.Nm STAILQ_REMOVE_HEAD>, E<.Nm STAILQ_REMOVE>, E<.Nm LIST_EMPTY>, E<.Nm "
-"LIST_ENTRY>, E<.Nm LIST_FIRST>, E<.Nm LIST_FOREACH>, E<.Nm LIST_HEAD>, E<.Nm"
-" LIST_HEAD_INITIALIZER>, E<.Nm LIST_INIT>, E<.Nm LIST_INSERT_AFTER>, E<.Nm "
+"STAILQ_HEAD_INITIALIZER>, E<.Nm STAILQ_INIT>, E<.Nm STAILQ_INSERT_AFTER>, E<."
+"Nm STAILQ_INSERT_HEAD>, E<.Nm STAILQ_INSERT_TAIL>, E<.Nm STAILQ_NEXT>, E<.Nm "
+"STAILQ_REMOVE_HEAD>, E<.Nm STAILQ_REMOVE>, E<.Nm LIST_EMPTY>, E<.Nm "
+"LIST_ENTRY>, E<.Nm LIST_FIRST>, E<.Nm LIST_FOREACH>, E<.Nm LIST_HEAD>, E<.Nm "
+"LIST_HEAD_INITIALIZER>, E<.Nm LIST_INIT>, E<.Nm LIST_INSERT_AFTER>, E<.Nm "
 "LIST_INSERT_BEFORE>, E<.Nm LIST_INSERT_HEAD>, E<.Nm LIST_NEXT>, E<.Nm "
 "LIST_REMOVE>, E<.Nm TAILQ_CONCAT>, E<.Nm TAILQ_EMPTY>, E<.Nm TAILQ_ENTRY>, "
-"E<.Nm TAILQ_FIRST>, E<.Nm TAILQ_FOREACH>, E<.Nm TAILQ_FOREACH_REVERSE>, "
-"E<.Nm TAILQ_HEAD>, E<.Nm TAILQ_HEAD_INITIALIZER>, E<.Nm TAILQ_INIT>, E<.Nm "
+"E<.Nm TAILQ_FIRST>, E<.Nm TAILQ_FOREACH>, E<.Nm TAILQ_FOREACH_REVERSE>, E<."
+"Nm TAILQ_HEAD>, E<.Nm TAILQ_HEAD_INITIALIZER>, E<.Nm TAILQ_INIT>, E<.Nm "
 "TAILQ_INSERT_AFTER>, E<.Nm TAILQ_INSERT_BEFORE>, E<.Nm TAILQ_INSERT_HEAD>, "
 "E<.Nm TAILQ_INSERT_TAIL>, E<.Nm TAILQ_LAST>, E<.Nm TAILQ_NEXT>, E<.Nm "
 "TAILQ_PREV>, E<.Nm TAILQ_REMOVE>, E<.Nm TAILQ_SWAP>"
-msgstr "E<.Nm SLIST_EMPTY>, E<.Nm SLIST_ENTRY>, E<.Nm SLIST_FIRST>, E<.Nm SLIST_FOREACH>, E<.Nm SLIST_HEAD>, E<.Nm SLIST_HEAD_INITIALIZER>, E<.Nm SLIST_INIT>, E<.Nm SLIST_INSERT_AFTER>, E<.Nm SLIST_INSERT_HEAD>, E<.Nm SLIST_NEXT>, E<.Nm SLIST_REMOVE_HEAD>, E<.Nm SLIST_REMOVE>, E<.Nm STAILQ_CONCAT>, E<.Nm STAILQ_EMPTY>, E<.Nm STAILQ_ENTRY>, E<.Nm STAILQ_FIRST>, E<.Nm STAILQ_FOREACH>, E<.Nm STAILQ_HEAD>, E<.Nm STAILQ_HEAD_INITIALIZER>, E<.Nm STAILQ_INIT>, E<.Nm STAILQ_INSERT_AFTER>, E<.Nm STAILQ_INSERT_HEAD>, E<.Nm STAILQ_INSERT_TAIL>, E<.Nm STAILQ_NEXT>, E<.Nm STAILQ_REMOVE_HEAD>, E<.Nm STAILQ_REMOVE>, E<.Nm LIST_EMPTY>, E<.Nm LIST_ENTRY>, E<.Nm LIST_FIRST>, E<.Nm LIST_FOREACH>, E<.Nm LIST_HEAD>, E<.Nm LIST_HEAD_INITIALIZER>, E<.Nm LIST_INIT>, E<.Nm LIST_INSERT_AFTER>, E<.Nm LIST_INSERT_BEFORE>, E<.Nm LIST_INSERT_HEAD>, E<.Nm LIST_NEXT>, E<.Nm LIST_REMOVE>, E<.Nm TAILQ_CONCAT>, E<.Nm TAILQ_EMPTY>, E<.Nm TAILQ_ENTRY>, E<.Nm TAILQ_FIRST>, E<.Nm TAILQ_FOREACH>, E<.Nm TAILQ_FOREACH_REVERSE>, E<.Nm TAILQ_HEAD>, E<.Nm TAILQ_HEAD_INITIALIZER>, E<.Nm TAILQ_INIT>, E<.Nm TAILQ_INSERT_AFTER>, E<.Nm TAILQ_INSERT_BEFORE>, E<.Nm TAILQ_INSERT_HEAD>, E<.Nm TAILQ_INSERT_TAIL>, E<.Nm TAILQ_LAST>, E<.Nm TAILQ_NEXT>, E<.Nm TAILQ_PREV>, E<.Nm TAILQ_REMOVE>, E<.Nm TAILQ_SWAP>"
+msgstr ""
+"E<.Nm SLIST_EMPTY>, E<.Nm SLIST_ENTRY>, E<.Nm SLIST_FIRST>, E<.Nm "
+"SLIST_FOREACH>, E<.Nm SLIST_HEAD>, E<.Nm SLIST_HEAD_INITIALIZER>, E<.Nm "
+"SLIST_INIT>, E<.Nm SLIST_INSERT_AFTER>, E<.Nm SLIST_INSERT_HEAD>, E<.Nm "
+"SLIST_NEXT>, E<.Nm SLIST_REMOVE_HEAD>, E<.Nm SLIST_REMOVE>, E<.Nm "
+"STAILQ_CONCAT>, E<.Nm STAILQ_EMPTY>, E<.Nm STAILQ_ENTRY>, E<.Nm "
+"STAILQ_FIRST>, E<.Nm STAILQ_FOREACH>, E<.Nm STAILQ_HEAD>, E<.Nm "
+"STAILQ_HEAD_INITIALIZER>, E<.Nm STAILQ_INIT>, E<.Nm STAILQ_INSERT_AFTER>, E<."
+"Nm STAILQ_INSERT_HEAD>, E<.Nm STAILQ_INSERT_TAIL>, E<.Nm STAILQ_NEXT>, E<.Nm "
+"STAILQ_REMOVE_HEAD>, E<.Nm STAILQ_REMOVE>, E<.Nm LIST_EMPTY>, E<.Nm "
+"LIST_ENTRY>, E<.Nm LIST_FIRST>, E<.Nm LIST_FOREACH>, E<.Nm LIST_HEAD>, E<.Nm "
+"LIST_HEAD_INITIALIZER>, E<.Nm LIST_INIT>, E<.Nm LIST_INSERT_AFTER>, E<.Nm "
+"LIST_INSERT_BEFORE>, E<.Nm LIST_INSERT_HEAD>, E<.Nm LIST_NEXT>, E<.Nm "
+"LIST_REMOVE>, E<.Nm TAILQ_CONCAT>, E<.Nm TAILQ_EMPTY>, E<.Nm TAILQ_ENTRY>, "
+"E<.Nm TAILQ_FIRST>, E<.Nm TAILQ_FOREACH>, E<.Nm TAILQ_FOREACH_REVERSE>, E<."
+"Nm TAILQ_HEAD>, E<.Nm TAILQ_HEAD_INITIALIZER>, E<.Nm TAILQ_INIT>, E<.Nm "
+"TAILQ_INSERT_AFTER>, E<.Nm TAILQ_INSERT_BEFORE>, E<.Nm TAILQ_INSERT_HEAD>, "
+"E<.Nm TAILQ_INSERT_TAIL>, E<.Nm TAILQ_LAST>, E<.Nm TAILQ_NEXT>, E<.Nm "
+"TAILQ_PREV>, E<.Nm TAILQ_REMOVE>, E<.Nm TAILQ_SWAP>"
 
 #. type: Nd
 #: man-pages/man3/queue.3:115
@@ -1659,92 +2121,124 @@ msgid "sys/queue.h"
 msgstr "sys/queue.h"
 
 #.  .Fn SLIST_FOREACH_FROM "TYPE *var" "SLIST_HEAD *head" "SLIST_ENTRY NAME"
-#.  .Fn SLIST_FOREACH_SAFE "TYPE *var" "SLIST_HEAD *head" "SLIST_ENTRY NAME"
-#. "TYPE *temp_var"
-#.  .Fn SLIST_FOREACH_FROM_SAFE "TYPE *var" "SLIST_HEAD *head" "SLIST_ENTRY
-#. NAME" "TYPE *temp_var"
+#.  .Fn SLIST_FOREACH_SAFE "TYPE *var" "SLIST_HEAD *head" "SLIST_ENTRY NAME" "TYPE *temp_var"
+#.  .Fn SLIST_FOREACH_FROM_SAFE "TYPE *var" "SLIST_HEAD *head" "SLIST_ENTRY NAME" "TYPE *temp_var"
 #.  .Fn SLIST_REMOVE_AFTER "TYPE *elm" "SLIST_ENTRY NAME"
 #.  .Fn SLIST_SWAP "SLIST_HEAD *head1" "SLIST_HEAD *head2" "SLIST_ENTRY NAME"
-#.  .Fn STAILQ_FOREACH_FROM "TYPE *var" "STAILQ_HEAD *head" "STAILQ_ENTRY
-#. NAME"
-#.  .Fn STAILQ_FOREACH_SAFE "TYPE *var" "STAILQ_HEAD *head" "STAILQ_ENTRY
-#. NAME" "TYPE *temp_var"
-#.  .Fn STAILQ_FOREACH_FROM_SAFE "TYPE *var" "STAILQ_HEAD *head" "STAILQ_ENTRY
-#. NAME" "TYPE *temp_var"
+#.  .Fn STAILQ_FOREACH_FROM "TYPE *var" "STAILQ_HEAD *head" "STAILQ_ENTRY NAME"
+#.  .Fn STAILQ_FOREACH_SAFE "TYPE *var" "STAILQ_HEAD *head" "STAILQ_ENTRY NAME" "TYPE *temp_var"
+#.  .Fn STAILQ_FOREACH_FROM_SAFE "TYPE *var" "STAILQ_HEAD *head" "STAILQ_ENTRY NAME" "TYPE *temp_var"
 #.  .Fn STAILQ_LAST "STAILQ_HEAD *head" "TYPE" "STAILQ_ENTRY NAME"
-#.  .Fn STAILQ_REMOVE_AFTER "STAILQ_HEAD *head" "TYPE *elm" "STAILQ_ENTRY
-#. NAME"
-#.  .Fn STAILQ_SWAP "STAILQ_HEAD *head1" "STAILQ_HEAD *head2" "STAILQ_ENTRY
-#. NAME"
+#.  .Fn STAILQ_REMOVE_AFTER "STAILQ_HEAD *head" "TYPE *elm" "STAILQ_ENTRY NAME"
+#.  .Fn STAILQ_SWAP "STAILQ_HEAD *head1" "STAILQ_HEAD *head2" "STAILQ_ENTRY NAME"
 #.  .Fn LIST_FOREACH_FROM "TYPE *var" "LIST_HEAD *head" "LIST_ENTRY NAME"
-#.  .Fn LIST_FOREACH_SAFE "TYPE *var" "LIST_HEAD *head" "LIST_ENTRY NAME"
-#. "TYPE *temp_var"
-#.  .Fn LIST_FOREACH_FROM_SAFE "TYPE *var" "LIST_HEAD *head" "LIST_ENTRY NAME"
-#. "TYPE *temp_var"
+#.  .Fn LIST_FOREACH_SAFE "TYPE *var" "LIST_HEAD *head" "LIST_ENTRY NAME" "TYPE *temp_var"
+#.  .Fn LIST_FOREACH_FROM_SAFE "TYPE *var" "LIST_HEAD *head" "LIST_ENTRY NAME" "TYPE *temp_var"
 #.  .Fn LIST_PREV "TYPE *elm" "LIST_HEAD *head" "TYPE" "LIST_ENTRY NAME"
 #.  .Fn TAILQ_FOREACH_FROM "TYPE *var" "TAILQ_HEAD *head" "TAILQ_ENTRY NAME"
-#.  .Fn TAILQ_FOREACH_SAFE "TYPE *var" "TAILQ_HEAD *head" "TAILQ_ENTRY NAME"
-#. "TYPE *temp_var"
-#.  .Fn TAILQ_FOREACH_FROM_SAFE "TYPE *var" "TAILQ_HEAD *head" "TAILQ_ENTRY
-#. NAME" "TYPE *temp_var"
-#.  .Fn TAILQ_FOREACH_REVERSE_FROM "TYPE *var" "TAILQ_HEAD *head" "HEADNAME"
-#. "TAILQ_ENTRY NAME"
-#.  .Fn TAILQ_FOREACH_REVERSE_SAFE "TYPE *var" "TAILQ_HEAD *head" "HEADNAME"
-#. "TAILQ_ENTRY NAME" "TYPE *temp_var"
-#.  .Fn TAILQ_FOREACH_REVERSE_FROM_SAFE "TYPE *var" "TAILQ_HEAD *head"
-#. "HEADNAME" "TAILQ_ENTRY NAME" "TYPE *temp_var"
+#.  .Fn TAILQ_FOREACH_SAFE "TYPE *var" "TAILQ_HEAD *head" "TAILQ_ENTRY NAME" "TYPE *temp_var"
+#.  .Fn TAILQ_FOREACH_FROM_SAFE "TYPE *var" "TAILQ_HEAD *head" "TAILQ_ENTRY NAME" "TYPE *temp_var"
+#.  .Fn TAILQ_FOREACH_REVERSE_FROM "TYPE *var" "TAILQ_HEAD *head" "HEADNAME" "TAILQ_ENTRY NAME"
+#.  .Fn TAILQ_FOREACH_REVERSE_SAFE "TYPE *var" "TAILQ_HEAD *head" "HEADNAME" "TAILQ_ENTRY NAME" "TYPE *temp_var"
+#.  .Fn TAILQ_FOREACH_REVERSE_FROM_SAFE "TYPE *var" "TAILQ_HEAD *head" "HEADNAME" "TAILQ_ENTRY NAME" "TYPE *temp_var"
 #. type: Plain text
 #: man-pages/man3/queue.3:202
 msgid ""
 "E<.Fn SLIST_EMPTY \"SLIST_HEAD *head\"> E<.Fn SLIST_ENTRY \"TYPE\"> E<.Fn "
 "SLIST_FIRST \"SLIST_HEAD *head\"> E<.Fn SLIST_FOREACH \"TYPE *var\" "
 "\"SLIST_HEAD *head\" \"SLIST_ENTRY NAME\"> E<.Fn SLIST_HEAD \"HEADNAME\" "
-"\"TYPE\"> E<.Fn SLIST_HEAD_INITIALIZER \"SLIST_HEAD head\"> E<.Fn SLIST_INIT"
-" \"SLIST_HEAD *head\"> E<.Fn SLIST_INSERT_AFTER \"TYPE *listelm\" \"TYPE "
-"*elm\" \"SLIST_ENTRY NAME\"> E<.Fn SLIST_INSERT_HEAD \"SLIST_HEAD *head\" "
-"\"TYPE *elm\" \"SLIST_ENTRY NAME\"> E<.Fn SLIST_NEXT \"TYPE *elm\" "
-"\"SLIST_ENTRY NAME\"> E<.Fn SLIST_REMOVE_HEAD \"SLIST_HEAD *head\" "
-"\"SLIST_ENTRY NAME\"> E<.Fn SLIST_REMOVE \"SLIST_HEAD *head\" \"TYPE *elm\" "
-"\"TYPE\" \"SLIST_ENTRY NAME\"> E<.Fn STAILQ_CONCAT \"STAILQ_HEAD *head1\" "
-"\"STAILQ_HEAD *head2\"> E<.Fn STAILQ_EMPTY \"STAILQ_HEAD *head\"> E<.Fn "
-"STAILQ_ENTRY \"TYPE\"> E<.Fn STAILQ_FIRST \"STAILQ_HEAD *head\"> E<.Fn "
-"STAILQ_FOREACH \"TYPE *var\" \"STAILQ_HEAD *head\" \"STAILQ_ENTRY NAME\"> "
-"E<.Fn STAILQ_HEAD \"HEADNAME\" \"TYPE\"> E<.Fn STAILQ_HEAD_INITIALIZER "
-"\"STAILQ_HEAD head\"> E<.Fn STAILQ_INIT \"STAILQ_HEAD *head\"> E<.Fn "
-"STAILQ_INSERT_AFTER \"STAILQ_HEAD *head\" \"TYPE *listelm\" \"TYPE *elm\" "
-"\"STAILQ_ENTRY NAME\"> E<.Fn STAILQ_INSERT_HEAD \"STAILQ_HEAD *head\" \"TYPE"
-" *elm\" \"STAILQ_ENTRY NAME\"> E<.Fn STAILQ_INSERT_TAIL \"STAILQ_HEAD "
-"*head\" \"TYPE *elm\" \"STAILQ_ENTRY NAME\"> E<.Fn STAILQ_NEXT \"TYPE *elm\""
-" \"STAILQ_ENTRY NAME\"> E<.Fn STAILQ_REMOVE_HEAD \"STAILQ_HEAD *head\" "
-"\"STAILQ_ENTRY NAME\"> E<.Fn STAILQ_REMOVE \"STAILQ_HEAD *head\" \"TYPE "
-"*elm\" \"TYPE\" \"STAILQ_ENTRY NAME\"> E<.Fn LIST_EMPTY \"LIST_HEAD *head\">"
-" E<.Fn LIST_ENTRY \"TYPE\"> E<.Fn LIST_FIRST \"LIST_HEAD *head\"> E<.Fn "
-"LIST_FOREACH \"TYPE *var\" \"LIST_HEAD *head\" \"LIST_ENTRY NAME\"> E<.Fn "
-"LIST_HEAD \"HEADNAME\" \"TYPE\"> E<.Fn LIST_HEAD_INITIALIZER \"LIST_HEAD "
-"head\"> E<.Fn LIST_INIT \"LIST_HEAD *head\"> E<.Fn LIST_INSERT_AFTER \"TYPE "
-"*listelm\" \"TYPE *elm\" \"LIST_ENTRY NAME\"> E<.Fn LIST_INSERT_BEFORE "
-"\"TYPE *listelm\" \"TYPE *elm\" \"LIST_ENTRY NAME\"> E<.Fn LIST_INSERT_HEAD "
-"\"LIST_HEAD *head\" \"TYPE *elm\" \"LIST_ENTRY NAME\"> E<.Fn LIST_NEXT "
-"\"TYPE *elm\" \"LIST_ENTRY NAME\"> E<.Fn LIST_REMOVE \"TYPE *elm\" "
-"\"LIST_ENTRY NAME\"> E<.Fn LIST_SWAP \"LIST_HEAD *head1\" \"LIST_HEAD "
-"*head2\" \"TYPE\" \"LIST_ENTRY NAME\"> E<.Fn TAILQ_CONCAT \"TAILQ_HEAD "
-"*head1\" \"TAILQ_HEAD *head2\" \"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_EMPTY "
-"\"TAILQ_HEAD *head\"> E<.Fn TAILQ_ENTRY \"TYPE\"> E<.Fn TAILQ_FIRST "
-"\"TAILQ_HEAD *head\"> E<.Fn TAILQ_FOREACH \"TYPE *var\" \"TAILQ_HEAD *head\""
-" \"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_FOREACH_REVERSE \"TYPE *var\" "
-"\"TAILQ_HEAD *head\" \"HEADNAME\" \"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_HEAD "
-"\"HEADNAME\" \"TYPE\"> E<.Fn TAILQ_HEAD_INITIALIZER \"TAILQ_HEAD head\"> "
-"E<.Fn TAILQ_INIT \"TAILQ_HEAD *head\"> E<.Fn TAILQ_INSERT_AFTER \"TAILQ_HEAD"
-" *head\" \"TYPE *listelm\" \"TYPE *elm\" \"TAILQ_ENTRY NAME\"> E<.Fn "
-"TAILQ_INSERT_BEFORE \"TYPE *listelm\" \"TYPE *elm\" \"TAILQ_ENTRY NAME\"> "
-"E<.Fn TAILQ_INSERT_HEAD \"TAILQ_HEAD *head\" \"TYPE *elm\" \"TAILQ_ENTRY "
+"\"TYPE\"> E<.Fn SLIST_HEAD_INITIALIZER \"SLIST_HEAD head\"> E<.Fn SLIST_INIT "
+"\"SLIST_HEAD *head\"> E<.Fn SLIST_INSERT_AFTER \"TYPE *listelm\" \"TYPE *elm"
+"\" \"SLIST_ENTRY NAME\"> E<.Fn SLIST_INSERT_HEAD \"SLIST_HEAD *head\" \"TYPE "
+"*elm\" \"SLIST_ENTRY NAME\"> E<.Fn SLIST_NEXT \"TYPE *elm\" \"SLIST_ENTRY "
+"NAME\"> E<.Fn SLIST_REMOVE_HEAD \"SLIST_HEAD *head\" \"SLIST_ENTRY NAME\"> "
+"E<.Fn SLIST_REMOVE \"SLIST_HEAD *head\" \"TYPE *elm\" \"TYPE\" \"SLIST_ENTRY "
+"NAME\"> E<.Fn STAILQ_CONCAT \"STAILQ_HEAD *head1\" \"STAILQ_HEAD *head2\"> "
+"E<.Fn STAILQ_EMPTY \"STAILQ_HEAD *head\"> E<.Fn STAILQ_ENTRY \"TYPE\"> E<.Fn "
+"STAILQ_FIRST \"STAILQ_HEAD *head\"> E<.Fn STAILQ_FOREACH \"TYPE *var\" "
+"\"STAILQ_HEAD *head\" \"STAILQ_ENTRY NAME\"> E<.Fn STAILQ_HEAD \"HEADNAME\" "
+"\"TYPE\"> E<.Fn STAILQ_HEAD_INITIALIZER \"STAILQ_HEAD head\"> E<.Fn "
+"STAILQ_INIT \"STAILQ_HEAD *head\"> E<.Fn STAILQ_INSERT_AFTER \"STAILQ_HEAD "
+"*head\" \"TYPE *listelm\" \"TYPE *elm\" \"STAILQ_ENTRY NAME\"> E<.Fn "
+"STAILQ_INSERT_HEAD \"STAILQ_HEAD *head\" \"TYPE *elm\" \"STAILQ_ENTRY NAME"
+"\"> E<.Fn STAILQ_INSERT_TAIL \"STAILQ_HEAD *head\" \"TYPE *elm\" "
+"\"STAILQ_ENTRY NAME\"> E<.Fn STAILQ_NEXT \"TYPE *elm\" \"STAILQ_ENTRY NAME"
+"\"> E<.Fn STAILQ_REMOVE_HEAD \"STAILQ_HEAD *head\" \"STAILQ_ENTRY NAME\"> E<."
+"Fn STAILQ_REMOVE \"STAILQ_HEAD *head\" \"TYPE *elm\" \"TYPE\" \"STAILQ_ENTRY "
+"NAME\"> E<.Fn LIST_EMPTY \"LIST_HEAD *head\"> E<.Fn LIST_ENTRY \"TYPE\"> E<."
+"Fn LIST_FIRST \"LIST_HEAD *head\"> E<.Fn LIST_FOREACH \"TYPE *var\" "
+"\"LIST_HEAD *head\" \"LIST_ENTRY NAME\"> E<.Fn LIST_HEAD \"HEADNAME\" \"TYPE"
+"\"> E<.Fn LIST_HEAD_INITIALIZER \"LIST_HEAD head\"> E<.Fn LIST_INIT "
+"\"LIST_HEAD *head\"> E<.Fn LIST_INSERT_AFTER \"TYPE *listelm\" \"TYPE *elm\" "
+"\"LIST_ENTRY NAME\"> E<.Fn LIST_INSERT_BEFORE \"TYPE *listelm\" \"TYPE *elm"
+"\" \"LIST_ENTRY NAME\"> E<.Fn LIST_INSERT_HEAD \"LIST_HEAD *head\" \"TYPE "
+"*elm\" \"LIST_ENTRY NAME\"> E<.Fn LIST_NEXT \"TYPE *elm\" \"LIST_ENTRY NAME"
+"\"> E<.Fn LIST_REMOVE \"TYPE *elm\" \"LIST_ENTRY NAME\"> E<.Fn LIST_SWAP "
+"\"LIST_HEAD *head1\" \"LIST_HEAD *head2\" \"TYPE\" \"LIST_ENTRY NAME\"> E<."
+"Fn TAILQ_CONCAT \"TAILQ_HEAD *head1\" \"TAILQ_HEAD *head2\" \"TAILQ_ENTRY "
+"NAME\"> E<.Fn TAILQ_EMPTY \"TAILQ_HEAD *head\"> E<.Fn TAILQ_ENTRY \"TYPE\"> "
+"E<.Fn TAILQ_FIRST \"TAILQ_HEAD *head\"> E<.Fn TAILQ_FOREACH \"TYPE *var\" "
+"\"TAILQ_HEAD *head\" \"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_FOREACH_REVERSE "
+"\"TYPE *var\" \"TAILQ_HEAD *head\" \"HEADNAME\" \"TAILQ_ENTRY NAME\"> E<.Fn "
+"TAILQ_HEAD \"HEADNAME\" \"TYPE\"> E<.Fn TAILQ_HEAD_INITIALIZER \"TAILQ_HEAD "
+"head\"> E<.Fn TAILQ_INIT \"TAILQ_HEAD *head\"> E<.Fn TAILQ_INSERT_AFTER "
+"\"TAILQ_HEAD *head\" \"TYPE *listelm\" \"TYPE *elm\" \"TAILQ_ENTRY NAME\"> "
+"E<.Fn TAILQ_INSERT_BEFORE \"TYPE *listelm\" \"TYPE *elm\" \"TAILQ_ENTRY NAME"
+"\"> E<.Fn TAILQ_INSERT_HEAD \"TAILQ_HEAD *head\" \"TYPE *elm\" \"TAILQ_ENTRY "
 "NAME\"> E<.Fn TAILQ_INSERT_TAIL \"TAILQ_HEAD *head\" \"TYPE *elm\" "
-"\"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_LAST \"TAILQ_HEAD *head\" \"HEADNAME\"> "
-"E<.Fn TAILQ_NEXT \"TYPE *elm\" \"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_PREV \"TYPE"
-" *elm\" \"HEADNAME\" \"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_REMOVE \"TAILQ_HEAD "
+"\"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_LAST \"TAILQ_HEAD *head\" \"HEADNAME\"> E<."
+"Fn TAILQ_NEXT \"TYPE *elm\" \"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_PREV \"TYPE "
+"*elm\" \"HEADNAME\" \"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_REMOVE \"TAILQ_HEAD "
 "*head\" \"TYPE *elm\" \"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_SWAP \"TAILQ_HEAD "
 "*head1\" \"TAILQ_HEAD *head2\" \"TYPE\" \"TAILQ_ENTRY NAME\">"
-msgstr "E<.Fn SLIST_EMPTY \"SLIST_HEAD *head\"> E<.Fn SLIST_ENTRY \"TYPE\"> E<.Fn SLIST_FIRST \"SLIST_HEAD *head\"> E<.Fn SLIST_FOREACH \"TYPE *var\" \"SLIST_HEAD *head\" \"SLIST_ENTRY NAME\"> E<.Fn SLIST_HEAD \"HEADNAME\" \"TYPE\"> E<.Fn SLIST_HEAD_INITIALIZER \"SLIST_HEAD head\"> E<.Fn SLIST_INIT \"SLIST_HEAD *head\"> E<.Fn SLIST_INSERT_AFTER \"TYPE *listelm\" \"TYPE *elm\" \"SLIST_ENTRY NAME\"> E<.Fn SLIST_INSERT_HEAD \"SLIST_HEAD *head\" \"TYPE *elm\" \"SLIST_ENTRY NAME\"> E<.Fn SLIST_NEXT \"TYPE *elm\" \"SLIST_ENTRY NAME\"> E<.Fn SLIST_REMOVE_HEAD \"SLIST_HEAD *head\" \"SLIST_ENTRY NAME\"> E<.Fn SLIST_REMOVE \"SLIST_HEAD *head\" \"TYPE *elm\" \"TYPE\" \"SLIST_ENTRY NAME\"> E<.Fn STAILQ_CONCAT \"STAILQ_HEAD *head1\" \"STAILQ_HEAD *head2\"> E<.Fn STAILQ_EMPTY \"STAILQ_HEAD *head\"> E<.Fn STAILQ_ENTRY \"TYPE\"> E<.Fn STAILQ_FIRST \"STAILQ_HEAD *head\"> E<.Fn STAILQ_FOREACH \"TYPE *var\" \"STAILQ_HEAD *head\" \"STAILQ_ENTRY NAME\"> E<.Fn STAILQ_HEAD \"HEADNAME\" \"TYPE\"> E<.Fn STAILQ_HEAD_INITIALIZER \"STAILQ_HEAD head\"> E<.Fn STAILQ_INIT \"STAILQ_HEAD *head\"> E<.Fn STAILQ_INSERT_AFTER \"STAILQ_HEAD *head\" \"TYPE *listelm\" \"TYPE *elm\" \"STAILQ_ENTRY NAME\"> E<.Fn STAILQ_INSERT_HEAD \"STAILQ_HEAD *head\" \"TYPE *elm\" \"STAILQ_ENTRY NAME\"> E<.Fn STAILQ_INSERT_TAIL \"STAILQ_HEAD *head\" \"TYPE *elm\" \"STAILQ_ENTRY NAME\"> E<.Fn STAILQ_NEXT \"TYPE *elm\" \"STAILQ_ENTRY NAME\"> E<.Fn STAILQ_REMOVE_HEAD \"STAILQ_HEAD *head\" \"STAILQ_ENTRY NAME\"> E<.Fn STAILQ_REMOVE \"STAILQ_HEAD *head\" \"TYPE *elm\" \"TYPE\" \"STAILQ_ENTRY NAME\"> E<.Fn LIST_EMPTY \"LIST_HEAD *head\"> E<.Fn LIST_ENTRY \"TYPE\"> E<.Fn LIST_FIRST \"LIST_HEAD *head\"> E<.Fn LIST_FOREACH \"TYPE *var\" \"LIST_HEAD *head\" \"LIST_ENTRY NAME\"> E<.Fn LIST_HEAD \"HEADNAME\" \"TYPE\"> E<.Fn LIST_HEAD_INITIALIZER \"LIST_HEAD head\"> E<.Fn LIST_INIT \"LIST_HEAD *head\"> E<.Fn LIST_INSERT_AFTER \"TYPE *listelm\" \"TYPE *elm\" \"LIST_ENTRY NAME\"> E<.Fn LIST_INSERT_BEFORE \"TYPE *listelm\" \"TYPE *elm\" \"LIST_ENTRY NAME\"> E<.Fn LIST_INSERT_HEAD \"LIST_HEAD *head\" \"TYPE *elm\" \"LIST_ENTRY NAME\"> E<.Fn LIST_NEXT \"TYPE *elm\" \"LIST_ENTRY NAME\"> E<.Fn LIST_REMOVE \"TYPE *elm\" \"LIST_ENTRY NAME\"> E<.Fn LIST_SWAP \"LIST_HEAD *head1\" \"LIST_HEAD *head2\" \"TYPE\" \"LIST_ENTRY NAME\"> E<.Fn TAILQ_CONCAT \"TAILQ_HEAD *head1\" \"TAILQ_HEAD *head2\" \"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_EMPTY \"TAILQ_HEAD *head\"> E<.Fn TAILQ_ENTRY \"TYPE\"> E<.Fn TAILQ_FIRST \"TAILQ_HEAD *head\"> E<.Fn TAILQ_FOREACH \"TYPE *var\" \"TAILQ_HEAD *head\" \"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_FOREACH_REVERSE \"TYPE *var\" \"TAILQ_HEAD *head\" \"HEADNAME\" \"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_HEAD \"HEADNAME\" \"TYPE\"> E<.Fn TAILQ_HEAD_INITIALIZER \"TAILQ_HEAD head\"> E<.Fn TAILQ_INIT \"TAILQ_HEAD *head\"> E<.Fn TAILQ_INSERT_AFTER \"TAILQ_HEAD *head\" \"TYPE *listelm\" \"TYPE *elm\" \"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_INSERT_BEFORE \"TYPE *listelm\" \"TYPE *elm\" \"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_INSERT_HEAD \"TAILQ_HEAD *head\" \"TYPE *elm\" \"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_INSERT_TAIL \"TAILQ_HEAD *head\" \"TYPE *elm\" \"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_LAST \"TAILQ_HEAD *head\" \"HEADNAME\"> E<.Fn TAILQ_NEXT \"TYPE *elm\" \"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_PREV \"TYPE *elm\" \"HEADNAME\" \"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_REMOVE \"TAILQ_HEAD *head\" \"TYPE *elm\" \"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_SWAP \"TAILQ_HEAD *head1\" \"TAILQ_HEAD *head2\" \"TYPE\" \"TAILQ_ENTRY NAME\">"
+msgstr ""
+"E<.Fn SLIST_EMPTY \"SLIST_HEAD *head\"> E<.Fn SLIST_ENTRY \"TYPE\"> E<.Fn "
+"SLIST_FIRST \"SLIST_HEAD *head\"> E<.Fn SLIST_FOREACH \"TYPE *var\" "
+"\"SLIST_HEAD *head\" \"SLIST_ENTRY NAME\"> E<.Fn SLIST_HEAD \"HEADNAME\" "
+"\"TYPE\"> E<.Fn SLIST_HEAD_INITIALIZER \"SLIST_HEAD head\"> E<.Fn SLIST_INIT "
+"\"SLIST_HEAD *head\"> E<.Fn SLIST_INSERT_AFTER \"TYPE *listelm\" \"TYPE *elm"
+"\" \"SLIST_ENTRY NAME\"> E<.Fn SLIST_INSERT_HEAD \"SLIST_HEAD *head\" \"TYPE "
+"*elm\" \"SLIST_ENTRY NAME\"> E<.Fn SLIST_NEXT \"TYPE *elm\" \"SLIST_ENTRY "
+"NAME\"> E<.Fn SLIST_REMOVE_HEAD \"SLIST_HEAD *head\" \"SLIST_ENTRY NAME\"> "
+"E<.Fn SLIST_REMOVE \"SLIST_HEAD *head\" \"TYPE *elm\" \"TYPE\" \"SLIST_ENTRY "
+"NAME\"> E<.Fn STAILQ_CONCAT \"STAILQ_HEAD *head1\" \"STAILQ_HEAD *head2\"> "
+"E<.Fn STAILQ_EMPTY \"STAILQ_HEAD *head\"> E<.Fn STAILQ_ENTRY \"TYPE\"> E<.Fn "
+"STAILQ_FIRST \"STAILQ_HEAD *head\"> E<.Fn STAILQ_FOREACH \"TYPE *var\" "
+"\"STAILQ_HEAD *head\" \"STAILQ_ENTRY NAME\"> E<.Fn STAILQ_HEAD \"HEADNAME\" "
+"\"TYPE\"> E<.Fn STAILQ_HEAD_INITIALIZER \"STAILQ_HEAD head\"> E<.Fn "
+"STAILQ_INIT \"STAILQ_HEAD *head\"> E<.Fn STAILQ_INSERT_AFTER \"STAILQ_HEAD "
+"*head\" \"TYPE *listelm\" \"TYPE *elm\" \"STAILQ_ENTRY NAME\"> E<.Fn "
+"STAILQ_INSERT_HEAD \"STAILQ_HEAD *head\" \"TYPE *elm\" \"STAILQ_ENTRY NAME"
+"\"> E<.Fn STAILQ_INSERT_TAIL \"STAILQ_HEAD *head\" \"TYPE *elm\" "
+"\"STAILQ_ENTRY NAME\"> E<.Fn STAILQ_NEXT \"TYPE *elm\" \"STAILQ_ENTRY NAME"
+"\"> E<.Fn STAILQ_REMOVE_HEAD \"STAILQ_HEAD *head\" \"STAILQ_ENTRY NAME\"> E<."
+"Fn STAILQ_REMOVE \"STAILQ_HEAD *head\" \"TYPE *elm\" \"TYPE\" \"STAILQ_ENTRY "
+"NAME\"> E<.Fn LIST_EMPTY \"LIST_HEAD *head\"> E<.Fn LIST_ENTRY \"TYPE\"> E<."
+"Fn LIST_FIRST \"LIST_HEAD *head\"> E<.Fn LIST_FOREACH \"TYPE *var\" "
+"\"LIST_HEAD *head\" \"LIST_ENTRY NAME\"> E<.Fn LIST_HEAD \"HEADNAME\" \"TYPE"
+"\"> E<.Fn LIST_HEAD_INITIALIZER \"LIST_HEAD head\"> E<.Fn LIST_INIT "
+"\"LIST_HEAD *head\"> E<.Fn LIST_INSERT_AFTER \"TYPE *listelm\" \"TYPE *elm\" "
+"\"LIST_ENTRY NAME\"> E<.Fn LIST_INSERT_BEFORE \"TYPE *listelm\" \"TYPE *elm"
+"\" \"LIST_ENTRY NAME\"> E<.Fn LIST_INSERT_HEAD \"LIST_HEAD *head\" \"TYPE "
+"*elm\" \"LIST_ENTRY NAME\"> E<.Fn LIST_NEXT \"TYPE *elm\" \"LIST_ENTRY NAME"
+"\"> E<.Fn LIST_REMOVE \"TYPE *elm\" \"LIST_ENTRY NAME\"> E<.Fn LIST_SWAP "
+"\"LIST_HEAD *head1\" \"LIST_HEAD *head2\" \"TYPE\" \"LIST_ENTRY NAME\"> E<."
+"Fn TAILQ_CONCAT \"TAILQ_HEAD *head1\" \"TAILQ_HEAD *head2\" \"TAILQ_ENTRY "
+"NAME\"> E<.Fn TAILQ_EMPTY \"TAILQ_HEAD *head\"> E<.Fn TAILQ_ENTRY \"TYPE\"> "
+"E<.Fn TAILQ_FIRST \"TAILQ_HEAD *head\"> E<.Fn TAILQ_FOREACH \"TYPE *var\" "
+"\"TAILQ_HEAD *head\" \"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_FOREACH_REVERSE "
+"\"TYPE *var\" \"TAILQ_HEAD *head\" \"HEADNAME\" \"TAILQ_ENTRY NAME\"> E<.Fn "
+"TAILQ_HEAD \"HEADNAME\" \"TYPE\"> E<.Fn TAILQ_HEAD_INITIALIZER \"TAILQ_HEAD "
+"head\"> E<.Fn TAILQ_INIT \"TAILQ_HEAD *head\"> E<.Fn TAILQ_INSERT_AFTER "
+"\"TAILQ_HEAD *head\" \"TYPE *listelm\" \"TYPE *elm\" \"TAILQ_ENTRY NAME\"> "
+"E<.Fn TAILQ_INSERT_BEFORE \"TYPE *listelm\" \"TYPE *elm\" \"TAILQ_ENTRY NAME"
+"\"> E<.Fn TAILQ_INSERT_HEAD \"TAILQ_HEAD *head\" \"TYPE *elm\" \"TAILQ_ENTRY "
+"NAME\"> E<.Fn TAILQ_INSERT_TAIL \"TAILQ_HEAD *head\" \"TYPE *elm\" "
+"\"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_LAST \"TAILQ_HEAD *head\" \"HEADNAME\"> E<."
+"Fn TAILQ_NEXT \"TYPE *elm\" \"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_PREV \"TYPE "
+"*elm\" \"HEADNAME\" \"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_REMOVE \"TAILQ_HEAD "
+"*head\" \"TYPE *elm\" \"TAILQ_ENTRY NAME\"> E<.Fn TAILQ_SWAP \"TAILQ_HEAD "
+"*head1\" \"TAILQ_HEAD *head2\" \"TYPE\" \"TAILQ_ENTRY NAME\">"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:206
@@ -1752,7 +2246,11 @@ msgid ""
 "These macros define and operate on four types of data structures: singly-"
 "linked lists, singly-linked tail queues, lists, and tail queues.  All four "
 "structures support the following functionality:"
-msgstr "Данные макросы определяют и управляют четырьмя типами структур данных: односвязными списками, односвязными хвостовыми очередями, списками и хвостовыми очередями. Все четыре структуры поддерживают следующие возможности:"
+msgstr ""
+"Данные макросы определяют и управляют четырьмя типами структур данных: "
+"односвязными списками, односвязными хвостовыми очередями, списками и "
+"хвостовыми очередями. Все четыре структуры поддерживают следующие "
+"возможности:"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:210
@@ -1782,11 +2280,16 @@ msgstr "Перестановка содержимого двух списков.
 #. type: Plain text
 #: man-pages/man3/queue.3:226
 msgid ""
-"Singly-linked lists are the simplest of the four data structures and support"
-" only the above functionality.  Singly-linked lists are ideal for "
-"applications with large datasets and few or no removals, or for implementing"
-" a LIFO queue.  Singly-linked lists add the following functionality:"
-msgstr "Односвязные списки — самая простая из этих четырёх структур данных и поддерживает только указанные выше возможности. Односвязные списки идеальны для приложений с большими наборами данных, из которых производится очень мало удалений, или для реализации очереди LIFO (последним пришёл — первым ушёл). У односвязных списков есть дополнительное свойство:"
+"Singly-linked lists are the simplest of the four data structures and support "
+"only the above functionality.  Singly-linked lists are ideal for "
+"applications with large datasets and few or no removals, or for implementing "
+"a LIFO queue.  Singly-linked lists add the following functionality:"
+msgstr ""
+"Односвязные списки — самая простая из этих четырёх структур данных и "
+"поддерживает только указанные выше возможности. Односвязные списки идеальны "
+"для приложений с большими наборами данных, из которых производится очень "
+"мало удалений, или для реализации очереди LIFO (последним пришёл — первым "
+"ушёл). У односвязных списков есть дополнительное свойство:"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:230 man-pages/man3/queue.3:239
@@ -1829,21 +2332,27 @@ msgstr "Каждый начальный элемент требует двух �
 msgid ""
 "Code size is about 15% greater and operations run about 20% slower than "
 "singly-linked lists."
-msgstr "Код примерно на 15% больше и на 20% медленнее, чем для односвязных списков."
+msgstr ""
+"Код примерно на 15% больше и на 20% медленнее, чем для односвязных списков."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:258
 msgid ""
-"Singly-linked tail queues are ideal for applications with large datasets and"
-" few or no removals, or for implementing a FIFO queue."
-msgstr "Односвязные хвостовые очереди идеальны для приложений с большими наборами данных из которых производится очень мало удалений, или для реализации очереди FIFO (первым пришёл — первым ушёл)."
+"Singly-linked tail queues are ideal for applications with large datasets and "
+"few or no removals, or for implementing a FIFO queue."
+msgstr ""
+"Односвязные хвостовые очереди идеальны для приложений с большими наборами "
+"данных из которых производится очень мало удалений, или для реализации "
+"очереди FIFO (первым пришёл — первым ушёл)."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:261
 msgid ""
 "All doubly linked types of data structures (lists and tail queues)  "
 "additionally allow:"
-msgstr "Все двусвязные типы структур данных (списки и хвостовые очереди) дополнительно позволяют:"
+msgstr ""
+"Все двусвязные типы структур данных (списки и хвостовые очереди) "
+"дополнительно позволяют:"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:265
@@ -1865,14 +2374,18 @@ msgstr "Для каждого элемента требуется два ука�
 msgid ""
 "Code size and execution time of operations (except for removal) is about "
 "twice that of the singly-linked data-structures."
-msgstr "Размер кода и время выполнения операций (кроме удаления) удваивается, по сравнению с односвязными структурами данных."
+msgstr ""
+"Размер кода и время выполнения операций (кроме удаления) удваивается, по "
+"сравнению с односвязными структурами данных."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:281
 msgid ""
 "Linked lists are the simplest of the doubly linked data structures.  They "
 "add the following functionality over the above:"
-msgstr "Связные списки — самая простая из двусвязных структур данных. К указанным выше возможностям для них возможно:"
+msgstr ""
+"Связные списки — самая простая из двусвязных структур данных. К указанным "
+"выше возможностям для них возможно:"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:285
@@ -1882,9 +2395,11 @@ msgstr "Обход в обратном направлении."
 #. type: Plain text
 #: man-pages/man3/queue.3:293
 msgid ""
-"To traverse backwards, an entry to begin the traversal and the list in which"
-" it is contained must be specified."
-msgstr "Для обхода в обратном направлении требуется указывать начало обхода и сам список."
+"To traverse backwards, an entry to begin the traversal and the list in which "
+"it is contained must be specified."
+msgstr ""
+"Для обхода в обратном направлении требуется указывать начало обхода и сам "
+"список."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:296
@@ -1906,12 +2421,19 @@ msgstr "При вставке и удалении элементов нужно 
 msgid ""
 "In the macro definitions, E<.Fa TYPE> is the name of a user defined "
 "structure, that must contain a field of type E<.Li SLIST_ENTRY>, E<.Li "
-"STAILQ_ENTRY>, E<.Li LIST_ENTRY>, or E<.Li TAILQ_ENTRY>, named E<.Fa NAME>."
-"  The argument E<.Fa HEADNAME> is the name of a user defined structure that "
-"must be declared using the macros E<.Li SLIST_HEAD>, E<.Li STAILQ_HEAD>, "
-"E<.Li LIST_HEAD>, or E<.Li TAILQ_HEAD>.  See the examples below for further "
+"STAILQ_ENTRY>, E<.Li LIST_ENTRY>, or E<.Li TAILQ_ENTRY>, named E<.Fa NAME>.  "
+"The argument E<.Fa HEADNAME> is the name of a user defined structure that "
+"must be declared using the macros E<.Li SLIST_HEAD>, E<.Li STAILQ_HEAD>, E<."
+"Li LIST_HEAD>, or E<.Li TAILQ_HEAD>.  See the examples below for further "
 "explanation of how these macros are used."
-msgstr "В определениях макросов E<.Fa TYPE> — это имя определяемое пользователем структуры, которая должна содержать поле типа E<.Li SLIST_ENTRY>, E<.Li STAILQ_ENTRY>, E<.Li LIST_ENTRY> или E<.Li TAILQ_ENTRY>, названное E<.Fa NAME>. Аргумент E<.Fa HEADNAME> — это имя определяемое пользователем структуры, которая должна быть объявлена с помощью макроса E<.Li SLIST_HEAD>, E<.Li STAILQ_HEAD>, E<.Li LIST_HEAD> или E<.Li TAILQ_HEAD>. Ниже показаны примеры использования этих макросов."
+msgstr ""
+"В определениях макросов E<.Fa TYPE> — это имя определяемое пользователем "
+"структуры, которая должна содержать поле типа E<.Li SLIST_ENTRY>, E<.Li "
+"STAILQ_ENTRY>, E<.Li LIST_ENTRY> или E<.Li TAILQ_ENTRY>, названное E<.Fa "
+"NAME>. Аргумент E<.Fa HEADNAME> — это имя определяемое пользователем "
+"структуры, которая должна быть объявлена с помощью макроса E<.Li "
+"SLIST_HEAD>, E<.Li STAILQ_HEAD>, E<.Li LIST_HEAD> или E<.Li TAILQ_HEAD>. "
+"Ниже показаны примеры использования этих макросов."
 
 #. type: Ss
 #: man-pages/man3/queue.3:339
@@ -1929,7 +2451,14 @@ msgid ""
 "elements.  New elements can be added to the list after an existing element "
 "or at the head of the list.  An E<.Fa SLIST_HEAD> structure is declared as "
 "follows:"
-msgstr "Односвязный список начинается со структуры, определённой макросом E<.Nm SLIST_HEAD>. В этой структуре содержится одиночный указатель на первый элемент списка. Элементы имеют по одной связи для минимизации занимаемого пространства, а дополнительный расход на операции с указателями равен O(n) при удалении произвольного элемента. Новые элементы можно добавлять в список после существующего элемента или в начало списка. Структура E<.Fa SLIST_HEAD> объявляется следующим образом:"
+msgstr ""
+"Односвязный список начинается со структуры, определённой макросом E<.Nm "
+"SLIST_HEAD>. В этой структуре содержится одиночный указатель на первый "
+"элемент списка. Элементы имеют по одной связи для минимизации занимаемого "
+"пространства, а дополнительный расход на операции с указателями равен O(n) "
+"при удалении произвольного элемента. Новые элементы можно добавлять в список "
+"после существующего элемента или в начало списка. Структура E<.Fa "
+"SLIST_HEAD> объявляется следующим образом:"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:354
@@ -1943,7 +2472,10 @@ msgid ""
 "where E<.Fa HEADNAME> is the name of the structure to be defined, and E<.Fa "
 "TYPE> is the type of the elements to be linked into the list.  A pointer to "
 "the head of the list can later be declared as:"
-msgstr "где E<.Fa HEADNAME> — имя определяемой структуры, а E<.Fa TYPE> — тип элементов, объединяемых в список. Указатель на начало списка может в дальнейшем объявляться так:"
+msgstr ""
+"где E<.Fa HEADNAME> — имя определяемой структуры, а E<.Fa TYPE> — тип "
+"элементов, объединяемых в список. Указатель на начало списка может в "
+"дальнейшем объявляться так:"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:364 man-pages/man3/queue.3:562
@@ -1963,28 +2495,35 @@ msgstr "(Имена E<.Li head> и E<.Li headp> могут выбираться 
 msgid ""
 "The macro E<.Nm SLIST_HEAD_INITIALIZER> evaluates to an initializer for the "
 "list E<.Fa head>."
-msgstr "Макрос E<.Nm SLIST_HEAD_INITIALIZER> запускает инициализатор для E<.Fa head> списка."
+msgstr ""
+"Макрос E<.Nm SLIST_HEAD_INITIALIZER> запускает инициализатор для E<.Fa head> "
+"списка."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:380
 msgid ""
 "The macro E<.Nm SLIST_EMPTY> evaluates to true if there are no elements in "
 "the list."
-msgstr "Макрос E<.Nm SLIST_EMPTY> возвращает true, если в списке нет элементов."
+msgstr ""
+"Макрос E<.Nm SLIST_EMPTY> возвращает true, если в списке нет элементов."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:385
 msgid ""
-"The macro E<.Nm SLIST_ENTRY> declares a structure that connects the elements"
-" in the list."
-msgstr "Макрос E<.Nm SLIST_ENTRY> объявляет структуру, которая добавляет элементы в список."
+"The macro E<.Nm SLIST_ENTRY> declares a structure that connects the elements "
+"in the list."
+msgstr ""
+"Макрос E<.Nm SLIST_ENTRY> объявляет структуру, которая добавляет элементы в "
+"список."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:389
 msgid ""
 "The macro E<.Nm SLIST_FIRST> returns the first element in the list or NULL "
 "if the list is empty."
-msgstr "Макрос E<.Nm SLIST_FIRST> возвращает первый элемент списка или NULL, если список пуст."
+msgstr ""
+"Макрос E<.Nm SLIST_FIRST> возвращает первый элемент списка или NULL, если "
+"список пуст."
 
 #.  .Pp
 #.  The macro
@@ -2011,8 +2550,7 @@ msgstr "Макрос E<.Nm SLIST_FIRST> возвращает первый эле
 #.  .Fn SLIST_FOREACH
 #.  here it is permitted to both remove
 #.  .Fa var
-#.  as well as free it from within the loop safely without interfering with
-#. the
+#.  as well as free it from within the loop safely without interfering with the
 #.  traversal.
 #.  .Pp
 #.  The macro
@@ -2032,27 +2570,35 @@ msgstr "Макрос E<.Nm SLIST_FIRST> возвращает первый эле
 msgid ""
 "The macro E<.Nm SLIST_FOREACH> traverses the list referenced by E<.Fa head> "
 "in the forward direction, assigning each element in turn to E<.Fa var>."
-msgstr "Макрос E<.Nm SLIST_FOREACH> обходит список, на который ссылается E<.Fa head>, от начало в конец, назначая E<.Fa var> каждый элемент."
+msgstr ""
+"Макрос E<.Nm SLIST_FOREACH> обходит список, на который ссылается E<.Fa "
+"head>, от начало в конец, назначая E<.Fa var> каждый элемент."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:442
 msgid ""
 "The macro E<.Nm SLIST_INIT> initializes the list referenced by E<.Fa head>."
-msgstr "Макрос E<.Nm SLIST_INIT> инициализирует список, на который ссылается E<.Fa head>."
+msgstr ""
+"Макрос E<.Nm SLIST_INIT> инициализирует список, на который ссылается E<.Fa "
+"head>."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:448
 msgid ""
-"The macro E<.Nm SLIST_INSERT_HEAD> inserts the new element E<.Fa elm> at the"
-" head of the list."
-msgstr "Макрос E<.Nm SLIST_INSERT_HEAD> вставляет новый элемент E<.Fa elm> в начало списка."
+"The macro E<.Nm SLIST_INSERT_HEAD> inserts the new element E<.Fa elm> at the "
+"head of the list."
+msgstr ""
+"Макрос E<.Nm SLIST_INSERT_HEAD> вставляет новый элемент E<.Fa elm> в начало "
+"списка."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:455
 msgid ""
-"The macro E<.Nm SLIST_INSERT_AFTER> inserts the new element E<.Fa elm> after"
-" the element E<.Fa listelm>."
-msgstr "Макрос E<.Nm SLIST_INSERT_AFTER> вставляет новый элемент E<.Fa elm> за элементом E<.Fa listelm>."
+"The macro E<.Nm SLIST_INSERT_AFTER> inserts the new element E<.Fa elm> after "
+"the element E<.Fa listelm>."
+msgstr ""
+"Макрос E<.Nm SLIST_INSERT_AFTER> вставляет новый элемент E<.Fa elm> за "
+"элементом E<.Fa listelm>."
 
 #.  .Pp
 #.  The macro
@@ -2073,9 +2619,12 @@ msgstr "Макрос E<.Nm SLIST_NEXT> возвращает следующий �
 msgid ""
 "The macro E<.Nm SLIST_REMOVE_HEAD> removes the element E<.Fa elm> from the "
 "head of the list.  For optimum efficiency, elements being removed from the "
-"head of the list should explicitly use this macro instead of the generic "
-"E<.Fa SLIST_REMOVE> macro."
-msgstr "Макрос E<.Nm SLIST_REMOVE_HEAD> удаляет элемент E<.Fa elm> из начала списка. В целях эффективности удаления элемента из начала списка нужно использовать именно этот макрос вместо обычного E<.Fa SLIST_REMOVE>."
+"head of the list should explicitly use this macro instead of the generic E<."
+"Fa SLIST_REMOVE> macro."
+msgstr ""
+"Макрос E<.Nm SLIST_REMOVE_HEAD> удаляет элемент E<.Fa elm> из начала списка. "
+"В целях эффективности удаления элемента из начала списка нужно использовать "
+"именно этот макрос вместо обычного E<.Fa SLIST_REMOVE>."
 
 #.  .Pp
 #.  The macro
@@ -2109,7 +2658,16 @@ msgid ""
 "\tSLIST_ENTRY(entry) entries;\t/* Singly-linked List. */\n"
 "\t...\n"
 "} *n1, *n2, *n3, *np;\n"
-msgstr "SLIST_HEAD(slisthead, entry) head =\n    SLIST_HEAD_INITIALIZER(head);\nstruct slisthead *headp;\t\t/* начало односвязного\n                                           списка */\nstruct entry {\n\t...\n\tSLIST_ENTRY(entry) entries;\t/* односвязный список */\n\t...\n} *n1, *n2, *n3, *np;\n"
+msgstr ""
+"SLIST_HEAD(slisthead, entry) head =\n"
+"    SLIST_HEAD_INITIALIZER(head);\n"
+"struct slisthead *headp;\t\t/* начало односвязного\n"
+"                                           списка */\n"
+"struct entry {\n"
+"\t...\n"
+"\tSLIST_ENTRY(entry) entries;\t/* односвязный список */\n"
+"\t...\n"
+"} *n1, *n2, *n3, *np;\n"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:505
@@ -2123,7 +2681,9 @@ msgstr "SLIST_INIT(&head);\t\t\t/* инициализация списка */\n"
 msgid ""
 "n1 = malloc(sizeof(struct entry));\t/* Insert at the head. */\n"
 "SLIST_INSERT_HEAD(&head, n1, entries);\n"
-msgstr "n1 = malloc(sizeof(struct entry));\t/* вставка начального элемента */\nSLIST_INSERT_HEAD(&head, n1, entries);\n"
+msgstr ""
+"n1 = malloc(sizeof(struct entry));\t/* вставка начального элемента */\n"
+"SLIST_INSERT_HEAD(&head, n1, entries);\n"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:511
@@ -2131,7 +2691,9 @@ msgstr "n1 = malloc(sizeof(struct entry));\t/* вставка начальног
 msgid ""
 "n2 = malloc(sizeof(struct entry));\t/* Insert after. */\n"
 "SLIST_INSERT_AFTER(n1, n2, entries);\n"
-msgstr "n2 = malloc(sizeof(struct entry));\t/* вставка последующих */\nSLIST_INSERT_AFTER(n1, n2, entries);\n"
+msgstr ""
+"n2 = malloc(sizeof(struct entry));\t/* вставка последующих */\n"
+"SLIST_INSERT_AFTER(n1, n2, entries);\n"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:514
@@ -2139,7 +2701,9 @@ msgstr "n2 = malloc(sizeof(struct entry));\t/* вставка последующ
 msgid ""
 "SLIST_REMOVE(&head, n2, entry, entries);/* Deletion. */\n"
 "free(n2);\n"
-msgstr "SLIST_REMOVE(&head, n2, entry, entries);/* удаление */\nfree(n2);\n"
+msgstr ""
+"SLIST_REMOVE(&head, n2, entry, entries);/* удаление */\n"
+"free(n2);\n"
 
 #. 					/* Safe forward traversal. */
 #. SLIST_FOREACH_SAFE(np, &head, entries, np_temp) {
@@ -2158,7 +2722,13 @@ msgid ""
 "\t\t\t\t\t/* Forward traversal. */\n"
 "SLIST_FOREACH(np, &head, entries)\n"
 "\tnp\\-E<gt> ...\n"
-msgstr "n3 = SLIST_FIRST(&head);\nSLIST_REMOVE_HEAD(&head, entries);\t/* удаление начального элемента */\nfree(n3);\n\t\t\t\t\t/* обход из начала в конец */\nSLIST_FOREACH(np, &head, entries)\n\tnp\\-E<gt> ...\n"
+msgstr ""
+"n3 = SLIST_FIRST(&head);\n"
+"SLIST_REMOVE_HEAD(&head, entries);\t/* удаление начального элемента */\n"
+"free(n3);\n"
+"\t\t\t\t\t/* обход из начала в конец */\n"
+"SLIST_FOREACH(np, &head, entries)\n"
+"\tnp\\-E<gt> ...\n"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:534
@@ -2169,7 +2739,12 @@ msgid ""
 "\tSLIST_REMOVE_HEAD(&head, entries);\n"
 "\tfree(n1);\n"
 "}\n"
-msgstr "while (!SLIST_EMPTY(&head)) {\t\t/* удаление списка */\n\tn1 = SLIST_FIRST(&head);\n\tSLIST_REMOVE_HEAD(&head, entries);\n\tfree(n1);\n}\n"
+msgstr ""
+"while (!SLIST_EMPTY(&head)) {\t\t/* удаление списка */\n"
+"\tn1 = SLIST_FIRST(&head);\n"
+"\tSLIST_REMOVE_HEAD(&head, entries);\n"
+"\tfree(n1);\n"
+"}\n"
 
 #. type: Ss
 #: man-pages/man3/queue.3:535
@@ -2184,11 +2759,19 @@ msgid ""
 "STAILQ_HEAD> macro.  This structure contains a pair of pointers, one to the "
 "first element in the tail queue and the other to the last element in the "
 "tail queue.  The elements are singly linked for minimum space and pointer "
-"manipulation overhead at the expense of O(n) removal for arbitrary elements."
-"  New elements can be added to the tail queue after an existing element, at "
-"the head of the tail queue, or at the end of the tail queue.  A E<.Fa "
-"STAILQ_HEAD> structure is declared as follows:"
-msgstr "Односвязная хвостовая очередь начинается со структуры, определяемой макросом E<.Nm STAILQ_HEAD>. В этой структуре содержится пара указателей, один на первый элемент хвостовой очереди, а другой на последний элемент. Элементы имеют по одной связи для минимизации занимаемого пространства, а дополнительный расход на операции с указателями равен O(n) при удалении произвольного элемента. Новые элементы можно добавлять в хвостовую очередь после существующего элемента, в начало или конец хвостовой очереди, Структура E<.Fa STAILQ_HEAD> объявляется следующим образом:"
+"manipulation overhead at the expense of O(n) removal for arbitrary "
+"elements.  New elements can be added to the tail queue after an existing "
+"element, at the head of the tail queue, or at the end of the tail queue.  A "
+"E<.Fa STAILQ_HEAD> structure is declared as follows:"
+msgstr ""
+"Односвязная хвостовая очередь начинается со структуры, определяемой макросом "
+"E<.Nm STAILQ_HEAD>. В этой структуре содержится пара указателей, один на "
+"первый элемент хвостовой очереди, а другой на последний элемент. Элементы "
+"имеют по одной связи для минимизации занимаемого пространства, а "
+"дополнительный расход на операции с указателями равен O(n) при удалении "
+"произвольного элемента. Новые элементы можно добавлять в хвостовую очередь "
+"после существующего элемента, в начало или конец хвостовой очереди, "
+"Структура E<.Fa STAILQ_HEAD> объявляется следующим образом:"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:552
@@ -2202,14 +2785,19 @@ msgid ""
 "where E<.Li HEADNAME> is the name of the structure to be defined, and E<.Li "
 "TYPE> is the type of the elements to be linked into the tail queue.  A "
 "pointer to the head of the tail queue can later be declared as:"
-msgstr "где E<.Li HEADNAME> — имя определяемой структуры, а E<.Li TYPE> — тип связанных элементов в хвостовой очереди. Указатель на начало хвостовой очереди может в дальнейшем объявляться так:"
+msgstr ""
+"где E<.Li HEADNAME> — имя определяемой структуры, а E<.Li TYPE> — тип "
+"связанных элементов в хвостовой очереди. Указатель на начало хвостовой "
+"очереди может в дальнейшем объявляться так:"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:574
 msgid ""
-"The macro E<.Nm STAILQ_HEAD_INITIALIZER> evaluates to an initializer for the"
-" tail queue E<.Fa head>."
-msgstr "Макрос E<.Nm STAILQ_HEAD_INITIALIZER> запускает инициализатор для E<.Fa head> хвостовой очереди."
+"The macro E<.Nm STAILQ_HEAD_INITIALIZER> evaluates to an initializer for the "
+"tail queue E<.Fa head>."
+msgstr ""
+"Макрос E<.Nm STAILQ_HEAD_INITIALIZER> запускает инициализатор для E<.Fa "
+"head> хвостовой очереди."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:582
@@ -2217,28 +2805,36 @@ msgid ""
 "The macro E<.Nm STAILQ_CONCAT> concatenates the tail queue headed by E<.Fa "
 "head2> onto the end of the one headed by E<.Fa head1> removing all entries "
 "from the former."
-msgstr "Макрос E<.Nm STAILQ_CONCAT> добавляет хвостовую очередь с началом E<.Fa head2> в конец очереди с началом E<.Fa head1>, удаляя все элементы из первой."
+msgstr ""
+"Макрос E<.Nm STAILQ_CONCAT> добавляет хвостовую очередь с началом E<.Fa "
+"head2> в конец очереди с началом E<.Fa head1>, удаляя все элементы из первой."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:586
 msgid ""
-"The macro E<.Nm STAILQ_EMPTY> evaluates to true if there are no items on the"
-" tail queue."
-msgstr "Макрос E<.Nm STAILQ_EMPTY> возвращает true, если в хвостовой очереди нет элементов."
+"The macro E<.Nm STAILQ_EMPTY> evaluates to true if there are no items on the "
+"tail queue."
+msgstr ""
+"Макрос E<.Nm STAILQ_EMPTY> возвращает true, если в хвостовой очереди нет "
+"элементов."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:591
 msgid ""
 "The macro E<.Nm STAILQ_ENTRY> declares a structure that connects the "
 "elements in the tail queue."
-msgstr "Макрос E<.Nm STAILQ_ENTRY> объявляет структуру, которая подключает элементы в хвостовую очередь."
+msgstr ""
+"Макрос E<.Nm STAILQ_ENTRY> объявляет структуру, которая подключает элементы "
+"в хвостовую очередь."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:596
 msgid ""
 "The macro E<.Nm STAILQ_FIRST> returns the first item on the tail queue or "
 "NULL if the tail queue is empty."
-msgstr "Макрос E<.Nm STAILQ_FIRST> возвращает первый элемент из хвостовой очереди или NULL, если очередь пуста."
+msgstr ""
+"Макрос E<.Nm STAILQ_FIRST> возвращает первый элемент из хвостовой очереди "
+"или NULL, если очередь пуста."
 
 #.  .Pp
 #.  The macro
@@ -2265,8 +2861,7 @@ msgstr "Макрос E<.Nm STAILQ_FIRST> возвращает первый эл�
 #.  .Fn STAILQ_FOREACH
 #.  here it is permitted to both remove
 #.  .Fa var
-#.  as well as free it from within the loop safely without interfering with
-#. the
+#.  as well as free it from within the loop safely without interfering with the
 #.  traversal.
 #.  .Pp
 #.  The macro
@@ -2284,31 +2879,38 @@ msgstr "Макрос E<.Nm STAILQ_FIRST> возвращает первый эл�
 #. type: Plain text
 #: man-pages/man3/queue.3:644
 msgid ""
-"The macro E<.Nm STAILQ_FOREACH> traverses the tail queue referenced by E<.Fa"
-" head> in the forward direction, assigning each element in turn to E<.Fa "
-"var>."
-msgstr "Макрос E<.Nm STAILQ_FOREACH> обходит хвостовую очередь, на которую ссылается E<.Fa head>, из начала в конец, назначая E<.Fa var> каждый элемент."
+"The macro E<.Nm STAILQ_FOREACH> traverses the tail queue referenced by E<.Fa "
+"head> in the forward direction, assigning each element in turn to E<.Fa var>."
+msgstr ""
+"Макрос E<.Nm STAILQ_FOREACH> обходит хвостовую очередь, на которую ссылается "
+"E<.Fa head>, из начала в конец, назначая E<.Fa var> каждый элемент."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:649
 msgid ""
 "The macro E<.Nm STAILQ_INIT> initializes the tail queue referenced by E<.Fa "
 "head>."
-msgstr "Макрос E<.Nm STAILQ_INIT> инициализирует хвостовую очередь, на которую ссылается E<.Fa head>."
+msgstr ""
+"Макрос E<.Nm STAILQ_INIT> инициализирует хвостовую очередь, на которую "
+"ссылается E<.Fa head>."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:655
 msgid ""
 "The macro E<.Nm STAILQ_INSERT_HEAD> inserts the new element E<.Fa elm> at "
 "the head of the tail queue."
-msgstr "Макрос E<.Nm STAILQ_INSERT_HEAD> вставляет новый элемент IE<.Fa elm> в начало хвостовой очереди."
+msgstr ""
+"Макрос E<.Nm STAILQ_INSERT_HEAD> вставляет новый элемент IE<.Fa elm> в "
+"начало хвостовой очереди."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:661
 msgid ""
 "The macro E<.Nm STAILQ_INSERT_TAIL> inserts the new element E<.Fa elm> at "
 "the end of the tail queue."
-msgstr "Макрос E<.Nm STAILQ_INSERT_TAIL> вставляет новый элемент E<.Fa elm> в конец хвостовой очереди."
+msgstr ""
+"Макрос E<.Nm STAILQ_INSERT_TAIL> вставляет новый элемент E<.Fa elm> в конец "
+"хвостовой очереди."
 
 #.  .Pp
 #.  The macro
@@ -2321,7 +2923,9 @@ msgstr "Макрос E<.Nm STAILQ_INSERT_TAIL> вставляет новый э�
 msgid ""
 "The macro E<.Nm STAILQ_INSERT_AFTER> inserts the new element E<.Fa elm> "
 "after the element E<.Fa listelm>."
-msgstr "Макрос E<.Nm STAILQ_INSERT_AFTER> вставляет новый элемент E<.Fa elm> за элементом E<.Fa listelm>."
+msgstr ""
+"Макрос E<.Nm STAILQ_INSERT_AFTER> вставляет новый элемент E<.Fa elm> за "
+"элементом E<.Fa listelm>."
 
 #.  .Pp
 #.  The macro
@@ -2337,16 +2941,21 @@ msgstr "Макрос E<.Nm STAILQ_INSERT_AFTER> вставляет новый э
 msgid ""
 "The macro E<.Nm STAILQ_NEXT> returns the next item on the tail queue, or "
 "NULL this item is the last."
-msgstr "Макрос E<.Nm STAILQ_NEXT> возвращает следующий элемент из хвостовой очереди или NULL, если элемент последний."
+msgstr ""
+"Макрос E<.Nm STAILQ_NEXT> возвращает следующий элемент из хвостовой очереди "
+"или NULL, если элемент последний."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:696
 msgid ""
 "The macro E<.Nm STAILQ_REMOVE_HEAD> removes the element at the head of the "
-"tail queue.  For optimum efficiency, elements being removed from the head of"
-" the tail queue should use this macro explicitly rather than the generic "
-"E<.Fa STAILQ_REMOVE> macro."
-msgstr "Макрос E<.Nm STAILQ_REMOVE_HEAD> удаляет элемент из начала хвостовой очереди. В целях эффективности удаления элемента из начала хвостовой очереди нужно использовать именно этот макрос вместо обычного E<.Fa STAILQ_REMOVE>."
+"tail queue.  For optimum efficiency, elements being removed from the head of "
+"the tail queue should use this macro explicitly rather than the generic E<."
+"Fa STAILQ_REMOVE> macro."
+msgstr ""
+"Макрос E<.Nm STAILQ_REMOVE_HEAD> удаляет элемент из начала хвостовой "
+"очереди. В целях эффективности удаления элемента из начала хвостовой очереди "
+"нужно использовать именно этот макрос вместо обычного E<.Fa STAILQ_REMOVE>."
 
 #.  .Pp
 #.  The macro
@@ -2360,7 +2969,8 @@ msgstr "Макрос E<.Nm STAILQ_REMOVE_HEAD> удаляет элемент и�
 msgid ""
 "The macro E<.Nm STAILQ_REMOVE> removes the element E<.Fa elm> from the tail "
 "queue."
-msgstr "Макрос E<.Nm STAILQ_REMOVE> удаляет элемент E<.Fa elm> из хвостовой очереди."
+msgstr ""
+"Макрос E<.Nm STAILQ_REMOVE> удаляет элемент E<.Fa elm> из хвостовой очереди."
 
 #. type: Ss
 #: man-pages/man3/queue.3:709
@@ -2380,7 +2990,16 @@ msgid ""
 "\tSTAILQ_ENTRY(entry) entries;\t/* Tail queue. */\n"
 "\t...\n"
 "} *n1, *n2, *n3, *np;\n"
-msgstr "STAILQ_HEAD(stailhead, entry) head =\n    STAILQ_HEAD_INITIALIZER(head);\nstruct stailhead *headp;\t\t/* начало односвязной хвостовой\n                               очереди */\nstruct entry {\n\t...\n\tSTAILQ_ENTRY(entry) entries;\t/* хвостовая очередь */\n\t...\n} *n1, *n2, *n3, *np;\n"
+msgstr ""
+"STAILQ_HEAD(stailhead, entry) head =\n"
+"    STAILQ_HEAD_INITIALIZER(head);\n"
+"struct stailhead *headp;\t\t/* начало односвязной хвостовой\n"
+"                               очереди */\n"
+"struct entry {\n"
+"\t...\n"
+"\tSTAILQ_ENTRY(entry) entries;\t/* хвостовая очередь */\n"
+"\t...\n"
+"} *n1, *n2, *n3, *np;\n"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:721
@@ -2394,7 +3013,9 @@ msgstr "STAILQ_INIT(&head);\t\t\t/* инициализация очереди */
 msgid ""
 "n1 = malloc(sizeof(struct entry));\t/* Insert at the head. */\n"
 "STAILQ_INSERT_HEAD(&head, n1, entries);\n"
-msgstr "n1 = malloc(sizeof(struct entry));\t/* вставка начального элемента */\nSTAILQ_INSERT_HEAD(&head, n1, entries);\n"
+msgstr ""
+"n1 = malloc(sizeof(struct entry));\t/* вставка начального элемента */\n"
+"STAILQ_INSERT_HEAD(&head, n1, entries);\n"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:727
@@ -2402,7 +3023,9 @@ msgstr "n1 = malloc(sizeof(struct entry));\t/* вставка начальног
 msgid ""
 "n1 = malloc(sizeof(struct entry));\t/* Insert at the tail. */\n"
 "STAILQ_INSERT_TAIL(&head, n1, entries);\n"
-msgstr "n1 = malloc(sizeof(struct entry));\t/* вставка в очередь */\nSTAILQ_INSERT_TAIL(&head, n1, entries);\n"
+msgstr ""
+"n1 = malloc(sizeof(struct entry));\t/* вставка в очередь */\n"
+"STAILQ_INSERT_TAIL(&head, n1, entries);\n"
 
 #. 					/* Safe forward traversal. */
 #. STAILQ_FOREACH_SAFE(np, &head, entries, np_temp) {
@@ -2441,7 +3064,33 @@ msgid ""
 "\tn1 = n2;\n"
 "}\n"
 "STAILQ_INIT(&head);\n"
-msgstr "n2 = malloc(sizeof(struct entry));\t/* вставка последующего */\nSTAILQ_INSERT_AFTER(&head, n1, n2, entries);\n\t\t\t\t\t/* удаление */\nSTAILQ_REMOVE(&head, n2, entry, entries);\nfree(n2);\n\t\t\t\t\t/* удаление из начала */\nn3 = STAILQ_FIRST(&head);\nSTAILQ_REMOVE_HEAD(&head, entries);\nfree(n3);\n\t\t\t\t\t/* обход от начала в конец */\nSTAILQ_FOREACH(np, &head, entries)\n\tnp\\-E<gt> ...\n\t\t\t\t\t/* удаление TailQ */\nwhile (!STAILQ_EMPTY(&head)) {\n\tn1 = STAILQ_FIRST(&head);\n\tSTAILQ_REMOVE_HEAD(&head, entries);\n\tfree(n1);\n}\n\t\t\t\t\t/* быстрое удаление TailQ */\nn1 = STAILQ_FIRST(&head);\nwhile (n1 != NULL) {\n\tn2 = STAILQ_NEXT(n1, entries);\n\tfree(n1);\n\tn1 = n2;\n}\nSTAILQ_INIT(&head);\n"
+msgstr ""
+"n2 = malloc(sizeof(struct entry));\t/* вставка последующего */\n"
+"STAILQ_INSERT_AFTER(&head, n1, n2, entries);\n"
+"\t\t\t\t\t/* удаление */\n"
+"STAILQ_REMOVE(&head, n2, entry, entries);\n"
+"free(n2);\n"
+"\t\t\t\t\t/* удаление из начала */\n"
+"n3 = STAILQ_FIRST(&head);\n"
+"STAILQ_REMOVE_HEAD(&head, entries);\n"
+"free(n3);\n"
+"\t\t\t\t\t/* обход от начала в конец */\n"
+"STAILQ_FOREACH(np, &head, entries)\n"
+"\tnp\\-E<gt> ...\n"
+"\t\t\t\t\t/* удаление TailQ */\n"
+"while (!STAILQ_EMPTY(&head)) {\n"
+"\tn1 = STAILQ_FIRST(&head);\n"
+"\tSTAILQ_REMOVE_HEAD(&head, entries);\n"
+"\tfree(n1);\n"
+"}\n"
+"\t\t\t\t\t/* быстрое удаление TailQ */\n"
+"n1 = STAILQ_FIRST(&head);\n"
+"while (n1 != NULL) {\n"
+"\tn2 = STAILQ_NEXT(n1, entries);\n"
+"\tfree(n1);\n"
+"\tn1 = n2;\n"
+"}\n"
+"STAILQ_INIT(&head);\n"
 
 #. type: Ss
 #: man-pages/man3/queue.3:762
@@ -2452,13 +3101,19 @@ msgstr "Списки"
 #. type: Plain text
 #: man-pages/man3/queue.3:775
 msgid ""
-"A list is headed by a structure defined by the E<.Nm LIST_HEAD> macro.  This"
-" structure contains a single pointer to the first element on the list.  The "
+"A list is headed by a structure defined by the E<.Nm LIST_HEAD> macro.  This "
+"structure contains a single pointer to the first element on the list.  The "
 "elements are doubly linked so that an arbitrary element can be removed "
-"without traversing the list.  New elements can be added to the list after an"
-" existing element, before an existing element, or at the head of the list.  "
-"A E<.Fa LIST_HEAD> structure is declared as follows:"
-msgstr "Список начинается структурой, определённой макросом E<.Nm LIST_HEAD>. Эта структура содержит единственный указатель на первый элемент списка. Элементы дважды связаны, поэтому произвольный элемент можно удалить без прохода по всему списку. Новые элементы могут быть добавлены в список перед или после существующего элемента, а также в начало списка. Структура E<.Fa LIST_HEAD> объявляется следующим образом:"
+"without traversing the list.  New elements can be added to the list after an "
+"existing element, before an existing element, or at the head of the list.  A "
+"E<.Fa LIST_HEAD> structure is declared as follows:"
+msgstr ""
+"Список начинается структурой, определённой макросом E<.Nm LIST_HEAD>. Эта "
+"структура содержит единственный указатель на первый элемент списка. Элементы "
+"дважды связаны, поэтому произвольный элемент можно удалить без прохода по "
+"всему списку. Новые элементы могут быть добавлены в список перед или после "
+"существующего элемента, а также в начало списка. Структура E<.Fa LIST_HEAD> "
+"объявляется следующим образом:"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:777
@@ -2471,7 +3126,9 @@ msgstr "LIST_HEAD(HEADNAME, TYPE) head;\n"
 msgid ""
 "The macro E<.Nm LIST_HEAD_INITIALIZER> evaluates to an initializer for the "
 "list E<.Fa head>."
-msgstr "Макрос E<.Nm LIST_HEAD_INITIALIZER> запускает инициализатор для E<.Fa head> списка."
+msgstr ""
+"Макрос E<.Nm LIST_HEAD_INITIALIZER> запускает инициализатор для E<.Fa head> "
+"списка."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:803
@@ -2485,14 +3142,18 @@ msgstr "Макрос E<.Nm LIST_EMPTY> возвращает true, если в с
 msgid ""
 "The macro E<.Nm LIST_ENTRY> declares a structure that connects the elements "
 "in the list."
-msgstr "Макрос E<.Nm LIST_ENTRY> объявляет структуру, которая добавляет элементы в список."
+msgstr ""
+"Макрос E<.Nm LIST_ENTRY> объявляет структуру, которая добавляет элементы в "
+"список."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:813
 msgid ""
-"The macro E<.Nm LIST_FIRST> returns the first element in the list or NULL if"
-" the list is empty."
-msgstr "Макрос E<.Nm LIST_FIRST> возвращает первый элемент списка или NULL, если список пуст."
+"The macro E<.Nm LIST_FIRST> returns the first element in the list or NULL if "
+"the list is empty."
+msgstr ""
+"Макрос E<.Nm LIST_FIRST> возвращает первый элемент списка или NULL, если "
+"список пуст."
 
 #.  .Pp
 #.  The macro
@@ -2518,8 +3179,7 @@ msgstr "Макрос E<.Nm LIST_FIRST> возвращает первый эле�
 #.  .Fn LIST_FOREACH
 #.  here it is permitted to both remove
 #.  .Fa var
-#.  as well as free it from within the loop safely without interfering with
-#. the
+#.  as well as free it from within the loop safely without interfering with the
 #.  traversal.
 #.  .Pp
 #.  The macro
@@ -2539,34 +3199,44 @@ msgstr "Макрос E<.Nm LIST_FIRST> возвращает первый эле�
 msgid ""
 "The macro E<.Nm LIST_FOREACH> traverses the list referenced by E<.Fa head> "
 "in the forward direction, assigning each element in turn to E<.Fa var>."
-msgstr "Макрос E<.Nm LIST_FOREACH> обходит список, на который ссылается E<.Fa head>, от начало в конец, назначая E<.Fa var> каждый элемент."
+msgstr ""
+"Макрос E<.Nm LIST_FOREACH> обходит список, на который ссылается E<.Fa head>, "
+"от начало в конец, назначая E<.Fa var> каждый элемент."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:864
 msgid ""
 "The macro E<.Nm LIST_INIT> initializes the list referenced by E<.Fa head>."
-msgstr "Макрос E<.Nm LIST_INIT> инициализирует список, на который ссылается E<.Fa head>."
+msgstr ""
+"Макрос E<.Nm LIST_INIT> инициализирует список, на который ссылается E<.Fa "
+"head>."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:870
 msgid ""
 "The macro E<.Nm LIST_INSERT_HEAD> inserts the new element E<.Fa elm> at the "
 "head of the list."
-msgstr "Макрос E<.Nm LIST_INSERT_HEAD> вставляет новый элемент E<.Fa elm> в начало списка."
+msgstr ""
+"Макрос E<.Nm LIST_INSERT_HEAD> вставляет новый элемент E<.Fa elm> в начало "
+"списка."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:877
 msgid ""
 "The macro E<.Nm LIST_INSERT_AFTER> inserts the new element E<.Fa elm> after "
 "the element E<.Fa listelm>."
-msgstr "Макрос E<.Nm LIST_INSERT_AFTER> вставляет новый элемент E<.Fa elm> за элементом E<.Fa listelm>."
+msgstr ""
+"Макрос E<.Nm LIST_INSERT_AFTER> вставляет новый элемент E<.Fa elm> за "
+"элементом E<.Fa listelm>."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:884
 msgid ""
 "The macro E<.Nm LIST_INSERT_BEFORE> inserts the new element E<.Fa elm> "
 "before the element E<.Fa listelm>."
-msgstr "Макрос E<.Nm LIST_INSERT_AFTER> вставляет новый элемент E<.Fa elm> перед элементом E<.Fa listelm>."
+msgstr ""
+"Макрос E<.Nm LIST_INSERT_AFTER> вставляет новый элемент E<.Fa elm> перед "
+"элементом E<.Fa listelm>."
 
 #.  .Pp
 #.  The macro
@@ -2581,7 +3251,9 @@ msgstr "Макрос E<.Nm LIST_INSERT_AFTER> вставляет новый эл
 msgid ""
 "The macro E<.Nm LIST_NEXT> returns the next element in the list, or NULL if "
 "this is the last."
-msgstr "Макрос E<.Nm LIST_NEXT> возвращает следующий элемент списка или NULL, если элемент последний."
+msgstr ""
+"Макрос E<.Nm LIST_NEXT> возвращает следующий элемент списка или NULL, если "
+"элемент последний."
 
 #.  .Pp
 #.  The macro
@@ -2614,7 +3286,15 @@ msgid ""
 "\tLIST_ENTRY(entry) entries;\t/* List. */\n"
 "\t...\n"
 "} *n1, *n2, *n3, *np, *np_temp;\n"
-msgstr "LIST_HEAD(listhead, entry) head =\n    LIST_HEAD_INITIALIZER(head);\nstruct listhead *headp;\t\t\t/* начало списка */\nstruct entry {\n\t...\n\tLIST_ENTRY(entry) entries;\t/* список */\n\t...\n} *n1, *n2, *n3, *np, *np_temp;\n"
+msgstr ""
+"LIST_HEAD(listhead, entry) head =\n"
+"    LIST_HEAD_INITIALIZER(head);\n"
+"struct listhead *headp;\t\t\t/* начало списка */\n"
+"struct entry {\n"
+"\t...\n"
+"\tLIST_ENTRY(entry) entries;\t/* список */\n"
+"\t...\n"
+"} *n1, *n2, *n3, *np, *np_temp;\n"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:921
@@ -2628,7 +3308,9 @@ msgstr "LIST_INIT(&head);\t\t\t/* инициализация списка */\n"
 msgid ""
 "n1 = malloc(sizeof(struct entry));\t/* Insert at the head. */\n"
 "LIST_INSERT_HEAD(&head, n1, entries);\n"
-msgstr "n1 = malloc(sizeof(struct entry));\t/* вставка в начало */\nLIST_INSERT_HEAD(&head, n1, entries);\n"
+msgstr ""
+"n1 = malloc(sizeof(struct entry));\t/* вставка в начало */\n"
+"LIST_INSERT_HEAD(&head, n1, entries);\n"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:927
@@ -2636,7 +3318,9 @@ msgstr "n1 = malloc(sizeof(struct entry));\t/* вставка в начало */
 msgid ""
 "n2 = malloc(sizeof(struct entry));\t/* Insert after. */\n"
 "LIST_INSERT_AFTER(n1, n2, entries);\n"
-msgstr "n2 = malloc(sizeof(struct entry));\t/* вставка последующего */\nLIST_INSERT_AFTER(n1, n2, entries);\n"
+msgstr ""
+"n2 = malloc(sizeof(struct entry));\t/* вставка последующего */\n"
+"LIST_INSERT_AFTER(n1, n2, entries);\n"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:930
@@ -2644,7 +3328,9 @@ msgstr "n2 = malloc(sizeof(struct entry));\t/* вставка последующ
 msgid ""
 "n3 = malloc(sizeof(struct entry));\t/* Insert before. */\n"
 "LIST_INSERT_BEFORE(n2, n3, entries);\n"
-msgstr "n3 = malloc(sizeof(struct entry));\t/* вставка перед */\nLIST_INSERT_BEFORE(n2, n3, entries);\n"
+msgstr ""
+"n3 = malloc(sizeof(struct entry));\t/* вставка перед */\n"
+"LIST_INSERT_BEFORE(n2, n3, entries);\n"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:936
@@ -2655,7 +3341,12 @@ msgid ""
 "\t\t\t\t\t/* Forward traversal. */\n"
 "LIST_FOREACH(np, &head, entries)\n"
 "\tnp\\-E<gt> ...\n"
-msgstr "LIST_REMOVE(n2, entries);\t\t/* удаление */\nfree(n2);\n\t\t\t\t\t/* обход из начала в конец */\nLIST_FOREACH(np, &head, entries)\n\tnp\\-E<gt> ...\n"
+msgstr ""
+"LIST_REMOVE(n2, entries);\t\t/* удаление */\n"
+"free(n2);\n"
+"\t\t\t\t\t/* обход из начала в конец */\n"
+"LIST_FOREACH(np, &head, entries)\n"
+"\tnp\\-E<gt> ...\n"
 
 #.  					/* Safe forward traversal. */
 #.  LIST_FOREACH_SAFE(np, &head, entries, np_temp) {
@@ -2673,7 +3364,12 @@ msgid ""
 "\tLIST_REMOVE(n1, entries);\n"
 "\tfree(n1);\n"
 "}\n"
-msgstr "while (!LIST_EMPTY(&head)) {\t\t/* удаление списка */\n\tn1 = LIST_FIRST(&head);\n\tLIST_REMOVE(n1, entries);\n\tfree(n1);\n}\n"
+msgstr ""
+"while (!LIST_EMPTY(&head)) {\t\t/* удаление списка */\n"
+"\tn1 = LIST_FIRST(&head);\n"
+"\tLIST_REMOVE(n1, entries);\n"
+"\tfree(n1);\n"
+"}\n"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:958
@@ -2686,7 +3382,14 @@ msgid ""
 "\tn1 = n2;\n"
 "}\n"
 "LIST_INIT(&head);\n"
-msgstr "n1 = LIST_FIRST(&head);\t\t\t/* быстрое удаление списка */\nwhile (n1 != NULL) {\n\tn2 = LIST_NEXT(n1, entries);\n\tfree(n1);\n\tn1 = n2;\n}\nLIST_INIT(&head);\n"
+msgstr ""
+"n1 = LIST_FIRST(&head);\t\t\t/* быстрое удаление списка */\n"
+"while (n1 != NULL) {\n"
+"\tn2 = LIST_NEXT(n1, entries);\n"
+"\tfree(n1);\n"
+"\tn1 = n2;\n"
+"}\n"
+"LIST_INIT(&head);\n"
 
 #. type: Ss
 #: man-pages/man3/queue.3:959
@@ -2698,14 +3401,21 @@ msgstr "Хвостовые очереди"
 #: man-pages/man3/queue.3:974
 msgid ""
 "A tail queue is headed by a structure defined by the E<.Nm TAILQ_HEAD> "
-"macro.  This structure contains a pair of pointers, one to the first element"
-" in the tail queue and the other to the last element in the tail queue.  The"
-" elements are doubly linked so that an arbitrary element can be removed "
+"macro.  This structure contains a pair of pointers, one to the first element "
+"in the tail queue and the other to the last element in the tail queue.  The "
+"elements are doubly linked so that an arbitrary element can be removed "
 "without traversing the tail queue.  New elements can be added to the tail "
 "queue after an existing element, before an existing element, at the head of "
 "the tail queue, or at the end of the tail queue.  A E<.Fa TAILQ_HEAD> "
 "structure is declared as follows:"
-msgstr "Хвостовая очередь начинается со структуры, определяемой макросом E<.Nm TAILQ_HEAD>. Эта структура содержит пару указателей, один для первого элемента хвостовой очереди, а другой для последнего элемента хвостовой очереди. Элементы связаны дважды так, что любой элемент может быть удалён без прохождения по всей очереди. Новые элементы могут быть добавлены в хвостовую очередь перед и после существующего элемента, в конец или в начало очереди. Структура E<.Fa TAILQ_HEAD> объявляется следующим образом:"
+msgstr ""
+"Хвостовая очередь начинается со структуры, определяемой макросом E<.Nm "
+"TAILQ_HEAD>. Эта структура содержит пару указателей, один для первого "
+"элемента хвостовой очереди, а другой для последнего элемента хвостовой "
+"очереди. Элементы связаны дважды так, что любой элемент может быть удалён "
+"без прохождения по всей очереди. Новые элементы могут быть добавлены в "
+"хвостовую очередь перед и после существующего элемента, в конец или в начало "
+"очереди. Структура E<.Fa TAILQ_HEAD> объявляется следующим образом:"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:976
@@ -2718,7 +3428,9 @@ msgstr "TAILQ_HEAD(HEADNAME, TYPE) head;\n"
 msgid ""
 "The macro E<.Nm TAILQ_HEAD_INITIALIZER> evaluates to an initializer for the "
 "tail queue E<.Fa head>."
-msgstr "Макрос E<.Nm TAILQ_HEAD_INITIALIZER> запускает инициализатор для E<.Fa head> хвостовой очереди."
+msgstr ""
+"Макрос E<.Nm TAILQ_HEAD_INITIALIZER> запускает инициализатор для E<.Fa head> "
+"хвостовой очереди."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:1006
@@ -2726,28 +3438,36 @@ msgid ""
 "The macro E<.Nm TAILQ_CONCAT> concatenates the tail queue headed by E<.Fa "
 "head2> onto the end of the one headed by E<.Fa head1> removing all entries "
 "from the former."
-msgstr "Макрос E<.Nm TAILQ_CONCAT> добавляет хвостовую очередь с началом E<.Fa head2> в конец очереди с началом E<.Fa head1>, удаляя все элементы из первой."
+msgstr ""
+"Макрос E<.Nm TAILQ_CONCAT> добавляет хвостовую очередь с началом E<.Fa "
+"head2> в конец очереди с началом E<.Fa head1>, удаляя все элементы из первой."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:1010
 msgid ""
 "The macro E<.Nm TAILQ_EMPTY> evaluates to true if there are no items on the "
 "tail queue."
-msgstr "Макрос E<.Nm TAILQ_EMPTY> возвращает true, если в хвостовой очереди нет элементов."
+msgstr ""
+"Макрос E<.Nm TAILQ_EMPTY> возвращает true, если в хвостовой очереди нет "
+"элементов."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:1015
 msgid ""
-"The macro E<.Nm TAILQ_ENTRY> declares a structure that connects the elements"
-" in the tail queue."
-msgstr "Макрос E<.Nm TAILQ_ENTRY> объявляет структуру, которая подключает элементы в хвостовую очередь."
+"The macro E<.Nm TAILQ_ENTRY> declares a structure that connects the elements "
+"in the tail queue."
+msgstr ""
+"Макрос E<.Nm TAILQ_ENTRY> объявляет структуру, которая подключает элементы в "
+"хвостовую очередь."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:1020
 msgid ""
 "The macro E<.Nm TAILQ_FIRST> returns the first item on the tail queue or "
 "NULL if the tail queue is empty."
-msgstr "Макрос E<.Nm TAILQ_FIRST> возвращает первый элемент из хвостовой очереди или NULL, если очередь пуста."
+msgstr ""
+"Макрос E<.Nm TAILQ_FIRST> возвращает первый элемент из хвостовой очереди или "
+"NULL, если очередь пуста."
 
 #.  .Pp
 #.  The macro
@@ -2769,7 +3489,11 @@ msgid ""
 "head> in the forward direction, assigning each element in turn to E<.Fa "
 "var>.  E<.Fa var> is set to E<.Dv NULL> if the loop completes normally, or "
 "if there were no elements."
-msgstr "Макрос E<.Nm TAILQ_FOREACH> обходит хвостовую очередь, на которую ссылается E<.Fa head>, из начала в конец, назначая E<.Fa var> каждый элемент. Значение E<.Fa var> равно E<.Dv NULL>, если пройдена вся очередь или в ней нет элементов."
+msgstr ""
+"Макрос E<.Nm TAILQ_FOREACH> обходит хвостовую очередь, на которую ссылается "
+"E<.Fa head>, из начала в конец, назначая E<.Fa var> каждый элемент. Значение "
+"E<.Fa var> равно E<.Dv NULL>, если пройдена вся очередь или в ней нет "
+"элементов."
 
 #.  .Pp
 #.  The macro
@@ -2800,8 +3524,7 @@ msgstr "Макрос E<.Nm TAILQ_FOREACH> обходит хвостовую оч
 #.  .Nm TAILQ_FOREACH_REVERSE
 #.  permit to both remove
 #.  .Fa var
-#.  as well as free it from within the loop safely without interfering with
-#. the
+#.  as well as free it from within the loop safely without interfering with the
 #.  traversal.
 #.  .Pp
 #.  The macro
@@ -2835,77 +3558,99 @@ msgid ""
 "The macro E<.Nm TAILQ_FOREACH_REVERSE> traverses the tail queue referenced "
 "by E<.Fa head> in the reverse direction, assigning each element in turn to "
 "E<.Fa var>."
-msgstr "Макрос E<.Nm TAILQ_FOREACH_REVERSE> обходит хвостовую очередь, на которую ссылается E<.Fa head>, в обратном направлении, назначая E<.Fa var> каждый элемент."
+msgstr ""
+"Макрос E<.Nm TAILQ_FOREACH_REVERSE> обходит хвостовую очередь, на которую "
+"ссылается E<.Fa head>, в обратном направлении, назначая E<.Fa var> каждый "
+"элемент."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:1113
 msgid ""
 "The macro E<.Nm TAILQ_INIT> initializes the tail queue referenced by E<.Fa "
 "head>."
-msgstr "Макрос E<.Nm TAILQ_INIT> инициализирует хвостовую очередь, на которую ссылается E<.Fa head>."
+msgstr ""
+"Макрос E<.Nm TAILQ_INIT> инициализирует хвостовую очередь, на которую "
+"ссылается E<.Fa head>."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:1119
 msgid ""
-"The macro E<.Nm TAILQ_INSERT_HEAD> inserts the new element E<.Fa elm> at the"
-" head of the tail queue."
-msgstr "Макрос E<.Nm TAILQ_INSERT_HEAD> вставляет новый элемент IE<.Fa elm> в начало хвостовой очереди."
+"The macro E<.Nm TAILQ_INSERT_HEAD> inserts the new element E<.Fa elm> at the "
+"head of the tail queue."
+msgstr ""
+"Макрос E<.Nm TAILQ_INSERT_HEAD> вставляет новый элемент IE<.Fa elm> в начало "
+"хвостовой очереди."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:1125
 msgid ""
-"The macro E<.Nm TAILQ_INSERT_TAIL> inserts the new element E<.Fa elm> at the"
-" end of the tail queue."
-msgstr "Макрос E<.Nm TAILQ_INSERT_TAIL> вставляет новый элемент E<.Fa elm> в конец хвостовой очереди."
+"The macro E<.Nm TAILQ_INSERT_TAIL> inserts the new element E<.Fa elm> at the "
+"end of the tail queue."
+msgstr ""
+"Макрос E<.Nm TAILQ_INSERT_TAIL> вставляет новый элемент E<.Fa elm> в конец "
+"хвостовой очереди."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:1132
 msgid ""
-"The macro E<.Nm TAILQ_INSERT_AFTER> inserts the new element E<.Fa elm> after"
-" the element E<.Fa listelm>."
-msgstr "Макрос E<.Nm TAILQ_INSERT_AFTER> вставляет новый элемент E<.Fa elm> за элементом E<.Fa listelm>."
+"The macro E<.Nm TAILQ_INSERT_AFTER> inserts the new element E<.Fa elm> after "
+"the element E<.Fa listelm>."
+msgstr ""
+"Макрос E<.Nm TAILQ_INSERT_AFTER> вставляет новый элемент E<.Fa elm> за "
+"элементом E<.Fa listelm>."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:1139
 msgid ""
 "The macro E<.Nm TAILQ_INSERT_BEFORE> inserts the new element E<.Fa elm> "
 "before the element E<.Fa listelm>."
-msgstr "Макрос E<.Nm TAILQ_INSERT_BEFORE> вставляет новый элемент E<.Fa elm> перед элементом E<.Fa listelm>."
+msgstr ""
+"Макрос E<.Nm TAILQ_INSERT_BEFORE> вставляет новый элемент E<.Fa elm> перед "
+"элементом E<.Fa listelm>."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:1145
 msgid ""
-"The macro E<.Nm TAILQ_LAST> returns the last item on the tail queue.  If the"
-" tail queue is empty the return value is E<.Dv NULL>."
-msgstr "Макрос E<.Nm TAILQ_LAST> возвращает последний элемент из хвостовой очереди или E<.Dv NULL>, если очередь пуста."
+"The macro E<.Nm TAILQ_LAST> returns the last item on the tail queue.  If the "
+"tail queue is empty the return value is E<.Dv NULL>."
+msgstr ""
+"Макрос E<.Nm TAILQ_LAST> возвращает последний элемент из хвостовой очереди "
+"или E<.Dv NULL>, если очередь пуста."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:1149
 msgid ""
-"The macro E<.Nm TAILQ_NEXT> returns the next item on the tail queue, or NULL"
-" if this item is the last."
-msgstr "Макрос E<.Nm TAILQ_NEXT> возвращает следующий элемент из хвостовой очереди или NULL, если элемент последний."
+"The macro E<.Nm TAILQ_NEXT> returns the next item on the tail queue, or NULL "
+"if this item is the last."
+msgstr ""
+"Макрос E<.Nm TAILQ_NEXT> возвращает следующий элемент из хвостовой очереди "
+"или NULL, если элемент последний."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:1154
 msgid ""
 "The macro E<.Nm TAILQ_PREV> returns the previous item on the tail queue, or "
 "NULL if this item is the first."
-msgstr "Макрос E<.Nm TAILQ_PREV> возвращает предыдущий элемент из хвостовой очереди или NULL, если элемент первый."
+msgstr ""
+"Макрос E<.Nm TAILQ_PREV> возвращает предыдущий элемент из хвостовой очереди "
+"или NULL, если элемент первый."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:1160
 msgid ""
 "The macro E<.Nm TAILQ_REMOVE> removes the element E<.Fa elm> from the tail "
 "queue."
-msgstr "Макрос E<.Nm TAILQ_REMOVE> удаляет элемент E<.Fa elm> из хвостовой очереди."
+msgstr ""
+"Макрос E<.Nm TAILQ_REMOVE> удаляет элемент E<.Fa elm> из хвостовой очереди."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:1167
 msgid ""
 "The macro E<.Nm TAILQ_SWAP> swaps the contents of E<.Fa head1> and E<.Fa "
 "head2>."
-msgstr "Макрос E<.Nm TAILQ_SWAP> меняет местами содержимое E<.Fa head1> и E<.Fa head2>."
+msgstr ""
+"Макрос E<.Nm TAILQ_SWAP> меняет местами содержимое E<.Fa head1> и E<.Fa "
+"head2>."
 
 #. type: Ss
 #: man-pages/man3/queue.3:1167
@@ -2925,7 +3670,15 @@ msgid ""
 "\tTAILQ_ENTRY(entry) entries;\t/* Tail queue. */\n"
 "\t...\n"
 "} *n1, *n2, *n3, *np;\n"
-msgstr "TAILQ_HEAD(tailhead, entry) head =\n    TAILQ_HEAD_INITIALIZER(head);\nstruct tailhead *headp;\t\t\t/* начало хвостовой очереди */\nstruct entry {\n\t...\n\tTAILQ_ENTRY(entry) entries;\t/* хвостовая очередь */\n\t...\n} *n1, *n2, *n3, *np;\n"
+msgstr ""
+"TAILQ_HEAD(tailhead, entry) head =\n"
+"    TAILQ_HEAD_INITIALIZER(head);\n"
+"struct tailhead *headp;\t\t\t/* начало хвостовой очереди */\n"
+"struct entry {\n"
+"\t...\n"
+"\tTAILQ_ENTRY(entry) entries;\t/* хвостовая очередь */\n"
+"\t...\n"
+"} *n1, *n2, *n3, *np;\n"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:1179
@@ -2939,7 +3692,9 @@ msgstr "TAILQ_INIT(&head);\t\t\t/* инициализация очереди */\
 msgid ""
 "n1 = malloc(sizeof(struct entry));\t/* Insert at the head. */\n"
 "TAILQ_INSERT_HEAD(&head, n1, entries);\n"
-msgstr "n1 = malloc(sizeof(struct entry));\t/* вставка в начало */\nTAILQ_INSERT_HEAD(&head, n1, entries);\n"
+msgstr ""
+"n1 = malloc(sizeof(struct entry));\t/* вставка в начало */\n"
+"TAILQ_INSERT_HEAD(&head, n1, entries);\n"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:1185
@@ -2947,7 +3702,9 @@ msgstr "n1 = malloc(sizeof(struct entry));\t/* вставка в начало */
 msgid ""
 "n1 = malloc(sizeof(struct entry));\t/* Insert at the tail. */\n"
 "TAILQ_INSERT_TAIL(&head, n1, entries);\n"
-msgstr "n1 = malloc(sizeof(struct entry));\t/* вставка в конец */\nTAILQ_INSERT_TAIL(&head, n1, entries);\n"
+msgstr ""
+"n1 = malloc(sizeof(struct entry));\t/* вставка в конец */\n"
+"TAILQ_INSERT_TAIL(&head, n1, entries);\n"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:1188
@@ -2955,7 +3712,9 @@ msgstr "n1 = malloc(sizeof(struct entry));\t/* вставка в конец */\n
 msgid ""
 "n2 = malloc(sizeof(struct entry));\t/* Insert after. */\n"
 "TAILQ_INSERT_AFTER(&head, n1, n2, entries);\n"
-msgstr "n2 = malloc(sizeof(struct entry));\t/* вставка последующего */\nTAILQ_INSERT_AFTER(&head, n1, n2, entries);\n"
+msgstr ""
+"n2 = malloc(sizeof(struct entry));\t/* вставка последующего */\n"
+"TAILQ_INSERT_AFTER(&head, n1, n2, entries);\n"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:1191
@@ -2963,7 +3722,9 @@ msgstr "n2 = malloc(sizeof(struct entry));\t/* вставка последующ
 msgid ""
 "n3 = malloc(sizeof(struct entry));\t/* Insert before. */\n"
 "TAILQ_INSERT_BEFORE(n2, n3, entries);\n"
-msgstr "n3 = malloc(sizeof(struct entry));\t/* вставка перед */\nTAILQ_INSERT_BEFORE(n2, n3, entries);\n"
+msgstr ""
+"n3 = malloc(sizeof(struct entry));\t/* вставка перед */\n"
+"TAILQ_INSERT_BEFORE(n2, n3, entries);\n"
 
 #.  					/* Safe forward traversal. */
 #.  TAILQ_FOREACH_SAFE(np, &head, entries, np_temp) {
@@ -2997,7 +3758,28 @@ msgid ""
 "\tfree(n1);\n"
 "\tn1 = n2;\n"
 "}\n"
-msgstr "TAILQ_REMOVE(&head, n2, entries);\t/* удаление */\nfree(n2);\n\t\t\t\t\t/* обход из начало в конец */\nTAILQ_FOREACH(np, &head, entries)\n\tnp\\-E<gt> ...\n\t\t\t\t\t/* обход в обратном направлении */\nTAILQ_FOREACH_REVERSE(np, &head, tailhead, entries)\n\tnp\\-E<gt> ...\n\t\t\t\t\t/* удаление TailQ */\nwhile (!TAILQ_EMPTY(&head)) {\n\tn1 = TAILQ_FIRST(&head);\n\tTAILQ_REMOVE(&head, n1, entries);\n\tfree(n1);\n}\n\t\t\t\t\t/* быстрое удаление TailQ */\nn1 = TAILQ_FIRST(&head);\nwhile (n1 != NULL) {\n\tn2 = TAILQ_NEXT(n1, entries);\n\tfree(n1);\n\tn1 = n2;\n}\n"
+msgstr ""
+"TAILQ_REMOVE(&head, n2, entries);\t/* удаление */\n"
+"free(n2);\n"
+"\t\t\t\t\t/* обход из начало в конец */\n"
+"TAILQ_FOREACH(np, &head, entries)\n"
+"\tnp\\-E<gt> ...\n"
+"\t\t\t\t\t/* обход в обратном направлении */\n"
+"TAILQ_FOREACH_REVERSE(np, &head, tailhead, entries)\n"
+"\tnp\\-E<gt> ...\n"
+"\t\t\t\t\t/* удаление TailQ */\n"
+"while (!TAILQ_EMPTY(&head)) {\n"
+"\tn1 = TAILQ_FIRST(&head);\n"
+"\tTAILQ_REMOVE(&head, n1, entries);\n"
+"\tfree(n1);\n"
+"}\n"
+"\t\t\t\t\t/* быстрое удаление TailQ */\n"
+"n1 = TAILQ_FIRST(&head);\n"
+"while (n1 != NULL) {\n"
+"\tn2 = TAILQ_NEXT(n1, entries);\n"
+"\tfree(n1);\n"
+"\tn1 = n2;\n"
+"}\n"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:1234
@@ -3016,14 +3798,29 @@ msgid ""
 "                                    /* Delete. */\n"
 "while (head.cqh_first != (void *)&head)\n"
 "    CIRCLEQ_REMOVE(&head, head.cqh_first, entries);\n"
-msgstr "TAILQ_INIT(&head);\nn2 = malloc(sizeof(struct entry));  /* вставка перед */\nCIRCLEQ_INSERT_BEFORE(&head, n1, n2, entries);\n                                    /* обход из начала в конец */\nfor (np = head.cqh_first; np != (void *)&head;\n        np = np\\-E<gt>entries.cqe_next)\n    np\\-E<gt> ...\n                                    /* обход в обратном направлении */\nfor (np = head.cqh_last; np != (void *)&head; np = np\\-E<gt>entries.cqe_prev)\n    np\\-E<gt> ...\n                                    /* удаление */\nwhile (head.cqh_first != (void *)&head)\n    CIRCLEQ_REMOVE(&head, head.cqh_first, entries);\n"
+msgstr ""
+"TAILQ_INIT(&head);\n"
+"n2 = malloc(sizeof(struct entry));  /* вставка перед */\n"
+"CIRCLEQ_INSERT_BEFORE(&head, n1, n2, entries);\n"
+"                                    /* обход из начала в конец */\n"
+"for (np = head.cqh_first; np != (void *)&head;\n"
+"        np = np\\-E<gt>entries.cqe_next)\n"
+"    np\\-E<gt> ...\n"
+"                                    /* обход в обратном направлении */\n"
+"for (np = head.cqh_last; np != (void *)&head; np = np\\-E<gt>entries.cqe_prev)\n"
+"    np\\-E<gt> ...\n"
+"                                    /* удаление */\n"
+"while (head.cqh_first != (void *)&head)\n"
+"    CIRCLEQ_REMOVE(&head, head.cqh_first, entries);\n"
 
 #. type: Plain text
 #: man-pages/man3/queue.3:1241
 msgid ""
 "Not in POSIX.1, POSIX.1-2001 or POSIX.1-2008.  Present on the BSDs.  E<.Nm "
 "queue> functions first appeared in E<.Bx 4.4>."
-msgstr "Нет в POSIX.1, POSIX.1-2001 и POSIX.1-2008. Присутствует в BSD.  Функции E<.Nm queue> впервые появились в E<.Bx 4.4>."
+msgstr ""
+"Нет в POSIX.1, POSIX.1-2001 и POSIX.1-2008. Присутствует в BSD.  Функции E<."
+"Nm queue> впервые появились в E<.Bx 4.4>."
 
 #. type: Plain text
 #: man-pages/man3/queue.3:1242
@@ -3061,22 +3858,27 @@ msgstr "B<#include E<lt>stdlib.hE<gt>>"
 #. type: Plain text
 #: man-pages/man3/qecvt.3:36
 msgid ""
-"B<char *qecvt(long double >I<number>B<, int >I<ndigits>B<, int "
-"*>I<decpt>B<,> B<int *>I<sign>B<);>"
-msgstr "B<char *qecvt(long double >I<number>B<, int >I<ndigits>B<, int *>I<decpt>B<,> B<int *>I<sign>B<);>"
+"B<char *qecvt(long double >I<number>B<, int >I<ndigits>B<, int *>I<decpt>B<,"
+"> B<int *>I<sign>B<);>"
+msgstr ""
+"B<char *qecvt(long double >I<number>B<, int >I<ndigits>B<, int *>I<decpt>B<,"
+"> B<int *>I<sign>B<);>"
 
 #. type: Plain text
 #: man-pages/man3/qecvt.3:39
 msgid ""
-"B<char *qfcvt(long double >I<number>B<, int >I<ndigits>B<, int "
-"*>I<decpt>B<,> B<int *>I<sign>B<);>"
-msgstr "B<char *qfcvt(long double >I<number>B<, int >I<ndigits>B<, int *>I<decpt>B<,> B<int *>I<sign>B<);>"
+"B<char *qfcvt(long double >I<number>B<, int >I<ndigits>B<, int *>I<decpt>B<,"
+"> B<int *>I<sign>B<);>"
+msgstr ""
+"B<char *qfcvt(long double >I<number>B<, int >I<ndigits>B<, int *>I<decpt>B<,"
+"> B<int *>I<sign>B<);>"
 
 #. type: Plain text
 #: man-pages/man3/qecvt.3:41
 msgid ""
 "B<char *qgcvt(long double >I<number>B<, int >I<ndigit>B<, char *>I<buf>B<);>"
-msgstr "B<char *qgcvt(long double >I<number>B<, int >I<ndigit>B<, char *>I<buf>B<);>"
+msgstr ""
+"B<char *qgcvt(long double >I<number>B<, int >I<ndigit>B<, char *>I<buf>B<);>"
 
 #. type: Plain text
 #: man-pages/man3/qecvt.3:52
@@ -3087,9 +3889,12 @@ msgstr "B<qecvt>(), B<qfcvt>(), B<qgcvt>(): _SVID_SOURCE"
 #: man-pages/man3/qecvt.3:85
 msgid ""
 "The functions B<qecvt>(), B<qfcvt>(), and B<qgcvt>()  are identical to "
-"B<ecvt>(3), B<fcvt>(3), and B<gcvt>(3)  respectively, except that they use a"
-" I<long double> argument I<number>.  See B<ecvt>(3)  and B<gcvt>(3)."
-msgstr "Функции B<qecvt>(), B<qfcvt>() и B<qgcvt>() идентичны B<ecvt>(3), B<fcvt>(3) и B<gcvt>(3), соответственно, за исключением того, что аргумент I<number> имеет тип I<long double>. Смотрите B<ecvt>(3) и B<gcvt>(3)."
+"B<ecvt>(3), B<fcvt>(3), and B<gcvt>(3)  respectively, except that they use a "
+"I<long double> argument I<number>.  See B<ecvt>(3)  and B<gcvt>(3)."
+msgstr ""
+"Функции B<qecvt>(), B<qfcvt>() и B<qgcvt>() идентичны B<ecvt>(3), B<fcvt>(3) "
+"и B<gcvt>(3), соответственно, за исключением того, что аргумент I<number> "
+"имеет тип I<long double>. Смотрите B<ecvt>(3) и B<gcvt>(3)."
 
 #. type: tbl table
 #: man-pages/man3/qecvt.3:95
@@ -3127,13 +3932,16 @@ msgstr "B<qgcvt>()"
 msgid ""
 "SVr4.  Not seen in most common UNIX implementations, but occurs in SunOS.  "
 "Supported by glibc."
-msgstr "SVr4. Отсутствуют в наиболее распространённых реализациях UNIX, но есть в SunOS. Поддерживаются в glibc."
+msgstr ""
+"SVr4. Отсутствуют в наиболее распространённых реализациях UNIX, но есть в "
+"SunOS. Поддерживаются в glibc."
 
 #. type: Plain text
 #: man-pages/man3/qecvt.3:114
-msgid ""
-"These functions are obsolete.  Instead, B<snprintf>(3)  is recommended."
-msgstr "Данные функции устарели. Вместо них рекомендуется использовать B<snprintf>(3)."
+msgid "These functions are obsolete.  Instead, B<snprintf>(3)  is recommended."
+msgstr ""
+"Данные функции устарели. Вместо них рекомендуется использовать "
+"B<snprintf>(3)."
 
 #. type: Plain text
 #: man-pages/man3/qecvt.3:118

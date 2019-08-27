@@ -1,22 +1,25 @@
 # SOME DESCRIPTIVE TITLE
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Yuri Kozlov <yuray@komyakino.ru>, 2011-2013,2015-2017,2019
 # Yuri Kozlov <yuray@komyakino.ru>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
-"POT-Creation-Date: 2017-03-04 13:09+0300\n"
+"POT-Creation-Date: 2019-08-26 09:24+0300\n"
 "PO-Revision-Date: 2019-04-03 15:47+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
-"Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/ru/)\n"
+"Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/"
+"ru/)\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #. type: TH
 #: man-pages/man2/_syscall.2:38
@@ -51,7 +54,9 @@ msgstr "ИМЯ"
 #. type: Plain text
 #: man-pages/man2/_syscall.2:41
 msgid "_syscall - invoking a system call without library support (OBSOLETE)"
-msgstr "_syscall - выполняет системный вызов, который не поддерживается библиотекой (УСТАРЕЛ)"
+msgstr ""
+"_syscall - выполняет системный вызов, который не поддерживается библиотекой "
+"(УСТАРЕЛ)"
 
 #. type: SH
 #: man-pages/man2/_syscall.2:41
@@ -87,7 +92,11 @@ msgid ""
 "to know how many arguments, their types, and the function return type.  "
 "There are seven macros that make the actual call into the system easier.  "
 "They have the form:"
-msgstr "При использовании системного вызова необходима информация о его прототипе. Вам нужно знать количество аргументов, их типы и тип возвращаемого значения. Есть несколько макросов, которые облегчают выполнение системных вызовов. Они имеют вид:"
+msgstr ""
+"При использовании системного вызова необходима информация о его прототипе. "
+"Вам нужно знать количество аргументов, их типы и тип возвращаемого значения. "
+"Есть несколько макросов, которые облегчают выполнение системных вызовов. Они "
+"имеют вид:"
 
 #. type: Plain text
 #: man-pages/man2/_syscall.2:57
@@ -132,7 +141,10 @@ msgid ""
 "These macros create a function called I<name> with the arguments you "
 "specify.  Once you include the _syscall() in your source file, you call the "
 "system call by I<name>."
-msgstr "Эти макросы создают функцию с именем I<name> и указанными аргументами. После добавления _syscall() в код, вы можете вызывать системный вызов по имени I<name>."
+msgstr ""
+"Эти макросы создают функцию с именем I<name> и указанными аргументами. После "
+"добавления _syscall() в код, вы можете вызывать системный вызов по имени "
+"I<name>."
 
 #. type: SH
 #: man-pages/man2/_syscall.2:85
@@ -169,26 +181,40 @@ msgid ""
 "files supplied to user space.  Use B<syscall>(2)  instead.  (Some "
 "architectures, notably ia64, never provided the _syscall macros; on those "
 "architectures, B<syscall>(2)  was always required.)"
-msgstr "Начиная, приблизительно, с ядра 2.6.18, макросы _syscall удалены из заголовочных файлов, используемых в пользовательском пространстве. Вместо них используйте B<syscall>(2). (Для некоторых архитектур, например ia64, макросы _syscall никогда не предоставлялись; на таких архитектурах всегда требуется макрос B<syscall>(2).)"
+msgstr ""
+"Начиная, приблизительно, с ядра 2.6.18, макросы _syscall удалены из "
+"заголовочных файлов, используемых в пользовательском пространстве. Вместо "
+"них используйте B<syscall>(2). (Для некоторых архитектур, например ia64, "
+"макросы _syscall никогда не предоставлялись; на таких архитектурах всегда "
+"требуется макрос B<syscall>(2).)"
 
 #. type: Plain text
 #: man-pages/man2/_syscall.2:105
 msgid ""
-"The _syscall() macros I<do not> produce a prototype.  You may have to create"
-" one, especially for C++ users."
-msgstr "Макрос _syscall() I<не> создаёт прототип. Вам, вероятно, придётся создавать его самостоятельно, особенно пользователям C++."
+"The _syscall() macros I<do not> produce a prototype.  You may have to create "
+"one, especially for C++ users."
+msgstr ""
+"Макрос _syscall() I<не> создаёт прототип. Вам, вероятно, придётся создавать "
+"его самостоятельно, особенно пользователям C++."
 
 #. type: Plain text
 #: man-pages/man2/_syscall.2:126
 msgid ""
 "System calls are not required to return only positive or negative error "
 "codes.  You need to read the source to be sure how it will return errors.  "
-"Usually, it is the negative of a standard error code, for example, "
-"-I<EPERM>.  The _syscall() macros will return the result I<r> of the system "
+"Usually, it is the negative of a standard error code, for example, -"
+"I<EPERM>.  The _syscall() macros will return the result I<r> of the system "
 "call when I<r> is nonnegative, but will return -1 and set the variable "
 "I<errno> to -I<r> when I<r> is negative.  For the error codes, see "
 "B<errno>(3)."
-msgstr "Для системных вызовов не требуется возвращать только положительный или отрицательный код ошибки. Вам нужно прочитать исходный код, чтобы выяснить как возвращаются ошибки. Обычно, это отрицательный стандартный код ошибки, например, -I<EPERM>. Макрос _syscall() возвращает результат I<r> из системного вызова, если I<r> неотрицательно, но вернёт -1 и установит значение I<errno> равное -I<r>, когда I<r> отрицательно. Коды ошибок смотрите в B<errno>(3)."
+msgstr ""
+"Для системных вызовов не требуется возвращать только положительный или "
+"отрицательный код ошибки. Вам нужно прочитать исходный код, чтобы выяснить "
+"как возвращаются ошибки. Обычно, это отрицательный стандартный код ошибки, "
+"например, -I<EPERM>. Макрос _syscall() возвращает результат I<r> из "
+"системного вызова, если I<r> неотрицательно, но вернёт -1 и установит "
+"значение I<errno> равное -I<r>, когда I<r> отрицательно. Коды ошибок "
+"смотрите в B<errno>(3)."
 
 #.  The preferred way to invoke system calls that glibc does not know
 #.  about yet is via
@@ -205,7 +231,9 @@ msgstr "Для системных вызовов не требуется воз�
 msgid ""
 "When defining a system call, the argument types I<must> be passed by-value "
 "or by-pointer (for aggregates like structs)."
-msgstr "При определении системного вызова типы аргументов I<должны> передаваться по значению или по ссылке (для составных типов, например структур)."
+msgstr ""
+"При определении системного вызова типы аргументов I<должны> передаваться по "
+"значению или по ссылке (для составных типов, например структур)."
 
 #. type: SH
 #: man-pages/man2/_syscall.2:142
@@ -222,7 +250,12 @@ msgid ""
 "#include E<lt>errno.hE<gt>\n"
 "#include E<lt>linux/unistd.hE<gt>       /* for _syscallX macros/related stuff */\n"
 "#include E<lt>linux/kernel.hE<gt>       /* for struct sysinfo */\n"
-msgstr "#include E<lt>stdio.hE<gt>\n#include E<lt>stdlib.hE<gt>\n#include E<lt>errno.hE<gt>\n#include E<lt>linux/unistd.hE<gt>       /* поддержка _syscallX */\n#include E<lt>linux/kernel.hE<gt>       /* struct sysinfo */\n"
+msgstr ""
+"#include E<lt>stdio.hE<gt>\n"
+"#include E<lt>stdlib.hE<gt>\n"
+"#include E<lt>errno.hE<gt>\n"
+"#include E<lt>linux/unistd.hE<gt>       /* поддержка _syscallX */\n"
+"#include E<lt>linux/kernel.hE<gt>       /* struct sysinfo */\n"
 
 #. type: Plain text
 #: man-pages/man2/_syscall.2:151
@@ -239,7 +272,12 @@ msgid ""
 "{\n"
 "    struct sysinfo s_info;\n"
 "    int error;\n"
-msgstr "int\nmain(void)\n{\n    struct sysinfo s_info;\n    int error;\n"
+msgstr ""
+"int\n"
+"main(void)\n"
+"{\n"
+"    struct sysinfo s_info;\n"
+"    int error;\n"
 
 #. type: Plain text
 #: man-pages/man2/_syscall.2:172
@@ -259,7 +297,21 @@ msgid ""
 "           s_info.procs);\n"
 "    exit(EXIT_SUCCESS);\n"
 "}\n"
-msgstr "    error = sysinfo(&s_info);\n    printf(\"code error = %d\\en\", error);\n    printf(\"Uptime = %lds\\enLoad: 1 min %lu / 5 min %lu / 15 min %lu\\en\"\n           \"RAM: total %lu / free %lu / shared %lu\\en\"\n           \"Memory in buffers = %lu\\enSwap: total %lu / free %lu\\en\"\n           \"Number of processes = %d\\en\",\n           s_info.uptime, s_info.loads[0],\n           s_info.loads[1], s_info.loads[2],\n           s_info.totalram, s_info.freeram,\n           s_info.sharedram, s_info.bufferram,\n           s_info.totalswap, s_info.freeswap,\n           s_info.procs);\n    exit(EXIT_SUCCESS);\n}\n"
+msgstr ""
+"    error = sysinfo(&s_info);\n"
+"    printf(\"code error = %d\\en\", error);\n"
+"    printf(\"Uptime = %lds\\enLoad: 1 min %lu / 5 min %lu / 15 min %lu\\en\"\n"
+"           \"RAM: total %lu / free %lu / shared %lu\\en\"\n"
+"           \"Memory in buffers = %lu\\enSwap: total %lu / free %lu\\en\"\n"
+"           \"Number of processes = %d\\en\",\n"
+"           s_info.uptime, s_info.loads[0],\n"
+"           s_info.loads[1], s_info.loads[2],\n"
+"           s_info.totalram, s_info.freeram,\n"
+"           s_info.sharedram, s_info.bufferram,\n"
+"           s_info.totalswap, s_info.freeswap,\n"
+"           s_info.procs);\n"
+"    exit(EXIT_SUCCESS);\n"
+"}\n"
 
 #. type: SS
 #: man-pages/man2/_syscall.2:173
@@ -278,7 +330,14 @@ msgid ""
 "Memory in buffers = 5066752\n"
 "Swap: total 27881472 / free 24698880\n"
 "Number of processes = 40\n"
-msgstr "code error = 0\nuptime = 502034s\nLoad: 1 min 13376 / 5 min 5504 / 15 min 1152\nRAM: total 15343616 / free 827392 / shared 8237056\nMemory in buffers = 5066752\nSwap: total 27881472 / free 24698880\nNumber of processes = 40\n"
+msgstr ""
+"code error = 0\n"
+"uptime = 502034s\n"
+"Load: 1 min 13376 / 5 min 5504 / 15 min 1152\n"
+"RAM: total 15343616 / free 827392 / shared 8237056\n"
+"Memory in buffers = 5066752\n"
+"Swap: total 27881472 / free 24698880\n"
+"Number of processes = 40\n"
 
 #. type: SH
 #: man-pages/man2/_syscall.2:183
@@ -332,7 +391,9 @@ msgstr "B<void _Exit(int >I<status>B<);>"
 #: man-pages/man2/_exit.2:44
 msgid ""
 "Feature Test Macro Requirements for glibc (see B<feature_test_macros>(7)):"
-msgstr "Требования макроса тестирования свойств для glibc (см. B<feature_test_macros>(7)):"
+msgstr ""
+"Требования макроса тестирования свойств для glibc (см. "
+"B<feature_test_macros>(7)):"
 
 #. type: Plain text
 #: man-pages/man2/_exit.2:48
@@ -348,12 +409,18 @@ msgstr "_ISOC99_SOURCE || _POSIX_C_SOURCE\\ E<gt>=\\ 200112L"
 #: man-pages/man2/_exit.2:66
 msgid ""
 "The function B<_exit>()  terminates the calling process \"immediately\".  "
-"Any open file descriptors belonging to the process are closed.  Any children"
-" of the process are inherited by B<init>(1)  (or by the nearest "
-"\"subreaper\" process as defined through the use of the B<prctl>(2)  "
+"Any open file descriptors belonging to the process are closed.  Any children "
+"of the process are inherited by B<init>(1)  (or by the nearest \"subreaper\" "
+"process as defined through the use of the B<prctl>(2)  "
 "B<PR_SET_CHILD_SUBREAPER> operation).  The process's parent is sent a "
 "B<SIGCHLD> signal."
-msgstr "Функция B<_exit>() «безотлагательно» завершает вызывающий процесс. Все открытые дескрипторы файлов, принадлежащие процессу, закрываются. Все его дочерние процессы наследуются B<init>(1) (или ближайшим «собирающим» процессом, определённым вызовом B<prctl>(2) с операцией B<PR_SET_CHILD_SUBREAPER>).Родительскому процессу посылается сигнал B<SIGCHLD>."
+msgstr ""
+"Функция B<_exit>() «безотлагательно» завершает вызывающий процесс. Все "
+"открытые дескрипторы файлов, принадлежащие процессу, закрываются. Все его "
+"дочерние процессы наследуются B<init>(1) (или ближайшим «собирающим» "
+"процессом, определённым вызовом B<prctl>(2) с операцией "
+"B<PR_SET_CHILD_SUBREAPER>).Родительскому процессу посылается сигнал "
+"B<SIGCHLD>."
 
 #. type: Plain text
 #: man-pages/man2/_exit.2:73
@@ -361,7 +428,10 @@ msgid ""
 "The value I<status & 0377> is returned to the parent process as the "
 "process's exit status, and can be collected using one of the B<wait>(2)  "
 "family of calls."
-msgstr "Значение I<status & 0377> возвращается родительскому процессу как код завершаемого процесса; он может быть получен с помощью одной из функций семейства B<wait>(2)."
+msgstr ""
+"Значение I<status & 0377> возвращается родительскому процессу как код "
+"завершаемого процесса; он может быть получен с помощью одной из функций "
+"семейства B<wait>(2)."
 
 #. type: Plain text
 #: man-pages/man2/_exit.2:78
@@ -384,27 +454,40 @@ msgstr "Эти функции не выполняют возврат."
 msgid ""
 "POSIX.1-2001, POSIX.1-2008, SVr4, 4.3BSD.  The function B<_Exit>()  was "
 "introduced by C99."
-msgstr "POSIX.1-2001, POSIX.1-2008, SVr4, 4.3BSD. Функция B<_Exit>() была представлена в C99."
+msgstr ""
+"POSIX.1-2001, POSIX.1-2008, SVr4, 4.3BSD. Функция B<_Exit>() была "
+"представлена в C99."
 
 #. type: Plain text
 #: man-pages/man2/_exit.2:89
 msgid ""
-"For a discussion on the effects of an exit, the transmission of exit status,"
-" zombie processes, signals sent, and so on, see B<exit>(3)."
-msgstr "Обсуждение эффектов при завершении работы, передачу кода выхода, зомби-процессы, сигналы и т. п., смотрите в B<exit>(3)."
+"For a discussion on the effects of an exit, the transmission of exit status, "
+"zombie processes, signals sent, and so on, see B<exit>(3)."
+msgstr ""
+"Обсуждение эффектов при завершении работы, передачу кода выхода, зомби-"
+"процессы, сигналы и т. п., смотрите в B<exit>(3)."
 
 #. type: Plain text
 #: man-pages/man2/_exit.2:115
 msgid ""
-"The function B<_exit>()  is like B<exit>(3), but does not call any functions"
-" registered with B<atexit>(3)  or B<on_exit>(3).  Open B<stdio>(3)  streams "
+"The function B<_exit>()  is like B<exit>(3), but does not call any functions "
+"registered with B<atexit>(3)  or B<on_exit>(3).  Open B<stdio>(3)  streams "
 "are not flushed.  On the other hand, B<_exit>()  does close open file "
-"descriptors, and this may cause an unknown delay, waiting for pending output"
-" to finish.  If the delay is undesired, it may be useful to call functions "
+"descriptors, and this may cause an unknown delay, waiting for pending output "
+"to finish.  If the delay is undesired, it may be useful to call functions "
 "like B<tcflush>(3)  before calling B<_exit>().  Whether any pending I/O is "
 "canceled, and which pending I/O may be canceled upon B<_exit>(), is "
 "implementation-dependent."
-msgstr "Функция B<_exit>() подобна B<exit>(3), но не вызывает никаких функций, зарегистрированных с помощью B<atexit>(3) или B<on_exit>(3). Открытые потоки посредством B<stdio>(3) не сбрасываются. С другой стороны, B<_exit>() закрывает открытые дескрипторы файлов, а это может привести к неопределенной задержке, так как происходит ожидание завершения вывода данных. Если задержка нежелательна, то может быть полезным перед вызовом B<_exit>() вызывать функцию типа B<tcflush>(3). Будет ли отмена ожидания ввод-вывода, а также какие именно ожидающие операции ввода-вывода будут завершены при вызове B<_exit>, зависит от реализации."
+msgstr ""
+"Функция B<_exit>() подобна B<exit>(3), но не вызывает никаких функций, "
+"зарегистрированных с помощью B<atexit>(3) или B<on_exit>(3). Открытые потоки "
+"посредством B<stdio>(3) не сбрасываются. С другой стороны, B<_exit>() "
+"закрывает открытые дескрипторы файлов, а это может привести к неопределенной "
+"задержке, так как происходит ожидание завершения вывода данных. Если "
+"задержка нежелательна, то может быть полезным перед вызовом B<_exit>() "
+"вызывать функцию типа B<tcflush>(3). Будет ли отмена ожидания ввод-вывода, а "
+"также какие именно ожидающие операции ввода-вывода будут завершены при "
+"вызове B<_exit>, зависит от реализации."
 
 #. type: SS
 #: man-pages/man2/_exit.2:115
@@ -419,7 +502,10 @@ msgid ""
 "kernel system call of the same name.  Since glibc 2.3, the wrapper function "
 "invokes B<exit_group>(2), in order to terminate all of the threads in a "
 "process."
-msgstr "В glibc до версии 2.3, обёрточная функция B<_exit>() вызывала системный вызов ядра с тем же именем. Начиная с glibc 2.3, обёрточная функция вызывает B<exit_group>(2), чтобы завершить все нити процесса."
+msgstr ""
+"В glibc до версии 2.3, обёрточная функция B<_exit>() вызывала системный "
+"вызов ядра с тем же именем. Начиная с glibc 2.3, обёрточная функция вызывает "
+"B<exit_group>(2), чтобы завершить все нити процесса."
 
 #. type: Plain text
 #: man-pages/man2/_exit.2:133
@@ -427,7 +513,10 @@ msgid ""
 "B<execve>(2), B<exit_group>(2), B<fork>(2), B<kill>(2), B<wait>(2), "
 "B<wait4>(2), B<waitpid>(2), B<atexit>(3), B<exit>(3), B<on_exit>(3), "
 "B<termios>(3)"
-msgstr "B<execve>(2), B<exit_group>(2), B<fork>(2), B<kill>(2), B<wait>(2), B<wait4>(2), B<waitpid>(2), B<atexit>(3), B<exit>(3), B<on_exit>(3), B<termios>(3)"
+msgstr ""
+"B<execve>(2), B<exit_group>(2), B<fork>(2), B<kill>(2), B<wait>(2), "
+"B<wait4>(2), B<waitpid>(2), B<atexit>(3), B<exit>(3), B<on_exit>(3), "
+"B<termios>(3)"
 
 #. type: TH
 #: man-pages/man3/__ppc_yield.3:25
@@ -456,9 +545,11 @@ msgstr "Руководство программиста Linux"
 #. type: Plain text
 #: man-pages/man3/__ppc_yield.3:30
 msgid ""
-"__ppc_yield, __ppc_mdoio, __ppc_mdoom - Hint the processor to release shared"
-" resources"
-msgstr "__ppc_yield, __ppc_mdoio, __ppc_mdoom - подсказать процессору освободить общие ресурсы"
+"__ppc_yield, __ppc_mdoio, __ppc_mdoom - Hint the processor to release shared "
+"resources"
+msgstr ""
+"__ppc_yield, __ppc_mdoio, __ppc_mdoom - подсказать процессору освободить "
+"общие ресурсы"
 
 #. type: Plain text
 #: man-pages/man3/__ppc_yield.3:32
@@ -487,33 +578,49 @@ msgid ""
 "with other processors on the Power architecture.  They can be used, for "
 "example, if a program waiting on a lock intends to divert the shared "
 "resources to be used by other processors."
-msgstr "Эти функции для архитектуры Power предоставляют подсказки об использовании ресурсов, которые совместно используются несколькими процессорами. Например, эти функции можно использовать, если программа, ожидающая блокировку, намеревается отказаться от совместно используемых ресурсов, чтобы они использовались другими процессорами."
+msgstr ""
+"Эти функции для архитектуры Power предоставляют подсказки об использовании "
+"ресурсов, которые совместно используются несколькими процессорами. Например, "
+"эти функции можно использовать, если программа, ожидающая блокировку, "
+"намеревается отказаться от совместно используемых ресурсов, чтобы они "
+"использовались другими процессорами."
 
 #. type: Plain text
 #: man-pages/man3/__ppc_yield.3:49
 msgid ""
-"B<__ppc_yield>()  provides a hint that performance will probably be improved"
-" if shared resources dedicated to the executing processor are released for "
+"B<__ppc_yield>()  provides a hint that performance will probably be improved "
+"if shared resources dedicated to the executing processor are released for "
 "use by other processors."
-msgstr "Функция B<__ppc_yield>() даёт подсказку, что производительность будет, вероятно, улучшена, если совместно используемые ресурсы, выделенные выполняющему процессору, высвободить для использования другими процессорами."
+msgstr ""
+"Функция B<__ppc_yield>() даёт подсказку, что производительность будет, "
+"вероятно, улучшена, если совместно используемые ресурсы, выделенные "
+"выполняющему процессору, высвободить для использования другими процессорами."
 
 #. type: Plain text
 #: man-pages/man3/__ppc_yield.3:55
 msgid ""
-"B<__ppc_mdoio>()  provides a hint that performance will probably be improved"
-" if shared resources dedicated to the executing processor are released until"
-" all outstanding storage accesses to caching-inhibited storage have been "
+"B<__ppc_mdoio>()  provides a hint that performance will probably be improved "
+"if shared resources dedicated to the executing processor are released until "
+"all outstanding storage accesses to caching-inhibited storage have been "
 "completed."
-msgstr "Функция B<__ppc_mdoio>() даёт подсказку, что производительность будет, вероятно, улучшена, если совместно используемые ресурсы, выделенные выполняющему процессору, высвободить, пока не завершится отложенный доступ к хранилищу с запрещённым кэшем (caching-inhibited storage)."
+msgstr ""
+"Функция B<__ppc_mdoio>() даёт подсказку, что производительность будет, "
+"вероятно, улучшена, если совместно используемые ресурсы, выделенные "
+"выполняющему процессору, высвободить, пока не завершится отложенный доступ к "
+"хранилищу с запрещённым кэшем (caching-inhibited storage)."
 
 #. type: Plain text
 #: man-pages/man3/__ppc_yield.3:61
 msgid ""
-"B<__ppc_mdoom>()  provides a hint that performance will probably be improved"
-" if shared resources dedicated to the executing processor are released until"
-" all outstanding storage accesses to cacheable storage for which the data is"
-" not in the cache have been completed."
-msgstr "Функция B<__ppc_mdoom>() даёт подсказку, что производительность будет, вероятно, улучшена, если совместно используемые ресурсы, выделенные выполняющему процессору, высвободить, пока не завершится отложенный доступ к данным кэшированного хранилища, которых не в кэше."
+"B<__ppc_mdoom>()  provides a hint that performance will probably be improved "
+"if shared resources dedicated to the executing processor are released until "
+"all outstanding storage accesses to cacheable storage for which the data is "
+"not in the cache have been completed."
+msgstr ""
+"Функция B<__ppc_mdoom>() даёт подсказку, что производительность будет, "
+"вероятно, улучшена, если совместно используемые ресурсы, выделенные "
+"выполняющему процессору, высвободить, пока не завершится отложенный доступ к "
+"данным кэшированного хранилища, которых не в кэше."
 
 #. type: SH
 #: man-pages/man3/__ppc_yield.3:61
@@ -563,7 +670,10 @@ msgid ""
 "B<__ppc_yield>(),\n"
 "B<__ppc_mdoio>(),\n"
 "B<__ppc_mdoom>()"
-msgstr "B<__ppc_yield>(),\nB<__ppc_mdoio>(),\nB<__ppc_mdoom>()"
+msgstr ""
+"B<__ppc_yield>(),\n"
+"B<__ppc_mdoio>(),\n"
+"B<__ppc_mdoom>()"
 
 #. type: tbl table
 #: man-pages/man3/__ppc_yield.3:76
@@ -610,7 +720,10 @@ msgid ""
 "__ppc_set_ppr_med, __ppc_set_ppr_very_low, __ppc_set_ppr_low, "
 "__ppc_set_ppr_med_low, __ppc_set_ppr_med_high - Set the Program Priority "
 "Register"
-msgstr "__ppc_set_ppr_med, __ppc_set_ppr_very_low, __ppc_set_ppr_low, __ppc_set_ppr_med_low, __ppc_set_ppr_med_high - изменяет регистр приоритета программы"
+msgstr ""
+"__ppc_set_ppr_med, __ppc_set_ppr_very_low, __ppc_set_ppr_low, "
+"__ppc_set_ppr_med_low, __ppc_set_ppr_med_high - изменяет регистр приоритета "
+"программы"
 
 #. type: Plain text
 #: man-pages/man3/__ppc_set_ppr_med.3:34
@@ -642,7 +755,9 @@ msgstr "B<void __ppc_set_ppr_med_high(void);>"
 msgid ""
 "These functions provide access to the I<Program Priority Register> (PPR) on "
 "the Power architecture."
-msgstr "Эти функции предоставляют доступ к I<Program Priority Register> (PPR, регистру приоритета программы) архитектуры Power."
+msgstr ""
+"Эти функции предоставляют доступ к I<Program Priority Register> (PPR, "
+"регистру приоритета программы) архитектуры Power."
 
 #. type: Plain text
 #: man-pages/man3/__ppc_set_ppr_med.3:52
@@ -650,9 +765,14 @@ msgid ""
 "The PPR is a 64-bit register that controls the program's priority.  By "
 "adjusting the PPR value the programmer may improve system throughput by "
 "causing system resources to be used more efficiently, especially in "
-"contention situations.  The available unprivileged states are covered by the"
-" following functions:"
-msgstr "PPR — это 64-битный регистр, которой управляет приоритетом программы. Изменяя значение PPR, программист может улучшить системную производительность, сделав использование системных ресурсов более эффективным, особенно в ситуациях конкурентного доступа. Доступные непривилегированные состояния достигаются следующими функциями:"
+"contention situations.  The available unprivileged states are covered by the "
+"following functions:"
+msgstr ""
+"PPR — это 64-битный регистр, которой управляет приоритетом программы. "
+"Изменяя значение PPR, программист может улучшить системную "
+"производительность, сделав использование системных ресурсов более "
+"эффективным, особенно в ситуациях конкурентного доступа. Доступные "
+"непривилегированные состояния достигаются следующими функциями:"
 
 #. type: IP
 #: man-pages/man3/__ppc_set_ppr_med.3:52 man-pages/man3/__ppc_set_ppr_med.3:57
@@ -667,27 +787,35 @@ msgstr "*"
 msgid ""
 "B<__ppc_set_ppr_med>()  sets the Program Priority Register value to "
 "I<medium> (default)."
-msgstr "Функция B<__ppc_set_ppr_med>() устанавливает регистр приоритета программы равным I<среднему> значению (по умолчанию)."
+msgstr ""
+"Функция B<__ppc_set_ppr_med>() устанавливает регистр приоритета программы "
+"равным I<среднему> значению (по умолчанию)."
 
 #. type: Plain text
 #: man-pages/man3/__ppc_set_ppr_med.3:61
 msgid ""
 "B<__ppc_set_ppr_very_low>()  sets the Program Priority Register value to "
 "I<very low>."
-msgstr "Функция B<__ppc_set_ppr_very_low>() устанавливает регистр приоритета программы равным I<очень низкому> значению."
+msgstr ""
+"Функция B<__ppc_set_ppr_very_low>() устанавливает регистр приоритета "
+"программы равным I<очень низкому> значению."
 
 #. type: Plain text
 #: man-pages/man3/__ppc_set_ppr_med.3:65
 msgid ""
 "B<__ppc_set_ppr_low>()  sets the Program Priority Register value to I<low>."
-msgstr "Функция B<__ppc_set_ppr_low>() устанавливает регистр приоритета программы равным I<низкому> значению."
+msgstr ""
+"Функция B<__ppc_set_ppr_low>() устанавливает регистр приоритета программы "
+"равным I<низкому> значению."
 
 #. type: Plain text
 #: man-pages/man3/__ppc_set_ppr_med.3:69
 msgid ""
 "B<__ppc_set_ppr_med_low>()  sets the Program Priority Register value to "
 "I<medium low>."
-msgstr "Функция B<__ppc_set_ppr_med_low>() устанавливает регистр приоритета программы равным значению I<ниже среднего>."
+msgstr ""
+"Функция B<__ppc_set_ppr_med_low>() устанавливает регистр приоритета "
+"программы равным значению I<ниже среднего>."
 
 #. type: Plain text
 #: man-pages/man3/__ppc_set_ppr_med.3:74
@@ -695,13 +823,18 @@ msgid ""
 "The privileged state I<medium high> may also be set during certain time "
 "intervals by problem-state (unprivileged)  programs, with the following "
 "function:"
-msgstr "Привилегированное состояние I<выше среднего> также может быть установлено на определённые временные интервалы (непривилегированными) программами в режиме задачи (problem-state) следующей функцией:"
+msgstr ""
+"Привилегированное состояние I<выше среднего> также может быть установлено на "
+"определённые временные интервалы (непривилегированными) программами в режиме "
+"задачи (problem-state) следующей функцией:"
 
 #. type: Plain text
 #: man-pages/man3/__ppc_set_ppr_med.3:78
 msgid ""
 "B<__ppc_set_ppr_med_high>()  sets the Program Priority to I<medium high>."
-msgstr "Функция B<__ppc_set_ppr_med_high>() устанавливает регистр приоритета программы равным значению I<выше среднего>."
+msgstr ""
+"Функция B<__ppc_set_ppr_med_high>() устанавливает регистр приоритета "
+"программы равным значению I<выше среднего>."
 
 #. type: Plain text
 #: man-pages/man3/__ppc_set_ppr_med.3:82
@@ -709,7 +842,10 @@ msgid ""
 "If the program priority is medium high when the time interval expires or if "
 "an attempt is made to set the priority to medium high when it is not "
 "allowed, the priority is set to medium."
-msgstr "Если приоритет программы выше среднего и истёк временной интервал или если выполняется попытка назначить приоритет выше среднего в неразрешённый момент, то приоритет устанавливается в среднее значение."
+msgstr ""
+"Если приоритет программы выше среднего и истёк временной интервал или если "
+"выполняется попытка назначить приоритет выше среднего в неразрешённый "
+"момент, то приоритет устанавливается в среднее значение."
 
 #. type: Plain text
 #: man-pages/man3/__ppc_set_ppr_med.3:94
@@ -718,7 +854,11 @@ msgid ""
 "B<__ppc_set_ppr_med_low>()  are provided by glibc since version 2.18.  The "
 "functions B<__ppc_set_ppr_very_low>()  and B<__ppc_set_ppr_med_high>()  "
 "first appeared in glibc in version 2.23."
-msgstr "Функции B<__ppc_set_ppr_med>(), B<__ppc_set_ppr_low>() и B<__ppc_set_ppr_med_low>() имеются в glibc начиная с версии 2.18. Функции B<__ppc_set_ppr_very_low>() и B<__ppc_set_ppr_med_high>() впервые появились в glibc в версии 2.23."
+msgstr ""
+"Функции B<__ppc_set_ppr_med>(), B<__ppc_set_ppr_low>() и "
+"B<__ppc_set_ppr_med_low>() имеются в glibc начиная с версии 2.18. Функции "
+"B<__ppc_set_ppr_very_low>() и B<__ppc_set_ppr_med_high>() впервые появились "
+"в glibc в версии 2.23."
 
 #. type: tbl table
 #: man-pages/man3/__ppc_set_ppr_med.3:105
@@ -766,7 +906,10 @@ msgid ""
 "will be defined by I<E<lt>sys/platform/ppc.hE<gt>> if B<_ARCH_PWR8> is "
 "defined.  Availability of these functions can be tested using B<#ifdef "
 "_ARCH_PWR8>."
-msgstr "Функции B<__ppc_set_ppr_very_low>() и B<__ppc_set_ppr_med_high>() будут определены из I<E<lt>sys/platform/ppc.hE<gt>>, если определён B<_ARCH_PWR8>. Доступность этих функций можно проверить с помощью B<#ifdef _ARCH_PWR8>."
+msgstr ""
+"Функции B<__ppc_set_ppr_very_low>() и B<__ppc_set_ppr_med_high>() будут "
+"определены из I<E<lt>sys/platform/ppc.hE<gt>>, если определён B<_ARCH_PWR8>. "
+"Доступность этих функций можно проверить с помощью B<#ifdef _ARCH_PWR8>."
 
 #. type: Plain text
 #: man-pages/man3/__ppc_set_ppr_med.3:132
@@ -790,7 +933,9 @@ msgstr "__PPC_GET_TIMEBASE"
 msgid ""
 "__ppc_get_timebase, __ppc_get_timebase_freq - get the current value\n"
 " of the Time Base Register on Power architecture and its frequency.\n"
-msgstr "__ppc_get_timebase, __ppc_get_timebase_freq - возвращают текущее значение\nбазового регистра времени на архитектуре Power и его частоту\n"
+msgstr ""
+"__ppc_get_timebase, __ppc_get_timebase_freq - возвращают текущее значение\n"
+"базового регистра времени на архитектуре Power и его частоту\n"
 
 #. type: Plain text
 #: man-pages/man3/__ppc_get_timebase.3:34
@@ -808,7 +953,11 @@ msgid ""
 "B<__ppc_get_timebase>()  reads the current value of the Time Base Register "
 "and returns its value, while B<__ppc_get_timebase_freq>()  returns the "
 "frequency in which the Time Base Register is updated."
-msgstr "Функция B<__ppc_get_timebase>() читает текущее значение базового регистра времени (Time Base Register) и возвращает его значение, а B<__ppc_get_timebase_freq>() возвращает частоту обновления базового регистра времени."
+msgstr ""
+"Функция B<__ppc_get_timebase>() читает текущее значение базового регистра "
+"времени (Time Base Register) и возвращает его значение, а "
+"B<__ppc_get_timebase_freq>() возвращает частоту обновления базового регистра "
+"времени."
 
 #. type: Plain text
 #: man-pages/man3/__ppc_get_timebase.3:48
@@ -817,21 +966,30 @@ msgid ""
 "processors.  It stores a monotonically incremented value that is updated at "
 "a system-dependent frequency that may be different from the processor "
 "frequency."
-msgstr "Базовый регистр времени — это 64-битный регистр процессоров с архитектурой Power. В нём хранится монотонно увеличивающееся значение, которое обновляется с зависимой от системы частотой, которая может отличаться от частоты процессора."
+msgstr ""
+"Базовый регистр времени — это 64-битный регистр процессоров с архитектурой "
+"Power. В нём хранится монотонно увеличивающееся значение, которое "
+"обновляется с зависимой от системы частотой, которая может отличаться от "
+"частоты процессора."
 
 #. type: Plain text
 #: man-pages/man3/__ppc_get_timebase.3:52
 msgid ""
 "B<__ppc_get_timebase>()  returns a 64-bit unsigned integer that represents "
 "the current value of the Time Base Register."
-msgstr "Функция B<__ppc_get_timebase>() возвращает 64-битное беззнаковое целое, которое представляет собой текущее значение базового регистра времени."
+msgstr ""
+"Функция B<__ppc_get_timebase>() возвращает 64-битное беззнаковое целое, "
+"которое представляет собой текущее значение базового регистра времени."
 
 #. type: Plain text
 #: man-pages/man3/__ppc_get_timebase.3:56
 msgid ""
 "B<__ppc_get_timebase_freq>()  returns a 64-bit unsigned integer that "
 "represents the frequency at which the Time Base Register is updated."
-msgstr "Функция B<__ppc_get_timebase_freq>() возвращает 64-битное беззнаковое целое, которое представляет собой частоту, с которой изменяется базовый регистр времени."
+msgstr ""
+"Функция B<__ppc_get_timebase_freq>() возвращает 64-битное беззнаковое целое, "
+"которое представляет собой частоту, с которой изменяется базовый регистр "
+"времени."
 
 #.  commit d9dc34cd569bcfe714fe8c708e58c028106e8b2e
 #.  commit 8ad11b9a9cf1de82bd7771306b42070b91417c11
@@ -841,7 +999,9 @@ msgid ""
 "GNU C Library support for B<__ppc_get_timebase>()  has been provided since "
 "version 2.16 and B<__ppc_get_timebase_freq>()  has been available since "
 "version 2.17."
-msgstr "Поддержка B<__ppc_get_timebase>() в библиотеку GNU C было добавлена в версию 2.16, а B<__ppc_get_timebase_freq>() доступна начиная с версии 2.17."
+msgstr ""
+"Поддержка B<__ppc_get_timebase>() в библиотеку GNU C было добавлена в версию "
+"2.16, а B<__ppc_get_timebase_freq>() доступна начиная с версии 2.17."
 
 #. type: Plain text
 #: man-pages/man3/__ppc_get_timebase.3:66
@@ -853,7 +1013,9 @@ msgstr "Эти функции являются расширениями GNU."
 msgid ""
 "The following program will calculate the time, in microseconds, spent "
 "between two calls to B<__ppc_get_timebase>()."
-msgstr "Следующая программа вычисляет время в микросекундах, прошедшее между двумя вызовами B<__ppc_get_timebase>()."
+msgstr ""
+"Следующая программа вычисляет время в микросекундах, прошедшее между двумя "
+"вызовами B<__ppc_get_timebase>()."
 
 #. type: SS
 #: man-pages/man3/__ppc_get_timebase.3:70
@@ -870,7 +1032,12 @@ msgid ""
 "#include E<lt>stdio.hE<gt>\n"
 "#include E<lt>stdlib.hE<gt>\n"
 "#include E<lt>sys/platform/ppc.hE<gt>\n"
-msgstr "#include E<lt>inttypes.hE<gt>\n#include E<lt>stdint.hE<gt>\n#include E<lt>stdio.hE<gt>\n#include E<lt>stdlib.hE<gt>\n#include E<lt>sys/platform/ppc.hE<gt>\n"
+msgstr ""
+"#include E<lt>inttypes.hE<gt>\n"
+"#include E<lt>stdint.hE<gt>\n"
+"#include E<lt>stdio.hE<gt>\n"
+"#include E<lt>stdlib.hE<gt>\n"
+"#include E<lt>sys/platform/ppc.hE<gt>\n"
 
 #. type: Plain text
 #: man-pages/man3/__ppc_get_timebase.3:82
@@ -879,7 +1046,10 @@ msgid ""
 "/* Maximum value of the Time Base Register: 2^60 - 1.\n"
 "   Source: POWER ISA.  */\n"
 "#define MAX_TB 0xFFFFFFFFFFFFFFF\n"
-msgstr "/* максимальное значение базового регистра времени: 2^60 - 1.\n   Источник: POWER ISA.  */\n#define MAX_TB 0xFFFFFFFFFFFFFFF\n"
+msgstr ""
+"/* максимальное значение базового регистра времени: 2^60 - 1.\n"
+"   Источник: POWER ISA.  */\n"
+"#define MAX_TB 0xFFFFFFFFFFFFFFF\n"
 
 #. type: Plain text
 #: man-pages/man3/__ppc_get_timebase.3:87
@@ -889,7 +1059,11 @@ msgid ""
 "main(void)\n"
 "{\n"
 "    uint64_t tb1, tb2, diff;\n"
-msgstr "int\nmain(void)\n{\n    uint64_t tb1, tb2, diff;\n"
+msgstr ""
+"int\n"
+"main(void)\n"
+"{\n"
+"    uint64_t tb1, tb2, diff;\n"
 
 #. type: Plain text
 #: man-pages/man3/__ppc_get_timebase.3:90
@@ -897,7 +1071,9 @@ msgstr "int\nmain(void)\n{\n    uint64_t tb1, tb2, diff;\n"
 msgid ""
 "    uint64_t freq = __ppc_get_timebase_freq();\n"
 "    printf(\"Time Base frequency = %\"PRIu64\" Hz\\en\", freq);\n"
-msgstr "    uint64_t freq = __ppc_get_timebase_freq();\n    printf(\"Базовая частота времени = %\"PRIu64\" Hz\\en\", freq);\n"
+msgstr ""
+"    uint64_t freq = __ppc_get_timebase_freq();\n"
+"    printf(\"Базовая частота времени = %\"PRIu64\" Hz\\en\", freq);\n"
 
 #. type: Plain text
 #: man-pages/man3/__ppc_get_timebase.3:92
@@ -927,7 +1103,13 @@ msgid ""
 "        /* Treat Time Base Register overflow.  */\n"
 "        diff = (MAX_TB - tb2) + tb1;\n"
 "    }\n"
-msgstr "    if (tb2 E<gt> tb1) {\n        diff = tb2 - tb1;\n    } else {\n        /* базовый регистр времени переполнился */\n        diff = (MAX_TB - tb2) + tb1;\n    }\n"
+msgstr ""
+"    if (tb2 E<gt> tb1) {\n"
+"        diff = tb2 - tb1;\n"
+"    } else {\n"
+"        /* базовый регистр времени переполнился */\n"
+"        diff = (MAX_TB - tb2) + tb1;\n"
+"    }\n"
 
 #. type: Plain text
 #: man-pages/man3/__ppc_get_timebase.3:106
@@ -935,7 +1117,9 @@ msgstr "    if (tb2 E<gt> tb1) {\n        diff = tb2 - tb1;\n    } else {\n     
 msgid ""
 "    printf(\"Elapsed time  = %1.2f usecs\\en\",\n"
 "            (double) diff * 1000000 / freq );\n"
-msgstr "    printf(\"Прошло  = %1.2f мкс\\en\",\n            (double) diff * 1000000 / freq );\n"
+msgstr ""
+"    printf(\"Прошло  = %1.2f мкс\\en\",\n"
+"            (double) diff * 1000000 / freq );\n"
 
 #. type: Plain text
 #: man-pages/man3/__ppc_get_timebase.3:109
@@ -943,7 +1127,9 @@ msgstr "    printf(\"Прошло  = %1.2f мкс\\en\",\n            (double) d
 msgid ""
 "    exit(EXIT_SUCCESS);\n"
 "}\n"
-msgstr "    exit(EXIT_SUCCESS);\n}\n"
+msgstr ""
+"    exit(EXIT_SUCCESS);\n"
+"}\n"
 
 #. type: Plain text
 #: man-pages/man3/__ppc_get_timebase.3:112
@@ -959,7 +1145,9 @@ msgstr "__SETFPUCW"
 #. type: Plain text
 #: man-pages/man3/__setfpucw.3:11
 msgid "__setfpucw - set FPU control word on i386 architecture (obsolete)"
-msgstr "__setfpucw - устанавливает слово управления FPU для архитектуры i386 (устарела)"
+msgstr ""
+"__setfpucw - устанавливает слово управления FPU для архитектуры i386 "
+"(устарела)"
 
 #. type: Plain text
 #: man-pages/man3/__setfpucw.3:13
@@ -977,7 +1165,11 @@ msgid ""
 "B<__setfpucw>()  transfers I<control_word> to the registers of the FPU "
 "(floating-point unit) on the i386 architecture.  This was used to control "
 "floating-point precision, rounding and floating-point exceptions."
-msgstr "В архитектуре i386 функция B<__setfpucw>() пересылает I<control_word> в регистр FPU (модуль обработки операций с плавающей точкой). Используется для управления точностью, округлением и исключениями при операциях с плавающей точкой."
+msgstr ""
+"В архитектуре i386 функция B<__setfpucw>() пересылает I<control_word> в "
+"регистр FPU (модуль обработки операций с плавающей точкой). Используется для "
+"управления точностью, округлением и исключениями при операциях с плавающей "
+"точкой."
 
 #. type: Plain text
 #: man-pages/man3/__setfpucw.3:24
@@ -994,14 +1186,24 @@ msgid ""
 "B<feupdateenv>(3), and FPU exception handling, like B<feclearexcept>(3), "
 "B<fegetexceptflag>(3), B<feraiseexcept>(3), B<fesetexceptflag>(3), and "
 "B<fetestexcept>(3)."
-msgstr "Начиная с glibc 2.1 эта функция не существует. Для управления режимами округления FPU в ISO C99 введены новые функции (прототипы объявлены в I<E<lt>fenv.hE<gt>>): B<fegetround>(3), B<fesetround>(3), окружением при работе с плавающей точкой: B<fegetenv>(3), B<feholdexcept>(3), B<fesetenv>(3), B<feupdateenv>(3) и для управления исключениями FPU: B<feclearexcept>(3), B<fegetexceptflag>(3), B<feraiseexcept>(3), B<fesetexceptflag>(3) и B<fetestexcept>(3)."
+msgstr ""
+"Начиная с glibc 2.1 эта функция не существует. Для управления режимами "
+"округления FPU в ISO C99 введены новые функции (прототипы объявлены в "
+"I<E<lt>fenv.hE<gt>>): B<fegetround>(3), B<fesetround>(3), окружением при "
+"работе с плавающей точкой: B<fegetenv>(3), B<feholdexcept>(3), "
+"B<fesetenv>(3), B<feupdateenv>(3) и для управления исключениями FPU: "
+"B<feclearexcept>(3), B<fegetexceptflag>(3), B<feraiseexcept>(3), "
+"B<fesetexceptflag>(3) и B<fetestexcept>(3)."
 
 #. type: Plain text
 #: man-pages/man3/__setfpucw.3:51
 msgid ""
 "If direct access to the FPU control word is still needed, the B<_FPU_GETCW> "
 "and B<_FPU_SETCW> macros from I<E<lt>fpu_control.hE<gt>> can be used."
-msgstr "Если по какой-то причине необходим прямой доступ к слову управления FPU, то можно использовать макросы B<_FPU_GETCW> и B<_FPU_SETCW> из I<E<lt>fpu_control.hE<gt>>."
+msgstr ""
+"Если по какой-то причине необходим прямой доступ к слову управления FPU, то "
+"можно использовать макросы B<_FPU_GETCW> и B<_FPU_SETCW> из "
+"I<E<lt>fpu_control.hE<gt>>."
 
 #. type: Plain text
 #: man-pages/man3/__setfpucw.3:53
