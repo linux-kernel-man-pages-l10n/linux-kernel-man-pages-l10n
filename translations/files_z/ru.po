@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
-"POT-Creation-Date: 2019-08-26 08:35+0300\n"
+"POT-Creation-Date: 2019-08-26 09:27+0300\n"
 "PO-Revision-Date: 2019-08-11 05:28+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/"

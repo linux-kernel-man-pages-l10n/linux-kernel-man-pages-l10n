@@ -212,7 +212,8 @@ actions PotToTX
 
 actions UnifyLen
 {
-	msgmerge -w 79 -U $(>)/ru.po $(>).pot
+	msgmerge -w 79 $(>)/ru.po $(>).pot >/tmp/`basename $(>)`_tmp
+	mv /tmp/`basename $(>)`_tmp $(>)/ru.po
 }
 
 # tar : lang
