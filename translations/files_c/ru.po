@@ -1,25 +1,21 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
+# Copyright (C) 2019 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Azamat Hackimov <azamat.hackimov@gmail.com>, 2014
-# Dmitriy S. Seregin <dseregin@59.ru>, 2013
-# Dmitry Bolkhovskikh <d20052005@yandex.ru>, 2017
-# Katrin Kutepova <blackkatelv@gmail.com>, 2018
-# Katrin Kutepova <blackkatelv@gmail.com>, 2018
-# Dmitriy S. Seregin <dseregin@59.ru>, 2013
-# Yuri Kozlov <yuray@komyakino.ru>, 2011-2019
-# Yuri Kozlov <yuray@komyakino.ru>, 2013
-# Иван Павлов <pavia00@gmail.com>, 2017
+# Azamat Hackimov <azamat.hackimov@gmail.com>, 2014.
+# Dmitriy S. Seregin <dseregin@59.ru>, 2013.
+# Dmitry Bolkhovskikh <d20052005@yandex.ru>, 2017.
+# Katrin Kutepova <blackkatelv@gmail.com>, 2018.
+# Yuri Kozlov <yuray@komyakino.ru>, 2011-2019.
+# Yuri Kozlov <yuray@komyakino.ru>, 2013.
+# Иван Павлов <pavia00@gmail.com>, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:24+0300\n"
-"PO-Revision-Date: 2019-08-26 06:20+0000\n"
+"PO-Revision-Date: 2019-08-27 18:53+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
-"Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/"
-"ru/)\n"
+"Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,6 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Lokalize 2.0\n"
 
 #.  Copyright (C) 2011, Hewlett-Packard Development Company, L.P.
 #.  Written by Stephen M. Cameron <scameron@beardog.cce.hp.com>
@@ -876,7 +873,7 @@ msgstr "CPUID"
 #: man-pages/man4/cpuid.4:26
 #, no-wrap
 msgid "2019-08-02"
-msgstr ""
+msgstr "2019-08-02"
 
 #. type: Plain text
 #: man-pages/man4/cpuid.4:29
@@ -992,7 +989,7 @@ msgstr "Очень старые процессоры x86 не поддержив
 #. type: Plain text
 #: man-pages/man4/cpuid.4:95
 msgid "B<cpuid>(1)"
-msgstr ""
+msgstr "B<cpuid>(1)"
 
 #. type: Plain text
 #: man-pages/man4/cpuid.4:99
@@ -2951,6 +2948,10 @@ msgid ""
 "black, 1 = red, 2 = green, 3 = brown, 4 = blue, 5 = magenta, 6 = cyan, 7 = "
 "white; 8\\(en15 = bright versions of 0\\(en7."
 msgstr ""
+"Следующие последовательности не являются ни ECMA-48, ни VT102. Они есть "
+"только в драйвере консоли Linux. Цвета в параметрах SGR: 0 = чёрный, 1 = "
+"красный, 2 = зелёный, 3 = коричневый, 4 = синий, 5 = сиреневый, 6 = голубой, "
+"7 = белый, 8\\(en15 = яркие версии 0\\(en7."
 
 #. type: tbl table
 #: man-pages/man4/console_codes.4:367
@@ -2962,7 +2963,7 @@ msgstr "ESC [ 1 ; I<n> ]"
 #: man-pages/man4/console_codes.4:367
 #, no-wrap
 msgid "Set color I<n> as the underline color."
-msgstr ""
+msgstr "Назначить цвет I<n> цветом подчеркивания."
 
 #. type: tbl table
 #: man-pages/man4/console_codes.4:368
@@ -2974,7 +2975,7 @@ msgstr "ESC [ 2 ; I<n> ]"
 #: man-pages/man4/console_codes.4:368
 #, no-wrap
 msgid "Set color I<n> as the dim color."
-msgstr ""
+msgstr "Назначить цвет I<n> цветом затемнения."
 
 #. type: tbl table
 #: man-pages/man4/console_codes.4:369
@@ -3089,6 +3090,8 @@ msgid ""
 "Set the cursor blink interval in milliseconds\n"
 "(since Linux 4.2)."
 msgstr ""
+"Задать интервал мигания курсора (в миллисекундах)\n"
+"(начиная с Linux 4.2)."
 
 #. type: SS
 #: man-pages/man4/console_codes.4:386
@@ -10555,6 +10558,14 @@ msgid ""
 "root directories of the new namespace.  (This applies both for the cgroups "
 "version 1 hierarchies and the cgroups version 2 unified hierarchy.)"
 msgstr ""
+"Каждое пространство имён cgroup имеет свой набор корневых каталогов cgroup. "
+"Данные корневые каталоги являются базовыми точками относительных "
+"расположений, показываемых в соответствующих записях файла I</proc/[pid]/"
+"cgroup>. Когда процесс создаёт новое пространство имён cgroup с помощью "
+"B<clone>(2) или B<unshare>(2) с флагом B<CLONE_NEWCGROUP>, то его текущие "
+"каталоги cgroups становятся корневыми каталогами cgroup нового пространства "
+"имён (это применимо как для иерархии cgroups версии 1, так и  для "
+"унифицированной иерархии cgroups версии 2)."
 
 #. type: Plain text
 #: man-pages/man7/cgroup_namespaces.7:67
@@ -10567,6 +10578,12 @@ msgid ""
 "the pathname will show I<../> entries for each ancestor level in the cgroup "
 "hierarchy."
 msgstr ""
+"При чтении членов cgroup «целевого» процесса из I</proc/[pid]/cgroup> путь в "
+"третьем поле каждой записи будет относительным по отношению к корневому "
+"каталогу cgroup читающего процесса для соответствующей иерархии cgroup. Если "
+"каталог cgroup процесса назначения лежит вне корневого каталоге пространства "
+"имён cgroup читающего процесса, то путь будет показан как I<../> для каждого "
+"уровня предка в иерархии cgroup."
 
 #. type: Plain text
 #: man-pages/man7/cgroup_namespaces.7:70
@@ -10584,6 +10601,9 @@ msgid ""
 "a child cgroup in the I<freezer> hierarchy, and place a process in that "
 "cgroup that we will use as part of the demonstration below:"
 msgstr ""
+"Сначала (от суперпользователя) в оболочке начального пространства имён "
+"cgroup создадим дочернюю cgroup в иерархии I<freezer> и поместим в эту "
+"cgroup процесс, который будет использоваться как часть демонстрации далее:"
 
 #. type: Plain text
 #: man-pages/man7/cgroup_namespaces.7:83
@@ -10639,7 +10659,7 @@ msgstr ""
 #: man-pages/man7/cgroup_namespaces.7:108
 #, no-wrap
 msgid "# B<PS1=\"sh2# \" unshare -Cm bash>\n"
-msgstr ""
+msgstr "# B<PS1=\"sh2# \" unshare -Cm bash>\n"
 
 #. type: Plain text
 #: man-pages/man7/cgroup_namespaces.7:120
@@ -10649,6 +10669,10 @@ msgid ""
 "the initial cgroup namespace (I<init>, with PID 1), and the process in the "
 "sibling cgroup (I<sub2>):"
 msgstr ""
+"Из новой оболочки, запущенной B<unshare>(1), теперь файлы I</proc/[pid]/"
+"cgroup> содержат, соответственно, новый процесс-оболочку, процесс, "
+"находящийся в первоначальном пространстве имён cgroup (I<init> с PID 1) и "
+"процесс в родственной cgroup (I<sub2>):"
 
 #. type: Plain text
 #: man-pages/man7/cgroup_namespaces.7:129
@@ -10661,6 +10685,12 @@ msgid ""
 "sh2# B<cat /proc/20124/cgroup | grep freezer>\n"
 "7:freezer:/../sub2\n"
 msgstr ""
+"sh2# B<cat /proc/self/cgroup | grep freezer>\n"
+"7:freezer:/\n"
+"sh2# B<cat /proc/1/cgroup | grep freezer>\n"
+"7:freezer:/..\n"
+"sh2# B<cat /proc/20124/cgroup | grep freezer>\n"
+"7:freezer:/../sub2\n"
 
 #. type: Plain text
 #: man-pages/man7/cgroup_namespaces.7:145
@@ -10698,6 +10728,8 @@ msgid ""
 "sh2# B<cat /proc/self/mountinfo | grep freezer>\n"
 "155 145 0:32 /.. /sys/fs/cgroup/freezer ...\n"
 msgstr ""
+"sh2# B<cat /proc/self/mountinfo | grep freezer>\n"
+"155 145 0:32 /.. /sys/fs/cgroup/freezer ...\n"
 
 #. type: Plain text
 #: man-pages/man7/cgroup_namespaces.7:171
@@ -10713,6 +10745,17 @@ msgid ""
 "from the new shell (i.e., perform the mount from a process that is in the "
 "new cgroup namespace), after which we see the expected results:"
 msgstr ""
+"Четвёртое поле в этой строке (I</..>) должен содержать каталог в файловой "
+"системе cgroup, который является корнем этого монтирования. Так как по "
+"определению пространств имён cgroup текущий каталог freezer cgroup процесса "
+"становится его корневым каталогом freezer cgroup, в этом поле мы должны "
+"увидеть \\(aq/\\(aq. Проблема здесь в том, что мы видим запись о "
+"монтировании для файловой системы cgroup, которая соответствует начальному "
+"пространству имён cgroup (чья файловая система cgroup действительно имеет "
+"корень в родительском каталоге I<sub>). Чтобы это исправить нам нужно "
+"перемонтировать файловую систему freezer cgroup из новой оболочки (т. е. "
+"выполнить монтирование из процесса, который находится в новом пространстве "
+"имён cgroup), после чего мы увидим ожидаемый результат:"
 
 #. type: Plain text
 #: man-pages/man7/cgroup_namespaces.7:180
@@ -10725,6 +10768,12 @@ msgid ""
 "sh2# B<cat /proc/self/mountinfo | grep freezer>\n"
 "155 145 0:32 / /sys/fs/cgroup/freezer rw,relatime ...\n"
 msgstr ""
+"sh2# B<mount --make-rslave />     # не распространять события монтирования\n"
+"                               # в другие пространства имён\n"
+"sh2# B<umount /sys/fs/cgroup/freezer>\n"
+"sh2# B<mount -t cgroup -o freezer freezer /sys/fs/cgroup/freezer>\n"
+"sh2# B<cat /proc/self/mountinfo | grep freezer>\n"
+"155 145 0:32 / /sys/fs/cgroup/freezer rw,relatime ...\n"
 
 #. type: SH
 #: man-pages/man7/cgroup_namespaces.7:183
@@ -11265,6 +11314,8 @@ msgid ""
 "Various fields in the I</proc/[pid]/status> file show the process "
 "credentials described above.  See B<proc>(5)  for further information."
 msgstr ""
+"Различные поля в файле I</proc/[pid]/status> отражают идентификаторы "
+"процесса, описанные выше. Подробности смотрите в B<proc>(5)."
 
 #. type: Plain text
 #: man-pages/man7/credentials.7:314
@@ -11301,6 +11352,18 @@ msgid ""
 "B<pid_namespaces>(7), B<pthreads>(7), B<signal>(7), B<unix>(7), "
 "B<user_namespaces>(7), B<sudo>(8)"
 msgstr ""
+"B<bash>(1), B<csh>(1), B<groups>(1), B<id>(1), B<newgrp>(1), B<ps>(1), "
+"B<runuser>(1), B<setpriv>(1), B<sg>(1), B<su>(1), B<access>(2), "
+"B<execve>(2), B<faccessat>(2), B<fork>(2), B<getgroups>(2), B<getpgrp>(2), "
+"B<getpid>(2), B<getppid>(2), B<getsid>(2), B<kill>(2), B<setegid>(2), "
+"B<seteuid>(2), B<setfsgid>(2), B<setfsuid>(2), B<setgid>(2), "
+"B<setgroups>(2), B<setpgid>(2), B<setresgid>(2), B<setresuid>(2), "
+"B<setsid>(2), B<setuid>(2), B<waitpid>(2), B<euidaccess>(3), "
+"B<initgroups>(3), B<killpg>(3), B<tcgetpgrp>(3), B<tcgetsid>(3), "
+"B<tcsetpgrp>(3), B<group>(5), B<passwd>(5), B<shadow>(5), "
+"B<capabilities>(7), B<namespaces>(7), B<path_resolution>(7), "
+"B<pid_namespaces>(7), B<pthreads>(7), B<signal>(7), B<unix>(7), "
+"B<user_namespaces>(7), B<sudo>(8)"
 
 #. type: TH
 #: man-pages/man7/cp1252.7:25
@@ -12661,6 +12724,8 @@ msgstr "Позволяет игнорировать закрепляющий б�
 msgid ""
 "modify I<user> extended attributes on sticky directory owned by any user;"
 msgstr ""
+"Позволяет изменять расширенные I<пользовательские> атрибуты закреплённого "
+"каталога, принадлежащего любому пользователю;"
 
 #. type: Plain text
 #: man-pages/man7/capabilities.7:150
@@ -13042,6 +13107,9 @@ msgid ""
 "B<quotactl>(2), B<mount>(2), B<umount>(2), B<pivot_root>(2), B<swapon>(2), "
 "B<swapoff>(2), B<sethostname>(2), and B<setdomainname>(2);"
 msgstr ""
+"Позволяет выполнять следующие задачи управления системой: B<quotactl>(2), "
+"B<mount>(2), B<umount>(2), B<pivot_root>(2), B<swapon>(2), B<swapoff>(2), "
+"B<sethostname>(2), and B<setdomainname>(2);"
 
 #. type: Plain text
 #: man-pages/man7/capabilities.7:348
@@ -13257,6 +13325,8 @@ msgid ""
 "Modify autogroup nice values by writing to I</proc/[pid]autogroup> (see "
 "B<sched>(7))."
 msgstr ""
+"Позволяет изменять значения уступчивости автогруппы, посредством записи в I</"
+"proc/[pid]autogroup> (смотрите B<sched>(7))."
 
 #. type: TP
 #: man-pages/man7/capabilities.7:492
@@ -15468,12 +15538,15 @@ msgid ""
 "user-ID-root binaries), you may find the I<-u E<lt>usernameE<gt>> option "
 "useful.  Something like:"
 msgstr ""
+"При попытке запуска B<strace>(1) над исполняемыми файлами с мандатами (или с "
+"установленным битом set-user-ID-root), вам может понадобиться параметр I<-u "
+"E<lt>имя_пользователя<gt>>. Например так:"
 
 #. type: Plain text
 #: man-pages/man7/capabilities.7:1691
 #, no-wrap
 msgid "$ B<sudo strace -o trace.log -u ceci ./myprivprog>\n"
-msgstr ""
+msgstr "$ B<sudo strace -o trace.log -u ceci ./myprivprog>\n"
 
 #.  commit 5915eb53861c5776cfec33ca4fcc1fd20d66dd27 removed
 #.  CONFIG_SECURITY_CAPABILITIES
@@ -20320,7 +20393,7 @@ msgstr "Значение I<fd> не является правильным фай
 #. type: Plain text
 #: man-pages/man2/chdir.2:131
 msgid "I<fd> does not refer to a directory."
-msgstr ""
+msgstr "Значение I<fd> не указывает на каталог."
 
 #. type: Plain text
 #: man-pages/man2/chdir.2:133
@@ -20999,6 +21072,11 @@ msgid ""
 "completed before B<clone>()  returns in the parent process, which will be "
 "relevant if the B<CLONE_VM> flag is also employed.)"
 msgstr ""
+"Сохранить ID нити потомка в указанном I<ctid> месте в памяти потомка. "
+"Операция сохранения завершается до возврата управления из B<clone>() в "
+"пользовательское пространство процесса потомка (заметим, что операция "
+"сохранения может не завершиться до возврата B<clone>() в родительском "
+"процессе, что произойдёт даже с указанным флагом B<CLONE_VM>)."
 
 #. type: TP
 #: man-pages/man2/clone.2:172
@@ -21199,6 +21277,11 @@ msgid ""
 "that IPC objects are identified by mechanisms other than filesystem "
 "pathnames."
 msgstr ""
+"Пространство имён IPC предоставляет изолированную выборку объектов System\\ "
+"V IPC (смотрите B<sysvipc>(7)) и (начиная с Linux 2.6.30) очередей сообщений "
+"POSIX (смотрите B<mq_overview>(7)). Общие характеристики этих механизмов IPC "
+"в том, что объекты IPC определяются механизмами, а не путями в файловой "
+"системе."
 
 #. type: Plain text
 #: man-pages/man2/clone.2:304
@@ -32414,6 +32497,9 @@ msgid ""
 "structure should be treated as opaque: all manipulation of CPU sets should "
 "be done via the macros described in this page."
 msgstr ""
+"Тип данных I<cpu_set_t> реализован в виде битовой маски. Однако структуру "
+"данных следует считать «чёрным ящиком»: все действия с наборами ЦП следует "
+"выполнять с помощью макросов, описанных на этой странице."
 
 #. type: Plain text
 #: man-pages/man3/CPU_SET.3:96
