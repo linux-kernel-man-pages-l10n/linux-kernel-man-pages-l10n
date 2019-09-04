@@ -1,21 +1,19 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
+# Copyright (C) 2019 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Azamat Hackimov <azamat.hackimov@gmail.com>, 2017
-# Dmitry Bolkhovskikh <d20052005@yandex.ru>, 2017
-# Yuri Kozlov <yuray@komyakino.ru>, 2011-2019
-# Yuri Kozlov <yuray@komyakino.ru>, 2013
-# Иван Павлов <pavia00@gmail.com>, 2017
+# Azamat Hackimov <azamat.hackimov@gmail.com>, 2017.
+# Dmitry Bolkhovskikh <d20052005@yandex.ru>, 2017.
+# Yuri Kozlov <yuray@komyakino.ru>, 2011-2019.
+# Yuri Kozlov <yuray@komyakino.ru>, 2013.
+# Иван Павлов <pavia00@gmail.com>, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:25+0300\n"
-"PO-Revision-Date: 2019-08-26 06:20+0000\n"
+"PO-Revision-Date: 2019-09-04 04:41+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
-"Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/"
-"ru/)\n"
+"Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,6 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Lokalize 2.0\n"
 
 #. type: TH
 #: man-pages/man4/full.4:26
@@ -2284,7 +2283,7 @@ msgstr "FANOTIFY"
 #: man-pages/man7/fanotify.7:25
 #, no-wrap
 msgid "2019-08-02"
-msgstr ""
+msgstr "2019-08-02"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:28
@@ -2462,6 +2461,14 @@ msgid ""
 "the recipient must write a response which decides whether access is granted "
 "or not."
 msgstr ""
+"Генерируется два типа событий: события I<уведомления> и события I<доступа>. "
+"Уведомляющие события просто информируют и не требуют действия от принявшего "
+"приложения, за исключением того, что файловый дескриптор, передаваемый в "
+"событии общего типа, должен быть закрыт. Закрытие файловых дескрипторов для "
+"каждого события применяется только приложениями, которые инициализировали "
+"fanotify без использования B<FAN_REPORT_FID> (смотрите ниже). События "
+"доступа запрашивают получившее приложение о разрешении доступа к файлу. Для "
+"этих событий получатель должен написать ответ, давать ли доступ или нет."
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:132
@@ -2505,6 +2512,9 @@ msgid ""
 "After a successful B<read>(2), the read buffer contains one or more of the "
 "following structures:"
 msgstr ""
+"При указании флага B<FAN_REPORT_FID> в B<fanotify_init>(2) структуры данных "
+"возвращаются слушателю событий в каждом событии. После успешного выполнения "
+"B<read>(2) буфер чтения содержит одну или более следующих структур:"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:166
@@ -2538,6 +2548,9 @@ msgid ""
 "detailed below following the generic I<fanotify_event_metadata> structure "
 "within the read buffer:"
 msgstr ""
+"Если в B<fanotify_init>(2) среди флагов указан и B<FAN_REPORT_FID>, то вы "
+"также должны ожидать структуру после общей структуры "
+"I<fanotify_event_metadata> в буфере чтения:"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:185
@@ -2549,6 +2562,11 @@ msgid ""
 "    unsigned char file_handle[0];\n"
 "};\n"
 msgstr ""
+"struct fanotify_event_info_fid {\n"
+"    struct fanotify_event_info_header hdr;\n"
+"    __kernel_fsid_t fsid;\n"
+"    unsigned char file_handle[0];\n"
+"};\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:192
@@ -2589,6 +2607,10 @@ msgid ""
 "I<event_len> is always B<FAN_EVENT_METADATA_LEN>.  With B<FAN_REPORT_FID>, "
 "I<event_len> also includes the variable length file identifier."
 msgstr ""
+"Длина данных текущего события и смещение на следующее событие в буфере. Без "
+"B<FAN_REPORT_FID> значение I<event_len> всегда равно "
+"B<FAN_EVENT_METADATA_LEN>. С B<FAN_REPORT_FID> значение I<event_len> также "
+"включает идентификатор файла переменной длины."
 
 #. type: TP
 #: man-pages/man7/fanotify.7:215
@@ -2666,6 +2688,13 @@ msgid ""
 "directory.  The reading application is responsible for closing this file "
 "descriptor."
 msgstr ""
+"Открытый файловый дескриптор объекта доступа или B<FAN_NOFD>, если возникло "
+"переполнение очереди. Если файловый дескриптор fanotify инициализирован с "
+"использованием B<FAN_REPORT_FID>,то приложения должны ожидать, что это "
+"значение равно B<FAN_NOFD> у каждого полученного события. Файловый "
+"дескриптор можно использовать для доступа к содержимому отслеживаемого файла "
+"или каталога. Читающее приложение ответственно за закрытие этого файлового "
+"дескриптора."
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:262
@@ -2778,78 +2807,81 @@ msgstr "Файл открыт для выполнения. Смотрите ЗА
 #: man-pages/man7/fanotify.7:302
 #, no-wrap
 msgid "B<FAN_ATTRIB>"
-msgstr ""
+msgstr "B<FAN_ATTRIB>"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:305
 msgid "A file or directory metadata was changed."
-msgstr ""
+msgstr "Метаданные файла или каталога изменены."
 
 #. type: TP
 #: man-pages/man7/fanotify.7:305
 #, no-wrap
 msgid "B<FAN_CREATE>"
-msgstr ""
+msgstr "B<FAN_CREATE>"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:308
 msgid "A child file or directory was created in a watched parent."
-msgstr ""
+msgstr "Создан дочерний файл или каталог в отслеживаемом родителе."
 
 #. type: TP
 #: man-pages/man7/fanotify.7:308
 #, no-wrap
 msgid "B<FAN_DELETE>"
-msgstr ""
+msgstr "B<FAN_DELETE>"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:311
 msgid "A child file or directory was deleted in a watched parent."
-msgstr ""
+msgstr "Удалён дочерний файл или каталог в отслеживаемом родителе."
 
 #. type: TP
 #: man-pages/man7/fanotify.7:311
 #, no-wrap
 msgid "B<FAN_DELETE_SELF>"
-msgstr ""
+msgstr "B<FAN_DELETE_SELF>"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:314
 msgid "A watched file or directory was deleted."
-msgstr ""
+msgstr "Отслеживаемый файл или каталог был удалён."
 
 #. type: TP
 #: man-pages/man7/fanotify.7:314
 #, no-wrap
 msgid "B<FAN_MOVED_FROM>"
-msgstr ""
+msgstr "B<FAN_MOVED_FROM>"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:317
 msgid "A file or directory has been moved from a watched parent directory."
 msgstr ""
+"Дочерний файл или каталог был перемещён из отслеживаемого родительского "
+"каталога."
 
 #. type: TP
 #: man-pages/man7/fanotify.7:317
 #, no-wrap
 msgid "B<FAN_MOVED_TO>"
-msgstr ""
+msgstr "B<FAN_MOVED_TO>"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:320
 msgid "A file or directory has been moved to a watched parent directory."
 msgstr ""
+"Дочерний файл или каталог был помещён в отслеживаемый родительский каталог."
 
 #. type: TP
 #: man-pages/man7/fanotify.7:320
 #, no-wrap
 msgid "B<FAN_MOVE_SELF>"
-msgstr ""
+msgstr "B<FAN_MOVE_SELF>"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:323
 msgid "A watched file or directory was moved."
-msgstr ""
+msgstr "Отслеживаемый файл или каталог был перемещён."
 
 #. type: TP
 #: man-pages/man7/fanotify.7:323
@@ -2982,34 +3014,36 @@ msgstr "    FAN_CLOSE_WRITE | FAN_CLOSE_NOWRITE\n"
 #: man-pages/man7/fanotify.7:377
 msgid "To check for any move event, the following bit mask may be used:"
 msgstr ""
+"Для проверки любого события перемещения может использоваться следующая "
+"битовая маска:"
 
 #. type: TP
 #: man-pages/man7/fanotify.7:377
 #, no-wrap
 msgid "B<FAN_MOVE>"
-msgstr ""
+msgstr "B<FAN_MOVE>"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:381
 msgid "A file or directory was moved.  This is a synonym for:"
-msgstr ""
+msgstr "Файл или каталог был перемещён. Это синоним для:"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:383
 #, no-wrap
 msgid "    FAN_MOVED_FROM | FAN_MOVED_TO\n"
-msgstr ""
+msgstr "    FAN_MOVED_FROM | FAN_MOVED_TO\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:387
 msgid "The fields of the I<fanotify_event_info_fid> structure are as follows:"
-msgstr ""
+msgstr "Поля структуры I<fanotify_event_info_fid>:"
 
 #. type: TP
 #: man-pages/man7/fanotify.7:387
 #, no-wrap
 msgid "I<hdr>"
-msgstr ""
+msgstr "I<hdr>"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:409
@@ -3024,12 +3058,21 @@ msgid ""
 "a I<len> field.  In the current implementation, the value of I<len> is "
 "always (event_len - FAN_EVENT_METADATA_LEN)."
 msgstr ""
+"Структура типа I<fanotify_event_info_header>. Это общий заголовок, "
+"содержащий информацию для описания дополнительной информации, присоединяемой "
+"к событию. Например, когда файловый дескриптор fanotify создан с "
+"использованием B<FAN_REPORT_FID>, поле I<info_type> этого заголовка равно "
+"B<FAN_EVENT_INFO_TYPE_FID>. Слушатели события могут использовать это поле "
+"для проверки того, что полученная дополнительная информация о событии имеет "
+"правильный тип. Также I<fanotify_event_info_header> содержит поле I<len>.  В "
+"текущей реализации значение I<len> всегда равно (event_len - "
+"FAN_EVENT_METADATA_LEN)."
 
 #. type: TP
 #: man-pages/man7/fanotify.7:409
 #, no-wrap
 msgid "I<fsid>"
-msgstr ""
+msgstr "I<fsid>"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:419
@@ -3038,12 +3081,15 @@ msgid ""
 "associated with the event.  It is a structure of type I<__kernel_fsid_t> and "
 "contains the same value as I<f_fsid> when calling B<statfs>(2)."
 msgstr ""
+"Уникальный идентификатор файловой системы, содержащей объект, связанный с "
+"событием. Это структура имеет тип I<__kernel_fsid_t> и содержит те же "
+"значения что и I<f_fsid> при вызове B<statfs>(2)."
 
 #. type: TP
 #: man-pages/man7/fanotify.7:419
 #, no-wrap
 msgid "I<file_handle>"
-msgstr ""
+msgstr "I<file_handle>"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:446
@@ -3058,6 +3104,16 @@ msgid ""
 "B<FAN_DELETE_SELF>, and B<FAN_MOVE_SELF> will carry the I<file_handle> "
 "information for the child object if the child object is being watched."
 msgstr ""
+"Структура переменной длины, имеет тип I<file_handle>. Это закрытый "
+"описатель, который соответствует заданному объекту файловой системы, "
+"возвращается B<name_to_handle_at>(2). Её можно использовать как уникально "
+"определяемую файл в файловой системе и передавать аргументом в "
+"B<open_by_handle_at>(2). Заметим, что для событий элементов каталога, таких "
+"как B<FAN_CREATE>, B<FAN_DELETE>, и B<FAN_MOVE>, значение I<file_handle> "
+"описывает изменяемый каталог, а не созданный/удалённый/перемещённый дочерний "
+"объект. События B<FAN_ATTRIB>, B<FAN_DELETE_SELF> и B<FAN_MOVE_SELF> будут "
+"содержать информацию I<file_handle> о дочернем объекте, если дочерний объект "
+"отслеживается."
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:451
@@ -3516,12 +3572,14 @@ msgstr "ПРИМЕР"
 msgid ""
 "The two example programs below demonstrate the usage of the fanotify API."
 msgstr ""
+"Далее показано два примера программы, в которых "
+"продемонстрированоиспользование программного интерфейса fanotify."
 
 #. type: SS
 #: man-pages/man7/fanotify.7:683
 #, no-wrap
 msgid "Example program: fanotify_example.c"
-msgstr ""
+msgstr "Программа-пример: fanotify_example.c"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:695
@@ -3532,6 +3590,11 @@ msgid ""
 "B<FAN_OPEN_PERM> and B<FAN_CLOSE_WRITE>.  When a permission event occurs, a "
 "B<FAN_ALLOW> response is given."
 msgstr ""
+"В первой программе показано как использовать fanotify с информацией об "
+"событийном объекте, передаваемом в виде файлового дескриптора. Программа "
+"помечает точку монтирования, переданную в аргументе командной строки, и ждёт "
+"событий с типом B<FAN_OPEN_PERM> и B<FAN_CLOSE_WRITE>. При возникновении "
+"событий доступа выдаёт ответ B<FAN_ALLOW>."
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:707
@@ -3542,6 +3605,11 @@ msgid ""
 "B<FAN_CLOSE_WRITE> event occurred.  Execution of the program ends when the "
 "user presses the ENTER key."
 msgstr ""
+"В сеансе оболочки далее показан пример запуска программы. В сеансе "
+"выполняется редактирование файла I</home/user/temp/notes>. Перед открытием "
+"файла возникает событие B<FAN_OPEN_PERM>. После закрытия файла возникает "
+"событие B<FAN_CLOSE_WRITE>. Выполнение программы заканчивается после нажатия "
+"пользователем клавиши ENTER."
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:715
@@ -3553,6 +3621,11 @@ msgid ""
 "FAN_OPEN_PERM: File /home/user/temp/notes\n"
 "FAN_CLOSE_WRITE: File /home/user/temp/notes\n"
 msgstr ""
+"# B<./fanotify_example /home>\n"
+"Нажмите enter для завершения работы.\n"
+"Ожидание событий.\n"
+"FAN_OPEN_PERM: Файл /home/user/temp/notes\n"
+"FAN_CLOSE_WRITE: Файл /home/user/temp/notes\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:717
@@ -3564,7 +3637,7 @@ msgstr "Ожидание событий прекращено.\n"
 #: man-pages/man7/fanotify.7:721
 #, no-wrap
 msgid "Program source: fanotify_example.c"
-msgstr ""
+msgstr "Исходный код программы: fanotify_example.c"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:733
@@ -3580,7 +3653,7 @@ msgid ""
 "#include E<lt>sys/fanotify.hE<gt>\n"
 "#include E<lt>unistd.hE<gt>\n"
 msgstr ""
-"#define _GNU_SOURCE     /* требуется для получения O_LARGEFILE */\n"
+"#define _GNU_SOURCE     /* для получения определения O_LARGEFILE */\n"
 "#include E<lt>errno.hE<gt>\n"
 "#include E<lt>fcntl.hE<gt>\n"
 "#include E<lt>limits.hE<gt>\n"
@@ -3594,7 +3667,7 @@ msgstr ""
 #: man-pages/man7/fanotify.7:735
 #, no-wrap
 msgid "/* Read all available fanotify events from the file descriptor \\(aqfd\\(aq */\n"
-msgstr ""
+msgstr "/* читаем все доступные события fanotify из файлового дескриптора «fd» */\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:746
@@ -3634,7 +3707,7 @@ msgstr ""
 #: man-pages/man7/fanotify.7:750
 #, no-wrap
 msgid "    for (;;) {\n"
-msgstr ""
+msgstr "    for (;;) {\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:752
@@ -3832,6 +3905,8 @@ msgid ""
 "                path[path_len] = \\(aq\\e0\\(aq;\n"
 "                printf(\"File %s\\en\", path);\n"
 msgstr ""
+"                path[path_len] = \\(aq\\e0\\(aq;\n"
+"                printf(\"Файл %s\\en\", path);\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:819
@@ -4081,6 +4156,10 @@ msgid ""
 "                break;\n"
 "            }\n"
 msgstr ""
+"                while (read(STDIN_FILENO, &buf, 1) E<gt> 0 && buf != \\(aq\\en\\(aq)\n"
+"                    continue;\n"
+"                break;\n"
+"            }\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:907
@@ -4124,7 +4203,7 @@ msgstr ""
 #: man-pages/man7/fanotify.7:920
 #, no-wrap
 msgid "Example program: fanotify_fid.c"
-msgstr ""
+msgstr "Программа-пример: fanotify_fid.c"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:933
@@ -4137,6 +4216,12 @@ msgid ""
 "all events have been read from the buffer and processed accordingly, the "
 "program simply terminates."
 msgstr ""
+"Во второй программе показано как использовать fanotify с включённым "
+"B<FAN_REPORT_FID>. Программа помечает объект файловой системы, переданный в "
+"аргументе командной строки, и ждёт возникновения события с типом "
+"B<FAN_CREATE>. В маске событий задаётся какой тип объекта файловой системы "
+"ждать — файл или каталог. После того как все события из буфера будут "
+"прочитаны и правильно обработаны программа просто завершает работу."
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:936
@@ -4144,6 +4229,8 @@ msgid ""
 "The following shell sessions show two different invocations of this program, "
 "with different actions performed on a watched object."
 msgstr ""
+"В следующих сеансах показано два разных запуска программы с разными "
+"выполняемыми действиями над наблюдаемым объектом."
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:949
@@ -4155,6 +4242,11 @@ msgid ""
 "events captured within the buffer have been processed.  Program execution "
 "ends once all events captured within the buffer are processed."
 msgstr ""
+"В первом сеансе ставится отметка на I</home/user>. После этого создаётся "
+"обычный файл I</home/user/testfile.txt>. В результате возникает событие "
+"B<FAN_CREATE>, в котором передаётсяобъект отслеживаемого родительского "
+"каталога файла. Программа завершает выполнение после обработки всех "
+"захваченных и помещённых в буфер событий."
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:956
@@ -4165,12 +4257,16 @@ msgid ""
 "FAN_CREATE (file created): Directory /home/user has been modified.\n"
 "All events processed successfully. Program exiting.\n"
 msgstr ""
+"# B<./fanotify_fid /home/user>\n"
+"Ожидание событий.\n"
+"FAN_CREATE (создан файл): Каталог /home/user изменён.\n"
+"Все события успешно обработаны. Завершение программы.\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:958
 #, no-wrap
 msgid "$ B<touch /home/user/testing>              # In another terminal\n"
-msgstr ""
+msgstr "$ B<touch /home/user/testing>              # в другом терминале\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:970
@@ -4180,6 +4276,9 @@ msgid ""
 "specific action results in the program producing a B<FAN_CREATE> and "
 "B<FAN_ONDIR> event."
 msgstr ""
+"Во втором сеансе ставится отметка на I</home/user>. После этого создаётся "
+"каталог I</home/user/testdir>. В результате такого специального действия в "
+"программу передаются события B<FAN_CREATE> и B<FAN_ONDIR>."
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:978
@@ -4191,18 +4290,23 @@ msgid ""
 "        Directory /home/user has been modified.\n"
 "All events processed successfully. Program exiting.\n"
 msgstr ""
+"# B<./fanotify_fid /home/user>\n"
+"Ожидание событий.\n"
+"FAN_CREATE | FAN_ONDIR (создан подкаталог):\n"
+"        Каталог /home/user изменён.\n"
+"Все события успешно обработаны. Завершение программы.\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:980
 #, no-wrap
 msgid "$ B<mkdir -p /home/user/testing>          # In another terminal\n"
-msgstr ""
+msgstr "$ B<mkdir -p /home/user/testing>          # в другом терминале\n"
 
 #. type: SS
 #: man-pages/man7/fanotify.7:982
 #, no-wrap
 msgid "Program source: fanotify_fid.c"
-msgstr ""
+msgstr "Исходный код программы: fanotify_fid.c"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:995
@@ -4219,12 +4323,22 @@ msgid ""
 "#include E<lt>sys/fanotify.hE<gt>\n"
 "#include E<lt>unistd.hE<gt>\n"
 msgstr ""
+"#define _GNU_SOURCE\n"
+"#include E<lt>errno.hE<gt>\n"
+"#include E<lt>fcntl.hE<gt>\n"
+"#include E<lt>limits.hE<gt>\n"
+"#include E<lt>stdio.hE<gt>\n"
+"#include E<lt>stdlib.hE<gt>\n"
+"#include E<lt>sys/types.hE<gt>\n"
+"#include E<lt>sys/stat.hE<gt>\n"
+"#include E<lt>sys/fanotify.hE<gt>\n"
+"#include E<lt>unistd.hE<gt>\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:997
 #, no-wrap
 msgid "#define BUF_SIZE 256\n"
-msgstr ""
+msgstr "#define BUF_SIZE 256\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1009
@@ -4242,6 +4356,17 @@ msgid ""
 "    struct fanotify_event_metadata *metadata;\n"
 "    struct fanotify_event_info_fid *fid;\n"
 msgstr ""
+"int\n"
+"main(int argc, char **argv)\n"
+"{\n"
+"    int fd, ret, event_fd;\n"
+"    ssize_t len, path_len;\n"
+"    char path[PATH_MAX];\n"
+"    char procfd_path[PATH_MAX];\n"
+"    char events_buf[BUF_SIZE];\n"
+"    struct file_handle *file_handle;\n"
+"    struct fanotify_event_metadata *metadata;\n"
+"    struct fanotify_event_info_fid *fid;\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1014
@@ -4252,6 +4377,10 @@ msgid ""
 "        exit(EXIT_FAILURE);\n"
 "    }\n"
 msgstr ""
+"    if (argc != 2) {\n"
+"        fprintf(stderr, \"Некорректное количество аргументов в командной строке.\\e\\n\");\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1017
@@ -4260,6 +4389,8 @@ msgid ""
 "    /* Create an fanotify file descriptor with FAN_REPORT_FID as a flag\n"
 "       so that program can receive fid events. */\n"
 msgstr ""
+"    /* создаём файловый дескриптор fanotify с флагом FAN_REPORT_FID для\n"
+"       того, чтобы программа могла принимать события fid. */\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1023
@@ -4271,12 +4402,17 @@ msgid ""
 "        exit(EXIT_FAILURE);\n"
 "    }\n"
 msgstr ""
+"    fd = fanotify_init(FAN_CLASS_NOTIF | FAN_REPORT_FID, 0);\n"
+"    if (fd == -1) {\n"
+"        perror(\"fanotify_init\");\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1025
 #, no-wrap
 msgid "    /* Place a mark on the filesystem object supplied in argv[1]. */\n"
-msgstr ""
+msgstr "    /* ставим метку на объект файловой системы, заданный в argv[1]. */\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1033
@@ -4290,18 +4426,25 @@ msgid ""
 "        exit(EXIT_FAILURE);\n"
 "    }\n"
 msgstr ""
+"    ret = fanotify_mark(fd, FAN_MARK_ADD | FAN_MARK_ONLYDIR,\n"
+"                        FAN_CREATE | FAN_ONDIR,\n"
+"                        AT_FDCWD, argv[1]);\n"
+"    if (ret == -1) {\n"
+"        perror(\"fanotify_mark\");\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1035
 #, no-wrap
 msgid "    printf(\"Listening for events.\\e\\n\");\n"
-msgstr ""
+msgstr "    printf(\"Ожидание событий.\\e\\n\");\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1037
 #, no-wrap
 msgid "    /* Read events from the event queue into a buffer */\n"
-msgstr ""
+msgstr "    /* читаем события из очереди событий в буфер */\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1043
@@ -4313,12 +4456,17 @@ msgid ""
 "        exit(EXIT_FAILURE);\n"
 "    }\n"
 msgstr ""
+"    len = read(fd, (void *) &events_buf, sizeof(events_buf));\n"
+"    if (len == -1 && errno != EAGAIN) {\n"
+"        perror(\"read\");\n"
+"        exit(EXIT_FAILURE);\n"
+"    }\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1045
 #, no-wrap
 msgid "    /* Process all events within the buffer */\n"
-msgstr ""
+msgstr "    /* обрабатываем все события в буфере */\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1051
@@ -4330,12 +4478,17 @@ msgid ""
 "        fid = (struct fanotify_event_info_fid *) (metadata + 1);\n"
 "        file_handle = (struct file_handle *) fid-E<gt>handle;\n"
 msgstr ""
+"    for (metadata = (struct fanotify_event_metadata *) events_buf;\n"
+"            FAN_EVENT_OK(metadata, len);\n"
+"            metadata = FAN_EVENT_NEXT(metadata, len)) {\n"
+"        fid = (struct fanotify_event_info_fid *) (metadata + 1);\n"
+"        file_handle = (struct file_handle *) fid-E<gt>handle;\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1053
 #, no-wrap
 msgid "        /* Ensure that the event info is of the correct type */\n"
-msgstr ""
+msgstr "        /* проверим, что информация о событии правильного типа */\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1058
@@ -4346,6 +4499,10 @@ msgid ""
 "            exit(EXIT_FAILURE);\n"
 "        }\n"
 msgstr ""
+"        if (fid-E<gt>hdr.info_type != FAN_EVENT_INFO_TYPE_FID) {\n"
+"            fprintf(stderr, \"Получена информация о событии неожидаемого типа.\\e\\n\");\n"
+"            exit(EXIT_FAILURE);\n"
+"        }\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1061
@@ -4354,6 +4511,8 @@ msgid ""
 "        if (metadata-E<gt>mask == FAN_CREATE)\n"
 "            printf(\"FAN_CREATE (file created):\");\n"
 msgstr ""
+"        if (metadata-E<gt>mask == FAN_CREATE)\n"
+"            printf(\"FAN_CREATE (создан файл):\");\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1064
@@ -4362,6 +4521,8 @@ msgid ""
 "        if (metadata-E<gt>mask == FAN_CREATE | FAN_ONDIR)\n"
 "            printf(\"FAN_CREATE | FAN_ONDIR (subdirectory created):\");\n"
 msgstr ""
+"        if (metadata-E<gt>mask == FAN_CREATE | FAN_ONDIR)\n"
+"            printf(\"FAN_CREATE | FAN_ONDIR (создан подкаталог):\");\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1072
@@ -4375,6 +4536,14 @@ msgid ""
 "           to accommodate for the situation where the file handle for the\n"
 "           object was deleted prior to this system call. */\n"
 msgstr ""
+"        /* metadata-E<gt>fd присваивается FAN_NOFD, если включён\n"
+"           FAN_REPORT_FID. Чтобы получить файловый дескриптор для\n"
+"           файлового объекта, соответствующего событию, можно\n"
+"           использовать struct file_handle, которая находится\n"
+"           внутри fanotify_event_info_fid и системный вызов\n"
+"           open_by_handle_at(2). Проверка на ESTALE нужна, чтобы\n"
+"           учесть ситуацию, когда файловый описатель для объекта\n"
+"           был удалён до этого системного вызова. */\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1084
@@ -4392,6 +4561,17 @@ msgid ""
 "\t    }\n"
 "        }\n"
 msgstr ""
+"        event_fd = open_by_handle_at(AT_FDCWD, file_handle, O_RDONLY);\n"
+"        if (ret == -1) {\n"
+"            if (errno == ESTALE) {\n"
+"                printf(\"Обработчик файл более недействителен. \"\n"
+"                        \"Файл был удалён\\e\\n\");\n"
+"                continue;\n"
+"            } else {\n"
+"                perror(\"open_by_handle_at\");\n"
+"                exit(EXIT_FAILURE);\n"
+"\t    }\n"
+"        }\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1087
@@ -4400,12 +4580,14 @@ msgid ""
 "        snprintf(procfd_path, sizeof(procfd_path), \"/proc/self/fd/%d\",\n"
 "                event_fd);\n"
 msgstr ""
+"        snprintf(procfd_path, sizeof(procfd_path), \"/proc/self/fd/%d\",\n"
+"                event_fd);\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1089
 #, no-wrap
 msgid "        /* Retrieve and print the path of the modified dentry */\n"
-msgstr ""
+msgstr "        /* получаем и выводим путь изменённой dentry */\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1095
@@ -4417,6 +4599,11 @@ msgid ""
 "            exit(EXIT_FAILURE);\n"
 "        }\n"
 msgstr ""
+"        path_len = readlink(procfd_path, path, sizeof(path) - 1);\n"
+"        if (path_len == -1) {\n"
+"            perror(\"readlink\");\n"
+"            exit(EXIT_FAILURE);\n"
+"        }\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1098
@@ -4425,12 +4612,14 @@ msgid ""
 "        path[path_len] = \\(aq\\e\\0\\(aq;\n"
 "        printf(\"\\etDirectory \\(aq%s\\(aq has been modified.\\e\\n\", path);\n"
 msgstr ""
+"        path[path_len] = \\(aq\\e\\0\\(aq;\n"
+"        printf(\"\\etКаталог \\(aq%s\\(aq изменён.\\e\\n\", path);\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1100
 #, no-wrap
 msgid "        /* Close associated file descriptor for this event */\n"
-msgstr ""
+msgstr "        /* закрываем связанный файловый дескриптор этого события */\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1103
@@ -4439,6 +4628,8 @@ msgid ""
 "        close(event_fd);\n"
 "    }\n"
 msgstr ""
+"        close(event_fd);\n"
+"    }\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1107
@@ -4448,6 +4639,9 @@ msgid ""
 "    exit(EXIT_SUCCESS);\n"
 "}\n"
 msgstr ""
+"    printf(\"Все события успешно обработаны. Завершение программы.\\e\\n\");\n"
+"    exit(EXIT_SUCCESS);\n"
+"}\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1112
@@ -10463,6 +10657,14 @@ msgid ""
 "the new directory modification events are provided as a I<mask>.  Attempting "
 "to do so will result in the error B<EINVAL> being returned."
 msgstr ""
+"Пометить точку монтирования, заданную в I<pathname>. Если само значение "
+"I<pathname> не является точкой монтирования, то будет помечена точка "
+"монтирования, которая содержит I<pathname>. Будут отслеживаться все "
+"каталоги, подкаталоги и содержащиеся в точке монтирования файлы. Это "
+"значение нельзя использовать, если файловый дескриптор I<fanotify_fd> "
+"инициализирован с флагом B<FAN_REPORT_FID> или если в качестве маски I<mask> "
+"указано любое событие изменения нового каталога. Результатом попытки это "
+"сделать будет возврат ошибки B<EINVAL>."
 
 #. type: TP
 #: man-pages/man2/fanotify_mark.2:138
@@ -10562,13 +10764,13 @@ msgid ""
 "Create an event when a file is opened with the intent to be executed.  See "
 "NOTES for additional details."
 msgstr ""
-"Создать событие, когда файл открыт для начала выполнения. Подробней об этом "
+"Создать событие при открытии файла для начала выполнения. Подробней об этом "
 "в ЗАМЕЧАНИЯХ."
 
 #. type: Plain text
 #: man-pages/man2/fanotify_mark.2:185
 msgid "Create an event when the metadata for a file or directory has changed."
-msgstr ""
+msgstr "Создать событие при изменении метаданных файла или каталога."
 
 #. type: Plain text
 #: man-pages/man2/fanotify_mark.2:189
@@ -10576,6 +10778,8 @@ msgid ""
 "Create an event when a file or directory has been created in a marked parent "
 "directory."
 msgstr ""
+"Создать событие при создании файла или каталога в помеченном родительском "
+"каталоге."
 
 #. type: Plain text
 #: man-pages/man2/fanotify_mark.2:193
@@ -10583,11 +10787,13 @@ msgid ""
 "Create an event when a file or directory has been deleted in a marked parent "
 "directory."
 msgstr ""
+"Создать событие при удалении файла или каталога в помеченном родительском "
+"каталоге."
 
 #. type: Plain text
 #: man-pages/man2/fanotify_mark.2:196
 msgid "Create an event when a marked file or directory itself is deleted."
-msgstr ""
+msgstr "Создать событие при удалении самого помеченного файла или каталога."
 
 #. type: Plain text
 #: man-pages/man2/fanotify_mark.2:200
@@ -10595,6 +10801,8 @@ msgid ""
 "Create an event when a file or directory has been moved from a marked parent "
 "directory."
 msgstr ""
+"Создать событие при перемещении файла или каталога из помеченного "
+"родительского каталога."
 
 #. type: Plain text
 #: man-pages/man2/fanotify_mark.2:204
@@ -10602,6 +10810,8 @@ msgid ""
 "Create an event when a file or directory has been moved to a marked parent "
 "directory."
 msgstr ""
+"Создать событие при перемещении файла или каталога в помеченный родительский "
+"каталог."
 
 #. type: Plain text
 #: man-pages/man2/fanotify_mark.2:211
@@ -10677,6 +10887,17 @@ msgid ""
 "is never reported individually within an event and is always supplied in "
 "conjunction with another event type."
 msgstr ""
+"Создать события для каталогов, например, когда вызывается B<opendir>(3), "
+"B<readdir>(3) (но смотрите ДЕФЕКТЫ) и B<closedir>(3). Без этого флага "
+"события создаются только для файлов. Флаг B<FAN_ONDIR> возвращается в маске "
+"событий только, если файловый дескриптор I<fanotify_fd> инициализирован с "
+"флагом B<FAN_REPORT_FID>. В контексте события элементов каталога, например "
+"таких как B<FAN_CREATE>, B<FAN_DELETE>, B<FAN_MOVED_FROM>и B<FAN_MOVED_TO>, "
+"требуется задавать флаг B<FAN_ONDIR> для создания событий, когда изменяются "
+"элементы подкаталогов (т. е., B<mkdir>(2)/ B<rmdir>(2)). События изменения "
+"элемента подкаталога никогда не будут объединены с с событиями изменений "
+"элементов не подкаталога. Этот флаг никогда не возвращается один в событии и "
+"всегда задаётся вместе с другим типом события."
 
 #. type: TP
 #: man-pages/man2/fanotify_mark.2:268
@@ -10702,7 +10923,7 @@ msgstr ""
 #. type: Plain text
 #: man-pages/man2/fanotify_mark.2:278
 msgid "The following composed values are defined:"
-msgstr ""
+msgstr "Определены следующие составные значения:"
 
 #. type: Plain text
 #: man-pages/man2/fanotify_mark.2:282
@@ -10712,7 +10933,7 @@ msgstr "Файл закрыт (B<FAN_CLOSE_WRITE>|B<FAN_CLOSE_NOWRITE>)."
 #. type: Plain text
 #: man-pages/man2/fanotify_mark.2:286
 msgid "A file or directory has been moved (B<FAN_MOVED_FROM>|B<FAN_MOVED_TO>)."
-msgstr ""
+msgstr "Файл или каталог был перемещён (B<FAN_MOVED_FROM>|B<FAN_MOVED_TO>)."
 
 #. type: Plain text
 #: man-pages/man2/fanotify_mark.2:291
@@ -10801,6 +11022,9 @@ msgid ""
 "B<FAN_REPORT_FID> and mask contains a flag for permission events "
 "(B<FAN_OPEN_PERM> or B<FAN_ACCESS_PERM>)."
 msgstr ""
+"Файловый дескриптор fanotify был открыт с B<FAN_CLASS_NOTIF> или "
+"B<FAN_REPORT_FID> и маска содержит флаг для событий доступа "
+"(B<FAN_OPEN_PERM> или B<FAN_ACCESS_PERM>)."
 
 #. type: Plain text
 #: man-pages/man2/fanotify_mark.2:372
@@ -10857,7 +11081,7 @@ msgstr ""
 #: man-pages/man2/fanotify_mark.2:397
 #, no-wrap
 msgid "B<EXDEV>"
-msgstr ""
+msgstr "B<EXDEV>"
 
 #. type: Plain text
 #: man-pages/man2/fanotify_mark.2:411
@@ -10868,6 +11092,11 @@ msgid ""
 "descriptor returned by B<fanotify_init>(2)  has been created with "
 "B<FAN_REPORT_FID>."
 msgstr ""
+"Объект файловой системы, указанный в I<pathname>, располагается в подтоме "
+"файловой системы (например, B<btrfs>(5)), которая использует I<fsid> "
+"отличный от используемого в её корневом суперблоке. Эта ошибка может "
+"вернуться только, когда файловый дескриптор fanotify, возвращаемый "
+"B<fanotify_init>(2), был создан с  флагом B<FAN_REPORT_FID>."
 
 #. type: Plain text
 #: man-pages/man2/fanotify_mark.2:424
@@ -10877,6 +11106,10 @@ msgid ""
 "returned only when an fanotify file descriptor returned by "
 "B<fanotify_init>(2)  has been created with B<FAN_REPORT_FID>."
 msgstr ""
+"Объект файловой системы, указанный в I<pathname>, не связан с файловой "
+"системой, которая поддерживает I<fsid> (например, B<tmpfs>(5)). Эта ошибка "
+"может вернуться только, когда файловый дескриптор fanotify, возвращаемый "
+"B<fanotify_init>(2), был создан с  флагом B<FAN_REPORT_FID>."
 
 #. type: TP
 #: man-pages/man2/fanotify_mark.2:424
@@ -10892,6 +11125,10 @@ msgid ""
 "only when an fanotify file descriptor returned by B<fanotify_init>(2)  has "
 "been created with B<FAN_REPORT_FID>."
 msgstr ""
+"Объект, указанный в I<pathname>, связан с файловой системой, которая не "
+"поддерживает кодирование файловых описателей. Эта ошибка может вернуться "
+"только, когда файловый дескриптор fanotify, возвращаемый "
+"B<fanotify_init>(2), был создан с  флагом B<FAN_REPORT_FID>."
 
 #. type: Plain text
 #: man-pages/man2/fanotify_mark.2:439
@@ -14292,6 +14529,13 @@ msgid ""
 "permitted to access a file or directory.  Permission to access filesystem "
 "objects is granted by writing to the file descriptor."
 msgstr ""
+"В файловом дескрипторе, используемом в B<fanotify_mark>(2), задаются файлы, "
+"каталоги, точки монтирования и файловые системы, для которых должны "
+"создаваться события fanotify. Эти события можно получить с помощью чтения "
+"файлового дескриптора. Одни события носят уведомительный характер, показывая "
+"что к файлу был получен доступ. Другие события можно использовать для "
+"разрешения приложению доступа к файлу или каталогу. Доступ к объектам "
+"файловой системы разрешается посредством записи в файловый дескриптор."
 
 #. type: Plain text
 #: man-pages/man2/fanotify_init.2:54
@@ -14398,7 +14642,7 @@ msgstr ""
 #: man-pages/man2/fanotify_init.2:96
 #, no-wrap
 msgid "B<FAN_REPORT_FID> (since Linux 5.1)"
-msgstr ""
+msgstr "B<FAN_REPORT_FID> (начиная с Linux 5.1)"
 
 #.  commit a8b13aa20afb69161b5123b4f1acc7ea0a03d360
 #. type: Plain text
@@ -14419,6 +14663,19 @@ msgid ""
 "not permitted with this flag and will result in the error B<EINVAL>.  See "
 "B<fanotify>(7)  for additional information."
 msgstr ""
+"Это значение позволяет получать события, которые содержат дополнительную "
+"информацию о нижележащем объекте файловой системы, относящемся к событию. "
+"Дополнительная структура содержит информацию об объекте, которая добавляется "
+"к структуре общих метаданных событий. Файловый дескриптор, используемый для "
+"представления объекта, заменяется в событии файловым описателем. Он "
+"предназначен для приложений, которым для работы с файлами удобней "
+"использовать файловый описатель, а не файловый дескриптор. Также, его можно "
+"использовать в приложениях, которым интересны события об элементах каталога, "
+"например таких как B<FAN_CREATE>, B<FAN_ATTRIB>, B<FAN_MOVE> и <FAN_DELETE>. "
+"Заметим, что использование событий изменения каталога не поддерживается при "
+"слежении за точкой монтирования. Использование B<FAN_CLASS_CONTENT> или "
+"B<FAN_CLASS_PRE_CONTENT> с этим флагом не допускается и приводит к ошибке "
+"B<EINVAL>. Дополнительную информацию смотрите в B<fanotify>(7)."
 
 #. type: TP
 #: man-pages/man2/fanotify_init.2:126
@@ -14653,6 +14910,9 @@ msgid ""
 "B<FAN_ALL_INIT_FLAGS> (deprecated since Linux kernel version 4.20)  defines "
 "all allowable bits for I<flags>."
 msgstr ""
+"В I<flags> или I<event_f_flags> указано некорректное значение. Значение "
+"B<FAN_ALL_INIT_FLAGS> (устарело, начиная с версии ядра Linux 4.20) "
+"определяет все допустимые биты в I<flags>."
 
 #. type: Plain text
 #: man-pages/man2/fanotify_init.2:264
@@ -18574,7 +18834,7 @@ msgid ""
 "implemented using that system call, with the benefit that I</proc> does not "
 "need to be mounted."
 msgstr ""
-"В Linux c glibc с версией 2.26 и старееB<fexecve>() реализована с "
+"В Linux c glibc с версией 2.26 и старее функция B<fexecve>() реализована с "
 "использованием файловой системы B<proc>(5), поэтому I</proc> должна быть "
 "смонтирована и доступна на момент вызова. Начиная с glibc 2.27, если "
 "используемое ядро поддерживает системный вызов B<execveat>(2), то "
@@ -25318,7 +25578,7 @@ msgstr ""
 #. type: Plain text
 #: man-pages/man3/ftok.3:120
 msgid "B<msgget>(2), B<semget>(2), B<shmget>(2), B<stat>(2), B<sysvipc>(7)"
-msgstr ""
+msgstr "B<msgget>(2), B<semget>(2), B<shmget>(2), B<stat>(2), B<sysvipc>(7)"
 
 #. type: TH
 #: man-pages/man3/fopen.3:44
@@ -25330,7 +25590,7 @@ msgstr "FOPEN"
 #: man-pages/man3/fopen.3:44
 #, no-wrap
 msgid "2019-05-09"
-msgstr ""
+msgstr "2019-05-09"
 
 #. type: Plain text
 #: man-pages/man3/fopen.3:47
@@ -25467,6 +25727,12 @@ msgid ""
 "of the file, but for Android/BSD/MacOS, the initial file position for "
 "reading is at the end of the file."
 msgstr ""
+"Открыть для чтения и добавления (записи в конец файла). Файл создаётся, если "
+"не существует. Вывод всегда добавляется в конец файла. В POSIX ничего не "
+"упоминается о начальном положении при чтении, когда используется данный "
+"режим. В glibc начальное положение в файле для чтения устанавливается в "
+"начало файла, но в Android/BSD/MacOS начальное положение в файле для чтения "
+"устанавливается в конец файла."
 
 #. type: Plain text
 #: man-pages/man3/fopen.3:121
