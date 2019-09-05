@@ -1,24 +1,22 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
+# Copyright (C) 2019 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Artyom Kunyov <artkun@guitarplayer.ru>, 2012
-# Azamat Hackimov <azamat.hackimov@gmail.com>, 2012,2017
-# Dmitry Bolkhovskikh <d20052005@yandex.ru>, 2017
-# Katrin Kutepova <blackkatelv@gmail.com>, 2018
-# Konstantin Shvaykovskiy <kot.shv@gmail.com>, 2012
-# Yuri Kozlov <yuray@komyakino.ru>, 2011-2019
-# Yuri Kozlov <yuray@komyakino.ru>, 2013
-# Иван Павлов <pavia00@gmail.com>, 2017,2019
+# Artyom Kunyov <artkun@guitarplayer.ru>, 2012.
+# Azamat Hackimov <azamat.hackimov@gmail.com>, 2012,2017.
+# Dmitry Bolkhovskikh <d20052005@yandex.ru>, 2017.
+# Katrin Kutepova <blackkatelv@gmail.com>, 2018.
+# Konstantin Shvaykovskiy <kot.shv@gmail.com>, 2012.
+# Yuri Kozlov <yuray@komyakino.ru>, 2011-2019.
+# Yuri Kozlov <yuray@komyakino.ru>, 2013.
+# Иван Павлов <pavia00@gmail.com>, 2017,2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:26+0300\n"
-"PO-Revision-Date: 2019-08-26 06:21+0000\n"
+"PO-Revision-Date: 2019-09-05 22:13+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
-"Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/"
-"ru/)\n"
+"Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,6 +24,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Lokalize 2.0\n"
 
 #. type: TH
 #: man-pages/man4/lirc.4:24
@@ -2186,7 +2185,7 @@ msgstr "LD.SO"
 #: man-pages/man8/ld.so.8:5
 #, no-wrap
 msgid "2019-08-02"
-msgstr ""
+msgstr "2019-08-02"
 
 #. type: Plain text
 #: man-pages/man8/ld.so.8:8
@@ -2243,6 +2242,12 @@ msgid ""
 "format.  Both programs have the same behavior, and use the same support "
 "files and programs (B<ldd>(1), B<ldconfig>(8), and I</etc/ld.so.conf>)."
 msgstr ""
+"Программа B<ld.so> предназначена для обработки двоичных файлов в формате a."
+"out, который используется с давних пор. Программа B<ld-linux.so*> (I</lib/ld-"
+"linux.so.1>, если используется libc5 и I</lib/ld-linux.so.2>, если glibc2) "
+"предназначена для обработки файлов в более современном формате ELF. Обе "
+"программы ведут себя одинаково и используют одни и те же файлы поддержки и "
+"программы (B<ldd>(1), B<ldconfig>(8) и I</etc/ld.so.conf>)."
 
 #. type: Plain text
 #: man-pages/man8/ld.so.8:55
@@ -2589,6 +2594,15 @@ msgid ""
 "B<HOSTALIASES>, B<LOCALDOMAIN>, B<LOCPATH>, B<MALLOC_TRACE>, B<NIS_PATH>, "
 "B<NLSPATH>, B<RESOLV_HOST_CONF>, B<RES_OPTIONS>, B<TMPDIR>, and B<TZDIR>."
 msgstr ""
+"В целях безопасности, если динамический компоновщик определяет, что двоичный "
+"файл должен быть запущен в безопасном режиме выполнения, действие некоторых "
+"переменных окружения отменяется или изменяется; кроме этого, эти переменные "
+"окружения удаляются из окружения, и программа даже не увидит, что они "
+"определены. Некоторые из этих переменных окружения влияют на работу самого "
+"динамического компоновщика, и они описаны ниже. Другие переменные окружения, "
+"учитываемые подобным образом: B<GCONV_PATH>, B<GETCONF_DIR>, B<HOSTALIASES>, "
+"B<LOCALDOMAIN>, B<LOCPATH>, B<MALLOC_TRACE>, B<NIS_PATH>, B<NLSPATH>, "
+"B<RESOLV_HOST_CONF>, B<RES_OPTIONS>, B<TMPDIR> и B<TZDIR>."
 
 #. type: Plain text
 #: man-pages/man8/ld.so.8:249
@@ -2597,6 +2611,10 @@ msgid ""
 "the auxiliary vector (see B<getauxval>(3))  has a nonzero value.  This entry "
 "may have a nonzero value for various reasons, including:"
 msgstr ""
+"Двоичный файл выполняется в безопасном режиме выполнения, если запись "
+"B<AT_SECURE> в вспомогательном векторе (смотрите B<getauxval>(3)) содержит "
+"ненулевое значение. Эта запись может иметь ненулевое значение по разным "
+"причинам:"
 
 #. type: Plain text
 #: man-pages/man8/ld.so.8:254
@@ -2925,6 +2943,12 @@ msgid ""
 "be used to audit the operation of the dynamic linker.  The items in the list "
 "are colon-separated, and there is no support for escaping the separator."
 msgstr ""
+"Определяемый пользователем список общих объектов ELF, которые будут "
+"загружены раньше всех остальных в отдельное пространство имён компоновщика "
+"(т. е., они не внедряются вместо обычных привязываемых символов, которые "
+"могли бы быть в этом процессе). Эти объекты можно использовать для "
+"контрольной проверки операций динамического компоновщика. Элементы в списке "
+"разделяются двоеточиями и двоеточия нельзя экранировать."
 
 #. type: Plain text
 #: man-pages/man8/ld.so.8:424
