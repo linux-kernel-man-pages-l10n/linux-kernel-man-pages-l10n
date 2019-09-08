@@ -1,22 +1,20 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
+# Copyright (C) 2019 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Alex Nik <rage.iz.me@gmail.com>, 2013
-# Azamat Hackimov <azamat.hackimov@gmail.com>, 2013,2016
-# Dmitry Bolkhovskikh <d20052005@yandex.ru>, 2017
-# Yuri Kozlov <yuray@komyakino.ru>, 2011-2019
-# Yuri Kozlov <yuray@komyakino.ru>, 2014
-# Иван Павлов <pavia00@gmail.com>, 2017
+# Alex Nik <rage.iz.me@gmail.com>, 2013.
+# Azamat Hackimov <azamat.hackimov@gmail.com>, 2013,2016.
+# Dmitry Bolkhovskikh <d20052005@yandex.ru>, 2017.
+# Yuri Kozlov <yuray@komyakino.ru>, 2011-2019.
+# Yuri Kozlov <yuray@komyakino.ru>, 2014.
+# Иван Павлов <pavia00@gmail.com>, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:26+0300\n"
-"PO-Revision-Date: 2019-08-26 06:21+0000\n"
+"PO-Revision-Date: 2019-09-08 14:46+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
-"Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/"
-"ru/)\n"
+"Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,6 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Lokalize 2.0\n"
 
 #. type: TH
 #: man-pages/man4/null.4:26
@@ -2997,7 +2996,7 @@ msgstr "NAMESPACES"
 #: man-pages/man7/namespaces.7:27
 #, no-wrap
 msgid "2019-08-02"
-msgstr ""
+msgstr "2019-08-02"
 
 #. type: Plain text
 #: man-pages/man7/namespaces.7:30
@@ -3795,6 +3794,11 @@ msgid ""
 "that IPC objects are identified by mechanisms other than filesystem "
 "pathnames."
 msgstr ""
+"Пространства имён IPC изолируют определённые ресурсы IPC, а именно IPC-"
+"объекты System V (смотрите B<sysvipc>(7)) и (начиная с Linux 2.6.30) очереди "
+"сообщений POSIX (смотрите B<mq_overview>(7)). Общая характеристика этих "
+"механизмов IPC в том, что объекты IPC распознаются механизмами не как пути "
+"файловой системы."
 
 #. type: Plain text
 #: man-pages/man7/namespaces.7:350
@@ -3933,6 +3937,10 @@ msgid ""
 "new UTS namespace are copied from the corresponding values in the caller's "
 "UTS namespace."
 msgstr ""
+"Когда процесс создаёт новое пространство имён UTS с помощью B<clone>(2) или "
+"B<unshare>(2) с флагом B<CLONE_NEWUTS>, имя узла и домен нового пространства "
+"имён UTS копируются из соответствующих значений в пространство имён UTS "
+"вызывающего."
 
 #. type: Plain text
 #: man-pages/man7/namespaces.7:435
