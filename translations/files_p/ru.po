@@ -1,26 +1,22 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
+# Copyright (C) 2019 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Alexey, 2016
-# Alexey, 2016
-# Azamat Hackimov <azamat.hackimov@gmail.com>, 2014-2017
-# kogamatranslator49 <r.podarov@yandex.ru>, 2015
-# Kogan, Darima <silverdk99@gmail.com>, 2014
-# Max Is <ismax799@gmail.com>, 2016
-# Kogan, Darima <silverdk99@gmail.com>, 2014
-# Yuri Kozlov <yuray@komyakino.ru>, 2011-2019
-# Yuri Kozlov <yuray@komyakino.ru>, 2013
-# Иван Павлов <pavia00@gmail.com>, 2017
+# Alexey, 2016.
+# Azamat Hackimov <azamat.hackimov@gmail.com>, 2014-2017.
+# kogamatranslator49 <r.podarov@yandex.ru>, 2015.
+# Kogan, Darima <silverdk99@gmail.com>, 2014.
+# Max Is <ismax799@gmail.com>, 2016.
+# Yuri Kozlov <yuray@komyakino.ru>, 2011-2019.
+# Yuri Kozlov <yuray@komyakino.ru>, 2013.
+# Иван Павлов <pavia00@gmail.com>, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:26+0300\n"
-"PO-Revision-Date: 2019-08-26 06:21+0000\n"
+"PO-Revision-Date: 2019-09-13 21:24+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
-"Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/"
-"ru/)\n"
+"Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,6 +24,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Lokalize 2.0\n"
 
 #. type: TH
 #: man-pages/man4/pts.4:8
@@ -213,7 +210,7 @@ msgstr "PLDD"
 #: man-pages/man1/pldd.1:25
 #, no-wrap
 msgid "2019-08-02"
-msgstr ""
+msgstr "2019-08-02"
 
 #. type: TH
 #: man-pages/man1/pldd.1:25
@@ -258,6 +255,10 @@ msgid ""
 "list includes the libraries that have been dynamically loaded using "
 "B<dlopen>(3)."
 msgstr ""
+"Команда  B<pldd> отображает список динамических объектов общего пользования "
+"(DSO), связанных в процесс для указанного идентификатора процесса (PID). "
+"Этот список также включает в себя библиотеки, динамически загруженные с "
+"помощью B<dlopen>(3)."
 
 #. type: SH
 #: man-pages/man1/pldd.1:40
@@ -274,7 +275,7 @@ msgstr "B<-?>, B<--help>"
 #. type: Plain text
 #: man-pages/man1/pldd.1:44
 msgid "Display a help message and exit."
-msgstr ""
+msgstr "Показать справку и выйти."
 
 #. type: TP
 #: man-pages/man1/pldd.1:44
@@ -285,7 +286,7 @@ msgstr "B<--usage>"
 #. type: Plain text
 #: man-pages/man1/pldd.1:47
 msgid "Display a short usage message and exit."
-msgstr ""
+msgstr "Показать короткое сообщение об использовании и завершить работу."
 
 #. type: TP
 #: man-pages/man1/pldd.1:47
@@ -296,7 +297,7 @@ msgstr "B<-V>, B<--version>"
 #. type: Plain text
 #: man-pages/man1/pldd.1:50
 msgid "Display program version information and exit."
-msgstr ""
+msgstr "Показать сведения о версии программы и выйти."
 
 #. type: SH
 #: man-pages/man1/pldd.1:50
@@ -399,6 +400,9 @@ msgid ""
 "This problem was fixed in glibc 2.30, and the fix has been backported to "
 "earlier glibc versions in some distributions."
 msgstr ""
+"В glibc с версии 2.19 по 2.29, B<pldd> не работала: висла при запуске. Эта "
+"проблема была исправлена в glibc 2.30, и в некоторых дистрибутивах это "
+"исправление было добавлено и в старые версии glibc."
 
 #. type: SH
 #: man-pages/man1/pldd.1:106
@@ -421,6 +425,16 @@ msgid ""
 "/lib64/ld-linux-x86-64.so.2\n"
 "/lib64/libnss_files.so.2\n"
 msgstr ""
+"$ B<echo $$>               # Показать PID оболочки\n"
+"1143\n"
+"$ B<pldd $$>               # Показать объекты, скомпонованные с оболочкой\n"
+"1143:   /usr/bin/bash\n"
+"linux-vdso.so.1\n"
+"/lib64/libtinfo.so.5\n"
+"/lib64/libdl.so.2\n"
+"/lib64/libc.so.6\n"
+"/lib64/ld-linux-x86-64.so.2\n"
+"/lib64/libnss_files.so.2\n"
 
 #. type: Plain text
 #: man-pages/man1/pldd.1:123
@@ -1817,6 +1831,19 @@ msgid ""
 "B<fork>(2)  terminates, then subsequent calls to B<fork>(2)  fail with "
 "B<ENOMEM>."
 msgstr ""
+"Если процесс «init» пространства имён PID завершает работу, то ядро "
+"завершает работу всех процессов в пространстве имён с помощью сигнала "
+"B<SIGKILL>. Такое поведение показывает, что процесс «init» необходим для "
+"корректной работы пространства имён PID. В этом случае последующий вызов "
+"B<fork>(2) в этом пространство имён PID завершается ошибкой B<ENOMEM>; "
+"невозможно создать новый процесс в пространстве имён PID, в котором не "
+"работает процесс «init». Такое может произойти, например, когда процесс "
+"использует открытый файловый дескриптор файла I</proc/[pid]/ns/pid>, "
+"соответствующий процессу, который был в пространстве имён B<setns>(2), в "
+"этом пространстве имён после того, как процесс «init» завершился. Другой "
+"возможный сценарий может произойти после вызова B<unshare>(2): если первый "
+"потомок после этого созданный B<fork>(2) завершится, то последующие вызовы "
+"B<fork>(2)  завершаются ошибкой B<ENOMEM>."
 
 #. type: Plain text
 #: man-pages/man7/pid_namespaces.7:103
@@ -8980,7 +9007,7 @@ msgstr "ready = ppoll(&fds, nfds, tmo_p, &sigmask);\n"
 #. type: Plain text
 #: man-pages/man2/poll.2:277
 msgid "is nearly equivalent to I<atomically> executing the following calls:"
-msgstr ""
+msgstr "почти эквивалентен I<атомарному> выполнению следующих вызовов:"
 
 #. type: Plain text
 #: man-pages/man2/poll.2:282
@@ -9016,6 +9043,10 @@ msgid ""
 "timeout, a negative value expressed in I<*tmo_p> results in an error from "
 "B<ppoll>()."
 msgstr ""
+"Приведённый выше сегмент кода показывает I<ближайший> эквивалент, так как "
+"отрицательное значение I<timeout> в B<poll>() рассматривается как "
+"бесконечное ожидание, а отрицательное значение в I<*tmo_p> привело бы к "
+"ошибке B<ppoll>()."
 
 #. type: Plain text
 #: man-pages/man2/poll.2:307
@@ -9115,7 +9146,7 @@ msgstr "Значение I<nfds> превышает значение B<RLIMIT_NO
 #: man-pages/man2/poll.2:373
 msgid ""
 "(B<ppoll>())  The timeout value expressed in I<*ip> is invalid (negative)."
-msgstr ""
+msgstr "(B<ppoll>()) Время ожидания в I<*ip> некорректно (отрицательное)."
 
 #. type: Plain text
 #: man-pages/man2/poll.2:376
@@ -9265,6 +9296,8 @@ msgid ""
 "B<#define _GNU_SOURCE>             /* See feature_test_macros(7) */\n"
 "B<#include E<lt>sys/mman.hE<gt>>\n"
 msgstr ""
+"B<#define _GNU_SOURCE>             /* смотрите feature_test_macros(7) */\n"
+"B<#include E<lt>sys/mman.hE<gt>>\n"
 
 #. type: Plain text
 #: man-pages/man2/pkey_alloc.2:35
@@ -9623,6 +9656,9 @@ msgid ""
 "I<new_root> must be a mount point.  (If it is not otherwise a mount point, "
 "it suffices to bind mount I<new_root> on top of itself.)"
 msgstr ""
+"Значение I<new_root> должно быть точкой монтирования (если это не точка "
+"монтирования, то достаточно привязать монтирование I<new_root> поверх самой "
+"себя)."
 
 #. type: Plain text
 #: man-pages/man2/pivot_root.2:108
@@ -9631,6 +9667,9 @@ msgid ""
 "B<MS_SHARED>; similarly, if I<put_old> is an existing mount point, its "
 "propagation type must not be B<MS_SHARED>."
 msgstr ""
+"Типа распространения I<new_root> и его родительского монтирования не должно "
+"быть B<MS_SHARED>; схожим образом, если I<put_old> — существующая точка "
+"монтирования, то её тип распространения не должен быть B<MS_SHARED>."
 
 #. type: Plain text
 #: man-pages/man2/pivot_root.2:112
@@ -9668,7 +9707,7 @@ msgstr ""
 #. type: Plain text
 #: man-pages/man2/pivot_root.2:125
 msgid "I<new_root> is not a mount point."
-msgstr ""
+msgstr "Значение I<new_root> не является точкой монтирования."
 
 #. type: Plain text
 #: man-pages/man2/pivot_root.2:128
@@ -9687,11 +9726,15 @@ msgid ""
 "Either the mount point at I<new_root>, or the parent mount of that mount "
 "point, has propagation type B<MS_SHARED>."
 msgstr ""
+"Точка монтирования I<new_root> и её родительское монтирование имеет тип "
+"распространения B<MS_SHARED>."
 
 #. type: Plain text
 #: man-pages/man2/pivot_root.2:143
 msgid "I<put_old> is a mount point and has the propagation type B<MS_SHARED>."
 msgstr ""
+"Значение I<put_old> является точкой монтирования и имеет тип распространения "
+"B<MS_SHARED>."
 
 #. type: TP
 #: man-pages/man2/pivot_root.2:143
@@ -9770,6 +9813,8 @@ msgid ""
 "B<chdir>(2), B<chroot>(2), B<mount>(2), B<stat>(2), B<initrd>(4), "
 "B<pivot_root>(8), B<switch_root>(8)"
 msgstr ""
+"B<chdir>(2), B<chroot>(2), B<mount>(2), B<stat>(2), B<initrd>(4), "
+"B<pivot_root>(8), B<switch_root>(8)"
 
 #. type: TH
 #: man-pages/man2/pause.2:30
@@ -19364,6 +19409,10 @@ msgid ""
 "either 0 (clear the flag)  or 1 (set the flag).  The \"keep capabilities\" "
 "value will be reset to 0 on subsequent calls to B<execve>(2)."
 msgstr ""
+"Устанавливает флаг вызывающей нити «оставить мандаты». Этот флаг описан в "
+"B<capabilities>(7). Значение I<arg2> должно быть или 0 (сбросить флаг) или 1 "
+"(установить флаг). Значение флага «оставить мандаты» будет сброшено в 0 при "
+"последующих вызовах B<execve>(2)."
 
 #. type: TP
 #: man-pages/man2/prctl.2:478
@@ -20612,6 +20661,14 @@ msgid ""
 "\"current\" timer slack is reset to the thread's \"default\" timer slack "
 "value."
 msgstr ""
+"Каждая нити имеет два связанных с таймером значения допуска: значение «по "
+"умолчанию» и «текущее» значение. Эта операция изменяет «текущее» значение "
+"допуска таймера вызывающей нити. Значение I<arg2> имеет тип длинного "
+"беззнакового целого, то есть максимальное «текущее» значение равно "
+"ULONG_MAX, а минимальное «текущее» значение равно 1. Если наносекундное "
+"значение из I<arg2> больше нуля, то оно присваивается «текущему» значению. "
+"Если I<arg2> равно 0, то «текущий» допуск таймера нити сбрасывается в "
+"значение допуска таймера «по умолчанию»."
 
 #. type: Plain text
 #: man-pages/man2/prctl.2:1260
@@ -20669,6 +20726,13 @@ msgid ""
 "microseconds).  The timer slack value is inherited by a child created via "
 "B<fork>(2), and is preserved across B<execve>(2)."
 msgstr ""
+"При создании новой нити этим двум значениям присваивается значение "
+"«текущего» допуска создающей нити. После этого нить может подстроить "
+"значение своего «текущего» допуска таймера с помощью B<PR_SET_TIMERSLACK> "
+"(значение по умолчанию не может быть изменено). Значения допуска таймера для "
+"I<init> (PID 1), предка всех процессов, равно 50000 наносекунд (50 "
+"микросекунд). Значения допуска таймера наследуются потомком при B<fork>(2) и "
+"сохраняются при вызове B<execve>(2)."
 
 #. type: Plain text
 #: man-pages/man2/prctl.2:1305
@@ -25205,6 +25269,9 @@ msgid ""
 "caller's capabilities are a superset of the target process's I<permitted> "
 "capabilities."
 msgstr ""
+"Вызывающий и процесс назначения находятся в одном пользовательском "
+"пространстве имён, и мандаты вызывающего составляют покрывающий набор "
+"I<допускающих> мандатов процесса назначения."
 
 #. type: Plain text
 #: man-pages/man2/ptrace.2:2520
@@ -26184,6 +26251,15 @@ msgid ""
 "that are trusted to maintain any desired separation between the old and new "
 "security contexts."
 msgstr ""
+"В SELinux этот файл используется для получения контекста безопасности "
+"процесса. До Linux 2.6.11 этот файл нельзя было использовать для задания "
+"контекста безопасности (запись была запрещена), так как ограничение "
+"безопасности SELinux процесса изменяется при B<execve>(2) (смотрите описание "
+"I</proc/[pid]/attr/exec> ниже). Начиная с Linux 2.6.11 в SELinux это "
+"ограничение снято и началась поддержка операций «установки» посредством "
+"записи в эту ноду, если это допускается политикой, хотя использование данной "
+"операции подходит только для приложений, которым можно доверять управление "
+"любым желаемым разделением между старым и новым контекстами безопасности."
 
 #. type: Plain text
 #: man-pages/man5/proc.5:331
@@ -26197,6 +26273,15 @@ msgid ""
 "bounded relation is defined in policy and guarantees that the new security "
 "context has a subset of the permissions of the old security context."
 msgstr ""
+"До Linux 2.6.28 в SELinux нитям не разрешалось внутри многонитевого процесса "
+"задавать свой контекст безопасности через эту ноду, так как это привело бы к "
+"нестыковке контекстов безопасности нитей, использующи[ общее адресное "
+"пространство. Начиная с Linux 2.6.28 в SELinux это ограничение снято и "
+"началась поддержка поддержка операций «установки» для нитей внутри "
+"многонитевого процесса, если новый контекст безопасности привязан к старому "
+"контексту безопасности, где связь определена политикой и гарантируется, что "
+"новый контекст безопасности является поднабором прав старого контекста "
+"безопасности."
 
 #. type: Plain text
 #: man-pages/man5/proc.5:334
@@ -26204,6 +26289,8 @@ msgid ""
 "Other security modules may choose to support \"set\" operations via writes "
 "to this node."
 msgstr ""
+"Другие модули безопасности могут также добавить поддержку операций "
+"«установки» через запись в эту ноду."
 
 #. type: TP
 #: man-pages/man5/proc.5:334
@@ -30650,6 +30737,8 @@ msgid ""
 "I<SigPnd>, I<ShdPnd>: Mask (expressed in hexadecimal)  of signals pending "
 "for thread and for process as a whole (see B<pthreads>(7)  and B<signal>(7))."
 msgstr ""
+"I<SigPnd>, I<ShdPnd>: Маска (шестнадцатеричное число) сигналов, ждущих "
+"обработки нитью и всем процессом (смотрите B<pthreads>(7) и B<signal>(7))."
 
 #. type: Plain text
 #: man-pages/man5/proc.5:2654
@@ -30657,6 +30746,8 @@ msgid ""
 "I<SigBlk>, I<SigIgn>, I<SigCgt>: Masks (expressed in hexadecimal)  "
 "indicating signals being blocked, ignored, and caught (see B<signal>(7))."
 msgstr ""
+"I<SigBlk>, I<SigIgn>, I<SigCgt>: Маски (шестнадцатеричное число), отражающие "
+"блокированные, игнорируемые и перехваченные сигналы (смотрите B<signal>(7))."
 
 #. type: Plain text
 #: man-pages/man5/proc.5:2660
@@ -30665,6 +30756,9 @@ msgid ""
 "capabilities enabled in inheritable, permitted, and effective sets (see "
 "B<capabilities>(7))."
 msgstr ""
+"I<CapInh>, I<CapPrm>, I<CapEff>: Маски (шестнадцатеричное число) мандатов, "
+"включённые в наследуемый, разрешающий и эффективный наборы (смотрите "
+"B<capabilities>(7))."
 
 #. type: Plain text
 #: man-pages/man5/proc.5:2665
@@ -30672,6 +30766,8 @@ msgid ""
 "I<CapBnd>: Capability bounding set, expressed in hexadecimal (since Linux "
 "2.6.26, see B<capabilities>(7))."
 msgstr ""
+"I<CapBnd>: Ограничивающий набор мандатов, выраженный шестнадцатеричным "
+"числом (начиная с Linux 2.6.26, смотрите B<capabilities>(7))."
 
 #. type: Plain text
 #: man-pages/man5/proc.5:2670
@@ -30679,6 +30775,8 @@ msgid ""
 "I<CapAmb>: Ambient capability set, expressed in hexadecimal (since Linux "
 "4.3, see B<capabilities>(7))."
 msgstr ""
+"I<CapAmb>: Набор наружных мандатов, выраженный шестнадцатеричным числом "
+"(начиная с Linux 4.3, смотрите B<capabilities>(7))."
 
 #.  commit af884cd4a5ae62fcf5e321fecf0ec1014730353d
 #. type: Plain text
@@ -30722,6 +30820,8 @@ msgid ""
 "I<Cpus_allowed>: Hexadecimal mask of CPUs on which this process may run "
 "(since Linux 2.6.24, see B<cpuset>(7))."
 msgstr ""
+"I<Cpus_allowed>: Шестнадцатеричная маска процессоров, на которых может "
+"выполняться процесс (начиная с Linux 2.6.24, смотрите B<cpuset>(7))."
 
 #. type: Plain text
 #: man-pages/man5/proc.5:2709
@@ -37188,6 +37288,13 @@ msgid ""
 "IPC object per line)  for easy understanding.  B<sysvipc>(7)  provides "
 "further background on the information shown by these files."
 msgstr ""
+"Подкаталог содержит псевдо-файлы I<msg>, I<sem> и I<shm>.Эти файлы описывают "
+"объекты межпроцессного взаимодействия (System V Interprocess Communication "
+"(IPC)) (соответственно: очереди сообщений, семафоры и общую память), которые "
+"существуют в системе в настоящий момент. Похожая информация предоставляется "
+"через B<ipcs>(1). Эти файлы имеют заголовки и форматируются (по одному IPC "
+"объекту на строку) для более лёгкого понимания. В B<sysvipc>(7) представлена "
+"подробное описание информации в этих файлах."
 
 #. type: TP
 #: man-pages/man5/proc.5:5800
@@ -38455,6 +38562,11 @@ msgid ""
 "use an asterisk (*) in the encrypted password field to make sure that this "
 "user can not authenticate themself using a password.  (But see NOTES below.)"
 msgstr ""
+"Вне зависимости от того, применяется ли механизм теневых паролей или нет, "
+"многие системные администраторы ставят звёздочку (*) в поле зашифрованного "
+"пароля, чтобы быть уверенными, что данный пользователь не пройдёт "
+"аутентификацию, используя какой-либо пароль (но смотри раздел ЗАМЕЧАНИЯ "
+"далее)."
 
 #. type: Plain text
 #: man-pages/man5/passwd.5:78
@@ -47561,7 +47673,7 @@ msgstr "POSIX_MEMALIGN"
 #: man-pages/man3/posix_memalign.3:29
 #, no-wrap
 msgid "2019-05-09"
-msgstr ""
+msgstr "2019-05-09"
 
 #. type: Plain text
 #: man-pages/man3/posix_memalign.3:32
@@ -47732,6 +47844,9 @@ msgid ""
 "pointer to the allocated memory on success.  On error, NULL is returned, and "
 "I<errno> is set to indicate the cause of the error."
 msgstr ""
+"Функции B<aligned_alloc>(), B<memalign>(), B<valloc>() и B<pvalloc>() при "
+"успешном выполнении возвращают указатель на выделенную память. При ошибке "
+"возвращается NULL, а I<errno> присваивается номер ошибки."
 
 #.  http://austingroupbugs.net/view.php?id=520
 #. type: Plain text
@@ -53864,6 +53979,8 @@ msgid ""
 "B<int pthread_spin_init(pthread_spinlock_t *>I<lock>B<, int >I<pshared>B<);>\n"
 "B<int pthread_spin_destroy(pthread_spinlock_t *>I<lock>B<);>\n"
 msgstr ""
+"B<int pthread_spin_init(pthread_spinlock_t *>I<lock>B<, int >I<pshared>B<);>\n"
+"B<int pthread_spin_destroy(pthread_spinlock_t *>I<lock>B<);>\n"
 
 #. type: Plain text
 #: man-pages/man3/pthread_spin_init.3:45
