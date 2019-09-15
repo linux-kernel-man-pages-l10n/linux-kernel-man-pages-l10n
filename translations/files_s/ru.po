@@ -1,25 +1,23 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
+# Copyright (C) 2019 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Alexander Golubev <fatzer2@gmail.com>, 2018
-# Azamat Hackimov <azamat.hackimov@gmail.com>, 2011,2014-2016
-# Hotellook, 2014
-# Nikita <zxcvbnm3230@mail.ru>, 2014
-# Spiros Georgaras <sng@hellug.gr>, 2016
-# Vladislav <ivladislavefimov@gmail.com>, 2015
-# Yuri Kozlov <yuray@komyakino.ru>, 2011-2019
-# Yuri Kozlov <yuray@komyakino.ru>, 2013
-# Иван Павлов <pavia00@gmail.com>, 2017
+# Alexander Golubev <fatzer2@gmail.com>, 2018.
+# Azamat Hackimov <azamat.hackimov@gmail.com>, 2011,2014-2016.
+# Hotellook, 2014.
+# Nikita <zxcvbnm3230@mail.ru>, 2014.
+# Spiros Georgaras <sng@hellug.gr>, 2016.
+# Vladislav <ivladislavefimov@gmail.com>, 2015.
+# Yuri Kozlov <yuray@komyakino.ru>, 2011-2019.
+# Yuri Kozlov <yuray@komyakino.ru>, 2013.
+# Иван Павлов <pavia00@gmail.com>, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:26+0300\n"
-"PO-Revision-Date: 2019-08-26 06:21+0000\n"
+"PO-Revision-Date: 2019-09-15 14:33+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
-"Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/"
-"ru/)\n"
+"Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,6 +25,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Lokalize 2.0\n"
 
 #. type: TH
 #: man-pages/man4/smartpqi.4:8
@@ -6084,7 +6083,7 @@ msgstr "SIGNAL"
 #: man-pages/man7/signal.7:46
 #, no-wrap
 msgid "2019-08-02"
-msgstr ""
+msgstr "2019-08-02"
 
 #. type: Plain text
 #: man-pages/man7/signal.7:49
@@ -6213,6 +6212,14 @@ msgid ""
 "with a I<signal handler>, a programmer-defined function that is "
 "automatically invoked when the signal is delivered."
 msgstr ""
+"Процесс может изменить обработчик сигнала с помощью B<sigaction>(2) или "
+"B<signal>(2) (последний менее переносим, если используется для установки "
+"обработчика сигнала; дополнительную информацию смотрите в B<signal>(2)). "
+"Используя данные системные вызовы процесс может выбрать одно из следующих "
+"действий при получении сигнала: выполнить действие по умолчанию, "
+"игнорировать сигнал, поймать сигнал I<обработчиком сигнала> — функцией, "
+"задаваемой программистом, которая автоматически вызывается при получении "
+"сигнала."
 
 #. type: Plain text
 #: man-pages/man7/signal.7:94
@@ -6222,6 +6229,9 @@ msgid ""
 "B<sigaltstack>(2)  for a discussion of how to do this and when it might be "
 "useful."
 msgstr ""
+"По умолчанию обработчик сигнала использует обычный стек процесса. Возможно "
+"сделать так, чтобы обработчик сигнала использовал альтернативный стек; как "
+"это делается и когда это может быть полезно смотрите в B<sigaltstack>(2)."
 
 #. type: Plain text
 #: man-pages/man7/signal.7:98
@@ -7163,7 +7173,7 @@ msgstr ""
 #: man-pages/man7/signal.7:312
 #, no-wrap
 msgid "Queueing and delivery semantics for standard signals"
-msgstr ""
+msgstr "Семантика очерёдности и доставки стандартных сигналов"
 
 #. type: Plain text
 #: man-pages/man7/signal.7:315
@@ -7171,6 +7181,8 @@ msgid ""
 "If multiple standard signals are pending for a process, the order in which "
 "the signals are delivered is unspecified."
 msgstr ""
+"Если несколько стандартных сигналов ожидают обработки процессом, то порядок "
+"доставки сигналов не определён."
 
 #. type: Plain text
 #: man-pages/man7/signal.7:330
@@ -7184,6 +7196,14 @@ msgid ""
 "signal.  Thus, the process will receive the information associated with the "
 "first instance of the signal."
 msgstr ""
+"Стандартные сигналы не упорядочиваются. Если генерируется несколько "
+"экземпляров стандартного сигнала заблокированному процессу, то только один "
+"экземпляр сигнала помечается как ожидающий (и сигнал будет доставлен только "
+"после разблокировки). В случае, если уже есть ожидающий стандартный сигнал, "
+"структура I<siginfo_t> (смотрите B<sigaction>(2)), связанная с этим "
+"сигналом, не перезаписывается при поступлении последующих экземпляров того "
+"же сигнала. То есть, процесс получит информацию, связанную с первым "
+"экземпляром сигнала."
 
 #. type: SS
 #: man-pages/man7/signal.7:330
@@ -8121,6 +8141,14 @@ msgid ""
 "(I<ShdPnd>).  The corresponding fields in I</proc/[pid]/status> show the "
 "information for the main thread.  See B<proc>(5)  for further details."
 msgstr ""
+"В файле I</proc/[pid]/task/[tid]/status> содержатся различные поля о "
+"сигналах, которые нить блокирует (I<SigBlk>), ловит (I<SigCgt>) или "
+"игнорирует (I<SigIgn>). Набор отлавливаемые или игнорируемых сигналов "
+"одинаков для всех нитей процесса. Остальные поля отражают набор ожидающих "
+"сигналов, которые непосредственно направляются нити (I<SigPnd>), а также "
+"набор ожидающих сигналов, которые направляются непосредственно процессу "
+"(I<ShdPnd>). Соответствующие поля в I</proc/[pid]/status> содержат "
+"информацию для главной нити. Дополнительную информацию смотрите в B<proc>(5)."
 
 #. type: Plain text
 #: man-pages/man7/signal.7:860
@@ -8160,7 +8188,7 @@ msgstr "2016-03-15"
 #. type: Plain text
 #: man-pages/man7/sysvipc.7:43
 msgid "sysvipc - System V interprocess communication mechanisms"
-msgstr ""
+msgstr "sysvipc - механизмы межпроцессного взаимодействия System V"
 
 #. type: Plain text
 #: man-pages/man7/sysvipc.7:48
@@ -17220,6 +17248,15 @@ msgid ""
 "B<pthread_getaffinity_np>(3), B<pthread_setaffinity_np>(3), "
 "B<sched_getcpu>(3), B<capabilities>(7), B<cpuset>(7)"
 msgstr ""
+"B<chcpu>(1), B<chrt>(1), B<lscpu>(1), B<ps>(1), B<taskset>(1), B<top>(1), "
+"B<getpriority>(2), B<mlock>(2), B<mlockall>(2), B<munlock>(2), "
+"B<munlockall>(2), B<nice>(2), B<sched_get_priority_max>(2), "
+"B<sched_get_priority_min>(2), B<sched_getaffinity>(2), B<sched_getparam>(2), "
+"B<sched_getscheduler>(2), B<sched_rr_get_interval>(2), "
+"B<sched_setaffinity>(2), B<sched_setparam>(2), B<sched_setscheduler>(2), "
+"B<sched_yield>(2), B<setpriority>(2), B<pthread_getschedparam>(3), "
+"B<pthread_getaffinity_np>(3), B<pthread_setaffinity_np>(3), "
+"B<sched_getcpu>(3), B<capabilities>(7), B<cpuset>(7)"
 
 #. type: Plain text
 #: man-pages/man7/sched.7:1002
@@ -18498,6 +18535,12 @@ msgid ""
 "B<SO_SNDLOWAT> is not changeable on Linux (B<setsockopt>(2)  fails with the "
 "error B<ENOPROTOOPT>).  B<SO_RCVLOWAT> is changeable only since Linux 2.4."
 msgstr ""
+"Задать минимальное количество байт в буфере до которого уровень сокета будет "
+"отправлять данные протоколу (B<SO_SNDLOWAT>) или получать их от пользователя "
+"(B<SO_RCVLOWAT>). Начальное значение этих двух элементов равно 1. Для "
+"B<SO_SNDLOWAT> значение в Linux изменить нельзя (B<setsockopt>(2) завершает "
+"выполнение с ошибкой B<ENOPROTOOPT>). Значение для B<SO_RCVLOWAT> можно "
+"изменить начиная с Linux версии 2.4."
 
 #.  commit c7004482e8dcb7c3c72666395cfa98a216a4fb70
 #.  See http://marc.theaimsgroup.com/?l=linux-kernel&m=111049368106984&w=2
@@ -18510,6 +18553,10 @@ msgid ""
 "readable when even a single byte of data was available.  A subsequent read "
 "from the socket would then block until B<SO_RCVLOWAT> bytes are available."
 msgstr ""
+"До Linux 2.6.28 B<select>(2), B<poll>(2) и B<epoll>(7) не учитывают "
+"настройку B<SO_RCVLOWAT>, и помечают сокет как доступный для чтения даже "
+"когда доступен только 1 байт данных. Последующее чтение из сокета будет "
+"заблокировано до тех пор, пока не будет доступно B<SO_RCVLOWAT> байт."
 
 #. type: TP
 #: man-pages/man7/socket.7:784
@@ -20857,6 +20904,8 @@ msgid ""
 "B<mlock>(2), B<setrlimit>(2), B<shmget>(2), B<shmop>(2), B<capabilities>(7), "
 "B<sysvipc>(7)"
 msgstr ""
+"B<mlock>(2), B<setrlimit>(2), B<shmget>(2), B<shmop>(2), B<capabilities>(7), "
+"B<sysvipc>(7)"
 
 #. type: TH
 #: man-pages/man2/sched_setscheduler.2:26
@@ -21608,6 +21657,8 @@ msgid ""
 "B<semctl>(2), B<semop>(2), B<ftok>(3), B<capabilities>(7), "
 "B<sem_overview>(7), B<sysvipc>(7)"
 msgstr ""
+"B<semctl>(2), B<semop>(2), B<ftok>(3), B<capabilities>(7), "
+"B<sem_overview>(7), B<sysvipc>(7)"
 
 #. type: TH
 #: man-pages/man2/sendmmsg.2:28
@@ -23198,6 +23249,8 @@ msgid ""
 "B<brk>(2), B<mmap>(2), B<shmctl>(2), B<shmget>(2), B<capabilities>(7), "
 "B<shm_overview>(7), B<sysvipc>(7)"
 msgstr ""
+"B<brk>(2), B<mmap>(2), B<shmctl>(2), B<shmget>(2), B<capabilities>(7), "
+"B<shm_overview>(7), B<sysvipc>(7)"
 
 #. type: TH
 #: man-pages/man2/sync_file_range.2:30
@@ -25627,6 +25680,10 @@ msgid ""
 "being typed as I<unsigned long\\ *>, reflecting the fact that the underlying "
 "implementation of CPU sets is a simple bit mask."
 msgstr ""
+"В данной справочной странице описан интерфейс glibc для вызовов увязывания "
+"ЦП. Интерфейс реальных системных вызов чуть отличается: аргумент I<mask> "
+"имеет тип I<unsigned long\\ *>, отражая факт того, что используемая "
+"реализация наборов ЦП представляет собой просто битовую маску."
 
 #. type: Plain text
 #: man-pages/man2/sched_setaffinity.2:253
@@ -25636,6 +25693,10 @@ msgid ""
 "I<cpusetsize> and the size (in bytes) of the I<cpumask_t> data type that is "
 "used internally by the kernel to represent the CPU set bit mask."
 msgstr ""
+"При успешном выполнении ядерный системный вызов B<sched_getaffinity>() "
+"возвращает количество скопированных в буфер I<mask> байт; минимальным "
+"значением будет I<cpusetsize> и размер (в байтах) типа данных I<cpumask_t>, "
+"который используется в ядре для представления процессорной битовой маски."
 
 #. type: SS
 #: man-pages/man2/sched_setaffinity.2:253
@@ -26681,6 +26742,8 @@ msgid ""
 "B<memfd_create>(2), B<shmat>(2), B<shmctl>(2), B<shmdt>(2), B<ftok>(3), "
 "B<capabilities>(7), B<shm_overview>(7), B<sysvipc>(7)"
 msgstr ""
+"B<memfd_create>(2), B<shmat>(2), B<shmctl>(2), B<shmdt>(2), B<ftok>(3), "
+"B<capabilities>(7), B<shm_overview>(7), B<sysvipc>(7)"
 
 #. type: TH
 #: man-pages/man2/setresuid.2:27
@@ -27417,6 +27480,8 @@ msgstr "B<ERANGE>"
 #: man-pages/man2/setxattr.2:159
 msgid "The size of I<name> or I<value> exceeds a filesystem-specific limit."
 msgstr ""
+"Размер I<name> или I<value> превышает ограничение, задаваемое файловой "
+"системой."
 
 #. type: Plain text
 #: man-pages/man2/setxattr.2:162
@@ -28025,7 +28090,7 @@ msgstr "SETFSUID"
 #: man-pages/man2/setfsuid.2:32
 #, no-wrap
 msgid "2019-05-09"
-msgstr ""
+msgstr "2019-05-09"
 
 #. type: Plain text
 #: man-pages/man2/setfsuid.2:35
@@ -28152,6 +28217,20 @@ msgid ""
 "unneeded and should be avoided in new applications (likewise for "
 "B<setfsgid>(2))."
 msgstr ""
+"На момент появления данного системного вызова один процесс мог послать "
+"сигнал другому процессу с тем же эффективным идентификатором пользователя. "
+"Это означает, что если привилегированный процесс изменит свой эффективный "
+"идентификатор пользователя с целью проверки доступа к файлу, то он сможет "
+"стать уязвимым к приёму сигналов, посланных (непривилегированным) процессом "
+"с тем же идентификатором пользователя. Атрибут идентификатора пользователя "
+"файловой системы был добавлен как раз для того, чтобы позволить процессу "
+"изменить свой идентификатор пользователя для проверки доступа к файлу не "
+"боясь стать уязвимым к приёму нежелаемых сигналов. Начиная с Linux 2.0, "
+"обработка прав на сигналы была изменена (смотрите B<kill>(2)), что позволило "
+"процессу изменять свой эффективный идентификатор пользователя без боязни "
+"стать уязвимым к приёму нежелаемых сигналов от других процессов.Таким "
+"образом, сейчас системный вызов B<setfsuid>() уже не нужен и не должен "
+"использоваться в новых приложениях (как и B<setfsgid>(2))."
 
 #. type: Plain text
 #: man-pages/man2/setfsuid.2:114
@@ -29129,6 +29208,8 @@ msgid ""
 "B<ipc>(2), B<semget>(2), B<semop>(2), B<capabilities>(7), "
 "B<sem_overview>(7), B<sysvipc>(7)"
 msgstr ""
+"B<ipc>(2), B<semget>(2), B<semop>(2), B<capabilities>(7), "
+"B<sem_overview>(7), B<sysvipc>(7)"
 
 #. type: TH
 #: man-pages/man2/seteuid.2:29
@@ -36226,6 +36307,13 @@ msgid ""
 "many additional system calls; mips64 also contains a full set of 32-bit "
 "system calls."
 msgstr ""
+"Чаще всего, код системного вызова с номером __NR_xxx, определённого в I</usr/"
+"include/asm/unistdh>, можно найти в исходном коде ядра Linux в функции "
+"I<sys_xxx>(). Есть много исключений из этого правила, в основном из-за того, "
+"что большинство старых системных вызовов заменена на новые, при чём без "
+"всякой системы. На платформах с эмуляцией собственнических ОС, таких как "
+"sparc, sparc64 и alpha, существует много дополнительных системных вызовов; "
+"для mips64 также есть полный набор 32-битных системных вызовов."
 
 #. type: Plain text
 #: man-pages/man2/syscalls.2:917
@@ -41222,6 +41310,13 @@ msgid ""
 "I<mask> to B<UINT_MAX> (all bits set), as one or more bits may, in the "
 "future, be used to specify an extension to the buffer."
 msgstr ""
+"Заметим в общем, что ядро I<не> не отклоняет значения в I<mask>, отличные от "
+"вышеперечисленных (исключение из правила смотрите в описании ошибки "
+"B<EINVAL>). Вместо этого оно просто информирует вызывающего, какие значения "
+"поддерживаются ядром и файловой системой через поле I<statx.stx_mask>. "
+"Поэтому I<не устанавливайте> значение I<mask> в B<UINT_MAX> (все биты), так "
+"как один или более бит в будущем могут использоваться для указания "
+"расширения буфера."
 
 #. type: SS
 #: man-pages/man2/statx.2:289
@@ -41625,6 +41720,9 @@ msgid ""
 "Reserved flag specified in I<mask>.  (Currently, there is one such flag, "
 "designated by the constant B<STATX__RESERVED>, with the value 0x80000000U.)"
 msgstr ""
+"В I<mask> указан зарезервированный флаг (в настоящее время есть только один "
+"флаг, для него определена константа B<STATX__RESERVED> со значением "
+"0x80000000U)."
 
 #. type: Plain text
 #: man-pages/man2/statx.2:502
@@ -47471,6 +47569,8 @@ msgid ""
 "B<clone>(2), B<semctl>(2), B<semget>(2), B<sigaction>(2), "
 "B<capabilities>(7), B<sem_overview>(7), B<sysvipc>(7), B<time>(7)"
 msgstr ""
+"B<clone>(2), B<semctl>(2), B<semget>(2), B<sigaction>(2), "
+"B<capabilities>(7), B<sem_overview>(7), B<sysvipc>(7), B<time>(7)"
 
 #. type: TH
 #: man-pages/man2/spu_create.2:25
@@ -49202,6 +49302,9 @@ msgid ""
 "descriptors had been marked as nonblocking (B<O_NONBLOCK>)B<,> and the "
 "operation would block."
 msgstr ""
+"В I<flags> указан B<SPLICE_F_NONBLOCK> или один из файловых дескрипторов был "
+"помечен как неблокирующий (B<O_NONBLOCK>)B<,> и операция вызвала бы "
+"блокировку."
 
 #. type: Plain text
 #: man-pages/man2/splice.2:166
@@ -58319,6 +58422,12 @@ msgid ""
 "their arguments on to a function that takes a I<va_list> argument, such as "
 "B<vfprintf>(3)."
 msgstr ""
+"В отличие от исторических макросов B<varargs>, макросы B<stdarg> не "
+"позволяют программистам создать функцию без постоянных аргументов. Эта "
+"проблема создаёт работу, в основном, при преобразовании кода B<varargs> в "
+"код B<stdarg>, а также есть сложности с функциями с переменным количеством "
+"аргументов, которым нужно передать все их аргументы в функцию в виде "
+"аргумента с типом I<va_list>, например B<vfprintf>(3)."
 
 #. type: Plain text
 #: man-pages/man3/stdarg.3:277
@@ -58346,6 +58455,9 @@ msgid ""
 "void\n"
 "foo(char *fmt, ...)   /* '...' is C syntax for a variadic function */\n"
 msgstr ""
+"void\n"
+"foo(char *fmt, ...)   /* «...» это синтаксис C для функции с\n"
+"                         переменным количеством аргументов */\n"
 
 #. type: Plain text
 #: man-pages/man3/stdarg.3:289
@@ -58356,6 +58468,10 @@ msgid ""
 "    int d;\n"
 "    char c, *s;\n"
 msgstr ""
+"{\n"
+"    va_list ap;\n"
+"    int d;\n"
+"    char c, *s;\n"
 
 #. type: Plain text
 #: man-pages/man3/stdarg.3:310
@@ -62940,6 +63056,13 @@ msgid ""
 "    char p[LIM + 1];    /* +1 for terminating null byte */\n"
 "    time_t base;\n"
 msgstr ""
+"int\n"
+"main(int argc, char *argv[])\n"
+"{\n"
+"#define LIM 4000000\n"
+"    int j;\n"
+"    char p[LIM + 1];    /* +1 для конечного байта null */\n"
+"    time_t base;\n"
 
 #. type: Plain text
 #: man-pages/man3/strcat.3:217
@@ -70219,13 +70342,13 @@ msgstr "B<PAGESIZE> - B<_SC_PAGESIZE>"
 #. type: Plain text
 #: man-pages/man3/sysconf.3:178
 msgid "Size of a page in bytes.  Must not be less than 1."
-msgstr ""
+msgstr "Размер страницы в байтах. Должен быть не меньше 1."
 
 #. type: TP
 #: man-pages/man3/sysconf.3:178
 #, no-wrap
 msgid "B<PAGE_SIZE> - B<_SC_PAGE_SIZE>"
-msgstr ""
+msgstr "B<PAGE_SIZE> - B<_SC_PAGE_SIZE>"
 
 #. type: Plain text
 #: man-pages/man3/sysconf.3:187
@@ -70233,6 +70356,8 @@ msgid ""
 "A synonym for B<PAGESIZE>/B<_SC_PAGESIZE>.  (Both B<PAGESIZE> and "
 "B<PAGE_SIZE> are specified in POSIX.)"
 msgstr ""
+"Синоним B<PAGESIZE>/B<_SC_PAGESIZE> (B<PAGESIZE> и B<PAGE_SIZE> определены в "
+"POSIX)."
 
 #. type: TP
 #: man-pages/man3/sysconf.3:187 man-pages/man3/sysconf.3:274
