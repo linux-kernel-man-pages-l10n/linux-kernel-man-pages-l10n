@@ -1,20 +1,18 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
+# Copyright (C) 2019 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Azamat Hackimov <azamat.hackimov@gmail.com>, 2016
-# Yuri Kozlov <yuray@komyakino.ru>, 2011-2014,2016-2018
-# Yuri Kozlov <yuray@komyakino.ru>, 2014
-# Иван Павлов <pavia00@gmail.com>, 2017,2019
+# Azamat Hackimov <azamat.hackimov@gmail.com>, 2016.
+# Yuri Kozlov <yuray@komyakino.ru>, 2011-2014,2016-2018.
+# Yuri Kozlov <yuray@komyakino.ru>, 2014, 2019.
+# Иван Павлов <pavia00@gmail.com>, 2017,2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:27+0300\n"
-"PO-Revision-Date: 2019-08-26 06:22+0000\n"
+"PO-Revision-Date: 2019-09-17 18:58+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
-"Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/"
-"ru/)\n"
+"Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,6 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Lokalize 2.0\n"
 
 #. type: TH
 #: man-pages/man7/x25.7:12
@@ -302,7 +301,7 @@ msgstr "XATTR"
 #: man-pages/man7/xattr.7:28
 #, no-wrap
 msgid "2019-08-02"
-msgstr ""
+msgstr "2019-08-02"
 
 #. type: Plain text
 #: man-pages/man7/xattr.7:31
@@ -440,7 +439,7 @@ msgstr ""
 #: man-pages/man7/xattr.7:97
 #, no-wrap
 msgid "System extended attributes"
-msgstr ""
+msgstr "Системные расширенные атрибуты"
 
 #. type: Plain text
 #: man-pages/man7/xattr.7:103
@@ -450,6 +449,10 @@ msgid ""
 "attributes depend on the policy implemented for each system attribute "
 "implemented by filesystems in the kernel."
 msgstr ""
+"Системные расширенные атрибуты используются ядром для хранения системных "
+"объектов, таких как списки контроля доступа. Доступ на чтение и запись "
+"системных атрибутов зависит от политики, реализованной файловой системой "
+"ядром для каждого системного атрибута."
 
 #. type: SS
 #: man-pages/man7/xattr.7:103
@@ -476,7 +479,7 @@ msgstr ""
 #: man-pages/man7/xattr.7:111
 #, no-wrap
 msgid "User extended attributes"
-msgstr ""
+msgstr "Пользовательские расширенные атрибуты"
 
 #. type: Plain text
 #: man-pages/man7/xattr.7:119
@@ -487,6 +490,12 @@ msgid ""
 "defined by the file permission bits: read permission is required to retrieve "
 "the attribute value, and writer permission is required to change it."
 msgstr ""
+"Пользовательские расширенные атрибуты могут быть назначены файлам и "
+"каталогам для хранения произвольной дополнительной информации, такой как тип "
+"mime, используемый набор символов или кодировка файла. Права доступа к "
+"пользовательским атрибутам определяется битами прав файлов: для получения "
+"значения атрибута требуется право на чтение, а для изменения значения "
+"атрибута требуется право на запись."
 
 #. type: Plain text
 #: man-pages/man7/xattr.7:130
@@ -518,6 +527,11 @@ msgid ""
 "sticky bit set (see the B<chmod>(1)  manual page for an explanation of the "
 "sticky bit)."
 msgstr ""
+"По этой причине пользовательские расширенные атрибуты разрешены только для "
+"обычных файлов и каталогов, а доступ к пользовательским расширенным "
+"атрибутам разрешён только владельцу и пользователям с соответствующими "
+"мандатами для каталогов с установленным закрепляющим битом (описание "
+"закрепляющего бита смотрите в справочной странице B<chmod>(1))."
 
 #. type: SS
 #: man-pages/man7/xattr.7:138
@@ -548,6 +562,10 @@ msgid ""
 "require the filesystem to be mounted with the B<user_xattr> mount option in "
 "order for user extended attributes to be used."
 msgstr ""
+"Для использования пользовательских расширенных атрибутов в некоторых "
+"файловых системах, таких как Reiserfs (и, исторически, ext2 и ext3), "
+"требуется, чтобы файловая система была смонтирована с параметром "
+"монтирования B<user_xattr>."
 
 #. type: Plain text
 #: man-pages/man7/xattr.7:158

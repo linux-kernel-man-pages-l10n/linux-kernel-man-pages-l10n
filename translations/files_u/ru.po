@@ -1,23 +1,21 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
+# Copyright (C) 2019 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Azamat Hackimov <azamat.hackimov@gmail.com>, 2013,2016
-# Dmitriy Ovchinnikov <dmitriyxt5@gmail.com>, 2012
-# Dmitry Bolkhovskikh <d20052005@yandex.ru>, 2017
-# Katrin Kutepova <blackkatelv@gmail.com>, 2018
-# Yuri Kozlov <yuray@komyakino.ru>, 2011-2019
-# Yuri Kozlov <yuray@komyakino.ru>, 2014
-# Иван Павлов <pavia00@gmail.com>, 2017
+# Azamat Hackimov <azamat.hackimov@gmail.com>, 2013,2016.
+# Dmitriy Ovchinnikov <dmitriyxt5@gmail.com>, 2012.
+# Dmitry Bolkhovskikh <d20052005@yandex.ru>, 2017.
+# Katrin Kutepova <blackkatelv@gmail.com>, 2018.
+# Yuri Kozlov <yuray@komyakino.ru>, 2011-2019.
+# Yuri Kozlov <yuray@komyakino.ru>, 2014.
+# Иван Павлов <pavia00@gmail.com>, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:27+0300\n"
-"PO-Revision-Date: 2019-08-26 06:22+0000\n"
+"PO-Revision-Date: 2019-09-17 18:54+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
-"Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/"
-"ru/)\n"
+"Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,6 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Lokalize 2.0\n"
 
 #. type: TH
 #: man-pages/man7/units.7:26
@@ -697,7 +696,7 @@ msgstr "UNIX"
 #: man-pages/man7/unix.7:20
 #, no-wrap
 msgid "2019-08-02"
-msgstr ""
+msgstr "2019-08-02"
 
 #. type: Plain text
 #: man-pages/man7/unix.7:23
@@ -1408,6 +1407,10 @@ msgid ""
 "B<getrlimit>(2)), the excess file descriptors are automatically closed in "
 "the receiving process."
 msgstr ""
+"Если количество файловых дескрипторов, полученных во вспомогательных данных, "
+"превышает ограничение ресурса процесса B<RLIMIT_NOFILE> (смотрите "
+"B<getrlimit>(2)), то превысившие файловые дескрипторы автоматически "
+"закрываются в принимающем процессе."
 
 #.  commit bba14de98753cb6599a2dae0e520714b2153522d
 #. type: Plain text
@@ -4130,6 +4133,12 @@ msgid ""
 "namespace require that the process has the necessary capabilities in the "
 "user namespace that owns the nonuser namespace."
 msgstr ""
+"После создания не пользовательского пространства имён оно принадлежит "
+"пользовательскому пространству имён, в котором на момент создания "
+"пространства имён создающий процесс являлся членом. Для привилегированных "
+"операций над ресурсами, управляемыми не пользовательским пространством имён, "
+"от процесса требуется иметь мандаты в пользовательском пространстве имён, "
+"которому принадлежит не пользовательское пространство имён."
 
 #. type: Plain text
 #: man-pages/man7/user_namespaces.7:333
@@ -4920,7 +4929,7 @@ msgstr ""
 #: man-pages/man7/user_namespaces.7:871
 #, no-wrap
 msgid "Accessing files"
-msgstr ""
+msgstr "Доступ к файлам"
 
 #.  ============================================================
 #. type: Plain text
@@ -4933,12 +4942,19 @@ msgid ""
 "file.  The same is also of other objects that employ the credentials plus "
 "permissions mask accessibility model, such as System V IPC objects"
 msgstr ""
+"Чтобы определить права, с которыми непривилегированный процесс обращается к "
+"файлу, берутся идентификаторы процесса (UID, GID) и идентификаторы файла, "
+"отображаемые в те, которые были бы в исходном пространстве имён "
+"пользователя, и затем сравниваются для определения прав, которые процесс "
+"имеет на файл. Это также выполняется и для других объектов, использующих "
+"идентификаторы плюс модель маски прав доступа, например для объектов System "
+"V IPC."
 
 #. type: SS
 #: man-pages/man7/user_namespaces.7:883
 #, no-wrap
 msgid "Operation of file-related capabilities"
-msgstr ""
+msgstr "Операции с файловыми мандатами"
 
 #. type: Plain text
 #: man-pages/man7/user_namespaces.7:895
@@ -4948,6 +4964,10 @@ msgid ""
 "groups.  These capabilities are: B<CAP_CHOWN>, B<CAP_DAC_OVERRIDE>, "
 "B<CAP_DAC_READ_SEARCH>, B<CAP_FOWNER>, and B<CAP_FSETID>."
 msgstr ""
+"Некоторые мандаты позволяют процессу обходить различные ограничения, "
+"налагаемые ядром на выполнение операций над файлами, принадлежащими другим "
+"пользователям или группам. Список мандатов: B<CAP_CHOWN>, "
+"B<CAP_DAC_OVERRIDE>, B<CAP_DAC_READ_SEARCH>, B<CAP_FOWNER> и B<CAP_FSETID>."
 
 #. type: Plain text
 #: man-pages/man7/user_namespaces.7:900
@@ -4955,12 +4975,17 @@ msgid ""
 "Within a user namespace, these capabilities allow a process to bypass the "
 "rules if the process has the relevant capability over the file, meaning that:"
 msgstr ""
+"Внутри пользовательского пространства имён эти мандаты позволяют процессу "
+"обходить правила, если процесс имеет соответствующий мандат на файле, "
+"подразумевающий что:"
 
 #. type: Plain text
 #: man-pages/man7/user_namespaces.7:902
 msgid ""
 "the process has the relevant effective capability in its user namespace; and"
 msgstr ""
+"процесс имеет соответствующий эффективный мандат в своём пространстве имён "
+"пользователя; и"
 
 #. type: Plain text
 #: man-pages/man7/user_namespaces.7:905
@@ -4968,6 +4993,8 @@ msgid ""
 "the file's user ID and group ID both have valid mappings in the user "
 "namespace."
 msgstr ""
+"файловые ID пользователя и группы корректно отображаются в "
+"пользовательскомпространстве имён."
 
 #.  These are the checks performed by the kernel function
 #.  inode_owner_or_capable(). There is one exception to the exception:
@@ -4982,6 +5009,10 @@ msgid ""
 "user ID has a mapping in the user namespace (i.e., the file's group ID does "
 "not need to have a valid mapping)."
 msgstr ""
+"Мандат B<CAP_FOWNER> учитывается по-другому: it allows a process to bypass "
+"the corresponding rules so long as at least the file's user ID has a mapping "
+"in the user namespace (т. е., файловый ID группы может не иметь корректного "
+"отображения)."
 
 #. type: SS
 #: man-pages/man7/user_namespaces.7:919
@@ -5096,6 +5127,13 @@ msgid ""
 "Linux 3.12 added support for the last of the unsupported major filesystems, "
 "XFS."
 msgstr ""
+"В Linux 3.8 самые важные подсистемы поддерживают пользовательские "
+"пространства имён, но значительное количество файловых систем не имеют "
+"инфраструктуры для отображения пользовательских и групповых ID между "
+"пользовательскими пространствами имён. В Linux 3.9 добавлена требуемая "
+"поддержка инфраструктуры во многие неподдерживаемые файловые системы (Plan 9 "
+"(9P), Andrew File System (AFS), Ceph, CIFS, CODA, NFS и OCFS2). В Linux 3.12 "
+"добавлена поддержка в последние основные файловые системы (XFS)."
 
 #. type: Plain text
 #: man-pages/man7/user_namespaces.7:990

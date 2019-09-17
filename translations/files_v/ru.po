@@ -1,23 +1,21 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
+# Copyright (C) 2019 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Azamat Hackimov <azamat.hackimov@gmail.com>, 2016
-# Dmitriy Ovchinnikov <dmitriyxt5@gmail.com>, 2012
-# Dmitry Bolkhovskikh <d20052005@yandex.ru>, 2017
-# Katrin Kutepova <blackkatelv@gmail.com>, 2018
-# Yuri Kozlov <yuray@komyakino.ru>, 2012-2019
-# Yuri Kozlov <yuray@komyakino.ru>, 2014
-# Иван Павлов <pavia00@gmail.com>, 2019
+# Azamat Hackimov <azamat.hackimov@gmail.com>, 2016.
+# Dmitriy Ovchinnikov <dmitriyxt5@gmail.com>, 2012.
+# Dmitry Bolkhovskikh <d20052005@yandex.ru>, 2017.
+# Katrin Kutepova <blackkatelv@gmail.com>, 2018.
+# Yuri Kozlov <yuray@komyakino.ru>, 2012-2019.
+# Yuri Kozlov <yuray@komyakino.ru>, 2014.
+# Иван Павлов <pavia00@gmail.com>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:27+0300\n"
-"PO-Revision-Date: 2019-08-26 06:22+0000\n"
+"PO-Revision-Date: 2019-09-17 18:56+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
-"Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/"
-"ru/)\n"
+"Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,6 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Lokalize 2.0\n"
 
 #. type: TH
 #: man-pages/man4/vcs.4:29
@@ -488,7 +487,7 @@ msgstr "VDSO"
 #: man-pages/man7/vdso.7:13
 #, no-wrap
 msgid "2019-08-02"
-msgstr ""
+msgstr "2019-08-02"
 
 #. type: Plain text
 #: man-pages/man7/vdso.7:16
@@ -874,7 +873,7 @@ msgstr "CW<linux-vdso64.so.1>"
 #: man-pages/man7/vdso.7:156
 #, no-wrap
 msgid "CW<riscv>"
-msgstr ""
+msgstr "CW<riscv>"
 
 #. type: tbl table
 #: man-pages/man7/vdso.7:157
@@ -1104,7 +1103,7 @@ msgstr "CW<__kernel_clock_getres>"
 #: man-pages/man7/vdso.7:238
 #, no-wrap
 msgid "bfin (Blackfin) functions (port removed in Linux 4.17)"
-msgstr ""
+msgstr "Функции на bfin (Blackfin) (перенос удалён в Linux 4.17)"
 
 #.  See linux/arch/blackfin/kernel/fixed_code.S
 #.  See http://docs.blackfin.uclinux.org/doku.php?id=linux-kernel:fixed-code
@@ -1472,7 +1471,7 @@ msgstr "CW<__kernel_sync_dicache_p5>"
 #: man-pages/man7/vdso.7:437
 #, no-wrap
 msgid "riscv functions"
-msgstr ""
+msgstr "Функции на riscv"
 
 #. type: tbl table
 #: man-pages/man7/vdso.7:447 man-pages/man7/vdso.7:448
@@ -1480,13 +1479,13 @@ msgstr ""
 #: man-pages/man7/vdso.7:451 man-pages/man7/vdso.7:452
 #, no-wrap
 msgid "CW<LINUX_4.15>"
-msgstr ""
+msgstr "CW<LINUX_4.15>"
 
 #. type: tbl table
 #: man-pages/man7/vdso.7:452
 #, no-wrap
 msgid "CW<__kernel_flush_icache>"
-msgstr ""
+msgstr "CW<__kernel_flush_icache>"
 
 #. type: SS
 #: man-pages/man7/vdso.7:458
