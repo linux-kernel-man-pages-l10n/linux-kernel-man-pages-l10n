@@ -1,29 +1,23 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
+# Copyright (C) 2019 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# aereiae <aereiae@gmail.com>, 2014
-# aereiae <aereiae@gmail.com>, 2014
-# Azamat Hackimov <azamat.hackimov@gmail.com>, 2013-2014,2016
-# Dmitriy S. Seregin <dseregin@59.ru>, 2013
-# Katrin Kutepova <blackkatelv@gmail.com>, 2018
-# Lockal <lockalsash@gmail.com>, 2013
-# Lockal <lockalsash@gmail.com>, 2013
-# Dmitriy S. Seregin <dseregin@59.ru>, 2013
-# Yuri Kozlov <yuray@komyakino.ru>, 2011-2019
-# Yuri Kozlov <yuray@komyakino.ru>, 2014
-# Баринов Владимир, 2016
-# Баринов Владимир, 2016
-# Иван Павлов <pavia00@gmail.com>, 2017,2019
+# aereiae <aereiae@gmail.com>, 2014.
+# Azamat Hackimov <azamat.hackimov@gmail.com>, 2013-2014,2016.
+# Dmitriy S. Seregin <dseregin@59.ru>, 2013.
+# Katrin Kutepova <blackkatelv@gmail.com>, 2018.
+# Lockal <lockalsash@gmail.com>, 2013.
+# Yuri Kozlov <yuray@komyakino.ru>, 2011-2019.
+# Yuri Kozlov <yuray@komyakino.ru>, 2014.
+# Баринов Владимир, 2016.
+# Иван Павлов <pavia00@gmail.com>, 2017,2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:26+0300\n"
-"PO-Revision-Date: 2019-07-23 02:26+0000\n"
+"PO-Revision-Date: 2019-09-18 18:42+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
-"Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/"
-"ru/)\n"
+"Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,6 +25,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Lokalize 2.0\n"
 
 #. type: TH
 #: man-pages/man4/random.4:17
@@ -15573,7 +15568,7 @@ msgstr ""
 #: man-pages/man3/resolver.3:479
 #, no-wrap
 msgid "I</etc/resolv.conf>"
-msgstr "|</etc/resolv.conf>"
+msgstr "I</etc/resolv.conf>"
 
 #. type: Plain text
 #: man-pages/man3/resolver.3:482 man-pages/man3/resolver.3:485

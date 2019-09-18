@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:24+0300\n"
-"PO-Revision-Date: 2019-08-27 18:53+0300\n"
+"PO-Revision-Date: 2019-09-18 18:49+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
@@ -15540,7 +15540,7 @@ msgid ""
 msgstr ""
 "При попытке запуска B<strace>(1) над исполняемыми файлами с мандатами (или с "
 "установленным битом set-user-ID-root), вам может понадобиться параметр I<-u "
-"E<lt>имя_пользователя<gt>>. Например так:"
+"E<lt>имя_пользователяE<gt>>. Например так:"
 
 #. type: Plain text
 #: man-pages/man7/capabilities.7:1691

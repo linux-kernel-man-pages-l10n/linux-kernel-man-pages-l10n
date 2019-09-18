@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:26+0300\n"
-"PO-Revision-Date: 2019-09-15 14:33+0300\n"
+"PO-Revision-Date: 2019-09-18 05:26+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
@@ -29642,7 +29642,7 @@ msgstr "B<AF_RDS>"
 #: man-pages/man2/socket.2:144
 #, no-wrap
 msgid "Reliable Datagram Sockets (RDS) protocol"
-msgstr "Протокол надёжных датаграмный сокетов (RDS)"
+msgstr "Протокол надёжных датаграмных сокетов (RDS)"
 
 #.  rds-tools: https://github.com/oracle/rds-tools/blob/master/rds.7
 #.  rds-tools: https://github.com/oracle/rds-tools/blob/master/rds-rdma.7
@@ -29650,7 +29650,7 @@ msgstr "Протокол надёжных датаграмный сокетов 
 #: man-pages/man2/socket.2:148
 #, no-wrap
 msgid "B<rds>(7)\n"
-msgstr " "
+msgstr "B<rds>(7)\n"
 
 #. type: tbl table
 #: man-pages/man2/socket.2:150

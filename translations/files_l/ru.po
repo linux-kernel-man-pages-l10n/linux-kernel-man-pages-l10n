@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:26+0300\n"
-"PO-Revision-Date: 2019-09-05 22:13+0300\n"
+"PO-Revision-Date: 2019-09-18 18:45+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
@@ -612,7 +612,7 @@ msgid ""
 "B<LIRC_SET_REC_CARRIER_RANGE>."
 msgstr ""
 "Задаёт верхнюю границу несущей частоты приёмника (Гц). Смотрите "
-"<LIRC_SET_REC_CARRIER_RANGE>."
+"B<LIRC_SET_REC_CARRIER_RANGE>."
 
 #. type: TP
 #: man-pages/man4/lirc.4:312

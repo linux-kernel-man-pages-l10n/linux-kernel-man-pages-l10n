@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:26+0300\n"
-"PO-Revision-Date: 2019-09-13 21:24+0300\n"
+"PO-Revision-Date: 2019-09-18 18:44+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
@@ -20483,7 +20483,7 @@ msgid ""
 "PR_SPEC_ENABLE)> will fail with the error B<EPERM>."
 msgstr ""
 "Тоже, что и B<PR_SPEC_DISABLE>, но нельзя отменить. Последующий вызов "
-"B<prctl(..., PR_SPEC_ENABLE)> завершится ошибкой <EPERM>."
+"B<prctl(..., PR_SPEC_ENABLE)> завершится ошибкой B<EPERM>."
 
 #. type: Plain text
 #: man-pages/man2/prctl.2:1146
@@ -35361,7 +35361,7 @@ msgid ""
 "value in this file is I</sbin/hotplug>."
 msgstr ""
 "Этот файл содержит путь для агента политики устройств. По умолчанию это файл "
-"|</sbin/hotplug>."
+"I</sbin/hotplug>."
 
 #.  Removed in commit 87f504e5c78b910b0c1d6ffb89bc95e492322c84 (tglx/history.git)
 #. type: TP

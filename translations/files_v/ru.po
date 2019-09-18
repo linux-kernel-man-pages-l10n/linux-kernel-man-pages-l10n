@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:27+0300\n"
-"PO-Revision-Date: 2019-09-17 18:56+0300\n"
+"PO-Revision-Date: 2019-09-18 05:25+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
@@ -158,14 +158,14 @@ msgstr "ФАЙЛЫ"
 #. type: Plain text
 #: man-pages/man4/vcs.4:97
 msgid "I</dev/vcs[0-63]>"
-msgstr "|</dev/vcs[0-63]>"
+msgstr "I</dev/vcs[0-63]>"
 
 #.  .SH AUTHOR
 #.  Andries Brouwer <aeb@cwi.nl>
 #. type: Plain text
 #: man-pages/man4/vcs.4:101
 msgid "I</dev/vcsa[0-63]>"
-msgstr "|</dev/vcsa[0-63]>"
+msgstr "I</dev/vcsa[0-63]>"
 
 #. type: SH
 #: man-pages/man4/vcs.4:101
