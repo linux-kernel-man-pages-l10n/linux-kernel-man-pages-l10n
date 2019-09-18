@@ -2,3 +2,5 @@
 translations/files_?/*.po~
 man-pages/
 po/
+man/
+
