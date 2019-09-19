@@ -1,4 +1,5 @@
 *.swp
+*.tar.bz2
 translations/files_?/*.po~
 man-pages/
 po/
