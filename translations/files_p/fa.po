@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:26+0300\n"
-"PO-Revision-Date: 2019-08-26 06:21+0000\n"
+"PO-Revision-Date: 2019-09-19 02:26+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Persian (http://www.transifex.com/kruvalig/man-pages/language/fa/)\n"
 "MIME-Version: 1.0\n"
@@ -14983,7 +14983,7 @@ msgstr ""
 #: man-pages/man2/prctl.2:199
 msgid ""
 "A subreaper fulfills the role of B<init>(1)  for its descendant processes.  "
-"When a process becomes orphaned (i.e., its immediate parent terminates)  "
+"When a process becomes orphaned (i.e., its immediate parent terminates), "
 "then that process will be reparented to the nearest still living ancestor "
 "subreaper.  Subsequently, calls to B<getppid>()  in the orphaned process "
 "will now return the PID of the subreaper process, and when the orphan "
@@ -18087,7 +18087,7 @@ msgid "B<PTRACE_SET_THREAD_AREA> (since Linux 2.6.0)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1009
+#: man-pages/man2/ptrace.2:1008
 msgid ""
 "This operation performs a similar task to B<set_thread_area>(2).  It sets "
 "the TLS entry in the GDT whose index is given in I<addr>, assigning it the "
@@ -18097,14 +18097,138 @@ msgid ""
 "to allocate a free TLS entry.)"
 msgstr ""
 
+#. type: TP
+#: man-pages/man2/ptrace.2:1008
+#, no-wrap
+msgid "B<PTRACE_GET_SYSCALL_INFO> (since Linux 5.3)"
+msgstr ""
+
+#.  commit 201766a20e30f982ccfe36bebfad9602c3ff574a
+#. type: Plain text
+#: man-pages/man2/ptrace.2:1029
+msgid ""
+"Retrieve information about the system call that caused the stop.  The "
+"information is placed into the buffer pointed by the I<data> argument, which"
+" should be a pointer to a buffer of type I<struct ptrace_syscall_info>.  The"
+" I<addr> argument contains the size of the buffer pointed to by the I<data> "
+"argument (i.e., I<sizeof(struct ptrace_syscall_info)>).  The return value "
+"contains the number of bytes available to be written by the kernel.  If the "
+"size of the data to be written by the kernel exceeds the size specified by "
+"the I<addr> argument, the output data is truncated."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/ptrace.2:1033
+msgid "The I<ptrace_syscall_info> structure contains the following fields:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/ptrace.2:1062
+#, no-wrap
+msgid ""
+"struct ptrace_syscall_info {\n"
+"    __u8 op;         /* Type of system call stop */\n"
+"    __u32 arch;      /* AUDIT_ARCH_* value; see seccomp(2) */\n"
+"    __u64 instruction_pointer; /* CPU instruction pointer */\n"
+"    __u64 stack_pointer;       /* CPU stack pointer */\n"
+"    union {\n"
+"        struct {     /* op == PTRACE_SYSCALL_INFO_ENTRY */\n"
+"            __u64 nr;          /* System call number */\n"
+"            __u64 args[6];     /* System call arguments */\n"
+"        } entry;\n"
+"        struct {     /* op == PTRACE_SYSCALL_INFO_EXIT */\n"
+"            __s64 rval;        /* System call return value */\n"
+"            __u8 is_error;     /* System call error flag;\n"
+"                                  Boolean: does rval contain\n"
+"                                  an error value (-ERRCODE) or\n"
+"                                  a nonerror return value? */\n"
+"        } exit;\n"
+"        struct {     /* op == PTRACE_SYSCALL_INFO_SECCOMP */\n"
+"            __u64 nr;          /* System call number */\n"
+"            __u64 args[6];     /* System call arguments */\n"
+"            __u32 ret_data;    /* SECCOMP_RET_DATA portion\n"
+"                                  of SECCOMP_RET_TRACE\n"
+"                                  return value */\n"
+"        } seccomp;\n"
+"    };\n"
+"};\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/ptrace.2:1076
+msgid ""
+"The I<op>, I<arch>, I<instruction_pointer>, and I<stack_pointer> fields are "
+"defined for all kinds of ptrace system call stops.  The rest of the "
+"structure is a union; one should read only those fields that are meaningful "
+"for the kind of system call stop specified by the I<op> field."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/ptrace.2:1083
+msgid ""
+"The I<op> field has one of the following values (defined in "
+"I<E<lt>linux/ptrace.hE<gt>)> indicating what type of stop occurred and which"
+" part of the union is filled:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/ptrace.2:1084
+#, no-wrap
+msgid "B<PTRACE_SYSCALL_INFO_ENTRY>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/ptrace.2:1090
+msgid ""
+"The I<entry> component of the union contains information relating to a "
+"system call entry stop."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/ptrace.2:1090
+#, no-wrap
+msgid "B<PTRACE_SYSCALL_INFO_EXIT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/ptrace.2:1096
+msgid ""
+"The I<exit> component of the union contains information relating to a system"
+" call exit stop."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/ptrace.2:1096
+#, no-wrap
+msgid "B<PTRACE_SYSCALL_INFO_SECCOMP>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/ptrace.2:1103
+msgid ""
+"The I<exit> component of the union contains information relating to a "
+"B<PTRACE_EVENT_SECCOMP> stop."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/ptrace.2:1103
+#, no-wrap
+msgid "B<PTRACE_SYSCALL_INFO_NONE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/ptrace.2:1106
+msgid "No component of the union contains relevant information."
+msgstr ""
+
 #. type: SS
-#: man-pages/man2/ptrace.2:1009
+#: man-pages/man2/ptrace.2:1108
 #, no-wrap
 msgid "Death under ptrace"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1018
+#: man-pages/man2/ptrace.2:1117
 msgid ""
 "When a (possibly multithreaded) process receives a killing signal (one whose"
 " disposition is set to B<SIG_DFL> and whose default action is to kill the "
@@ -18113,7 +18237,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1027
+#: man-pages/man2/ptrace.2:1126
 msgid ""
 "Note that the killing signal will first cause signal-delivery-stop (on one "
 "tracee only), and only after it is injected by the tracer (or after it was "
@@ -18123,7 +18247,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1039
+#: man-pages/man2/ptrace.2:1138
 msgid ""
 "B<SIGKILL> does not generate signal-delivery-stop and therefore the tracer "
 "can't suppress it.  B<SIGKILL> kills even within system calls (syscall-exit-"
@@ -18133,21 +18257,21 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1044
+#: man-pages/man2/ptrace.2:1143
 msgid ""
 "When the tracee calls B<_exit>(2), it reports its death to its tracer.  "
 "Other threads are not affected."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1048
+#: man-pages/man2/ptrace.2:1147
 msgid ""
 "When any thread executes B<exit_group>(2), every tracee in its thread group "
 "reports its death to its tracer."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1063
+#: man-pages/man2/ptrace.2:1162
 msgid ""
 "If the B<PTRACE_O_TRACEEXIT> option is on, B<PTRACE_EVENT_EXIT> will happen "
 "before actual death.  This applies to exits via B<exit>(2), "
@@ -18157,7 +18281,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1088
+#: man-pages/man2/ptrace.2:1187
 msgid ""
 "The tracer cannot assume that the ptrace-stopped tracee exists.  There are "
 "many scenarios when the tracee may die while stopped (such as B<SIGKILL>).  "
@@ -18175,7 +18299,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1102
+#: man-pages/man2/ptrace.2:1201
 msgid ""
 "The tracer can't assume that the tracee I<always> ends its life by reporting"
 " I<WIFEXITED(status)> or I<WIFSIGNALED(status)>; there are cases where this "
@@ -18186,13 +18310,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/ptrace.2:1102
+#: man-pages/man2/ptrace.2:1201
 #, no-wrap
 msgid "Stopped states"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1124
+#: man-pages/man2/ptrace.2:1223
 msgid ""
 "A tracee can be in two states: running or stopped.  For the purposes of "
 "ptrace, a tracee which is blocked in a system call (such as B<read>(2), "
@@ -18207,7 +18331,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1128
+#: man-pages/man2/ptrace.2:1227
 msgid ""
 "There are many kinds of states when the tracee is stopped, and in ptrace "
 "discussions they are often conflated.  Therefore, it is important to use "
@@ -18215,7 +18339,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1140
+#: man-pages/man2/ptrace.2:1239
 msgid ""
 "In this manual page, any stopped state in which the tracee is ready to "
 "accept ptrace commands from the tracer is called I<ptrace-stop>.  Ptrace-"
@@ -18225,7 +18349,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1145
+#: man-pages/man2/ptrace.2:1244
 msgid ""
 "When the running tracee enters ptrace-stop, it notifies its tracer using "
 "B<waitpid>(2)  (or one of the other \"wait\" system calls).  Most of this "
@@ -18233,7 +18357,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1147
+#: man-pages/man2/ptrace.2:1246
 #, no-wrap
 msgid "    pid = waitpid(pid_or_minus_1, &status, __WALL);\n"
 msgstr ""
@@ -18244,21 +18368,21 @@ msgstr ""
 #.      rules different if user wants to use waitid? Will waitid require
 #.      WEXITED?
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1159
+#: man-pages/man2/ptrace.2:1258
 msgid ""
 "Ptrace-stopped tracees are reported as returns with I<pid> greater than 0 "
 "and I<WIFSTOPPED(status)> true."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1167
+#: man-pages/man2/ptrace.2:1266
 msgid ""
 "The B<__WALL> flag does not include the B<WSTOPPED> and B<WEXITED> flags, "
 "but implies their functionality."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1174
+#: man-pages/man2/ptrace.2:1273
 msgid ""
 "Setting the B<WCONTINUED> flag when calling B<waitpid>(2)  is not "
 "recommended: the \"continued\" state is per-process and consuming it can "
@@ -18266,7 +18390,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1182
+#: man-pages/man2/ptrace.2:1281
 msgid ""
 "Use of the B<WNOHANG> flag may cause B<waitpid>(2)  to return 0 (\"no wait "
 "results available yet\")  even if the tracer knows there should be a "
@@ -18274,7 +18398,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1192
+#: man-pages/man2/ptrace.2:1291
 #, no-wrap
 msgid ""
 "errno = 0;\n"
@@ -18287,7 +18411,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1216
+#: man-pages/man2/ptrace.2:1315
 msgid ""
 "The following kinds of ptrace-stops exist: signal-delivery-stops, group-"
 "stops, B<PTRACE_EVENT> stops, syscall-stops.  They all are reported by "
@@ -18299,13 +18423,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/ptrace.2:1216
+#: man-pages/man2/ptrace.2:1315
 #, no-wrap
 msgid "Signal-delivery-stop"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1236
+#: man-pages/man2/ptrace.2:1335
 msgid ""
 "When a (possibly multithreaded) process receives any signal except "
 "B<SIGKILL>, the kernel selects an arbitrary thread which handles the signal."
@@ -18321,7 +18445,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1250
+#: man-pages/man2/ptrace.2:1349
 msgid ""
 "Signal-delivery-stop is observed by the tracer as B<waitpid>(2)  returning "
 "with I<WIFSTOPPED(status)> true, with the signal returned by "
@@ -18332,26 +18456,26 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/ptrace.2:1250
+#: man-pages/man2/ptrace.2:1349
 #, no-wrap
 msgid "Signal injection and suppression"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1253
+#: man-pages/man2/ptrace.2:1352
 msgid ""
 "After signal-delivery-stop is observed by the tracer, the tracer should "
 "restart the tracee with the call"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1255
+#: man-pages/man2/ptrace.2:1354
 #, no-wrap
 msgid "    ptrace(PTRACE_restart, pid, 0, sig)\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1268
+#: man-pages/man2/ptrace.2:1367
 msgid ""
 "where B<PTRACE_restart> is one of the restarting ptrace requests.  If I<sig>"
 " is 0, then a signal is not delivered.  Otherwise, the signal I<sig> is "
@@ -18360,14 +18484,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1274
+#: man-pages/man2/ptrace.2:1373
 msgid ""
 "The I<sig> value may be different from the I<WSTOPSIG(status)> value: the "
 "tracer can cause a different signal to be injected."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1290
+#: man-pages/man2/ptrace.2:1389
 msgid ""
 "Note that a suppressed signal still causes system calls to return "
 "prematurely.  In this case, system calls will be restarted: the tracer will "
@@ -18381,7 +18505,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1301
+#: man-pages/man2/ptrace.2:1400
 msgid ""
 "Restarting ptrace commands issued in ptrace-stops other than signal-"
 "delivery-stop are not guaranteed to inject a signal, even if I<sig> is "
@@ -18391,7 +18515,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1308
+#: man-pages/man2/ptrace.2:1407
 msgid ""
 "The fact that signal injection requests may be ignored when restarting the "
 "tracee after ptrace stops that are not signal-delivery-stops is a cause of "
@@ -18401,20 +18525,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1310
+#: man-pages/man2/ptrace.2:1409
 #, no-wrap
 msgid "    ptrace(PTRACE_restart, pid, 0, stopsig)\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1316
+#: man-pages/man2/ptrace.2:1415
 msgid ""
 "with the intention of injecting I<stopsig>, but I<stopsig> gets ignored and "
 "the tracee continues to run."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1336
+#: man-pages/man2/ptrace.2:1435
 msgid ""
 "The B<SIGCONT> signal has a side effect of waking up (all threads of)  a "
 "group-stopped process.  This side effect happens before signal-delivery-"
@@ -18428,7 +18552,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1340
+#: man-pages/man2/ptrace.2:1439
 msgid ""
 "Stopping signals cause (all threads of) a process to enter group-stop.  This"
 " side effect happens after signal injection, and therefore can be suppressed"
@@ -18441,12 +18565,12 @@ msgstr ""
 #.              if (signr == SIGSTOP)
 #.                      continue;
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1350
+#: man-pages/man2/ptrace.2:1449
 msgid "In Linux 2.4 and earlier, the B<SIGSTOP> signal can't be injected."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1367
+#: man-pages/man2/ptrace.2:1466
 msgid ""
 "B<PTRACE_GETSIGINFO> can be used to retrieve a I<siginfo_t> structure which "
 "corresponds to the delivered signal.  B<PTRACE_SETSIGINFO> may be used to "
@@ -18456,13 +18580,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/ptrace.2:1367
+#: man-pages/man2/ptrace.2:1466
 #, no-wrap
 msgid "Group-stop"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1379
+#: man-pages/man2/ptrace.2:1478
 msgid ""
 "When a (possibly multithreaded) process receives a stopping signal, all "
 "threads stop.  If some threads are traced, they enter a group-stop.  Note "
@@ -18474,7 +18598,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1388
+#: man-pages/man2/ptrace.2:1487
 msgid ""
 "Group-stop is observed by the tracer as B<waitpid>(2)  returning with "
 "I<WIFSTOPPED(status)> true, with the stopping signal available via "
@@ -18483,13 +18607,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1390
+#: man-pages/man2/ptrace.2:1489
 #, no-wrap
 msgid "    ptrace(PTRACE_GETSIGINFO, pid, 0, &siginfo)\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1411
+#: man-pages/man2/ptrace.2:1510
 msgid ""
 "The call can be avoided if the signal is not B<SIGSTOP>, B<SIGTSTP>, "
 "B<SIGTTIN>, or B<SIGTTOU>; only these four signals are stopping signals.  If"
@@ -18501,7 +18625,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1421
+#: man-pages/man2/ptrace.2:1520
 msgid ""
 "If tracee was attached using B<PTRACE_SEIZE>, group-stop is indicated by "
 "B<PTRACE_EVENT_STOP>: I<statusE<gt>E<gt>16 == PTRACE_EVENT_STOP>.  This "
@@ -18510,7 +18634,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1430
+#: man-pages/man2/ptrace.2:1529
 msgid ""
 "As of Linux 2.6.38, after the tracer sees the tracee ptrace-stop and until "
 "it restarts or kills it, the tracee will not run, and will not send "
@@ -18519,7 +18643,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1444
+#: man-pages/man2/ptrace.2:1543
 msgid ""
 "The kernel behavior described in the previous paragraph causes a problem "
 "with transparent handling of stopping signals.  If the tracer restarts the "
@@ -18531,7 +18655,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1455
+#: man-pages/man2/ptrace.2:1554
 msgid ""
 "Since Linux 3.4, there is a method to overcome this problem: instead of "
 "B<PTRACE_CONT>, a B<PTRACE_LISTEN> command can be used to restart a tracee "
@@ -18540,20 +18664,20 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/ptrace.2:1455
+#: man-pages/man2/ptrace.2:1554
 #, no-wrap
 msgid "PTRACE_EVENT stops"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1461
+#: man-pages/man2/ptrace.2:1560
 msgid ""
 "If the tracer sets B<PTRACE_O_TRACE_*> options, the tracee will enter "
 "ptrace-stops called B<PTRACE_EVENT> stops."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1475
+#: man-pages/man2/ptrace.2:1574
 msgid ""
 "B<PTRACE_EVENT> stops are observed by the tracer as B<waitpid>(2)  returning"
 " with I<WIFSTOPPED(status)>, and I<WSTOPSIG(status)> returns B<SIGTRAP>.  An"
@@ -18562,24 +18686,24 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1477
+#: man-pages/man2/ptrace.2:1576
 #, no-wrap
 msgid "    (SIGTRAP | PTRACE_EVENT_foo E<lt>E<lt> 8).\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1479
+#: man-pages/man2/ptrace.2:1578
 msgid "The following events exist:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:1479
+#: man-pages/man2/ptrace.2:1578
 #, no-wrap
 msgid "B<PTRACE_EVENT_VFORK>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1492
+#: man-pages/man2/ptrace.2:1591
 msgid ""
 "Stop before return from B<vfork>(2)  or B<clone>(2)  with the B<CLONE_VFORK>"
 " flag.  When the tracee is continued after this stop, it will wait for child"
@@ -18588,44 +18712,44 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:1492
+#: man-pages/man2/ptrace.2:1591
 #, no-wrap
 msgid "B<PTRACE_EVENT_FORK>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1500
+#: man-pages/man2/ptrace.2:1599
 msgid ""
 "Stop before return from B<fork>(2)  or B<clone>(2)  with the exit signal set"
 " to B<SIGCHLD>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:1500
+#: man-pages/man2/ptrace.2:1599
 #, no-wrap
 msgid "B<PTRACE_EVENT_CLONE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1504
+#: man-pages/man2/ptrace.2:1603
 msgid "Stop before return from B<clone>(2)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:1504
+#: man-pages/man2/ptrace.2:1603
 #, no-wrap
 msgid "B<PTRACE_EVENT_VFORK_DONE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1514
+#: man-pages/man2/ptrace.2:1613
 msgid ""
 "Stop before return from B<vfork>(2)  or B<clone>(2)  with the B<CLONE_VFORK>"
 " flag, but after the child unblocked this tracee by exiting or execing."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1520
+#: man-pages/man2/ptrace.2:1619
 msgid ""
 "For all four stops described above, the stop occurs in the parent (i.e., the"
 " tracee), not in the newly created thread.  B<PTRACE_GETEVENTMSG> can be "
@@ -18633,26 +18757,26 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:1520
+#: man-pages/man2/ptrace.2:1619
 #, no-wrap
 msgid "B<PTRACE_EVENT_EXEC>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1527
+#: man-pages/man2/ptrace.2:1626
 msgid ""
 "Stop before return from B<execve>(2).  Since Linux 3.0, "
 "B<PTRACE_GETEVENTMSG> returns the former thread ID."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:1527
+#: man-pages/man2/ptrace.2:1626
 #, no-wrap
 msgid "B<PTRACE_EVENT_EXIT>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1543
+#: man-pages/man2/ptrace.2:1642
 msgid ""
 "Stop before exit (including death from B<exit_group>(2)), signal death, or "
 "exit caused by B<execve>(2)  in a multithreaded process.  "
@@ -18662,13 +18786,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:1543
+#: man-pages/man2/ptrace.2:1642
 #, no-wrap
 msgid "B<PTRACE_EVENT_STOP>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1550
+#: man-pages/man2/ptrace.2:1649
 msgid ""
 "Stop induced by B<PTRACE_INTERRUPT> command, or group-stop, or initial "
 "ptrace-stop when a new child is attached (only if attached using "
@@ -18676,13 +18800,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:1550
+#: man-pages/man2/ptrace.2:1649
 #, no-wrap
 msgid "B<PTRACE_EVENT_SECCOMP>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1563
+#: man-pages/man2/ptrace.2:1662
 msgid ""
 "Stop triggered by a B<seccomp>(2)  rule on tracee syscall entry when "
 "B<PTRACE_O_TRACESECCOMP> has been set by the tracer.  The seccomp event "
@@ -18692,20 +18816,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1575
+#: man-pages/man2/ptrace.2:1674
 msgid ""
 "B<PTRACE_GETSIGINFO> on B<PTRACE_EVENT> stops returns B<SIGTRAP> in "
 "I<si_signo>, with I<si_code> set to I<(eventE<lt>E<lt>8)\\ |\\ SIGTRAP>."
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/ptrace.2:1575
+#: man-pages/man2/ptrace.2:1674
 #, no-wrap
 msgid "Syscall-stops"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1602
+#: man-pages/man2/ptrace.2:1701
 msgid ""
 "If the tracee was restarted by B<PTRACE_SYSCALL> or B<PTRACE_SYSEMU>, the "
 "tracee enters syscall-enter-stop just prior to entering any system call "
@@ -18722,7 +18846,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1619
+#: man-pages/man2/ptrace.2:1718
 msgid ""
 "However, even if the tracee was continued using B<PTRACE_SYSCALL>, it is not"
 " guaranteed that the next stop will be a syscall-exit-stop.  Other "
@@ -18734,7 +18858,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1634
+#: man-pages/man2/ptrace.2:1733
 msgid ""
 "Syscall-enter-stop and syscall-exit-stop are observed by the tracer as "
 "B<waitpid>(2)  returning with I<WIFSTOPPED(status)> true, and "
@@ -18744,20 +18868,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1640
+#: man-pages/man2/ptrace.2:1739
 msgid ""
 "Syscall-stops can be distinguished from signal-delivery-stop with B<SIGTRAP>"
 " by querying B<PTRACE_GETSIGINFO> for the following cases:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:1640
+#: man-pages/man2/ptrace.2:1739
 #, no-wrap
 msgid "I<si_code> E<lt>= 0"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1652
+#: man-pages/man2/ptrace.2:1751
 msgid ""
 "B<SIGTRAP> was delivered as a result of a user-space action, for example, a "
 "system call (B<tgkill>(2), B<kill>(2), B<sigqueue>(3), etc.), expiration of "
@@ -18766,29 +18890,29 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:1652
+#: man-pages/man2/ptrace.2:1751
 #, no-wrap
 msgid "I<si_code> == SI_KERNEL (0x80)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1656
+#: man-pages/man2/ptrace.2:1755
 msgid "B<SIGTRAP> was sent by the kernel."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:1656
+#: man-pages/man2/ptrace.2:1755
 #, no-wrap
 msgid "I<si_code> == SIGTRAP or I<si_code> == (SIGTRAP|0x80)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1659
+#: man-pages/man2/ptrace.2:1758
 msgid "This is a syscall-stop."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1664
+#: man-pages/man2/ptrace.2:1763
 msgid ""
 "However, syscall-stops happen very often (twice per system call), and "
 "performing B<PTRACE_GETSIGINFO> for every syscall-stop may be somewhat "
@@ -18796,7 +18920,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1687
+#: man-pages/man2/ptrace.2:1786
 msgid ""
 "Some architectures allow the cases to be distinguished by examining "
 "registers.  For example, on x86, I<rax> == -B<ENOSYS> in syscall-enter-stop."
@@ -18808,7 +18932,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1693
+#: man-pages/man2/ptrace.2:1792
 msgid ""
 "Using the B<PTRACE_O_TRACESYSGOOD> option is the recommended method to "
 "distinguish syscall-stops from other kinds of ptrace-stops, since it is "
@@ -18816,7 +18940,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1708
+#: man-pages/man2/ptrace.2:1807
 msgid ""
 "Syscall-enter-stop and syscall-exit-stop are indistinguishable from each "
 "other by the tracer.  The tracer needs to keep track of the sequence of "
@@ -18830,27 +18954,27 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1713
+#: man-pages/man2/ptrace.2:1812
 msgid ""
 "If after syscall-enter-stop, the tracer uses a restarting command other than"
 " B<PTRACE_SYSCALL>, syscall-exit-stop is not generated."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1726
+#: man-pages/man2/ptrace.2:1825
 msgid ""
 "B<PTRACE_GETSIGINFO> on syscall-stops returns B<SIGTRAP> in I<si_signo>, "
 "with I<si_code> set to B<SIGTRAP> or I<(SIGTRAP|0x80)>."
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/ptrace.2:1726
+#: man-pages/man2/ptrace.2:1825
 #, no-wrap
 msgid "PTRACE_EVENT_SECCOMP stops (Linux 3.5 to 4.7)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1734
+#: man-pages/man2/ptrace.2:1833
 msgid ""
 "The behavior of B<PTRACE_EVENT_SECCOMP> stops and their interaction with "
 "other kinds of ptrace stops has changed between kernel versions.  This "
@@ -18859,7 +18983,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1744
+#: man-pages/man2/ptrace.2:1843
 msgid ""
 "A B<PTRACE_EVENT_SECCOMP> stop occurs whenever a B<SECCOMP_RET_TRACE> rule "
 "is triggered.  This is independent of which methods was used to restart the "
@@ -18868,7 +18992,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1763
+#: man-pages/man2/ptrace.2:1862
 msgid ""
 "Restarts from this stop will behave as if the stop had occurred right before"
 " the system call in question.  In particular, both B<PTRACE_SYSCALL> and "
@@ -18882,14 +19006,14 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/ptrace.2:1763
+#: man-pages/man2/ptrace.2:1862
 #, no-wrap
 msgid "PTRACE_EVENT_SECCOMP stops (since Linux 4.8)"
 msgstr ""
 
 #.  commit 93e35efb8de45393cf61ed07f7b407629bf698ea
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1774
+#: man-pages/man2/ptrace.2:1873
 msgid ""
 "Starting with Linux 4.8, the B<PTRACE_EVENT_SECCOMP> stop was reordered to "
 "occur between syscall-entry-stop and syscall-exit-stop.  Note that seccomp "
@@ -18898,7 +19022,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1785
+#: man-pages/man2/ptrace.2:1884
 msgid ""
 "Functionally, a B<PTRACE_EVENT_SECCOMP> stop functions comparably to a "
 "syscall-entry-stop (i.e., continuations using B<PTRACE_SYSCALL> will cause "
@@ -18909,7 +19033,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1796
+#: man-pages/man2/ptrace.2:1895
 msgid ""
 "After a B<PTRACE_EVENT_SECCOMP> stop, seccomp will be rerun, with a "
 "B<SECCOMP_RET_TRACE> rule now functioning the same as a "
@@ -18919,7 +19043,7 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/ptrace.2:1796
+#: man-pages/man2/ptrace.2:1895
 #, no-wrap
 msgid "PTRACE_SINGLESTEP stops"
 msgstr ""
@@ -18927,18 +19051,18 @@ msgstr ""
 #.  FIXME .
 #.  document stops occurring with PTRACE_SINGLESTEP
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1802
+#: man-pages/man2/ptrace.2:1901
 msgid "[Details of these kinds of stops are yet to be documented.]"
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/ptrace.2:1802
+#: man-pages/man2/ptrace.2:1901
 #, no-wrap
 msgid "Informational and restarting ptrace commands"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1812
+#: man-pages/man2/ptrace.2:1911
 msgid ""
 "Most ptrace commands (all except B<PTRACE_ATTACH>, B<PTRACE_SEIZE>, "
 "B<PTRACE_TRACEME>, B<PTRACE_INTERRUPT>, and B<PTRACE_KILL>)  require the "
@@ -18946,7 +19070,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1817
+#: man-pages/man2/ptrace.2:1916
 msgid ""
 "When the tracee is in ptrace-stop, the tracer can read and write data to the"
 " tracee using informational commands.  These commands leave the tracee in "
@@ -18954,7 +19078,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1830
+#: man-pages/man2/ptrace.2:1929
 #, no-wrap
 msgid ""
 "ptrace(PTRACE_PEEKTEXT/PEEKDATA/PEEKUSER, pid, addr, 0);\n"
@@ -18970,7 +19094,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1843
+#: man-pages/man2/ptrace.2:1942
 msgid ""
 "Note that some errors are not reported.  For example, setting signal "
 "information (I<siginfo>)  may have no effect in some ptrace-stops, yet the "
@@ -18980,18 +19104,18 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1845
+#: man-pages/man2/ptrace.2:1944
 msgid "The call"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1847
+#: man-pages/man2/ptrace.2:1946
 #, no-wrap
 msgid "    ptrace(PTRACE_SETOPTIONS, pid, 0, PTRACE_O_flags);\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1856
+#: man-pages/man2/ptrace.2:1955
 msgid ""
 "affects one tracee.  The tracee's current flags are replaced.  Flags are "
 "inherited by new tracees created and \"auto-attached\" via active "
@@ -19000,20 +19124,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1859
+#: man-pages/man2/ptrace.2:1958
 msgid ""
 "Another group of commands makes the ptrace-stopped tracee run.  They have "
 "the form:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1861
+#: man-pages/man2/ptrace.2:1960
 #, no-wrap
 msgid "    ptrace(cmd, pid, 0, sig);\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1882
+#: man-pages/man2/ptrace.2:1981
 msgid ""
 "where I<cmd> is B<PTRACE_CONT>, B<PTRACE_LISTEN>, B<PTRACE_DETACH>, "
 "B<PTRACE_SYSCALL>, B<PTRACE_SINGLESTEP>, B<PTRACE_SYSEMU>, or "
@@ -19024,36 +19148,36 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/ptrace.2:1882
+#: man-pages/man2/ptrace.2:1981
 #, no-wrap
 msgid "Attaching and detaching"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1884
+#: man-pages/man2/ptrace.2:1983
 msgid "A thread can be attached to the tracer using the call"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1886
+#: man-pages/man2/ptrace.2:1985
 #, no-wrap
 msgid "    ptrace(PTRACE_ATTACH, pid, 0, 0);\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1888 man-pages/man2/ptrace.2:2742
+#: man-pages/man2/ptrace.2:1987 man-pages/man2/ptrace.2:2841
 msgid "or"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1890
+#: man-pages/man2/ptrace.2:1989
 #, no-wrap
 msgid "    ptrace(PTRACE_SEIZE, pid, 0, PTRACE_O_flags);\n"
 msgstr ""
 
 #.  FIXME Describe how to attach to a thread which is already group-stopped.
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1914
+#: man-pages/man2/ptrace.2:2013
 msgid ""
 "B<PTRACE_ATTACH> sends B<SIGSTOP> to this thread.  If the tracer wants this "
 "B<SIGSTOP> to have no effect, it needs to suppress it.  Note that if other "
@@ -19066,7 +19190,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1921
+#: man-pages/man2/ptrace.2:2020
 msgid ""
 "Since attaching sends B<SIGSTOP> and the tracer usually suppresses it, this "
 "may cause a stray B<EINTR> return from the currently executing system call "
@@ -19075,7 +19199,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1933
+#: man-pages/man2/ptrace.2:2032
 msgid ""
 "Since Linux 3.4, B<PTRACE_SEIZE> can be used instead of B<PTRACE_ATTACH>.  "
 "B<PTRACE_SEIZE> does not stop the attached process.  If you need to stop it "
@@ -19084,18 +19208,18 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1935
+#: man-pages/man2/ptrace.2:2034
 msgid "The request"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1937
+#: man-pages/man2/ptrace.2:2036
 #, no-wrap
 msgid "    ptrace(PTRACE_TRACEME, 0, 0, 0);\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1943
+#: man-pages/man2/ptrace.2:2042
 msgid ""
 "turns the calling thread into a tracee.  The thread continues to run "
 "(doesn't enter ptrace-stop).  A common practice is to follow the "
@@ -19103,20 +19227,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1945
+#: man-pages/man2/ptrace.2:2044
 #, no-wrap
 msgid "    raise(SIGSTOP);\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1948
+#: man-pages/man2/ptrace.2:2047
 msgid ""
 "and allow the parent (which is our tracer now) to observe our signal-"
 "delivery-stop."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1972
+#: man-pages/man2/ptrace.2:2071
 msgid ""
 "If the B<PTRACE_O_TRACEFORK>, B<PTRACE_O_TRACEVFORK>, or "
 "B<PTRACE_O_TRACECLONE> options are in effect, then children created by, "
@@ -19129,18 +19253,18 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1974
+#: man-pages/man2/ptrace.2:2073
 msgid "Detaching of the tracee is performed by:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1976
+#: man-pages/man2/ptrace.2:2075
 #, no-wrap
 msgid "    ptrace(PTRACE_DETACH, pid, 0, sig);\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:1984
+#: man-pages/man2/ptrace.2:2083
 msgid ""
 "B<PTRACE_DETACH> is a restarting operation; therefore it requires the tracee"
 " to be in ptrace-stop.  If the tracee is in signal-delivery-stop, a signal "
@@ -19150,7 +19274,7 @@ msgstr ""
 #.  FIXME Describe how to detach from a group-stopped tracee so that it
 #.  doesn't run, but continues to wait for SIGCONT.
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2008
+#: man-pages/man2/ptrace.2:2107
 msgid ""
 "If the tracee is running when the tracer wants to detach it, the usual "
 "solution is to send B<SIGSTOP> (using B<tgkill>(2), to make sure it goes to "
@@ -19164,7 +19288,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2016
+#: man-pages/man2/ptrace.2:2115
 msgid ""
 "If the tracer dies, all tracees are automatically detached and restarted, "
 "unless they were in group-stop.  Handling of restart from group-stop is "
@@ -19174,7 +19298,7 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/ptrace.2:2016
+#: man-pages/man2/ptrace.2:2115
 #, no-wrap
 msgid "execve(2) under ptrace"
 msgstr ""
@@ -19185,7 +19309,7 @@ msgstr ""
 #.      and the new program is executed in the thread group leader.
 #.  In kernel 3.1 sources, see fs/exec.c::de_thread()
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2035
+#: man-pages/man2/ptrace.2:2134
 msgid ""
 "When one thread in a multithreaded process calls B<execve>(2), the kernel "
 "destroys all other threads in the process, and resets the thread ID of the "
@@ -19197,7 +19321,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2045
+#: man-pages/man2/ptrace.2:2144
 msgid ""
 "All other threads stop in B<PTRACE_EVENT_EXIT> stop, if the "
 "B<PTRACE_O_TRACEEXIT> option was turned on.  Then all other threads except "
@@ -19206,7 +19330,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2053
+#: man-pages/man2/ptrace.2:2152
 msgid ""
 "The execing tracee changes its thread ID while it is in the B<execve>(2).  "
 "(Remember, under ptrace, the \"pid\" returned from B<waitpid>(2), or fed "
@@ -19216,14 +19340,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2059
+#: man-pages/man2/ptrace.2:2158
 msgid ""
 "Then a B<PTRACE_EVENT_EXEC> stop happens, if the B<PTRACE_O_TRACEEXEC> "
 "option was turned on."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2080
+#: man-pages/man2/ptrace.2:2179
 msgid ""
 "If the thread group leader has reported its B<PTRACE_EVENT_EXIT> stop by "
 "this time, it appears to the tracer that the dead thread leader \"reappears "
@@ -19239,14 +19363,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2083
+#: man-pages/man2/ptrace.2:2182
 msgid ""
 "All of the above effects are the artifacts of the thread ID change in the "
 "tracee."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2103
+#: man-pages/man2/ptrace.2:2202
 msgid ""
 "The B<PTRACE_O_TRACEEXEC> option is the recommended tool for dealing with "
 "this situation.  First, it enables B<PTRACE_EVENT_EXEC> stop, which occurs "
@@ -19257,7 +19381,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2109
+#: man-pages/man2/ptrace.2:2208
 msgid ""
 "When the tracer receives B<PTRACE_EVENT_EXEC> stop notification, it is "
 "guaranteed that except this tracee and the thread group leader, no other "
@@ -19265,7 +19389,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2117
+#: man-pages/man2/ptrace.2:2216
 msgid ""
 "On receiving the B<PTRACE_EVENT_EXEC> stop notification, the tracer should "
 "clean up all its internal data structures describing the threads of this "
@@ -19274,18 +19398,18 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2119
+#: man-pages/man2/ptrace.2:2218
 #, no-wrap
 msgid "    thread ID == thread group ID == process ID.\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2123
+#: man-pages/man2/ptrace.2:2222
 msgid "Example: two threads call B<execve>(2)  at the same time:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2134
+#: man-pages/man2/ptrace.2:2233
 #, no-wrap
 msgid ""
 "*** we get syscall-enter-stop in thread 1: **\n"
@@ -19300,7 +19424,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2162
+#: man-pages/man2/ptrace.2:2261
 msgid ""
 "If the B<PTRACE_O_TRACEEXEC> option is I<not> in effect for the execing "
 "tracee, and if the tracee was B<PTRACE_ATTACH>ed rather that "
@@ -19313,7 +19437,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2183
+#: man-pages/man2/ptrace.2:2282
 msgid ""
 "Usually, the tracer (for example, B<strace>(1))  would not want to show this"
 " extra post-execve B<SIGTRAP> signal to the user, and would suppress its "
@@ -19324,13 +19448,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/ptrace.2:2183
+#: man-pages/man2/ptrace.2:2282
 #, no-wrap
 msgid "Real parent"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2190
+#: man-pages/man2/ptrace.2:2289
 msgid ""
 "The ptrace API (ab)uses the standard UNIX parent/child signaling over "
 "B<waitpid>(2).  This used to cause the real parent of the process to stop "
@@ -19339,19 +19463,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2193
+#: man-pages/man2/ptrace.2:2292
 msgid ""
 "Many of these bugs have been fixed, but as of Linux 2.6.38 several still "
 "exist; see BUGS below."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2195
+#: man-pages/man2/ptrace.2:2294
 msgid "As of Linux 2.6.38, the following is believed to work correctly:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2203
+#: man-pages/man2/ptrace.2:2302
 msgid ""
 "exit/death by signal is reported first to the tracer, then, when the tracer "
 "consumes the B<waitpid>(2)  result, to the real parent (to the real parent "
@@ -19360,7 +19484,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2211
+#: man-pages/man2/ptrace.2:2310
 msgid ""
 "On success, the B<PTRACE_PEEK*> requests return the requested data (but see "
 "NOTES), the B<PTRACE_SECCOMP_GET_FILTER> request returns the number of "
@@ -19368,7 +19492,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2221
+#: man-pages/man2/ptrace.2:2320
 msgid ""
 "On error, all requests return -1, and I<errno> is set appropriately.  Since "
 "the value returned by a successful B<PTRACE_PEEK*> request may be -1, the "
@@ -19377,13 +19501,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2225
+#: man-pages/man2/ptrace.2:2324
 msgid ""
 "(i386 only) There was an error with allocating or freeing a debug register."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2236
+#: man-pages/man2/ptrace.2:2335
 msgid ""
 "There was an attempt to read from or write to an invalid area in the "
 "tracer's or the tracee's memory, probably because the area wasn't mapped or "
@@ -19392,12 +19516,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2239
+#: man-pages/man2/ptrace.2:2338
 msgid "An attempt was made to set an invalid option."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2246
+#: man-pages/man2/ptrace.2:2345
 msgid ""
 "I<request> is invalid, or an attempt was made to read from or write to an "
 "invalid area in the tracer's or the tracee's memory, or there was a word-"
@@ -19406,7 +19530,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2259
+#: man-pages/man2/ptrace.2:2358
 msgid ""
 "The specified process cannot be traced.  This could be because the tracer "
 "has insufficient privileges (the required capability is B<CAP_SYS_PTRACE>); "
@@ -19417,19 +19541,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2264
+#: man-pages/man2/ptrace.2:2363
 msgid ""
 "The specified process does not exist, or is not currently being traced by "
 "the caller, or is not stopped (for requests that require a stopped tracee)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2266
+#: man-pages/man2/ptrace.2:2365
 msgid "SVr4, 4.3BSD."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2281
+#: man-pages/man2/ptrace.2:2380
 msgid ""
 "Although arguments to B<ptrace>()  are interpreted according to the "
 "prototype given, glibc currently declares B<ptrace>()  as a variadic "
@@ -19440,14 +19564,14 @@ msgstr ""
 
 #.  See commit 00cd5c37afd5f431ac186dd131705048c0a11fdb
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2286
+#: man-pages/man2/ptrace.2:2385
 msgid ""
 "In Linux kernels before 2.6.26, B<init>(1), the process with PID 1, may not "
 "be traced."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2289
+#: man-pages/man2/ptrace.2:2388
 msgid ""
 "A tracees parent continues to be the tracer even if that tracer calls "
 "B<execve>(2)."
@@ -19455,7 +19579,7 @@ msgstr ""
 
 #.  See http://lkml.org/lkml/2008/5/8/375
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2296
+#: man-pages/man2/ptrace.2:2395
 msgid ""
 "The layout of the contents of memory and the USER area are quite operating-"
 "system- and architecture-specific.  The offset supplied, and the data "
@@ -19463,7 +19587,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2299
+#: man-pages/man2/ptrace.2:2398
 msgid ""
 "The size of a \"word\" is determined by the operating-system variant (e.g., "
 "for 32-bit Linux it is 32 bits)."
@@ -19471,7 +19595,7 @@ msgstr ""
 
 #. """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2310
+#: man-pages/man2/ptrace.2:2409
 msgid ""
 "This page documents the way the B<ptrace>()  call works currently in Linux."
 "  Its behavior differs significantly on other flavors of UNIX.  In any case,"
@@ -19480,13 +19604,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/ptrace.2:2310
+#: man-pages/man2/ptrace.2:2409
 #, no-wrap
 msgid "Ptrace access mode checking"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2325
+#: man-pages/man2/ptrace.2:2424
 msgid ""
 "Various parts of the kernel-user-space API (not just B<ptrace>()  "
 "operations), require so-called \"ptrace access mode\" checks, whose outcome "
@@ -19503,20 +19627,20 @@ msgstr ""
 
 #.  commit 006ebb40d3d65338bd74abb03b945f8d60e362bd
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2330
+#: man-pages/man2/ptrace.2:2429
 msgid ""
 "Prior to Linux 2.6.27, all access checks were of a single type.  Since Linux"
 " 2.6.27, two access mode levels are distinguished:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:2330
+#: man-pages/man2/ptrace.2:2429
 #, no-wrap
 msgid "B<PTRACE_MODE_READ>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2346
+#: man-pages/man2/ptrace.2:2445
 msgid ""
 "For \"read\" operations or other operations that are less dangerous, such "
 "as: B<get_robust_list>(2); B<kcmp>(2); reading I</proc/[pid]/auxv>, "
@@ -19525,7 +19649,7 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:2346
+#: man-pages/man2/ptrace.2:2445
 #, no-wrap
 msgid "B<PTRACE_MODE_ATTACH>"
 msgstr ""
@@ -19543,7 +19667,7 @@ msgstr ""
 #.      about proper handling of /proc/pid/fd.  Arguably that one might belong
 #.      back in the _ATTACH camp.
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2369
+#: man-pages/man2/ptrace.2:2468
 msgid ""
 "For \"write\" operations, or other operations that are more dangerous, such "
 "as: ptrace attaching (B<PTRACE_ATTACH>)  to another process or calling "
@@ -19553,40 +19677,40 @@ msgstr ""
 
 #.  commit caaee6234d05a58c5b4d05e7bf766131b810a657
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2374
+#: man-pages/man2/ptrace.2:2473
 msgid ""
 "Since Linux 4.5, the above access mode checks are combined (ORed) with one "
 "of the following modifiers:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:2374
+#: man-pages/man2/ptrace.2:2473
 #, no-wrap
 msgid "B<PTRACE_MODE_FSCREDS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2379
+#: man-pages/man2/ptrace.2:2478
 msgid ""
 "Use the caller's filesystem UID and GID (see B<credentials>(7))  or "
 "effective capabilities for LSM checks."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:2379
+#: man-pages/man2/ptrace.2:2478
 #, no-wrap
 msgid "B<PTRACE_MODE_REALCREDS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2383
+#: man-pages/man2/ptrace.2:2482
 msgid ""
 "Use the caller's real UID and GID or permitted capabilities for LSM checks."
 "  This was effectively the default before Linux 4.5."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2387
+#: man-pages/man2/ptrace.2:2486
 msgid ""
 "Because combining one of the credential modifiers with one of the "
 "aforementioned access modes is typical, some macros are defined in the "
@@ -19594,56 +19718,56 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:2387
+#: man-pages/man2/ptrace.2:2486
 #, no-wrap
 msgid "B<PTRACE_MODE_READ_FSCREDS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2391
+#: man-pages/man2/ptrace.2:2490
 msgid "Defined as B<PTRACE_MODE_READ | PTRACE_MODE_FSCREDS>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:2391
+#: man-pages/man2/ptrace.2:2490
 #, no-wrap
 msgid "B<PTRACE_MODE_READ_REALCREDS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2395
+#: man-pages/man2/ptrace.2:2494
 msgid "Defined as B<PTRACE_MODE_READ | PTRACE_MODE_REALCREDS>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:2395
+#: man-pages/man2/ptrace.2:2494
 #, no-wrap
 msgid "B<PTRACE_MODE_ATTACH_FSCREDS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2399
+#: man-pages/man2/ptrace.2:2498
 msgid "Defined as B<PTRACE_MODE_ATTACH | PTRACE_MODE_FSCREDS>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:2399
+#: man-pages/man2/ptrace.2:2498
 #, no-wrap
 msgid "B<PTRACE_MODE_ATTACH_REALCREDS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2403
+#: man-pages/man2/ptrace.2:2502
 msgid "Defined as B<PTRACE_MODE_ATTACH | PTRACE_MODE_REALCREDS>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2405
+#: man-pages/man2/ptrace.2:2504
 msgid "One further modifier can be ORed with the access mode:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:2405
+#: man-pages/man2/ptrace.2:2504
 #, no-wrap
 msgid "B<PTRACE_MODE_NOAUDIT> (since Linux 3.3)"
 msgstr ""
@@ -19651,7 +19775,7 @@ msgstr ""
 #.  commit 69f594a38967f4540ce7a29b3fd214e68a8330bd
 #.  Just for /proc/pid/stat
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2419
+#: man-pages/man2/ptrace.2:2518
 msgid ""
 "Don't audit this access mode check.  This modifier is employed for ptrace "
 "access mode checks (such as checks when reading I</proc/[pid]/stat>)  that "
@@ -19663,7 +19787,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2430
+#: man-pages/man2/ptrace.2:2529
 msgid ""
 "Note that all of the B<PTRACE_MODE_*> constants described in this subsection"
 " are kernel-internal, and not visible to user space.  The constant names are"
@@ -19675,7 +19799,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2439
+#: man-pages/man2/ptrace.2:2538
 msgid ""
 "The algorithm employed for ptrace access mode checking determines whether "
 "the calling process is allowed to perform the corresponding action on the "
@@ -19685,26 +19809,26 @@ msgid ""
 msgstr ""
 
 #. type: IP
-#: man-pages/man2/ptrace.2:2439
+#: man-pages/man2/ptrace.2:2538
 #, no-wrap
 msgid "1."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2442
+#: man-pages/man2/ptrace.2:2541
 msgid ""
 "If the calling thread and the target thread are in the same thread group, "
 "access is always allowed."
 msgstr ""
 
 #. type: IP
-#: man-pages/man2/ptrace.2:2442
+#: man-pages/man2/ptrace.2:2541
 #, no-wrap
 msgid "2."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2451
+#: man-pages/man2/ptrace.2:2550
 msgid ""
 "If the access mode specifies B<PTRACE_MODE_FSCREDS>, then, for the check in "
 "the next step, employ the caller's filesystem UID and GID.  (As noted in "
@@ -19713,7 +19837,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2459
+#: man-pages/man2/ptrace.2:2558
 msgid ""
 "Otherwise, the access mode specifies B<PTRACE_MODE_REALCREDS>, so use the "
 "caller's real UID and GID for the checks in the next step.  (Most APIs that "
@@ -19722,25 +19846,25 @@ msgid ""
 msgstr ""
 
 #. type: IP
-#: man-pages/man2/ptrace.2:2459
+#: man-pages/man2/ptrace.2:2558
 #, no-wrap
 msgid "3."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2463 man-pages/man2/ptrace.2:2510
+#: man-pages/man2/ptrace.2:2562 man-pages/man2/ptrace.2:2609
 msgid "Deny access if I<neither> of the following is true:"
 msgstr ""
 
 #. type: IP
-#: man-pages/man2/ptrace.2:2464 man-pages/man2/ptrace.2:2470
-#: man-pages/man2/ptrace.2:2511 man-pages/man2/ptrace.2:2516
+#: man-pages/man2/ptrace.2:2563 man-pages/man2/ptrace.2:2569
+#: man-pages/man2/ptrace.2:2610 man-pages/man2/ptrace.2:2615
 #, no-wrap
 msgid "\\(bu"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2470
+#: man-pages/man2/ptrace.2:2569
 msgid ""
 "The real, effective, and saved-set user IDs of the target match the caller's"
 " user ID, I<and> the real, effective, and saved-set group IDs of the target "
@@ -19748,20 +19872,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2474
+#: man-pages/man2/ptrace.2:2573
 msgid ""
 "The caller has the B<CAP_SYS_PTRACE> capability in the user namespace of the"
 " target."
 msgstr ""
 
 #. type: IP
-#: man-pages/man2/ptrace.2:2475
+#: man-pages/man2/ptrace.2:2574
 #, no-wrap
 msgid "4."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2485
+#: man-pages/man2/ptrace.2:2584
 msgid ""
 "Deny access if the target process \"dumpable\" attribute has a value other "
 "than 1 (B<SUID_DUMP_USER>; see the discussion of B<PR_SET_DUMPABLE> in "
@@ -19770,14 +19894,14 @@ msgid ""
 msgstr ""
 
 #. type: IP
-#: man-pages/man2/ptrace.2:2485
+#: man-pages/man2/ptrace.2:2584
 #, no-wrap
 msgid "5."
 msgstr ""
 
 #.  (in cap_ptrace_access_check()):
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2493
+#: man-pages/man2/ptrace.2:2592
 msgid ""
 "The kernel LSM I<security_ptrace_access_check>()  interface is invoked to "
 "see if ptrace access is permitted.  The results depend on the LSM(s).  The "
@@ -19786,13 +19910,13 @@ msgid ""
 msgstr ""
 
 #. type: IP
-#: man-pages/man2/ptrace.2:2494
+#: man-pages/man2/ptrace.2:2593
 #, no-wrap
 msgid "a)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2506
+#: man-pages/man2/ptrace.2:2605
 msgid ""
 "If the access mode includes B<PTRACE_MODE_FSCREDS>, then use the caller's "
 "I<effective> capability set in the following check; otherwise (the access "
@@ -19801,13 +19925,13 @@ msgid ""
 msgstr ""
 
 #. type: IP
-#: man-pages/man2/ptrace.2:2506
+#: man-pages/man2/ptrace.2:2605
 #, no-wrap
 msgid "b)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2516
+#: man-pages/man2/ptrace.2:2615
 msgid ""
 "The caller and the target process are in the same user namespace, and the "
 "caller's capabilities are a superset of the target process's I<permitted> "
@@ -19815,42 +19939,42 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2520
+#: man-pages/man2/ptrace.2:2619
 msgid ""
 "The caller has the B<CAP_SYS_PTRACE> capability in the target process's user"
 " namespace."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2526
+#: man-pages/man2/ptrace.2:2625
 msgid ""
 "Note that the commoncap LSM does not distinguish between B<PTRACE_MODE_READ>"
 " and B<PTRACE_MODE_ATTACH>."
 msgstr ""
 
 #. type: IP
-#: man-pages/man2/ptrace.2:2527
+#: man-pages/man2/ptrace.2:2626
 #, no-wrap
 msgid "6."
 msgstr ""
 
 #. """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2533
+#: man-pages/man2/ptrace.2:2632
 msgid ""
 "If access has not been denied by any of the preceding steps, then access is "
 "allowed."
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/ptrace.2:2533
+#: man-pages/man2/ptrace.2:2632
 #, no-wrap
 msgid "/proc/sys/kernel/yama/ptrace_scope"
 msgstr ""
 
 #.  commit 2d514487faf188938a4ee4fb3464eeecfbdcf8eb
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2552
+#: man-pages/man2/ptrace.2:2651
 msgid ""
 "On systems with the Yama Linux Security Module (LSM) installed (i.e., the "
 "kernel was configured with B<CONFIG_SECURITY_YAMA>), the "
@@ -19865,12 +19989,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2554
+#: man-pages/man2/ptrace.2:2653
 msgid "More precisely, the Yama LSM limits two types of operations:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2561
+#: man-pages/man2/ptrace.2:2660
 msgid ""
 "Any operation that performs a ptrace access mode B<PTRACE_MODE_ATTACH> "
 "check\\(emfor example, B<ptrace>()  B<PTRACE_ATTACH>.  (See the \"Ptrace "
@@ -19878,43 +20002,43 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2565
+#: man-pages/man2/ptrace.2:2664
 msgid "B<ptrace>()  B<PTRACE_TRACEME>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2571
+#: man-pages/man2/ptrace.2:2670
 msgid ""
 "A process that has the B<CAP_SYS_PTRACE> capability can update the "
 "I</proc/sys/kernel/yama/ptrace_scope> file with one of the following values:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:2571
+#: man-pages/man2/ptrace.2:2670
 #, no-wrap
 msgid "0 (\"classic ptrace permissions\")"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2576
+#: man-pages/man2/ptrace.2:2675
 msgid ""
 "No additional restrictions on operations that perform B<PTRACE_MODE_ATTACH> "
 "checks (beyond those imposed by the commoncap and other LSMs)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2580 man-pages/man2/ptrace.2:2609
+#: man-pages/man2/ptrace.2:2679 man-pages/man2/ptrace.2:2708
 msgid "The use of B<PTRACE_TRACEME> is unchanged."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:2580
+#: man-pages/man2/ptrace.2:2679
 #, no-wrap
 msgid "1 (\"restricted ptrace\") [default value]"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2591
+#: man-pages/man2/ptrace.2:2690
 msgid ""
 "When performing an operation that requires a B<PTRACE_MODE_ATTACH> check, "
 "the calling process must either have the B<CAP_SYS_PTRACE> capability in the"
@@ -19925,7 +20049,7 @@ msgstr ""
 
 #.  commit 90bb766440f2147486a2acc3e793d7b8348b0c22
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2605
+#: man-pages/man2/ptrace.2:2704
 msgid ""
 "A target process can employ the B<prctl>(2)  B<PR_SET_PTRACER> operation to "
 "declare an additional PID that is allowed to perform B<PTRACE_MODE_ATTACH> "
@@ -19935,13 +20059,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:2609
+#: man-pages/man2/ptrace.2:2708
 #, no-wrap
 msgid "2 (\"admin-only attach\")"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2617
+#: man-pages/man2/ptrace.2:2716
 msgid ""
 "Only processes with the B<CAP_SYS_PTRACE> capability in the user namespace "
 "of the target process may perform B<PTRACE_MODE_ATTACH> operations or trace "
@@ -19949,26 +20073,26 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/ptrace.2:2617
+#: man-pages/man2/ptrace.2:2716
 #, no-wrap
 msgid "3 (\"no attach\")"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2623
+#: man-pages/man2/ptrace.2:2722
 msgid ""
 "No process may perform B<PTRACE_MODE_ATTACH> operations or trace children "
 "that employ B<PTRACE_TRACEME>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2625
+#: man-pages/man2/ptrace.2:2724
 msgid "Once this value has been written to the file, it cannot be changed."
 msgstr ""
 
 #. """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2640
+#: man-pages/man2/ptrace.2:2739
 msgid ""
 "With respect to values 1 and 2, note that creating a new user namespace "
 "effectively removes the protection offered by Yama.  This is because a "
@@ -19981,7 +20105,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2652
+#: man-pages/man2/ptrace.2:2751
 msgid ""
 "At the system call level, the B<PTRACE_PEEKTEXT>, B<PTRACE_PEEKDATA>, and "
 "B<PTRACE_PEEKUSER> requests have a different API: they store the result at "
@@ -19992,7 +20116,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2663
+#: man-pages/man2/ptrace.2:2762
 msgid ""
 "On hosts with 2.6 kernel headers, B<PTRACE_SETOPTIONS> is declared with a "
 "different value than the one for 2.4.  This leads to applications compiled "
@@ -20002,7 +20126,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2666
+#: man-pages/man2/ptrace.2:2765
 msgid ""
 "Group-stop notifications are sent to the tracer, but not to real parent.  "
 "Last confirmed on 2.6.38.6."
@@ -20019,7 +20143,7 @@ msgstr ""
 #.      why it is so.
 #.   FIXME . need to test/verify this scenario
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2697
+#: man-pages/man2/ptrace.2:2796
 msgid ""
 "If a thread group leader is traced and exits by calling B<_exit>(2), a "
 "B<PTRACE_EVENT_EXIT> stop will happen for it (if requested), but the "
@@ -20033,7 +20157,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2707
+#: man-pages/man2/ptrace.2:2806
 msgid ""
 "A B<SIGKILL> signal may still cause a B<PTRACE_EVENT_EXIT> stop before "
 "actual signal death.  This may be changed in the future; B<SIGKILL> is meant"
@@ -20042,7 +20166,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2725
+#: man-pages/man2/ptrace.2:2824
 msgid ""
 "Some system calls return with B<EINTR> if a signal was sent to a tracee, but"
 " delivery was suppressed by the tracer.  (This is very typical operation: it"
@@ -20054,37 +20178,37 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2729
+#: man-pages/man2/ptrace.2:2828
 #, no-wrap
 msgid "strace -p E<lt>process-IDE<gt>\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2734
+#: man-pages/man2/ptrace.2:2833
 msgid "then, instead of the usual and expected one-line output such as"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2738
+#: man-pages/man2/ptrace.2:2837
 #, no-wrap
 msgid "restart_syscall(E<lt>... resuming interrupted call ...E<gt>_\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2746
+#: man-pages/man2/ptrace.2:2845
 #, no-wrap
 msgid "select(6, [5], NULL, [5], NULL_\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2751
+#: man-pages/man2/ptrace.2:2850
 msgid ""
 "('_' denotes the cursor position), you observe more than one line.  For "
 "example:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2756
+#: man-pages/man2/ptrace.2:2855
 #, no-wrap
 msgid ""
 "    clock_gettime(CLOCK_MONOTONIC, {15370, 690928118}) = 0\n"
@@ -20092,7 +20216,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2778
+#: man-pages/man2/ptrace.2:2877
 msgid ""
 "What is not visible here is that the process was blocked in B<epoll_wait>(2)"
 "  before B<strace>(1)  has attached to it.  Attaching caused "
@@ -20104,14 +20228,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2784
+#: man-pages/man2/ptrace.2:2883
 msgid ""
 "Contrary to the normal rules, the glibc wrapper for B<ptrace>()  can set "
 "I<errno> to zero."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/ptrace.2:2800
+#: man-pages/man2/ptrace.2:2899
 msgid ""
 "B<gdb>(1), B<ltrace>(1), B<strace>(1), B<clone>(2), B<execve>(2), "
 "B<fork>(2), B<gettid>(2), B<prctl>(2), B<seccomp>(2), B<sigaction>(2), "
@@ -38667,25 +38791,26 @@ msgid "B<e>, B<E>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:674
+#: man-pages/man3/printf.3:675
 msgid ""
 "The I<double> argument is rounded and converted in the style "
-"[-]dB<\\&.>dddB<e>\\(+-dd where there is one digit before the decimal-point "
-"character and the number of digits after it is equal to the precision; if "
-"the precision is missing, it is taken as 6; if the precision is zero, no "
-"decimal-point character appears.  An B<E> conversion uses the letter B<E> "
-"(rather than B<e>)  to introduce the exponent.  The exponent always contains"
-" at least two digits; if the value is zero, the exponent is 00."
+"[-]dB<\\&.>dddB<e>\\(+-dd where there is one digit (which is nonzero if the "
+"argument is nonzero)  before the decimal-point character and the number of "
+"digits after it is equal to the precision; if the precision is missing, it "
+"is taken as 6; if the precision is zero, no decimal-point character appears."
+"  An B<E> conversion uses the letter B<E> (rather than B<e>)  to introduce "
+"the exponent.  The exponent always contains at least two digits; if the "
+"value is zero, the exponent is 00."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/printf.3:674
+#: man-pages/man3/printf.3:675
 #, no-wrap
 msgid "B<f>, B<F>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:685
+#: man-pages/man3/printf.3:686
 msgid ""
 "The I<double> argument is rounded and converted to decimal notation in the "
 "style [-]dddB<\\&.>ddd, where the number of digits after the decimal-point "
@@ -38696,7 +38821,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:698
+#: man-pages/man3/printf.3:699
 msgid ""
 "(SUSv2 does not know about B<F> and says that character string "
 "representations for infinity and NaN may be made available.  SUSv3 adds a "
@@ -38707,13 +38832,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/printf.3:698
+#: man-pages/man3/printf.3:699
 #, no-wrap
 msgid "B<g>, B<G>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:723
+#: man-pages/man3/printf.3:724
 msgid ""
 "The I<double> argument is converted in style B<f> or B<e> (or B<F> or B<E> "
 "for B<G> conversions).  The precision specifies the number of significant "
@@ -38725,13 +38850,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/printf.3:723
+#: man-pages/man3/printf.3:724
 #, no-wrap
 msgid "B<a>, B<A>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:748
+#: man-pages/man3/printf.3:749
 msgid ""
 "(C99; not in SUSv2, but added in SUSv3)  For B<a> conversion, the I<double> "
 "argument is converted to hexadecimal notation (using the letters abcdef)  in"
@@ -38747,13 +38872,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/printf.3:748
+#: man-pages/man3/printf.3:749
 #, no-wrap
 msgid "B<c>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:766
+#: man-pages/man3/printf.3:767
 msgid ""
 "If no B<l> modifier is present, the I<int> argument is converted to an "
 "I<unsigned char>, and the resulting character is written.  If an B<l> "
@@ -38764,13 +38889,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/printf.3:766
+#: man-pages/man3/printf.3:767
 #, no-wrap
 msgid "B<s>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:781
+#: man-pages/man3/printf.3:782
 msgid ""
 "If no B<l> modifier is present: the I<const char\\ *> argument is expected "
 "to be a pointer to an array of character type (pointer to a string).  "
@@ -38782,7 +38907,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:808
+#: man-pages/man3/printf.3:809
 msgid ""
 "If an B<l> modifier is present: the I<const wchar_t\\ *> argument is "
 "expected to be a pointer to an array of wide characters.  Wide characters "
@@ -38800,52 +38925,52 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/printf.3:808
+#: man-pages/man3/printf.3:809
 #, no-wrap
 msgid "B<C>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:814
+#: man-pages/man3/printf.3:815
 msgid ""
 "(Not in C99 or C11, but in SUSv2, SUSv3, and SUSv4.)  Synonym for B<lc>.  "
 "Don't use."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/printf.3:814
+#: man-pages/man3/printf.3:815
 #, no-wrap
 msgid "B<S>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:820
+#: man-pages/man3/printf.3:821
 msgid ""
 "(Not in C99 or C11, but in SUSv2, SUSv3, and SUSv4.)  Synonym for B<ls>.  "
 "Don't use."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/printf.3:820
+#: man-pages/man3/printf.3:821
 #, no-wrap
 msgid "B<p>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:828
+#: man-pages/man3/printf.3:829
 msgid ""
 "The I<void\\ *> pointer argument is printed in hexadecimal (as if by B<%#x> "
 "or B<%#lx>)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/printf.3:828
+#: man-pages/man3/printf.3:829
 #, no-wrap
 msgid "B<n>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:840
+#: man-pages/man3/printf.3:841
 msgid ""
 "The number of characters written so far is stored into the integer pointed "
 "to by the corresponding argument.  That argument shall be an I<int\\ *>, or "
@@ -38856,40 +38981,40 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/printf.3:840
+#: man-pages/man3/printf.3:841
 #, no-wrap
 msgid "B<m>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:846
+#: man-pages/man3/printf.3:847
 msgid ""
 "(Glibc extension; supported by uClibc and musl.)  Print output of "
 "I<strerror(errno)>.  No argument is required."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/printf.3:846
+#: man-pages/man3/printf.3:847
 #, no-wrap
 msgid "B<%>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:852
+#: man-pages/man3/printf.3:853
 msgid ""
 "A \\(aq%\\(aq is written.  No argument is converted.  The complete "
 "conversion specification is \\(aq%%\\(aq."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:855
+#: man-pages/man3/printf.3:856
 msgid ""
 "Upon successful return, these functions return the number of characters "
 "printed (excluding the null byte used to end output to strings)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:871
+#: man-pages/man3/printf.3:872
 msgid ""
 "The functions B<snprintf>()  and B<vsnprintf>()  do not write more than "
 "I<size> bytes (including the terminating null byte (\\(aq\\e0\\(aq)).  If "
@@ -38901,12 +39026,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:873
+#: man-pages/man3/printf.3:874
 msgid "If an output error is encountered, a negative value is returned."
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/printf.3:884
+#: man-pages/man3/printf.3:885
 #, no-wrap
 msgid ""
 "B<printf>(),\n"
@@ -38914,7 +39039,7 @@ msgid ""
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/printf.3:887
+#: man-pages/man3/printf.3:888
 #, no-wrap
 msgid ""
 "B<sprintf>(),\n"
@@ -38922,7 +39047,7 @@ msgid ""
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/printf.3:890
+#: man-pages/man3/printf.3:891
 #, no-wrap
 msgid ""
 "B<vprintf>(),\n"
@@ -38930,7 +39055,7 @@ msgid ""
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/printf.3:893
+#: man-pages/man3/printf.3:894
 #, no-wrap
 msgid ""
 "B<vsprintf>(),\n"
@@ -38938,19 +39063,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:904
+#: man-pages/man3/printf.3:905
 msgid ""
 "B<fprintf>(), B<printf>(), B<sprintf>(), B<vprintf>(), B<vfprintf>(), "
 "B<vsprintf>(): POSIX.1-2001, POSIX.1-2008, C89, C99."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:908
+#: man-pages/man3/printf.3:909
 msgid "B<snprintf>(), B<vsnprintf>(): POSIX.1-2001, POSIX.1-2008, C99."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:915
+#: man-pages/man3/printf.3:916
 msgid ""
 "The B<dprintf>()  and B<vdprintf>()  functions were originally GNU "
 "extensions that were later standardized in POSIX.1-2008."
@@ -38984,7 +39109,7 @@ msgstr ""
 #.  .PP
 #.  glibc 2.0 adds conversion characters \fBC\fP and \fBS\fP.
 #. type: Plain text
-#: man-pages/man3/printf.3:958
+#: man-pages/man3/printf.3:959
 msgid ""
 "Concerning the return value of B<snprintf>(), SUSv2 and C99 contradict each "
 "other: when B<snprintf>()  is called with I<size>=0 then SUSv2 stipulates an"
@@ -38996,33 +39121,33 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:961
+#: man-pages/man3/printf.3:962
 msgid ""
 "glibc 2.1 adds length modifiers B<hh>, B<j>, B<t>, and B<z> and conversion "
 "characters B<a> and B<A>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:964
+#: man-pages/man3/printf.3:965
 msgid ""
 "glibc 2.2 adds the conversion character B<F> with C99 semantics, and the "
 "flag character B<I>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:966
+#: man-pages/man3/printf.3:967
 msgid "Some programs imprudently rely on code such as the following"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:968
+#: man-pages/man3/printf.3:969
 #, no-wrap
 msgid "    sprintf(buf, \"%s some further text\", buf);\n"
 msgstr ""
 
 #.  http://sourceware.org/bugzilla/show_bug.cgi?id=7075
 #. type: Plain text
-#: man-pages/man3/printf.3:984
+#: man-pages/man3/printf.3:985
 msgid ""
 "to append text to I<buf>.  However, the standards explicitly note that the "
 "results are undefined if source and destination buffers overlap when calling"
@@ -39066,7 +39191,7 @@ msgstr ""
 #.  .BR vdprintf ()
 #.  that print to a file descriptor instead of a stream.
 #. type: Plain text
-#: man-pages/man3/printf.3:1026
+#: man-pages/man3/printf.3:1027
 msgid ""
 "The glibc implementation of the functions B<snprintf>()  and B<vsnprintf>()"
 "  conforms to the C99 standard, that is, behaves as described above, since "
@@ -39088,7 +39213,7 @@ msgstr ""
 #.  .BR snprintf ()
 #.  with early libc4 leads to serious security problems.
 #. type: Plain text
-#: man-pages/man3/printf.3:1056
+#: man-pages/man3/printf.3:1057
 msgid ""
 "Because B<sprintf>()  and B<vsprintf>()  assume an arbitrarily long string, "
 "callers must be careful not to overflow the actual space; this is often "
@@ -39101,7 +39226,7 @@ msgstr ""
 #.  Some floating-point conversions under early libc4
 #.  caused memory leaks.
 #. type: Plain text
-#: man-pages/man3/printf.3:1070
+#: man-pages/man3/printf.3:1071
 msgid ""
 "Code such as B<printf(>I<foo>B<);> often indicates a bug, since I<foo> may "
 "contain a % character.  If I<foo> comes from untrusted user input, it may "
@@ -39110,12 +39235,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:1074
+#: man-pages/man3/printf.3:1075
 msgid "To print I<Pi> to five decimal places:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:1080
+#: man-pages/man3/printf.3:1081
 #, no-wrap
 msgid ""
 "#include E<lt>math.hE<gt>\n"
@@ -39124,14 +39249,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:1089
+#: man-pages/man3/printf.3:1090
 msgid ""
 "To print a date and time in the form \"Sunday, July 3, 10:02\", where "
 "I<weekday> and I<month> are pointers to strings:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:1095
+#: man-pages/man3/printf.3:1096
 #, no-wrap
 msgid ""
 "#include E<lt>stdio.hE<gt>\n"
@@ -39140,7 +39265,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:1101
+#: man-pages/man3/printf.3:1102
 msgid ""
 "Many countries use the day-month-year order.  Hence, an internationalized "
 "version must be able to print the arguments in an order specified by the "
@@ -39148,7 +39273,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:1107
+#: man-pages/man3/printf.3:1108
 #, no-wrap
 msgid ""
 "#include E<lt>stdio.hE<gt>\n"
@@ -39157,32 +39282,32 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:1114
+#: man-pages/man3/printf.3:1115
 msgid ""
 "where I<format> depends on locale, and may permute the arguments.  With the "
 "value:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:1118
+#: man-pages/man3/printf.3:1119
 #, no-wrap
 msgid "\"%1$s, %3$d. %2$s, %4$d:%5$.2d\\en\"\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:1122
+#: man-pages/man3/printf.3:1123
 msgid "one might obtain \"Sonntag, 3. Juli, 10:02\"."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:1125
+#: man-pages/man3/printf.3:1126
 msgid ""
 "To allocate a sufficiently large string and print into it (code correct for "
 "both glibc 2.0 and glibc 2.1):"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:1130
+#: man-pages/man3/printf.3:1131
 #, no-wrap
 msgid ""
 "#include E<lt>stdio.hE<gt>\n"
@@ -39191,7 +39316,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:1137
+#: man-pages/man3/printf.3:1138
 #, no-wrap
 msgid ""
 "char *\n"
@@ -39203,13 +39328,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:1139
+#: man-pages/man3/printf.3:1140
 #, no-wrap
 msgid "    /* Determine required size */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:1143 man-pages/man3/printf.3:1155
+#: man-pages/man3/printf.3:1144 man-pages/man3/printf.3:1156
 #, no-wrap
 msgid ""
 "    va_start(ap, fmt);\n"
@@ -39218,7 +39343,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:1146
+#: man-pages/man3/printf.3:1147
 #, no-wrap
 msgid ""
 "    if (size E<lt> 0)\n"
@@ -39226,7 +39351,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:1151
+#: man-pages/man3/printf.3:1152
 #, no-wrap
 msgid ""
 "    size++;             /* For '\\e0' */\n"
@@ -39236,7 +39361,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:1160
+#: man-pages/man3/printf.3:1161
 #, no-wrap
 msgid ""
 "    if (size E<lt> 0) {\n"
@@ -39246,7 +39371,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:1163
+#: man-pages/man3/printf.3:1164
 #, no-wrap
 msgid ""
 "    return p;\n"
@@ -39254,14 +39379,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:1167
+#: man-pages/man3/printf.3:1168
 msgid ""
 "If truncation occurs in glibc versions prior to 2.0.6, this is treated as an"
 " error instead of being handled gracefully."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/printf.3:1176
+#: man-pages/man3/printf.3:1177
 msgid ""
 "B<printf>(1), B<asprintf>(3), B<puts>(3), B<scanf>(3), B<setlocale>(3), "
 "B<strfromd>(3), B<wcrtomb>(3), B<wprintf>(3), B<locale>(5)"

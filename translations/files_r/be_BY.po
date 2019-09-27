@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
-"POT-Creation-Date: 2018-01-09 18:51+0300\n"
-"PO-Revision-Date: 2019-04-02 15:55+0000\n"
+"POT-Creation-Date: 2019-08-26 09:26+0300\n"
+"PO-Revision-Date: 2019-09-19 02:26+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Belarusian (Belarus) (http://www.transifex.com/kruvalig/man-pages/language/be_BY/)\n"
 "MIME-Version: 1.0\n"
@@ -9844,21 +9844,22 @@ msgid ""
 " out if no server is available for one of the domains."
 msgstr ""
 
+#.  glibc commit 3f853f22c87f0b671c0366eb290919719fa56c0e
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:109
+#: man-pages/man5/resolv.conf.5:112
 msgid ""
-"The search list is currently limited to six domains with a total of 256 "
-"characters."
+"In glibc 2.25 and earlier, the search list is limited to six domains with a "
+"total of 256 characters.  Since glibc 2.26, the search list is unlimited."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/resolv.conf.5:109
+#: man-pages/man5/resolv.conf.5:112
 #, no-wrap
 msgid "B<sortlist>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:122
+#: man-pages/man5/resolv.conf.5:125
 msgid ""
 "This option allows addresses returned by B<gethostbyname>(3)  to be sorted."
 "  A sortlist is specified by IP-address-netmask pairs.  The netmask is "
@@ -9868,56 +9869,56 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:125
+#: man-pages/man5/resolv.conf.5:128
 msgid "sortlist 130.155.160.0/255.255.240.0 130.155.0.0"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/resolv.conf.5:126
+#: man-pages/man5/resolv.conf.5:129
 #, no-wrap
 msgid "B<options>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:130
+#: man-pages/man5/resolv.conf.5:133
 msgid ""
 "Options allows certain internal resolver variables to be modified.  The "
 "syntax is"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:133
+#: man-pages/man5/resolv.conf.5:136
 msgid "B<options> I<option> I<...>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:135
+#: man-pages/man5/resolv.conf.5:138
 msgid "where I<option> is one of the following:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/resolv.conf.5:135
+#: man-pages/man5/resolv.conf.5:138
 #, no-wrap
 msgid "B<debug>"
 msgstr ""
 
 #.  Since glibc 2.2?
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:144
+#: man-pages/man5/resolv.conf.5:147
 msgid ""
 "Sets B<RES_DEBUG> in I<_res.options> (effective only if glibc was built with"
 " debug support; see B<resolver>(3))."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/resolv.conf.5:144
+#: man-pages/man5/resolv.conf.5:147
 #, no-wrap
 msgid "B<ndots:>I<n>"
 msgstr ""
 
 #.  Since glibc 2.2
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:158
+#: man-pages/man5/resolv.conf.5:161
 msgid ""
 "Sets a threshold for the number of dots which must appear in a name given to"
 " B<res_query>(3)  (see B<resolver>(3))  before an I<initial absolute query> "
@@ -9928,14 +9929,14 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/resolv.conf.5:158
+#: man-pages/man5/resolv.conf.5:161
 #, no-wrap
 msgid "B<timeout:>I<n>"
 msgstr ""
 
 #.  Since glibc 2.2
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:172
+#: man-pages/man5/resolv.conf.5:175
 msgid ""
 "Sets the amount of time the resolver will wait for a response from a remote "
 "name server before retrying the query via a different name server. This may "
@@ -9946,13 +9947,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/resolv.conf.5:172
+#: man-pages/man5/resolv.conf.5:175
 #, no-wrap
 msgid "B<attempts:>I<n>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:181
+#: man-pages/man5/resolv.conf.5:184
 msgid ""
 "Sets the number of times the resolver will send a query to its name servers "
 "before giving up and returning an error to the calling application.  The "
@@ -9961,14 +9962,14 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/resolv.conf.5:181
+#: man-pages/man5/resolv.conf.5:184
 #, no-wrap
 msgid "B<rotate>"
 msgstr ""
 
 #.  Since glibc 2.2
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:191
+#: man-pages/man5/resolv.conf.5:194
 msgid ""
 "Sets B<RES_ROTATE> in I<_res.options>, which causes round-robin selection of"
 " name servers from among those listed.  This has the effect of spreading the"
@@ -9977,14 +9978,14 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/resolv.conf.5:191
+#: man-pages/man5/resolv.conf.5:194
 #, no-wrap
 msgid "B<no-check-names>"
 msgstr ""
 
 #.  since glibc 2.2
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:201
+#: man-pages/man5/resolv.conf.5:204
 msgid ""
 "Sets B<RES_NOCHECKNAME> in I<_res.options>, which disables the modern BIND "
 "checking of incoming hostnames and mail names for invalid characters such as"
@@ -9992,7 +9993,7 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/resolv.conf.5:201
+#: man-pages/man5/resolv.conf.5:204
 #, no-wrap
 msgid "B<inet6>"
 msgstr ""
@@ -10000,7 +10001,7 @@ msgstr ""
 #.  Since glibc 2.2
 #.  b76e065991ec01299225d9da90a627ebe6c1ac97
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:218
+#: man-pages/man5/resolv.conf.5:221
 msgid ""
 "Sets B<RES_USE_INET6> in I<_res.options>.  This has the effect of trying an "
 "AAAA query before an A query inside the B<gethostbyname>(3)  function, and "
@@ -10011,13 +10012,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/resolv.conf.5:218
+#: man-pages/man5/resolv.conf.5:221
 #, no-wrap
 msgid "B<ip6-bytestring> (since glibc 2.3.4)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:230
+#: man-pages/man5/resolv.conf.5:233
 msgid ""
 "Sets B<RES_USEBSTRING> in I<_res.options>.  This causes reverse IPv6 lookups"
 " to be made using the bit-label format described in RFC\\ 2673; if this "
@@ -10027,13 +10028,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/resolv.conf.5:230
+#: man-pages/man5/resolv.conf.5:233
 #, no-wrap
 msgid "B<ip6-dotint>/B<no-ip6-dotint> (glibc 2.3.4 to 2.24)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:253
+#: man-pages/man5/resolv.conf.5:256
 msgid ""
 "Clear/set B<RES_NOIP6DOTINT> in I<_res.options>.  When this option is clear "
 "(B<ip6-dotint>), reverse IPv6 lookups are made in the (deprecated)  "
@@ -10045,26 +10046,26 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/resolv.conf.5:253
+#: man-pages/man5/resolv.conf.5:256
 #, no-wrap
 msgid "B<edns0> (since glibc 2.6)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:260
+#: man-pages/man5/resolv.conf.5:263
 msgid ""
 "Sets B<RES_USE_EDNSO> in I<_res.options>.  This enables support for the DNS "
 "extensions described in RFC\\ 2671."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/resolv.conf.5:260
+#: man-pages/man5/resolv.conf.5:263
 #, no-wrap
 msgid "B<single-request> (since glibc 2.10)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:273
+#: man-pages/man5/resolv.conf.5:276
 msgid ""
 "Sets B<RES_SNGLKUP> in I<_res.options>.  By default, glibc performs IPv4 and"
 " IPv6 lookups in parallel since version 2.9.  Some appliance DNS servers "
@@ -10075,13 +10076,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/resolv.conf.5:273
+#: man-pages/man5/resolv.conf.5:276
 #, no-wrap
 msgid "B<single-request-reopen> (since glibc 2.9)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:285
+#: man-pages/man5/resolv.conf.5:288
 msgid ""
 "Sets B<RES_SNGLKUPREOP> in I<_res.options>.  The resolver uses the same "
 "socket for the A and AAAA requests.  Some hardware mistakenly sends back "
@@ -10092,13 +10093,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/resolv.conf.5:285
+#: man-pages/man5/resolv.conf.5:288
 #, no-wrap
 msgid "B<no-tld-query> (since glibc 2.14)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:298
+#: man-pages/man5/resolv.conf.5:301
 msgid ""
 "Sets B<RES_NOTLDQUERY> in I<_res.options>.  This option causes "
 "B<res_nsearch>()  to not attempt to resolve an unqualified name as if it "
@@ -10109,41 +10110,41 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/resolv.conf.5:298
+#: man-pages/man5/resolv.conf.5:301
 #, no-wrap
 msgid "B<use-vc> (since glibc 2.14)"
 msgstr ""
 
 #.  aef16cc8a4c670036d45590877d411a97f01e0cd
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:306
+#: man-pages/man5/resolv.conf.5:309
 msgid ""
 "Sets B<RES_USEVC> in I<_res.options>.  This option forces the use of TCP for"
 " DNS resolutions."
 msgstr ""
 
 #. type: TP
-#: man-pages/man5/resolv.conf.5:306
+#: man-pages/man5/resolv.conf.5:309
 #, no-wrap
 msgid "B<no-reload> (since glibc 2.26)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:313
+#: man-pages/man5/resolv.conf.5:316
 msgid ""
 "Sets B<RES_NORELOAD> in I<_res.options>.  This option disables automatic "
 "reloading of a changed configuration file."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:318
+#: man-pages/man5/resolv.conf.5:321
 msgid ""
 "The I<domain> and I<search> keywords are mutually exclusive.  If more than "
 "one instance of these keywords is present, the last instance wins."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:323
+#: man-pages/man5/resolv.conf.5:326
 msgid ""
 "The I<search> keyword of a system's I<resolv.conf> file can be overridden on"
 " a per-process basis by setting the environment variable B<LOCALDOMAIN> to a"
@@ -10151,7 +10152,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:329
+#: man-pages/man5/resolv.conf.5:332
 msgid ""
 "The I<options> keyword of a system's I<resolv.conf> file can be amended on a"
 " per-process basis by setting the environment variable B<RES_OPTIONS> to a "
@@ -10160,7 +10161,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:333
+#: man-pages/man5/resolv.conf.5:336
 msgid ""
 "The keyword and value must appear on a single line, and the keyword (e.g., "
 "B<nameserver>) must start the line.  The value follows the keyword, "
@@ -10168,26 +10169,26 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:336
+#: man-pages/man5/resolv.conf.5:339
 msgid ""
 "Lines that contain a semicolon (;) or hash character (#)  in the first "
 "column are treated as comments."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:339
+#: man-pages/man5/resolv.conf.5:342
 msgid "I</etc/resolv.conf>, I<E<lt>resolv.hE<gt>>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:347
+#: man-pages/man5/resolv.conf.5:350
 msgid ""
 "B<gethostbyname>(3), B<resolver>(3), B<host.conf>(5), B<hosts>(5), "
 "B<nsswitch.conf>(5), B<hostname>(7), B<named>(8)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man5/resolv.conf.5:348
+#: man-pages/man5/resolv.conf.5:351
 msgid "Name Server Operations Guide for BIND"
 msgstr ""
 
@@ -11505,14 +11506,30 @@ msgid ""
 "compilation flag B<REG_NEWLINE> above)."
 msgstr ""
 
-#. type: SS
+#. type: TP
 #: man-pages/man3/regex.3:160
+#, no-wrap
+msgid "B<REG_STARTEND>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/regex.3:180
+msgid ""
+"Use I<pmatch[0]> on the input string, starting at byte I<pmatch[0].rm_so> "
+"and ending before byte I<pmatch[0].rm_eo>.  This allows matching embedded "
+"NUL bytes and avoids a B<strlen>(3)  on large strings.  It does not use "
+"I<nmatch> on input, and does not change B<REG_NOTBOL> or B<REG_NEWLINE> "
+"processing.  This flag is a BSD extension, not present in POSIX."
+msgstr ""
+
+#. type: SS
+#: man-pages/man3/regex.3:180
 #, no-wrap
 msgid "Byte offsets"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:185
+#: man-pages/man3/regex.3:205
 msgid ""
 "Unless B<REG_NOSUB> was set for the compilation of the pattern buffer, it is"
 " possible to obtain match addressing information.  I<pmatch> must be "
@@ -11526,14 +11543,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:192
+#: man-pages/man3/regex.3:212
 msgid ""
 "The I<regmatch_t> structure which is the type of I<pmatch> is defined in "
 "I<E<lt>regex.hE<gt>>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:199
+#: man-pages/man3/regex.3:219
 #, no-wrap
 msgid ""
 "typedef struct {\n"
@@ -11543,7 +11560,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:210
+#: man-pages/man3/regex.3:230
 msgid ""
 "Each I<rm_so> element that is not -1 indicates the start offset of the next "
 "largest substring match within the string.  The relative I<rm_eo> element "
@@ -11552,20 +11569,20 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man3/regex.3:210
+#: man-pages/man3/regex.3:230
 #, no-wrap
 msgid "POSIX error reporting"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:217
+#: man-pages/man3/regex.3:237
 msgid ""
 "B<regerror>()  is used to turn the error codes that can be returned by both "
 "B<regcomp>()  and B<regexec>()  into error message strings."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:239
+#: man-pages/man3/regex.3:259
 msgid ""
 "B<regerror>()  is passed the error code, I<errcode>, the pattern buffer, "
 "I<preg>, a pointer to a character string buffer, I<errbuf>, and the size of "
@@ -11577,13 +11594,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man3/regex.3:239
+#: man-pages/man3/regex.3:259
 #, no-wrap
 msgid "POSIX pattern buffer freeing"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:247
+#: man-pages/man3/regex.3:267
 msgid ""
 "Supplying B<regfree>()  with a precompiled pattern buffer, I<preg> will free"
 " the memory allocated to the pattern buffer by the compiling process, "
@@ -11591,186 +11608,186 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:250
+#: man-pages/man3/regex.3:270
 msgid ""
 "B<regcomp>()  returns zero for a successful compilation or an error code for"
 " failure."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:255
+#: man-pages/man3/regex.3:275
 msgid ""
 "B<regexec>()  returns zero for a successful match or B<REG_NOMATCH> for "
 "failure."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:258
+#: man-pages/man3/regex.3:278
 msgid "The following errors can be returned by B<regcomp>():"
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/regex.3:258
+#: man-pages/man3/regex.3:278
 #, no-wrap
 msgid "B<REG_BADBR>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:261
+#: man-pages/man3/regex.3:281
 msgid "Invalid use of back reference operator."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/regex.3:261
+#: man-pages/man3/regex.3:281
 #, no-wrap
 msgid "B<REG_BADPAT>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:264
+#: man-pages/man3/regex.3:284
 msgid "Invalid use of pattern operators such as group or list."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/regex.3:264
+#: man-pages/man3/regex.3:284
 #, no-wrap
 msgid "B<REG_BADRPT>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:268
+#: man-pages/man3/regex.3:288
 msgid ""
 "Invalid use of repetition operators such as using \\(aq*\\(aq as the first "
 "character."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/regex.3:268
+#: man-pages/man3/regex.3:288
 #, no-wrap
 msgid "B<REG_EBRACE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:271
+#: man-pages/man3/regex.3:291
 msgid "Un-matched brace interval operators."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/regex.3:271
+#: man-pages/man3/regex.3:291
 #, no-wrap
 msgid "B<REG_EBRACK>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:274
+#: man-pages/man3/regex.3:294
 msgid "Un-matched bracket list operators."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/regex.3:274
+#: man-pages/man3/regex.3:294
 #, no-wrap
 msgid "B<REG_ECOLLATE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:277
+#: man-pages/man3/regex.3:297
 msgid "Invalid collating element."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/regex.3:277
+#: man-pages/man3/regex.3:297
 #, no-wrap
 msgid "B<REG_ECTYPE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:280
+#: man-pages/man3/regex.3:300
 msgid "Unknown character class name."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/regex.3:280
+#: man-pages/man3/regex.3:300
 #, no-wrap
 msgid "B<REG_EEND>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:284
+#: man-pages/man3/regex.3:304
 msgid "Nonspecific error.  This is not defined by POSIX.2."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/regex.3:284
+#: man-pages/man3/regex.3:304
 #, no-wrap
 msgid "B<REG_EESCAPE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:287
+#: man-pages/man3/regex.3:307
 msgid "Trailing backslash."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/regex.3:287
+#: man-pages/man3/regex.3:307
 #, no-wrap
 msgid "B<REG_EPAREN>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:290
+#: man-pages/man3/regex.3:310
 msgid "Un-matched parenthesis group operators."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/regex.3:290
+#: man-pages/man3/regex.3:310
 #, no-wrap
 msgid "B<REG_ERANGE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:294
+#: man-pages/man3/regex.3:314
 msgid ""
 "Invalid use of the range operator; for example, the ending point of the "
 "range occurs prior to the starting point."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/regex.3:294
+#: man-pages/man3/regex.3:314
 #, no-wrap
 msgid "B<REG_ESIZE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:298
+#: man-pages/man3/regex.3:318
 msgid ""
 "Compiled regular expression requires a pattern buffer larger than 64\\ kB.  "
 "This is not defined by POSIX.2."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/regex.3:298
+#: man-pages/man3/regex.3:318
 #, no-wrap
 msgid "B<REG_ESPACE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:301
+#: man-pages/man3/regex.3:321
 msgid "The regex routines ran out of memory."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/regex.3:301
+#: man-pages/man3/regex.3:321
 #, no-wrap
 msgid "B<REG_ESUBREG>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:304
+#: man-pages/man3/regex.3:324
 msgid "Invalid back reference to a subexpression."
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/regex.3:315
+#: man-pages/man3/regex.3:335
 #, no-wrap
 msgid ""
 "B<regcomp>(),\n"
@@ -11778,35 +11795,35 @@ msgid ""
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/regex.3:318
+#: man-pages/man3/regex.3:338
 #, no-wrap
 msgid "B<regerror>()"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/regex.3:318
+#: man-pages/man3/regex.3:338
 #, no-wrap
 msgid "MT-Safe env"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/regex.3:321
+#: man-pages/man3/regex.3:341
 #, no-wrap
 msgid "B<regfree>()"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:325
+#: man-pages/man3/regex.3:345
 msgid "POSIX.1-2001, POSIX.1-2008."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:328
+#: man-pages/man3/regex.3:348
 msgid "B<grep>(1), B<regex>(7)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/regex.3:330
+#: man-pages/man3/regex.3:350
 msgid "The glibc manual section, I<Regular Expressions>"
 msgstr ""
 

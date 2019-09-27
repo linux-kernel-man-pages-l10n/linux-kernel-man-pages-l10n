@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:27+0300\n"
-"PO-Revision-Date: 2019-08-26 06:22+0000\n"
+"PO-Revision-Date: 2019-09-19 02:26+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/kruvalig/man-pages/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -655,15 +655,65 @@ msgid "the MB are megabytes and the KiB are kibibytes."
 msgstr ""
 
 #. type: TH
-#: man-pages/man7/unix.7:20
+#: man-pages/man7/uts_namespaces.7:26
 #, no-wrap
-msgid "UNIX"
+msgid "UTS_NAMESPACES"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/uts_namespaces.7:26
+#, no-wrap
+msgid "2019-08-02"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/uts_namespaces.7:29
+msgid "namespaces - overview of Linux UTS namespaces"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/uts_namespaces.7:41
+msgid ""
+"UTS namespaces provide isolation of two system identifiers: the hostname and"
+" the NIS domain name.  These identifiers are set using B<sethostname>(2)  "
+"and B<setdomainname>(2), and can be retrieved using B<uname>(2), "
+"B<gethostname>(2), and B<getdomainname>(2)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/uts_namespaces.7:51
+msgid ""
+"When a process creates a new UTS namespace using B<clone>(2)  or "
+"B<unshare>(2)  with the B<CLONE_NEWUTS> flag, the hostname and domain of the"
+" new UTS namespace are copied from the corresponding values in the caller's "
+"UTS namespace."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/uts_namespaces.7:55
+msgid ""
+"Use of UTS namespaces requires a kernel that is configured with the "
+"B<CONFIG_UTS_NS> option."
+msgstr ""
+
+#. type: SH
+#: man-pages/man7/uts_namespaces.7:55
+#, no-wrap
+msgid "SEE ALSO"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/uts_namespaces.7:64
+msgid ""
+"B<nsenter>(1), B<unshare>(1), B<clone>(2), B<gethostname>(2), "
+"B<getdomainname>(2), B<setns>(2), B<uname>(2), B<unshare>(2), "
+"B<namespaces>(7)"
 msgstr ""
 
 #. type: TH
 #: man-pages/man7/unix.7:20
 #, no-wrap
-msgid "2019-08-02"
+msgid "UNIX"
 msgstr ""
 
 #. type: Plain text
@@ -2368,12 +2418,6 @@ msgstr ""
 msgid "For an example of the use of B<SCM_RIGHTS> see B<cmsg>(3)."
 msgstr ""
 
-#. type: SH
-#: man-pages/man7/unix.7:1145
-#, no-wrap
-msgid "SEE ALSO"
-msgstr ""
-
 #. type: Plain text
 #: man-pages/man7/unix.7:1154
 msgid ""
@@ -3788,11 +3832,11 @@ msgstr ""
 msgid ""
 "The essence of the restrictions described in the preceding paragraph is that"
 " it is permitted to write to I</proc/[pid]/setgroups> only so long as "
-"calling B<setgroups>(2)  is disallowed because I</proc/[pid]gid_map> has not"
-" been set.  This ensures that a process cannot transition from a state where"
-" B<setgroups>(2)  is allowed to a state where B<setgroups>(2)  is denied; a "
-"process can transition only from B<setgroups>(2)  being disallowed to "
-"B<setgroups>(2)  being allowed."
+"calling B<setgroups>(2)  is disallowed because I</proc/[pid]/gid_map> has "
+"not been set.  This ensures that a process cannot transition from a state "
+"where B<setgroups>(2)  is allowed to a state where B<setgroups>(2)  is "
+"denied; a process can transition only from B<setgroups>(2)  being disallowed"
+" to B<setgroups>(2)  being allowed."
 msgstr ""
 
 #. type: Plain text
@@ -8474,7 +8518,8 @@ msgstr ""
 
 #. type: Plain text
 #: man-pages/man2/uname.2:171
-msgid "B<uname>(1), B<getdomainname>(2), B<gethostname>(2), B<namespaces>(7)"
+msgid ""
+"B<uname>(1), B<getdomainname>(2), B<gethostname>(2), B<uts_namespaces>(7)"
 msgstr ""
 
 #. type: TH

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:25+0300\n"
-"PO-Revision-Date: 2019-09-18 18:47+0300\n"
+"PO-Revision-Date: 2019-09-27 19:31+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
@@ -4098,7 +4098,7 @@ msgid "    /* This is the loop to wait for incoming events */\n"
 msgstr "    /* цикл ожидания входящих событий */\n"
 
 #. type: Plain text
-#: man-pages/man7/fanotify.7:885
+#: man-pages/man7/fanotify.7:885 man-pages/man7/fanotify.7:1035
 #, no-wrap
 msgid "    printf(\"Listening for events.\\en\");\n"
 msgstr "    printf(\"Ожидание событий.\\en\");\n"
@@ -4212,7 +4212,7 @@ msgid ""
 "B<FAN_REPORT_FID> enabled.  The program marks the filesystem object that is "
 "passed as a command-line argument and waits until an event of type "
 "B<FAN_CREATE> has occurred.  The event mask indicates which type of "
-"filesystem object\\(emeither a file or a directory\\(emwas created\".  Once "
+"filesystem object\\(emeither a file or a directory\\(emwas created.  Once "
 "all events have been read from the buffer and processed accordingly, the "
 "program simply terminates."
 msgstr ""
@@ -4373,12 +4373,12 @@ msgstr ""
 #, no-wrap
 msgid ""
 "    if (argc != 2) {\n"
-"        fprintf(stderr, \"Invalid number of command line arguments.\\e\\n\");\n"
+"        fprintf(stderr, \"Invalid number of command line arguments.\\en\");\n"
 "        exit(EXIT_FAILURE);\n"
 "    }\n"
 msgstr ""
 "    if (argc != 2) {\n"
-"        fprintf(stderr, \"Некорректное количество аргументов в командной строке.\\e\\n\");\n"
+"        fprintf(stderr, \"Некорректное количество аргументов в командной строке.\\en\");\n"
 "        exit(EXIT_FAILURE);\n"
 "    }\n"
 
@@ -4435,12 +4435,6 @@ msgstr ""
 "    }\n"
 
 #. type: Plain text
-#: man-pages/man7/fanotify.7:1035
-#, no-wrap
-msgid "    printf(\"Listening for events.\\e\\n\");\n"
-msgstr "    printf(\"Ожидание событий.\\e\\n\");\n"
-
-#. type: Plain text
 #: man-pages/man7/fanotify.7:1037
 #, no-wrap
 msgid "    /* Read events from the event queue into a buffer */\n"
@@ -4495,12 +4489,12 @@ msgstr "        /* проверим, что информация о событи
 #, no-wrap
 msgid ""
 "        if (fid-E<gt>hdr.info_type != FAN_EVENT_INFO_TYPE_FID) {\n"
-"            fprintf(stderr, \"Received unexpected event info type.\\e\\n\");\n"
+"            fprintf(stderr, \"Received unexpected event info type.\\en\");\n"
 "            exit(EXIT_FAILURE);\n"
 "        }\n"
 msgstr ""
 "        if (fid-E<gt>hdr.info_type != FAN_EVENT_INFO_TYPE_FID) {\n"
-"            fprintf(stderr, \"Получена информация о событии неожидаемого типа.\\e\\n\");\n"
+"            fprintf(stderr, \"Получена информация о событии неожидаемого типа.\\en\");\n"
 "            exit(EXIT_FAILURE);\n"
 "        }\n"
 
@@ -4553,7 +4547,7 @@ msgid ""
 "        if (ret == -1) {\n"
 "            if (errno == ESTALE) {\n"
 "                printf(\"File handle is no longer valid. \"\n"
-"                        \"File has been deleted\\e\\n\");\n"
+"                        \"File has been deleted\\en\");\n"
 "                continue;\n"
 "            } else {\n"
 "                perror(\"open_by_handle_at\");\n"
@@ -4565,7 +4559,7 @@ msgstr ""
 "        if (ret == -1) {\n"
 "            if (errno == ESTALE) {\n"
 "                printf(\"Обработчик файл более недействителен. \"\n"
-"                        \"Файл был удалён\\e\\n\");\n"
+"                        \"Файл был удалён\\en\");\n"
 "                continue;\n"
 "            } else {\n"
 "                perror(\"open_by_handle_at\");\n"
@@ -4609,11 +4603,11 @@ msgstr ""
 #: man-pages/man7/fanotify.7:1098
 #, no-wrap
 msgid ""
-"        path[path_len] = \\(aq\\e\\0\\(aq;\n"
-"        printf(\"\\etDirectory \\(aq%s\\(aq has been modified.\\e\\n\", path);\n"
+"        path[path_len] = \\(aq\\e0\\(aq;\n"
+"        printf(\"\\etDirectory \\(aq%s\\(aq has been modified.\\en\", path);\n"
 msgstr ""
-"        path[path_len] = \\(aq\\e\\0\\(aq;\n"
-"        printf(\"\\etКаталог \\(aq%s\\(aq изменён.\\e\\n\", path);\n"
+"        path[path_len] = \\(aq\\e0\\(aq;\n"
+"        printf(\"\\etКаталог \\(aq%s\\(aq изменён.\\en\", path);\n"
 
 #. type: Plain text
 #: man-pages/man7/fanotify.7:1100
@@ -4635,11 +4629,11 @@ msgstr ""
 #: man-pages/man7/fanotify.7:1107
 #, no-wrap
 msgid ""
-"    printf(\"All events processed successfully. Program exiting.\\e\\n\");\n"
+"    printf(\"All events processed successfully. Program exiting.\\en\");\n"
 "    exit(EXIT_SUCCESS);\n"
 "}\n"
 msgstr ""
-"    printf(\"Все события успешно обработаны. Завершение программы.\\e\\n\");\n"
+"    printf(\"Все события успешно обработаны. Завершение программы.\\en\");\n"
 "    exit(EXIT_SUCCESS);\n"
 "}\n"
 
@@ -10755,11 +10749,12 @@ msgstr "Создать событие при открытии файла или 
 #. type: TP
 #: man-pages/man2/fanotify_mark.2:178
 #, no-wrap
-msgid "B<FAN_OPEN_EXEC  (since Linux 5.0)>"
-msgstr "B<FAN_OPEN_EXEC  (начиная с Linux 5.0)>"
+msgid "B<FAN_OPEN_EXEC> (since Linux 5.0)"
+msgstr "B<FAN_OPEN_EXEC> (начиная с Linux 5.0)"
 
+#.  commit 9b076f1c0f4869b838a1b7aa0edb5664d47ec8aa
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:182
+#: man-pages/man2/fanotify_mark.2:183
 msgid ""
 "Create an event when a file is opened with the intent to be executed.  See "
 "NOTES for additional details."
@@ -10767,13 +10762,27 @@ msgstr ""
 "Создать событие при открытии файла для начала выполнения. Подробней об этом "
 "в ЗАМЕЧАНИЯХ."
 
+#. type: TP
+#: man-pages/man2/fanotify_mark.2:183
+#, no-wrap
+msgid "B<FAN_ATTRIB> (since Linux 5.1)"
+msgstr "B<FAN_ATTRIB> (начиная с Linux 5.1)"
+
+#.  commit 235328d1fa4251c6dcb32351219bb553a58838d2
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:185
+#: man-pages/man2/fanotify_mark.2:187
 msgid "Create an event when the metadata for a file or directory has changed."
 msgstr "Создать событие при изменении метаданных файла или каталога."
 
+#. type: TP
+#: man-pages/man2/fanotify_mark.2:187
+#, no-wrap
+msgid "B<FAN_CREATE> (since Linux 5.1)"
+msgstr "B<FAN_CREATE> (начиная с Linux 5.1)"
+
+#.  commit 235328d1fa4251c6dcb32351219bb553a58838d2
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:189
+#: man-pages/man2/fanotify_mark.2:192
 msgid ""
 "Create an event when a file or directory has been created in a marked parent "
 "directory."
@@ -10781,8 +10790,15 @@ msgstr ""
 "Создать событие при создании файла или каталога в помеченном родительском "
 "каталоге."
 
+#. type: TP
+#: man-pages/man2/fanotify_mark.2:192
+#, no-wrap
+msgid "B<FAN_DELETE> (since Linux 5.1)"
+msgstr "B<FAN_DELETE> (начиная с Linux 5.1)"
+
+#.  commit 235328d1fa4251c6dcb32351219bb553a58838d2
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:193
+#: man-pages/man2/fanotify_mark.2:197
 msgid ""
 "Create an event when a file or directory has been deleted in a marked parent "
 "directory."
@@ -10790,13 +10806,27 @@ msgstr ""
 "Создать событие при удалении файла или каталога в помеченном родительском "
 "каталоге."
 
+#. type: TP
+#: man-pages/man2/fanotify_mark.2:197
+#, no-wrap
+msgid "B<FAN_DELETE_SELF> (since Linux 5.1)"
+msgstr "B<FAN_DELETE_SELF> (начиная с Linux 5.1)"
+
+#.  commit 235328d1fa4251c6dcb32351219bb553a58838d2
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:196
+#: man-pages/man2/fanotify_mark.2:201
 msgid "Create an event when a marked file or directory itself is deleted."
 msgstr "Создать событие при удалении самого помеченного файла или каталога."
 
+#. type: TP
+#: man-pages/man2/fanotify_mark.2:201
+#, no-wrap
+msgid "B<FAN_MOVED_FROM> (since Linux 5.1)"
+msgstr "B<FAN_MOVED_FROM> (начиная с Linux 5.1)"
+
+#.  commit 235328d1fa4251c6dcb32351219bb553a58838d2
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:200
+#: man-pages/man2/fanotify_mark.2:206
 msgid ""
 "Create an event when a file or directory has been moved from a marked parent "
 "directory."
@@ -10804,8 +10834,15 @@ msgstr ""
 "Создать событие при перемещении файла или каталога из помеченного "
 "родительского каталога."
 
+#. type: TP
+#: man-pages/man2/fanotify_mark.2:206
+#, no-wrap
+msgid "B<FAN_MOVED_TO> (since Linux 5.1)"
+msgstr "B<FAN_MOVED_TO> (начиная с Linux 5.1)"
+
+#.  commit 235328d1fa4251c6dcb32351219bb553a58838d2
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:204
+#: man-pages/man2/fanotify_mark.2:211
 msgid ""
 "Create an event when a file or directory has been moved to a marked parent "
 "directory."
@@ -10813,8 +10850,20 @@ msgstr ""
 "Создать событие при перемещении файла или каталога в помеченный родительский "
 "каталог."
 
-#. type: Plain text
+#. type: TP
 #: man-pages/man2/fanotify_mark.2:211
+#, no-wrap
+msgid "B<FAN_MOVE_SELF> (since Linux 5.1)"
+msgstr "B<FAN_MOVE_SELF> (начиная с Linux 5.1)"
+
+#.  commit 235328d1fa4251c6dcb32351219bb553a58838d2
+#. type: Plain text
+#: man-pages/man2/fanotify_mark.2:215
+msgid "Create an event when a marked file or directory itself has been moved."
+msgstr "Создать событие при перемещении самого помеченного файла или каталога."
+
+#. type: Plain text
+#: man-pages/man2/fanotify_mark.2:222
 msgid ""
 "Create an event when an overflow of the event queue occurs.  The size of the "
 "event queue is limited to 16384 entries if B<FAN_UNLIMITED_QUEUE> is not set "
@@ -10825,7 +10874,7 @@ msgstr ""
 "B<FAN_UNLIMITED_QUEUE>."
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:219
+#: man-pages/man2/fanotify_mark.2:230
 msgid ""
 "Create an event when a permission to open a file or directory is requested.  "
 "An fanotify file descriptor created with B<FAN_CLASS_PRE_CONTENT> or "
@@ -10836,13 +10885,14 @@ msgstr ""
 "B<FAN_CLASS_CONTENT>."
 
 #. type: TP
-#: man-pages/man2/fanotify_mark.2:219
+#: man-pages/man2/fanotify_mark.2:230
 #, no-wrap
 msgid "B<FAN_OPEN_EXEC_PERM> (since Linux 5.0)"
 msgstr "B<FAN_OPEN_EXEC_PERM> (начиная с Linux 5.0)"
 
+#.  commit 66917a3130f218dcef9eeab4fd11a71cd00cd7c9
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:229
+#: man-pages/man2/fanotify_mark.2:241
 msgid ""
 "Create an event when a permission to open a file for execution is "
 "requested.  An fanotify file descriptor created with "
@@ -10855,7 +10905,7 @@ msgstr ""
 "ЗАМЕЧАНИЯХ."
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:237
+#: man-pages/man2/fanotify_mark.2:249
 msgid ""
 "Create an event when a permission to read a file or directory is requested.  "
 "An fanotify file descriptor created with B<FAN_CLASS_PRE_CONTENT> or "
@@ -10866,13 +10916,13 @@ msgstr ""
 "B<FAN_CLASS_CONTENT>."
 
 #. type: TP
-#: man-pages/man2/fanotify_mark.2:237
+#: man-pages/man2/fanotify_mark.2:249
 #, no-wrap
 msgid "B<FAN_ONDIR>"
 msgstr "B<FAN_ONDIR>"
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:268
+#: man-pages/man2/fanotify_mark.2:280
 msgid ""
 "Create events for directories\\(emfor example, when B<opendir>(3), "
 "B<readdir>(3)  (but see BUGS), and B<closedir>(3)  are called.  Without this "
@@ -10900,13 +10950,13 @@ msgstr ""
 "всегда задаётся вместе с другим типом события."
 
 #. type: TP
-#: man-pages/man2/fanotify_mark.2:268
+#: man-pages/man2/fanotify_mark.2:280
 #, no-wrap
 msgid "B<FAN_EVENT_ON_CHILD>"
 msgstr "B<FAN_EVENT_ON_CHILD>"
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:276
+#: man-pages/man2/fanotify_mark.2:288
 msgid ""
 "Events for the immediate children of marked directories shall be created.  "
 "The flag has no effect when marking mounts and filesystems.  Note that "
@@ -10921,22 +10971,22 @@ msgstr ""
 "монтирования."
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:278
+#: man-pages/man2/fanotify_mark.2:290
 msgid "The following composed values are defined:"
 msgstr "Определены следующие составные значения:"
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:282
+#: man-pages/man2/fanotify_mark.2:294
 msgid "A file is closed (B<FAN_CLOSE_WRITE>|B<FAN_CLOSE_NOWRITE>)."
 msgstr "Файл закрыт (B<FAN_CLOSE_WRITE>|B<FAN_CLOSE_NOWRITE>)."
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:286
+#: man-pages/man2/fanotify_mark.2:298
 msgid "A file or directory has been moved (B<FAN_MOVED_FROM>|B<FAN_MOVED_TO>)."
 msgstr "Файл или каталог был перемещён (B<FAN_MOVED_FROM>|B<FAN_MOVED_TO>)."
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:291
+#: man-pages/man2/fanotify_mark.2:303
 msgid ""
 "The filesystem object to be marked is determined by the file descriptor "
 "I<dirfd> and the pathname specified in I<pathname>:"
@@ -10945,7 +10995,7 @@ msgstr ""
 "и путём, указанным в I<pathname>:"
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:297
+#: man-pages/man2/fanotify_mark.2:309
 msgid ""
 "If I<pathname> is NULL, I<dirfd> defines the filesystem object to be marked."
 msgstr ""
@@ -10953,7 +11003,7 @@ msgstr ""
 "системы для пометки."
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:305
+#: man-pages/man2/fanotify_mark.2:317
 msgid ""
 "If I<pathname> is NULL, and I<dirfd> takes the special value B<AT_FDCWD>, "
 "the current working directory is to be marked."
@@ -10962,7 +11012,7 @@ msgstr ""
 "B<AT_FDCWD>, то помечается текущий рабочий каталог."
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:311
+#: man-pages/man2/fanotify_mark.2:323
 msgid ""
 "If I<pathname> is absolute, it defines the filesystem object to be marked, "
 "and I<dirfd> is ignored."
@@ -10971,7 +11021,7 @@ msgstr ""
 "системы для пометки, а I<dirfd> игнорируется."
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:322
+#: man-pages/man2/fanotify_mark.2:334
 msgid ""
 "If I<pathname> is relative, and I<dirfd> does not have the value "
 "B<AT_FDCWD>, then the filesystem object to be marked is determined by "
@@ -10982,7 +11032,7 @@ msgstr ""
 "относительно каталога, заданного в I<dirfd>."
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:332
+#: man-pages/man2/fanotify_mark.2:344
 msgid ""
 "If I<pathname> is relative, and I<dirfd> has the value B<AT_FDCWD>, then the "
 "filesystem object to be marked is determined by interpreting I<pathname> "
@@ -10993,7 +11043,7 @@ msgstr ""
 "текущего рабочего каталога."
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:339
+#: man-pages/man2/fanotify_mark.2:351
 msgid ""
 "On success, B<fanotify_mark>()  returns 0.  On error, -1 is returned, and "
 "I<errno> is set to indicate the error."
@@ -11002,12 +11052,12 @@ msgstr ""
 "возвращается -1, а в I<errno> задаётся причина ошибки."
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:344
+#: man-pages/man2/fanotify_mark.2:356
 msgid "An invalid file descriptor was passed in I<fanotify_fd>."
 msgstr "В I<fanotify_fd> передан некорректный файловый дескриптор."
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:353
+#: man-pages/man2/fanotify_mark.2:365
 msgid ""
 "An invalid value was passed in I<flags> or I<mask>, or I<fanotify_fd> was "
 "not an fanotify file descriptor."
@@ -11016,7 +11066,7 @@ msgstr ""
 "не файловый дескриптор fanotify."
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:363
+#: man-pages/man2/fanotify_mark.2:375
 msgid ""
 "The fanotify file descriptor was opened with B<FAN_CLASS_NOTIF> or "
 "B<FAN_REPORT_FID> and mask contains a flag for permission events "
@@ -11027,7 +11077,7 @@ msgstr ""
 "(B<FAN_OPEN_PERM> или B<FAN_ACCESS_PERM>)."
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:372
+#: man-pages/man2/fanotify_mark.2:384
 msgid ""
 "The filesystem object indicated by I<dirfd> and I<pathname> does not exist.  "
 "This error also occurs when trying to remove a mark from an object which is "
@@ -11038,18 +11088,18 @@ msgstr ""
 "объекта."
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:375
+#: man-pages/man2/fanotify_mark.2:387
 msgid "The necessary memory could not be allocated."
 msgstr "Невозможно выделить необходимую память."
 
 #. type: TP
-#: man-pages/man2/fanotify_mark.2:375
+#: man-pages/man2/fanotify_mark.2:387
 #, no-wrap
 msgid "B<ENOSPC>"
 msgstr "B<ENOSPC>"
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:381
+#: man-pages/man2/fanotify_mark.2:393
 msgid ""
 "The number of marks exceeds the limit of 8192 and the B<FAN_UNLIMITED_MARKS> "
 "flag was not specified when the fanotify file descriptor was created with "
@@ -11060,7 +11110,7 @@ msgstr ""
 "B<fanotify_init>(2)."
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:387
+#: man-pages/man2/fanotify_mark.2:399
 msgid ""
 "This kernel does not implement B<fanotify_mark>().  The fanotify API is "
 "available only if the kernel was configured with B<CONFIG_FANOTIFY>."
@@ -11069,7 +11119,7 @@ msgstr ""
 "доступен только, если ядро было собрано с параметром B<CONFIG_FANOTIFY>."
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:397
+#: man-pages/man2/fanotify_mark.2:409
 msgid ""
 "I<flags> contains B<FAN_MARK_ONLYDIR>, and I<dirfd> and I<pathname> do not "
 "specify a directory."
@@ -11078,13 +11128,13 @@ msgstr ""
 "I<pathname> указан не каталог."
 
 #. type: TP
-#: man-pages/man2/fanotify_mark.2:397
+#: man-pages/man2/fanotify_mark.2:409
 #, no-wrap
 msgid "B<EXDEV>"
 msgstr "B<EXDEV>"
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:411
+#: man-pages/man2/fanotify_mark.2:423
 msgid ""
 "The filesystem object indicated by I<pathname> resides within a filesystem "
 "subvolume (e.g., B<btrfs>(5))  which uses a different I<fsid> than its root "
@@ -11099,7 +11149,7 @@ msgstr ""
 "B<fanotify_init>(2), был создан с  флагом B<FAN_REPORT_FID>."
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:424
+#: man-pages/man2/fanotify_mark.2:436
 msgid ""
 "The filesystem object indicated by I<pathname> is not associated with a "
 "filesystem that supports I<fsid> (e.g., B<tmpfs>(5)).  This error can be "
@@ -11112,13 +11162,13 @@ msgstr ""
 "B<fanotify_init>(2), был создан с  флагом B<FAN_REPORT_FID>."
 
 #. type: TP
-#: man-pages/man2/fanotify_mark.2:424
+#: man-pages/man2/fanotify_mark.2:436
 #, no-wrap
 msgid "B<EOPNOTSUPP>"
 msgstr "B<EOPNOTSUPP>"
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:435
+#: man-pages/man2/fanotify_mark.2:447
 msgid ""
 "The object indicated by I<pathname> is associated with a filesystem that "
 "does not support the encoding of file handles.  This error can be returned "
@@ -11131,7 +11181,7 @@ msgstr ""
 "B<fanotify_init>(2), был создан с  флагом B<FAN_REPORT_FID>."
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:439
+#: man-pages/man2/fanotify_mark.2:451
 msgid ""
 "B<fanotify_mark>()  was introduced in version 2.6.36 of the Linux kernel and "
 "enabled in version 2.6.37."
@@ -11140,13 +11190,13 @@ msgstr ""
 "версии 2.6.37."
 
 #. type: SS
-#: man-pages/man2/fanotify_mark.2:442
+#: man-pages/man2/fanotify_mark.2:454
 #, no-wrap
 msgid "FAN_OPEN_EXEC and FAN_OPEN_EXEC_PERM"
 msgstr "FAN_OPEN_EXEC и FAN_OPEN_EXEC_PERM"
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:459
+#: man-pages/man2/fanotify_mark.2:471
 msgid ""
 "When using either B<FAN_OPEN_EXEC> or B<FAN_OPEN_EXEC_PERM> within the "
 "I<mask>, events of these types will be returned only when the direct "
@@ -11165,7 +11215,7 @@ msgstr ""
 "интерпретируемого сценария."
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:466
+#: man-pages/man2/fanotify_mark.2:478
 msgid ""
 "Additionally, if a mark has also been placed on the Linux dynamic linker, a "
 "user should also expect to receive an event for it when an ELF object has "
@@ -11176,7 +11226,7 @@ msgstr ""
 "ELF с помощью B<execve>(2) или B<execveat>(2)."
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:470
+#: man-pages/man2/fanotify_mark.2:482
 msgid ""
 "For example, if the following ELF binary were to be invoked and a "
 "B<FAN_OPEN_EXEC> mark has been placed on /:"
@@ -11185,13 +11235,13 @@ msgstr ""
 "отмечен /:"
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:474
+#: man-pages/man2/fanotify_mark.2:486
 #, no-wrap
 msgid "$ /bin/echo foo\n"
 msgstr "$ /bin/echo foo\n"
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:480
+#: man-pages/man2/fanotify_mark.2:492
 msgid ""
 "The listening application in this case would receive B<FAN_OPEN_EXEC> events "
 "for both the ELF binary and interpreter, respectively:"
@@ -11200,7 +11250,7 @@ msgstr ""
 "исполняемого файла ELF и интерпретатора, соответственно:"
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:485
+#: man-pages/man2/fanotify_mark.2:497
 #, no-wrap
 msgid ""
 "/bin/echo\n"
@@ -11210,13 +11260,13 @@ msgstr ""
 "/lib64/ld-linux-x86-64.so.2\n"
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:489
+#: man-pages/man2/fanotify_mark.2:501
 msgid "The following bugs were present in Linux kernels before version 3.16:"
 msgstr "В ядрах Linux до версии 3.16 существуют следующие дефекты:"
 
 #.  Fixed by commit 0a8dd2db579f7a0ac7033d6b857c3d5dbaa77563
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:499
+#: man-pages/man2/fanotify_mark.2:511
 msgid ""
 "If I<flags> contains B<FAN_MARK_FLUSH>, I<dirfd> and I<pathname> must "
 "specify a valid filesystem object, even though this object is not used."
@@ -11227,13 +11277,13 @@ msgstr ""
 
 #.  Fixed by commit d4c7cf6cffb1bc711a833b5e304ba5bcfe76398b
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:505
+#: man-pages/man2/fanotify_mark.2:517
 msgid "B<readdir>(2)  does not generate a B<FAN_ACCESS> event."
 msgstr "Вызов B<readdir>(2) не генерирует событие B<FAN_ACCESS>."
 
 #.  Fixed by commit cc299a98eb13a9853675a9cbb90b30b4011e1406
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:513
+#: man-pages/man2/fanotify_mark.2:525
 msgid ""
 "If B<fanotify_mark>()  is called with B<FAN_MARK_FLUSH>, I<flags> is not "
 "checked for invalid values."
@@ -11242,7 +11292,7 @@ msgstr ""
 "проверяется на корректность."
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:515
+#: man-pages/man2/fanotify_mark.2:527
 msgid "B<fanotify_init>(2), B<fanotify>(7)"
 msgstr "B<fanotify_init>(2), B<fanotify>(7)"
 
@@ -18800,23 +18850,36 @@ msgstr ""
 "равно NULL, или I<envp> равно NULL."
 
 #. type: Plain text
-#: man-pages/man3/fexecve.3:93
-msgid "The I</proc> filesystem could not be accessed."
-msgstr "Нет доступа к файловой системе I</proc>."
+#: man-pages/man3/fexecve.3:96
+msgid ""
+"The close-on-exec flag is set on I<fd>, and I<fd> refers to a script.  See "
+"BUGS."
+msgstr ""
+"На I<fd> установлен флаг close-on-exec и  I<fd> ссылается на сценарий. "
+"Смотрите ДЕФЕКТЫ."
 
 #. type: Plain text
-#: man-pages/man3/fexecve.3:96
+#: man-pages/man3/fexecve.3:103
+msgid ""
+"The kernel does not provide the B<execveat>(2)  system call, and the I</"
+"proc> filesystem could not be accessed."
+msgstr ""
+"Ядро не предоставляет системный вызов B<execveat>(2) и файловая система I</"
+"proc> недоступна."
+
+#. type: Plain text
+#: man-pages/man3/fexecve.3:106
 msgid "B<fexecve>()  is implemented since glibc 2.3.2."
 msgstr "Функция B<fexecve>() появилась в glibc 2.3.2."
 
 #. type: tbl table
-#: man-pages/man3/fexecve.3:106
+#: man-pages/man3/fexecve.3:116
 #, no-wrap
 msgid "B<fexecve>()"
 msgstr "B<fexecve>()"
 
 #. type: Plain text
-#: man-pages/man3/fexecve.3:114
+#: man-pages/man3/fexecve.3:124
 msgid ""
 "POSIX.1-2008.  This function is not specified in POSIX.1-2001, and is not "
 "widely available on other systems.  It is specified in POSIX.1-2008."
@@ -18826,7 +18889,7 @@ msgstr ""
 
 #.  glibc commit 43ffc53a352a67672210c9dd4959f6c6b7407e60
 #. type: Plain text
-#: man-pages/man3/fexecve.3:131
+#: man-pages/man3/fexecve.3:141
 msgid ""
 "On Linux with glibc versions 2.26 and earlier, B<fexecve>()  is implemented "
 "using the B<proc>(5)  filesystem, so I</proc> needs to be mounted and "
@@ -18843,7 +18906,7 @@ msgstr ""
 "уже не нужно."
 
 #. type: Plain text
-#: man-pages/man3/fexecve.3:148
+#: man-pages/man3/fexecve.3:158
 msgid ""
 "The idea behind B<fexecve>()  is to allow the caller to verify (checksum) "
 "the contents of an executable before executing it.  Simply opening the file, "
@@ -18866,7 +18929,7 @@ msgstr ""
 "изменение."
 
 #. type: Plain text
-#: man-pages/man3/fexecve.3:166
+#: man-pages/man3/fexecve.3:176
 msgid ""
 "The natural idiom when using B<fexecve>()  is to set the close-on-exec flag "
 "on I<fd>, so that the file descriptor does not leak through to the program "
@@ -18890,7 +18953,7 @@ msgstr ""
 "ДЕФЕКТЫ)."
 
 #. type: Plain text
-#: man-pages/man3/fexecve.3:185
+#: man-pages/man3/fexecve.3:195
 msgid ""
 "If I<fd> refers to a script (i.e., it is an executable text file that names "
 "a script interpreter with a first line that begins with the characters I<#!"
@@ -18910,7 +18973,7 @@ msgstr ""
 "проблемам, описанным в ЗАМЕЧАНИЯХ."
 
 #. type: Plain text
-#: man-pages/man3/fexecve.3:187
+#: man-pages/man3/fexecve.3:197
 msgid "B<execve>(2), B<execveat>(2)"
 msgstr "B<execve>(2), B<execveat>(2)"
 
@@ -25296,6 +25359,11 @@ msgstr ""
 #: man-pages/man3/futimes.3:78
 msgid "I<fd> is not a valid file descriptor."
 msgstr "Значение I<fd> не является правильным файловым дескриптором."
+
+#. type: Plain text
+#: man-pages/man3/futimes.3:83
+msgid "The I</proc> filesystem could not be accessed."
+msgstr "Нет доступа к файловой системе I</proc>."
 
 #. type: Plain text
 #: man-pages/man3/futimes.3:86

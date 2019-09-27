@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:26+0300\n"
-"PO-Revision-Date: 2019-09-08 14:46+0300\n"
+"PO-Revision-Date: 2019-09-19 18:57+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
@@ -3783,182 +3783,79 @@ msgstr "Смотрите B<cgroup_namespaces>(7)."
 msgid "IPC namespaces (CLONE_NEWIPC)"
 msgstr "Пространства имён IPC (CLONE_NEWIPC)"
 
-#.  commit 7eafd7c74c3f2e67c27621b987b28397110d643f
-#.  https://lwn.net/Articles/312232/
-#. type: Plain text
-#: man-pages/man7/namespaces.7:344
-msgid ""
-"IPC namespaces isolate certain IPC resources, namely, System V IPC objects "
-"(see B<sysvipc>(7))  and (since Linux 2.6.30)  POSIX message queues (see "
-"B<mq_overview>(7)).  The common characteristic of these IPC mechanisms is "
-"that IPC objects are identified by mechanisms other than filesystem "
-"pathnames."
-msgstr ""
-"Пространства имён IPC изолируют определённые ресурсы IPC, а именно IPC-"
-"объекты System V (смотрите B<sysvipc>(7)) и (начиная с Linux 2.6.30) очереди "
-"сообщений POSIX (смотрите B<mq_overview>(7)). Общая характеристика этих "
-"механизмов IPC в том, что объекты IPC распознаются механизмами не как пути "
-"файловой системы."
-
-#. type: Plain text
-#: man-pages/man7/namespaces.7:350
-msgid ""
-"Each IPC namespace has its own set of System V IPC identifiers and its own "
-"POSIX message queue filesystem.  Objects created in an IPC namespace are "
-"visible to all other processes that are members of that namespace, but are "
-"not visible to processes in other IPC namespaces."
-msgstr ""
-"Каждое пространство имён IPC имеет свой набор идентификаторов System V IPC и "
-"свою файловую систему для очереди сообщений POSIX. Объекты, созданные в "
-"пространстве имён IPC, видимы всем другим процессам, которые являются "
-"членами этого пространства имён, и невидимы процессам из других пространств "
-"имён IPC."
-
-#. type: Plain text
-#: man-pages/man7/namespaces.7:354
-msgid "The following I</proc> interfaces are distinct in each IPC namespace:"
-msgstr ""
-"Следующие интерфейсы I</proc> отличаются в каждом пространстве имён IPC:"
-
-#. type: Plain text
-#: man-pages/man7/namespaces.7:357
-msgid "The POSIX message queue interfaces in I</proc/sys/fs/mqueue>."
-msgstr "Интерфейсы очереди сообщений POSIX в I</proc/sys/fs/mqueue>."
-
-#. type: Plain text
-#: man-pages/man7/namespaces.7:370
-msgid ""
-"The System V IPC interfaces in I</proc/sys/kernel>, namely: I<msgmax>, "
-"I<msgmnb>, I<msgmni>, I<sem>, I<shmall>, I<shmmax>, I<shmmni>, and "
-"I<shm_rmid_forced>."
-msgstr ""
-"IPC-интерфейсы System V в I</proc/sys/kernel>, а именно: I<msgmax>, "
-"I<msgmnb>, I<msgmni>, I<sem>, I<shmall>, I<shmmax>, I<shmmni> и "
-"I<shm_rmid_forced>."
-
-#. type: Plain text
-#: man-pages/man7/namespaces.7:373
-msgid "The System V IPC interfaces in I</proc/sysvipc>."
-msgstr "IPC-интерфейсы System V в I</proc/sysvipc>."
-
-#. type: Plain text
-#: man-pages/man7/namespaces.7:377
-msgid ""
-"When an IPC namespace is destroyed (i.e., when the last process that is a "
-"member of the namespace terminates), all IPC objects in the namespace are "
-"automatically destroyed."
-msgstr ""
-"При уничтожении пространства имён IPC (т. е., когда завершается последний "
-"процесс из этого пространства имён), все объекты IPC из пространства имён "
-"автоматически уничтожаются."
-
 #.  ==================== Network namespaces ====================
 #. type: Plain text
-#: man-pages/man7/namespaces.7:384
-msgid ""
-"Use of IPC namespaces requires a kernel that is configured with the "
-"B<CONFIG_IPC_NS> option."
-msgstr ""
-"Для использования пространств имён IPC требуется, чтобы ядро было собрано с "
-"параметром B<CONFIG_IPC_NS>."
+#: man-pages/man7/namespaces.7:338
+msgid "See B<ipc_namespaces>(7)."
+msgstr "Смотрите B<ipc_namespaces>(7)."
 
 #. type: SS
-#: man-pages/man7/namespaces.7:384
+#: man-pages/man7/namespaces.7:338
 #, no-wrap
 msgid "Network namespaces (CLONE_NEWNET)"
 msgstr "Пространства имён network (CLONE_NEWNET)"
 
 #.  ==================== Mount namespaces ====================
 #. type: Plain text
-#: man-pages/man7/namespaces.7:390
+#: man-pages/man7/namespaces.7:344
 msgid "See B<network_namespaces>(7)."
 msgstr "Смотрите B<network_namespaces>(7)."
 
 #. type: SS
-#: man-pages/man7/namespaces.7:390
+#: man-pages/man7/namespaces.7:344
 #, no-wrap
 msgid "Mount namespaces (CLONE_NEWNS)"
 msgstr "Пространства имён mount (CLONE_NEWNS)"
 
 #.  ==================== PID namespaces ====================
 #. type: Plain text
-#: man-pages/man7/namespaces.7:396
+#: man-pages/man7/namespaces.7:350
 msgid "See B<mount_namespaces>(7)."
 msgstr "Смотрите B<mount_namespaces>(7)."
 
 #. type: SS
-#: man-pages/man7/namespaces.7:396
+#: man-pages/man7/namespaces.7:350
 #, no-wrap
 msgid "PID namespaces (CLONE_NEWPID)"
 msgstr "Пространства имён PID (CLONE_NEWPID)"
 
 #.  ==================== User namespaces ====================
 #. type: Plain text
-#: man-pages/man7/namespaces.7:402
+#: man-pages/man7/namespaces.7:356
 msgid "See B<pid_namespaces>(7)."
 msgstr "Смотрите B<pid_namespaces>(7)."
 
 #. type: SS
-#: man-pages/man7/namespaces.7:402
+#: man-pages/man7/namespaces.7:356
 #, no-wrap
 msgid "User namespaces (CLONE_NEWUSER)"
 msgstr "Пространства имён user (CLONE_NEWUSER)"
 
 #.  ==================== UTS namespaces ====================
 #. type: Plain text
-#: man-pages/man7/namespaces.7:408
+#: man-pages/man7/namespaces.7:362
 msgid "See B<user_namespaces>(7)."
 msgstr "Смотрите B<user_namespaces>(7)."
 
 #. type: SS
-#: man-pages/man7/namespaces.7:408
+#: man-pages/man7/namespaces.7:362
 #, no-wrap
 msgid "UTS namespaces (CLONE_NEWUTS)"
 msgstr "Пространства имён UTS (CLONE_NEWUTS)"
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:420
-msgid ""
-"UTS namespaces provide isolation of two system identifiers: the hostname and "
-"the NIS domain name.  These identifiers are set using B<sethostname>(2)  and "
-"B<setdomainname>(2), and can be retrieved using B<uname>(2), "
-"B<gethostname>(2), and B<getdomainname>(2)."
-msgstr ""
-"Пространства имён UTS изолируют два системных идентификатора: имя узла и "
-"доменное имя NIS. Эти идентификаторы задаются с помощью B<sethostname>(2) и "
-"B<setdomainname>(2), и могут быть получены с помощью B<uname>(2), "
-"B<gethostname>(2) и B<getdomainname>(2)."
-
-#. type: Plain text
-#: man-pages/man7/namespaces.7:430
-msgid ""
-"When a process creates a new UTS namespace using B<clone>(2)  or "
-"B<unshare>(2)  with the B<CLONE_NEWUTS> flag, the hostname and domain of the "
-"new UTS namespace are copied from the corresponding values in the caller's "
-"UTS namespace."
-msgstr ""
-"Когда процесс создаёт новое пространство имён UTS с помощью B<clone>(2) или "
-"B<unshare>(2) с флагом B<CLONE_NEWUTS>, имя узла и домен нового пространства "
-"имён UTS копируются из соответствующих значений в пространство имён UTS "
-"вызывающего."
-
-#. type: Plain text
-#: man-pages/man7/namespaces.7:435
-msgid ""
-"Use of UTS namespaces requires a kernel that is configured with the "
-"B<CONFIG_UTS_NS> option."
-msgstr ""
-"Для использования пространств имён UTS требуется, чтобы ядро было собрано с "
-"параметром B<CONFIG_UTS_NS>."
+#: man-pages/man7/namespaces.7:366
+msgid "See B<uts_namespaces>(7)."
+msgstr "Смотрите B<uts_namespaces>(7)."
 
 #. type: SS
-#: man-pages/man7/namespaces.7:435
+#: man-pages/man7/namespaces.7:366
 #, no-wrap
 msgid "Namespace lifetime"
 msgstr "Время жизни пространства имён"
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:442
+#: man-pages/man7/namespaces.7:373
 msgid ""
 "Absent any other factors, a namespace is automatically torn down when the "
 "last process in the namespace terminates or leaves the namespace.  However, "
@@ -3972,7 +3869,7 @@ msgstr ""
 "относятся следующие:"
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:446
+#: man-pages/man7/namespaces.7:377
 msgid ""
 "An open file descriptor or a bind mount exists for the corresponding I</proc/"
 "[pid]/ns/*> file."
@@ -3981,7 +3878,7 @@ msgstr ""
 "соответствующего файла I</proc/[pid]/ns/*>."
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:449
+#: man-pages/man7/namespaces.7:380
 msgid ""
 "The namespace is hierarchical (i.e., a PID or user namespace), and has a "
 "child namespace."
@@ -3990,14 +3887,14 @@ msgstr ""
 "пользовательское) и имеет дочернее пространство имён."
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:451
+#: man-pages/man7/namespaces.7:382
 msgid "It is a user namespace that owns one or more nonuser namespaces."
 msgstr ""
 "Это пользовательское пространство имен, которое владеет одним или "
 "несколькими непользовательскими пространствами имён."
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:456
+#: man-pages/man7/namespaces.7:387
 msgid ""
 "It is a PID namespace, and there is a process that refers to the namespace "
 "via a I</proc/[pid]/ns/pid_for_children> symbolic link."
@@ -4006,7 +3903,7 @@ msgstr ""
 "пространство имён через символьную ссылку I</proc/[pid]/ns/pid_for_children>."
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:462
+#: man-pages/man7/namespaces.7:393
 msgid ""
 "It is an IPC namespace, and a corresponding mount of an I<mqueue> filesystem "
 "(see B<mq_overview>(7))  refers to this namespace."
@@ -4015,7 +3912,7 @@ msgstr ""
 "I<mqueue> (смотрите B<mq_overview>(7)) ссылается на это пространство имён."
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:466
+#: man-pages/man7/namespaces.7:397
 msgid ""
 "It is a PID namespace, and a corresponding mount of a B<proc>(5)  filesystem "
 "refers to this namespace."
@@ -4024,24 +3921,26 @@ msgstr ""
 "B<proc>(5) ссылается на это пространство имён."
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:471
+#: man-pages/man7/namespaces.7:402
 msgid "See B<clone>(2)  and B<user_namespaces>(7)."
 msgstr "Смотрите B<clone>(2) и B<user_namespaces>(7)."
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:489
+#: man-pages/man7/namespaces.7:422
 msgid ""
 "B<nsenter>(1), B<readlink>(1), B<unshare>(1), B<clone>(2), B<ioctl_ns>(2), "
 "B<setns>(2), B<unshare>(2), B<proc>(5), B<capabilities>(7), "
 "B<cgroup_namespaces>(7), B<cgroups>(7), B<credentials>(7), "
-"B<network_namespaces>(7), B<pid_namespaces>(7), B<user_namespaces>(7), "
-"B<lsns>(8), B<pam_namespace>(8), B<switch_root>(8)"
+"B<ipc_namespaces>(7), B<network_namespaces>(7), B<pid_namespaces>(7), "
+"B<user_namespaces>(7), B<uts_namespaces>(7), B<lsns>(8), "
+"B<pam_namespace>(8), B<switch_root>(8)"
 msgstr ""
 "B<nsenter>(1), B<readlink>(1), B<unshare>(1), B<clone>(2), B<ioctl_ns>(2), "
 "B<setns>(2), B<unshare>(2), B<proc>(5), B<capabilities>(7), "
 "B<cgroup_namespaces>(7), B<cgroups>(7), B<credentials>(7), "
-"B<network_namespaces>(7), B<pid_namespaces>(7), B<user_namespaces>(7), "
-"B<lsns>(8), B<pam_namespace>(8), B<switch_root>(8)"
+"B<ipc_namespaces>(7), B<network_namespaces>(7), B<pid_namespaces>(7), "
+"B<user_namespaces>(7), B<uts_namespaces>(7), B<lsns>(8), "
+"B<pam_namespace>(8), B<switch_root>(8)"
 
 #. type: TH
 #: man-pages/man7/network_namespaces.7:26

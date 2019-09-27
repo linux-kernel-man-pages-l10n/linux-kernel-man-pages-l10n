@@ -3,14 +3,14 @@
 #
 # Translators:
 # Azamat Hackimov <azamat.hackimov@gmail.com>, 2012.
-# Yuri Kozlov <yuray@komyakino.ru>, 2011-2018.
-# Yuri Kozlov <yuray@komyakino.ru>, 2014, 2019.
+# Yuri Kozlov <yuray@komyakino.ru>, 2011-2019.
+# Yuri Kozlov <yuray@komyakino.ru>, 2014.
 # Иван Павлов <pavia00@gmail.com>, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:25+0300\n"
-"PO-Revision-Date: 2019-08-29 10:25+0300\n"
+"PO-Revision-Date: 2019-09-27 19:35+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
@@ -13036,17 +13036,18 @@ msgstr ""
 "каждого номера возможной ошибки, который может появиться в I<errno>."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:98
+#: man-pages/man3/errno.3:99
 msgid ""
 "All the error names specified by POSIX.1 must have distinct values, with the "
-"exception of B<EAGAIN> and B<EWOULDBLOCK>, which may be the same."
+"exception of B<EAGAIN> and B<EWOULDBLOCK>, which may be the same.  On Linux, "
+"these two have the same value on all architectures."
 msgstr ""
 "Всем названиям ошибок, определённым в POSIX.1, должны соответствовать разные "
 "значения, за исключением B<EAGAIN> и B<EWOULDBLOCK>, которые могут быть "
-"одинаковыми."
+"одинаковыми. В Linux эти они имеют одинаковое значение на всех архитектурах."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:110
+#: man-pages/man3/errno.3:111
 msgid ""
 "The error numbers that correspond to each symbolic name vary across UNIX "
 "systems, and even across different architectures on Linux.  Therefore, "
@@ -13061,7 +13062,7 @@ msgstr ""
 "B<perror>(3) и B<strerror>(3)."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:118
+#: man-pages/man3/errno.3:119
 msgid ""
 "On any particular Linux system, one can obtain a list of all symbolic error "
 "names and the corresponding error numbers using the B<errno>(1)  command "
@@ -13072,7 +13073,7 @@ msgstr ""
 "пакета I<moreutils>):"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:128
+#: man-pages/man3/errno.3:129
 #, no-wrap
 msgid ""
 "$ B<errno -l>\n"
@@ -13092,7 +13093,7 @@ msgstr ""
 "\\&...\n"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:136
+#: man-pages/man3/errno.3:137
 msgid ""
 "The B<errno>(1)  command can also be used to look up individual error "
 "numbers and names, and to search for errors using strings from the error "
@@ -13102,7 +13103,7 @@ msgstr ""
 "номеру, а также по строке, входящей в описание ошибки:"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:145
+#: man-pages/man3/errno.3:146
 #, no-wrap
 msgid ""
 "$ B<errno 2>\n"
@@ -13124,13 +13125,13 @@ msgstr ""
 #.  Amendment 1 defines the additional error number \fBEILSEQ\fP for
 #.  coding errors in multibyte or wide characters.
 #. type: SS
-#: man-pages/man3/errno.3:153
+#: man-pages/man3/errno.3:154
 #, no-wrap
 msgid "List of error names"
 msgstr "Список имён ошибок"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:156
+#: man-pages/man3/errno.3:157
 msgid ""
 "In the list of the symbolic error names below, various names are marked as "
 "follows:"
@@ -13139,7 +13140,7 @@ msgstr ""
 "некоторые примечания:"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:160
+#: man-pages/man3/errno.3:161
 msgid ""
 "I<POSIX.1-2001>: The name is defined by POSIX.1-2001, and is defined in "
 "later POSIX.1 versions, unless otherwise indicated."
@@ -13148,7 +13149,7 @@ msgstr ""
 "обратного, в новых версиях POSIX.1."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:164
+#: man-pages/man3/errno.3:165
 msgid ""
 "I<POSIX.1-2008>: The name is defined in POSIX.1-2008, but was not present in "
 "earlier POSIX.1 standards."
@@ -13157,7 +13158,7 @@ msgstr ""
 "старых версиях POSIX.1."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:168
+#: man-pages/man3/errno.3:169
 msgid ""
 "I<C99>: The name is defined by C99.  Below is a list of the symbolic error "
 "names that are defined on Linux:"
@@ -13166,57 +13167,57 @@ msgstr ""
 "ошибок, определённых в Linux:"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:171
+#: man-pages/man3/errno.3:172
 msgid "Argument list too long (POSIX.1-2001)."
 msgstr "Слишком длинный список параметров (POSIX.1-2001)."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:174
+#: man-pages/man3/errno.3:175
 msgid "Permission denied (POSIX.1-2001)."
 msgstr "Доступ запрещён (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:174
+#: man-pages/man3/errno.3:175
 #, no-wrap
 msgid "B<EADDRINUSE>"
 msgstr "B<EADDRINUSE>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:177
+#: man-pages/man3/errno.3:178
 msgid "Address already in use (POSIX.1-2001)."
 msgstr "Адрес уже используется (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:177
+#: man-pages/man3/errno.3:178
 #, no-wrap
 msgid "B<EADDRNOTAVAIL>"
 msgstr "B<EADDRNOTAVAIL>"
 
 #.  EADV is only an error on HURD(?)
 #. type: Plain text
-#: man-pages/man3/errno.3:181
+#: man-pages/man3/errno.3:182
 msgid "Address not available (POSIX.1-2001)."
 msgstr "Адрес недоступен (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:181
+#: man-pages/man3/errno.3:182
 #, no-wrap
 msgid "B<EAFNOSUPPORT>"
 msgstr "B<EAFNOSUPPORT>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:184
+#: man-pages/man3/errno.3:185
 msgid "Address family not supported (POSIX.1-2001)."
 msgstr "Семейство адресов не поддерживается (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:184
+#: man-pages/man3/errno.3:185
 #, no-wrap
 msgid "B<EAGAIN>"
 msgstr "B<EAGAIN>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:189
+#: man-pages/man3/errno.3:190
 msgid ""
 "Resource temporarily unavailable (may be the same value as B<EWOULDBLOCK>)  "
 "(POSIX.1-2001)."
@@ -13225,313 +13226,319 @@ msgstr ""
 "(POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:189
+#: man-pages/man3/errno.3:190
 #, no-wrap
 msgid "B<EALREADY>"
 msgstr "B<EALREADY>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:192
+#: man-pages/man3/errno.3:193
 msgid "Connection already in progress (POSIX.1-2001)."
 msgstr "Соединение уже выполняется (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:192
+#: man-pages/man3/errno.3:193
 #, no-wrap
 msgid "B<EBADE>"
 msgstr "B<EBADE>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:195
+#: man-pages/man3/errno.3:196
 msgid "Invalid exchange."
 msgstr "Некорректный обмен."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:198
+#: man-pages/man3/errno.3:199
 msgid "Bad file descriptor (POSIX.1-2001)."
 msgstr "Неправильный дескриптор файла (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:198
+#: man-pages/man3/errno.3:199
 #, no-wrap
 msgid "B<EBADFD>"
 msgstr "B<EBADFD>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:201
+#: man-pages/man3/errno.3:202
 msgid "File descriptor in bad state."
 msgstr "Некорректное состояние дескриптора файла."
 
 #. type: TP
-#: man-pages/man3/errno.3:201
+#: man-pages/man3/errno.3:202
 #, no-wrap
 msgid "B<EBADMSG>"
 msgstr "B<EBADMSG>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:204
+#: man-pages/man3/errno.3:205
 msgid "Bad message (POSIX.1-2001)."
 msgstr "Неправильное сообщение (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:204
+#: man-pages/man3/errno.3:205
 #, no-wrap
 msgid "B<EBADR>"
 msgstr "B<EBADR>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:207
+#: man-pages/man3/errno.3:208
 msgid "Invalid request descriptor."
 msgstr "Неверный дескриптор запроса."
 
 #. type: TP
-#: man-pages/man3/errno.3:207
+#: man-pages/man3/errno.3:208
 #, no-wrap
 msgid "B<EBADRQC>"
 msgstr "B<EBADRQC>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:210
+#: man-pages/man3/errno.3:211
 msgid "Invalid request code."
 msgstr "Неверный код запроса."
 
 #. type: TP
-#: man-pages/man3/errno.3:210
+#: man-pages/man3/errno.3:211
 #, no-wrap
 msgid "B<EBADSLT>"
 msgstr "B<EBADSLT>"
 
 #.  EBFONT is defined but appears not to be used by kernel or glibc.
 #. type: Plain text
-#: man-pages/man3/errno.3:214
+#: man-pages/man3/errno.3:215
 msgid "Invalid slot."
 msgstr "Некорректный слот."
 
 #. type: TP
-#: man-pages/man3/errno.3:214
+#: man-pages/man3/errno.3:215
 #, no-wrap
 msgid "B<EBUSY>"
 msgstr "B<EBUSY>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:217
+#: man-pages/man3/errno.3:218
 msgid "Device or resource busy (POSIX.1-2001)."
 msgstr "Устройство или ресурс заняты (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:217
+#: man-pages/man3/errno.3:218
 #, no-wrap
 msgid "B<ECANCELED>"
 msgstr "B<ECANCELED>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:220
+#: man-pages/man3/errno.3:221
 msgid "Operation canceled (POSIX.1-2001)."
 msgstr "Операция отменена (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:220
+#: man-pages/man3/errno.3:221
 #, no-wrap
 msgid "B<ECHILD>"
 msgstr "B<ECHILD>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:223
+#: man-pages/man3/errno.3:224
 msgid "No child processes (POSIX.1-2001)."
 msgstr "Отсутствуют дочерние процессы (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:223
+#: man-pages/man3/errno.3:224
 #, no-wrap
 msgid "B<ECHRNG>"
 msgstr "B<ECHRNG>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:226
+#: man-pages/man3/errno.3:227
 msgid "Channel number out of range."
 msgstr "Номер канала вне диапазона."
 
 #. type: TP
-#: man-pages/man3/errno.3:226
+#: man-pages/man3/errno.3:227
 #, no-wrap
 msgid "B<ECOMM>"
 msgstr "B<ECOMM>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:229
+#: man-pages/man3/errno.3:230
 msgid "Communication error on send."
 msgstr "Ошибка связи при отправке."
 
 #. type: TP
-#: man-pages/man3/errno.3:229
+#: man-pages/man3/errno.3:230
 #, no-wrap
 msgid "B<ECONNABORTED>"
 msgstr "B<ECONNABORTED>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:232
+#: man-pages/man3/errno.3:233
 msgid "Connection aborted (POSIX.1-2001)."
 msgstr "Соединение было прервано (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:232
+#: man-pages/man3/errno.3:233
 #, no-wrap
 msgid "B<ECONNREFUSED>"
 msgstr "B<ECONNREFUSED>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:235
+#: man-pages/man3/errno.3:236
 msgid "Connection refused (POSIX.1-2001)."
 msgstr "В соединении отказано (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:235
+#: man-pages/man3/errno.3:236
 #, no-wrap
 msgid "B<ECONNRESET>"
 msgstr "B<ECONNRESET>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:238
+#: man-pages/man3/errno.3:239
 msgid "Connection reset (POSIX.1-2001)."
 msgstr "Соединение сброшено другой стороной (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:238
+#: man-pages/man3/errno.3:239
 #, no-wrap
 msgid "B<EDEADLK>"
 msgstr "B<EDEADLK>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:241
+#: man-pages/man3/errno.3:242
 msgid "Resource deadlock avoided (POSIX.1-2001)."
 msgstr ""
 "Предотвращена тупиковая ситуация при обращении к ресурсу (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:241
+#: man-pages/man3/errno.3:242
 #, no-wrap
 msgid "B<EDEADLOCK>"
 msgstr "B<EDEADLOCK>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:245
-msgid "Synonym for B<EDEADLK>."
-msgstr "Синоним B<EDEADLK>."
+#: man-pages/man3/errno.3:248
+msgid ""
+"On most architectures, a synonym for B<EDEADLK>.  On some architectures (e."
+"g., Linux MIPS, PowerPC, SPARC), it is a separate error code \"File locking "
+"deadlock error\"."
+msgstr ""
+"На большинстве архитектур является синонимом B<EDEADLK>. На некоторых "
+"архитектурах (например, Linux MIPS, PowerPC, SPARC), это отдельный код "
+"ошибки «Ошибка перекрёстной блокировки файла»."
 
 #. type: TP
-#: man-pages/man3/errno.3:245
+#: man-pages/man3/errno.3:248
 #, no-wrap
 msgid "B<EDESTADDRREQ>"
 msgstr "B<EDESTADDRREQ>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:248
+#: man-pages/man3/errno.3:251
 msgid "Destination address required (POSIX.1-2001)."
 msgstr "Требуется указать адрес назначения (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:248
+#: man-pages/man3/errno.3:251
 #, no-wrap
 msgid "B<EDOM>"
 msgstr "B<EDOM>"
 
 #.  EDOTDOT is defined but appears to be unused
 #. type: Plain text
-#: man-pages/man3/errno.3:252
+#: man-pages/man3/errno.3:255
 msgid "Mathematics argument out of domain of function (POSIX.1, C99)."
 msgstr ""
 "Математический аргумент вне области определения функции (POSIX.1, C99)."
 
 #. type: TP
-#: man-pages/man3/errno.3:252
+#: man-pages/man3/errno.3:255
 #, no-wrap
 msgid "B<EDQUOT>"
 msgstr "B<EDQUOT>"
 
 #.  POSIX just says "Reserved"
 #. type: Plain text
-#: man-pages/man3/errno.3:256
+#: man-pages/man3/errno.3:259
 msgid "Disk quota exceeded (POSIX.1-2001)."
 msgstr "Превышена дисковая квота (POSIX.1-2001)."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:259
+#: man-pages/man3/errno.3:262
 msgid "File exists (POSIX.1-2001)."
 msgstr "Файл существует (POSIX.1-2001)."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:262
+#: man-pages/man3/errno.3:265
 msgid "Bad address (POSIX.1-2001)."
 msgstr "Неправильный адрес (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:262
+#: man-pages/man3/errno.3:265
 #, no-wrap
 msgid "B<EFBIG>"
 msgstr "B<EFBIG>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:265
+#: man-pages/man3/errno.3:268
 msgid "File too large (POSIX.1-2001)."
 msgstr "Файл слишком велик (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:265
+#: man-pages/man3/errno.3:268
 #, no-wrap
 msgid "B<EHOSTDOWN>"
 msgstr "B<EHOSTDOWN>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:268
+#: man-pages/man3/errno.3:271
 msgid "Host is down."
 msgstr "Узел выключен."
 
 #. type: TP
-#: man-pages/man3/errno.3:268
+#: man-pages/man3/errno.3:271
 #, no-wrap
 msgid "B<EHOSTUNREACH>"
 msgstr "B<EHOSTUNREACH>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:271
+#: man-pages/man3/errno.3:274
 msgid "Host is unreachable (POSIX.1-2001)."
 msgstr "Узел недоступен (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:271
+#: man-pages/man3/errno.3:274
 #, no-wrap
 msgid "B<EHWPOISON>"
 msgstr "B<EHWPOISON>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:274
+#: man-pages/man3/errno.3:277
 msgid "Memory page has hardware error."
 msgstr "В странице памяти аппаратная ошибка."
 
 #. type: TP
-#: man-pages/man3/errno.3:274
+#: man-pages/man3/errno.3:277
 #, no-wrap
 msgid "B<EIDRM>"
 msgstr "B<EIDRM>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:277
+#: man-pages/man3/errno.3:280
 msgid "Identifier removed (POSIX.1-2001)."
 msgstr "Идентификатор удалён (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:277
+#: man-pages/man3/errno.3:280
 #, no-wrap
 msgid "B<EILSEQ>"
 msgstr "B<EILSEQ>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:280
+#: man-pages/man3/errno.3:283
 msgid "Invalid or incomplete multibyte or wide character (POSIX.1, C99)."
 msgstr "Неверный или неполный мультибайтный или широкий символ (POSIX.1, C99)."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:283
+#: man-pages/man3/errno.3:286
 msgid ""
 "The text shown here is the glibc error description; in POSIX.1, this error "
 "is described as \"Illegal byte sequence\"."
@@ -13540,214 +13547,214 @@ msgstr ""
 "«Недопустимая последовательность байт»."
 
 #. type: TP
-#: man-pages/man3/errno.3:283
+#: man-pages/man3/errno.3:286
 #, no-wrap
 msgid "B<EINPROGRESS>"
 msgstr "B<EINPROGRESS>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:286
+#: man-pages/man3/errno.3:289
 msgid "Operation in progress (POSIX.1-2001)."
 msgstr "Операция выполняется (POSIX.1-2001)."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:290
+#: man-pages/man3/errno.3:293
 msgid "Interrupted function call (POSIX.1-2001); see B<signal>(7)."
 msgstr "Прерванный вызов функции (POSIX.1-2001); смотрите B<signal>(7)."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:293
+#: man-pages/man3/errno.3:296
 msgid "Invalid argument (POSIX.1-2001)."
 msgstr "Неверный аргумент (POSIX.1-2001)."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:296
+#: man-pages/man3/errno.3:299
 msgid "Input/output error (POSIX.1-2001)."
 msgstr "Ошибка ввода/вывода (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:296
+#: man-pages/man3/errno.3:299
 #, no-wrap
 msgid "B<EISCONN>"
 msgstr "B<EISCONN>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:299
+#: man-pages/man3/errno.3:302
 msgid "Socket is connected (POSIX.1-2001)."
 msgstr "Сокет подключён (POSIX.1-2001)."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:302
+#: man-pages/man3/errno.3:305
 msgid "Is a directory (POSIX.1-2001)."
 msgstr "Это каталог (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:302
+#: man-pages/man3/errno.3:305
 #, no-wrap
 msgid "B<EISNAM>"
 msgstr "B<EISNAM>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:305
+#: man-pages/man3/errno.3:308
 msgid "Is a named type file."
 msgstr "Является файлом именованного типа."
 
 #. type: TP
-#: man-pages/man3/errno.3:305
+#: man-pages/man3/errno.3:308
 #, no-wrap
 msgid "B<EKEYEXPIRED>"
 msgstr "B<EKEYEXPIRED>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:308
+#: man-pages/man3/errno.3:311
 msgid "Key has expired."
 msgstr "Ключ с истёкшим сроком."
 
 #. type: TP
-#: man-pages/man3/errno.3:308
+#: man-pages/man3/errno.3:311
 #, no-wrap
 msgid "B<EKEYREJECTED>"
 msgstr "B<EKEYREJECTED>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:311
+#: man-pages/man3/errno.3:314
 msgid "Key was rejected by service."
 msgstr "Ключ был отвергнут службой."
 
 #. type: TP
-#: man-pages/man3/errno.3:311
+#: man-pages/man3/errno.3:314
 #, no-wrap
 msgid "B<EKEYREVOKED>"
 msgstr "B<EKEYREVOKED>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:314
+#: man-pages/man3/errno.3:317
 msgid "Key has been revoked."
 msgstr "Ключ был отозван."
 
 #. type: TP
-#: man-pages/man3/errno.3:314
+#: man-pages/man3/errno.3:317
 #, no-wrap
 msgid "B<EL2HLT>"
 msgstr "B<EL2HLT>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:317
+#: man-pages/man3/errno.3:320
 msgid "Level 2 halted."
 msgstr "Уровень 2 остановлен."
 
 #. type: TP
-#: man-pages/man3/errno.3:317
+#: man-pages/man3/errno.3:320
 #, no-wrap
 msgid "B<EL2NSYNC>"
 msgstr "B<EL2NSYNC>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:320
+#: man-pages/man3/errno.3:323
 msgid "Level 2 not synchronized."
 msgstr "Уровень 2 не синхронизирован."
 
 #. type: TP
-#: man-pages/man3/errno.3:320
+#: man-pages/man3/errno.3:323
 #, no-wrap
 msgid "B<EL3HLT>"
 msgstr "B<EL3HLT>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:323
+#: man-pages/man3/errno.3:326
 msgid "Level 3 halted."
 msgstr "Уровень 3 остановлен."
 
 #. type: TP
-#: man-pages/man3/errno.3:323
+#: man-pages/man3/errno.3:326
 #, no-wrap
 msgid "B<EL3RST>"
 msgstr "B<EL3RST>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:326
+#: man-pages/man3/errno.3:329
 msgid "Level 3 reset."
 msgstr "Уровень 3 сброшен."
 
 #. type: TP
-#: man-pages/man3/errno.3:326
+#: man-pages/man3/errno.3:329
 #, no-wrap
 msgid "B<ELIBACC>"
 msgstr "B<ELIBACC>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:329
+#: man-pages/man3/errno.3:332
 msgid "Cannot access a needed shared library."
 msgstr "Невозможно получить доступ к нужной общей библиотеке."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:332
+#: man-pages/man3/errno.3:335
 msgid "Accessing a corrupted shared library."
 msgstr "Обращение к повреждённой общей библиотеке."
 
 #. type: TP
-#: man-pages/man3/errno.3:332
+#: man-pages/man3/errno.3:335
 #, no-wrap
 msgid "B<ELIBMAX>"
 msgstr "B<ELIBMAX>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:335
+#: man-pages/man3/errno.3:338
 msgid "Attempting to link in too many shared libraries."
 msgstr "Попытка компоновки с слишком большим количеством общих библиотек."
 
 #. type: TP
-#: man-pages/man3/errno.3:335
+#: man-pages/man3/errno.3:338
 #, no-wrap
 msgid "B<ELIBSCN>"
 msgstr "B<ELIBSCN>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:338
+#: man-pages/man3/errno.3:341
 msgid "\\&.lib section in a.out corrupted"
 msgstr "Секция \\&.lib в a.out повреждена"
 
 #. type: TP
-#: man-pages/man3/errno.3:338
+#: man-pages/man3/errno.3:341
 #, no-wrap
 msgid "B<ELIBEXEC>"
 msgstr "B<ELIBEXEC>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:341
+#: man-pages/man3/errno.3:344
 msgid "Cannot exec a shared library directly."
 msgstr "Невозможно непосредственно выполнить общую библиотеку."
 
 #. type: TP
-#: man-pages/man3/errno.3:341
+#: man-pages/man3/errno.3:344
 #, no-wrap
 msgid "B<ELNRANGE>"
 msgstr "B<ELNRANGE>"
 
 #.  ELNRNG appears to be used by a few drivers
 #. type: Plain text
-#: man-pages/man3/errno.3:345
+#: man-pages/man3/errno.3:348
 msgid "Link number out of range."
 msgstr "Число ссылок вне допустимого диапазона."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:348
+#: man-pages/man3/errno.3:351
 msgid "Too many levels of symbolic links (POSIX.1-2001)."
 msgstr "Слишком много уровней символьных ссылок (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:348
+#: man-pages/man3/errno.3:351
 #, no-wrap
 msgid "B<EMEDIUMTYPE>"
 msgstr "B<EMEDIUMTYPE>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:351
+#: man-pages/man3/errno.3:354
 msgid "Wrong medium type."
 msgstr "Неправильный тип носителя."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:358
+#: man-pages/man3/errno.3:361
 msgid ""
 "Too many open files (POSIX.1-2001).  Commonly caused by exceeding the "
 "B<RLIMIT_NOFILE> resource limit described in B<getrlimit>(2)."
@@ -13757,80 +13764,80 @@ msgstr ""
 "B<getrlimit>(2)."
 
 #. type: TP
-#: man-pages/man3/errno.3:358
+#: man-pages/man3/errno.3:361
 #, no-wrap
 msgid "B<EMLINK>"
 msgstr "B<EMLINK>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:361
+#: man-pages/man3/errno.3:364
 msgid "Too many links (POSIX.1-2001)."
 msgstr "Слишком много ссылок (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:361
+#: man-pages/man3/errno.3:364
 #, no-wrap
 msgid "B<EMSGSIZE>"
 msgstr "B<EMSGSIZE>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:364
+#: man-pages/man3/errno.3:367
 msgid "Message too long (POSIX.1-2001)."
 msgstr "Сообщение слишком длинное (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:364
+#: man-pages/man3/errno.3:367
 #, no-wrap
 msgid "B<EMULTIHOP>"
 msgstr "B<EMULTIHOP>"
 
 #.  POSIX says "Reserved"
 #. type: Plain text
-#: man-pages/man3/errno.3:368
+#: man-pages/man3/errno.3:371
 msgid "Multihop attempted (POSIX.1-2001)."
 msgstr "Попытка Multihop (POSIX.1-2001)."
 
 #.  ENAVAIL is defined, but appears not to be used
 #. type: Plain text
-#: man-pages/man3/errno.3:372
+#: man-pages/man3/errno.3:375
 msgid "Filename too long (POSIX.1-2001)."
 msgstr "Слишком длинное название файла (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:372
+#: man-pages/man3/errno.3:375
 #, no-wrap
 msgid "B<ENETDOWN>"
 msgstr "B<ENETDOWN>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:375
+#: man-pages/man3/errno.3:378
 msgid "Network is down (POSIX.1-2001)."
 msgstr "Сеть не работает (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:375
+#: man-pages/man3/errno.3:378
 #, no-wrap
 msgid "B<ENETRESET>"
 msgstr "B<ENETRESET>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:378
+#: man-pages/man3/errno.3:381
 msgid "Connection aborted by network (POSIX.1-2001)."
 msgstr "Соединение прервано из-за сети (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:378
+#: man-pages/man3/errno.3:381
 #, no-wrap
 msgid "B<ENETUNREACH>"
 msgstr "B<ENETUNREACH>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:381
+#: man-pages/man3/errno.3:384
 msgid "Network unreachable (POSIX.1-2001)."
 msgstr "Сеть недоступна (POSIX.1-2001)."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:388
+#: man-pages/man3/errno.3:391
 msgid ""
 "Too many open files in system (POSIX.1-2001).  On Linux, this is probably a "
 "result of encountering the I</proc/sys/fs/file-max> limit (see B<proc>(5))."
@@ -13840,52 +13847,52 @@ msgstr ""
 "(смотрите B<proc>(5))."
 
 #. type: TP
-#: man-pages/man3/errno.3:388
+#: man-pages/man3/errno.3:391
 #, no-wrap
 msgid "B<ENOANO>"
 msgstr "B<ENOANO>"
 
 #.  ENOANO appears to be used by a few drivers
 #. type: Plain text
-#: man-pages/man3/errno.3:392
+#: man-pages/man3/errno.3:395
 msgid "No anode."
 msgstr "Не anode."
 
 #. type: TP
-#: man-pages/man3/errno.3:392
+#: man-pages/man3/errno.3:395
 #, no-wrap
 msgid "B<ENOBUFS>"
 msgstr "B<ENOBUFS>"
 
 #.  ENOCSI is defined but appears to be unused.
 #. type: Plain text
-#: man-pages/man3/errno.3:396
+#: man-pages/man3/errno.3:399
 msgid "No buffer space available (POSIX.1 (XSI STREAMS option))."
 msgstr "Недостаточно буферного пространства (POSIX.1 (часть XSI STREAMS))."
 
 #. type: TP
-#: man-pages/man3/errno.3:396
+#: man-pages/man3/errno.3:399
 #, no-wrap
 msgid "B<ENODATA>"
 msgstr "B<ENODATA>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:399
+#: man-pages/man3/errno.3:402
 msgid "No message is available on the STREAM head read queue (POSIX.1-2001)."
 msgstr "Сообщение в голове очереди чтения STREAM отсутствует (POSIX.1-2001)."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:402
+#: man-pages/man3/errno.3:405
 msgid "No such device (POSIX.1-2001)."
 msgstr "Нет такого устройства (POSIX.1-2001)."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:405
+#: man-pages/man3/errno.3:408
 msgid "No such file or directory (POSIX.1-2001)."
 msgstr "Нет такого файла или каталога (POSIX.1-2001)."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:409
+#: man-pages/man3/errno.3:412
 msgid ""
 "Typically, this error results when a specified pathname does not exist, or "
 "one of the components in the directory prefix of a pathname does not exist, "
@@ -13896,254 +13903,254 @@ msgstr ""
 "символической ссылкой на несуществующий объект."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:412
+#: man-pages/man3/errno.3:415
 msgid "Exec format error (POSIX.1-2001)."
 msgstr "Ошибка формата выполняемого файла (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:412
+#: man-pages/man3/errno.3:415
 #, no-wrap
 msgid "B<ENOKEY>"
 msgstr "B<ENOKEY>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:415
+#: man-pages/man3/errno.3:418
 msgid "Required key not available."
 msgstr "Требуемый ключ недоступен."
 
 #. type: TP
-#: man-pages/man3/errno.3:415
+#: man-pages/man3/errno.3:418
 #, no-wrap
 msgid "B<ENOLCK>"
 msgstr "B<ENOLCK>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:418
+#: man-pages/man3/errno.3:421
 msgid "No locks available (POSIX.1-2001)."
 msgstr "Нет доступных блокировок (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:418
+#: man-pages/man3/errno.3:421
 #, no-wrap
 msgid "B<ENOLINK>"
 msgstr "B<ENOLINK>"
 
 #.  POSIX says "Reserved"
 #. type: Plain text
-#: man-pages/man3/errno.3:422
+#: man-pages/man3/errno.3:425
 msgid "Link has been severed (POSIX.1-2001)."
 msgstr "Соединение было разорвано (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:422
+#: man-pages/man3/errno.3:425
 #, no-wrap
 msgid "B<ENOMEDIUM>"
 msgstr "B<ENOMEDIUM>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:425
+#: man-pages/man3/errno.3:428
 msgid "No medium found."
 msgstr "Носитель не найден."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:428
+#: man-pages/man3/errno.3:431
 msgid "Not enough space/cannot allocate memory (POSIX.1-2001)."
 msgstr "Недостаточно места/невозможно выделить память (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:428
+#: man-pages/man3/errno.3:431
 #, no-wrap
 msgid "B<ENOMSG>"
 msgstr "B<ENOMSG>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:431
+#: man-pages/man3/errno.3:434
 msgid "No message of the desired type (POSIX.1-2001)."
 msgstr "Нет сообщения желаемого типа (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:431
+#: man-pages/man3/errno.3:434
 #, no-wrap
 msgid "B<ENONET>"
 msgstr "B<ENONET>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:434
+#: man-pages/man3/errno.3:437
 msgid "Machine is not on the network."
 msgstr "Машина не в сети."
 
 #. type: TP
-#: man-pages/man3/errno.3:434
+#: man-pages/man3/errno.3:437
 #, no-wrap
 msgid "B<ENOPKG>"
 msgstr "B<ENOPKG>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:437
+#: man-pages/man3/errno.3:440
 msgid "Package not installed."
 msgstr "Пакет не установлен."
 
 #. type: TP
-#: man-pages/man3/errno.3:437
+#: man-pages/man3/errno.3:440
 #, no-wrap
 msgid "B<ENOPROTOOPT>"
 msgstr "B<ENOPROTOOPT>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:440
+#: man-pages/man3/errno.3:443
 msgid "Protocol not available (POSIX.1-2001)."
 msgstr "Протокол недоступен (POSIX.1-2001)."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:443
+#: man-pages/man3/errno.3:446
 msgid "No space left on device (POSIX.1-2001)."
 msgstr "На устройстве не осталось места (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:443
+#: man-pages/man3/errno.3:446
 #, no-wrap
 msgid "B<ENOSR>"
 msgstr "B<ENOSR>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:446
+#: man-pages/man3/errno.3:449
 msgid "No STREAM resources (POSIX.1 (XSI STREAMS option))."
 msgstr "Отсутствую ресурсы STREAM (POSIX.1 (часть XSI STREAMS))."
 
 #. type: TP
-#: man-pages/man3/errno.3:446
+#: man-pages/man3/errno.3:449
 #, no-wrap
 msgid "B<ENOSTR>"
 msgstr "B<ENOSTR>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:449
+#: man-pages/man3/errno.3:452
 msgid "Not a STREAM (POSIX.1 (XSI STREAMS option))."
 msgstr "Нет STREAM (POSIX.1 (часть XSI STREAMS))."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:452
+#: man-pages/man3/errno.3:455
 msgid "Function not implemented (POSIX.1-2001)."
 msgstr "Функция не реализована (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:452
+#: man-pages/man3/errno.3:455
 #, no-wrap
 msgid "B<ENOTBLK>"
 msgstr "B<ENOTBLK>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:455
+#: man-pages/man3/errno.3:458
 msgid "Block device required."
 msgstr "Требуется блочное устройство."
 
 #. type: TP
-#: man-pages/man3/errno.3:455
+#: man-pages/man3/errno.3:458
 #, no-wrap
 msgid "B<ENOTCONN>"
 msgstr "B<ENOTCONN>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:458
+#: man-pages/man3/errno.3:461
 msgid "The socket is not connected (POSIX.1-2001)."
 msgstr "Сокет не подключён (POSIX.1-2001)."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:461
+#: man-pages/man3/errno.3:464
 msgid "Not a directory (POSIX.1-2001)."
 msgstr "Не каталог (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:461
+#: man-pages/man3/errno.3:464
 #, no-wrap
 msgid "B<ENOTEMPTY>"
 msgstr "B<ENOTEMPTY>"
 
 #.  ENOTNAM is defined but appears to be unused.
 #. type: Plain text
-#: man-pages/man3/errno.3:465
+#: man-pages/man3/errno.3:468
 msgid "Directory not empty (POSIX.1-2001)."
 msgstr "Каталог не пуст (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:465
+#: man-pages/man3/errno.3:468
 #, no-wrap
 msgid "B<ENOTRECOVERABLE>"
 msgstr "B<ENOTRECOVERABLE>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:468
+#: man-pages/man3/errno.3:471
 msgid "State not recoverable (POSIX.1-2008)."
 msgstr "Состояние нельзя восстановить (POSIX.1-2008)."
 
 #. type: TP
-#: man-pages/man3/errno.3:468
+#: man-pages/man3/errno.3:471
 #, no-wrap
 msgid "B<ENOTSOCK>"
 msgstr "B<ENOTSOCK>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:471
+#: man-pages/man3/errno.3:474
 msgid "Not a socket (POSIX.1-2001)."
 msgstr "Не сокет (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:471
+#: man-pages/man3/errno.3:474
 #, no-wrap
 msgid "B<ENOTSUP>"
 msgstr "B<ENOTSUP>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:474
+#: man-pages/man3/errno.3:477
 msgid "Operation not supported (POSIX.1-2001)."
 msgstr "Операция не поддерживается (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:474
+#: man-pages/man3/errno.3:477
 #, no-wrap
 msgid "B<ENOTTY>"
 msgstr "B<ENOTTY>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:477
+#: man-pages/man3/errno.3:480
 msgid "Inappropriate I/O control operation (POSIX.1-2001)."
 msgstr "Неподходящая операция управления вводом/выводом (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:477
+#: man-pages/man3/errno.3:480
 #, no-wrap
 msgid "B<ENOTUNIQ>"
 msgstr "B<ENOTUNIQ>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:480
+#: man-pages/man3/errno.3:483
 msgid "Name not unique on network."
 msgstr "Имя не уникально в сети."
 
 #. type: TP
-#: man-pages/man3/errno.3:480
+#: man-pages/man3/errno.3:483
 #, no-wrap
 msgid "B<ENXIO>"
 msgstr "B<ENXIO>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:483
+#: man-pages/man3/errno.3:486
 msgid "No such device or address (POSIX.1-2001)."
 msgstr "Нет такого устройства или адреса (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:483
+#: man-pages/man3/errno.3:486
 #, no-wrap
 msgid "B<EOPNOTSUPP>"
 msgstr "B<EOPNOTSUPP>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:486
+#: man-pages/man3/errno.3:489
 msgid "Operation not supported on socket (POSIX.1-2001)."
 msgstr "Операция не поддерживается на сокете (POSIX.1-2001)."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:492
+#: man-pages/man3/errno.3:495
 msgid ""
 "(B<ENOTSUP> and B<EOPNOTSUPP> have the same value on Linux, but according to "
 "POSIX.1 these error values should be distinct.)"
@@ -14152,359 +14159,359 @@ msgstr ""
 "POSIX.1 значения этих ошибок должны различаться.)"
 
 #. type: TP
-#: man-pages/man3/errno.3:492
+#: man-pages/man3/errno.3:495
 #, no-wrap
 msgid "B<EOVERFLOW>"
 msgstr "B<EOVERFLOW>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:495
+#: man-pages/man3/errno.3:498
 msgid "Value too large to be stored in data type (POSIX.1-2001)."
 msgstr ""
 "Значение слишком велико для хранения в таком типе данных (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:495
+#: man-pages/man3/errno.3:498
 #, no-wrap
 msgid "B<EOWNERDEAD>"
 msgstr "B<EOWNERDEAD>"
 
 #.  Used at least by the user-space side of rubost mutexes
 #. type: Plain text
-#: man-pages/man3/errno.3:499
+#: man-pages/man3/errno.3:502
 msgid "Owner died (POSIX.1-2008)."
 msgstr "Владелец умер (POSIX.1-2008)."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:502
+#: man-pages/man3/errno.3:505
 msgid "Operation not permitted (POSIX.1-2001)."
 msgstr "Операция не позволена (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:502
+#: man-pages/man3/errno.3:505
 #, no-wrap
 msgid "B<EPFNOSUPPORT>"
 msgstr "B<EPFNOSUPPORT>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:505
+#: man-pages/man3/errno.3:508
 msgid "Protocol family not supported."
 msgstr "Семейство протоколов не поддерживается."
 
 #. type: TP
-#: man-pages/man3/errno.3:505
+#: man-pages/man3/errno.3:508
 #, no-wrap
 msgid "B<EPIPE>"
 msgstr "B<EPIPE>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:508
+#: man-pages/man3/errno.3:511
 msgid "Broken pipe (POSIX.1-2001)."
 msgstr "Обрыв канала (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:508
+#: man-pages/man3/errno.3:511
 #, no-wrap
 msgid "B<EPROTO>"
 msgstr "B<EPROTO>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:511
+#: man-pages/man3/errno.3:514
 msgid "Protocol error (POSIX.1-2001)."
 msgstr "Ошибка протокола (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:511
+#: man-pages/man3/errno.3:514
 #, no-wrap
 msgid "B<EPROTONOSUPPORT>"
 msgstr "B<EPROTONOSUPPORT>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:514
+#: man-pages/man3/errno.3:517
 msgid "Protocol not supported (POSIX.1-2001)."
 msgstr "Протокол не поддерживается (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:514
+#: man-pages/man3/errno.3:517
 #, no-wrap
 msgid "B<EPROTOTYPE>"
 msgstr "B<EPROTOTYPE>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:517
+#: man-pages/man3/errno.3:520
 msgid "Protocol wrong type for socket (POSIX.1-2001)."
 msgstr "Неверный тип протокола для сокета (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:517
+#: man-pages/man3/errno.3:520
 #, no-wrap
 msgid "B<ERANGE>"
 msgstr "B<ERANGE>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:520
+#: man-pages/man3/errno.3:523
 msgid "Result too large (POSIX.1, C99)."
 msgstr "Результат слишком большой (POSIX.1, C99)."
 
 #. type: TP
-#: man-pages/man3/errno.3:520
+#: man-pages/man3/errno.3:523
 #, no-wrap
 msgid "B<EREMCHG>"
 msgstr "B<EREMCHG>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:523
+#: man-pages/man3/errno.3:526
 msgid "Remote address changed."
 msgstr "Удалённый адрес был изменён."
 
 #. type: TP
-#: man-pages/man3/errno.3:523
+#: man-pages/man3/errno.3:526
 #, no-wrap
 msgid "B<EREMOTE>"
 msgstr "B<EREMOTE>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:526
+#: man-pages/man3/errno.3:529
 msgid "Object is remote."
 msgstr "Это удалённый объект."
 
 #. type: TP
-#: man-pages/man3/errno.3:526
+#: man-pages/man3/errno.3:529
 #, no-wrap
 msgid "B<EREMOTEIO>"
 msgstr "B<EREMOTEIO>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:529
+#: man-pages/man3/errno.3:532
 msgid "Remote I/O error."
 msgstr "Ошибка удалённого ввода/вывода."
 
 #. type: TP
-#: man-pages/man3/errno.3:529
+#: man-pages/man3/errno.3:532
 #, no-wrap
 msgid "B<ERESTART>"
 msgstr "B<ERESTART>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:532
+#: man-pages/man3/errno.3:535
 msgid "Interrupted system call should be restarted."
 msgstr "Прерванный системный вызов следует перезапустить."
 
 #. type: TP
-#: man-pages/man3/errno.3:532
+#: man-pages/man3/errno.3:535
 #, no-wrap
 msgid "B<ERFKILL>"
 msgstr "B<ERFKILL>"
 
 #.  ERFKILL appears to be used by various drivers
 #. type: Plain text
-#: man-pages/man3/errno.3:536
+#: man-pages/man3/errno.3:539
 msgid "Operation not possible due to RF-kill."
 msgstr "Операция не позволяется из-за RF-kill."
 
 #. type: TP
-#: man-pages/man3/errno.3:536
+#: man-pages/man3/errno.3:539
 #, no-wrap
 msgid "B<EROFS>"
 msgstr "B<EROFS>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:539
+#: man-pages/man3/errno.3:542
 msgid "Read-only filesystem (POSIX.1-2001)."
 msgstr "Файловая система доступна только для чтения (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:539
+#: man-pages/man3/errno.3:542
 #, no-wrap
 msgid "B<ESHUTDOWN>"
 msgstr "B<ESHUTDOWN>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:542
+#: man-pages/man3/errno.3:545
 msgid "Cannot send after transport endpoint shutdown."
 msgstr "Невозможно отправить данные после выключения конечной точки передачи."
 
 #. type: TP
-#: man-pages/man3/errno.3:542
+#: man-pages/man3/errno.3:545
 #, no-wrap
 msgid "B<ESPIPE>"
 msgstr "B<ESPIPE>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:545
+#: man-pages/man3/errno.3:548
 msgid "Invalid seek (POSIX.1-2001)."
 msgstr "Недопустимое перемещение (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:545
+#: man-pages/man3/errno.3:548
 #, no-wrap
 msgid "B<ESOCKTNOSUPPORT>"
 msgstr "B<ESOCKTNOSUPPORT>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:548
+#: man-pages/man3/errno.3:551
 msgid "Socket type not supported."
 msgstr "Тип сокета не поддерживается."
 
 #. type: TP
-#: man-pages/man3/errno.3:548
+#: man-pages/man3/errno.3:551
 #, no-wrap
 msgid "B<ESRCH>"
 msgstr "B<ESRCH>"
 
 #.  ESRMNT is defined but appears not to be used
 #. type: Plain text
-#: man-pages/man3/errno.3:552
+#: man-pages/man3/errno.3:555
 msgid "No such process (POSIX.1-2001)."
 msgstr "Нет такого процесса (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:552
+#: man-pages/man3/errno.3:555
 #, no-wrap
 msgid "B<ESTALE>"
 msgstr "B<ESTALE>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:555
+#: man-pages/man3/errno.3:558
 msgid "Stale file handle (POSIX.1-2001)."
 msgstr "Неактуальный дескриптор файла (POSIX.1-2001)."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:557
+#: man-pages/man3/errno.3:560
 msgid "This error can occur for NFS and for other filesystems."
 msgstr "Эта ошибка может возникать в NFS и других файловых системах."
 
 #. type: TP
-#: man-pages/man3/errno.3:557
+#: man-pages/man3/errno.3:560
 #, no-wrap
 msgid "B<ESTRPIPE>"
 msgstr "B<ESTRPIPE>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:560
+#: man-pages/man3/errno.3:563
 msgid "Streams pipe error."
 msgstr "Ошибка потоков канала."
 
 #. type: TP
-#: man-pages/man3/errno.3:560
+#: man-pages/man3/errno.3:563
 #, no-wrap
 msgid "B<ETIME>"
 msgstr "B<ETIME>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:564
+#: man-pages/man3/errno.3:567
 msgid "Timer expired (POSIX.1 (XSI STREAMS option))."
 msgstr "Таймер истёк (POSIX.1 (часть XSI STREAMS))."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:568
+#: man-pages/man3/errno.3:571
 msgid "(POSIX.1 says \"STREAM B<ioctl>(2)  timeout\".)"
 msgstr ""
 "(в POSIX.1 описывается как «в B<ioctl>(2) истекло время ожидания STREAM»)"
 
 #. type: TP
-#: man-pages/man3/errno.3:568
+#: man-pages/man3/errno.3:571
 #, no-wrap
 msgid "B<ETIMEDOUT>"
 msgstr "B<ETIMEDOUT>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:571
+#: man-pages/man3/errno.3:574
 msgid "Connection timed out (POSIX.1-2001)."
 msgstr "Время ожидания соединения истекло (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:571
+#: man-pages/man3/errno.3:574
 #, no-wrap
 msgid "B<ETOOMANYREFS>"
 msgstr "B<ETOOMANYREFS>"
 
 #.  ETOOMANYREFS seems to be used in net/unix/af_unix.c
 #. type: Plain text
-#: man-pages/man3/errno.3:575
+#: man-pages/man3/errno.3:578
 msgid "Too many references: cannot splice."
 msgstr "Слишком много ссылок: невозможно объединить."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:578
+#: man-pages/man3/errno.3:581
 msgid "Text file busy (POSIX.1-2001)."
 msgstr "Текстовый файл занят (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:578
+#: man-pages/man3/errno.3:581
 #, no-wrap
 msgid "B<EUCLEAN>"
 msgstr "B<EUCLEAN>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:581
+#: man-pages/man3/errno.3:584
 msgid "Structure needs cleaning."
 msgstr "Структуру необходимо очистить."
 
 #. type: TP
-#: man-pages/man3/errno.3:581
+#: man-pages/man3/errno.3:584
 #, no-wrap
 msgid "B<EUNATCH>"
 msgstr "B<EUNATCH>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:584
+#: man-pages/man3/errno.3:587
 msgid "Protocol driver not attached."
 msgstr "Драйвер протокола не подсоединён."
 
 #. type: TP
-#: man-pages/man3/errno.3:584
+#: man-pages/man3/errno.3:587
 #, no-wrap
 msgid "B<EUSERS>"
 msgstr "B<EUSERS>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:587
+#: man-pages/man3/errno.3:590
 msgid "Too many users."
 msgstr "Слишком много пользователей."
 
 #. type: TP
-#: man-pages/man3/errno.3:587
+#: man-pages/man3/errno.3:590
 #, no-wrap
 msgid "B<EWOULDBLOCK>"
 msgstr "B<EWOULDBLOCK>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:592
+#: man-pages/man3/errno.3:595
 msgid "Operation would block (may be same value as B<EAGAIN>)  (POSIX.1-2001)."
 msgstr ""
 "Операция приведёт к блокировке (значение может быть равно B<EAGAIN>) "
 "(POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:592
+#: man-pages/man3/errno.3:595
 #, no-wrap
 msgid "B<EXDEV>"
 msgstr "B<EXDEV>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:595
+#: man-pages/man3/errno.3:598
 msgid "Improper link (POSIX.1-2001)."
 msgstr "Некорректная ссылка (POSIX.1-2001)."
 
 #. type: TP
-#: man-pages/man3/errno.3:595
+#: man-pages/man3/errno.3:598
 #, no-wrap
 msgid "B<EXFULL>"
 msgstr "B<EXFULL>"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:598
+#: man-pages/man3/errno.3:601
 msgid "Exchange full."
 msgstr "Обмен полон."
 
 #. type: Plain text
-#: man-pages/man3/errno.3:600
+#: man-pages/man3/errno.3:603
 msgid "A common mistake is to do"
 msgstr "Распространённая ошибка:"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:607
+#: man-pages/man3/errno.3:610
 #, no-wrap
 msgid ""
 "if (somecall() == -1) {\n"
@@ -14518,7 +14525,7 @@ msgstr ""
 "}\n"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:619
+#: man-pages/man3/errno.3:622
 msgid ""
 "where I<errno> no longer needs to have the value it had upon return from "
 "I<somecall>()  (i.e., it may have been changed by the B<printf>(3)).  If the "
@@ -14530,7 +14537,7 @@ msgstr ""
 "значение I<errno> важно, то его нужно сохранять между библиотечными вызовами:"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:627
+#: man-pages/man3/errno.3:630
 #, no-wrap
 msgid ""
 "if (somecall() == -1) {\n"
@@ -14546,7 +14553,7 @@ msgstr ""
 "}\n"
 
 #. type: Plain text
-#: man-pages/man3/errno.3:642
+#: man-pages/man3/errno.3:645
 msgid ""
 "On some ancient systems, I<E<lt>errno.hE<gt>> was not present or did not "
 "declare I<errno>, so that it was necessary to declare I<errno> manually (i."
@@ -14560,7 +14567,7 @@ msgstr ""
 
 #.  In the moreutils package
 #. type: Plain text
-#: man-pages/man3/errno.3:647
+#: man-pages/man3/errno.3:650
 msgid "B<errno>(1), B<err>(3), B<error>(3), B<perror>(3), B<strerror>(3)"
 msgstr "B<errno>(1), B<err>(3), B<error>(3), B<perror>(3), B<strerror>(3)"
 

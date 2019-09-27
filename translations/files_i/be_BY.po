@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:25+0300\n"
-"PO-Revision-Date: 2019-08-26 06:21+0000\n"
+"PO-Revision-Date: 2019-09-19 02:25+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Belarusian (Belarus) (http://www.transifex.com/kruvalig/man-pages/language/be_BY/)\n"
 "MIME-Version: 1.0\n"
@@ -16109,6 +16109,89 @@ msgid ""
 msgstr ""
 
 #. type: TH
+#: man-pages/man7/ipc_namespaces.7:26
+#, no-wrap
+msgid "IPC_NAMESPACES"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/ipc_namespaces.7:26
+#, no-wrap
+msgid "2019-08-02"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ipc_namespaces.7:29
+msgid "namespaces - overview of Linux IPC namespaces"
+msgstr ""
+
+#.  commit 7eafd7c74c3f2e67c27621b987b28397110d643f
+#.  https://lwn.net/Articles/312232/
+#. type: Plain text
+#: man-pages/man7/ipc_namespaces.7:41
+msgid ""
+"IPC namespaces isolate certain IPC resources, namely, System V IPC objects "
+"(see B<sysvipc>(7))  and (since Linux 2.6.30)  POSIX message queues (see "
+"B<mq_overview>(7)).  The common characteristic of these IPC mechanisms is "
+"that IPC objects are identified by mechanisms other than filesystem "
+"pathnames."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ipc_namespaces.7:47
+msgid ""
+"Each IPC namespace has its own set of System V IPC identifiers and its own "
+"POSIX message queue filesystem.  Objects created in an IPC namespace are "
+"visible to all other processes that are members of that namespace, but are "
+"not visible to processes in other IPC namespaces."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ipc_namespaces.7:51
+msgid "The following I</proc> interfaces are distinct in each IPC namespace:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ipc_namespaces.7:54
+msgid "The POSIX message queue interfaces in I</proc/sys/fs/mqueue>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ipc_namespaces.7:67
+msgid ""
+"The System V IPC interfaces in I</proc/sys/kernel>, namely: I<msgmax>, "
+"I<msgmnb>, I<msgmni>, I<sem>, I<shmall>, I<shmmax>, I<shmmni>, and "
+"I<shm_rmid_forced>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ipc_namespaces.7:70
+msgid "The System V IPC interfaces in I</proc/sysvipc>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ipc_namespaces.7:74
+msgid ""
+"When an IPC namespace is destroyed (i.e., when the last process that is a "
+"member of the namespace terminates), all IPC objects in the namespace are "
+"automatically destroyed."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ipc_namespaces.7:78
+msgid ""
+"Use of IPC namespaces requires a kernel that is configured with the "
+"B<CONFIG_IPC_NS> option."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/ipc_namespaces.7:86
+msgid ""
+"B<nsenter>(1), B<unshare>(1), B<clone>(2), B<setns>(2), B<unshare>(2), "
+"B<mq_overview>(7), B<namespaces>(7), B<sysvipc>(7)"
+msgstr ""
+
+#. type: TH
 #: man-pages/man2/ioctl_userfaultfd.2:28
 #, no-wrap
 msgid "IOCTL_USERFAULTFD"
@@ -20682,12 +20765,6 @@ msgstr ""
 msgid "B<inotify_add_watch>(2), B<inotify_init>(2), B<inotify>(7)"
 msgstr ""
 
-#. type: TH
-#: man-pages/man2/intro.2:29
-#, no-wrap
-msgid "2019-08-02"
-msgstr ""
-
 #. type: Plain text
 #: man-pages/man2/intro.2:32
 msgid "intro - introduction to system calls"
@@ -21526,7 +21603,7 @@ msgstr ""
 #. type: TP
 #: man-pages/man2/io_submit.2:93
 #, no-wrap
-msgid "B<RWF_DSYNC> (since Linux 4.7)"
+msgid "B<RWF_DSYNC> (since Linux 4.13)"
 msgstr ""
 
 #. type: Plain text
@@ -21540,7 +21617,7 @@ msgstr ""
 #. type: TP
 #: man-pages/man2/io_submit.2:103
 #, no-wrap
-msgid "B<RWF_HIPRI> (since Linux 4.6)"
+msgid "B<RWF_HIPRI> (since Linux 4.13)"
 msgstr ""
 
 #. type: Plain text
@@ -21567,7 +21644,7 @@ msgstr ""
 #. type: TP
 #: man-pages/man2/io_submit.2:120
 #, no-wrap
-msgid "B<RWF_SYNC> (since Linux 4.7)"
+msgid "B<RWF_SYNC> (since Linux 4.13)"
 msgstr ""
 
 #. type: Plain text

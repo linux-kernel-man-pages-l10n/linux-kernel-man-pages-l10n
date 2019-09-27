@@ -35,7 +35,7 @@
 local LANGS = ru ;
 
 # актуальная версия оригинальных страниц
-local MAN-PAGE-VERSION = 5.02 ;
+local MAN-PAGE-VERSION = 5.03 ;
 
 # каталог с оригинальными страницами на английском
 local en_orig_dir     = man-pages-git ;

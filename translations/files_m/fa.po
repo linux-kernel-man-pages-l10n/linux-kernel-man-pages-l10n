@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:26+0300\n"
-"PO-Revision-Date: 2019-08-26 06:21+0000\n"
+"PO-Revision-Date: 2019-09-19 02:25+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Persian (http://www.transifex.com/kruvalig/man-pages/language/fa/)\n"
 "MIME-Version: 1.0\n"
@@ -2155,8 +2155,8 @@ msgstr ""
 #. type: Plain text
 #: man-pages/man7/mq_overview.7:357
 msgid ""
-"For a discussion of the interaction of System V IPC objects and IPC "
-"namespaces, see B<namespaces>(7)."
+"For a discussion of the interaction of POSIX message queue objects and IPC "
+"namespaces, see B<ipc_namespaces>(7)."
 msgstr ""
 
 #. type: Plain text
@@ -4021,66 +4021,58 @@ msgid ""
 " patches are submitted inline."
 msgstr ""
 
-#. type: Plain text
-#: man-pages/man7/man-pages.7:109
-msgid ""
-"New sentences should be started on new lines.  This makes it easier to see "
-"the effect of patches, which often operate at the level of individual "
-"sentences."
-msgstr ""
-
 #. type: SS
-#: man-pages/man7/man-pages.7:109
+#: man-pages/man7/man-pages.7:105
 #, no-wrap
 msgid "Title line"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:113
+#: man-pages/man7/man-pages.7:109
 msgid "The first command in a man page should be a B<TH> command:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:117
+#: man-pages/man7/man-pages.7:113
 msgid "B<\\&.TH> I<title section date source manual>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:120
+#: man-pages/man7/man-pages.7:116
 msgid "where:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:121
+#: man-pages/man7/man-pages.7:117
 #, no-wrap
 msgid "I<title>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:125
+#: man-pages/man7/man-pages.7:121
 msgid "The title of the man page, written in all caps (e.g., I<MAN-PAGES>)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:125
+#: man-pages/man7/man-pages.7:121
 #, no-wrap
 msgid "I<section>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:129
+#: man-pages/man7/man-pages.7:125
 msgid ""
 "The section number in which the man page should be placed (e.g., I<7>)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:129
+#: man-pages/man7/man-pages.7:125
 #, no-wrap
 msgid "I<date>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:138
+#: man-pages/man7/man-pages.7:134
 msgid ""
 "The date of the last nontrivial change that was made to the man page.  "
 "(Within the I<man-pages> project, the necessary updates to these timestamps "
@@ -4089,25 +4081,25 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:138
+#: man-pages/man7/man-pages.7:134
 #, no-wrap
 msgid "I<source>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:141
+#: man-pages/man7/man-pages.7:137
 msgid "The source of the command, function, or system call."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:145
+#: man-pages/man7/man-pages.7:141
 msgid ""
 "For those few I<man-pages> pages in Sections 1 and 8, probably you just want"
 " to write I<GNU>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:153
+#: man-pages/man7/man-pages.7:149
 msgid ""
 "For system calls, just write I<Linux>.  (An earlier practice was to write "
 "the version number of the kernel from which the manual page was being "
@@ -4117,43 +4109,43 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:158
+#: man-pages/man7/man-pages.7:154
 msgid ""
 "For library calls that are part of glibc or one of the other common GNU "
 "libraries, just use I<GNU C Library>, I<GNU>, or an empty string."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:161
+#: man-pages/man7/man-pages.7:157
 msgid "For Section 4 pages, use I<Linux>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:164
+#: man-pages/man7/man-pages.7:160
 msgid "In cases of doubt, just write I<Linux>, or I<GNU>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:164
+#: man-pages/man7/man-pages.7:160
 #, no-wrap
 msgid "I<manual>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:169
+#: man-pages/man7/man-pages.7:165
 msgid ""
 "The title of the manual (e.g., for Section 2 and 3 pages in the I<man-pages>"
 " package, use I<Linux Programmer's Manual>)."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/man-pages.7:170
+#: man-pages/man7/man-pages.7:166
 #, no-wrap
 msgid "Sections within a manual page"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:177
+#: man-pages/man7/man-pages.7:173
 msgid ""
 "The list below shows conventional or suggested sections.  Most manual pages "
 "should include at least the B<highlighted> sections.  Arrange a new manual "
@@ -4170,7 +4162,7 @@ msgstr ""
 #.  AUTHORS sections are discouraged
 #.  AUTHORS             [Discouraged]
 #. type: Plain text
-#: man-pages/man7/man-pages.7:206
+#: man-pages/man7/man-pages.7:202
 #, no-wrap
 msgid ""
 "B<NAME>\n"
@@ -4193,7 +4185,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:217
+#: man-pages/man7/man-pages.7:213
 msgid ""
 "I<Where a traditional heading would apply>, I<please use it>; this kind of "
 "consistency can make the information easier to understand.  If you must, you"
@@ -4204,24 +4196,24 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:220
+#: man-pages/man7/man-pages.7:216
 msgid ""
 "The following list elaborates on the contents of each of the above sections."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:220
+#: man-pages/man7/man-pages.7:216
 #, no-wrap
 msgid "B<NAME>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:223
+#: man-pages/man7/man-pages.7:219
 msgid "The name of this manual page."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:232
+#: man-pages/man7/man-pages.7:228
 msgid ""
 "See B<man>(7)  for important details of the line(s) that should follow the "
 "B<.SH NAME> command.  All words in this line (including the word immediately"
@@ -4230,18 +4222,18 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:232
+#: man-pages/man7/man-pages.7:228
 #, no-wrap
 msgid "B<SYNOPSIS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:235
+#: man-pages/man7/man-pages.7:231
 msgid "A brief summary of the command or function's interface."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:245
+#: man-pages/man7/man-pages.7:241
 msgid ""
 "For commands, this shows the syntax of the command and its arguments "
 "(including options); boldface is used for as-is text and italics are used to"
@@ -4253,7 +4245,7 @@ msgstr ""
 
 #.  FIXME . Say something here about compiler options
 #. type: Plain text
-#: man-pages/man7/man-pages.7:251
+#: man-pages/man7/man-pages.7:247
 msgid ""
 "Where a feature test macro must be defined in order to obtain the "
 "declaration of a function (or a variable) from a header file, then the "
@@ -4261,29 +4253,29 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:251
+#: man-pages/man7/man-pages.7:247
 #, no-wrap
 msgid "B<CONFIGURATION>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:254
+#: man-pages/man7/man-pages.7:250
 msgid "Configuration details for a device."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:256
+#: man-pages/man7/man-pages.7:252
 msgid "This section normally appears only in Section 4 pages."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:256
+#: man-pages/man7/man-pages.7:252
 #, no-wrap
 msgid "B<DESCRIPTION>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:259
+#: man-pages/man7/man-pages.7:255
 msgid "An explanation of what the program, function, or format does."
 msgstr ""
 
@@ -4294,7 +4286,7 @@ msgstr ""
 #.  .B DESCRIPTION
 #.  section).
 #. type: Plain text
-#: man-pages/man7/man-pages.7:274
+#: man-pages/man7/man-pages.7:270
 msgid ""
 "Discuss how it interacts with files and standard input, and what it produces"
 " on standard output or standard error.  Omit internals and implementation "
@@ -4304,7 +4296,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:282
+#: man-pages/man7/man-pages.7:278
 msgid ""
 "When describing new behavior or new flags for a system call or library "
 "function, be careful to note the kernel or C library version that introduced"
@@ -4314,18 +4306,18 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:283
+#: man-pages/man7/man-pages.7:279
 #, no-wrap
 msgid "B<XYZ_FLAG> (since Linux 3.7)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:286
+#: man-pages/man7/man-pages.7:282
 msgid "Description of flag..."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:291
+#: man-pages/man7/man-pages.7:287
 msgid ""
 "Including version information is especially useful to users who are "
 "constrained to using older kernel or C library versions (which is typical in"
@@ -4333,44 +4325,44 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:291
+#: man-pages/man7/man-pages.7:287
 #, no-wrap
 msgid "B<OPTIONS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:295
+#: man-pages/man7/man-pages.7:291
 msgid ""
 "A description of the command-line options accepted by a program and how they"
 " change its behavior."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:300 man-pages/man7/man-pages.7:306
+#: man-pages/man7/man-pages.7:296 man-pages/man7/man-pages.7:302
 msgid "This section should appear only for Section 1 and 8 manual pages."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:300
+#: man-pages/man7/man-pages.7:296
 #, no-wrap
 msgid "B<EXIT STATUS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:304
+#: man-pages/man7/man-pages.7:300
 msgid ""
 "A list of the possible exit status values of a program and the conditions "
 "that cause these values to be returned."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:306
+#: man-pages/man7/man-pages.7:302
 #, no-wrap
 msgid "B<RETURN VALUE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:311
+#: man-pages/man7/man-pages.7:307
 msgid ""
 "For Section 2 and 3 pages, this section gives a list of the values the "
 "library routine will return to the caller and the conditions that cause "
@@ -4378,13 +4370,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:311
+#: man-pages/man7/man-pages.7:307
 #, no-wrap
 msgid "B<ERRORS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:318
+#: man-pages/man7/man-pages.7:314
 msgid ""
 "For Section 2 and 3 manual pages, this is a list of the values that may be "
 "placed in I<errno> in the event of an error, along with information about "
@@ -4392,7 +4384,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:326
+#: man-pages/man7/man-pages.7:322
 msgid ""
 "Where several different conditions produce the same error, the preferred "
 "approach is to create separate list entries (with duplicate error names) for"
@@ -4403,31 +4395,31 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:328
+#: man-pages/man7/man-pages.7:324
 msgid "I<The error list should be in alphabetical order>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:328
+#: man-pages/man7/man-pages.7:324
 #, no-wrap
 msgid "B<ENVIRONMENT>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:332
+#: man-pages/man7/man-pages.7:328
 msgid ""
 "A list of all environment variables that affect the program or function and "
 "how they affect it."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:332
+#: man-pages/man7/man-pages.7:328
 #, no-wrap
 msgid "B<FILES>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:337
+#: man-pages/man7/man-pages.7:333
 msgid ""
 "A list of the files the program or function uses, such as configuration "
 "files, startup files, and files the program directly operates on."
@@ -4458,7 +4450,7 @@ msgstr ""
 #.  section).
 #.  However, please include security information somewhere!
 #. type: Plain text
-#: man-pages/man7/man-pages.7:370
+#: man-pages/man7/man-pages.7:366
 msgid ""
 "Give the full pathname of these files, and use the installation process to "
 "modify the directory part to match user preferences.  For many programs, the"
@@ -4467,33 +4459,33 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:370
+#: man-pages/man7/man-pages.7:366
 #, no-wrap
 msgid "B<ATTRIBUTES>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:376
+#: man-pages/man7/man-pages.7:372
 msgid ""
 "A summary of various attributes of the function(s) documented on this page."
 "  See B<attributes>(7)  for further details."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:376
+#: man-pages/man7/man-pages.7:372
 #, no-wrap
 msgid "B<VERSIONS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:381
+#: man-pages/man7/man-pages.7:377
 msgid ""
 "A brief summary of the Linux kernel or glibc versions where a system call or"
 " library function appeared, or changed significantly in its operation."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:394
+#: man-pages/man7/man-pages.7:390
 msgid ""
 "As a general rule, every new interface should include a VERSIONS section in "
 "its manual page.  Unfortunately, many existing manual pages don't include "
@@ -4506,34 +4498,34 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:399
+#: man-pages/man7/man-pages.7:395
 msgid ""
 "The B<syscalls>(2)  manual page also provides information about kernel "
 "versions in which various system calls first appeared."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:399
+#: man-pages/man7/man-pages.7:395
 #, no-wrap
 msgid "B<CONFORMING TO>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:403
+#: man-pages/man7/man-pages.7:399
 msgid ""
 "A description of any standards or conventions that relate to the function or"
 " command described by the manual page."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:407
+#: man-pages/man7/man-pages.7:403
 msgid ""
 "The preferred terms to use for the various standards are listed as headings "
 "in B<standards>(7)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:416
+#: man-pages/man7/man-pages.7:412
 msgid ""
 "For a page in Section 2 or 3, this section should note the POSIX.1 "
 "version(s) that the call conforms to, and also whether the call is specified"
@@ -4543,39 +4535,39 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:420
+#: man-pages/man7/man-pages.7:416
 msgid ""
 "If the call is not governed by any standards but commonly exists on other "
 "systems, note them.  If the call is Linux-specific, note this."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:424
+#: man-pages/man7/man-pages.7:420
 msgid ""
 "If this section consists of just a list of standards (which it commonly "
 "does), terminate the list with a period (\\(aq.\\(aq)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:424
+#: man-pages/man7/man-pages.7:420
 #, no-wrap
 msgid "B<NOTES>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:427
+#: man-pages/man7/man-pages.7:423
 msgid "Miscellaneous notes."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:430
+#: man-pages/man7/man-pages.7:426
 msgid ""
 "For Section 2 and 3 man pages you may find it useful to include subsections "
 "(B<SS>) named I<Linux Notes> and I<Glibc Notes>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:436
+#: man-pages/man7/man-pages.7:432
 msgid ""
 "In Section 2, use the heading I<C library/kernel differences> to mark off "
 "notes that describe the differences (if any) between the C library wrapper "
@@ -4584,50 +4576,50 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:436
+#: man-pages/man7/man-pages.7:432
 #, no-wrap
 msgid "B<BUGS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:440
+#: man-pages/man7/man-pages.7:436
 msgid ""
 "A list of limitations, known defects or inconveniences, and other "
 "questionable activities."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:440
+#: man-pages/man7/man-pages.7:436
 #, no-wrap
 msgid "B<EXAMPLE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:444
+#: man-pages/man7/man-pages.7:440
 msgid ""
 "One or more examples demonstrating how this function, file or command is "
 "used."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:447
+#: man-pages/man7/man-pages.7:443
 msgid ""
 "For details on writing example programs, see I<Example programs> below."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:447
+#: man-pages/man7/man-pages.7:443
 #, no-wrap
 msgid "B<AUTHORS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:450
+#: man-pages/man7/man-pages.7:446
 msgid "A list of authors of the documentation or program."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:458
+#: man-pages/man7/man-pages.7:454
 msgid ""
 "B<Use of an AUTHORS section is strongly discouraged>.  Generally, it is "
 "better not to clutter every page with a list of (over time potentially "
@@ -4638,27 +4630,27 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/man-pages.7:458
+#: man-pages/man7/man-pages.7:454
 #, no-wrap
 msgid "B<SEE ALSO>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:462
+#: man-pages/man7/man-pages.7:458
 msgid ""
 "A comma-separated list of related man pages, possibly followed by other "
 "related pages or documents."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:466
+#: man-pages/man7/man-pages.7:462
 msgid ""
 "The list should be ordered by section number and then alphabetically by "
 "name.  Do not terminate this list with a period."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:477
+#: man-pages/man7/man-pages.7:473
 msgid ""
 "Where the SEE ALSO list contains many long manual page names, to improve the"
 " visual result of the output, it may be useful to employ the I<.ad l> (don't"
@@ -4668,7 +4660,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:482
+#: man-pages/man7/man-pages.7:478
 msgid ""
 "Given the distributed, autonomous nature of FOSS projects and their "
 "documentation, it is sometimes necessary\\(emand in many cases "
@@ -4677,13 +4669,13 @@ msgid ""
 msgstr ""
 
 #. type: SH
-#: man-pages/man7/man-pages.7:482
+#: man-pages/man7/man-pages.7:478
 #, no-wrap
 msgid "STYLE GUIDE"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:489
+#: man-pages/man7/man-pages.7:485
 msgid ""
 "The following subsections describe the preferred style for the I<man-pages> "
 "project.  For details not covered below, the Chicago Manual of Style is "
@@ -4692,13 +4684,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/man-pages.7:489
+#: man-pages/man7/man-pages.7:485
 #, no-wrap
 msgid "Use of gender-neutral language"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:495
+#: man-pages/man7/man-pages.7:491
 msgid ""
 "As far as possible, use gender-neutral language in the text of man pages.  "
 "Use of \"they\" (\"them\", \"themself\", \"their\") as a gender-neutral "
@@ -4706,13 +4698,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/man-pages.7:495
+#: man-pages/man7/man-pages.7:491
 #, no-wrap
 msgid "Formatting conventions for manual pages describing commands"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:500
+#: man-pages/man7/man-pages.7:496
 msgid ""
 "For manual pages that describe a command (typically in Sections 1 and 8), "
 "the arguments are always specified using italics, I<even in the SYNOPSIS "
@@ -4720,20 +4712,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:504
+#: man-pages/man7/man-pages.7:500
 msgid ""
 "The name of the command, and its options, should always be formatted in "
 "bold."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/man-pages.7:504
+#: man-pages/man7/man-pages.7:500
 #, no-wrap
 msgid "Formatting conventions for manual pages describing functions"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:509
+#: man-pages/man7/man-pages.7:505
 msgid ""
 "For manual pages that describe functions (typically in Sections 2 and 3), "
 "the arguments are always specified using italics, I<even in the SYNOPSIS "
@@ -4741,17 +4733,17 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:511
+#: man-pages/man7/man-pages.7:507
 msgid "B< int myfunction(int >I<argc>B<, char **>I<argv>B<);>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:513
+#: man-pages/man7/man-pages.7:509
 msgid "Variable names should, like argument names, be specified in italics."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:522
+#: man-pages/man7/man-pages.7:518
 msgid ""
 "Any reference to the subject of the current manual page should be written "
 "with the name in bold followed by a pair of parentheses in Roman (normal) "
@@ -4761,26 +4753,50 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:525
+#: man-pages/man7/man-pages.7:521
 #, no-wrap
 msgid "    .BR fcntl ()\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:530
+#: man-pages/man7/man-pages.7:526
 msgid ""
 "(Using this format, rather than the use of \"\\efB...\\efP()\" makes it "
 "easier to write tools that parse man page source files.)"
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/man-pages.7:530
+#: man-pages/man7/man-pages.7:526
+#, no-wrap
+msgid "Use semantic newlines"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/man-pages.7:535
+msgid ""
+"In the source of a manual page, new sentences should be started on new "
+"lines, and long sentences should split into lines at clause breaks (commas, "
+"semicolons, colons, and so on).  This convention, sometimes known as "
+"\"semantic newlines\", makes it easier to see the effect of patches, which "
+"often operate at the level of individual sentences or sentence clauses."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/man-pages.7:535
 #, no-wrap
 msgid "Formatting conventions (general)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:540
+#: man-pages/man7/man-pages.7:545
+msgid ""
+"Paragraphs should be separated by suitable markers (usually either I<.PP> or"
+" I<.IP>).  Do I<not> separate paragraphs using blank lines, as this results "
+"in poor rendering in some output formats (such as PostScript and PDF)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/man-pages.7:555
 msgid ""
 "Filenames (whether pathnames, or references to header files)  are always in "
 "italics (e.g., I<E<lt>stdio.hE<gt>>), except in the SYNOPSIS section, where "
@@ -4791,34 +4807,34 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:544
+#: man-pages/man7/man-pages.7:559
 msgid ""
 "Special macros, which are usually in uppercase, are in bold (e.g., "
 "B<MAXINT>).  Exception: don't boldface NULL."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:549
+#: man-pages/man7/man-pages.7:564
 msgid ""
 "When enumerating a list of error codes, the codes are in bold (this list "
 "usually uses the B<\\&.TP> macro)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:553
+#: man-pages/man7/man-pages.7:568
 msgid ""
 "Complete commands should, if long, be written as an indented line on their "
 "own, with a blank line before and after the command, for example"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:557
+#: man-pages/man7/man-pages.7:572
 #, no-wrap
 msgid "man 7 man-pages\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:567
+#: man-pages/man7/man-pages.7:582
 msgid ""
 "If the command is short, then it can be included inline in the text, in "
 "italic format, for example, I<man 7 man-pages>.  In this case, it may be "
@@ -4827,7 +4843,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:572
+#: man-pages/man7/man-pages.7:587
 msgid ""
 "Expressions, if not written on a separate indented line, should be specified"
 " in italics.  Again, the use of nonbreaking spaces may be appropriate if the"
@@ -4835,14 +4851,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:574
+#: man-pages/man7/man-pages.7:589
 msgid ""
 "When showing example shell sessions, user input should be formatted in bold,"
 " for example"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:579
+#: man-pages/man7/man-pages.7:594
 #, no-wrap
 msgid ""
 "$ B<date>\n"
@@ -4850,7 +4866,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:591
+#: man-pages/man7/man-pages.7:606
 msgid ""
 "Any reference to another man page should be written with the name in bold, "
 "I<always> followed by the section number, formatted in Roman (normal) font, "
@@ -4859,33 +4875,33 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:594
+#: man-pages/man7/man-pages.7:609
 #, no-wrap
 msgid "    .BR intro (2)\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:599
+#: man-pages/man7/man-pages.7:614
 msgid ""
 "(Including the section number in cross references lets tools like "
 "B<man2html>(1)  create properly hyperlinked pages.)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:603
+#: man-pages/man7/man-pages.7:618
 msgid ""
 "Control characters should be written in bold face, with no quotes; for "
 "example, B<^X>."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/man-pages.7:603
+#: man-pages/man7/man-pages.7:618
 #, no-wrap
 msgid "Spelling"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:609
+#: man-pages/man7/man-pages.7:624
 msgid ""
 "Starting with release 2.59, I<man-pages> follows American spelling "
 "conventions (previously, there was a random mix of British and American "
@@ -4894,14 +4910,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:612
+#: man-pages/man7/man-pages.7:627
 msgid ""
 "Aside from the well-known spelling differences, there are a few other "
 "subtleties to watch for:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:616
+#: man-pages/man7/man-pages.7:631
 msgid ""
 "American English tends to use the forms \"backward\", \"upward\", "
 "\"toward\", and so on rather than the British forms \"backwards\", "
@@ -4909,13 +4925,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/man-pages.7:616
+#: man-pages/man7/man-pages.7:631
 #, no-wrap
 msgid "BSD version numbers"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:624
+#: man-pages/man7/man-pages.7:639
 msgid ""
 "The classical scheme for writing BSD version numbers is I<x.yBSD>, where "
 "I<x.y> is the version number (e.g., 4.2BSD).  Avoid forms such as I<BSD "
@@ -4923,13 +4939,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/man-pages.7:624
+#: man-pages/man7/man-pages.7:639
 #, no-wrap
 msgid "Capitalization"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:630
+#: man-pages/man7/man-pages.7:645
 msgid ""
 "In subsection (\"SS\") headings, capitalize the first word in the heading, "
 "but otherwise use lowercase, except where English usage (e.g., proper nouns)"
@@ -4938,19 +4954,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:633
+#: man-pages/man7/man-pages.7:648
 #, no-wrap
 msgid "    .SS Unicode under Linux\n"
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/man-pages.7:635
+#: man-pages/man7/man-pages.7:650
 #, no-wrap
 msgid "Indentation of structure definitions, shell session logs, and so on"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:650
+#: man-pages/man7/man-pages.7:665
 msgid ""
 "When structure definitions, shell session logs, and so on are included in "
 "running text, indent them by 4 spaces (i.e., a block enclosed by I<.in\\ "
@@ -4960,7 +4976,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:664
+#: man-pages/man7/man-pages.7:679
 #, no-wrap
 msgid ""
 "    .PP\n"
@@ -4977,182 +4993,182 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/man-pages.7:666
+#: man-pages/man7/man-pages.7:681
 #, no-wrap
 msgid "Preferred terms"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:669
+#: man-pages/man7/man-pages.7:684
 msgid ""
 "The following table lists some preferred terms to use in man pages, mainly "
 "to ensure consistency across pages."
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:673
+#: man-pages/man7/man-pages.7:688
 #, no-wrap
 msgid "Term"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:673
+#: man-pages/man7/man-pages.7:688
 #, no-wrap
 msgid "Avoid using"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:673 man-pages/man7/man-pages.7:738
+#: man-pages/man7/man-pages.7:688 man-pages/man7/man-pages.7:753
 #, no-wrap
 msgid "Notes"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:675
+#: man-pages/man7/man-pages.7:690
 #, no-wrap
 msgid "bit mask"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:675
+#: man-pages/man7/man-pages.7:690
 #, no-wrap
 msgid "bitmask"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:676
+#: man-pages/man7/man-pages.7:691
 #, no-wrap
 msgid "built-in"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:676
+#: man-pages/man7/man-pages.7:691
 #, no-wrap
 msgid "builtin"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:677
+#: man-pages/man7/man-pages.7:692
 #, no-wrap
 msgid "Epoch"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:677
+#: man-pages/man7/man-pages.7:692
 #, no-wrap
 msgid "epoch"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:679
+#: man-pages/man7/man-pages.7:694
 #, no-wrap
 msgid "For the UNIX Epoch (00:00:00, 1 Jan 1970 UTC)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:680
+#: man-pages/man7/man-pages.7:695
 #, no-wrap
 msgid "filename"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:680
+#: man-pages/man7/man-pages.7:695
 #, no-wrap
 msgid "file name"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:681
+#: man-pages/man7/man-pages.7:696
 #, no-wrap
 msgid "filesystem"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:681
+#: man-pages/man7/man-pages.7:696
 #, no-wrap
 msgid "file system"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:682
+#: man-pages/man7/man-pages.7:697
 #, no-wrap
 msgid "hostname"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:682
+#: man-pages/man7/man-pages.7:697
 #, no-wrap
 msgid "host name"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:683
+#: man-pages/man7/man-pages.7:698
 #, no-wrap
 msgid "inode"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:683
+#: man-pages/man7/man-pages.7:698
 #, no-wrap
 msgid "i-node"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:684
+#: man-pages/man7/man-pages.7:699
 #, no-wrap
 msgid "lowercase"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:684
+#: man-pages/man7/man-pages.7:699
 #, no-wrap
 msgid "lower case, lower-case"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:685
+#: man-pages/man7/man-pages.7:700
 #, no-wrap
 msgid "nonzero"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:685
+#: man-pages/man7/man-pages.7:700
 #, no-wrap
 msgid "non-zero"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:686
+#: man-pages/man7/man-pages.7:701
 #, no-wrap
 msgid "pathname"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:686
+#: man-pages/man7/man-pages.7:701
 #, no-wrap
 msgid "path name"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:687 man-pages/man7/man-pages.7:755
+#: man-pages/man7/man-pages.7:702 man-pages/man7/man-pages.7:770
 #, no-wrap
 msgid "pseudoterminal"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:687
+#: man-pages/man7/man-pages.7:702
 #, no-wrap
 msgid "pseudo-terminal"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:688
+#: man-pages/man7/man-pages.7:703
 #, no-wrap
 msgid "privileged port"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:691
+#: man-pages/man7/man-pages.7:706
 #, no-wrap
 msgid ""
 "reserved port,\n"
@@ -5160,13 +5176,13 @@ msgid ""
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:692
+#: man-pages/man7/man-pages.7:707
 #, no-wrap
 msgid "real-time"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:695
+#: man-pages/man7/man-pages.7:710
 #, no-wrap
 msgid ""
 "realtime,\n"
@@ -5174,25 +5190,25 @@ msgid ""
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:696
+#: man-pages/man7/man-pages.7:711
 #, no-wrap
 msgid "run time"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:696
+#: man-pages/man7/man-pages.7:711
 #, no-wrap
 msgid "runtime"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:697
+#: man-pages/man7/man-pages.7:712
 #, no-wrap
 msgid "saved set-group-ID"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:700
+#: man-pages/man7/man-pages.7:715
 #, no-wrap
 msgid ""
 "saved group ID,\n"
@@ -5200,13 +5216,13 @@ msgid ""
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:701
+#: man-pages/man7/man-pages.7:716
 #, no-wrap
 msgid "saved set-user-ID"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:704
+#: man-pages/man7/man-pages.7:719
 #, no-wrap
 msgid ""
 "saved user ID,\n"
@@ -5214,37 +5230,37 @@ msgid ""
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:705
+#: man-pages/man7/man-pages.7:720
 #, no-wrap
 msgid "set-group-ID"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:705
+#: man-pages/man7/man-pages.7:720
 #, no-wrap
 msgid "set-GID, setgid"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:706
+#: man-pages/man7/man-pages.7:721
 #, no-wrap
 msgid "set-user-ID"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:706
+#: man-pages/man7/man-pages.7:721
 #, no-wrap
 msgid "set-UID, setuid"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:707
+#: man-pages/man7/man-pages.7:722
 #, no-wrap
 msgid "superuser"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:710
+#: man-pages/man7/man-pages.7:725
 #, no-wrap
 msgid ""
 "super user,\n"
@@ -5252,13 +5268,13 @@ msgid ""
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:711
+#: man-pages/man7/man-pages.7:726
 #, no-wrap
 msgid "superblock"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:714
+#: man-pages/man7/man-pages.7:729
 #, no-wrap
 msgid ""
 "super block,\n"
@@ -5266,295 +5282,295 @@ msgid ""
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:715
+#: man-pages/man7/man-pages.7:730
 #, no-wrap
 msgid "timestamp"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:715
+#: man-pages/man7/man-pages.7:730
 #, no-wrap
 msgid "time stamp"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:716
+#: man-pages/man7/man-pages.7:731
 #, no-wrap
 msgid "timezone"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:716
+#: man-pages/man7/man-pages.7:731
 #, no-wrap
 msgid "time zone"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:717
+#: man-pages/man7/man-pages.7:732
 #, no-wrap
 msgid "uppercase"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:717
+#: man-pages/man7/man-pages.7:732
 #, no-wrap
 msgid "upper case, upper-case"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:718
+#: man-pages/man7/man-pages.7:733
 #, no-wrap
 msgid "usable"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:718
+#: man-pages/man7/man-pages.7:733
 #, no-wrap
 msgid "useable"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:719
+#: man-pages/man7/man-pages.7:734
 #, no-wrap
 msgid "user space"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:719
+#: man-pages/man7/man-pages.7:734
 #, no-wrap
 msgid "userspace"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:720
+#: man-pages/man7/man-pages.7:735
 #, no-wrap
 msgid "username"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:720
+#: man-pages/man7/man-pages.7:735
 #, no-wrap
 msgid "user name"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:721
+#: man-pages/man7/man-pages.7:736
 #, no-wrap
 msgid "x86-64"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:721
+#: man-pages/man7/man-pages.7:736
 #, no-wrap
 msgid "x86_64"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:723
+#: man-pages/man7/man-pages.7:738
 #, no-wrap
 msgid "Except if referring to result of \"uname\\ -m\" or similar"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:724
+#: man-pages/man7/man-pages.7:739
 #, no-wrap
 msgid "zeros"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:724
+#: man-pages/man7/man-pages.7:739
 #, no-wrap
 msgid "zeroes"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:730
+#: man-pages/man7/man-pages.7:745
 msgid "See also the discussion I<Hyphenation of attributive compounds> below."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/man-pages.7:730
+#: man-pages/man7/man-pages.7:745
 #, no-wrap
 msgid "Terms to avoid"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:734
+#: man-pages/man7/man-pages.7:749
 msgid ""
 "The following table lists some terms to avoid using in man pages, along with"
 " some suggested alternatives, mainly to ensure consistency across pages."
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:738
+#: man-pages/man7/man-pages.7:753
 #, no-wrap
 msgid "Avoid"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:738
+#: man-pages/man7/man-pages.7:753
 #, no-wrap
 msgid "Use instead"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:740
+#: man-pages/man7/man-pages.7:755
 #, no-wrap
 msgid "32bit"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:740
+#: man-pages/man7/man-pages.7:755
 #, no-wrap
 msgid "32-bit"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:742
+#: man-pages/man7/man-pages.7:757
 #, no-wrap
 msgid "same for 8-bit, 16-bit, etc."
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:743
+#: man-pages/man7/man-pages.7:758
 #, no-wrap
 msgid "current process"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:743
+#: man-pages/man7/man-pages.7:758
 #, no-wrap
 msgid "calling process"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:745
+#: man-pages/man7/man-pages.7:760
 #, no-wrap
 msgid "A common mistake made by kernel programmers when writing man pages"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:746
+#: man-pages/man7/man-pages.7:761
 #, no-wrap
 msgid "manpage"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:748
+#: man-pages/man7/man-pages.7:763
 #, no-wrap
 msgid "man page, manual page"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:749
+#: man-pages/man7/man-pages.7:764
 #, no-wrap
 msgid "minus infinity"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:749
+#: man-pages/man7/man-pages.7:764
 #, no-wrap
 msgid "negative infinity"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:750
+#: man-pages/man7/man-pages.7:765
 #, no-wrap
 msgid "non-root"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:750 man-pages/man7/man-pages.7:751
+#: man-pages/man7/man-pages.7:765 man-pages/man7/man-pages.7:766
 #, no-wrap
 msgid "unprivileged user"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:751
+#: man-pages/man7/man-pages.7:766
 #, no-wrap
 msgid "non-superuser"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:752
+#: man-pages/man7/man-pages.7:767
 #, no-wrap
 msgid "nonprivileged"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:752
+#: man-pages/man7/man-pages.7:767
 #, no-wrap
 msgid "unprivileged"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:753
+#: man-pages/man7/man-pages.7:768
 #, no-wrap
 msgid "OS"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:753
+#: man-pages/man7/man-pages.7:768
 #, no-wrap
 msgid "operating system"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:754
+#: man-pages/man7/man-pages.7:769
 #, no-wrap
 msgid "plus infinity"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:754
+#: man-pages/man7/man-pages.7:769
 #, no-wrap
 msgid "positive infinity"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:755
+#: man-pages/man7/man-pages.7:770
 #, no-wrap
 msgid "pty"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:756
+#: man-pages/man7/man-pages.7:771
 #, no-wrap
 msgid "tty"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:756
+#: man-pages/man7/man-pages.7:771
 #, no-wrap
 msgid "terminal"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:757
+#: man-pages/man7/man-pages.7:772
 #, no-wrap
 msgid "Unices"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:757 man-pages/man7/man-pages.7:758
+#: man-pages/man7/man-pages.7:772 man-pages/man7/man-pages.7:773
 #, no-wrap
 msgid "UNIX systems"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/man-pages.7:758
+#: man-pages/man7/man-pages.7:773
 #, no-wrap
 msgid "Unixes"
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/man-pages.7:760
+#: man-pages/man7/man-pages.7:775
 #, no-wrap
 msgid "Trademarks"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:764
+#: man-pages/man7/man-pages.7:779
 msgid ""
 "Use the correct spelling and case for trademarks.  The following is a list "
 "of the correct spellings of various relevant trademarks that are sometimes "
@@ -5562,7 +5578,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:769
+#: man-pages/man7/man-pages.7:784
 #, no-wrap
 msgid ""
 "     DG/UX\n"
@@ -5572,13 +5588,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/man-pages.7:769
+#: man-pages/man7/man-pages.7:784
 #, no-wrap
 msgid "NULL, NUL, null pointer, and null character"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:781
+#: man-pages/man7/man-pages.7:796
 msgid ""
 "A I<null pointer> is a pointer that points to nothing, and is normally "
 "indicated by the constant I<NULL>.  On the other hand, I<NUL> is the I<null "
@@ -5587,14 +5603,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:784
+#: man-pages/man7/man-pages.7:799
 msgid ""
 "The preferred term for the pointer is \"null pointer\" or simply \"NULL\"; "
 "avoid writing \"NULL pointer\"."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:792
+#: man-pages/man7/man-pages.7:807
 msgid ""
 "The preferred term for the byte is \"null byte\".  Avoid writing \"NUL\", "
 "since it is too easily confused with \"NULL\".  Avoid also the terms \"zero "
@@ -5604,13 +5620,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/man-pages.7:792
+#: man-pages/man7/man-pages.7:807
 #, no-wrap
 msgid "Hyperlinks"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:800
+#: man-pages/man7/man-pages.7:815
 msgid ""
 "For hyperlinks, use the I<.UR>/I<.UE> macro pair (see B<groff_man>(7)).  "
 "This produces proper hyperlinks that can be used in a web browser, when "
@@ -5618,19 +5634,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:802
+#: man-pages/man7/man-pages.7:817
 #, no-wrap
 msgid "     BROWSER=firefox man -H pagename\n"
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/man-pages.7:802
+#: man-pages/man7/man-pages.7:817
 #, no-wrap
 msgid "Use of e.g., i.e., etc., a.k.a., and similar"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:807
+#: man-pages/man7/man-pages.7:822
 msgid ""
 "In general, the use of abbreviations such as \"e.g.\", \"i.e.\", \"etc.\", "
 "\"cf.\", and \"a.k.a.\" should be avoided, in favor of suitable full "
@@ -5639,27 +5655,27 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:811
+#: man-pages/man7/man-pages.7:826
 msgid ""
 "The only place where such abbreviations may be acceptable is in I<short> "
 "parenthetical asides (e.g., like this one)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:814
+#: man-pages/man7/man-pages.7:829
 msgid ""
 "Always include periods in such abbreviations, as shown here.  In addition, "
 "\"e.g.\" and \"i.e.\" should always be followed by a comma."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/man-pages.7:814
+#: man-pages/man7/man-pages.7:829
 #, no-wrap
 msgid "Em-dashes"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:822
+#: man-pages/man7/man-pages.7:837
 msgid ""
 "The way to write an em-dash\\(emthe glyph that appears at either end of this"
 " subphrase\\(emin *roff is with the macro \"\\e(em\".  (On an ASCII "
@@ -5669,20 +5685,20 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/man-pages.7:822
+#: man-pages/man7/man-pages.7:837
 #, no-wrap
 msgid "Hyphenation of attributive compounds"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:825
+#: man-pages/man7/man-pages.7:840
 msgid ""
 "Compound terms should be hyphenated when used attributively (i.e., to "
 "qualify a following noun). Some examples:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:832
+#: man-pages/man7/man-pages.7:847
 #, no-wrap
 msgid ""
 "    32-bit value\n"
@@ -5694,13 +5710,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/man-pages.7:832
+#: man-pages/man7/man-pages.7:847
 #, no-wrap
 msgid "Hyphenation with multi, non, pre, re, sub, and so on"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:838
+#: man-pages/man7/man-pages.7:853
 msgid ""
 "The general tendency in modern English is not to hyphenate after prefixes "
 "such as \"multi\", \"non\", \"pre\", \"re\", \"sub\", and so on.  Manual "
@@ -5710,7 +5726,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:859
+#: man-pages/man7/man-pages.7:874
 #, no-wrap
 msgid ""
 "    interprocess\n"
@@ -5736,7 +5752,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:863
+#: man-pages/man7/man-pages.7:878
 msgid ""
 "Hyphens should be retained when the prefixes are used in nonstandard English"
 " words, with trademarks, proper nouns, acronyms, or compound terms.  Some "
@@ -5744,7 +5760,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:868
+#: man-pages/man7/man-pages.7:883
 #, no-wrap
 msgid ""
 "    non-ASCII\n"
@@ -5754,20 +5770,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:871
+#: man-pages/man7/man-pages.7:886
 msgid ""
 "Finally, note that \"re-create\" and \"recreate\" are two different verbs, "
 "and the former is probably what you want."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/man-pages.7:871
+#: man-pages/man7/man-pages.7:886
 #, no-wrap
 msgid "Real minus character"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:878
+#: man-pages/man7/man-pages.7:893
 msgid ""
 "Where a real minus character is required (e.g., for numbers such as -1, for "
 "man page cross references such as B<utf-8>(7), or when writing options that "
@@ -5776,62 +5792,62 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:880
+#: man-pages/man7/man-pages.7:895
 #, no-wrap
 msgid "    \\e-\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:882
+#: man-pages/man7/man-pages.7:897
 msgid "This guideline applies also to code examples."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/man-pages.7:882
+#: man-pages/man7/man-pages.7:897
 #, no-wrap
 msgid "Character constants"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:885
+#: man-pages/man7/man-pages.7:900
 msgid ""
 "To produce single quotes that render well in both ASCII and UTF-8, use the "
 "following form for character constants in the man page source:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:887
+#: man-pages/man7/man-pages.7:902
 #, no-wrap
 msgid "    \\e(aqC\\e(aq\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:892
+#: man-pages/man7/man-pages.7:907
 msgid ""
 "where I<C> is the quoted character.  This guideline applies also to "
 "character constants used in code examples."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/man-pages.7:892
+#: man-pages/man7/man-pages.7:907
 #, no-wrap
 msgid "Example programs and shell sessions"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:896
+#: man-pages/man7/man-pages.7:911
 msgid ""
 "Manual pages may include example programs demonstrating how to use a system "
 "call or library function.  However, note the following:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:898
+#: man-pages/man7/man-pages.7:913
 msgid "Example programs should be written in C."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:904
+#: man-pages/man7/man-pages.7:919
 msgid ""
 "An example program is necessary and useful only if it demonstrates something"
 " beyond what can easily be provided in a textual description of the "
@@ -5840,28 +5856,28 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:907
+#: man-pages/man7/man-pages.7:922
 msgid ""
 "Example programs should be fairly short (preferably less than 100 lines; "
 "ideally less than 50 lines)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:910
+#: man-pages/man7/man-pages.7:925
 msgid ""
 "Example programs should do error checking after system calls and library "
 "function calls."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:913
+#: man-pages/man7/man-pages.7:928
 msgid ""
 "Example programs should be complete, and compile without warnings when "
 "compiled with I<cc\\ -Wall>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:918
+#: man-pages/man7/man-pages.7:933
 msgid ""
 "Where possible and appropriate, example programs should allow "
 "experimentation, by varying their behavior based on inputs (ideally from "
@@ -5869,7 +5885,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:924
+#: man-pages/man7/man-pages.7:939
 msgid ""
 "Example programs should be laid out according to Kernighan and Ritchie "
 "style, with 4-space indents.  (Avoid the use of TAB characters in source "
@@ -5878,19 +5894,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:926
+#: man-pages/man7/man-pages.7:941
 #, no-wrap
 msgid "    indent -npro -kr -i4 -ts4 -sob -l72 -ss -nut -psl prog.c\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:928
+#: man-pages/man7/man-pages.7:943
 msgid ""
 "For consistency, all example programs should terminate using either of:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:931
+#: man-pages/man7/man-pages.7:946
 #, no-wrap
 msgid ""
 "     exit(EXIT_SUCCESS);\n"
@@ -5898,12 +5914,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:933
+#: man-pages/man7/man-pages.7:948
 msgid "Avoid using the following forms to terminate a program:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:937
+#: man-pages/man7/man-pages.7:952
 #, no-wrap
 msgid ""
 "    exit(0);\n"
@@ -5912,62 +5928,62 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:943
+#: man-pages/man7/man-pages.7:958
 msgid ""
 "If there is extensive explanatory text before the program source code, mark "
 "off the source code with a subsection heading I<Program source>, as in:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:945
+#: man-pages/man7/man-pages.7:960
 msgid ".SS Program source"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:947
+#: man-pages/man7/man-pages.7:962
 msgid "Always do this if the explanatory text includes a shell session log."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:950
+#: man-pages/man7/man-pages.7:965
 msgid ""
 "If you include a shell session log demonstrating the use of a program or "
 "other system feature:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:952
+#: man-pages/man7/man-pages.7:967
 msgid "Place the session log above the source code listing"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:954
+#: man-pages/man7/man-pages.7:969
 msgid "Indent the session log by four spaces."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:957
+#: man-pages/man7/man-pages.7:972
 msgid ""
 "Boldface the user input text, to distinguish it from output produced by the "
 "system."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:962
+#: man-pages/man7/man-pages.7:977
 msgid ""
 "For some examples of what example programs should look like, see B<wait>(2)"
 "  and B<pipe>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:969
+#: man-pages/man7/man-pages.7:984
 msgid ""
 "For canonical examples of how man pages in the I<man-pages> package should "
 "look, see B<pipe>(2)  and B<fcntl>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/man-pages.7:976
+#: man-pages/man7/man-pages.7:991
 msgid ""
 "B<man>(1), B<man2html>(1), B<attributes>(7), B<groff>(7), B<groff_man>(7), "
 "B<man>(7), B<mdoc>(7)"
@@ -8084,8 +8100,8 @@ msgstr ""
 #. type: Plain text
 #: man-pages/man2/mmap.2:573
 msgid ""
-"I<flags> contained neither B<MAP_PRIVATE> or B<MAP_SHARED>, or contained "
-"both of these values."
+"I<flags> contained none of B<MAP_PRIVATE>, B<MAP_SHARED> or "
+"B<MAP_SHARED_VALIDATE>."
 msgstr ""
 
 #. type: TP
@@ -13150,37 +13166,40 @@ msgid ""
 " I<errno> to indicate the error."
 msgstr ""
 
+#.  commit 3140a2273009c01c27d316f35ab76a37e105fdd8
 #. type: Plain text
-#: man-pages/man2/move_pages.2:172
-msgid "Too many pages to move."
+#: man-pages/man2/move_pages.2:175
+msgid ""
+"Too many pages to move.  Since Linux 2.6.29, the kernel no longer generates "
+"this error."
 msgstr ""
 
 #.  FIXME Clarify "current cpuset" in the description of the EACCES error.
 #.  Is that the cpuset of the caller or the target?
 #. type: Plain text
-#: man-pages/man2/move_pages.2:177
+#: man-pages/man2/move_pages.2:180
 msgid "One of the target nodes is not allowed by the current cpuset."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/move_pages.2:180
+#: man-pages/man2/move_pages.2:183
 msgid "Parameter array could not be accessed."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/move_pages.2:187
+#: man-pages/man2/move_pages.2:190
 msgid ""
 "Flags other than B<MPOL_MF_MOVE> and B<MPOL_MF_MOVE_ALL> was specified or an"
 " attempt was made to migrate pages of a kernel thread."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/move_pages.2:190
+#: man-pages/man2/move_pages.2:193
 msgid "One of the target nodes is not online."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/move_pages.2:196
+#: man-pages/man2/move_pages.2:199
 msgid ""
 "No pages were found that require moving.  All pages are either already on "
 "the target node, not present, had an invalid address or could not be moved "
@@ -13188,7 +13207,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/move_pages.2:205
+#: man-pages/man2/move_pages.2:208
 msgid ""
 "The caller specified B<MPOL_MF_MOVE_ALL> without sufficient privileges "
 "(B<CAP_SYS_NICE>).  Or, the caller attempted to move pages of a process "
@@ -13197,35 +13216,35 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/move_pages.2:205
+#: man-pages/man2/move_pages.2:208
 #, no-wrap
 msgid "B<ESRCH>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/move_pages.2:208
+#: man-pages/man2/move_pages.2:211
 msgid "Process does not exist."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/move_pages.2:211
+#: man-pages/man2/move_pages.2:214
 msgid "B<move_pages>()  first appeared on Linux in version 2.6.18."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/move_pages.2:213
+#: man-pages/man2/move_pages.2:216
 msgid "This system call is Linux-specific."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/move_pages.2:216
+#: man-pages/man2/move_pages.2:219
 msgid "For information on library support, see B<numa>(7)."
 msgstr ""
 
 #.  FIXME Clarify "current cpuset".  Is that the cpuset of the caller
 #.  or the target?
 #. type: Plain text
-#: man-pages/man2/move_pages.2:227
+#: man-pages/man2/move_pages.2:230
 msgid ""
 "Use B<get_mempolicy>(2)  with the B<MPOL_F_MEMS_ALLOWED> flag to obtain the "
 "set of nodes that are allowed by the current cpuset.  Note that this "
@@ -13234,7 +13253,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/move_pages.2:237
+#: man-pages/man2/move_pages.2:240
 msgid ""
 "Use of this function may result in pages whose location (node) violates the "
 "memory policy established for the specified addresses (See B<mbind>(2))  "
@@ -13243,14 +13262,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/move_pages.2:243
+#: man-pages/man2/move_pages.2:246
 msgid ""
 "The I<E<lt>numaif.hE<gt>> header is not included with glibc, but requires "
 "installing I<libnuma-devel> or a similar package."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/move_pages.2:252
+#: man-pages/man2/move_pages.2:255
 msgid ""
 "B<get_mempolicy>(2), B<mbind>(2), B<set_mempolicy>(2), B<numa>(3), "
 "B<numa_maps>(5), B<cpuset>(7), B<numa>(7), B<migratepages>(8), "
@@ -14280,8 +14299,8 @@ msgstr ""
 msgid ""
 "Applications should be careful when mixing use of B<mprotect>()  and "
 "B<pkey_mprotect>().  On x86, when B<mprotect>()  is used with I<prot> set to"
-" B<PROT_EXEC> a pkey is may be allocated and set on the memory implicitly by"
-" the kernel, but only when the pkey was 0 previously."
+" B<PROT_EXEC> a pkey may be allocated and set on the memory implicitly by "
+"the kernel, but only when the pkey was 0 previously."
 msgstr ""
 
 #. type: Plain text

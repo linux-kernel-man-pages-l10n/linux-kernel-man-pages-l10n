@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:25+0300\n"
-"PO-Revision-Date: 2019-09-05 21:53+0300\n"
+"PO-Revision-Date: 2019-09-26 18:53+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
@@ -5862,16 +5862,18 @@ msgstr ""
 "        _BSD_SOURCE || (_XOPEN_SOURCE && _XOPEN_SOURCE\\ E<lt>\\ 500)\n"
 
 #. type: Plain text
-#: man-pages/man2/gethostname.2:72
+#: man-pages/man2/gethostname.2:73
 msgid ""
-"These system calls are used to access or to change the hostname of the "
-"current processor."
+"These system calls are used to access or to change the system hostname.  "
+"More precisely, they operate on the hostname associated with the calling "
+"process's UTS namespace."
 msgstr ""
-"Эти системные вызовы используются для доступа или изменения имени узла "
-"текущего процессора."
+"Данные системные вызовы используются для получения или изменения имени узла "
+"системы. Точнее говоря, они работают с именем узла, связанным с "
+"пространством имён UTS вызывающего процесса."
 
 #. type: Plain text
-#: man-pages/man2/gethostname.2:83
+#: man-pages/man2/gethostname.2:84
 msgid ""
 "B<sethostname>()  sets the hostname to the value given in the character "
 "array I<name>.  The I<len> argument specifies the number of bytes in "
@@ -5883,7 +5885,7 @@ msgstr ""
 "null.)"
 
 #. type: Plain text
-#: man-pages/man2/gethostname.2:95
+#: man-pages/man2/gethostname.2:96
 msgid ""
 "B<gethostname>()  returns the null-terminated hostname in the character "
 "array I<name>, which has a length of I<len> bytes.  If the null-terminated "
@@ -5899,14 +5901,14 @@ msgstr ""
 "буфер содержать завершающий байт с null."
 
 #. type: Plain text
-#: man-pages/man2/gethostname.2:105
+#: man-pages/man2/gethostname.2:106
 msgid "I<name> is an invalid address."
 msgstr "I<name> является неправильным адресом. "
 
 #.  Can't occur for gethostbyname() wrapper, since 'len' has an
 #.  unsigned type; can occur for the underlying system call.
 #. type: Plain text
-#: man-pages/man2/gethostname.2:115
+#: man-pages/man2/gethostname.2:116
 msgid ""
 "I<len> is negative or, for B<sethostname>(), I<len> is larger than the "
 "maximum allowed size."
@@ -5915,13 +5917,13 @@ msgstr ""
 "больше, чем максимально допустимое значение."
 
 #. type: TP
-#: man-pages/man2/gethostname.2:115
+#: man-pages/man2/gethostname.2:116
 #, no-wrap
 msgid "B<ENAMETOOLONG>"
 msgstr "B<ENAMETOOLONG>"
 
 #. type: Plain text
-#: man-pages/man2/gethostname.2:123
+#: man-pages/man2/gethostname.2:124
 msgid ""
 "(glibc B<gethostname>())  I<len> is smaller than the actual size.  (Before "
 "version 2.1, glibc uses B<EINVAL> for this case.)"
@@ -5930,7 +5932,7 @@ msgstr ""
 "2.1, glibc возвращала в этом случае B<EINVAL>.)"
 
 #. type: Plain text
-#: man-pages/man2/gethostname.2:131
+#: man-pages/man2/gethostname.2:132
 msgid ""
 "For B<sethostname>(), the caller did not have the B<CAP_SYS_ADMIN> "
 "capability in the user namespace associated with its UTS namespace (see "
@@ -5941,7 +5943,7 @@ msgstr ""
 "(смотрите B<namespaces>(7))."
 
 #. type: Plain text
-#: man-pages/man2/gethostname.2:137
+#: man-pages/man2/gethostname.2:138
 msgid ""
 "SVr4, 4.4BSD (these interfaces first appeared in 4.2BSD).  POSIX.1-2001 and "
 "POSIX.1-2008 specify B<gethostname>()  but not B<sethostname>()."
@@ -5950,7 +5952,7 @@ msgstr ""
 "POSIX.1-2008 определена B<gethostname>(), но нет B<sethostname>()."
 
 #. type: Plain text
-#: man-pages/man2/gethostname.2:147
+#: man-pages/man2/gethostname.2:148
 msgid ""
 "SUSv2 guarantees that \"Host names are limited to 255 bytes\".  POSIX.1 "
 "guarantees that \"Host names (not including the terminating null byte) are "
@@ -5965,7 +5967,7 @@ msgstr ""
 "предел в 8 байт)."
 
 #. type: Plain text
-#: man-pages/man2/gethostname.2:170
+#: man-pages/man2/gethostname.2:171
 msgid ""
 "The GNU C library does not employ the B<gethostname>()  system call; "
 "instead, it implements B<gethostname>()  as a library function that calls "
@@ -5986,7 +5988,7 @@ msgstr ""
 
 #.  At least glibc 2.0 and 2.1, older versions not checked
 #. type: Plain text
-#: man-pages/man2/gethostname.2:183
+#: man-pages/man2/gethostname.2:184
 msgid ""
 "Versions of glibc before 2.2 handle the case where the length of the "
 "I<nodename> was greater than or equal to I<len> differently: nothing is "
@@ -5998,9 +6000,13 @@ msgstr ""
 "устанавливая I<errno> равным B<ENAMETOOLONG>."
 
 #. type: Plain text
-#: man-pages/man2/gethostname.2:187
-msgid "B<hostname>(1), B<getdomainname>(2), B<setdomainname>(2), B<uname>(2)"
-msgstr "B<hostname>(1), B<getdomainname>(2), B<setdomainname>(2), B<uname>(2)"
+#: man-pages/man2/gethostname.2:189
+msgid ""
+"B<hostname>(1), B<getdomainname>(2), B<setdomainname>(2), B<uname>(2), "
+"B<uts_namespaces>(7)"
+msgstr ""
+"B<hostname>(1), B<getdomainname>(2), B<setdomainname>(2), B<uname>(2), "
+"B<uts_namespaces>(7)"
 
 #. type: TH
 #: man-pages/man2/getpagesize.2:25
@@ -7563,16 +7569,18 @@ msgid "B<getdomainname>(), B<setdomainname>():"
 msgstr "B<getdomainname>(), B<setdomainname>():"
 
 #. type: Plain text
-#: man-pages/man2/getdomainname.2:60
+#: man-pages/man2/getdomainname.2:62
 msgid ""
 "These functions are used to access or to change the NIS domain name of the "
-"host system."
+"host system.  More precisely, they operate on the NIS domain name associated "
+"with the calling process's UTS namespace."
 msgstr ""
-"Эти функции используются для доступа к имени узла домена NIS или для его "
-"изменения."
+"Данные функции используются для получения или изменения имени домена NIS "
+"узла системы. Точнее говоря, они работают с именем домена NIS, связанным с "
+"пространством имён UTS вызывающего процесса."
 
 #. type: Plain text
-#: man-pages/man2/getdomainname.2:71
+#: man-pages/man2/getdomainname.2:73
 msgid ""
 "B<setdomainname>()  sets the domain name to the value given in the character "
 "array I<name>.  The I<len> argument specifies the number of bytes in "
@@ -7583,7 +7591,7 @@ msgstr ""
 "есть I<name> может не завершаться байтом с null.)"
 
 #. type: Plain text
-#: man-pages/man2/getdomainname.2:81
+#: man-pages/man2/getdomainname.2:83
 msgid ""
 "B<getdomainname>()  returns the null-terminated domain name in the character "
 "array I<name>, which has a length of I<len> bytes.  If the null-terminated "
@@ -7596,22 +7604,22 @@ msgstr ""
 "возвращает первые I<len> байт (glibc) или возвращает ошибку (libc)."
 
 #. type: Plain text
-#: man-pages/man2/getdomainname.2:89
+#: man-pages/man2/getdomainname.2:91
 msgid "B<setdomainname>()  can fail with the following errors:"
 msgstr "B<setdomainname>() может завершиться со следующими ошибками:"
 
 #. type: Plain text
-#: man-pages/man2/getdomainname.2:93
+#: man-pages/man2/getdomainname.2:95
 msgid "I<name> pointed outside of user address space."
 msgstr "I<name> указывает за пределы пользовательского адресного пространства."
 
 #. type: Plain text
-#: man-pages/man2/getdomainname.2:97
+#: man-pages/man2/getdomainname.2:99
 msgid "I<len> was negative or too large."
 msgstr "Значение I<len> отрицательно или слишком большое."
 
 #. type: Plain text
-#: man-pages/man2/getdomainname.2:103
+#: man-pages/man2/getdomainname.2:105
 msgid ""
 "The caller did not have the B<CAP_SYS_ADMIN> capability in the user "
 "namespace associated with its UTS namespace (see B<namespaces>(7))."
@@ -7620,12 +7628,12 @@ msgstr ""
 "имён, связанном с его пространством имён UTS (смотрите B<namespaces>(7))."
 
 #. type: Plain text
-#: man-pages/man2/getdomainname.2:106
+#: man-pages/man2/getdomainname.2:108
 msgid "B<getdomainname>()  can fail with the following errors:"
 msgstr "B<getdomainname>() может завершиться со следующими ошибками:"
 
 #. type: Plain text
-#: man-pages/man2/getdomainname.2:117
+#: man-pages/man2/getdomainname.2:119
 msgid ""
 "For B<getdomainname>()  under libc: I<name> is NULL or I<name> is longer "
 "than I<len> bytes."
@@ -7635,12 +7643,12 @@ msgstr ""
 
 #.  But they appear on most systems...
 #. type: Plain text
-#: man-pages/man2/getdomainname.2:120
+#: man-pages/man2/getdomainname.2:122
 msgid "POSIX does not specify these calls."
 msgstr "В POSIX нет этих вызовов."
 
 #. type: Plain text
-#: man-pages/man2/getdomainname.2:124
+#: man-pages/man2/getdomainname.2:126
 msgid ""
 "Since Linux 1.0, the limit on the length of a domain name, including the "
 "terminating null byte, is 64 bytes.  In older kernels, it was 8 bytes."
@@ -7649,7 +7657,7 @@ msgstr ""
 "ограничена 64 байтами. В более старых ядрах ограничение было 8 байт."
 
 #. type: Plain text
-#: man-pages/man2/getdomainname.2:134
+#: man-pages/man2/getdomainname.2:136
 msgid ""
 "On most Linux architectures (including x86), there is no B<getdomainname>()  "
 "system call; instead, glibc implements B<getdomainname>()  as a library "
@@ -7662,9 +7670,10 @@ msgstr ""
 "которую возвращает вызов B<uname>(2)."
 
 #. type: Plain text
-#: man-pages/man2/getdomainname.2:137
-msgid "B<gethostname>(2), B<sethostname>(2), B<uname>(2)"
-msgstr "B<gethostname>(2), B<sethostname>(2), B<uname>(2)"
+#: man-pages/man2/getdomainname.2:140
+msgid "B<gethostname>(2), B<sethostname>(2), B<uname>(2), B<uts_namespaces>(7)"
+msgstr ""
+"B<gethostname>(2), B<sethostname>(2), B<uname>(2), B<uts_namespaces>(7)"
 
 #. type: TH
 #: man-pages/man2/get_kernel_syms.2:10

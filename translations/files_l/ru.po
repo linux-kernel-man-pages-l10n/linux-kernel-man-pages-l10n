@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:26+0300\n"
-"PO-Revision-Date: 2019-09-18 18:45+0300\n"
+"PO-Revision-Date: 2019-09-21 08:19+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
@@ -3763,34 +3763,34 @@ msgid "B<localedef> [I<options>] I<outputpath>"
 msgstr "B<localedef> [I<параметры>] I<путь_результата>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:46
-msgid "B<localedef --list-archive> [I<options>]"
-msgstr "B<localedef --list-archive> [I<параметры>]"
+#: man-pages/man1/localedef.1:47
+msgid "B<localedef --add-to-archive> [I<options>] I<compiledpath>"
+msgstr "B<localedef --add-to-archive> [I<параметры>] I<путь_скомпилированного>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:50
+#: man-pages/man1/localedef.1:51
 msgid "B<localedef --delete-from-archive> [I<options>] I<localename> ..."
 msgstr "B<localedef --delete-from-archive> [I<параметры>] I<имя_локали> …"
 
 #. type: Plain text
 #: man-pages/man1/localedef.1:54
-msgid "B<localedef --add-to-archive> [I<options>] I<compiledpath>"
-msgstr "B<localedef --add-to-archive> [I<параметры>] I<путь_скомпилированного>"
+msgid "B<localedef --list-archive> [I<options>]"
+msgstr "B<localedef --list-archive> [I<параметры>]"
 
 #. type: Plain text
 #: man-pages/man1/localedef.1:56
-msgid "B<localedef --version>"
-msgstr "B<localedef --version>"
-
-#. type: Plain text
-#: man-pages/man1/localedef.1:58
 msgid "B<localedef --help>"
 msgstr "B<localedef --help>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:60
+#: man-pages/man1/localedef.1:58
 msgid "B<localedef --usage>"
 msgstr "B<localedef --usage>"
+
+#. type: Plain text
+#: man-pages/man1/localedef.1:60
+msgid "B<localedef --version>"
+msgstr "B<localedef --version>"
 
 #. type: Plain text
 #: man-pages/man1/localedef.1:75
@@ -3889,33 +3889,11 @@ msgstr ""
 #. type: TP
 #: man-pages/man1/localedef.1:130
 #, no-wrap
-msgid "B<--delete-from-archive>"
-msgstr "B<--delete-from-archive>"
-
-#. type: Plain text
-#: man-pages/man1/localedef.1:133
-msgid "Delete the named locales from the locale archive file."
-msgstr "Удалить заданную локаль из файла архива локалей."
-
-#. type: TP
-#: man-pages/man1/localedef.1:133
-#, no-wrap
-msgid "B<--list-archive>"
-msgstr "B<--list-archive>"
-
-#. type: Plain text
-#: man-pages/man1/localedef.1:136
-msgid "List the locales contained in the locale archive file."
-msgstr "Показать список локалей, содержащихся в файле архива локалей."
-
-#. type: TP
-#: man-pages/man1/localedef.1:136
-#, no-wrap
 msgid "B<--add-to-archive>"
 msgstr "B<--add-to-archive>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:145
+#: man-pages/man1/localedef.1:139
 msgid ""
 "Add the I<compiledpath> directories to the locale archive file.  The "
 "directories should have been created by previous runs of B<localedef>, using "
@@ -3924,6 +3902,28 @@ msgstr ""
 "Добавить каталоги I<путь_скомпилированного> файл архива локалей. Каталоги "
 "должны быть созданы ранее запускавшимся B<localedef> с параметром B<--no-"
 "archive>."
+
+#. type: TP
+#: man-pages/man1/localedef.1:139
+#, no-wrap
+msgid "B<--delete-from-archive>"
+msgstr "B<--delete-from-archive>"
+
+#. type: Plain text
+#: man-pages/man1/localedef.1:142
+msgid "Delete the named locales from the locale archive file."
+msgstr "Удалить заданную локаль из файла архива локалей."
+
+#. type: TP
+#: man-pages/man1/localedef.1:142
+#, no-wrap
+msgid "B<--list-archive>"
+msgstr "B<--list-archive>"
+
+#. type: Plain text
+#: man-pages/man1/localedef.1:145
+msgid "List the locales contained in the locale archive file."
+msgstr "Показать список локалей, содержащихся в файле архива локалей."
 
 #. type: SS
 #: man-pages/man1/localedef.1:145
@@ -4036,28 +4036,11 @@ msgstr ""
 #. type: TP
 #: man-pages/man1/localedef.1:214
 #, no-wrap
-msgid "B<--prefix=>I<pathname>"
-msgstr "B<--prefix=>I<путь>"
-
-#. type: Plain text
-#: man-pages/man1/localedef.1:222
-msgid ""
-"Set the prefix to be prepended to the full archive pathname.  By default, "
-"the prefix is empty.  Setting the prefix to I<foo>, the archive would be "
-"placed in I<foo/usr/lib/locale/locale-archive>."
-msgstr ""
-"Указывает префикс полного пути к архиву. По умолчанию префикс пуст. Если "
-"указать в качестве префикса I<foo>, то архив будет помещён в I<foo/usr/lib/"
-"locale/locale-archive>."
-
-#. type: TP
-#: man-pages/man1/localedef.1:222
-#, no-wrap
 msgid "B<-c>, B<--force>"
 msgstr "B<-c>, B<--force>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:226
+#: man-pages/man1/localedef.1:218
 msgid ""
 "Write the output files even if warnings were generated about the input file."
 msgstr ""
@@ -4065,65 +4048,42 @@ msgstr ""
 "входных данных."
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:229
+#: man-pages/man1/localedef.1:221
 msgid "Generate extra warnings about errors that are normally ignored."
 msgstr ""
 "Генерировать дополнительные предупреждения об ошибках, которые обычно "
 "игнорируются."
 
 #. type: TP
-#: man-pages/man1/localedef.1:229
+#: man-pages/man1/localedef.1:221
 #, no-wrap
-msgid "B<--quiet>"
-msgstr "B<--quiet>"
+msgid "B<--big-endian>"
+msgstr "B<--big-endian>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:232
-msgid "Suppress all notifications and warnings, and report only fatal errors."
-msgstr ""
-"Не показывать все уведомления и предупреждения; сообщать только о фатальных "
-"ошибках."
+#: man-pages/man1/localedef.1:224
+msgid "Generate big-ending output."
+msgstr "Генерировать вывод с прямым порядком байт (big endian)."
 
 #. type: TP
-#: man-pages/man1/localedef.1:232
+#: man-pages/man1/localedef.1:224
 #, no-wrap
-msgid "B<--posix>"
-msgstr "B<--posix>"
+msgid "B<--little-endian>"
+msgstr "B<--little-endian>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:240
-msgid ""
-"Conform strictly to POSIX.  Implies B<--verbose>.  This option currently has "
-"no other effect.  POSIX conformance is assumed if the environment variable "
-"B<POSIXLY_CORRECT> is set."
-msgstr ""
-"Жёстко следовать POSIX. Подразумевает B<--verbose>. Этот параметр, в "
-"настоящее время, больше ничего не делает. Соответствие POSIX предполагается, "
-"если установлена переменная окружения B<POSIXLY_CORRECT>."
+#: man-pages/man1/localedef.1:227
+msgid "Generate little-ending output."
+msgstr "Генерировать вывод с обратным порядком байт (little endian)."
 
 #. type: TP
-#: man-pages/man1/localedef.1:240
-#, no-wrap
-msgid "B<--replace>"
-msgstr "B<--replace>"
-
-#. type: Plain text
-#: man-pages/man1/localedef.1:245
-msgid ""
-"Replace a locale in the locale archive file.  Without this option, if the "
-"locale is in the archive file already, an error occurs."
-msgstr ""
-"Заменить локаль в файле архива локалей. Без этого параметра, если локаль в "
-"архиве уже есть, то выдаётся ошибка."
-
-#. type: TP
-#: man-pages/man1/localedef.1:245
+#: man-pages/man1/localedef.1:227
 #, no-wrap
 msgid "B<--no-archive>"
 msgstr "B<--no-archive>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:254
+#: man-pages/man1/localedef.1:236
 msgid ""
 "Do not use the locale archive file, instead create I<outputpath> as a "
 "subdirectory in the same directory as the locale archive file, and create "
@@ -4138,13 +4098,116 @@ msgstr ""
 "созданными с помощью B<localedef>."
 
 #. type: TP
+#: man-pages/man1/localedef.1:236
+#, no-wrap
+msgid "B<--no-hard-links>"
+msgstr "B<--no-hard-links>"
+
+#. type: Plain text
+#: man-pages/man1/localedef.1:239
+msgid "Do not create hard links between installed locales."
+msgstr "Не создавать жёсткие ссылки между установленными локалями."
+
+#. type: TP
+#: man-pages/man1/localedef.1:239
+#, no-wrap
+msgid "B<--no-warnings=>I<warnings>"
+msgstr "B<--no-warnings=>I<warnings>"
+
+#. type: Plain text
+#: man-pages/man1/localedef.1:246
+msgid ""
+"Comma-separated list of warnings to disable.  Supported warnings are "
+"I<ascii> and I<intcurrsym>."
+msgstr ""
+"Разделенный запятыми список отключённых предупреждений; поддерживаемые "
+"предупреждения: I<ascii> и I<intcurrsym>."
+
+#. type: TP
+#: man-pages/man1/localedef.1:246
+#, no-wrap
+msgid "B<--posix>"
+msgstr "B<--posix>"
+
+#. type: Plain text
 #: man-pages/man1/localedef.1:254
+msgid ""
+"Conform strictly to POSIX.  Implies B<--verbose>.  This option currently has "
+"no other effect.  POSIX conformance is assumed if the environment variable "
+"B<POSIXLY_CORRECT> is set."
+msgstr ""
+"Жёстко следовать POSIX. Подразумевает B<--verbose>. Этот параметр, в "
+"настоящее время, больше ничего не делает. Соответствие POSIX предполагается, "
+"если установлена переменная окружения B<POSIXLY_CORRECT>."
+
+#. type: TP
+#: man-pages/man1/localedef.1:254
+#, no-wrap
+msgid "B<--prefix=>I<pathname>"
+msgstr "B<--prefix=>I<путь>"
+
+#. type: Plain text
+#: man-pages/man1/localedef.1:262
+msgid ""
+"Set the prefix to be prepended to the full archive pathname.  By default, "
+"the prefix is empty.  Setting the prefix to I<foo>, the archive would be "
+"placed in I<foo/usr/lib/locale/locale-archive>."
+msgstr ""
+"Указывает префикс полного пути к архиву. По умолчанию префикс пуст. Если "
+"указать в качестве префикса I<foo>, то архив будет помещён в I<foo/usr/lib/"
+"locale/locale-archive>."
+
+#. type: TP
+#: man-pages/man1/localedef.1:262
+#, no-wrap
+msgid "B<--quiet>"
+msgstr "B<--quiet>"
+
+#. type: Plain text
+#: man-pages/man1/localedef.1:265
+msgid "Suppress all notifications and warnings, and report only fatal errors."
+msgstr ""
+"Не показывать все уведомления и предупреждения; сообщать только о фатальных "
+"ошибках."
+
+#. type: TP
+#: man-pages/man1/localedef.1:265
+#, no-wrap
+msgid "B<--replace>"
+msgstr "B<--replace>"
+
+#. type: Plain text
+#: man-pages/man1/localedef.1:270
+msgid ""
+"Replace a locale in the locale archive file.  Without this option, if the "
+"locale is in the archive file already, an error occurs."
+msgstr ""
+"Заменить локаль в файле архива локалей. Без этого параметра, если локаль в "
+"архиве уже есть, то выдаётся ошибка."
+
+#. type: TP
+#: man-pages/man1/localedef.1:270
+#, no-wrap
+msgid "B<--warnings=>I<warnings>"
+msgstr "B<--warnings=>I<warnings>"
+
+#. type: Plain text
+#: man-pages/man1/localedef.1:277
+msgid ""
+"Comma-separated list of warnings to enable.  Supported warnings are I<ascii> "
+"and I<intcurrsym>."
+msgstr ""
+"Разделенный запятыми список включённых предупреждений; поддерживаемые "
+"предупреждения: I<ascii> и I<intcurrsym>."
+
+#. type: TP
+#: man-pages/man1/localedef.1:277
 #, no-wrap
 msgid "B<-?>, B<--help>"
 msgstr "B<-?>, B<--help>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:259
+#: man-pages/man1/localedef.1:282
 msgid ""
 "Print a usage summary and exit.  Also prints the default paths used by "
 "B<localedef>."
@@ -4153,18 +4216,18 @@ msgstr ""
 "по умолчанию, используемые в B<localedef>."
 
 #. type: TP
-#: man-pages/man1/localedef.1:259
+#: man-pages/man1/localedef.1:282
 #, no-wrap
 msgid "B<--usage>"
 msgstr "B<--usage>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:262
+#: man-pages/man1/localedef.1:285
 msgid "Print a short usage summary and exit."
 msgstr "Показать краткую справку по использованию и завершить работу."
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:266
+#: man-pages/man1/localedef.1:289
 msgid ""
 "Print the version number, license, and disclaimer of warranty for "
 "B<localedef>."
@@ -4172,137 +4235,137 @@ msgstr ""
 "Показать номер версии, лицензию и уведомление о гарантиях для B<localedef>."
 
 #. type: SH
-#: man-pages/man1/localedef.1:266
+#: man-pages/man1/localedef.1:289
 #, no-wrap
 msgid "EXIT STATUS"
 msgstr "КОД РЕЗУЛЬТАТА"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:269
+#: man-pages/man1/localedef.1:292
 msgid "One of the following exit values can be returned by B<localedef>:"
 msgstr ""
 "Программа B<localedef> может возвращать один из следующих кодов завершения:"
 
 #. type: TP
-#: man-pages/man1/localedef.1:270
+#: man-pages/man1/localedef.1:293
 #, no-wrap
 msgid "B<0>"
 msgstr "B<0>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:273
+#: man-pages/man1/localedef.1:296
 msgid "Command completed successfully."
 msgstr "Команда успешно выполнена."
 
 #. type: TP
-#: man-pages/man1/localedef.1:273
+#: man-pages/man1/localedef.1:296
 #, no-wrap
 msgid "B<1>"
 msgstr "B<1>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:276
+#: man-pages/man1/localedef.1:299
 msgid "Warnings or errors occurred, output files were written."
 msgstr "Произошла  ошибка или предупреждение, файлы результата записаны."
 
 #. type: TP
-#: man-pages/man1/localedef.1:276
+#: man-pages/man1/localedef.1:299
 #, no-wrap
 msgid "B<4>"
 msgstr "B<4>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:279
+#: man-pages/man1/localedef.1:302
 msgid "Errors encountered, no output created."
 msgstr "Произошла  ошибка, результат не записан."
 
 #. type: TP
-#: man-pages/man1/localedef.1:281
+#: man-pages/man1/localedef.1:304
 #, no-wrap
 msgid "B<POSIXLY_CORRECT>"
 msgstr "B<POSIXLY_CORRECT>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:286
+#: man-pages/man1/localedef.1:309
 msgid "The B<--posix> flag is assumed if this environment variable is set."
 msgstr ""
 "Если эта переменная окружения установлена, то предполагается флаг B<--posix>."
 
 #. type: TP
-#: man-pages/man1/localedef.1:286
+#: man-pages/man1/localedef.1:309
 #, no-wrap
 msgid "B<I18NPATH>"
 msgstr "B<I18NPATH>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:289
+#: man-pages/man1/localedef.1:312
 msgid "A colon-separated list of search directories for files."
 msgstr "Список каталогов через двоеточие для поиска файлов."
 
 #. type: TP
-#: man-pages/man1/localedef.1:290
+#: man-pages/man1/localedef.1:313
 #, no-wrap
 msgid "I</usr/share/i18n/charmaps>"
 msgstr "I</usr/share/i18n/charmaps>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:293
+#: man-pages/man1/localedef.1:316
 msgid "Usual default character map path."
 msgstr "Обычный путь по умолчанию для файлов карт символов."
 
 #. type: TP
-#: man-pages/man1/localedef.1:293
+#: man-pages/man1/localedef.1:316
 #, no-wrap
 msgid "I</usr/share/i18n/locales>"
 msgstr "I</usr/share/i18n/locales>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:296
+#: man-pages/man1/localedef.1:319
 msgid "Usual default path for locale definition files."
 msgstr "Обычный путь по умолчанию для файлов определений локалей."
 
 #. type: TP
-#: man-pages/man1/localedef.1:296
+#: man-pages/man1/localedef.1:319
 #, no-wrap
 msgid "I</usr/share/i18n/repertoiremaps>"
 msgstr "I</usr/share/i18n/repertoiremaps>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:299
+#: man-pages/man1/localedef.1:322
 msgid "Usual default repertoire map path."
 msgstr "Обычный путь по умолчанию для файлов карт набора."
 
 #. type: TP
-#: man-pages/man1/localedef.1:299
+#: man-pages/man1/localedef.1:322
 #, no-wrap
 msgid "I</usr/lib/locale/locale-archive>"
 msgstr "I</usr/lib/locale/locale-archive>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:302
+#: man-pages/man1/localedef.1:325
 msgid "Usual default locale archive location."
 msgstr "Обычный путь по умолчанию для расположения архива локалей."
 
 #. type: TP
-#: man-pages/man1/localedef.1:302
+#: man-pages/man1/localedef.1:325
 #, no-wrap
 msgid "I</usr/lib/locale>"
 msgstr "I</usr/lib/locale>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:305
+#: man-pages/man1/localedef.1:328
 msgid "Usual default path for compiled individual locale data files."
 msgstr ""
 "Обычный путь по умолчанию для скомпонованных файлов данных отдельных локалей."
 
 #. type: TP
-#: man-pages/man1/localedef.1:305
+#: man-pages/man1/localedef.1:328
 #, no-wrap
 msgid "I<outputpath/LC_ADDRESS>"
 msgstr "I<outputpath/LC_ADDRESS>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:309
+#: man-pages/man1/localedef.1:332
 msgid ""
 "An output file that contains information about formatting of addresses and "
 "geography-related items."
@@ -4311,48 +4374,48 @@ msgstr ""
 "элементах."
 
 #. type: TP
-#: man-pages/man1/localedef.1:309
+#: man-pages/man1/localedef.1:332
 #, no-wrap
 msgid "I<outputpath/LC_COLLATE>"
 msgstr "I<outputpath/LC_COLLATE>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:313
+#: man-pages/man1/localedef.1:336
 msgid ""
 "An output file that contains information about the rules for comparing "
 "strings."
 msgstr "Файл результата содержит информацию о правилах сравнения строк."
 
 #. type: TP
-#: man-pages/man1/localedef.1:313
+#: man-pages/man1/localedef.1:336
 #, no-wrap
 msgid "I<outputpath/LC_CTYPE>"
 msgstr "I<outputpath/LC_CTYPE>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:316
+#: man-pages/man1/localedef.1:339
 msgid "An output file that contains information about character classes."
 msgstr "Файл результата содержит информацию о классах символов."
 
 #. type: TP
-#: man-pages/man1/localedef.1:316
+#: man-pages/man1/localedef.1:339
 #, no-wrap
 msgid "I<outputpath/LC_IDENTIFICATION>"
 msgstr "I<outputpath/LC_IDENTIFICATION>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:319
+#: man-pages/man1/localedef.1:342
 msgid "An output file that contains metadata about the locale."
 msgstr "Файл результата содержит метаданные о локали."
 
 #. type: TP
-#: man-pages/man1/localedef.1:319
+#: man-pages/man1/localedef.1:342
 #, no-wrap
 msgid "I<outputpath/LC_MEASUREMENT>"
 msgstr "I<outputpath/LC_MEASUREMENT>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:323
+#: man-pages/man1/localedef.1:346
 msgid ""
 "An output file that contains information about locale measurements (metric "
 "versus US customary)."
@@ -4361,13 +4424,13 @@ msgstr ""
 "система мер США)."
 
 #. type: TP
-#: man-pages/man1/localedef.1:323
+#: man-pages/man1/localedef.1:346
 #, no-wrap
 msgid "I<outputpath/LC_MESSAGES/SYS_LC_MESSAGES>"
 msgstr "I<outputpath/LC_MESSAGES/SYS_LC_MESSAGES>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:328
+#: man-pages/man1/localedef.1:351
 msgid ""
 "An output file that contains information about the language messages should "
 "be printed in, and what an affirmative or negative answer looks like."
@@ -4376,37 +4439,37 @@ msgstr ""
 "сообщения и как выглядят ответы «да» и «нет»."
 
 #. type: TP
-#: man-pages/man1/localedef.1:328
+#: man-pages/man1/localedef.1:351
 #, no-wrap
 msgid "I<outputpath/LC_MONETARY>"
 msgstr "I<outputpath/LC_MONETARY>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:332
+#: man-pages/man1/localedef.1:355
 msgid ""
 "An output file that contains information about formatting of monetary values."
 msgstr ""
 "Файл результата содержит информацию о правилах написания денежных единиц."
 
 #. type: TP
-#: man-pages/man1/localedef.1:332
+#: man-pages/man1/localedef.1:355
 #, no-wrap
 msgid "I<outputpath/LC_NAME>"
 msgstr "I<outputpath/LC_NAME>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:335
+#: man-pages/man1/localedef.1:358
 msgid "An output file that contains information about salutations for persons."
 msgstr "Файл результата содержит информацию об описании персон."
 
 #. type: TP
-#: man-pages/man1/localedef.1:335
+#: man-pages/man1/localedef.1:358
 #, no-wrap
 msgid "I<outputpath/LC_NUMERIC>"
 msgstr "I<outputpath/LC_NUMERIC>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:339
+#: man-pages/man1/localedef.1:362
 msgid ""
 "An output file that contains information about formatting of nonmonetary "
 "numeric values."
@@ -4415,13 +4478,13 @@ msgstr ""
 "числовых единиц."
 
 #. type: TP
-#: man-pages/man1/localedef.1:339
+#: man-pages/man1/localedef.1:362
 #, no-wrap
 msgid "I<outputpath/LC_PAPER>"
 msgstr "I<outputpath/LC_PAPER>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:343
+#: man-pages/man1/localedef.1:366
 msgid ""
 "An output file that contains information about settings related to standard "
 "paper size."
@@ -4430,13 +4493,13 @@ msgstr ""
 "бумаги."
 
 #. type: TP
-#: man-pages/man1/localedef.1:343
+#: man-pages/man1/localedef.1:366
 #, no-wrap
 msgid "I<outputpath/LC_TELEPHONE>"
 msgstr "I<outputpath/LC_TELEPHONE>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:347
+#: man-pages/man1/localedef.1:370
 msgid ""
 "An output file that contains information about formats to be used with "
 "telephone services."
@@ -4445,13 +4508,13 @@ msgstr ""
 "службах."
 
 #. type: TP
-#: man-pages/man1/localedef.1:347
+#: man-pages/man1/localedef.1:370
 #, no-wrap
 msgid "I<outputpath/LC_TIME>"
 msgstr "I<outputpath/LC_TIME>"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:351
+#: man-pages/man1/localedef.1:374
 msgid ""
 "An output file that contains information about formatting of data and time "
 "values."
@@ -4459,18 +4522,18 @@ msgstr ""
 "Файл результата содержит информацию о форматах значений даты и времени."
 
 #. type: SH
-#: man-pages/man1/localedef.1:351
+#: man-pages/man1/localedef.1:374
 #, no-wrap
 msgid "CONFORMING TO"
 msgstr "СООТВЕТСТВИЕ СТАНДАРТАМ"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:353
+#: man-pages/man1/localedef.1:376
 msgid "POSIX.1-2008."
 msgstr "POSIX.1-2008."
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:357
+#: man-pages/man1/localedef.1:380
 msgid ""
 "Compile the locale files for Finnish in the UTF-8 character set and add it "
 "to the default locale archive with the name B<fi_FI.UTF-8>:"
@@ -4479,13 +4542,13 @@ msgstr ""
 "UTF-8 и добавление к архиву локалей по умолчанию с именем B<fi_FI.UTF-8>:"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:361
+#: man-pages/man1/localedef.1:384
 #, no-wrap
 msgid "localedef -f UTF-8 -i fi_FI fi_FI.UTF-8\n"
 msgstr "localedef -f UTF-8 -i fi_FI fi_FI.UTF-8\n"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:371
+#: man-pages/man1/localedef.1:394
 msgid ""
 "The next example does the same thing, but generates files into the I<fi_FI."
 "UTF-8> directory which can then be used by programs when the environment "
@@ -4498,13 +4561,13 @@ msgstr ""
 "последний аргумент должен содержать косую черту):"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:375
+#: man-pages/man1/localedef.1:398
 #, no-wrap
 msgid "localedef -f UTF-8 -i fi_FI ./fi_FI.UTF-8\n"
 msgstr "localedef -f UTF-8 -i fi_FI ./fi_FI.UTF-8\n"
 
 #. type: Plain text
-#: man-pages/man1/localedef.1:382
+#: man-pages/man1/localedef.1:405
 msgid ""
 "B<locale>(1), B<charmap>(5), B<locale>(5), B<repertoiremap>(5), B<locale>(7)"
 msgstr ""
