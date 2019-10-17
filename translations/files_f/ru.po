@@ -11077,79 +11077,7 @@ msgstr ""
 "(B<FAN_OPEN_PERM> или B<FAN_ACCESS_PERM>)."
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:384
-msgid ""
-"The filesystem object indicated by I<dirfd> and I<pathname> does not exist.  "
-"This error also occurs when trying to remove a mark from an object which is "
-"not marked."
-msgstr ""
-"Объект файловой системы, указанный в I<dirfd> и I<pathname>, не существует. "
-"Эта ошибка также возникает при попытке удаления метки с не помеченного "
-"объекта."
-
-#. type: Plain text
-#: man-pages/man2/fanotify_mark.2:387
-msgid "The necessary memory could not be allocated."
-msgstr "Невозможно выделить необходимую память."
-
-#. type: TP
-#: man-pages/man2/fanotify_mark.2:387
-#, no-wrap
-msgid "B<ENOSPC>"
-msgstr "B<ENOSPC>"
-
-#. type: Plain text
-#: man-pages/man2/fanotify_mark.2:393
-msgid ""
-"The number of marks exceeds the limit of 8192 and the B<FAN_UNLIMITED_MARKS> "
-"flag was not specified when the fanotify file descriptor was created with "
-"B<fanotify_init>(2)."
-msgstr ""
-"Количество меток превышает ограничение в 8192 и флаг B<FAN_UNLIMITED_MARKS> "
-"не был указан при создании файлового дескриптора fanotify с помощью "
-"B<fanotify_init>(2)."
-
-#. type: Plain text
-#: man-pages/man2/fanotify_mark.2:399
-msgid ""
-"This kernel does not implement B<fanotify_mark>().  The fanotify API is "
-"available only if the kernel was configured with B<CONFIG_FANOTIFY>."
-msgstr ""
-"В этом ядре не реализован B<fanotify_mark>(). Программный интерфейс fanotify "
-"доступен только, если ядро было собрано с параметром B<CONFIG_FANOTIFY>."
-
-#. type: Plain text
-#: man-pages/man2/fanotify_mark.2:409
-msgid ""
-"I<flags> contains B<FAN_MARK_ONLYDIR>, and I<dirfd> and I<pathname> do not "
-"specify a directory."
-msgstr ""
-"В значении I<flags> содержится B<FAN_MARK_ONLYDIR>, а в I<dirfd> и "
-"I<pathname> указан не каталог."
-
-#. type: TP
-#: man-pages/man2/fanotify_mark.2:409
-#, no-wrap
-msgid "B<EXDEV>"
-msgstr "B<EXDEV>"
-
-#. type: Plain text
-#: man-pages/man2/fanotify_mark.2:423
-msgid ""
-"The filesystem object indicated by I<pathname> resides within a filesystem "
-"subvolume (e.g., B<btrfs>(5))  which uses a different I<fsid> than its root "
-"superblock.  This error can be returned only when an fanotify file "
-"descriptor returned by B<fanotify_init>(2)  has been created with "
-"B<FAN_REPORT_FID>."
-msgstr ""
-"Объект файловой системы, указанный в I<pathname>, располагается в подтоме "
-"файловой системы (например, B<btrfs>(5)), которая использует I<fsid> "
-"отличный от используемого в её корневом суперблоке. Эта ошибка может "
-"вернуться только, когда файловый дескриптор fanotify, возвращаемый "
-"B<fanotify_init>(2), был создан с  флагом B<FAN_REPORT_FID>."
-
-#. type: Plain text
-#: man-pages/man2/fanotify_mark.2:436
+#: man-pages/man2/fanotify_mark.2:388
 msgid ""
 "The filesystem object indicated by I<pathname> is not associated with a "
 "filesystem that supports I<fsid> (e.g., B<tmpfs>(5)).  This error can be "
@@ -11161,14 +11089,65 @@ msgstr ""
 "может вернуться только, когда файловый дескриптор fanotify, возвращаемый "
 "B<fanotify_init>(2), был создан с  флагом B<FAN_REPORT_FID>."
 
+#. type: Plain text
+#: man-pages/man2/fanotify_mark.2:397
+msgid ""
+"The filesystem object indicated by I<dirfd> and I<pathname> does not exist.  "
+"This error also occurs when trying to remove a mark from an object which is "
+"not marked."
+msgstr ""
+"Объект файловой системы, указанный в I<dirfd> и I<pathname>, не существует. "
+"Эта ошибка также возникает при попытке удаления метки с не помеченного "
+"объекта."
+
+#. type: Plain text
+#: man-pages/man2/fanotify_mark.2:400
+msgid "The necessary memory could not be allocated."
+msgstr "Невозможно выделить необходимую память."
+
 #. type: TP
-#: man-pages/man2/fanotify_mark.2:436
+#: man-pages/man2/fanotify_mark.2:400
+#, no-wrap
+msgid "B<ENOSPC>"
+msgstr "B<ENOSPC>"
+
+#. type: Plain text
+#: man-pages/man2/fanotify_mark.2:406
+msgid ""
+"The number of marks exceeds the limit of 8192 and the B<FAN_UNLIMITED_MARKS> "
+"flag was not specified when the fanotify file descriptor was created with "
+"B<fanotify_init>(2)."
+msgstr ""
+"Количество меток превышает ограничение в 8192 и флаг B<FAN_UNLIMITED_MARKS> "
+"не был указан при создании файлового дескриптора fanotify с помощью "
+"B<fanotify_init>(2)."
+
+#. type: Plain text
+#: man-pages/man2/fanotify_mark.2:412
+msgid ""
+"This kernel does not implement B<fanotify_mark>().  The fanotify API is "
+"available only if the kernel was configured with B<CONFIG_FANOTIFY>."
+msgstr ""
+"В этом ядре не реализован B<fanotify_mark>(). Программный интерфейс fanotify "
+"доступен только, если ядро было собрано с параметром B<CONFIG_FANOTIFY>."
+
+#. type: Plain text
+#: man-pages/man2/fanotify_mark.2:422
+msgid ""
+"I<flags> contains B<FAN_MARK_ONLYDIR>, and I<dirfd> and I<pathname> do not "
+"specify a directory."
+msgstr ""
+"В значении I<flags> содержится B<FAN_MARK_ONLYDIR>, а в I<dirfd> и "
+"I<pathname> указан не каталог."
+
+#. type: TP
+#: man-pages/man2/fanotify_mark.2:422
 #, no-wrap
 msgid "B<EOPNOTSUPP>"
 msgstr "B<EOPNOTSUPP>"
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:447
+#: man-pages/man2/fanotify_mark.2:433
 msgid ""
 "The object indicated by I<pathname> is associated with a filesystem that "
 "does not support the encoding of file handles.  This error can be returned "
@@ -11178,6 +11157,27 @@ msgstr ""
 "Объект, указанный в I<pathname>, связан с файловой системой, которая не "
 "поддерживает кодирование файловых описателей. Эта ошибка может вернуться "
 "только, когда файловый дескриптор fanotify, возвращаемый "
+"B<fanotify_init>(2), был создан с  флагом B<FAN_REPORT_FID>."
+
+#. type: TP
+#: man-pages/man2/fanotify_mark.2:433
+#, no-wrap
+msgid "B<EXDEV>"
+msgstr "B<EXDEV>"
+
+#. type: Plain text
+#: man-pages/man2/fanotify_mark.2:447
+msgid ""
+"The filesystem object indicated by I<pathname> resides within a filesystem "
+"subvolume (e.g., B<btrfs>(5))  which uses a different I<fsid> than its root "
+"superblock.  This error can be returned only when an fanotify file "
+"descriptor returned by B<fanotify_init>(2)  has been created with "
+"B<FAN_REPORT_FID>."
+msgstr ""
+"Объект файловой системы, указанный в I<pathname>, располагается в подтоме "
+"файловой системы (например, B<btrfs>(5)), которая использует I<fsid> "
+"отличный от используемого в её корневом суперблоке. Эта ошибка может "
+"вернуться только, когда файловый дескриптор fanotify, возвращаемый "
 "B<fanotify_init>(2), был создан с  флагом B<FAN_REPORT_FID>."
 
 #. type: Plain text

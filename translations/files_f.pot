@@ -8792,64 +8792,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:384
-msgid ""
-"The filesystem object indicated by I<dirfd> and I<pathname> does not exist.  "
-"This error also occurs when trying to remove a mark from an object which is "
-"not marked."
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man2/fanotify_mark.2:387
-msgid "The necessary memory could not be allocated."
-msgstr ""
-
-#. type: TP
-#: man-pages/man2/fanotify_mark.2:387
-#, no-wrap
-msgid "B<ENOSPC>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man2/fanotify_mark.2:393
-msgid ""
-"The number of marks exceeds the limit of 8192 and the B<FAN_UNLIMITED_MARKS> "
-"flag was not specified when the fanotify file descriptor was created with "
-"B<fanotify_init>(2)."
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man2/fanotify_mark.2:399
-msgid ""
-"This kernel does not implement B<fanotify_mark>().  The fanotify API is "
-"available only if the kernel was configured with B<CONFIG_FANOTIFY>."
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man2/fanotify_mark.2:409
-msgid ""
-"I<flags> contains B<FAN_MARK_ONLYDIR>, and I<dirfd> and I<pathname> do not "
-"specify a directory."
-msgstr ""
-
-#. type: TP
-#: man-pages/man2/fanotify_mark.2:409
-#, no-wrap
-msgid "B<EXDEV>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man2/fanotify_mark.2:423
-msgid ""
-"The filesystem object indicated by I<pathname> resides within a filesystem "
-"subvolume (e.g., B<btrfs>(5))  which uses a different I<fsid> than its root "
-"superblock.  This error can be returned only when an fanotify file "
-"descriptor returned by B<fanotify_init>(2)  has been created with "
-"B<FAN_REPORT_FID>."
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man2/fanotify_mark.2:436
+#: man-pages/man2/fanotify_mark.2:388
 msgid ""
 "The filesystem object indicated by I<pathname> is not associated with a "
 "filesystem that supports I<fsid> (e.g., B<tmpfs>(5)).  This error can be "
@@ -8857,19 +8800,76 @@ msgid ""
 "B<fanotify_init>(2)  has been created with B<FAN_REPORT_FID>."
 msgstr ""
 
+#. type: Plain text
+#: man-pages/man2/fanotify_mark.2:397
+msgid ""
+"The filesystem object indicated by I<dirfd> and I<pathname> does not exist.  "
+"This error also occurs when trying to remove a mark from an object which is "
+"not marked."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/fanotify_mark.2:400
+msgid "The necessary memory could not be allocated."
+msgstr ""
+
 #. type: TP
-#: man-pages/man2/fanotify_mark.2:436
+#: man-pages/man2/fanotify_mark.2:400
+#, no-wrap
+msgid "B<ENOSPC>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/fanotify_mark.2:406
+msgid ""
+"The number of marks exceeds the limit of 8192 and the B<FAN_UNLIMITED_MARKS> "
+"flag was not specified when the fanotify file descriptor was created with "
+"B<fanotify_init>(2)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/fanotify_mark.2:412
+msgid ""
+"This kernel does not implement B<fanotify_mark>().  The fanotify API is "
+"available only if the kernel was configured with B<CONFIG_FANOTIFY>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/fanotify_mark.2:422
+msgid ""
+"I<flags> contains B<FAN_MARK_ONLYDIR>, and I<dirfd> and I<pathname> do not "
+"specify a directory."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/fanotify_mark.2:422
 #, no-wrap
 msgid "B<EOPNOTSUPP>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/fanotify_mark.2:447
+#: man-pages/man2/fanotify_mark.2:433
 msgid ""
 "The object indicated by I<pathname> is associated with a filesystem that "
 "does not support the encoding of file handles.  This error can be returned "
 "only when an fanotify file descriptor returned by B<fanotify_init>(2)  has "
 "been created with B<FAN_REPORT_FID>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/fanotify_mark.2:433
+#, no-wrap
+msgid "B<EXDEV>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/fanotify_mark.2:447
+msgid ""
+"The filesystem object indicated by I<pathname> resides within a filesystem "
+"subvolume (e.g., B<btrfs>(5))  which uses a different I<fsid> than its root "
+"superblock.  This error can be returned only when an fanotify file "
+"descriptor returned by B<fanotify_init>(2)  has been created with "
+"B<FAN_REPORT_FID>."
 msgstr ""
 
 #. type: Plain text

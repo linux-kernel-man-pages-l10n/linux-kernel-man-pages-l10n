@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
-"POT-Creation-Date: 2017-03-04 13:10+0300\n"
-"PO-Revision-Date: 2019-04-02 15:54+0000\n"
+"POT-Creation-Date: 2019-08-26 09:25+0300\n"
+"PO-Revision-Date: 2019-09-30 15:48+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/kruvalig/man-pages/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -5941,22 +5941,45 @@ msgstr ""
 #. type: TP
 #: man-pages/man2/kcmp.2:262
 #, no-wrap
+msgid "B<EFAULT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:267
+msgid ""
+"The epoll slot addressed by I<idx2> is outside of the user's address space."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/kcmp.2:267
+#, no-wrap
 msgid "B<EINVAL>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/kcmp.2:266
+#: man-pages/man2/kcmp.2:271
 msgid "I<type> is invalid."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/kcmp.2:266
+#: man-pages/man2/kcmp.2:271
+#, no-wrap
+msgid "B<ENOENT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/kcmp.2:276
+msgid "The target file is not present in B<epoll>(7)  instance."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/kcmp.2:276
 #, no-wrap
 msgid "B<EPERM>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/kcmp.2:281
+#: man-pages/man2/kcmp.2:291
 msgid ""
 "Insufficient permission to inspect process resources.  The B<CAP_SYS_PTRACE>"
 " capability is required to inspect processes that you do not own.  Other "
@@ -5966,37 +5989,14 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/kcmp.2:281
+#: man-pages/man2/kcmp.2:291
 #, no-wrap
 msgid "B<ESRCH>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/kcmp.2:288
-msgid "Process I<pid1> or I<pid2> does not exist."
-msgstr ""
-
-#. type: TP
-#: man-pages/man2/kcmp.2:288
-#, no-wrap
-msgid "B<EFAULT>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man2/kcmp.2:293
-msgid ""
-"The epoll slot addressed by I<idx2> is outside of the user's address space."
-msgstr ""
-
-#. type: TP
-#: man-pages/man2/kcmp.2:293
-#, no-wrap
-msgid "B<ENOENT>"
-msgstr ""
-
-#. type: Plain text
 #: man-pages/man2/kcmp.2:298
-msgid "The target file is not present in B<epoll>(7)  instance."
+msgid "Process I<pid1> or I<pid2> does not exist."
 msgstr ""
 
 #. type: SH
@@ -6362,16 +6362,16 @@ msgstr ""
 #. type: Plain text
 #: man-pages/man2/kill.2:112
 msgid ""
-"The process does not have permission to send the signal to any of the target"
-" processes."
+"The calling process does not have permission to send the signal to any of "
+"the target processes."
 msgstr ""
 
 #. type: Plain text
 #: man-pages/man2/kill.2:120
 msgid ""
-"The process or process group does not exist.  Note that an existing process "
-"might be a zombie, a process that has terminated execution, but has not yet "
-"been B<wait>(2)ed for."
+"The target process or process group does not exist.  Note that an existing "
+"process might be a zombie, a process that has terminated execution, but has "
+"not yet been B<wait>(2)ed for."
 msgstr ""
 
 #. type: Plain text

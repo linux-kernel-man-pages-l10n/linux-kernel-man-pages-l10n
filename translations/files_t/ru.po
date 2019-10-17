@@ -4167,50 +4167,13 @@ msgstr ""
 "I<errno> устанавливается в соответствующее значение."
 
 #. type: TP
-#: man-pages/man2/tkill.2:97
-#, no-wrap
-msgid "B<EINVAL>"
-msgstr "B<EINVAL>"
-
-#. type: Plain text
-#: man-pages/man2/tkill.2:100
-msgid "An invalid thread ID, thread group ID, or signal was specified."
-msgstr "Указан некорректный идентификатор нити, группы или сигнал. "
-
-#. type: TP
-#: man-pages/man2/tkill.2:100
-#, no-wrap
-msgid "B<EPERM>"
-msgstr "B<EPERM>"
-
-#. type: Plain text
-#: man-pages/man2/tkill.2:105
-msgid "Permission denied.  For the required permissions, see B<kill>(2)."
-msgstr ""
-"Отказано в доступе. См. B<kill>(2) для получения подробностей о необходимом "
-"доступе."
-
-#. type: TP
-#: man-pages/man2/tkill.2:105
-#, no-wrap
-msgid "B<ESRCH>"
-msgstr "B<ESRCH>"
-
-#. type: Plain text
-#: man-pages/man2/tkill.2:108
-msgid "No process with the specified thread ID (and thread group ID) exists."
-msgstr ""
-"Не существует процесса с указанным идентификатором нити (и идентификатором "
-"группы)."
-
-#. type: TP
-#: man-pages/man2/tkill.2:108 man-pages/man2/tkill.2:115
+#: man-pages/man2/tkill.2:97 man-pages/man2/tkill.2:104
 #, no-wrap
 msgid "B<EAGAIN>"
 msgstr "B<EAGAIN>"
 
 #. type: Plain text
-#: man-pages/man2/tkill.2:115
+#: man-pages/man2/tkill.2:104
 msgid ""
 "The B<RLIMIT_SIGPENDING> resource limit was reached and I<sig> is a real-"
 "time signal."
@@ -4219,12 +4182,49 @@ msgstr ""
 "реального времени."
 
 #. type: Plain text
-#: man-pages/man2/tkill.2:120
+#: man-pages/man2/tkill.2:109
 msgid ""
 "Insufficient kernel memory was available and I<sig> is a real-time signal."
 msgstr ""
 "Недостаточное количество памяти ядра и I<sig> содержит сигнал реального "
 "времени."
+
+#. type: TP
+#: man-pages/man2/tkill.2:109
+#, no-wrap
+msgid "B<EINVAL>"
+msgstr "B<EINVAL>"
+
+#. type: Plain text
+#: man-pages/man2/tkill.2:112
+msgid "An invalid thread ID, thread group ID, or signal was specified."
+msgstr "Указан некорректный идентификатор нити, группы или сигнал. "
+
+#. type: TP
+#: man-pages/man2/tkill.2:112
+#, no-wrap
+msgid "B<EPERM>"
+msgstr "B<EPERM>"
+
+#. type: Plain text
+#: man-pages/man2/tkill.2:117
+msgid "Permission denied.  For the required permissions, see B<kill>(2)."
+msgstr ""
+"Отказано в доступе. См. B<kill>(2) для получения подробностей о необходимом "
+"доступе."
+
+#. type: TP
+#: man-pages/man2/tkill.2:117
+#, no-wrap
+msgid "B<ESRCH>"
+msgstr "B<ESRCH>"
+
+#. type: Plain text
+#: man-pages/man2/tkill.2:120
+msgid "No process with the specified thread ID (and thread group ID) exists."
+msgstr ""
+"Не существует процесса с указанным идентификатором нити (и идентификатором "
+"группы)."
 
 #. type: Plain text
 #: man-pages/man2/tkill.2:125
@@ -13392,30 +13392,30 @@ msgid "Bad file descriptor."
 msgstr "Неправильный дескриптор файла."
 
 #. type: Plain text
-#: man-pages/man3/ttyname.3:69
-msgid "File descriptor does not refer to a terminal device."
-msgstr "Файловый дескриптор указывает не на устройство терминала."
-
-#. type: TP
-#: man-pages/man3/ttyname.3:69
-#, no-wrap
-msgid "B<ERANGE>"
-msgstr "B<ERANGE>"
-
-#. type: Plain text
-#: man-pages/man3/ttyname.3:74
-msgid ""
-"(B<ttyname_r>())  I<buflen> was too small to allow storing the pathname."
-msgstr "(B<ttyname_r>()) Значение I<buflen> мало для хранения имени пути."
-
-#. type: Plain text
-#: man-pages/man3/ttyname.3:79
+#: man-pages/man3/ttyname.3:71
 msgid ""
 "File descriptor refers to a slave pseudoterminal device but the "
 "corresponding pathname could not be found (see NOTES)."
 msgstr ""
 "Файловые дескрипторы ссылаются на устройство подчинённого псевдотерминала, "
 "но соответствующий путь невозможно найти (смотрите ЗАМЕЧАНИЯ)."
+
+#. type: Plain text
+#: man-pages/man3/ttyname.3:74
+msgid "File descriptor does not refer to a terminal device."
+msgstr "Файловый дескриптор указывает не на устройство терминала."
+
+#. type: TP
+#: man-pages/man3/ttyname.3:74
+#, no-wrap
+msgid "B<ERANGE>"
+msgstr "B<ERANGE>"
+
+#. type: Plain text
+#: man-pages/man3/ttyname.3:79
+msgid ""
+"(B<ttyname_r>())  I<buflen> was too small to allow storing the pathname."
+msgstr "(B<ttyname_r>()) Значение I<buflen> мало для хранения имени пути."
 
 #. type: tbl table
 #: man-pages/man3/ttyname.3:89

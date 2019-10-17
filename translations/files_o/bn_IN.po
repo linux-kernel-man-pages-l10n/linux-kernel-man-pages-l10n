@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
-"POT-Creation-Date: 2019-08-26 09:26+0300\n"
-"PO-Revision-Date: 2019-08-26 06:21+0000\n"
+"POT-Creation-Date: 2019-09-30 18:46+0300\n"
+"PO-Revision-Date: 2019-09-30 15:48+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Bengali (India) (http://www.transifex.com/kruvalig/man-pages/language/bn_IN/)\n"
 "MIME-Version: 1.0\n"
@@ -75,9 +75,15 @@ msgid "Associativity"
 msgstr ""
 
 #. type: tbl table
+#: man-pages/man7/operator.7:49
+#, no-wrap
+msgid "Notes"
+msgstr ""
+
+#. type: tbl table
 #: man-pages/man7/operator.7:50
 #, no-wrap
-msgid "() [] -E<gt> ."
+msgid "() [] -E<gt> . ++ --"
 msgstr ""
 
 #. type: tbl table
@@ -91,6 +97,12 @@ msgstr ""
 msgid "left to right"
 msgstr ""
 
+#. type: IP
+#: man-pages/man7/operator.7:50 man-pages/man7/operator.7:70
+#, no-wrap
+msgid "[1]"
+msgstr ""
+
 #. type: tbl table
 #: man-pages/man7/operator.7:51
 #, no-wrap
@@ -102,6 +114,12 @@ msgstr ""
 #: man-pages/man7/operator.7:63
 #, no-wrap
 msgid "right to left"
+msgstr ""
+
+#. type: IP
+#: man-pages/man7/operator.7:51 man-pages/man7/operator.7:73
+#, no-wrap
+msgid "[2]"
 msgstr ""
 
 #. type: tbl table
@@ -180,6 +198,25 @@ msgstr ""
 #: man-pages/man7/operator.7:64
 #, no-wrap
 msgid ","
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/operator.7:68
+msgid "The following notes provide further information to the above table:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/operator.7:73
+msgid ""
+"The ++ and -- operators at this precedence level are the postfix flavors of "
+"the operators."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/operator.7:76
+msgid ""
+"The ++ and -- operators at this precedence level are the prefix flavors of "
+"the operators."
 msgstr ""
 
 #. type: TH
@@ -2086,7 +2123,7 @@ msgstr ""
 #. type: Plain text
 #: man-pages/man2/open.2:579
 msgid ""
-"Note that ithe setting of this flag has no effect on the operation of "
+"Note that the setting of this flag has no effect on the operation of "
 "B<poll>(2), B<select>(2), B<epoll>(7), and similar, since those interfaces "
 "merely inform the caller about whether a file descriptor is \"ready\", "
 "meaning that an I/O operation performed on the file descriptor with the "

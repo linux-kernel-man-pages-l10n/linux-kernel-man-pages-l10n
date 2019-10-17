@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-09-19 05:22+0300\n"
-"PO-Revision-Date: 2019-09-19 02:26+0000\n"
+"PO-Revision-Date: 2019-09-30 15:49+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Spanish (http://www.transifex.com/kruvalig/man-pages/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -14714,8 +14714,8 @@ msgid ""
 "B<sched_get_priority_min>(2), B<sched_getaffinity>(2), B<sched_getparam>(2),"
 " B<sched_getscheduler>(2), B<sched_rr_get_interval>(2), "
 "B<sched_setaffinity>(2), B<sched_setparam>(2), B<sched_setscheduler>(2), "
-"B<sched_yield>(2), B<setpriority>(2), B<pthread_getschedparam>(3), "
-"B<pthread_getaffinity_np>(3), B<pthread_setaffinity_np>(3), "
+"B<sched_yield>(2), B<setpriority>(2), B<pthread_getaffinity_np>(3), "
+"B<pthread_getschedparam>(3), B<pthread_setaffinity_np>(3), "
 "B<sched_getcpu>(3), B<capabilities>(7), B<cpuset>(7)"
 msgstr ""
 
@@ -21417,19 +21417,21 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:116
+#: man-pages/man2/sched_setaffinity.2:119
 msgid ""
-"On success, B<sched_setaffinity>()  and B<sched_getaffinity>()  return 0.  "
-"On error, -1 is returned, and I<errno> is set appropriately."
+"On success, B<sched_setaffinity>()  and B<sched_getaffinity>()  return 0 "
+"(but see \"C library/kernel differences\" below, which notes that the "
+"underlying B<sched_getaffinity>()  differs in its return value).  On error, "
+"-1 is returned, and I<errno> is set appropriately."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:120
+#: man-pages/man2/sched_setaffinity.2:123
 msgid "A supplied memory address was invalid."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:130
+#: man-pages/man2/sched_setaffinity.2:133
 msgid ""
 "The affinity bit mask I<mask> contains no processors that are currently "
 "physically on the system and permitted to the thread according to any "
@@ -21438,7 +21440,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:137
+#: man-pages/man2/sched_setaffinity.2:140
 msgid ""
 "(B<sched_getaffinity>()  and, in kernels before 2.6.9, "
 "B<sched_setaffinity>())  I<cpusetsize> is smaller than the size of the "
@@ -21446,7 +21448,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:148
+#: man-pages/man2/sched_setaffinity.2:151
 msgid ""
 "(B<sched_setaffinity>())  The calling thread does not have appropriate "
 "privileges.  The caller needs an effective user ID equal to the real user ID"
@@ -21455,7 +21457,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:162
+#: man-pages/man2/sched_setaffinity.2:165
 msgid ""
 "The CPU affinity system calls were introduced in Linux kernel 2.5.8.  The "
 "system call wrappers were introduced in glibc 2.3.  Initially, the glibc "
@@ -21465,12 +21467,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:164
+#: man-pages/man2/sched_setaffinity.2:167
 msgid "These system calls are Linux-specific."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:177
+#: man-pages/man2/sched_setaffinity.2:180
 msgid ""
 "After a call to B<sched_setaffinity>(), the set of CPUs on which the thread "
 "will actually run is the intersection of the set specified in the I<mask> "
@@ -21482,7 +21484,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:189
+#: man-pages/man2/sched_setaffinity.2:192
 msgid ""
 "There are various ways of determining the number of CPUs available on the "
 "system, including: inspecting the contents of I</proc/cpuinfo>; using "
@@ -21492,12 +21494,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:192
+#: man-pages/man2/sched_setaffinity.2:195
 msgid "B<sched>(7)  has a description of the Linux scheduling scheme."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:209
+#: man-pages/man2/sched_setaffinity.2:212
 msgid ""
 "The affinity mask is a per-thread attribute that can be adjusted "
 "independently for each of the threads in a thread group.  The value returned"
@@ -21510,7 +21512,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:227
+#: man-pages/man2/sched_setaffinity.2:230
 msgid ""
 "The I<isolcpus> boot option can be used to isolate one or more CPUs at boot "
 "time, so that no processes are scheduled onto those CPUs.  Following the use"
@@ -21523,14 +21525,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:233
+#: man-pages/man2/sched_setaffinity.2:236
 msgid ""
 "A child created via B<fork>(2)  inherits its parent's CPU affinity mask.  "
 "The affinity mask is preserved across an B<execve>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:241
+#: man-pages/man2/sched_setaffinity.2:244
 msgid ""
 "This manual page describes the glibc interface for the CPU affinity calls.  "
 "The actual system call interface is slightly different, with the I<mask> "
@@ -21539,7 +21541,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:253
+#: man-pages/man2/sched_setaffinity.2:256
 msgid ""
 "On success, the raw B<sched_getaffinity>()  system call returns the number "
 "of bytes placed copied into the I<mask> buffer; this will be the minimum of "
@@ -21548,7 +21550,7 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/sched_setaffinity.2:253
+#: man-pages/man2/sched_setaffinity.2:256
 #, no-wrap
 msgid "Handling systems with large CPU affinity masks"
 msgstr ""
@@ -21556,7 +21558,7 @@ msgstr ""
 #.  FIXME . See https://sourceware.org/bugzilla/show_bug.cgi?id=15630
 #.  and https://sourceware.org/ml/libc-alpha/2013-07/msg00288.html
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:265
+#: man-pages/man2/sched_setaffinity.2:268
 msgid ""
 "The underlying system calls (which represent CPU masks as bit masks of type "
 "I<unsigned long\\ *>)  impose no restriction on the size of the CPU mask.  "
@@ -21567,13 +21569,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:267
+#: man-pages/man2/sched_setaffinity.2:270
 #, no-wrap
 msgid "    sched_getaffinity(pid, sizeof(cpu_set_t), &mask);\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:277
+#: man-pages/man2/sched_setaffinity.2:280
 msgid ""
 "fail with the error B<EINVAL>, the error produced by the underlying system "
 "call for the case where the I<mask> size specified in I<cpusetsize> is "
@@ -21583,7 +21585,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:288
+#: man-pages/man2/sched_setaffinity.2:291
 msgid ""
 "When working on systems with large kernel CPU affinity masks, one must "
 "dynamically allocate the I<mask> argument (see B<CPU_ALLOC>(3)).  Currently,"
@@ -21593,7 +21595,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:303
+#: man-pages/man2/sched_setaffinity.2:306
 msgid ""
 "Be aware that B<CPU_ALLOC>(3)  may allocate a slightly larger CPU set than "
 "requested (because CPU sets are implemented as bit masks allocated in units "
@@ -21606,7 +21608,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:312
+#: man-pages/man2/sched_setaffinity.2:315
 msgid ""
 "The program below creates a child process.  The parent and child then each "
 "assign themselves to a specified CPU and execute identical loops that "
@@ -21617,7 +21619,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:316
+#: man-pages/man2/sched_setaffinity.2:319
 msgid ""
 "As the sample runs below demonstrate, the amount of real and CPU time "
 "consumed when running the program will depend on intra-core caching effects "
@@ -21625,14 +21627,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:321
+#: man-pages/man2/sched_setaffinity.2:324
 msgid ""
 "We first employ B<lscpu>(1)  to determine that this (x86)  system has two "
 "cores, each with two CPUs:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:328
+#: man-pages/man2/sched_setaffinity.2:331
 #, no-wrap
 msgid ""
 "$ B<lscpu | egrep -i 'core.*:|socket'>\n"
@@ -21642,7 +21644,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:335
+#: man-pages/man2/sched_setaffinity.2:338
 msgid ""
 "We then time the operation of the example program for three cases: both "
 "processes running on the same CPU; both processes running on different CPUs "
@@ -21651,7 +21653,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:350
+#: man-pages/man2/sched_setaffinity.2:353
 #, no-wrap
 msgid ""
 "$ B<time -p ./a.out 0 0 100000000>\n"
@@ -21669,13 +21671,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/sched_setaffinity.2:352
+#: man-pages/man2/sched_setaffinity.2:355
 #, no-wrap
 msgid "Program source"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:361
+#: man-pages/man2/sched_setaffinity.2:364
 #, no-wrap
 msgid ""
 "#define _GNU_SOURCE\n"
@@ -21687,7 +21689,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:364
+#: man-pages/man2/sched_setaffinity.2:367
 #, no-wrap
 msgid ""
 "#define errExit(msg)    do { perror(msg); exit(EXIT_FAILURE); \\e\n"
@@ -21695,7 +21697,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:371
+#: man-pages/man2/sched_setaffinity.2:374
 #, no-wrap
 msgid ""
 "int\n"
@@ -21707,7 +21709,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:377
+#: man-pages/man2/sched_setaffinity.2:380
 #, no-wrap
 msgid ""
 "    if (argc != 4) {\n"
@@ -21718,7 +21720,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:381
+#: man-pages/man2/sched_setaffinity.2:384
 #, no-wrap
 msgid ""
 "    parentCPU = atoi(argv[1]);\n"
@@ -21727,13 +21729,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:383
+#: man-pages/man2/sched_setaffinity.2:386
 #, no-wrap
 msgid "    CPU_ZERO(&set);\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:387
+#: man-pages/man2/sched_setaffinity.2:390
 #, no-wrap
 msgid ""
 "    switch (fork()) {\n"
@@ -21742,7 +21744,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:390
+#: man-pages/man2/sched_setaffinity.2:393
 #, no-wrap
 msgid ""
 "    case 0:             /* Child */\n"
@@ -21750,8 +21752,8 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:393
-#: man-pages/man2/sched_setaffinity.2:404
+#: man-pages/man2/sched_setaffinity.2:396
+#: man-pages/man2/sched_setaffinity.2:407
 #, no-wrap
 msgid ""
 "        if (sched_setaffinity(getpid(), sizeof(set), &set) == -1)\n"
@@ -21759,8 +21761,8 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:396
-#: man-pages/man2/sched_setaffinity.2:407
+#: man-pages/man2/sched_setaffinity.2:399
+#: man-pages/man2/sched_setaffinity.2:410
 #, no-wrap
 msgid ""
 "        for (j = 0; j E<lt> nloops; j++)\n"
@@ -21768,13 +21770,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:398
+#: man-pages/man2/sched_setaffinity.2:401
 #, no-wrap
 msgid "        exit(EXIT_SUCCESS);\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:401
+#: man-pages/man2/sched_setaffinity.2:404
 #, no-wrap
 msgid ""
 "    default:            /* Parent */\n"
@@ -21782,7 +21784,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:412
+#: man-pages/man2/sched_setaffinity.2:415
 #, no-wrap
 msgid ""
 "        wait(NULL);     /* Wait for child to terminate */\n"
@@ -21792,7 +21794,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sched_setaffinity.2:436
+#: man-pages/man2/sched_setaffinity.2:439
 msgid ""
 "B<lscpu>(1), B<nproc>(1), B<taskset>(1), B<clone>(2), B<getcpu>(2), "
 "B<getpriority>(2), B<gettid>(2), B<nice>(2), B<sched_get_priority_max>(2), "
@@ -33821,27 +33823,28 @@ msgstr ""
 
 #.  Above check is in fs/namespace.c:mntns_install() [3.8 source]
 #. type: Plain text
-#: man-pages/man2/setns.2:137
+#: man-pages/man2/setns.2:141
 msgid ""
-"A process may not be reassociated with a new mount namespace if it is "
-"multithreaded."
+"A process can't join a new mount namespace if it is sharing filesystem-"
+"related attributes (the attributes whose sharing is controlled by the "
+"B<clone>(2)  B<CLONE_FS> flag) with another process."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:141
+#: man-pages/man2/setns.2:145
 msgid ""
 "See B<user_namespaces>(7)  for details on the interaction of user namespaces"
 " and mount namespaces."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/setns.2:141
+#: man-pages/man2/setns.2:145
 #, no-wrap
 msgid "PID namespaces"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:148
+#: man-pages/man2/setns.2:152
 msgid ""
 "In order to reassociate itself with a new PID namespace, the caller must "
 "have the B<CAP_SYS_ADMIN> capability both in its own user namespace and in "
@@ -33849,7 +33852,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:157
+#: man-pages/man2/setns.2:161
 msgid ""
 "If I<fd> refers to a PID namespace, the semantics are somewhat different "
 "from other namespace types: reassociating the calling thread with a PID "
@@ -33859,7 +33862,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:163
+#: man-pages/man2/setns.2:167
 msgid ""
 "Reassociating with a PID namespace is allowed only if the PID namespace "
 "specified by I<fd> is a descendant (child, grandchild, etc.)  of the PID "
@@ -33867,18 +33870,18 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:166
+#: man-pages/man2/setns.2:170
 msgid "For further details on PID namespaces, see B<pid_namespaces>(7)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/setns.2:166
+#: man-pages/man2/setns.2:170
 #, no-wrap
 msgid "Cgroup namespaces"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:173
+#: man-pages/man2/setns.2:177
 msgid ""
 "In order to reassociate itself with a new cgroup namespace, the caller must "
 "have the B<CAP_SYS_ADMIN> capability both in its own user namespace and in "
@@ -33886,20 +33889,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:178
+#: man-pages/man2/setns.2:182
 msgid ""
 "Using B<setns>()  to change the caller's cgroup namespace does not change "
 "the caller's cgroup memberships."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/setns.2:178
+#: man-pages/man2/setns.2:182
 #, no-wrap
 msgid "Network, IPC, and UTS namespaces"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:185
+#: man-pages/man2/setns.2:189
 msgid ""
 "In order to reassociate itself with a new network, IPC, or UTS namespace, "
 "the caller must have the B<CAP_SYS_ADMIN> capability both in its own user "
@@ -33907,34 +33910,34 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:192
+#: man-pages/man2/setns.2:196
 msgid ""
 "On success, B<setns>()  returns 0.  On failure, -1 is returned and I<errno> "
 "is set to indicate the error."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:202
+#: man-pages/man2/setns.2:206
 msgid ""
 "I<fd> refers to a namespace whose type does not match that specified in "
 "I<nstype>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:206
+#: man-pages/man2/setns.2:210
 msgid ""
 "There is problem with reassociating the thread with the specified namespace."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:211
+#: man-pages/man2/setns.2:215
 msgid ""
 "The caller tried to join an ancestor (parent, grandparent, and so on)  PID "
 "namespace."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:215
+#: man-pages/man2/setns.2:219
 msgid ""
 "The caller attempted to join the user namespace in which it is already a "
 "member."
@@ -33942,7 +33945,7 @@ msgstr ""
 
 #.  commit e66eded8309ebf679d3d3c1f5820d1f2ca332c71
 #. type: Plain text
-#: man-pages/man2/setns.2:222
+#: man-pages/man2/setns.2:226
 msgid ""
 "The caller shares filesystem (B<CLONE_FS>)  state (in particular, the root "
 "directory)  with other processes and tried to join a new user namespace."
@@ -33950,42 +33953,42 @@ msgstr ""
 
 #.  See kernel/user_namespace.c::userns_install() [kernel 3.15 sources]
 #. type: Plain text
-#: man-pages/man2/setns.2:226
+#: man-pages/man2/setns.2:230
 msgid "The caller is multithreaded and tried to join a new user namespace."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:229
+#: man-pages/man2/setns.2:233
 msgid "Cannot allocate sufficient memory to change the specified namespace."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:233
+#: man-pages/man2/setns.2:237
 msgid ""
 "The calling thread did not have the required capability for this operation."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:238
+#: man-pages/man2/setns.2:242
 msgid ""
 "The B<setns>()  system call first appeared in Linux in kernel 3.0; library "
 "support was added to glibc in version 2.14."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:242
+#: man-pages/man2/setns.2:246
 msgid "The B<setns>()  system call is Linux-specific."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:248
+#: man-pages/man2/setns.2:252
 msgid ""
 "Not all of the attributes that can be shared when a new thread is created "
 "using B<clone>(2)  can be changed using B<setns>()."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:257
+#: man-pages/man2/setns.2:261
 msgid ""
 "The program below takes two or more arguments.  The first argument specifies"
 " the pathname of a namespace file in an existing I</proc/[pid]/ns/> "
@@ -33995,7 +33998,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:267
+#: man-pages/man2/setns.2:271
 msgid ""
 "The following shell session demonstrates the use of this program (compiled "
 "as a binary named I<ns_exec>)  in conjunction with the B<CLONE_NEWUTS> "
@@ -34004,7 +34007,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:275
+#: man-pages/man2/setns.2:279
 msgid ""
 "We begin by executing the example program in B<clone>(2)  in the background."
 "  That program creates a child in a separate UTS namespace.  The child "
@@ -34014,7 +34017,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:287
+#: man-pages/man2/setns.2:291
 #, no-wrap
 msgid ""
 "$ B<su>                   # Need privilege for namespace operations\n"
@@ -34029,7 +34032,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:294
+#: man-pages/man2/setns.2:298
 msgid ""
 "We then run the program shown below, using it to execute a shell.  Inside "
 "that shell, we verify that the hostname is the one set by the child created "
@@ -34037,7 +34040,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:300
+#: man-pages/man2/setns.2:304
 #, no-wrap
 msgid ""
 "# B<./ns_exec /proc/3550/ns/uts /bin/bash>\n"
@@ -34046,7 +34049,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:310
+#: man-pages/man2/setns.2:314
 #, no-wrap
 msgid ""
 "#define _GNU_SOURCE\n"
@@ -34058,7 +34061,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:318
+#: man-pages/man2/setns.2:322
 #, no-wrap
 msgid ""
 "int\n"
@@ -34068,7 +34071,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:323
+#: man-pages/man2/setns.2:327
 #, no-wrap
 msgid ""
 "    if (argc E<lt> 3) {\n"
@@ -34078,7 +34081,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:327
+#: man-pages/man2/setns.2:331
 #, no-wrap
 msgid ""
 "    fd = open(argv[1], O_RDONLY); /* Get file descriptor for namespace */\n"
@@ -34087,7 +34090,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:330
+#: man-pages/man2/setns.2:334
 #, no-wrap
 msgid ""
 "    if (setns(fd, 0) == -1)       /* Join that namespace */\n"
@@ -34095,7 +34098,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:334
+#: man-pages/man2/setns.2:338
 #, no-wrap
 msgid ""
 "    execvp(argv[2], &argv[2]);    /* Execute a command in namespace */\n"
@@ -34104,7 +34107,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/setns.2:342
+#: man-pages/man2/setns.2:346
 msgid ""
 "B<nsenter>(1), B<clone>(2), B<fork>(2), B<unshare>(2), B<vfork>(2), "
 "B<namespaces>(7), B<unix>(7)"
@@ -38816,7 +38819,7 @@ msgstr ""
 #. type: Plain text
 #: man-pages/man2/sched_setparam.2:136
 msgid ""
-"B<gettid>(2), B<getpriority>(2), B<nice>(2), B<sched_get_priority_max>(2), "
+"B<getpriority>(2), B<gettid>(2), B<nice>(2), B<sched_get_priority_max>(2), "
 "B<sched_get_priority_min>(2), B<sched_getaffinity>(2), "
 "B<sched_getscheduler>(2), B<sched_setaffinity>(2), B<sched_setattr>(2), "
 "B<sched_setscheduler>(2), B<setpriority>(2), B<capabilities>(7), B<sched>(7)"
@@ -41534,7 +41537,7 @@ msgid "Thread semantics"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:264
+#: man-pages/man2/signalfd.2:265
 msgid ""
 "The semantics of signalfd file descriptors in a multithreaded program mirror"
 " the standard semantics for signals.  In other words, when a thread reads "
@@ -41544,8 +41547,31 @@ msgid ""
 "are directed to other threads in the process.)"
 msgstr ""
 
+#. type: SS
+#: man-pages/man2/signalfd.2:265
+#, no-wrap
+msgid "epoll(7) semantics"
+msgstr ""
+
 #. type: Plain text
-#: man-pages/man2/signalfd.2:278
+#: man-pages/man2/signalfd.2:291
+msgid ""
+"If a process adds (via B<epoll_ctl>(2))  a signalfd file descriptor to an "
+"B<epoll>(7)  instance, then B<epoll_wait>(2)  returns events only for "
+"signals sent to that process.  In particular, if the process then uses "
+"B<fork>()  to create a child process, then the child will be able to "
+"B<read>(2)  signals that are sent to it using the signalfd file descriptor, "
+"but B<epoll_wait>(2)  will B<not> indicate that the signalfd file descriptor"
+" is ready.  In this scenario, a possible workaround is that after the "
+"B<fork>(2), the child process can close the signalfd file descriptor that it"
+" inherited from the parent process and then create another signalfd file "
+"descriptor and add it to the epoll instance.  Alternatively, the parent and "
+"the child could delay creating their (separate) signalfd file descriptors "
+"and adding them to the epoll instance until after the call to B<fork>(2)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/signalfd.2:305
 msgid ""
 "On success, B<signalfd>()  returns a signalfd file descriptor; this is "
 "either a new file descriptor (if I<fd> was -1), or I<fd> if I<fd> was a "
@@ -41554,7 +41580,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:284
+#: man-pages/man2/signalfd.2:311
 msgid "The I<fd> file descriptor is not a valid file descriptor."
 msgstr ""
 
@@ -41563,30 +41589,30 @@ msgstr ""
 #.  argument is not equal to
 #.  .IR sizeof(sigset_t) ;
 #. type: Plain text
-#: man-pages/man2/signalfd.2:292
+#: man-pages/man2/signalfd.2:319
 msgid "I<fd> is not a valid signalfd file descriptor."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:299
+#: man-pages/man2/signalfd.2:326
 msgid ""
 "I<flags> is invalid; or, in Linux 2.6.26 or earlier, I<flags> is nonzero."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:309
+#: man-pages/man2/signalfd.2:336
 msgid "Could not mount (internal) anonymous inode device."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:312
+#: man-pages/man2/signalfd.2:339
 msgid ""
 "There was insufficient memory to create a new signalfd file descriptor."
 msgstr ""
 
 #.  signalfd() is in glibc 2.7, but reportedly does not build
 #. type: Plain text
-#: man-pages/man2/signalfd.2:320
+#: man-pages/man2/signalfd.2:347
 msgid ""
 "B<signalfd>()  is available on Linux since kernel 2.6.22.  Working support "
 "is provided in glibc since version 2.8.  The B<signalfd4>()  system call "
@@ -41594,12 +41620,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:325
+#: man-pages/man2/signalfd.2:352
 msgid "B<signalfd>()  and B<signalfd4>()  are Linux-specific."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:339
+#: man-pages/man2/signalfd.2:366
 msgid ""
 "A process can create multiple signalfd file descriptors.  This makes it "
 "possible to accept different signals on different file descriptors.  (This "
@@ -41611,14 +41637,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:347
+#: man-pages/man2/signalfd.2:374
 msgid ""
 "Attempts to include B<SIGKILL> and B<SIGSTOP> in I<mask> are silently "
 "ignored."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:356
+#: man-pages/man2/signalfd.2:383
 msgid ""
 "The signal mask employed by a signalfd file descriptor can be viewed via the"
 " entry for the corresponding file descriptor in the process's "
@@ -41626,13 +41652,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/signalfd.2:356
+#: man-pages/man2/signalfd.2:383
 #, no-wrap
 msgid "Limitations"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:365
+#: man-pages/man2/signalfd.2:392
 msgid ""
 "The signalfd mechanism can't be used to receive signals that are "
 "synchronously generated, such as the B<SIGSEGV> signal that results from "
@@ -41642,7 +41668,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:386
+#: man-pages/man2/signalfd.2:413
 msgid ""
 "As described above, in normal usage one blocks the signals that will be "
 "accepted via B<signalfd>().  If spawning a child process to execute a helper"
@@ -41653,11 +41679,11 @@ msgid ""
 " of a helper program spawned behind the scenes by any library function that "
 "the program may call.  In such cases, one must fall back to using a "
 "traditional signal handler that writes to a file descriptor monitored by "
-"B<select>(2), B<poll>(2), or B<epoll>(7),"
+"B<select>(2), B<poll>(2), or B<epoll>(7)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:396
+#: man-pages/man2/signalfd.2:423
 msgid ""
 "The underlying Linux system call requires an additional argument, I<size_t "
 "sizemask>, which specifies the size of the I<mask> argument.  The glibc "
@@ -41666,7 +41692,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:412
+#: man-pages/man2/signalfd.2:439
 msgid ""
 "There are two underlying Linux system calls: B<signalfd>()  and the more "
 "recent B<signalfd4>().  The former system call does not implement a I<flags>"
@@ -41677,14 +41703,14 @@ msgstr ""
 
 #.  The fix also was put into 2.6.24.5
 #. type: Plain text
-#: man-pages/man2/signalfd.2:420
+#: man-pages/man2/signalfd.2:447
 msgid ""
 "In kernels before 2.6.25, the I<ssi_ptr> and I<ssi_int> fields are not "
 "filled in with the data accompanying a signal sent by B<sigqueue>(3)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:430
+#: man-pages/man2/signalfd.2:457
 msgid ""
 "The program below accepts the signals B<SIGINT> and B<SIGQUIT> via a "
 "signalfd file descriptor.  The program terminates after accepting a "
@@ -41693,7 +41719,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:441
+#: man-pages/man2/signalfd.2:468
 #, no-wrap
 msgid ""
 "$B< ./signalfd_demo>\n"
@@ -41707,7 +41733,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:451
+#: man-pages/man2/signalfd.2:478
 #, no-wrap
 msgid ""
 "#include E<lt>sys/signalfd.hE<gt>\n"
@@ -41718,7 +41744,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:462
+#: man-pages/man2/signalfd.2:489
 #, no-wrap
 msgid ""
 "int\n"
@@ -41731,7 +41757,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:466
+#: man-pages/man2/signalfd.2:493
 #, no-wrap
 msgid ""
 "    sigemptyset(&mask);\n"
@@ -41740,7 +41766,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:469
+#: man-pages/man2/signalfd.2:496
 #, no-wrap
 msgid ""
 "    /* Block signals so that they aren\\(aqt handled\n"
@@ -41748,7 +41774,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:472
+#: man-pages/man2/signalfd.2:499
 #, no-wrap
 msgid ""
 "    if (sigprocmask(SIG_BLOCK, &mask, NULL) == -1)\n"
@@ -41756,7 +41782,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:476
+#: man-pages/man2/signalfd.2:503
 #, no-wrap
 msgid ""
 "    sfd = signalfd(-1, &mask, 0);\n"
@@ -41765,7 +41791,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:481
+#: man-pages/man2/signalfd.2:508
 #, no-wrap
 msgid ""
 "    for (;;) {\n"
@@ -41775,7 +41801,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:492
+#: man-pages/man2/signalfd.2:519
 #, no-wrap
 msgid ""
 "        if (fdsi.ssi_signo == SIGINT) {\n"
@@ -41791,7 +41817,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/signalfd.2:505
+#: man-pages/man2/signalfd.2:532
 msgid ""
 "B<eventfd>(2), B<poll>(2), B<read>(2), B<select>(2), B<sigaction>(2), "
 "B<sigprocmask>(2), B<sigwaitinfo>(2), B<timerfd_create>(2), B<sigsetops>(3),"
@@ -50840,8 +50866,8 @@ msgstr ""
 #. type: Plain text
 #: man-pages/man3/strtol.3:303
 msgid ""
-"B<atof>(3), B<atoi>(3), B<atol>(3), B<strtod>(3), B<strtoul>(3), "
-"B<strtoimax>(3)"
+"B<atof>(3), B<atoi>(3), B<atol>(3), B<strtod>(3), B<strtoimax>(3)  "
+"B<strtoul>(3),"
 msgstr ""
 
 #. type: TH
@@ -56081,75 +56107,84 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/strtok.3:156
+#: man-pages/man3/strtok.3:157
 msgid ""
 "On the first call to B<strtok_r>(), I<str> should point to the string to be "
-"parsed, and the value of I<saveptr> is ignored.  In subsequent calls, I<str>"
-" should be NULL, and I<saveptr> should be unchanged since the previous call."
+"parsed, and the value of I<*saveptr> is ignored (but see NOTES).  In "
+"subsequent calls, I<str> should be NULL, and I<saveptr> (and the buffer that"
+" it points to)  should be unchanged since the previous call."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/strtok.3:162
+#: man-pages/man3/strtok.3:163
 msgid ""
 "Different strings may be parsed concurrently using sequences of calls to "
 "B<strtok_r>()  that specify different I<saveptr> arguments."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/strtok.3:169
+#: man-pages/man3/strtok.3:170
 msgid ""
 "The B<strtok>()  and B<strtok_r>()  functions return a pointer to the next "
 "token, or NULL if there are no more tokens."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/strtok.3:179 man-pages/man3/strtok.3:185
+#: man-pages/man3/strtok.3:180 man-pages/man3/strtok.3:186
 #, no-wrap
 msgid "B<strtok>()"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/strtok.3:179
+#: man-pages/man3/strtok.3:180
 #, no-wrap
 msgid "MT-Unsafe race:strtok"
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/strtok.3:182 man-pages/man3/strtok.3:188
+#: man-pages/man3/strtok.3:183 man-pages/man3/strtok.3:189
 #, no-wrap
 msgid "B<strtok_r>()"
 msgstr ""
 
+#.  Tru64, according to its manual page
 #. type: Plain text
-#: man-pages/man3/strtok.3:194
+#: man-pages/man3/strtok.3:200
+msgid ""
+"On some implementations, I<*saveptr> is required to be NULL on the first "
+"call to B<strtok_r>()  that is being used to parse I<str>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/strtok.3:203
 msgid ""
 "Be cautious when using these functions.  If you do use them, note that:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/strtok.3:196
+#: man-pages/man3/strtok.3:205
 msgid "These functions modify their first argument."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/strtok.3:198
+#: man-pages/man3/strtok.3:207
 msgid "These functions cannot be used on constant strings."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/strtok.3:200
+#: man-pages/man3/strtok.3:209
 msgid "The identity of the delimiting byte is lost."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/strtok.3:207
+#: man-pages/man3/strtok.3:216
 msgid ""
 "The B<strtok>()  function uses a static buffer while parsing, so it's not "
 "thread safe.  Use B<strtok_r>()  if this matters to you."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/strtok.3:216
+#: man-pages/man3/strtok.3:225
 msgid ""
 "The program below uses nested loops that employ B<strtok_r>()  to break a "
 "string into a two-level hierarchy of tokens.  The first command-line "
@@ -56160,12 +56195,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/strtok.3:218
+#: man-pages/man3/strtok.3:227
 msgid "An example of the output produced by this program is the following:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/strtok.3:230
+#: man-pages/man3/strtok.3:239
 #, no-wrap
 msgid ""
 "$B< ./a.out \\(aqa/bbb///cc;xxx:yyy:\\(aq \\(aq:;\\(aq \\(aq/\\(aq>\n"
@@ -56180,7 +56215,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/strtok.3:238
+#: man-pages/man3/strtok.3:247
 #, no-wrap
 msgid ""
 "#include E<lt>stdio.hE<gt>\n"
@@ -56189,7 +56224,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/strtok.3:245
+#: man-pages/man3/strtok.3:254
 #, no-wrap
 msgid ""
 "int\n"
@@ -56201,7 +56236,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/strtok.3:251
+#: man-pages/man3/strtok.3:260
 #, no-wrap
 msgid ""
 "    if (argc != 4) {\n"
@@ -56212,7 +56247,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/strtok.3:257
+#: man-pages/man3/strtok.3:266
 #, no-wrap
 msgid ""
 "    for (j = 1, str1 = argv[1]; ; j++, str1 = NULL) {\n"
@@ -56223,7 +56258,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/strtok.3:265
+#: man-pages/man3/strtok.3:274
 #, no-wrap
 msgid ""
 "        for (str2 = token; ; str2 = NULL) {\n"
@@ -56236,14 +56271,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/strtok.3:274
+#: man-pages/man3/strtok.3:283
 msgid ""
 "Another example program using B<strtok>()  can be found in "
 "B<getaddrinfo_a>(3)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/strtok.3:284
+#: man-pages/man3/strtok.3:293
 msgid ""
 "B<index>(3), B<memchr>(3), B<rindex>(3), B<strchr>(3), B<string>(3), "
 "B<strpbrk>(3), B<strsep>(3), B<strspn>(3), B<strstr>(3), B<wcstok>(3)"

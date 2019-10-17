@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:27+0300\n"
-"PO-Revision-Date: 2019-09-19 18:49+0300\n"
+"PO-Revision-Date: 2019-10-15 18:59+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
@@ -747,13 +747,11 @@ msgstr "СМОТРИТЕ ТАКЖЕ"
 #. type: Plain text
 #: man-pages/man7/uts_namespaces.7:64
 msgid ""
-"B<nsenter>(1), B<unshare>(1), B<clone>(2), B<gethostname>(2), "
-"B<getdomainname>(2), B<setns>(2), B<uname>(2), B<unshare>(2), "
-"B<namespaces>(7)"
+"B<nsenter>(1), B<unshare>(1), B<clone>(2), B<getdomainname>(2), "
+"B<gethostname>(2), B<setns>(2), B<uname>(2), B<unshare>(2), B<namespaces>(7)"
 msgstr ""
-"B<nsenter>(1), B<unshare>(1), B<clone>(2), B<gethostname>(2), "
-"B<getdomainname>(2), B<setns>(2), B<uname>(2), B<unshare>(2), "
-"B<namespaces>(7)"
+"B<nsenter>(1), B<unshare>(1), B<clone>(2), B<getdomainname>(2), "
+"B<gethostname>(2), B<setns>(2), B<uname>(2), B<unshare>(2), B<namespaces>(7)"
 
 #. type: TH
 #: man-pages/man7/unix.7:20

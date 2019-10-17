@@ -3343,55 +3343,55 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/tkill.2:97
-#, no-wrap
-msgid "B<EINVAL>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man2/tkill.2:100
-msgid "An invalid thread ID, thread group ID, or signal was specified."
-msgstr ""
-
-#. type: TP
-#: man-pages/man2/tkill.2:100
-#, no-wrap
-msgid "B<EPERM>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man2/tkill.2:105
-msgid "Permission denied.  For the required permissions, see B<kill>(2)."
-msgstr ""
-
-#. type: TP
-#: man-pages/man2/tkill.2:105
-#, no-wrap
-msgid "B<ESRCH>"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man2/tkill.2:108
-msgid "No process with the specified thread ID (and thread group ID) exists."
-msgstr ""
-
-#. type: TP
-#: man-pages/man2/tkill.2:108 man-pages/man2/tkill.2:115
+#: man-pages/man2/tkill.2:97 man-pages/man2/tkill.2:104
 #, no-wrap
 msgid "B<EAGAIN>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tkill.2:115
+#: man-pages/man2/tkill.2:104
 msgid ""
 "The B<RLIMIT_SIGPENDING> resource limit was reached and I<sig> is a real-"
 "time signal."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/tkill.2:120
+#: man-pages/man2/tkill.2:109
 msgid ""
 "Insufficient kernel memory was available and I<sig> is a real-time signal."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/tkill.2:109
+#, no-wrap
+msgid "B<EINVAL>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/tkill.2:112
+msgid "An invalid thread ID, thread group ID, or signal was specified."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/tkill.2:112
+#, no-wrap
+msgid "B<EPERM>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/tkill.2:117
+msgid "Permission denied.  For the required permissions, see B<kill>(2)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/tkill.2:117
+#, no-wrap
+msgid "B<ESRCH>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/tkill.2:120
+msgid "No process with the specified thread ID (and thread group ID) exists."
 msgstr ""
 
 #. type: Plain text
@@ -10544,27 +10544,27 @@ msgid "Bad file descriptor."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/ttyname.3:69
+#: man-pages/man3/ttyname.3:71
+msgid ""
+"File descriptor refers to a slave pseudoterminal device but the "
+"corresponding pathname could not be found (see NOTES)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/ttyname.3:74
 msgid "File descriptor does not refer to a terminal device."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/ttyname.3:69
+#: man-pages/man3/ttyname.3:74
 #, no-wrap
 msgid "B<ERANGE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/ttyname.3:74
-msgid ""
-"(B<ttyname_r>())  I<buflen> was too small to allow storing the pathname."
-msgstr ""
-
-#. type: Plain text
 #: man-pages/man3/ttyname.3:79
 msgid ""
-"File descriptor refers to a slave pseudoterminal device but the "
-"corresponding pathname could not be found (see NOTES)."
+"(B<ttyname_r>())  I<buflen> was too small to allow storing the pathname."
 msgstr ""
 
 #. type: tbl table

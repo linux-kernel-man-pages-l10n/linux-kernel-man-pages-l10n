@@ -5768,7 +5768,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/get_robust_list.2:129
+#: man-pages/man2/get_robust_list.2:125
+msgid ""
+"The head of the robust futex list can't be stored at the location I<head>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/get_robust_list.2:133
 msgid ""
 "The calling process does not have permission to see the robust futex list of "
 "the thread with the thread ID I<pid>, and does not have the "
@@ -5776,14 +5782,8 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/get_robust_list.2:134
-msgid "No thread with the thread ID I<pid> could be found."
-msgstr ""
-
-#. type: Plain text
 #: man-pages/man2/get_robust_list.2:138
-msgid ""
-"The head of the robust futex list can't be stored at the location I<head>."
+msgid "No thread with the thread ID I<pid> could be found."
 msgstr ""
 
 #. type: Plain text
@@ -9376,59 +9376,153 @@ msgstr ""
 msgid "The instruction cache block size."
 msgstr ""
 
+#.  Kernel commit 98a5f361b8625c6f4841d6ba013bbf0e80d08147
 #. type: TP
 #: man-pages/man3/getauxval.3:125
+#, no-wrap
+msgid "B<AT_L1D_CACHEGEOMETRY>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/getauxval.3:132
+msgid ""
+"Geometry of the L1 data cache, encoded with the cache line size in bytes in "
+"the bottom 16 bits and the cache associativity in the next 16 bits.  The "
+"associativity is such that if N is the 16-bit value, the cache is N-way set "
+"associative."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/getauxval.3:132
+#, no-wrap
+msgid "B<AT_L1D_CACHESIZE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/getauxval.3:135
+msgid "The L1 data cache size."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/getauxval.3:135
+#, no-wrap
+msgid "B<AT_L1I_CACHEGEOMETRY>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/getauxval.3:139
+msgid ""
+"Geometry of the L1 instruction cache, encoded as for B<AT_L1D_CACHEGEOMETRY>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/getauxval.3:139
+#, no-wrap
+msgid "B<AT_L1I_CACHESIZE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/getauxval.3:142
+msgid "The L1 instruction cache size."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/getauxval.3:142
+#, no-wrap
+msgid "B<AT_L2_CACHEGEOMETRY>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/getauxval.3:146
+msgid "Geometry of the L2 cache, encoded as for B<AT_L1D_CACHEGEOMETRY>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/getauxval.3:146
+#, no-wrap
+msgid "B<AT_L2_CACHESIZE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/getauxval.3:149
+msgid "The L2 cache size."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/getauxval.3:149
+#, no-wrap
+msgid "B<AT_L3_CACHEGEOMETRY>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/getauxval.3:153
+msgid "Geometry of the L3 cache, encoded as for B<AT_L1D_CACHEGEOMETRY>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/getauxval.3:153
+#, no-wrap
+msgid "B<AT_L3_CACHESIZE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man3/getauxval.3:156
+msgid "The L3 cache size."
+msgstr ""
+
+#. type: TP
+#: man-pages/man3/getauxval.3:156
 #, no-wrap
 msgid "B<AT_PAGESZ>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getauxval.3:129
+#: man-pages/man3/getauxval.3:160
 msgid ""
 "The system page size (the same value returned by I<sysconf(_SC_PAGESIZE)>)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/getauxval.3:129
+#: man-pages/man3/getauxval.3:160
 #, no-wrap
 msgid "B<AT_PHDR>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getauxval.3:132
+#: man-pages/man3/getauxval.3:163
 msgid "The address of the program headers of the executable."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/getauxval.3:132
+#: man-pages/man3/getauxval.3:163
 #, no-wrap
 msgid "B<AT_PHENT>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getauxval.3:135
+#: man-pages/man3/getauxval.3:166
 msgid "The size of program header entry."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/getauxval.3:135
+#: man-pages/man3/getauxval.3:166
 #, no-wrap
 msgid "B<AT_PHNUM>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getauxval.3:138
+#: man-pages/man3/getauxval.3:169
 msgid "The number of program headers."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/getauxval.3:138
+#: man-pages/man3/getauxval.3:169
 #, no-wrap
 msgid "B<AT_PLATFORM>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getauxval.3:145
+#: man-pages/man3/getauxval.3:176
 msgid ""
 "A pointer to a string that identifies the hardware platform that the program "
 "is running on.  The dynamic linker uses this in the interpretation of "
@@ -9436,24 +9530,24 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/getauxval.3:145
+#: man-pages/man3/getauxval.3:176
 #, no-wrap
 msgid "B<AT_RANDOM>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getauxval.3:148
+#: man-pages/man3/getauxval.3:179
 msgid "The address of sixteen bytes containing a random value."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/getauxval.3:148
+#: man-pages/man3/getauxval.3:179
 #, no-wrap
 msgid "B<AT_SECURE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getauxval.3:165
+#: man-pages/man3/getauxval.3:196
 msgid ""
 "Has a nonzero value if this executable should be treated securely.  Most "
 "commonly, a nonzero value indicates that the process is executing a set-user-"
@@ -9467,26 +9561,26 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/getauxval.3:165
+#: man-pages/man3/getauxval.3:196
 #, no-wrap
 msgid "B<AT_SYSINFO>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getauxval.3:169
+#: man-pages/man3/getauxval.3:200
 msgid ""
 "The entry point to the system call function in the vDSO.  Not present/needed "
 "on all architectures (e.g., absent on x86-64)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/getauxval.3:169
+#: man-pages/man3/getauxval.3:200
 #, no-wrap
 msgid "B<AT_SYSINFO_EHDR>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getauxval.3:174
+#: man-pages/man3/getauxval.3:205
 msgid ""
 "The address of a page containing the virtual Dynamic Shared Object (vDSO)  "
 "that the kernel creates in order to provide fast implementations of certain "
@@ -9494,65 +9588,65 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/getauxval.3:174
+#: man-pages/man3/getauxval.3:205
 #, no-wrap
 msgid "B<AT_UCACHEBSIZE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getauxval.3:177
+#: man-pages/man3/getauxval.3:208
 msgid "The unified cache block size."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/getauxval.3:177
+#: man-pages/man3/getauxval.3:208
 #, no-wrap
 msgid "B<AT_UID>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getauxval.3:180
+#: man-pages/man3/getauxval.3:211
 msgid "The real user ID of the thread."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getauxval.3:188
+#: man-pages/man3/getauxval.3:219
 msgid ""
 "On success, B<getauxval>()  returns the value corresponding to I<type>.  If "
 "I<type> is not found, 0 is returned."
 msgstr ""
 
 #. type: TP
-#: man-pages/man3/getauxval.3:189
+#: man-pages/man3/getauxval.3:220
 #, no-wrap
 msgid "B<ENOENT> (since glibc 2.19)"
 msgstr ""
 
 #.  commit b9ab448f980e296eac21ac65f53783967cc6037b
 #. type: Plain text
-#: man-pages/man3/getauxval.3:195
+#: man-pages/man3/getauxval.3:226
 msgid ""
 "No entry corresponding to I<type> could be found in the auxiliary vector."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getauxval.3:199
+#: man-pages/man3/getauxval.3:230
 msgid "The B<getauxval>()  function was added to glibc in version 2.16."
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/getauxval.3:209
+#: man-pages/man3/getauxval.3:240
 #, no-wrap
 msgid "B<getauxval>()"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getauxval.3:213
+#: man-pages/man3/getauxval.3:244
 msgid "This function is a nonstandard glibc extension."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getauxval.3:222
+#: man-pages/man3/getauxval.3:253
 msgid ""
 "The primary consumer of the information in the auxiliary vector is the "
 "dynamic linker, B<ld-linux.so>(8).  The auxiliary vector is a convenient and "
@@ -9563,7 +9657,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getauxval.3:228
+#: man-pages/man3/getauxval.3:259
 msgid ""
 "The auxiliary vector resides just above the argument list and environment in "
 "the process address space.  The auxiliary vector supplied to a program can "
@@ -9572,20 +9666,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getauxval.3:232
+#: man-pages/man3/getauxval.3:263
 #, no-wrap
 msgid "$ LD_SHOW_AUXV=1 sleep 1\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getauxval.3:241
+#: man-pages/man3/getauxval.3:272
 msgid ""
 "The auxiliary vector of any process can (subject to file permissions)  be "
 "obtained via I</proc/[pid]/auxv>; see B<proc>(5)  for more information."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getauxval.3:250
+#: man-pages/man3/getauxval.3:281
 msgid ""
 "Before the addition of the B<ENOENT> error in glibc 2.19, there was no way "
 "to unambiguously distinguish the case where I<type> could not be found from "
@@ -9593,7 +9687,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/getauxval.3:253
+#: man-pages/man3/getauxval.3:284
 msgid "B<secure_getenv>(3), B<vdso>(7), B<ld-linux.so>(8)"
 msgstr ""
 
@@ -13393,7 +13487,7 @@ msgstr ""
 
 #. type: Plain text
 #: man-pages/man3/getlogin.3:112
-msgid "POSIX specifies"
+msgid "POSIX specifies:"
 msgstr ""
 
 #. type: Plain text
@@ -13410,7 +13504,7 @@ msgstr ""
 
 #. type: Plain text
 #: man-pages/man3/getlogin.3:129
-msgid "Linux/glibc also has"
+msgid "Linux/glibc also has:"
 msgstr ""
 
 #. type: Plain text

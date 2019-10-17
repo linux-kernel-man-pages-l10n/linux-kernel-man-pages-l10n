@@ -1,19 +1,17 @@
-# SOME DESCRIPTIVE TITLE
-# Copyright (C) YEAR Free Software Foundation, Inc.
+# Copyright (C) 2019 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Azamat Hackimov <azamat.hackimov@gmail.com>, 2016
-# Yuri Kozlov <yuray@komyakino.ru>, 2011-2015,2017-2019
-# Yuri Kozlov <yuray@komyakino.ru>, 2014
+# Azamat Hackimov <azamat.hackimov@gmail.com>, 2016.
+# Yuri Kozlov <yuray@komyakino.ru>, 2011-2015,2017-2019.
+# Yuri Kozlov <yuray@komyakino.ru>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:27+0300\n"
-"PO-Revision-Date: 2019-07-29 02:13+0000\n"
+"PO-Revision-Date: 2019-10-15 19:01+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
-"Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/"
-"ru/)\n"
+"Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,6 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Lokalize 2.0\n"
 
 #. type: TH
 #: man-pages/man4/wavelan.4:15
@@ -654,23 +653,23 @@ msgstr "B<EIO>"
 #: man-pages/man2/write.2:222
 msgid ""
 "A low-level I/O error occurred while modifying the inode.  This error may "
-"relate to the write-back of data written by an earlier B<write>(2), which "
-"may have been issued to a different file descriptor on the same file.  Since "
+"relate to the write-back of data written by an earlier B<write>(), which may "
+"have been issued to a different file descriptor on the same file.  Since "
 "Linux 4.13, errors from write-back come with a promise that they I<may> be "
-"reported by subsequent.  B<write>(2)  requests, and I<will> be reported by a "
+"reported by subsequent.  B<write>()  requests, and I<will> be reported by a "
 "subsequent B<fsync>(2)  (whether or not they were also reported by "
-"B<write>(2)).  An alternate cause of B<EIO> on networked filesystems is when "
+"B<write>()).  An alternate cause of B<EIO> on networked filesystems is when "
 "an advisory lock had been taken out on the file descriptor and this lock has "
 "been lost.  See the I<Lost locks> section of B<fcntl>(2)  for further "
 "details."
 msgstr ""
 "Во время изменения иноды возникла низкоуровневая ошибка ввода/вывода. Эта "
 "ошибка может относится к отложенным (write-back) данным предыдущего вызова "
-"B<write>(2), который выполнялся с другим файловым дескриптором для этого же "
+"B<write>(), который выполнялся с другим файловым дескриптором для этого же "
 "файла. Начиная с Linux 4.13 ошибки отложенных данных поступают с обещанием, "
 "что о них I<может> быть сообщено следующему вызову. Результаты запросов "
-"B<write>(2) I<будут> переданы последующему B<fsync>(2) (независимо от того, "
-"сообщалось ли об этом B<write>(2)). Также B<EIO> может возникать у сетевых "
+"B<write>() I<будут> переданы последующему B<fsync>(2) (независимо от того, "
+"сообщалось ли об этом B<write>()). Также B<EIO> может возникать у сетевых "
 "файловых систем, когда консультативная блокировка была убрана у дескриптора "
 "файла и потеряна. Подробности смотрите в абзаце I<Потерянные блокировки> в "
 "B<fcntl>(2)."
@@ -771,14 +770,14 @@ msgid ""
 "A successful return from B<write>()  does not make any guarantee that data "
 "has been committed to disk.  On some filesystems, including NFS, it does not "
 "even guarantee that space has successfully been reserved for the data.  In "
-"this case, some errors might be delayed until a future B<write>(2), "
+"this case, some errors might be delayed until a future B<write>(), "
 "B<fsync>(2), or even B<close>(2).  The only way to be sure is to call "
 "B<fsync>(2)  after you are done writing all your data."
 msgstr ""
 "Успешный возврат из вызова B<write>() не даёт никаких гарантий, что данные "
 "сохранены на диске. В некоторых файловых системах, включая NFS, даже не "
 "гарантируется, что для данных было зарезервировано место. В этом случае "
-"некоторые ошибки могут появиться только в будущем B<write>(2), B<fsync>(2) "
+"некоторые ошибки могут появиться только в будущем B<write>(), B<fsync>(2) "
 "или даже B<close>(2). Единственный способ получить гарантированную запись — "
 "вызвать B<fsync>(2) после записи всех данных."
 

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:27+0300\n"
-"PO-Revision-Date: 2019-09-18 05:25+0300\n"
+"PO-Revision-Date: 2019-10-15 19:00+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
@@ -357,8 +357,8 @@ msgstr "B<ioctl_console>(2), B<tty>(4), B<ttyS>(4), B<gpm>(8)"
 #. type: TH
 #: man-pages/man4/veth.4:28
 #, no-wrap
-msgid "veth"
-msgstr "veth"
+msgid "VETH"
+msgstr "VETH"
 
 #. type: TH
 #: man-pages/man4/veth.4:28

@@ -274,7 +274,7 @@ msgstr ""
 #. type: TH
 #: man-pages/man4/veth.4:28
 #, no-wrap
-msgid "veth"
+msgid "VETH"
 msgstr ""
 
 #. type: TH

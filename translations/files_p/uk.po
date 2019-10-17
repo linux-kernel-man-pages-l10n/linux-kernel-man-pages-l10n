@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:26+0300\n"
-"PO-Revision-Date: 2019-09-19 02:26+0000\n"
+"PO-Revision-Date: 2019-09-30 15:48+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/kruvalig/man-pages/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -7188,228 +7188,296 @@ msgid "B<pkey_mprotect>(2), B<pkeys>(7)"
 msgstr ""
 
 #. type: TH
-#: man-pages/man2/pivot_root.2:10
+#: man-pages/man2/pivot_root.2:11
 #, no-wrap
 msgid "PIVOT_ROOT"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:13
+#: man-pages/man2/pivot_root.2:14
 msgid "pivot_root - change the root filesystem"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:15
+#: man-pages/man2/pivot_root.2:16
 msgid ""
 "B<int pivot_root(const char *>I<new_root>B<, const char *>I<put_old>B<);>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:18
+#: man-pages/man2/pivot_root.2:19
 msgid "I<Note>: There is no glibc wrapper for this system call; see NOTES."
 msgstr ""
 
-#.  The
-#.  .B CAP_SYS_ADMIN
-#.  capability is required.
 #. type: Plain text
 #: man-pages/man2/pivot_root.2:27
 msgid ""
-"B<pivot_root>()  moves the root filesystem of the calling process to the "
-"directory I<put_old> and makes I<new_root> the new root filesystem of the "
-"calling process."
+"B<pivot_root>()  changes the root filesystem in the mount namespace of the "
+"calling process.  More precisely, it moves the root filesystem to the "
+"directory I<put_old> and makes I<new_root> the new root filesystem.  The "
+"calling process must have the B<CAP_SYS_ADMIN> capability in the user "
+"namespace that owns the caller's mount namespace."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:34
-msgid ""
-"The typical use of B<pivot_root>()  is during system startup, when the "
-"system mounts a temporary root filesystem (e.g., an B<initrd>), then mounts "
-"the real root filesystem, and eventually turns the latter into the current "
-"root of all relevant processes or threads."
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man2/pivot_root.2:46
+#: man-pages/man2/pivot_root.2:47
 msgid ""
 "B<pivot_root>()  may or may not change the current root and the current "
-"working directory of any processes or threads which use the old root "
-"directory.  The caller of B<pivot_root>()  must ensure that processes with "
-"root or current working directory at the old root operate correctly in "
-"either case.  An easy way to ensure this is to change their root and current"
-" working directory to I<new_root> before invoking B<pivot_root>()."
+"working directory of any processes or threads that use the old root "
+"directory and which are in the same mount namespace as the caller of "
+"B<pivot_root>().  The caller of B<pivot_root>()  should ensure that "
+"processes with root or current working directory at the old root operate "
+"correctly in either case.  An easy way to ensure this is to change their "
+"root and current working directory to I<new_root> before invoking "
+"B<pivot_root>().  Note also that B<pivot_root>()  may or may not affect the "
+"calling process's current working directory.  It is therefore recommended to"
+" call B<chdir(\"/\")> immediately after B<pivot_root>()."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:62
+#: man-pages/man2/pivot_root.2:67
 msgid ""
-"The paragraph above is intentionally vague because the implementation of "
-"B<pivot_root>()  may change in the future.  At the time of writing, "
-"B<pivot_root>()  changes root and current working directory of each process "
-"or thread to I<new_root> if they point to the old root directory.  This is "
-"necessary in order to prevent kernel threads from keeping the old root "
-"directory busy with their root and current working directory, even if they "
-"never access the filesystem in any way.  In the future, there may be a "
-"mechanism for kernel threads to explicitly relinquish any access to the "
-"filesystem, such that this fairly intrusive mechanism can be removed from "
-"B<pivot_root>()."
+"The paragraph above is intentionally vague because at the time when "
+"B<pivot_root>()  was first implemented, it was unclear whether its affect on"
+" other process's root and current working directories\\(emand the caller's "
+"current working directory\\(emmight change in the future.  However, the "
+"behavior has remained consistent since this system call was first "
+"implemented: B<pivot_root>()  changes the root directory and the current "
+"working directory of each process or thread in the same mount namespace to "
+"I<new_root> if they point to the old root directory.  (See also NOTES.)  On "
+"the other hand, B<pivot_root>()  does not change the caller's current "
+"working directory (unless it is on the old root directory), and thus it "
+"should be followed by a B<chdir(\"/\")> call."
 msgstr ""
 
 #. type: Plain text
 #: man-pages/man2/pivot_root.2:69
-msgid ""
-"Note that this also applies to the calling process: B<pivot_root>()  may or "
-"may not affect its current working directory.  It is therefore recommended "
-"to call B<chdir(\"/\")> immediately after B<pivot_root>()."
+msgid "The following restrictions apply:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:71
-msgid "The following restrictions apply to I<new_root> and I<put_old>:"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man2/pivot_root.2:73
-msgid "They must be directories."
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man2/pivot_root.2:76
-msgid ""
-"I<new_root> and I<put_old> must not be on the same filesystem as the current"
-" root."
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man2/pivot_root.2:80
-msgid ""
-"I<put_old> must be underneath I<new_root>, that is, adding a nonzero number "
-"of I</..> to the string pointed to by I<put_old> must yield the same "
-"directory as I<new_root>."
+#: man-pages/man2/pivot_root.2:74
+msgid "I<new_root> and I<put_old> must be directories."
 msgstr ""
 
 #. type: Plain text
 #: man-pages/man2/pivot_root.2:82
-msgid "No other filesystem may be mounted on I<put_old>."
+msgid ""
+"I<new_root> and I<put_old> must not be on the same filesystem as the current"
+" root.  In particular, I<new_root> can't be I<\"/\"> (but can be a bind "
+"mounted directory on the current root filesystem)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:86
-msgid "See also B<pivot_root>(8)  for additional usage examples."
+#: man-pages/man2/pivot_root.2:87
+msgid ""
+"I<put_old> must be at or underneath I<new_root>; that is, adding a "
+"nonnegative number of I</..> to the string pointed to by I<put_old> must "
+"yield the same directory as I<new_root>."
 msgstr ""
 
 #. type: Plain text
 #: man-pages/man2/pivot_root.2:93
-msgid ""
-"If the current root is not a mount point (e.g., after B<chroot>(2)  or "
-"B<pivot_root>(), see also below), not the old root directory, but the mount "
-"point of that filesystem is mounted on I<put_old>."
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man2/pivot_root.2:99
 msgid ""
 "I<new_root> must be a mount point.  (If it is not otherwise a mount point, "
 "it suffices to bind mount I<new_root> on top of itself.)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:108
+#: man-pages/man2/pivot_root.2:105
 msgid ""
-"The propagation type of I<new_root> and its parent mount must not be "
-"B<MS_SHARED>; similarly, if I<put_old> is an existing mount point, its "
-"propagation type must not be B<MS_SHARED>."
+"The propagation type of the parent mount of I<new_root> and the parent mount"
+" of the current root directory must not be B<MS_SHARED>; similarly, if "
+"I<put_old> is an existing mount point, its propagation type must not be "
+"B<MS_SHARED>.  These restrictions ensure that B<pivot_root>()  never "
+"propagates any changes to another mount namespace."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:112
+#: man-pages/man2/pivot_root.2:107
+msgid "The current root directory must be a mount point."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:111
 msgid ""
 "On success, zero is returned.  On error, -1 is returned, and I<errno> is set"
 " appropriately."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:117
+#: man-pages/man2/pivot_root.2:116
 msgid ""
-"B<pivot_root>()  may return (in I<errno>) any of the errors returned by "
-"B<stat>(2).  Additionally, it may return:"
+"B<pivot_root>()  may fail with any of the same errors as B<stat>(2).  "
+"Additionally, it may fail with the following errors:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/pivot_root.2:117
+#: man-pages/man2/pivot_root.2:116
 #, no-wrap
 msgid "B<EBUSY>"
 msgstr ""
 
+#.  Reconfirmed that the following error occurs on Linux 5.0 by
+#.  specifying 'new_root' as "/rootfs" and 'put_old' as
+#.  "/rootfs/oldrootfs", and *not* bind mounting "/rootfs" on top of
+#.  itself. Of course, this is an odd situation, since a later check
+#.  in the kernel code will in any case yield EINVAL if 'new_root' is
+#.  not a mount point. However, when the system call was first added,
+#.  'new_root' was not required to be a mount point. So, this
+#.  error is nowadays probably just the result of crufty accumulation.
+#.  This error can also occur if we bind mount "/" on top of itself
+#.  and try to specify "/" as the 'new' (again, an odd situation). So,
+#.  the EBUSY check in the kernel does still seem necessary to prevent
+#.  that case.  Furthermore, the "or put_old" piece is probably
+#.  redundant text (although the check is in the kernel), since,
+#.  in another check, 'put_old' is required to be under 'new_root'.
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:121
+#: man-pages/man2/pivot_root.2:140
 msgid ""
-"I<new_root> or I<put_old> are on the current root filesystem, or a "
-"filesystem is already mounted on I<put_old>."
+"I<new_root> or I<put_old> is on the current root filesystem.  (This error "
+"covers the pathological case where I<new_root> is I<\"/\">.)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:125
+#: man-pages/man2/pivot_root.2:144
 msgid "I<new_root> is not a mount point."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:128
+#: man-pages/man2/pivot_root.2:147
 msgid "I<put_old> is not underneath I<new_root>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:131
-msgid "The current root is on the rootfs (initial ramfs) filesystem."
+#: man-pages/man2/pivot_root.2:152
+msgid ""
+"The current root directory is not a mount point (because of an earlier "
+"B<chroot>(2))."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:138
+#: man-pages/man2/pivot_root.2:155
+msgid ""
+"The current root is on the rootfs (initial ramfs) filesystem; see NOTES."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:162
 msgid ""
 "Either the mount point at I<new_root>, or the parent mount of that mount "
 "point, has propagation type B<MS_SHARED>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:143
+#: man-pages/man2/pivot_root.2:167
 msgid "I<put_old> is a mount point and has the propagation type B<MS_SHARED>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/pivot_root.2:143
+#: man-pages/man2/pivot_root.2:167
 #, no-wrap
 msgid "B<ENOTDIR>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:146
+#: man-pages/man2/pivot_root.2:170
 msgid "I<new_root> or I<put_old> is not a directory."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:151
+#: man-pages/man2/pivot_root.2:175
 msgid "The calling process does not have the B<CAP_SYS_ADMIN> capability."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:154
+#: man-pages/man2/pivot_root.2:178
 msgid "B<pivot_root>()  was introduced in Linux 2.3.41."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:157
+#: man-pages/man2/pivot_root.2:181
 msgid "B<pivot_root>()  is Linux-specific and hence is not portable."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:160
+#: man-pages/man2/pivot_root.2:184
 msgid ""
 "Glibc does not provide a wrapper for this system call; call it using "
 "B<syscall>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:172
+#: man-pages/man2/pivot_root.2:187
+msgid ""
+"A command-line interface for this system call is provided by "
+"B<pivot_root>(8)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:197
+msgid ""
+"B<pivot_root>()  allows the caller to switch to a new root filesystem while "
+"at the same time placing the old root mount at a location under I<new_root> "
+"from where it can subsequently be unmounted.  (The fact that it moves all "
+"processes that have a root directory or current working directory on the old"
+" root filesystem to the new root filesystem frees the old root filesystem of"
+" users, allowing it to be unmounted more easily.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:206
+msgid ""
+"A typical use of B<pivot_root>()  is during system startup, when the system "
+"mounts a temporary root filesystem (e.g., an B<initrd>), then mounts the "
+"real root filesystem, and eventually turns the latter into the current root "
+"of all relevant processes or threads.  A modern use is to set up a root "
+"filesystem during the creation of a container."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:215
+msgid ""
+"The fact that B<pivot_root>()  modifies process root and current working "
+"directories in the manner noted in DESCRIPTION is necessary in order to "
+"prevent kernel threads from keeping the old root directory busy with their "
+"root and current working directory, even if they never access the filesystem"
+" in any way."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:222
+msgid ""
+"I<new_root> and I<put_old> may be the same directory.  In particular, the "
+"following sequence allows a pivot-root operation without needing to create "
+"and remove a temporary directory:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:230
+#, no-wrap
+msgid ""
+"chdir(new_root);\n"
+"mount(\"\", \".\", MS_SLAVE | MS_REC, NULL);\n"
+"        /* Or: MS_PRIVATE | MS_REC */\n"
+"pivot_root(\".\", \".\");\n"
+"umount2(\".\", MNT_DETACH);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:253
+msgid ""
+"This sequence succeeds because the B<pivot_root>()  call stacks the old root"
+" mount point (I<old_root>)  on top of the new root mount point at I</>.  At "
+"that point, the calling process's root directory and current working "
+"directory refer to the new root mount point (I<new_root>).  During the "
+"subsequent B<umount>()  call, resolution of I<\".\"> starts with I<new_root>"
+" and then moves up the list of mounts stacked at I</>, with the result that "
+"I<old_root> is unmounted."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:265
 msgid ""
 "The rootfs (initial ramfs) cannot be B<pivot_root>()ed.  The recommended "
 "method of changing the root filesystem in this case is to delete everything "
@@ -7419,24 +7487,257 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:176
+#: man-pages/man2/pivot_root.2:275
 msgid ""
-"B<pivot_root>()  should not have to change root and current working "
-"directory of all other processes in the system."
+"The program below demonstrates the use of B<pivot_root>()  inside a mount "
+"namespace that is created using B<clone>(2).  After pivoting to the root "
+"directory named in the program's first command-line argument, the child "
+"created by B<clone>(2)  then executes the program named in the remaining "
+"command-line arguments."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:181
+#: man-pages/man2/pivot_root.2:280
 msgid ""
-"Some of the more obscure uses of B<pivot_root>()  may quickly lead to "
-"insanity."
+"We demonstrate the program by creating a directory that will serve as the "
+"new root filesystem and placing a copy of the (statically linked)  "
+"B<busybox>(1)  executable in that directory."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:188
+#: man-pages/man2/pivot_root.2:298
+#, no-wrap
+msgid ""
+"$ B<mkdir /tmp/rootfs>\n"
+"$ B<ls -id /tmp/rootfs>    # Show inode number of new root directory\n"
+"319459 /tmp/rootfs\n"
+"$ B<cp $(which busybox) /tmp/rootfs>\n"
+"$ B<PS1='bbsh$ ' sudo ./pivot_root_demo /tmp/rootfs /busybox sh>\n"
+"bbsh$ B<PATH=/>\n"
+"bbsh$ B<busybox ln busybox ln>\n"
+"bbsh$ B<ln busybox echo>\n"
+"bbsh$ B<ln busybox ls>\n"
+"bbsh$ B<ls>\n"
+"busybox  echo     ln       ls\n"
+"bbsh$ B<ls -id />          # Compare with inode number above\n"
+"319459 /\n"
+"bbsh$ B<echo \\(aqhello world\\(aq>\n"
+"hello world\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:305
+#, no-wrap
+msgid "/* pivot_root_demo.c */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:316
+#, no-wrap
+msgid ""
+"#define _GNU_SOURCE\n"
+"#include E<lt>sched.hE<gt>\n"
+"#include E<lt>stdio.hE<gt>\n"
+"#include E<lt>stdlib.hE<gt>\n"
+"#include E<lt>unistd.hE<gt>\n"
+"#include E<lt>sys/wait.hE<gt>\n"
+"#include E<lt>sys/syscall.hE<gt>\n"
+"#include E<lt>sys/mount.hE<gt>\n"
+"#include E<lt>sys/stat.hE<gt>\n"
+"#include E<lt>limits.hE<gt>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:319
+#, no-wrap
+msgid ""
+"#define errExit(msg)    do { perror(msg); exit(EXIT_FAILURE); \\e\n"
+"                        } while (0)\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:325
+#, no-wrap
+msgid ""
+"static int\n"
+"pivot_root(const char *new_root, const char *put_old)\n"
+"{\n"
+"    return syscall(SYS_pivot_root, new_root, put_old);\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:327
+#, no-wrap
+msgid "#define STACK_SIZE (1024 * 1024)\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:335
+#, no-wrap
+msgid ""
+"static int              /* Startup function for cloned child */\n"
+"child(void *arg)\n"
+"{\n"
+"    char **args = arg;\n"
+"    char *new_root = args[0];\n"
+"    const char *put_old = \"/oldrootfs\";\n"
+"    char path[PATH_MAX];\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:340
+#, no-wrap
+msgid ""
+"    /* Ensure that \\(aqnew_root\\(aq and its parent mount don\\(aqt have\n"
+"       shared propagation (which would cause pivot_root() to\n"
+"       return an error), and prevent propagation of mount\n"
+"       events to the initial mount namespace */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:343
+#, no-wrap
+msgid ""
+"    if (mount(NULL, \"/\", NULL, MS_REC | MS_PRIVATE, NULL) == 1)\n"
+"        errExit(\"mount-MS_PRIVATE\");\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:345
+#, no-wrap
+msgid "    /* Ensure that \\(aqnew_root\\(aq is a mount point */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:348
+#, no-wrap
+msgid ""
+"    if (mount(new_root, new_root, NULL, MS_BIND, NULL) == -1)\n"
+"        errExit(\"mount-MS_BIND\");\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:350
+#, no-wrap
+msgid "    /* Create directory to which old root will be pivoted */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:354
+#, no-wrap
+msgid ""
+"    snprintf(path, sizeof(path), \"%s/%s\", new_root, put_old);\n"
+"    if (mkdir(path, 0777) == -1)\n"
+"        errExit(\"mkdir\");\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:356
+#, no-wrap
+msgid "    /* And pivot the root filesystem */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:359
+#, no-wrap
+msgid ""
+"    if (pivot_root(new_root, path) == -1)\n"
+"        errExit(\"pivot_root\");\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:361
+#, no-wrap
+msgid "    /* Switch the current working directory to \"/\" */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:364
+#, no-wrap
+msgid ""
+"    if (chdir(\"/\") == -1)\n"
+"        errExit(\"chdir\");\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:366
+#, no-wrap
+msgid "    /* Unmount old root and remove mount point */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:371
+#, no-wrap
+msgid ""
+"    if (umount2(put_old, MNT_DETACH) == -1)\n"
+"        perror(\"umount2\");\n"
+"    if (rmdir(put_old) == -1)\n"
+"        perror(\"rmdir\");\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:373
+#, no-wrap
+msgid "    /* Execute the command specified in argv[1]... */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:377
+#, no-wrap
+msgid ""
+"    execv(args[1], &args[1]);\n"
+"    errExit(\"execv\");\n"
+"}\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:382
+#, no-wrap
+msgid ""
+"int\n"
+"main(int argc, char *argv[])\n"
+"{\n"
+"    /* Create a child process in a new mount namespace */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:386
+#, no-wrap
+msgid ""
+"    char *stack = malloc(STACK_SIZE);\n"
+"    if (stack == NULL)\n"
+"        errExit(\"malloc\");\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:390
+#, no-wrap
+msgid ""
+"    if (clone(child, stack + STACK_SIZE,\n"
+"                CLONE_NEWNS | SIGCHLD, &argv[1]) == -1)\n"
+"        errExit(\"clone\");\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:392
+#, no-wrap
+msgid "    /* Parent falls through to here; wait for child */\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:395
+#, no-wrap
+msgid ""
+"    if (wait(NULL) == -1)\n"
+"        errExit(\"wait\");\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:407
 msgid ""
 "B<chdir>(2), B<chroot>(2), B<mount>(2), B<stat>(2), B<initrd>(4), "
-"B<pivot_root>(8), B<switch_root>(8)"
+"B<mount_namespaces>(7), B<pivot_root>(8), B<switch_root>(8)"
 msgstr ""
 
 #. type: TH
@@ -16239,8 +16540,8 @@ msgstr ""
 msgid ""
 "The speculation feature can also be controlled by the "
 "B<spec_store_bypass_disable> boot parameter.  This parameter may enforce a "
-"read-only policy which will result in the B<prctl>(2)  call failing with the"
-" error B<ENXIO>.  For further details, see the kernel source file "
+"read-only policy which will result in the B<prctl>()  call failing with the "
+"error B<ENXIO>.  For further details, see the kernel source file "
 "I<Documentation/admin-guide/kernel-parameters.txt>."
 msgstr ""
 
@@ -16711,14 +17012,21 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1667
+#: man-pages/man2/prctl.2:1671
+msgid ""
+"I<option> was B<PR_GET_SPECULATION_CTRL> or B<PR_SET_SPECULATION_CTRL> and "
+"unused arguments to B<prctl>()  are not 0."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/prctl.2:1677
 msgid ""
 "I<option> was B<PR_SET_SPECULATION_CTRL> the kernel or CPU does not support "
 "the requested speculation misfeature."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1676
+#: man-pages/man2/prctl.2:1686
 msgid ""
 "I<option> was B<PR_MPX_ENABLE_MANAGEMENT> or B<PR_MPX_DISABLE_MANAGEMENT> "
 "and the kernel or the CPU does not support MPX management.  Check that the "
@@ -16726,7 +17034,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1685
+#: man-pages/man2/prctl.2:1695
 msgid ""
 "I<option> was B<PR_SET_SPECULATION_CTRL> implies that the control of the "
 "selected speculation misfeature is not possible.  See "
@@ -16735,14 +17043,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1693
+#: man-pages/man2/prctl.2:1703
 msgid ""
 "I<option> is B<PR_SET_FP_MODE> and I<arg2> has an invalid or unsupported "
 "value."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1705
+#: man-pages/man2/prctl.2:1715
 msgid ""
 "I<option> is B<PR_SET_SECUREBITS>, and the caller does not have the "
 "B<CAP_SETPCAP> capability, or tried to unset a \"locked\" flag, or tried to "
@@ -16750,35 +17058,35 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1713
+#: man-pages/man2/prctl.2:1723
 msgid ""
 "I<option> is B<PR_SET_SPECULATION_CTRL> wherein the speculation was disabled"
 " with B<PR_SPEC_FORCE_DISABLE> and caller tried to enable it again."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1723
+#: man-pages/man2/prctl.2:1733
 msgid ""
 "I<option> is B<PR_SET_KEEPCAPS>, and the caller's B<SECBIT_KEEP_CAPS_LOCKED>"
 " flag is set (see B<capabilities>(7))."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1731
+#: man-pages/man2/prctl.2:1741
 msgid ""
 "I<option> is B<PR_CAPBSET_DROP>, and the caller does not have the "
 "B<CAP_SETPCAP> capability."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1739
+#: man-pages/man2/prctl.2:1749
 msgid ""
 "I<option> is B<PR_SET_MM>, and the caller does not have the "
 "B<CAP_SYS_RESOURCE> capability."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1754
+#: man-pages/man2/prctl.2:1764
 msgid ""
 "I<option> is B<PR_CAP_AMBIENT> and I<arg2> is B<PR_CAP_AMBIENT_RAISE>, but "
 "either the capability specified in I<arg3> is not present in the process's "
@@ -16787,23 +17095,16 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:1754
+#: man-pages/man2/prctl.2:1764
 #, no-wrap
 msgid "B<ERANGE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1766
+#: man-pages/man2/prctl.2:1776
 msgid ""
 "I<option> was B<PR_SET_SPECULATION_CTRL> and I<arg3> is neither "
 "B<PR_SPEC_ENABLE>, B<PR_SPEC_DISABLE>, nor B<PR_SPEC_FORCE_DISABLE>."
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man2/prctl.2:1776
-msgid ""
-"I<option> was B<PR_GET_SPECULATION_CTRL> or B<PR_SET_SPECULATION_CTRL> and "
-"unused arguments to B<prctl>()  are not 0."
 msgstr ""
 
 #.  The library interface was added in glibc 2.0.6
@@ -31623,8 +31924,9 @@ msgstr ""
 #. type: Plain text
 #: man-pages/man3/pthread_mutexattr_setrobust.3:285
 msgid ""
-"B<get_robust_list>(2), B<set_robust_list>(2), B<pthread_mutex_init>(3), "
-"B<pthread_mutex_consistent>(3), B<pthread_mutex_lock>(3), B<pthreads>(7)"
+"B<get_robust_list>(2), B<set_robust_list>(2), "
+"B<pthread_mutex_consistent>(3), B<pthread_mutex_init>(3), "
+"B<pthread_mutex_lock>(3), B<pthreads>(7)"
 msgstr ""
 
 #. type: TH
@@ -36708,8 +37010,8 @@ msgstr ""
 #. type: Plain text
 #: man-pages/man3/pthread_mutexattr_init.3:70
 msgid ""
-"B<pthread_mutex_init>(3), B<pthread_mutexattr_getrobust>(3), "
-"B<pthread_mutexattr_getpshared>(3), B<pthreads>(7)"
+"B<pthread_mutex_init>(3), B<pthread_mutexattr_getpshared>(3), "
+"B<pthread_mutexattr_getrobust>(3), B<pthreads>(7)"
 msgstr ""
 
 #. type: TH
@@ -43052,7 +43354,7 @@ msgstr ""
 #: man-pages/man3/pthread_mutex_consistent.3:106
 msgid ""
 "B<pthread_mutexattr_init>(3), B<pthread_mutex_lock>(3), "
-"B<pthread_mutexattr_setrobust>(3), B<pthread_mutexattr_getrobust>(3), "
+"B<pthread_mutexattr_getrobust>(3), B<pthread_mutexattr_setrobust>(3), "
 "B<pthreads>(7)"
 msgstr ""
 

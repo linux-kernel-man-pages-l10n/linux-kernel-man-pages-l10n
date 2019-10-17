@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:26+0300\n"
-"PO-Revision-Date: 2019-09-21 08:17+0300\n"
+"PO-Revision-Date: 2019-10-06 08:59+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
@@ -2476,8 +2476,8 @@ msgid ""
 "For a discussion of the interaction of POSIX message queue objects and IPC "
 "namespaces, see B<ipc_namespaces>(7)."
 msgstr ""
-"Обсуждение взаимодействия объектов очереди сообщений POSIX с пространствами "
-"IPC смотрите в B<ipc_namespaces>(7)."
+"Обсуждение связи объектов очереди сообщений POSIX с пространствами IPC "
+"смотрите в B<ipc_namespaces>(7)."
 
 #. type: Plain text
 #: man-pages/man7/mq_overview.7:367
@@ -4705,7 +4705,12 @@ msgstr ""
 "I<Documentation/filesystems/sharedsubtree.txt>."
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1099
+#: man-pages/man7/mount_namespaces.7:1089
+msgid "See B<pivot_root>(2)."
+msgstr "Смотрите B<pivot_root>(2)."
+
+#. type: Plain text
+#: man-pages/man7/mount_namespaces.7:1102
 msgid ""
 "B<unshare>(1), B<clone>(2), B<mount>(2), B<pivot_root>(2), B<setns>(2), "
 "B<umount>(2), B<unshare>(2), B<proc>(5), B<namespaces>(7), "
@@ -4716,7 +4721,7 @@ msgstr ""
 "B<user_namespaces>(7), B<findmnt>(8), B<pivot_root>(8)"
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1101
+#: man-pages/man7/mount_namespaces.7:1104
 msgid ""
 "I<Documentation/filesystems/sharedsubtree.txt> in the kernel source tree."
 msgstr ""
@@ -8107,7 +8112,7 @@ msgid ""
 msgstr ""
 "[I<trailer>] Завершает текст ссылки из макроса B<\\&.UR> необязательным "
 "I<trailer> (если есть, то это, обычно закрывающая круглая скобка и/или знак "
-"конца предложений), указываем тут же. Для устройств, не выводящих HTML "
+"конца элемента), указываем тут же. Для устройств, не выводящих HTML "
 "(например, B<man -Tutf8>), текст ссылки указывается после URL в угловых "
 "скобках; если текста нет, то URL печатается как ссылка, окружённая в "
 "квадратных скобках (угловые скобки могут отсутствовать на некоторых "
@@ -9878,7 +9883,7 @@ msgid ""
 "I<flags> contained none of B<MAP_PRIVATE>, B<MAP_SHARED> or "
 "B<MAP_SHARED_VALIDATE>."
 msgstr ""
-"Поле I<flags> не содержит B<MAP_PRIVATE>, B<MAP_SHARED> или "
+"В I<flags> отсутствует B<MAP_PRIVATE>, B<MAP_SHARED> или "
 "B<MAP_SHARED_VALIDATE>."
 
 #. type: TP
@@ -16493,7 +16498,7 @@ msgid ""
 "Too many pages to move.  Since Linux 2.6.29, the kernel no longer generates "
 "this error."
 msgstr ""
-"Слишком много перемещаемых страниц. Начиная с Linux 2.6.29 ядро больше не "
+"Слишком много перемещаемых страниц. Начиная с Linux 2.6.29, ядро не "
 "генерирует эту ошибку."
 
 #.  FIXME Clarify "current cpuset" in the description of the EACCES error.

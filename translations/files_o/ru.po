@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
-"POT-Creation-Date: 2019-08-26 09:26+0300\n"
-"PO-Revision-Date: 2019-09-08 14:50+0300\n"
+"POT-Creation-Date: 2019-09-30 18:46+0300\n"
+"PO-Revision-Date: 2019-10-06 09:05+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
@@ -84,10 +84,16 @@ msgid "Associativity"
 msgstr "Ассоциативность"
 
 #. type: tbl table
+#: man-pages/man7/operator.7:49
+#, no-wrap
+msgid "Notes"
+msgstr "Примечания"
+
+#. type: tbl table
 #: man-pages/man7/operator.7:50
 #, no-wrap
-msgid "() [] -E<gt> ."
-msgstr "() [] -E<gt> ."
+msgid "() [] -E<gt> . ++ --"
+msgstr "() [] -E<gt> . ++ --"
 
 #. type: tbl table
 #: man-pages/man7/operator.7:50 man-pages/man7/operator.7:52
@@ -99,6 +105,12 @@ msgstr "() [] -E<gt> ."
 #, no-wrap
 msgid "left to right"
 msgstr "слева направо"
+
+#. type: IP
+#: man-pages/man7/operator.7:50 man-pages/man7/operator.7:70
+#, no-wrap
+msgid "[1]"
+msgstr "[1]"
 
 #. type: tbl table
 #: man-pages/man7/operator.7:51
@@ -112,6 +124,12 @@ msgstr "! ~ ++ -- + - (type) * & sizeof"
 #, no-wrap
 msgid "right to left"
 msgstr "справа налево"
+
+#. type: IP
+#: man-pages/man7/operator.7:51 man-pages/man7/operator.7:73
+#, no-wrap
+msgid "[2]"
+msgstr "[2]"
 
 #. type: tbl table
 #: man-pages/man7/operator.7:52
@@ -190,6 +208,29 @@ msgstr "= += -= *= /= %= E<lt>E<lt>= E<gt>E<gt>= &= ^= |="
 #, no-wrap
 msgid ","
 msgstr ","
+
+#. type: Plain text
+#: man-pages/man7/operator.7:68
+msgid "The following notes provide further information to the above table:"
+msgstr "Примечания к таблице:"
+
+#. type: Plain text
+#: man-pages/man7/operator.7:73
+msgid ""
+"The ++ and -- operators at this precedence level are the postfix flavors of "
+"the operators."
+msgstr ""
+"Операторы ++ и -- на этом уровне приоритета считаются постфиксной "
+"разновидностью операторов."
+
+#. type: Plain text
+#: man-pages/man7/operator.7:76
+msgid ""
+"The ++ and -- operators at this precedence level are the prefix flavors of "
+"the operators."
+msgstr ""
+"Операторы ++ и -- на этом уровне приоритета считаются префиксной "
+"разновидностью операторов."
 
 #. type: TH
 #: man-pages/man2/outb.2:26
@@ -2661,7 +2702,7 @@ msgstr ""
 #. type: Plain text
 #: man-pages/man2/open.2:579
 msgid ""
-"Note that ithe setting of this flag has no effect on the operation of "
+"Note that the setting of this flag has no effect on the operation of "
 "B<poll>(2), B<select>(2), B<epoll>(7), and similar, since those interfaces "
 "merely inform the caller about whether a file descriptor is \"ready\", "
 "meaning that an I/O operation performed on the file descriptor with the "

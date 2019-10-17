@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:25+0300\n"
-"PO-Revision-Date: 2019-09-26 05:27+0300\n"
+"PO-Revision-Date: 2019-10-05 08:17+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
 "Language: ru\n"
@@ -24701,10 +24701,10 @@ msgstr "I<aio_key>"
 #: man-pages/man2/io_submit.2:74
 msgid ""
 "This is an internal field used by the kernel.  Do not modify this field "
-"after an B<io_submit>(2)  call."
+"after an B<io_submit>()  call."
 msgstr ""
 "Внутреннее поле, используется ядром. Не изменяйте это поле после вызова "
-"B<io_submit>(2)."
+"B<io_submit>()."
 
 #. type: TP
 #: man-pages/man2/io_submit.2:74
@@ -25207,18 +25207,7 @@ msgstr ""
 "если данные не совпадают."
 
 #. type: Plain text
-#: man-pages/man2/ioctl_fideduperange.2:160
-msgid ""
-"The kernel was unable to allocate sufficient memory to perform the operation "
-"or I<dest_count> is so large that the input argument description spans more "
-"than a single page of memory."
-msgstr ""
-"Ядро не смогло выделить достаточно памяти для выполнения операции или размер "
-"I<dest_count> слишком большой из-за того, что описание входного аргумента "
-"занимает больше одной страницы в памяти."
-
-#. type: Plain text
-#: man-pages/man2/ioctl_fideduperange.2:169
+#: man-pages/man2/ioctl_fideduperange.2:162
 msgid ""
 "I<src_fd> is not open for reading; I<dest_fd> is not open for writing or is "
 "open for append-only writes; or the filesystem which I<src_fd> resides on "
@@ -25229,7 +25218,7 @@ msgstr ""
 "I<src_fd>, не поддерживает дедупликацию."
 
 #. type: Plain text
-#: man-pages/man2/ioctl_fideduperange.2:178
+#: man-pages/man2/ioctl_fideduperange.2:171
 msgid ""
 "The filesystem does not support deduplicating the ranges of the given "
 "files.  This error can also appear if either file descriptor represents a "
@@ -25243,6 +25232,17 @@ msgstr ""
 "чтобы аргументы смещения и длины были выровнены по основному размеру блока. "
 "В XFS и Btrfs нет поддержки дедупликации перекрывающихся диапазонов в одном "
 "и том же файле."
+
+#. type: Plain text
+#: man-pages/man2/ioctl_fideduperange.2:182
+msgid ""
+"The kernel was unable to allocate sufficient memory to perform the operation "
+"or I<dest_count> is so large that the input argument description spans more "
+"than a single page of memory."
+msgstr ""
+"Ядро не смогло выделить достаточно памяти для выполнения операции или размер "
+"I<dest_count> слишком большой из-за того, что описание входного аргумента "
+"занимает больше одной страницы в памяти."
 
 #. type: Plain text
 #: man-pages/man2/ioctl_fideduperange.2:186
@@ -27837,12 +27837,21 @@ msgid "The given file descriptor is not valid."
 msgstr "Указан неверный файловый дескриптор."
 
 #. type: Plain text
-#: man-pages/man2/inotify_add_watch.2:95
+#: man-pages/man2/inotify_add_watch.2:100
+msgid ""
+"I<mask> contains B<IN_MASK_CREATE> and I<pathname> refers to a file already "
+"being watched by the same I<fd>."
+msgstr ""
+"В I<mask> содержится B<IN_MASK_CREATE> и I<pathname> ссылается на файл, "
+"который уже отслеживается тем же I<fd>."
+
+#. type: Plain text
+#: man-pages/man2/inotify_add_watch.2:104
 msgid "I<pathname> points outside of the process's accessible address space."
 msgstr "I<pathname> указывает за пределы доступного адресного пространства."
 
 #. type: Plain text
-#: man-pages/man2/inotify_add_watch.2:106
+#: man-pages/man2/inotify_add_watch.2:115
 msgid ""
 "The given event mask contains no valid events; or I<mask> contains both "
 "B<IN_MASK_ADD> and B<IN_MASK_CREATE>; or I<fd> is not an inotify file "
@@ -27853,18 +27862,18 @@ msgstr ""
 "дескриптором inotify."
 
 #. type: TP
-#: man-pages/man2/inotify_add_watch.2:106
+#: man-pages/man2/inotify_add_watch.2:115
 #, no-wrap
 msgid "B<ENAMETOOLONG>"
 msgstr "B<ENAMETOOLONG>"
 
 #. type: Plain text
-#: man-pages/man2/inotify_add_watch.2:110
+#: man-pages/man2/inotify_add_watch.2:119
 msgid "I<pathname> is too long."
 msgstr "Слишком длинное значение аргумента I<pathname>."
 
 #. type: Plain text
-#: man-pages/man2/inotify_add_watch.2:115
+#: man-pages/man2/inotify_add_watch.2:124
 msgid ""
 "A directory component in I<pathname> does not exist or is a dangling "
 "symbolic link."
@@ -27873,18 +27882,18 @@ msgstr ""
 "символьной ссылкой."
 
 #. type: Plain text
-#: man-pages/man2/inotify_add_watch.2:118
+#: man-pages/man2/inotify_add_watch.2:127
 msgid "Insufficient kernel memory was available."
 msgstr "Недостаточное количество памяти ядра."
 
 #. type: TP
-#: man-pages/man2/inotify_add_watch.2:118
+#: man-pages/man2/inotify_add_watch.2:127
 #, no-wrap
 msgid "B<ENOSPC>"
 msgstr "B<ENOSPC>"
 
 #. type: Plain text
-#: man-pages/man2/inotify_add_watch.2:122
+#: man-pages/man2/inotify_add_watch.2:131
 msgid ""
 "The user limit on the total number of inotify watches was reached or the "
 "kernel failed to allocate a needed resource."
@@ -27893,20 +27902,11 @@ msgstr ""
 "или ядру не удалось выделить необходимые ресурсы."
 
 #. type: Plain text
-#: man-pages/man2/inotify_add_watch.2:130
+#: man-pages/man2/inotify_add_watch.2:139
 msgid "I<mask> contains B<IN_ONLYDIR> and I<pathname> is not a directory."
 msgstr ""
 "В значении I<mask> содержится B<IN_ONLYDIR> и I<pathname> не является "
 "каталогом."
-
-#. type: Plain text
-#: man-pages/man2/inotify_add_watch.2:139
-msgid ""
-"I<mask> contains B<IN_MASK_CREATE> and I<pathname> refers to a file already "
-"being watched by the same I<fd>."
-msgstr ""
-"В I<mask> содержится B<IN_MASK_CREATE> и I<pathname> ссылается на файл, "
-"который уже отслеживается тем же I<fd>."
 
 #. type: Plain text
 #: man-pages/man2/inotify_add_watch.2:146

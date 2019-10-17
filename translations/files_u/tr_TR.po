@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:27+0300\n"
-"PO-Revision-Date: 2019-09-19 02:26+0000\n"
+"PO-Revision-Date: 2019-09-30 15:49+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Turkish (Turkey) (http://www.transifex.com/kruvalig/man-pages/language/tr_TR/)\n"
 "MIME-Version: 1.0\n"
@@ -705,9 +705,8 @@ msgstr ""
 #. type: Plain text
 #: man-pages/man7/uts_namespaces.7:64
 msgid ""
-"B<nsenter>(1), B<unshare>(1), B<clone>(2), B<gethostname>(2), "
-"B<getdomainname>(2), B<setns>(2), B<uname>(2), B<unshare>(2), "
-"B<namespaces>(7)"
+"B<nsenter>(1), B<unshare>(1), B<clone>(2), B<getdomainname>(2), "
+"B<gethostname>(2), B<setns>(2), B<uname>(2), B<unshare>(2), B<namespaces>(7)"
 msgstr ""
 
 #. type: TH

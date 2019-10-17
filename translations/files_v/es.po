@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:27+0300\n"
-"PO-Revision-Date: 2019-08-26 06:22+0000\n"
+"PO-Revision-Date: 2019-09-30 15:49+0000\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Spanish (http://www.transifex.com/kruvalig/man-pages/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -274,7 +274,7 @@ msgstr ""
 #. type: TH
 #: man-pages/man4/veth.4:28
 #, no-wrap
-msgid "veth"
+msgid "VETH"
 msgstr ""
 
 #. type: TH
