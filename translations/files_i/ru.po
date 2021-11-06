@@ -1,19 +1,22 @@
-# Copyright (C) 2019 Free Software Foundation, Inc.
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Azamat Hackimov <azamat.hackimov@gmail.com>, 2013-2014,2017.
-# Dmitriy S. Seregin <dseregin@59.ru>, 2013.
-# Yuri Kozlov <yuray@komyakino.ru>, 2011-2019.
-# Yuri Kozlov <yuray@komyakino.ru>, 2013.
-# Иван Павлов <pavia00@gmail.com>, 2017,2019.
+# Azamat Hackimov <azamat.hackimov@gmail.com>, 2013-2014,2017,2021
+# Dmitriy S. Seregin <dseregin@59.ru>, 2013
+# Dmitriy S. Seregin <dseregin@59.ru>, 2013
+# Yuri Kozlov <yuray@komyakino.ru>, 2011-2019
+# Yuri Kozlov <yuray@komyakino.ru>, 2013
+# Иван Павлов <pavia00@gmail.com>, 2017,2019
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:25+0300\n"
-"PO-Revision-Date: 2019-10-05 08:17+0300\n"
-"Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
-"Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2021-11-06 13:41+0000\n"
+"Last-Translator: Azamat Hackimov <azamat.hackimov@gmail.com>\n"
+"Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/"
+"ru/)\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +24,6 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
-"X-Generator: Lokalize 2.0\n"
 
 #. type: TH
 #: man-pages/man6/intro.6:26
@@ -36482,7 +36484,7 @@ msgid ""
 "The B<rindex>()  function returns a pointer to the last occurrence of the "
 "character I<c> in the string I<s>."
 msgstr ""
-"Функция B<index>() возвращает указатель на последний обнаруженный в строке "
+"Функция B<rindex>() возвращает указатель на последний обнаруженный в строке "
 "I<s> символ I<c>."
 
 #. type: Plain text

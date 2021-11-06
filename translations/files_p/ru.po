@@ -1,22 +1,26 @@
-# Copyright (C) 2019 Free Software Foundation, Inc.
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Alexey, 2016.
-# Azamat Hackimov <azamat.hackimov@gmail.com>, 2014-2017.
-# kogamatranslator49 <r.podarov@yandex.ru>, 2015.
-# Kogan, Darima <silverdk99@gmail.com>, 2014.
-# Max Is <ismax799@gmail.com>, 2016.
-# Yuri Kozlov <yuray@komyakino.ru>, 2011-2019.
-# Yuri Kozlov <yuray@komyakino.ru>, 2013.
-# Иван Павлов <pavia00@gmail.com>, 2017.
+# Alexey, 2016
+# 554abae4cc662e2cb07346dcf39fe23e_a45155d, 2016
+# Azamat Hackimov <azamat.hackimov@gmail.com>, 2014-2017,2021
+# kogamatranslator49 <r.podarov@yandex.ru>, 2015
+# Kogan, Darima <silverdk99@gmail.com>, 2014
+# Max Is <ismax799@gmail.com>, 2016
+# Kogan, Darima <silverdk99@gmail.com>, 2014
+# Yuri Kozlov <yuray@komyakino.ru>, 2011-2019
+# Yuri Kozlov <yuray@komyakino.ru>, 2013
+# Иван Павлов <pavia00@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: translation of man-pages\n"
 "POT-Creation-Date: 2019-08-26 09:26+0300\n"
-"PO-Revision-Date: 2019-10-12 08:58+0300\n"
-"Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
-"Language-Team: Russian <man-pages-ru-talks@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2021-11-06 13:44+0000\n"
+"Last-Translator: Azamat Hackimov <azamat.hackimov@gmail.com>\n"
+"Language-Team: Russian (http://www.transifex.com/kruvalig/man-pages/language/"
+"ru/)\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,7 +28,6 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
-"X-Generator: Lokalize 2.0\n"
 
 #. type: TH
 #: man-pages/man4/pts.4:8
@@ -9710,7 +9713,7 @@ msgid ""
 "B<chroot>(2))."
 msgstr ""
 "Текущий корневой каталог не является точкой монтирования (из-за "
-"предшествующего <chroot>(2))."
+"предшествующего В<chroot>(2))."
 
 #. type: Plain text
 #: man-pages/man2/pivot_root.2:155
