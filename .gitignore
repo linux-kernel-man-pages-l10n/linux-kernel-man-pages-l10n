@@ -1,6 +1,5 @@
 *.swp
 *.tar.bz2
 *.po~
-man-pages/
 man/
 
