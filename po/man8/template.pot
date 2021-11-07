@@ -1,0 +1,3308 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Linux
+# This file is distributed under the same license as the linux_kernel_man_pages_l10n package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: linux_kernel_man_pages_l10n 5.03\n"
+"Report-Msgid-Bugs-To: https://github.com/test/test\n"
+"POT-Creation-Date: 2021-11-07 03:04+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: TH
+#: man-pages/man8/zdump.8:5
+#, no-wrap
+msgid "ZDUMP"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/zdump.8:5 man-pages/man8/zic.8:5
+#, no-wrap
+msgid "2019-03-06"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/zdump.8:5 man-pages/man8/zic.8:5 man-pages/man8/tzselect.8:5
+#: man-pages/man8/iconvconfig.8:26
+#, no-wrap
+msgid "Linux System Administration"
+msgstr ""
+
+#. type: SH
+#: man-pages/man8/zdump.8:6 man-pages/man8/zic.8:6 man-pages/man8/tzselect.8:6
+#: man-pages/man8/nscd.8:24 man-pages/man8/ld.so.8:6
+#: man-pages/man8/iconvconfig.8:27 man-pages/man8/ldconfig.8:23
+#: man-pages/man8/intro.8:30 man-pages/man8/sln.8:26
+#, no-wrap
+msgid "NAME"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:8
+msgid "zdump - timezone dumper"
+msgstr ""
+
+#. type: SH
+#: man-pages/man8/zdump.8:8 man-pages/man8/zic.8:8 man-pages/man8/tzselect.8:8
+#: man-pages/man8/ld.so.8:8 man-pages/man8/iconvconfig.8:29
+#: man-pages/man8/ldconfig.8:25 man-pages/man8/sln.8:28
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:15
+msgid "B<zdump> [ I<option> \\&... ] [ I<timezone> \\&... ]"
+msgstr ""
+
+#. type: SH
+#: man-pages/man8/zdump.8:15 man-pages/man8/zic.8:15
+#: man-pages/man8/tzselect.8:10 man-pages/man8/nscd.8:26
+#: man-pages/man8/ld.so.8:19 man-pages/man8/iconvconfig.8:33
+#: man-pages/man8/ldconfig.8:40 man-pages/man8/intro.8:32
+#: man-pages/man8/sln.8:32
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:28
+msgid ""
+"The B<zdump> program prints the current time in each I<timezone> named on "
+"the command line."
+msgstr ""
+
+#. type: SH
+#: man-pages/man8/zdump.8:28 man-pages/man8/zic.8:36 man-pages/man8/nscd.8:60
+#: man-pages/man8/ld.so.8:155 man-pages/man8/iconvconfig.8:58
+#: man-pages/man8/ldconfig.8:96
+#, no-wrap
+msgid "OPTIONS"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zdump.8:29 man-pages/man8/zic.8:37
+#, no-wrap
+msgid "B<--version>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:32 man-pages/man8/zic.8:40
+msgid "Output version information and exit."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zdump.8:32 man-pages/man8/zic.8:40 man-pages/man8/nscd.8:61
+#, no-wrap
+msgid "B<--help>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:35 man-pages/man8/zic.8:43
+msgid "Output short usage message and exit."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zdump.8:35
+#, no-wrap
+msgid "B<-i>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:41
+msgid ""
+"Output a description of time intervals.  For each I<timezone> on the command "
+"line, output an interval-format description of the timezone.  See"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:43
+msgid "below."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zdump.8:43 man-pages/man8/zic.8:73
+#, no-wrap
+msgid "B<-v>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:67
+msgid ""
+"Output a verbose description of time intervals.  For each I<timezone> on the "
+"command line, print the time at the lowest possible time value, the time one "
+"day after the lowest possible time value, the times both one second before "
+"and exactly at each detected time discontinuity, the time at one day less "
+"than the highest possible time value, and the time at the highest possible "
+"time value.  Each line is followed by B<isdst=>I<D> where I<D> is positive, "
+"zero, or negative depending on whether the given time is daylight saving "
+"time, standard time, or an unknown time type, respectively.  Each line is "
+"also followed by B<gmtoff=>I<N> if the given local time is known to be I<N> "
+"seconds east of Greenwich."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zdump.8:67
+#, no-wrap
+msgid "B<-V>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:74
+msgid ""
+"Like B<-v>, except omit the times relative to the extreme time values.  This "
+"generates output that is easier to compare to that of implementations with "
+"different time representations."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zdump.8:74
+#, no-wrap
+msgid "B<-c >[I<loyear>B<,>]I<hiyear>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:86
+msgid ""
+"Cut off interval output at the given year(s).  Cutoff times are computed "
+"using the proleptic Gregorian calendar with year 0 and with Universal Time "
+"(UT) ignoring leap seconds.  The lower bound is exclusive and the upper is "
+"inclusive; for example, a I<loyear> of 1970 excludes a transition occurring "
+"at 1970-01-01 00:00:00 UTC but a I<hiyear> of 1970 includes the transition.  "
+"The default cutoff is B<-500,2500>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zdump.8:86
+#, no-wrap
+msgid "B<-t >[I<lotime>B<,>]I<hitime>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:97
+msgid ""
+"Cut off interval output at the given time(s), given in decimal seconds since "
+"1970-01-01 00:00:00 Coordinated Universal Time (UTC).  The I<timezone> "
+"determines whether the count includes leap seconds.  As with B<-c>, the "
+"cutoff's lower bound is exclusive and its upper bound is inclusive."
+msgstr ""
+
+#. type: SH
+#: man-pages/man8/zdump.8:97
+#, no-wrap
+msgid "INTERVAL FORMAT"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:101
+msgid ""
+"The interval format is a compact text representation that is intended to be "
+"both human- and machine-readable.  It consists of an empty line, then a line"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:105
+msgid "where I<string> is a double-quoted string giving the timezone, a second line"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:108
+msgid ""
+"describing the time interval before the first transition if any, and zero or "
+"more following lines"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:111
+msgid ""
+"one line for each transition time and following interval.  Fields are "
+"separated by single tabs."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:127
+msgid ""
+"Dates are in I<yyyy>-I<mm>-I<dd> format and times are in 24-hour "
+"I<hh>:I<mm>:I<ss> format where I<hh>E<lt>24.  Times are in local time "
+"immediately after the transition.  A time interval description consists of a "
+"UT offset in signed \\(+-I<hhmmss> format, a time zone abbreviation, and an "
+"isdst flag.  An abbreviation that equals the UT offset is omitted; other "
+"abbreviations are double-quoted strings unless they consist of one or more "
+"alphabetic characters.  An isdst flag is omitted for standard time, and "
+"otherwise is a decimal integer that is unsigned and positive (typically 1) "
+"for daylight saving time and negative for unknown."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:135
+msgid ""
+"In times and in UT offsets with absolute value less than 100 hours, the "
+"seconds are omitted if they are zero, and the minutes are also omitted if "
+"they are also zero.  Positive UT offsets are east of Greenwich.  The UT "
+"offset -00 denotes a UT placeholder in areas where the actual offset is "
+"unspecified; by convention, this occurs when the UT offset is zero and the "
+"time zone abbreviation begins with"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:137
+msgid "or is"
+msgstr ""
+
+#. "
+#. type: Plain text
+#: man-pages/man8/zdump.8:145
+msgid ""
+"In double-quoted strings, escape sequences represent unusual characters.  "
+"The escape sequences are \\es for space, and \\e\", \\e\\e, \\ef, \\en, "
+"\\er, \\et, and \\ev with their usual meaning in the C programming "
+"language.  E.g., the double-quoted string ``\"CET\\es\\e\"\\e\\e\"'' "
+"represents the character sequence ``CET \"\\e''."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:150
+msgid ""
+"Here is an example of the output, with the leading empty line omitted.  "
+"(This example is shown with tab stops set far enough apart so that the "
+"tabbed columns line up.)"
+msgstr ""
+
+#. type: ta
+#: man-pages/man8/zdump.8:156
+#, no-wrap
+msgid "\\nwu +\\nwu +\\nwu +\\nwu"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:165
+#, no-wrap
+msgid ""
+"TZ=\"Pacific/Honolulu\"\n"
+"-\t-\t-10:31:26\tLMT\n"
+"1896-01-13\t12:01:26\t-10:30\tHST\n"
+"1933-04-30\t03\t-09:30\tHDT\t1\n"
+"1933-05-21\t11\t-10:30\tHST\n"
+"1942-02-09\t03\t-09:30\tHDT\t1\n"
+"1945-09-30\t01\t-10:30\tHST\n"
+"1947-06-08\t02:30\t-10\tHST\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:179
+msgid ""
+"Here, local time begins 10 hours, 31 minutes and 26 seconds west of UT, and "
+"is a standard time abbreviated LMT.  Immediately after the first transition, "
+"the date is 1896-01-13 and the time is 12:01:26, and the following time "
+"interval is 10.5 hours west of UT, a standard time abbreviated HST.  "
+"Immediately after the second transition, the date is 1933-04-30 and the time "
+"is 03:00:00 and the following time interval is 9.5 hours west of UT, is "
+"abbreviated HDT, and is daylight saving time.  Immediately after the last "
+"transition the date is 1947-06-08 and the time is 02:30:00, and the "
+"following time interval is 10 hours west of UT, a standard time abbreviated "
+"HST."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:182
+msgid "Here are excerpts from another example:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:196
+#, no-wrap
+msgid ""
+"TZ=\"Europe/Astrakhan\"\n"
+"-\t-\t+03:12:12\tLMT\n"
+"1924-04-30\t23:47:48\t+03\n"
+"1930-06-21\t01\t+04\n"
+"1981-04-01\t01\t+05\t\t1\n"
+"1981-09-30\t23\t+04\n"
+"\\&...\n"
+"2014-10-26\t01\t+03\n"
+"2016-03-27\t03\t+04\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:203
+msgid ""
+"This time zone is east of UT, so its UT offsets are positive.  Also, many of "
+"its time zone abbreviations are omitted since they duplicate the text of the "
+"UT offset."
+msgstr ""
+
+#. type: SH
+#: man-pages/man8/zdump.8:203
+#, no-wrap
+msgid "LIMITATIONS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:208
+msgid ""
+"Time discontinuities are found by sampling the results returned by localtime "
+"at twelve-hour intervals.  This works in all real-world cases; one can "
+"construct artificial time zones for which this fails."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:214
+msgid "In the B<-v> and B<-V> output,"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:220
+msgid ""
+"denotes the value returned by B<gmtime>(3), which uses UTC for modern "
+"timestamps and some other UT flavor for timestamps that predate the "
+"introduction of UTC.  No attempt is currently made to have the output use"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:222
+msgid "for newer and"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:225
+msgid ""
+"for older timestamps, partly because the exact date of the introduction of "
+"UTC is problematic."
+msgstr ""
+
+#. type: SH
+#: man-pages/man8/zdump.8:225 man-pages/man8/zic.8:595
+#: man-pages/man8/tzselect.8:47 man-pages/man8/nscd.8:93
+#: man-pages/man8/ld.so.8:777 man-pages/man8/iconvconfig.8:101
+#: man-pages/man8/ldconfig.8:187 man-pages/man8/sln.8:60
+#, no-wrap
+msgid "SEE ALSO"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zdump.8:227
+msgid "B<tzfile>(5), B<zic>(8)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/zic.8:5
+#, no-wrap
+msgid "ZIC"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:8
+msgid "zic - timezone compiler"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:15
+msgid "B<zic> [ I<option> \\&... ] [ I<filename> \\&... ]"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:34
+msgid ""
+"The B<zic> program reads text from the file(s) named on the command line and "
+"creates the time conversion information files specified in this input.  If a "
+"I<filename> is"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:36
+msgid "standard input is read."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:43
+#, no-wrap
+msgid "B<-d >I<directory>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:47
+msgid ""
+"Create time conversion information files in the named directory rather than "
+"in the standard directory named below."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:47
+#, no-wrap
+msgid "B<-l >I<timezone>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:54
+msgid ""
+"Use I<timezone> as local time.  B<zic> will act as if the input contained a "
+"link line of the form"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:57
+msgid "Link\tI<timezone>\t\tlocaltime"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:57
+#, no-wrap
+msgid "B<-p >I<timezone>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:65
+msgid ""
+"Use I<timezone>'s rules when handling POSIX-format timezone environment "
+"variables.  B<zic> will act as if the input contained a link line of the "
+"form"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:68
+msgid "Link\tI<timezone>\t\tposixrules"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:68
+#, no-wrap
+msgid "B<-L >I<leapsecondfilename>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:73
+msgid ""
+"Read leap second information from the file with the given name.  If this "
+"option is not used, no leap second information appears in output files."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:76
+msgid "Be more verbose, and complain about the following situations:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:79
+msgid "The input specifies a link to a link."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:84
+msgid ""
+"A year that appears in a data file is outside the range of years "
+"representable by B<time>(2)  values."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:89
+msgid ""
+"A time of 24:00 or more appears in the input.  Pre-1998 versions of B<zic> "
+"prohibit 24:00, and pre-2007 versions prohibit times greater than 24:00."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:94
+msgid ""
+"A rule goes past the start or end of the month.  Pre-2004 versions of B<zic> "
+"prohibit this."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:101
+msgid ""
+"The output file does not contain all the information about the long-term "
+"future of a timezone, because the future cannot be summarized as an extended "
+"POSIX TZ string.  For example, as of 2013 this problem occurs for Iran's "
+"daylight-saving rules for the predicted future, as these rules are based on "
+"the Iranian calendar, which cannot be represented."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:107
+msgid ""
+"The output contains data that may not be handled properly by client code "
+"designed for older B<zic> output formats.  These compatibility issues affect "
+"only timestamps before 1970 or after the start of 2038."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:110
+msgid ""
+"A time zone abbreviation has fewer than 3 characters.  POSIX requires at "
+"least 3."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:112
+msgid "An output file name contains a byte that is not an ASCII letter,"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:115 man-pages/man8/zic.8:323 man-pages/man8/zic.8:327
+#: man-pages/man8/zic.8:355
+msgid "or"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:118
+msgid ""
+"or it contains a file name component that contains more than 14 bytes or "
+"that starts with"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:120
+#, no-wrap
+msgid "B<-s>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:125
+msgid ""
+"Limit time values stored in output files to values that are the same whether "
+"they're taken to be signed or unsigned.  You can use this option to generate "
+"SVVS-compatible files."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:139
+msgid ""
+"Input files should be text files, that is, they should be a series of zero "
+"or more lines, each ending in a newline byte and containing at most 511 "
+"bytes, and without any NUL bytes.  The input text's encoding is typically "
+"UTF-8 or ASCII; it should have a unibyte representation for the POSIX "
+"Portable Character Set (PPCS)  "
+"\\E<lt>http://pubs\\:.opengroup\\:.org/\\:onlinepubs/\\:9699919799/\\:basedefs/\\:V1_chap06\\:.html\\E<gt> "
+"and the encoding's non-unibyte characters should consist entirely of "
+"non-PPCS bytes.  Non-PPCS characters typically occur only in comments: "
+"although output file names and time zone abbreviations can contain nearly "
+"any character, other software will work better if these are limited to the "
+"restricted syntax described under the B<-v> option."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:152
+msgid ""
+"Input lines are made up of fields.  Fields are separated from one another by "
+"one or more white space characters.  The white space characters are space, "
+"form feed, carriage return, newline, tab, and vertical tab.  Leading and "
+"trailing white space on input lines is ignored.  An unquoted sharp character "
+"(#) in the input introduces a comment which extends to the end of the line "
+"the sharp character appears on.  White space characters and sharp characters "
+"may be enclosed in double quotes (\") if they're to be used as part of a "
+"field.  Any line that is blank (after comment stripping) is ignored.  "
+"Nonblank lines are expected to be of one of three types: rule lines, zone "
+"lines, and link lines."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:163
+msgid ""
+"Names must be in English and are case insensitive.  They appear in several "
+"contexts, and include month and weekday names and keywords such as "
+"B<maximum>, B<only>, B<Rolling>, and B<Zone>.  A name can be abbreviated by "
+"omitting all but an initial prefix; any abbreviation must be unambiguous in "
+"context."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:165
+msgid "A rule line has the form"
+msgstr ""
+
+#. type: ta
+#: man-pages/man8/zic.8:167
+#, no-wrap
+msgid ""
+"\\w'Rule\\0\\0'u +\\w'NAME\\0\\0'u +\\w'FROM\\0\\0'u +\\w'1973\\0\\0'u "
+"+\\w'TYPE\\0\\0'u +\\w'Apr\\0\\0'u +\\w'lastSun\\0\\0'u +\\w'2:00w\\0\\0'u "
+"+\\w'1:00d\\0\\0'u"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:170
+#, no-wrap
+msgid "Rule\tNAME\tFROM\tTO\tTYPE\tIN\tON\tAT\tSAVE\tLETTER/S\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:172 man-pages/man8/zic.8:341 man-pages/man8/zic.8:446
+#: man-pages/man8/zic.8:477
+#, no-wrap
+msgid "For example:\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:175
+#, no-wrap
+msgid "Rule\tUS\t1967\t1973\t-\tApr\tlastSun\t2:00w\t1:00\tD\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:178
+msgid "The fields that make up a rule line are:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:178 man-pages/man8/zic.8:347
+#, no-wrap
+msgid "B<NAME>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:183
+msgid ""
+"Gives the name of the rule set that contains this line.  The name must start "
+"with a character that is neither an ASCII digit nor"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:185
+msgid "nor"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:188
+msgid ""
+"To allow for future extensions, an unquoted name should not contain "
+"characters from the set"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:189
+#, no-wrap
+msgid "B<FROM>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:203
+msgid ""
+"Gives the first year in which the rule applies.  Any signed integer year can "
+"be supplied; the proleptic Gregorian calendar is assumed, with year 0 "
+"preceding year 1.  The word B<minimum> (or an abbreviation) means the "
+"indefinite past.  The word B<maximum> (or an abbreviation) means the "
+"indefinite future.  Rules can describe times that are not representable as "
+"time values, with the unrepresentable times ignored; this allows rules to be "
+"portable among hosts with differing time value types."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:203
+#, no-wrap
+msgid "B<TO>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:217
+msgid ""
+"Gives the final year in which the rule applies.  In addition to B<minimum> "
+"and B<maximum> (as above), the word B<only> (or an abbreviation)  may be "
+"used to repeat the value of the B<FROM> field."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:217
+#, no-wrap
+msgid "B<TYPE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:220
+msgid "should be"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:224
+msgid ""
+"and is present for compatibility with older versions of B<zic> in which it "
+"could contain year types."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:224
+#, no-wrap
+msgid "B<IN>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:228
+msgid ""
+"Names the month in which the rule takes effect.  Month names may be "
+"abbreviated."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:228
+#, no-wrap
+msgid "B<ON>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:232
+msgid "Gives the day on which the rule takes effect.  Recognized forms include:"
+msgstr ""
+
+#. type: ta
+#: man-pages/man8/zic.8:235
+#, no-wrap
+msgid "\\w'SunE<lt>=25\\0\\0'u"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:241
+#, no-wrap
+msgid ""
+"5\tthe fifth of the month\n"
+"lastSun\tthe last Sunday in the month\n"
+"lastMon\tthe last Monday in the month\n"
+"SunE<gt>=8\tfirst Sunday on or after the eighth\n"
+"SunE<lt>=25\tlast Sunday on or before the 25th\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:247
+msgid "A weekday name (e.g., B<Sunday>)  or a weekday name preceded by"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:254
+msgid ""
+"(e.g., B<lastSunday>)  may be abbreviated or spelled out in full.  Note that "
+"there must be no spaces within the B<ON> field."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:254
+#, no-wrap
+msgid "B<AT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:258
+msgid ""
+"Gives the time of day at which the rule takes effect.  Recognized forms "
+"include:"
+msgstr ""
+
+#. type: ta
+#: man-pages/man8/zic.8:261
+#, no-wrap
+msgid "\\w'00:19:32.13\\0\\0'u"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:269
+#, no-wrap
+msgid ""
+"2\ttime in hours\n"
+"2:00\ttime in hours and minutes\n"
+"01:28:14\ttime in hours, minutes, and seconds\n"
+"15:00\t24-hour format time (for times after noon)\n"
+"260:00\t260 hours after 00:00\n"
+"-2:30\t2.5 hours before 00:00\n"
+"-\tequivalent to 0\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:277
+msgid ""
+"where hour 0 is midnight at the start of the day, and hour 24 is midnight at "
+"the end of the day.  Any of these forms may be followed by the letter B<w> "
+"if the given time is local"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:281
+msgid "time, B<s> if the given time is local"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:295
+msgid ""
+"time, or B<u> (or B<g> or B<z>)  if the given time is universal time; in the "
+"absence of an indicator, wall clock time is assumed.  The intent is that a "
+"rule line describes the instants when a clock/calendar set to the type of "
+"time specified in the B<AT> field would show the specified date and time of "
+"day."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:295
+#, no-wrap
+msgid "B<SAVE>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:316
+msgid ""
+"Gives the amount of time to be added to local standard time when the rule is "
+"in effect.  This field has the same format as the B<AT> field (although, of "
+"course, the B<w> and B<s> suffixes are not used).  Negative offsets are "
+"allowed; in Ireland, for example, daylight saving time is observed in winter "
+"and has a negative offset relative to Irish Standard Time.  The offset is "
+"merely added to standard time; for example, B<zic> does not distinguish a "
+"10:30 standard time plus an 0:30 B<SAVE> from a 10:00 standard time plus a "
+"1:00 B<SAVE>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:316
+#, no-wrap
+msgid "B<LETTER/S>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:319
+msgid "Gives the"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:321
+msgid "(for example, the"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:325
+msgid "in"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:330
+msgid ""
+"of time zone abbreviations to be used when this rule is in effect.  If this "
+"field is"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:332
+msgid "the variable part is null."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:334
+msgid "A zone line has the form"
+msgstr ""
+
+#. type: ta
+#: man-pages/man8/zic.8:337
+#, no-wrap
+msgid ""
+"\\w'Zone\\0\\0'u +\\w'Asia/Amman\\0\\0'u +\\w'UTOFF\\0\\0'u "
+"+\\w'Jordan\\0\\0'u +\\w'FORMAT\\0\\0'u"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:339
+#, no-wrap
+msgid "Zone\tNAME\tUTOFF\tRULES\tFORMAT\t[UNTIL]\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:344
+#, no-wrap
+msgid "Zone\tAsia/Amman\t2:00\tJordan\tEE%sT\t2017 Oct 27 01:00\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:347
+msgid "The fields that make up a zone line are:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:353
+msgid ""
+"The name of the timezone.  This is the name used in creating the time "
+"conversion information file for the timezone.  It should not contain a file "
+"name component"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:357
+msgid "a file name component is a maximal substring that does not contain"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:358
+#, no-wrap
+msgid "B<UTOFF>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:367
+msgid ""
+"The amount of time to add to UT to get standard time.  This field has the "
+"same format as the B<AT> and B<SAVE> fields of rule lines; begin the field "
+"with a minus sign if time must be subtracted from UT."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:367
+#, no-wrap
+msgid "B<RULES>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:378
+msgid ""
+"The name of the rules that apply in the timezone or, alternatively, a field "
+"in the same format as a rule-line SAVE column, giving of the amount of time "
+"to be added to local standard time effect, and whether the resulting time is "
+"standard or daylight saving.  If this field is B<-> then standard time "
+"always applies.  When an amount of time is given, only the sum of standard "
+"time and this amount matters."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:378
+#, no-wrap
+msgid "B<FORMAT>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:384
+msgid ""
+"The format for time zone abbreviations.  The pair of characters B<%s> is "
+"used to show where the"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:404
+msgid ""
+"of the time zone abbreviation goes.  Alternatively, a format can use the "
+"pair of characters B<%z> to stand for the UT offset in the form \\(+-I<hh>, "
+"\\(+-I<hhmm>, or \\(+-I<hhmmss>, using the shortest form that does not lose "
+"information, where I<hh>, I<mm>, and I<ss> are the hours, minutes, and "
+"seconds east (+) or west (\\(mi) of UT.  Alternatively, a slash (/)  "
+"separates standard and daylight abbreviations.  To conform to POSIX, a time "
+"zone abbreviation should contain only alphanumeric ASCII characters,"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:406 man-pages/man8/zic.8:565
+msgid "and"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:407
+#, no-wrap
+msgid "B<UNTIL>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:418
+msgid ""
+"The time at which the UT offset or the rule(s) change for a location.  It "
+"takes the form of YEAR [MONTH [DAY [TIME]]].  If this is specified, the time "
+"zone information is generated from the given UT offset and rule change until "
+"the time specified, which is interpreted using the rules in effect just "
+"before the transition.  The month, day, and time of day have the same format "
+"as the IN, ON, and AT fields of a rule; trailing fields can be omitted, and "
+"default to the earliest possible value for the missing fields."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:420
+msgid "The next line must be a"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:423
+msgid "line; this has the same form as a zone line except that the string"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:426
+msgid ""
+"and the name are omitted, as the continuation line will place information "
+"starting at the time specified as the"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:429
+msgid ""
+"information in the previous line in the file used by the previous line.  "
+"Continuation lines may contain"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:432
+msgid ""
+"information, just as zone lines do, indicating that the next line is a "
+"further continuation."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:437
+msgid ""
+"If a zone changes at the same instant that a rule would otherwise take "
+"effect in the earlier zone or continuation line, the rule is ignored.  In a "
+"single zone it is an error if two rules take effect at the same instant, or "
+"if two zone changes take effect at the same instant."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:439
+msgid "A link line has the form"
+msgstr ""
+
+#. type: ta
+#: man-pages/man8/zic.8:442
+#, no-wrap
+msgid "\\w'Link\\0\\0'u +\\w'Europe/Istanbul\\0\\0'u"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:444
+#, no-wrap
+msgid "Link\tTARGET\tLINK-NAME\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:449
+#, no-wrap
+msgid "Link\tEurope/Istanbul\tAsia/Istanbul\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:462
+msgid ""
+"The B<TARGET> field should appear as the B<NAME> field in some zone line.  "
+"The B<LINK-NAME> field is used as an alternative name for that zone; it has "
+"the same syntax as a zone line's B<NAME> field."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:468
+msgid ""
+"Except for continuation lines, lines may appear in any order in the input.  "
+"However, the behavior is unspecified if multiple zone or link lines define "
+"the same name, or if the source of one link line is the target of another."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:470
+msgid "Lines in the file that describes leap seconds have the following form:"
+msgstr ""
+
+#. type: ta
+#: man-pages/man8/zic.8:472
+#, no-wrap
+msgid ""
+"\\w'Leap\\0\\0'u +\\w'YEAR\\0\\0'u +\\w'MONTH\\0\\0'u +\\w'DAY\\0\\0'u "
+"+\\w'HH:MM:SS\\0\\0'u +\\w'CORR\\0\\0'u"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:475
+#, no-wrap
+msgid "Leap\tYEAR\tMONTH\tDAY\tHH:MM:SS\tCORR\tR/S\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:480
+#, no-wrap
+msgid "Leap\t2016\tDec\t31\t23:59:60\t+\tS\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:493
+msgid ""
+"The B<YEAR>, B<MONTH>, B<DAY>, and B<HH:MM:SS> fields tell when the leap "
+"second happened.  The B<CORR> field should be"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:496
+msgid "if a second was added or"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:502
+msgid "if a second was skipped.  The B<R/S> field should be (an abbreviation of)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:506
+msgid ""
+"if the leap second time given by the other fields should be interpreted as "
+"UTC or (an abbreviation of)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:509
+msgid ""
+"if the leap second time given by the other fields should be interpreted as "
+"local wall clock time."
+msgstr ""
+
+#. type: SH
+#: man-pages/man8/zic.8:509
+#, no-wrap
+msgid "EXTENDED EXAMPLE"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:515
+msgid ""
+"Here is an extended example of B<zic> input, intended to illustrate many of "
+"its features.  In this example, the EU rules are for the European Union and "
+"for its predecessor organization, the European Communities."
+msgstr ""
+
+#. type: ta
+#: man-pages/man8/zic.8:519
+#, no-wrap
+msgid ""
+"\\w'# Rule\\0\\0'u +\\w'NAME\\0\\0'u +\\w'FROM\\0\\0'u +\\w'1973\\0\\0'u "
+"+\\w'TYPE\\0\\0'u +\\w'Apr\\0\\0'u +\\w'lastSun\\0\\0'u +\\w'2:00\\0\\0'u "
+"+\\w'SAVE\\0\\0'u"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:524
+#, no-wrap
+msgid ""
+"# Rule\tNAME\tFROM\tTO\tTYPE\tIN\tON\tAT\tSAVE\tLETTER/S\n"
+"Rule\tSwiss\t1941\t1942\t-\tMay\tMonE<gt>=1\t1:00\t1:00\tS\n"
+"Rule\tSwiss\t1941\t1942\t-\tOct\tMonE<gt>=1\t2:00\t0\t-\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:531
+#, no-wrap
+msgid ""
+"Rule\tEU\t1977\t1980\t-\tApr\tSunE<gt>=1\t1:00u\t1:00\tS\n"
+"Rule\tEU\t1977\tonly\t-\tSep\tlastSun\t1:00u\t0\t-\n"
+"Rule\tEU\t1978\tonly\t-\tOct\t 1\t1:00u\t0\t-\n"
+"Rule\tEU\t1979\t1995\t-\tSep\tlastSun\t1:00u\t0\t-\n"
+"Rule\tEU\t1981\tmax\t-\tMar\tlastSun\t1:00u\t1:00\tS\n"
+"Rule\tEU\t1996\tmax\t-\tOct\tlastSun\t1:00u\t0\t-\n"
+msgstr ""
+
+#. type: ta
+#: man-pages/man8/zic.8:532
+#, no-wrap
+msgid ""
+"\\w'# Zone\\0\\0'u +\\w'Europe/Zurich\\0\\0'u +\\w'0:34:08\\0\\0'u "
+"+\\w'RULES\\0\\0'u +\\w'FORMAT\\0\\0'u"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:538
+#, no-wrap
+msgid ""
+"# Zone\tNAME\tUTOFF\tRULES\tFORMAT\t[UNTIL]\n"
+"Zone\tEurope/Zurich\t0:34:08\t-\tLMT\t1853 Jul 16\n"
+"\t\t0:29:46\t-\tBMT\t1894 Jun\n"
+"\t\t1:00\tSwiss\tCE%sT\t1981\n"
+"\t\t1:00\tEU\tCE%sT\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:540
+#, no-wrap
+msgid "Link\tEurope/Zurich\tEurope/Vaduz\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:550
+msgid ""
+"In this example, the timezone is named Europe/Zurich but it has an alias as "
+"Europe/Vaduz.  This example says that Zurich was 34 minutes and 8 seconds "
+"east of UT until 1853-07-16 at 00:00, when the legal offset was changed to "
+"7\\(de\\|26\\(fm\\|22.50\\(sd; although this works out to 0:29:45.50, the "
+"input format cannot represent fractional seconds so it is rounded here.  "
+"After 1894-06-01 at 00:00 the UT offset became one hour and Swiss daylight "
+"saving rules (defined with lines beginning with"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:553
+msgid ""
+"apply.  From 1981 to the present, EU daylight saving rules have applied, and "
+"the UTC offset has remained at one hour."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:561
+msgid ""
+"In 1941 and 1942, daylight saving time applied from the first Monday in May "
+"at 01:00 to the first Monday in October at 02:00.  The pre-1981 EU "
+"daylight-saving rules have no effect here, but are included for "
+"completeness.  Since 1981, daylight saving has begun on the last Sunday in "
+"March at 01:00 UTC.  Until 1995 it ended the last Sunday in September at "
+"01:00 UTC, but this changed to the last Sunday in October starting in 1996."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:563
+msgid "For purposes of display,"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:570
+msgid ""
+"were initially used, respectively.  Since Swiss rules and later EU rules "
+"were applied, the time zone abbreviation has been CET for standard time and "
+"CEST for daylight saving time."
+msgstr ""
+
+#. type: SH
+#: man-pages/man8/zic.8:570 man-pages/man8/tzselect.8:35
+#: man-pages/man8/ld.so.8:702 man-pages/man8/iconvconfig.8:91
+#: man-pages/man8/ldconfig.8:168
+#, no-wrap
+msgid "FILES"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:571
+#, no-wrap
+msgid "I</etc/localtime>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:574
+msgid "Default local timezone file."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/zic.8:574
+#, no-wrap
+msgid "I</usr/share/zoneinfo>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:577
+msgid "Default timezone information directory."
+msgstr ""
+
+#. type: SH
+#: man-pages/man8/zic.8:577 man-pages/man8/nscd.8:64 man-pages/man8/ld.so.8:741
+#: man-pages/man8/intro.8:44
+#, no-wrap
+msgid "NOTES"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:583
+msgid ""
+"For areas with more than two types of local time, you may need to use local "
+"standard time in the B<AT> field of the earliest transition time's rule to "
+"ensure that the earliest transition time recorded in the compiled file is "
+"correct."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:595
+msgid ""
+"If, for a particular timezone, a clock advance caused by the start of "
+"daylight saving coincides with and is equal to a clock retreat caused by a "
+"change in UT offset, B<zic> produces a single transition to daylight saving "
+"at the new UT offset (without any change in wall clock time).  To get "
+"separate transitions use multiple zone continuation lines specifying "
+"transition instants using universal time."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/zic.8:597
+msgid "B<tzfile>(5), B<zdump>(8)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/tzselect.8:5
+#, no-wrap
+msgid "TZSELECT"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/tzselect.8:5
+#, no-wrap
+msgid "2007-05-18"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/tzselect.8:8
+msgid "tzselect - select a timezone"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/tzselect.8:10
+msgid "B<tzselect>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/tzselect.8:18
+msgid ""
+"The B<tzselect> program asks the user for information about the current "
+"location, and outputs the resulting timezone description to standard "
+"output.  The output is suitable as a value for the B<TZ> environment "
+"variable."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/tzselect.8:20
+msgid "All interaction with the user is done via standard input and standard error."
+msgstr ""
+
+#. type: SH
+#: man-pages/man8/tzselect.8:20 man-pages/man8/iconvconfig.8:89
+#, no-wrap
+msgid "EXIT STATUS"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/tzselect.8:23
+msgid ""
+"The exit status is zero if a timezone was successfully obtained from the "
+"user, and is nonzero otherwise."
+msgstr ""
+
+#. type: SH
+#: man-pages/man8/tzselect.8:23 man-pages/man8/ld.so.8:216
+#, no-wrap
+msgid "ENVIRONMENT"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/tzselect.8:24
+#, no-wrap
+msgid "B<AWK>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/tzselect.8:30
+msgid "Name of a POSIX-compliant I<awk> program (default: B<awk>)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/tzselect.8:30
+#, no-wrap
+msgid "B<TZDIR>"
+msgstr ""
+
+#.  or perhaps /usr/local/etc/zoneinfo in some older systems.
+#. type: Plain text
+#: man-pages/man8/tzselect.8:35
+msgid ""
+"Name of the directory containing timezone data files (default: "
+"I</usr/share/zoneinfo>)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/tzselect.8:36
+#, no-wrap
+msgid "B<TZDIR>I</iso3166.tab>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/tzselect.8:39
+msgid "Table of ISO 3166 2-letter country codes and country names."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/tzselect.8:39
+#, no-wrap
+msgid "B<TZDIR>I</zone.tab>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/tzselect.8:43
+msgid ""
+"Table of country codes, latitude and longitude, TZ values, and descriptive "
+"comments."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/tzselect.8:43
+#, no-wrap
+msgid "B<TZDIR>I</>I<TZ>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/tzselect.8:47
+msgid "Timezone data file for timezone I<TZ>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/tzselect.8:50
+msgid "B<tzfile>(5), B<zdump>(8), B<zic>(8)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/nscd.8:23
+#, no-wrap
+msgid "NSCD"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/nscd.8:23
+#, no-wrap
+msgid "2015-05-07"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/nscd.8:23 man-pages/man8/ld.so.8:5
+#: man-pages/man8/iconvconfig.8:26 man-pages/man8/ldconfig.8:22
+#: man-pages/man8/sln.8:25
+#, no-wrap
+msgid "GNU"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/nscd.8:23 man-pages/man8/ld.so.8:5
+#: man-pages/man8/ldconfig.8:22 man-pages/man8/intro.8:29
+#: man-pages/man8/sln.8:25
+#, no-wrap
+msgid "Linux Programmer's Manual"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/nscd.8:26
+msgid "nscd - name service cache daemon"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/nscd.8:35
+msgid ""
+"B<nscd> is a daemon that provides a cache for the most common name service "
+"requests.  The default configuration file, I</etc/nscd.conf>, determines the "
+"behavior of the cache daemon.  See B<nscd.conf>(5)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/nscd.8:51
+msgid ""
+"B<nscd> provides caching for accesses of the B<passwd>(5), B<group>(5), "
+"B<hosts>(5)  B<services>(5)  and I<netgroup> databases through standard libc "
+"interfaces, such as B<getpwnam>(3), B<getpwuid>(3), B<getgrnam>(3), "
+"B<getgrgid>(3), B<gethostbyname>(3), and others."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/nscd.8:60
+msgid ""
+"There are two caches for each database: a positive one for items found, and "
+"a negative one for items not found.  Each cache has a separate TTL "
+"(time-to-live)  period for its data.  Note that the shadow file is "
+"specifically not cached.  B<getspnam>(3)  calls remain uncached as a result."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/nscd.8:64
+msgid "will give you a list with all options and what they do."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/nscd.8:87
+msgid ""
+"The daemon will try to watch for changes in configuration files appropriate "
+"for each database (e.g., I</etc/passwd> for the I<passwd> database or "
+"I</etc/hosts> and I</etc/resolv.conf> for the I<hosts> database), and flush "
+"the cache when these are changed.  However, this will happen only after a "
+"short delay (unless the B<inotify>(7)  mechanism is available and glibc 2.9 "
+"or later is available), and this auto-detection does not cover configuration "
+"files required by nonstandard NSS modules, if any are specified in "
+"I</etc/nsswitch.conf>.  In that case, you need to run the following command "
+"after changing the configuration file of the database so that B<nscd> "
+"invalidates its cache:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/nscd.8:91
+#, no-wrap
+msgid "$ B<nscd -i> I<E<lt>databaseE<gt>>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/nscd.8:95
+msgid "B<nscd.conf>(5), B<nsswitch.conf>(5)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/ld.so.8:5
+#, no-wrap
+msgid "LD.SO"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/ld.so.8:5
+#, no-wrap
+msgid "2019-08-02"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:8
+msgid "ld.so, ld-linux.so - dynamic linker/loader"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:16
+msgid ""
+"The dynamic linker can be run either indirectly by running some dynamically "
+"linked program or shared object (in which case no command-line options to "
+"the dynamic linker can be passed and, in the ELF case, the dynamic linker "
+"which is stored in the B<.interp> section of the program is executed) or "
+"directly by running:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:19
+msgid "I</lib/ld-linux.so.*> [OPTIONS] [PROGRAM [ARGUMENTS]]"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:26
+msgid ""
+"The programs B<ld.so> and B<ld-linux.so*> find and load the shared objects "
+"(shared libraries) needed by a program, prepare the program to run, and then "
+"run it."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:33
+msgid ""
+"Linux binaries require dynamic linking (linking at run time)  unless the "
+"B<-static> option was given to B<ld>(1)  during compilation."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:47
+msgid ""
+"The program B<ld.so> handles a.out binaries, a binary format used long ago.  "
+"The program B<ld-linux.so*> (I</lib/ld-linux.so.1> for libc5, "
+"I</lib/ld-linux.so.2> for glibc2)  handles binaries that are in the more "
+"modern ELF format.  Both programs have the same behavior, and use the same "
+"support files and programs (B<ldd>(1), B<ldconfig>(8), and "
+"I</etc/ld.so.conf>)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:55
+msgid ""
+"When resolving shared object dependencies, the dynamic linker first inspects "
+"each dependency string to see if it contains a slash (this can occur if a "
+"shared object pathname containing slashes was specified at link time).  If a "
+"slash is found, then the dependency string is interpreted as a (relative or "
+"absolute) pathname, and the shared object is loaded using that pathname."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:58
+msgid ""
+"If a shared object dependency does not contain a slash, then it is searched "
+"for in the following order:"
+msgstr ""
+
+#. type: IP
+#: man-pages/man8/ld.so.8:58 man-pages/man8/ld.so.8:63
+#: man-pages/man8/ld.so.8:68 man-pages/man8/ld.so.8:78
+#: man-pages/man8/ld.so.8:88
+#, no-wrap
+msgid "o"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:63
+msgid ""
+"Using the directories specified in the DT_RPATH dynamic section attribute of "
+"the binary if present and DT_RUNPATH attribute does not exist.  Use of "
+"DT_RPATH is deprecated."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:68
+msgid ""
+"Using the environment variable B<LD_LIBRARY_PATH>, unless the executable is "
+"being run in secure-execution mode (see below), in which case this variable "
+"is ignored."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:78
+msgid ""
+"Using the directories specified in the DT_RUNPATH dynamic section attribute "
+"of the binary if present.  Such directories are searched only to find those "
+"objects required by DT_NEEDED (direct dependencies) entries and do not apply "
+"to those objects' children, which must themselves have their own DT_RUNPATH "
+"entries.  This is unlike DT_RPATH, which is applied to searches for all "
+"children in the dependency tree."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:88
+msgid ""
+"From the cache file I</etc/ld.so.cache>, which contains a compiled list of "
+"candidate shared objects previously found in the augmented library path.  "
+"If, however, the binary was linked with the B<-z nodeflib> linker option, "
+"shared objects in the default paths are skipped.  Shared objects installed "
+"in hardware capability directories (see below)  are preferred to other "
+"shared objects."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:100
+msgid ""
+"In the default path I</lib>, and then I</usr/lib>.  (On some 64-bit "
+"architectures, the default paths for 64-bit shared objects are I</lib64>, "
+"and then I</usr/lib64>.)  If the binary was linked with the B<-z nodeflib> "
+"linker option, this step is skipped."
+msgstr ""
+
+#. type: SS
+#: man-pages/man8/ld.so.8:100
+#, no-wrap
+msgid "Rpath token expansion"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:106
+msgid ""
+"The dynamic linker understands certain token strings in an rpath "
+"specification (DT_RPATH or DT_RUNPATH).  Those strings are substituted as "
+"follows:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:106
+#, no-wrap
+msgid "I<$ORIGIN> (or equivalently I<${ORIGIN}>)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:113
+msgid ""
+"This expands to the directory containing the program or shared object.  "
+"Thus, an application located in I<somedir/app> could be compiled with"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:115
+#, no-wrap
+msgid "    gcc -Wl,-rpath,\\(aq$ORIGIN/../lib\\(aq\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:125
+msgid ""
+"so that it finds an associated shared object in I<somedir/lib> no matter "
+"where I<somedir> is located in the directory hierarchy.  This facilitates "
+"the creation of \"turn-key\" applications that do not need to be installed "
+"into special directories, but can instead be unpacked into any directory and "
+"still find their own shared objects."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:125
+#, no-wrap
+msgid "I<$LIB> (or equivalently I<${LIB}>)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:137
+msgid ""
+"This expands to I<lib> or I<lib64> depending on the architecture (e.g., on "
+"x86-64, it expands to I<lib64> and on x86-32, it expands to I<lib>)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:137
+#, no-wrap
+msgid "I<$PLATFORM> (or equivalently I<${PLATFORM}>)"
+msgstr ""
+
+#.  To get an idea of the places that $PLATFORM would match,
+#.  look at the output of the following:
+#
+#.      mkdir /tmp/d
+#.      LD_LIBRARY_PATH=/tmp/d strace -e open /bin/date 2>&1 | grep /tmp/d
+#
+#.  ld.so lets names be abbreviated, so $O will work for $ORIGIN;
+#.  Don't do this!!
+#. type: Plain text
+#: man-pages/man8/ld.so.8:155
+msgid ""
+"This expands to a string corresponding to the processor type of the host "
+"system (e.g., \"x86_64\").  On some architectures, the Linux kernel doesn't "
+"provide a platform string to the dynamic linker.  The value of this string "
+"is taken from the B<AT_PLATFORM> value in the auxiliary vector (see "
+"B<getauxval>(3))."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:156
+#, no-wrap
+msgid "B<--audit>I< list>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:164
+msgid ""
+"Use objects named in I<list> as auditors.  The objects in I<list> are "
+"delimited by colons."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:164
+#, no-wrap
+msgid "B<--inhibit-cache>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:168
+msgid "Do not use I</etc/ld.so.cache>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:168
+#, no-wrap
+msgid "B<--library-path>I< path>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:183
+msgid ""
+"Use I<path> instead of B<LD_LIBRARY_PATH> environment variable setting (see "
+"below).  The names I<ORIGIN>, I<LIB>, and I<PLATFORM> are interpreted as for "
+"the B<LD_LIBRARY_PATH> environment variable."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:183
+#, no-wrap
+msgid "B<--inhibit-rpath>I< list>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:191
+msgid ""
+"Ignore RPATH and RUNPATH information in object names in I<list>.  This "
+"option is ignored when running in secure-execution mode (see below).  The "
+"objects in I<list> are delimited by colons or spaces."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:191
+#, no-wrap
+msgid "B<--list>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:194
+msgid "List all dependencies and how they are resolved."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:194
+#, no-wrap
+msgid "B<--preload> I<list> (since glibc 2.30)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:204
+msgid ""
+"Preload the objects specified in I<list>.  The objects in I<list> are "
+"delimited by colons or spaces.  The objects are preloaded as explained in "
+"the description of the B<LD_PRELOAD> environment variable below."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:212
+msgid ""
+"By contrast with B<LD_PRELOAD>, the B<--preload> option provides a way to "
+"perform preloading for a single executable without affecting preloading "
+"performed in any child process that executes a new program."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:212
+#, no-wrap
+msgid "B<--verify>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:216
+msgid ""
+"Verify that program is dynamically linked and this dynamic linker can handle "
+"it."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:219
+msgid "Various environment variables influence the operation of the dynamic linker."
+msgstr ""
+
+#. type: SS
+#: man-pages/man8/ld.so.8:219
+#, no-wrap
+msgid "Secure-execution mode"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:242
+msgid ""
+"For security reasons, if the dynamic linker determines that a binary should "
+"be run in secure-execution mode, the effects of some environment variables "
+"are voided or modified, and furthermore those environment variables are "
+"stripped from the environment, so that the program does not even see the "
+"definitions.  Some of these environment variables affect the operation of "
+"the dynamic linker itself, and are described below.  Other environment "
+"variables treated in this way include: B<GCONV_PATH>, B<GETCONF_DIR>, "
+"B<HOSTALIASES>, B<LOCALDOMAIN>, B<LOCPATH>, B<MALLOC_TRACE>, B<NIS_PATH>, "
+"B<NLSPATH>, B<RESOLV_HOST_CONF>, B<RES_OPTIONS>, B<TMPDIR>, and B<TZDIR>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:249
+msgid ""
+"A binary is executed in secure-execution mode if the B<AT_SECURE> entry in "
+"the auxiliary vector (see B<getauxval>(3))  has a nonzero value.  This entry "
+"may have a nonzero value for various reasons, including:"
+msgstr ""
+
+#. type: IP
+#: man-pages/man8/ld.so.8:249 man-pages/man8/ld.so.8:254
+#: man-pages/man8/ld.so.8:257
+#, no-wrap
+msgid "*"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:254
+msgid ""
+"The process's real and effective user IDs differ, or the real and effective "
+"group IDs differ.  This typically occurs as a result of executing a "
+"set-user-ID or set-group-ID program."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:257
+msgid ""
+"A process with a non-root user ID executed a binary that conferred "
+"capabilities to the process."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:260
+msgid "A nonzero value may have been set by a Linux Security Module."
+msgstr ""
+
+#. type: SS
+#: man-pages/man8/ld.so.8:260
+#, no-wrap
+msgid "Environment variables"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:262
+msgid "Among the more important environment variables are the following:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:262
+#, no-wrap
+msgid "B<LD_ASSUME_KERNEL> (since glibc 2.2.3)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:274
+msgid ""
+"Each shared object can inform the dynamic linker of the minimum kernel ABI "
+"version that it requires.  (This requirement is encoded in an ELF note "
+"section that is viewable via I<readelf\\ -n> as a section labeled "
+"B<NT_GNU_ABI_TAG>.)  At run time, the dynamic linker determines the ABI "
+"version of the running kernel and will reject loading shared objects that "
+"specify minimum ABI versions that exceed that ABI version."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:283
+msgid ""
+"B<LD_ASSUME_KERNEL> can be used to cause the dynamic linker to assume that "
+"it is running on a system with a different kernel ABI version.  For example, "
+"the following command line causes the dynamic linker to assume it is running "
+"on Linux 2.2.5 when loading the shared objects required by I<myprog>:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:287
+#, no-wrap
+msgid "$ B<LD_ASSUME_KERNEL=2.2.5 ./myprog>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:296
+msgid ""
+"On systems that provide multiple versions of a shared object (in different "
+"directories in the search path) that have different minimum kernel ABI "
+"version requirements, B<LD_ASSUME_KERNEL> can be used to select the version "
+"of the object that is used (dependent on the directory search order)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:305
+msgid ""
+"Historically, the most common use of the B<LD_ASSUME_KERNEL> feature was to "
+"manually select the older LinuxThreads POSIX threads implementation on "
+"systems that provided both LinuxThreads and NPTL (which latter was typically "
+"the default on such systems); see B<pthreads>(7)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:305
+#, no-wrap
+msgid "B<LD_BIND_NOW> (since glibc 2.1.1)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:312
+msgid ""
+"If set to a nonempty string, causes the dynamic linker to resolve all "
+"symbols at program startup instead of deferring function call resolution to "
+"the point when they are first referenced.  This is useful when using a "
+"debugger."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:312
+#, no-wrap
+msgid "B<LD_LIBRARY_PATH>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:318
+msgid ""
+"A list of directories in which to search for ELF libraries at execution "
+"time.  The items in the list are separated by either colons or semicolons, "
+"and there is no support for escaping either separator."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:320
+msgid "This variable is ignored in secure-execution mode."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:337
+msgid ""
+"Within the pathnames specified in B<LD_LIBRARY_PATH>, the dynamic linker "
+"expands the tokens I<$ORIGIN>, I<$LIB>, and I<$PLATFORM> (or the versions "
+"using curly braces around the names)  as described above in I<Rpath token "
+"expansion>.  Thus, for example, the following would cause a library to be "
+"searched for in either the I<lib> or I<lib64> subdirectory below the "
+"directory containing the program to be executed:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:341
+#, no-wrap
+msgid "$ B<LD_LIBRARY_PATH='$ORIGIN/$LIB' prog>\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:349
+msgid ""
+"(Note the use of single quotes, which prevent expansion of I<$ORIGIN> and "
+"I<$LIB> as shell variables!)"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:349
+#, no-wrap
+msgid "B<LD_PRELOAD>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:355
+msgid ""
+"A list of additional, user-specified, ELF shared objects to be loaded before "
+"all others.  This feature can be used to selectively override functions in "
+"other shared objects."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:361
+msgid ""
+"The items of the list can be separated by spaces or colons, and there is no "
+"support for escaping either separator.  The objects are searched for using "
+"the rules given under DESCRIPTION.  Objects are searched for and added to "
+"the link map in the left-to-right order specified in the list."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:367
+msgid ""
+"In secure-execution mode, preload pathnames containing slashes are ignored.  "
+"Furthermore, shared objects are preloaded only from the standard search "
+"directories and only if they have set-user-ID mode bit enabled (which is not "
+"typical)."
+msgstr ""
+
+#.  Tested with the following:
+#
+#. 	LD_PRELOAD='$LIB/libmod.so' LD_LIBRARY_PATH=. ./prog
+#
+#.  which will preload the libmod.so in 'lib' or 'lib64', using it
+#.  in preference to the version in '.'.
+#. type: Plain text
+#: man-pages/man8/ld.so.8:386
+msgid ""
+"Within the names specified in the B<LD_PRELOAD> list, the dynamic linker "
+"understands the tokens I<$ORIGIN>, I<$LIB>, and I<$PLATFORM> (or the "
+"versions using curly braces around the names)  as described above in I<Rpath "
+"token expansion>.  (See also the discussion of quoting under the description "
+"of B<LD_LIBRARY_PATH>.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:389
+msgid ""
+"There are various methods of specifying libraries to be preloaded, and these "
+"are handled in the following order:"
+msgstr ""
+
+#. type: IP
+#: man-pages/man8/ld.so.8:390
+#, no-wrap
+msgid "(1)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:394
+msgid "The B<LD_PRELOAD> environment variable."
+msgstr ""
+
+#. type: IP
+#: man-pages/man8/ld.so.8:394
+#, no-wrap
+msgid "(2)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:398
+msgid ""
+"The B<--preload> command-line option when invoking the dynamic linker "
+"directly."
+msgstr ""
+
+#. type: IP
+#: man-pages/man8/ld.so.8:398
+#, no-wrap
+msgid "(3)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:402
+msgid "The I</etc/ld.so.preload> file (described below)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:403
+#, no-wrap
+msgid "B<LD_TRACE_LOADED_OBJECTS>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:409
+msgid ""
+"If set (to any value), causes the program to list its dynamic dependencies, "
+"as if run by B<ldd>(1), instead of running normally."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:412
+msgid ""
+"Then there are lots of more or less obscure variables, many obsolete or only "
+"for internal use."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:412
+#, no-wrap
+msgid "B<LD_AUDIT> (since glibc 2.4)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:421
+msgid ""
+"A list of user-specified, ELF shared objects to be loaded before all others "
+"in a separate linker namespace (i.e., one that does not intrude upon the "
+"normal symbol bindings that would occur in the process)  These objects can "
+"be used to audit the operation of the dynamic linker.  The items in the list "
+"are colon-separated, and there is no support for escaping the separator."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:424
+msgid "B<LD_AUDIT> is ignored in secure-execution mode."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:437
+msgid ""
+"The dynamic linker will notify the audit shared objects at so-called "
+"auditing checkpoints\\(emfor example, loading a new shared object, resolving "
+"a symbol, or calling a symbol from another shared object\\(emby calling an "
+"appropriate function within the audit shared object.  For details, see "
+"B<rtld-audit>(7).  The auditing interface is largely compatible with that "
+"provided on Solaris, as described in its I<Linker and Libraries Guide>, in "
+"the chapter I<Runtime Linker Auditing Interface>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:450
+msgid ""
+"Within the names specified in the B<LD_AUDIT> list, the dynamic linker "
+"understands the tokens I<$ORIGIN>, I<$LIB>, and I<$PLATFORM> (or the "
+"versions using curly braces around the names)  as described above in I<Rpath "
+"token expansion>.  (See also the discussion of quoting under the description "
+"of B<LD_LIBRARY_PATH>.)"
+msgstr ""
+
+#.  commit 8e9f92e9d5d7737afdacf79b76d98c4c42980508
+#. type: Plain text
+#: man-pages/man8/ld.so.8:457
+msgid ""
+"Since glibc 2.13, in secure-execution mode, names in the audit list that "
+"contain slashes are ignored, and only shared objects in the standard search "
+"directories that have the set-user-ID mode bit enabled are loaded."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:457
+#, no-wrap
+msgid "B<LD_BIND_NOT> (since glibc 2.1.95)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:469
+msgid ""
+"If this environment variable is set to a nonempty string, do not update the "
+"GOT (global offset table) and PLT (procedure linkage table)  after resolving "
+"a function symbol.  By combining the use of this variable with B<LD_DEBUG> "
+"(with the categories I<bindings> and I<symbols>), one can observe all "
+"run-time function bindings."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:469
+#, no-wrap
+msgid "B<LD_DEBUG> (since glibc 2.1)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:474
+msgid ""
+"Output verbose debugging information about operation of the dynamic linker.  "
+"The content of this variable is one of more of the following categories, "
+"separated by colons, commas, or (if the value is quoted) spaces:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:475
+#, no-wrap
+msgid "I<help>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:482
+msgid ""
+"Specifying I<help> in the value of this variable does not run the specified "
+"program, and displays a help message about which categories can be specified "
+"in this environment variable."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:482
+#, no-wrap
+msgid "I<all>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:489
+msgid ""
+"Print all debugging information (except I<statistics> and I<unused>; see "
+"below)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:489
+#, no-wrap
+msgid "I<bindings>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:492
+msgid "Display information about which definition each symbol is bound to."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:492
+#, no-wrap
+msgid "I<files>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:495
+msgid "Display progress for input file."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:495
+#, no-wrap
+msgid "I<libs>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:498
+msgid "Display library search paths."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:498
+#, no-wrap
+msgid "I<reloc>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:501
+msgid "Display relocation processing."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:501
+#, no-wrap
+msgid "I<scopes>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:504
+msgid "Display scope information."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:504
+#, no-wrap
+msgid "I<statistics>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:507
+msgid "Display relocation statistics."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:507
+#, no-wrap
+msgid "I<symbols>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:510
+msgid "Display search paths for each symbol look-up."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:510
+#, no-wrap
+msgid "I<unused>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:513
+msgid "Determine unused DSOs."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:513
+#, no-wrap
+msgid "I<versions>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:516
+msgid "Display version dependencies."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:523
+msgid ""
+"Since glibc 2.3.4, B<LD_DEBUG> is ignored in secure-execution mode, unless "
+"the file I</etc/suid-debug> exists (the content of the file is irrelevant)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:523
+#, no-wrap
+msgid "B<LD_DEBUG_OUTPUT> (since glibc 2.1)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:532
+msgid ""
+"By default, B<LD_DEBUG> output is written to standard error.  If "
+"B<LD_DEBUG_OUTPUT> is defined, then output is written to the pathname "
+"specified by its value, with the suffix \".\" (dot) followed by the process "
+"ID appended to the pathname."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:535
+msgid "B<LD_DEBUG_OUTPUT> is ignored in secure-execution mode."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:535
+#, no-wrap
+msgid "B<LD_DYNAMIC_WEAK> (since glibc 2.1.91)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:539
+msgid ""
+"By default, when searching shared libraries to resolve a symbol reference, "
+"the dynamic linker will resolve to the first definition it finds."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:548
+msgid ""
+"Old glibc versions (before 2.2), provided a different behavior: if the "
+"linker found a symbol that was weak, it would remember that symbol and keep "
+"searching in the remaining shared libraries.  If it subsequently found a "
+"strong definition of the same symbol, then it would instead use that "
+"definition.  (If no further symbol was found, then the dynamic linker would "
+"use the weak symbol that it initially found.)"
+msgstr ""
+
+#.  More precisely 2.1.92
+#.  See weak handling
+#.      https://www.sourceware.org/ml/libc-hacker/2000-06/msg00029.html
+#.      To: GNU libc hacker <libc-hacker at sourceware dot cygnus dot com>
+#.      Subject: weak handling
+#.      From: Ulrich Drepper <drepper at redhat dot com>
+#.      Date: 07 Jun 2000 20:08:12 -0700
+#.      Reply-To: drepper at cygnus dot com (Ulrich Drepper)
+#. type: Plain text
+#: man-pages/man8/ld.so.8:564
+msgid ""
+"The old glibc behavior was nonstandard.  (Standard practice is that the "
+"distinction between weak and strong symbols should have effect only at "
+"static link time.)  In glibc 2.2, the dynamic linker was modified to provide "
+"the current behavior (which was the behavior that was provided by most other "
+"implementations at that time)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:574
+msgid ""
+"Defining the B<LD_DYNAMIC_WEAK> environment variable (with any value) "
+"provides the old (nonstandard) glibc behavior, whereby a weak symbol in one "
+"shared library may be overridden by a strong symbol subsequently discovered "
+"in another shared library.  (Note that even when this variable is set, a "
+"strong symbol in a shared library will not override a weak definition of the "
+"same symbol in the main program.)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:578
+msgid "Since glibc 2.3.4, B<LD_DYNAMIC_WEAK> is ignored in secure-execution mode."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:578
+#, no-wrap
+msgid "B<LD_HWCAP_MASK> (since glibc 2.1)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:581
+msgid "Mask for hardware capabilities."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:581
+#, no-wrap
+msgid "B<LD_ORIGIN_PATH> (since glibc 2.1)"
+msgstr ""
+
+#.  Used only if $ORIGIN can't be determined by normal means
+#.  (from the origin path saved at load time, or from /proc/self/exe)?
+#. type: Plain text
+#: man-pages/man8/ld.so.8:586
+msgid "Path where the binary is found."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:590
+msgid "Since glibc 2.4, B<LD_ORIGIN_PATH> is ignored in secure-execution mode."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:590
+#, no-wrap
+msgid "B<LD_POINTER_GUARD> (glibc from 2.4 to 2.22)"
+msgstr ""
+
+#.  commit a014cecd82b71b70a6a843e250e06b541ad524f7
+#. type: Plain text
+#: man-pages/man8/ld.so.8:606
+msgid ""
+"Set to 0 to disable pointer guarding.  Any other value enables pointer "
+"guarding, which is also the default.  Pointer guarding is a security "
+"mechanism whereby some pointers to code stored in writable program memory "
+"(return addresses saved by B<setjmp>(3)  or function pointers used by "
+"various glibc internals) are mangled semi-randomly to make it more difficult "
+"for an attacker to hijack the pointers for use in the event of a buffer "
+"overrun or stack-smashing attack.  Since glibc 2.23, B<LD_POINTER_GUARD> can "
+"no longer be used to disable pointer guarding, which is now always enabled."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:606
+#, no-wrap
+msgid "B<LD_PROFILE> (since glibc 2.1)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:612
+msgid ""
+"The name of a (single) shared object to be profiled, specified either as a "
+"pathname or a soname.  Profiling output is appended to the file whose name "
+"is: \"I<$LD_PROFILE_OUTPUT>/I<$LD_PROFILE>.profile\"."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:616
+msgid "Since glibc 2.2.5, B<LD_PROFILE> is ignored in secure-execution mode."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:616
+#, no-wrap
+msgid "B<LD_PROFILE_OUTPUT> (since glibc 2.1)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:624
+msgid ""
+"Directory where B<LD_PROFILE> output should be written.  If this variable is "
+"not defined, or is defined as an empty string, then the default is "
+"I</var/tmp>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:633
+msgid ""
+"B<LD_PROFILE_OUTPUT> is ignored in secure-execution mode; instead "
+"I</var/profile> is always used.  (This detail is relevant only before glibc "
+"2.2.5, since in later glibc versions, B<LD_PROFILE> is also ignored in "
+"secure-execution mode.)"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:633
+#, no-wrap
+msgid "B<LD_SHOW_AUXV> (since glibc 2.1)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:638
+msgid ""
+"If this environment variable is defined (with any value), show the auxiliary "
+"array passed up from the kernel (see also B<getauxval>(3))."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:642
+msgid "Since glibc 2.3.4, B<LD_SHOW_AUXV> is ignored in secure-execution mode."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:642
+#, no-wrap
+msgid "B<LD_TRACE_PRELINKING> (since glibc 2.4)"
+msgstr ""
+
+#.  (This is what seems to happen, from experimenting)
+#. type: Plain text
+#: man-pages/man8/ld.so.8:653
+msgid ""
+"If this environment variable is defined, trace prelinking of the object "
+"whose name is assigned to this environment variable.  (Use B<ldd>(1)  to get "
+"a list of the objects that might be traced.)  If the object name is not "
+"recognized, then all prelinking activity is traced."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:653
+#, no-wrap
+msgid "B<LD_USE_LOAD_BIAS> (since glibc 2.3.3)"
+msgstr ""
+
+#.  http://sources.redhat.com/ml/libc-hacker/2003-11/msg00127.html
+#.  Subject: [PATCH] Support LD_USE_LOAD_BIAS
+#.  Jakub Jelinek
+#. type: Plain text
+#: man-pages/man8/ld.so.8:671
+msgid ""
+"By default (i.e., if this variable is not defined), executables and "
+"prelinked shared objects will honor base addresses of their dependent shared "
+"objects and (nonprelinked) position-independent executables (PIEs)  and "
+"other shared objects will not honor them.  If B<LD_USE_LOAD_BIAS> is defined "
+"with the value 1, both executables and PIEs will honor the base addresses.  "
+"If B<LD_USE_LOAD_BIAS> is defined with the value 0, neither executables nor "
+"PIEs will honor the base addresses."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:673
+msgid "Since glibc 2.3.3, this variable is ignored in secure-execution mode."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:673
+#, no-wrap
+msgid "B<LD_VERBOSE> (since glibc 2.1)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:680
+msgid ""
+"If set to a nonempty string, output symbol versioning information about the "
+"program if the B<LD_TRACE_LOADED_OBJECTS> environment variable has been set."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:680
+#, no-wrap
+msgid "B<LD_WARN> (since glibc 2.1.3)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:683
+msgid "If set to a nonempty string, warn about unresolved symbols."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:683
+#, no-wrap
+msgid "B<LD_PREFER_MAP_32BIT_EXEC> (x86-64 only; since glibc 2.23)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:695
+msgid ""
+"According to the Intel Silvermont software optimization guide, for 64-bit "
+"applications, branch prediction performance can be negatively impacted when "
+"the target of a branch is more than 4\\ GB away from the branch.  If this "
+"environment variable is set (to any value), the dynamic linker will first "
+"try to map executable pages using the B<mmap>(2)  B<MAP_32BIT> flag, and "
+"fall back to mapping without that flag if that attempt fails.  NB: MAP_32BIT "
+"will map to the low 2\\ GB (not 4\\ GB) of the address space."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:702
+msgid ""
+"Because B<MAP_32BIT> reduces the address range available for address space "
+"layout randomization (ASLR), B<LD_PREFER_MAP_32BIT_EXEC> is always disabled "
+"in secure-execution mode."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:704 man-pages/man8/ldconfig.8:173
+#, no-wrap
+msgid "I</lib/ld.so>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:707
+msgid "a.out dynamic linker/loader"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:707
+#, no-wrap
+msgid "I</lib/ld-linux.so.>{I<1>,I<2>}"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:710
+msgid "ELF dynamic linker/loader"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:710 man-pages/man8/ldconfig.8:180
+#, no-wrap
+msgid "I</etc/ld.so.cache>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:716
+msgid ""
+"File containing a compiled list of directories in which to search for shared "
+"objects and an ordered list of candidate shared objects.  See "
+"B<ldconfig>(8)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:716
+#, no-wrap
+msgid "I</etc/ld.so.preload>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:737
+msgid ""
+"File containing a whitespace-separated list of ELF shared objects to be "
+"loaded before the program.  See the discussion of B<LD_PRELOAD> above.  If "
+"both B<LD_PRELOAD> and I</etc/ld.so.preload> are employed, the libraries "
+"specified by B<LD_PRELOAD> are preloaded first.  I</etc/ld.so.preload> has a "
+"system-wide effect, causing the specified libraries to be preloaded for all "
+"programs that are executed on the system.  (This is usually undesirable, and "
+"is typically employed only as an emergency remedy, for example, as a "
+"temporary workaround to a library misconfiguration issue.)"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:737
+#, no-wrap
+msgid "I<lib*.so*>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:740
+msgid "shared objects"
+msgstr ""
+
+#. type: SS
+#: man-pages/man8/ld.so.8:742
+#, no-wrap
+msgid "Hardware capabilities"
+msgstr ""
+
+#.  Presumably, this info comes from sysdeps/i386/dl-procinfo.c and
+#.  similar files
+#. type: Plain text
+#: man-pages/man8/ld.so.8:755
+msgid ""
+"Some shared objects are compiled using hardware-specific instructions which "
+"do not exist on every CPU.  Such objects should be installed in directories "
+"whose names define the required hardware capabilities, such as "
+"I</usr/lib/sse2/>.  The dynamic linker checks these directories against the "
+"hardware of the machine and selects the most suitable version of a given "
+"shared object.  Hardware capability directories can be cascaded to combine "
+"CPU features.  The list of supported hardware capability names depends on "
+"the CPU.  The following names are currently recognized:"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:755
+#, no-wrap
+msgid "B<Alpha>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:758
+msgid "ev4, ev5, ev56, ev6, ev67"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:758
+#, no-wrap
+msgid "B<MIPS>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:761
+msgid "loongson2e, loongson2f, octeon, octeon2"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:761
+#, no-wrap
+msgid "B<PowerPC>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:766
+msgid ""
+"4xxmac, altivec, arch_2_05, arch_2_06, booke, cellbe, dfp, efpdouble, "
+"efpsingle, fpu, ic_snoop, mmu, notb, pa6t, power4, power5, power5+, power6x, "
+"ppc32, ppc601, ppc64, smt, spe, ucache, vsx"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:766
+#, no-wrap
+msgid "B<SPARC>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:769
+msgid "flush, muldiv, stbar, swap, ultra3, v9, v9v, v9v2"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:769
+#, no-wrap
+msgid "B<s390>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:773
+msgid ""
+"dfp, eimm, esan3, etf3enh, g5, highgprs, hpage, ldisp, msa, stfle, z900, "
+"z990, z9-109, z10, zarch"
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ld.so.8:773
+#, no-wrap
+msgid "B<x86 (32-bit only)>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:777
+msgid ""
+"acpi, apic, clflush, cmov, cx8, dts, fxsr, ht, i386, i486, i586, i686, mca, "
+"mmx, mtrr, pat, pbe, pge, pn, pse36, sep, ss, sse, sse2, tm"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ld.so.8:788
+msgid ""
+"B<ld>(1), B<ldd>(1), B<pldd>(1), B<sprof>(1), B<dlopen>(3), B<getauxval>(3), "
+"B<elf>(5), B<capabilities>(7), B<rtld-audit>(7), B<ldconfig>(8), B<sln>(8)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/iconvconfig.8:26
+#, no-wrap
+msgid "ICONVCONFIG"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/iconvconfig.8:26
+#, no-wrap
+msgid "2018-02-02"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/iconvconfig.8:29
+msgid "iconvconfig - create iconv module configuration cache"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/iconvconfig.8:33
+msgid "B<iconvconfig> [I<options>] [I<directory>]..."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/iconvconfig.8:45
+msgid ""
+"The B<iconv>(3)  function internally uses I<gconv> modules to convert to and "
+"from a character set.  A configuration file is used to determine the needed "
+"modules for a conversion.  Loading and parsing such a configuration file "
+"would slow down programs that use B<iconv>(3), so a caching mechanism is "
+"employed."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/iconvconfig.8:50
+msgid ""
+"The B<iconvconfig> program reads iconv module configuration files and writes "
+"a fast-loading gconv module configuration cache file."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/iconvconfig.8:58
+msgid ""
+"In addition to the system provided gconv modules, the user can specify "
+"custom gconv module directories with the environment variable "
+"B<GCONV_PATH>.  However, iconv module configuration caching is used only "
+"when the environment variable B<GCONV_PATH> is not set."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/iconvconfig.8:59
+#, no-wrap
+msgid "B<--nostdlib>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/iconvconfig.8:63
+msgid ""
+"Do not search the system default gconv directory, only the directories "
+"provided on the command line."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/iconvconfig.8:63
+#, no-wrap
+msgid "B<-o>I< outputfile>B<, --output=>I<outputfile>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/iconvconfig.8:68
+msgid "Use I<outputfile> for output instead of the system default cache location."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/iconvconfig.8:68
+#, no-wrap
+msgid "B<--prefix=>I<pathname>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/iconvconfig.8:79
+msgid ""
+"Set the prefix to be prepended to the system pathnames.  See FILES, below.  "
+"By default, the prefix is empty.  Setting the prefix to I<foo>, the gconv "
+"module configuration would be read from I<foo/usr/lib/gconv/gconv-modules> "
+"and the cache would be written to I<foo/usr/lib/gconv/gconv-modules.cache>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/iconvconfig.8:79
+#, no-wrap
+msgid "B<-?>, B<--help>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/iconvconfig.8:82
+msgid "Print a usage summary and exit."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/iconvconfig.8:82
+#, no-wrap
+msgid "B<--usage>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/iconvconfig.8:85
+msgid "Print a short usage summary and exit."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/iconvconfig.8:85 man-pages/man8/ldconfig.8:159
+#, no-wrap
+msgid "B<-V>, B<--version>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/iconvconfig.8:89
+msgid "Print the version number, license, and disclaimer of warranty for B<iconv>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/iconvconfig.8:91
+msgid "Zero on success, nonzero on errors."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/iconvconfig.8:92
+#, no-wrap
+msgid "I</usr/lib/gconv>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/iconvconfig.8:95
+msgid "Usual default gconv module path."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/iconvconfig.8:95
+#, no-wrap
+msgid "I</usr/lib/gconv/gconv-modules>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/iconvconfig.8:98
+msgid "Usual system default gconv module configuration file."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/iconvconfig.8:98
+#, no-wrap
+msgid "I</usr/lib/gconv/gconv-modules.cache>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/iconvconfig.8:101
+msgid "Usual system gconv module configuration cache."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/iconvconfig.8:103
+msgid "B<iconv>(1), B<iconv>(3)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/ldconfig.8:22
+#, no-wrap
+msgid "LDCONFIG"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/ldconfig.8:22 man-pages/man8/sln.8:25
+#, no-wrap
+msgid "2017-09-15"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:25
+msgid "ldconfig - configure dynamic linker run-time bindings"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:28
+msgid ""
+"B</sbin/ldconfig> [B<-nNvXV>] [B<-f> I<conf>] [B<-C> I<cache>] [B<-r> "
+"I<root>] I<directory>..."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:35
+msgid "B</sbin/ldconfig> B<-l> [B<-v>] I<library>..."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:40
+msgid "B</sbin/ldconfig> B<-p>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:59
+msgid ""
+"B<ldconfig> creates the necessary links and cache to the most recent shared "
+"libraries found in the directories specified on the command line, in the "
+"file I</etc/ld.so.conf>, and in the trusted directories, I</lib> and "
+"I</usr/lib> (on some 64-bit architectures such as x86-64, I</lib> and "
+"I</usr/lib> are the trusted directories for 32-bit libraries, while "
+"I</lib64> and I</usr/lib64> are used for 64-bit libraries)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:67
+msgid ""
+"The cache is used by the run-time linker, I<ld.so> or I<ld-linux.so>.  "
+"B<ldconfig> checks the header and filenames of the libraries it encounters "
+"when determining which versions should have their links updated."
+msgstr ""
+
+#.  The following sentence looks suspect
+#.  (perhaps historical cruft) -- MTK, Jul 2005
+#.  Therefore, when making dynamic libraries,
+#.  it is wise to explicitly link against libc (use \-lc).
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:75
+msgid ""
+"B<ldconfig> will attempt to deduce the type of ELF libraries (i.e., libc5 or "
+"libc6/glibc)  based on what C libraries, if any, the library was linked "
+"against."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:96
+msgid ""
+"Some existing libraries do not contain enough information to allow the "
+"deduction of their type.  Therefore, the I</etc/ld.so.conf> file format "
+"allows the specification of an expected type.  This is used I<only> for "
+"those ELF libraries which we can not work out.  The format is "
+"\"dirname=TYPE\", where TYPE can be libc4, libc5, or libc6.  (This syntax "
+"also works on the command line.)  Spaces are I<not> allowed.  Also see the "
+"B<-p> option.  B<ldconfig> should normally be run by the superuser as it may "
+"require write permission on some root owned directories and files."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ldconfig.8:97
+#, no-wrap
+msgid "B<-c> I<fmt>, B<--format=>I<fmt>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:106
+msgid ""
+"(Since glibc 2.2)  Cache format to use: I<old>, I<new>, or I<compat> "
+"(default)."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ldconfig.8:106
+#, no-wrap
+msgid "B<-C >I<cache>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:112
+msgid "Use I<cache> instead of I</etc/ld.so.cache>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ldconfig.8:112
+#, no-wrap
+msgid "B<-f >I<conf>"
+msgstr ""
+
+#.  FIXME glibc 2.7 added -i
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:119
+msgid "Use I<conf> instead of I</etc/ld.so.conf>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ldconfig.8:119
+#, no-wrap
+msgid "B<-i>, B<--ignore-aux-cache>"
+msgstr ""
+
+#.              commit 27d9ffda17df4d2388687afd12897774fde39bcc
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:124
+msgid "(Since glibc 2.7)  Ignore auxiliary cache file."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ldconfig.8:124
+#, no-wrap
+msgid "B<-l>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:130
+msgid ""
+"(Since glibc 2.2)  Library mode.  Manually link individual libraries.  "
+"Intended for use by experts only."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ldconfig.8:130
+#, no-wrap
+msgid "B<-n>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:138
+msgid ""
+"Process only the directories specified on the command line.  Don't process "
+"the trusted directories, nor those specified in I</etc/ld.so.conf>.  Implies "
+"B<-N>."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ldconfig.8:138
+#, no-wrap
+msgid "B<-N>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:144
+msgid ""
+"Don't rebuild the cache.  Unless B<-X> is also specified, links are still "
+"updated."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ldconfig.8:144
+#, no-wrap
+msgid "B<-p>, B<--print-cache>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:148
+msgid ""
+"Print the lists of directories and candidate libraries stored in the current "
+"cache."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ldconfig.8:148
+#, no-wrap
+msgid "B<-r >I<root>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:153
+msgid "Change to and use I<root> as the root directory."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ldconfig.8:153
+#, no-wrap
+msgid "B<-v>, B<--verbose>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:159
+msgid ""
+"Verbose mode.  Print current version number, the name of each directory as "
+"it is scanned, and any links that are created.  Overrides quiet mode."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:162
+msgid "Print program version."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ldconfig.8:162
+#, no-wrap
+msgid "B<-X>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:168
+msgid ""
+"Don't update links.  Unless B<-N> is also specified, the cache is still "
+"rebuilt."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:176
+msgid "Run-time linker/loader."
+msgstr ""
+
+#. type: TP
+#: man-pages/man8/ldconfig.8:176
+#, no-wrap
+msgid "I</etc/ld.so.conf>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:180
+msgid ""
+"File containing a list of directories, one per line, in which to search for "
+"libraries."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:186
+msgid ""
+"File containing an ordered list of libraries found in the directories "
+"specified in I</etc/ld.so.conf>, as well as those found in the trusted "
+"directories."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/ldconfig.8:189
+msgid "B<ldd>(1), B<ld.so>(8)"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/intro.8:29
+#, no-wrap
+msgid "INTRO"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/intro.8:29
+#, no-wrap
+msgid "2007-10-23"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/intro.8:29
+#, no-wrap
+msgid "Linux"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/intro.8:32
+msgid "intro - introduction to administration and privileged commands"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/intro.8:37
+msgid ""
+"Section 8 of the manual describes commands which either can be or are used "
+"only by the superuser, like system-administration commands, daemons, and "
+"hardware-related commands."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/intro.8:44
+msgid ""
+"As with the commands described in Section 1, the commands described in this "
+"section terminate with an exit status that indicates whether the command "
+"succeeded or failed.  See B<intro>(1)  for more information."
+msgstr ""
+
+#. type: SS
+#: man-pages/man8/intro.8:45
+#, no-wrap
+msgid "Authors and copyright conditions"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/intro.8:48
+msgid ""
+"Look at the header of the manual page source for the author(s) and copyright "
+"conditions.  Note that these can be different from page to page!"
+msgstr ""
+
+#. type: TH
+#: man-pages/man8/sln.8:25
+#, no-wrap
+msgid "SLN"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/sln.8:28
+msgid "sln - create symbolic links"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/sln.8:30
+msgid "B<sln>I< source dest>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/sln.8:32
+msgid "B<sln>I< filelist>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/sln.8:42
+msgid ""
+"The B<sln> program creates symbolic links.  Unlike the B<ln>(1)  program, it "
+"is statically linked.  This means that if for some reason the dynamic linker "
+"is not working, B<sln> can be used to make symbolic links to dynamic "
+"libraries."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/sln.8:48
+msgid ""
+"The command line has two forms.  In the first form, it creates I<dest> as a "
+"new symbolic link to I<source>."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/sln.8:56
+msgid ""
+"In the second form, I<filelist> is a list of space-separated pathname pairs, "
+"and the effect is as if B<sln> was executed once for each line of the file, "
+"with the two pathnames as the arguments."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/sln.8:60
+msgid "The B<sln> program supports no command-line options."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man8/sln.8:63
+msgid "B<ln>(1), B<ld.so>(8), B<ldconfig>(8)"
+msgstr ""

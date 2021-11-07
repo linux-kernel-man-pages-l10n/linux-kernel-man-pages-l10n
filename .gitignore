@@ -1,7 +1,6 @@
 *.swp
 *.tar.bz2
-translations/files_?/*.po~
+*.po~
 man-pages/
-po/
 man/
 
