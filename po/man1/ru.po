@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: linux_kernel_man_pages_l10n 5.03\n"
 "Report-Msgid-Bugs-To: https://github.com/test/test\n"
 "POT-Creation-Date: 2021-11-07 03:47+0300\n"
-"PO-Revision-Date: 2021-11-07 02:00+0000\n"
+"PO-Revision-Date: 2021-11-07 16:00+0000\n"
 "Last-Translator: Azamat H. Hackimov <azamat.hackimov@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/"
 "linux-kernels-man-pages-l10n/man1/ru/>\n"
@@ -893,7 +893,7 @@ msgstr "Руководство программиста Linux"
 #. type: Plain text
 #: man-pages/man1/memusagestat.1:26
 msgid "memusagestat - generate graphic from memory profiling data"
-msgstr "memusagestat -  генерирует график по данным профилирования памяти"
+msgstr "memusagestat - генерирует график по данным профилирования памяти"
 
 #. type: Plain text
 #: man-pages/man1/memusagestat.1:28
@@ -1916,7 +1916,7 @@ msgid ""
 "The \"Histogram for block sizes\" provides a breakdown of memory allocations "
 "into various bucket sizes."
 msgstr ""
-"«Гистограмма размеров блоков»  выдает разбивку адресованных блоков по "
+"«Гистограмма размеров блоков» выдает разбивку адресованных блоков по "
 "размерам."
 
 #. type: TP
@@ -1939,7 +1939,7 @@ msgstr "B<-p\\ >I<file>,\\ B<--png=>I<file>"
 #. type: Plain text
 #: man-pages/man1/memusage.1:142
 msgid "Generate PNG graphic and store it in I<file>."
-msgstr "Создать изображение в формате PNG и сохранить его в "
+msgstr "Создать изображение в формате PNG и сохранить его в I<file>."
 
 #. type: TP
 #: man-pages/man1/memusage.1:142
@@ -3985,7 +3985,7 @@ msgstr ""
 #. type: Plain text
 #: man-pages/man1/localedef.1:299
 msgid "Warnings or errors occurred, output files were written."
-msgstr "Произошла  ошибка или предупреждение, файлы результата записаны."
+msgstr "Произошла ошибка или предупреждение, файлы результата записаны."
 
 #. type: TP
 #: man-pages/man1/localedef.1:299
@@ -3996,7 +3996,7 @@ msgstr "B<4>"
 #. type: Plain text
 #: man-pages/man1/localedef.1:302
 msgid "Errors encountered, no output created."
-msgstr "Произошла  ошибка, результат не записан."
+msgstr "Произошла ошибка, результат не записан."
 
 #. type: TP
 #: man-pages/man1/localedef.1:304
