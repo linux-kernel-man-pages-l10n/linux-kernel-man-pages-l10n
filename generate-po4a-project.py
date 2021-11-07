@@ -10,7 +10,7 @@ po_root_dir = 'po'
 source_root_dir = 'man-pages'
 translated_root_dir = 'translated'
 
-option_bug_address = "https://github.com/test/test"
+option_bug_address = "https://github.com/linux-kernel-man-pages-l10n/linux-kernel-man-pages-l10n"
 option_copyright_holder = "Linux Kernel Man Pages l10n"
 option_package_name = "linux_kernel_man_pages_l10n"
 option_package_version = "5.03"

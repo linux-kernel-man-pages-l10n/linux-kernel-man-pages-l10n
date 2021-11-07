@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linux_kernel_man_pages_l10n 5.03\n"
 "Report-Msgid-Bugs-To: https://github.com/test/test\n"
-"POT-Creation-Date: 2021-11-07 03:02+0300\n"
+"POT-Creation-Date: 2021-11-07 03:47+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,15 +26,14 @@ msgstr ""
 #. type: TH
 #: man-pages/man2/setresuid.2:27 man-pages/man2/execveat.2:26
 #: man-pages/man2/io_setup.2:7 man-pages/man2/set_mempolicy.2:27
-#: man-pages/man2/kill.2:44 man-pages/man2/epoll_create.2:24
-#: man-pages/man2/setsid.2:31 man-pages/man2/io_cancel.2:7
-#: man-pages/man2/mknod.2:15 man-pages/man2/umask.2:34
-#: man-pages/man2/personality.2:33 man-pages/man2/timer_settime.2:26
-#: man-pages/man2/getsockname.2:40 man-pages/man2/ioctl_getfsmap.2:23
-#: man-pages/man2/signal.2:36 man-pages/man2/outb.2:26
-#: man-pages/man2/io_getevents.2:7 man-pages/man2/set_tid_address.2:25
-#: man-pages/man2/swapon.2:42 man-pages/man2/io_destroy.2:7
-#: man-pages/man2/ioctl_tty.2:8 man-pages/man2/ioctl_fideduperange.2:23
+#: man-pages/man2/epoll_create.2:24 man-pages/man2/setsid.2:31
+#: man-pages/man2/io_cancel.2:7 man-pages/man2/mknod.2:15
+#: man-pages/man2/umask.2:34 man-pages/man2/personality.2:33
+#: man-pages/man2/timer_settime.2:26 man-pages/man2/getsockname.2:40
+#: man-pages/man2/ioctl_getfsmap.2:23 man-pages/man2/signal.2:36
+#: man-pages/man2/outb.2:26 man-pages/man2/io_getevents.2:7
+#: man-pages/man2/set_tid_address.2:25 man-pages/man2/swapon.2:42
+#: man-pages/man2/io_destroy.2:7 man-pages/man2/ioctl_tty.2:8
 #: man-pages/man2/send.2:40 man-pages/man2/sigreturn.2:30
 #: man-pages/man2/spu_create.2:25 man-pages/man2/delete_module.2:25
 #: man-pages/man2/getrusage.2:39 man-pages/man2/inotify_rm_watch.2:27
@@ -42,45 +41,42 @@ msgstr ""
 #: man-pages/man2/sched_get_priority_max.2:29 man-pages/man2/utime.2:31
 #: man-pages/man2/clock_nanosleep.2:26 man-pages/man2/sched_yield.2:29
 #: man-pages/man2/uselib.2:31 man-pages/man2/arch_prctl.2:25
-#: man-pages/man2/chmod.2:32 man-pages/man2/move_pages.2:20
-#: man-pages/man2/llseek.2:28 man-pages/man2/remap_file_pages.2:28
-#: man-pages/man2/rt_sigqueueinfo.2:25 man-pages/man2/mmap2.2:29
+#: man-pages/man2/chmod.2:32 man-pages/man2/llseek.2:28
+#: man-pages/man2/remap_file_pages.2:28 man-pages/man2/mmap2.2:29
 #: man-pages/man2/query_module.2:10 man-pages/man2/unlink.2:33
 #: man-pages/man2/syslog.2:33 man-pages/man2/symlink.2:33
 #: man-pages/man2/socketcall.2:25 man-pages/man2/alloc_hugepages.2:25
-#: man-pages/man2/msync.2:25 man-pages/man2/getdomainname.2:29
-#: man-pages/man2/nanosleep.2:34 man-pages/man2/sigwaitinfo.2:25
-#: man-pages/man2/ioctl_ficlonerange.2:23 man-pages/man2/iopl.2:33
-#: man-pages/man2/cacheflush.2:25 man-pages/man2/sysinfo.2:35
-#: man-pages/man2/sync_file_range.2:30 man-pages/man2/mbind.2:35
-#: man-pages/man2/ioctl_iflags.2:26 man-pages/man2/utimensat.2:26
-#: man-pages/man2/mq_getsetattr.2:26 man-pages/man2/nice.2:31
-#: man-pages/man2/sched_setscheduler.2:26 man-pages/man2/getresuid.2:28
-#: man-pages/man2/flock.2:35 man-pages/man2/quotactl.2:27
-#: man-pages/man2/modify_ldt.2:25 man-pages/man2/sgetmask.2:26
-#: man-pages/man2/sendfile.2:19 man-pages/man2/get_kernel_syms.2:10
-#: man-pages/man2/s390_pci_mmio_write.2:25 man-pages/man2/lookup_dcookie.2:27
-#: man-pages/man2/mincore.2:34 man-pages/man2/sigprocmask.2:29
-#: man-pages/man2/timer_getoverrun.2:26 man-pages/man2/futimesat.2:25
-#: man-pages/man2/getitimer.2:13 man-pages/man2/fork.2:39
-#: man-pages/man2/getpeername.2:42 man-pages/man2/create_module.2:10
-#: man-pages/man2/restart_syscall.2:33 man-pages/man2/recv.2:41
-#: man-pages/man2/init_module.2:27 man-pages/man2/gethostname.2:32
-#: man-pages/man2/perfmonctl.2:27 man-pages/man2/get_robust_list.2:30
-#: man-pages/man2/link.2:32 man-pages/man2/listen.2:45
-#: man-pages/man2/ioctl_list.2:31 man-pages/man2/sysfs.2:27
-#: man-pages/man2/dup.2:37 man-pages/man2/getunwind.2:27
-#: man-pages/man2/time.2:29 man-pages/man2/ioctl_console.2:40
-#: man-pages/man2/getpagesize.2:25 man-pages/man2/getsockopt.2:44
-#: man-pages/man2/getpriority.2:45 man-pages/man2/mkdir.2:11
-#: man-pages/man2/getsid.2:27 man-pages/man2/statfs.2:28
-#: man-pages/man2/sync.2:36 man-pages/man2/get_mempolicy.2:27
-#: man-pages/man2/vfork.2:29 man-pages/man2/getrandom.2:27
-#: man-pages/man2/times.2:38 man-pages/man2/ioperm.2:34
-#: man-pages/man2/setpgid.2:48 man-pages/man2/umount.2:30
-#: man-pages/man2/process_vm_readv.2:29 man-pages/man2/pread.2:25
-#: man-pages/man2/sigpending.2:29 man-pages/man2/unimplemented.2:26
-#: man-pages/man2/close.2:36 man-pages/man2/sched_rr_get_interval.2:29
+#: man-pages/man2/msync.2:25 man-pages/man2/nanosleep.2:34
+#: man-pages/man2/sigwaitinfo.2:25 man-pages/man2/ioctl_ficlonerange.2:23
+#: man-pages/man2/iopl.2:33 man-pages/man2/cacheflush.2:25
+#: man-pages/man2/sysinfo.2:35 man-pages/man2/sync_file_range.2:30
+#: man-pages/man2/mbind.2:35 man-pages/man2/ioctl_iflags.2:26
+#: man-pages/man2/utimensat.2:26 man-pages/man2/mq_getsetattr.2:26
+#: man-pages/man2/nice.2:31 man-pages/man2/sched_setscheduler.2:26
+#: man-pages/man2/getresuid.2:28 man-pages/man2/flock.2:35
+#: man-pages/man2/quotactl.2:27 man-pages/man2/modify_ldt.2:25
+#: man-pages/man2/sgetmask.2:26 man-pages/man2/sendfile.2:19
+#: man-pages/man2/get_kernel_syms.2:10 man-pages/man2/s390_pci_mmio_write.2:25
+#: man-pages/man2/lookup_dcookie.2:27 man-pages/man2/mincore.2:34
+#: man-pages/man2/sigprocmask.2:29 man-pages/man2/timer_getoverrun.2:26
+#: man-pages/man2/futimesat.2:25 man-pages/man2/getitimer.2:13
+#: man-pages/man2/fork.2:39 man-pages/man2/getpeername.2:42
+#: man-pages/man2/create_module.2:10 man-pages/man2/restart_syscall.2:33
+#: man-pages/man2/recv.2:41 man-pages/man2/init_module.2:27
+#: man-pages/man2/perfmonctl.2:27 man-pages/man2/link.2:32
+#: man-pages/man2/listen.2:45 man-pages/man2/ioctl_list.2:31
+#: man-pages/man2/sysfs.2:27 man-pages/man2/dup.2:37
+#: man-pages/man2/getunwind.2:27 man-pages/man2/time.2:29
+#: man-pages/man2/ioctl_console.2:40 man-pages/man2/getpagesize.2:25
+#: man-pages/man2/getsockopt.2:44 man-pages/man2/getpriority.2:45
+#: man-pages/man2/mkdir.2:11 man-pages/man2/getsid.2:27
+#: man-pages/man2/statfs.2:28 man-pages/man2/sync.2:36
+#: man-pages/man2/get_mempolicy.2:27 man-pages/man2/vfork.2:29
+#: man-pages/man2/getrandom.2:27 man-pages/man2/times.2:38
+#: man-pages/man2/ioperm.2:34 man-pages/man2/setpgid.2:48
+#: man-pages/man2/umount.2:30 man-pages/man2/process_vm_readv.2:29
+#: man-pages/man2/pread.2:25 man-pages/man2/sigpending.2:29
+#: man-pages/man2/unimplemented.2:26 man-pages/man2/sched_rr_get_interval.2:29
 #, no-wrap
 msgid "2017-09-15"
 msgstr ""
@@ -113,7 +109,7 @@ msgstr ""
 #: man-pages/man2/getxattr.2:25 man-pages/man2/io_destroy.2:7
 #: man-pages/man2/setxattr.2:25 man-pages/man2/removexattr.2:25
 #: man-pages/man2/ioctl_tty.2:8 man-pages/man2/ioctl_fideduperange.2:23
-#: man-pages/man2/pivot_root.2:11 man-pages/man2/setfsuid.2:32
+#: man-pages/man2/pivot_root.2:27 man-pages/man2/setfsuid.2:32
 #: man-pages/man2/ioctl_ns.2:26 man-pages/man2/send.2:40
 #: man-pages/man2/msgctl.2:38 man-pages/man2/sigreturn.2:30
 #: man-pages/man2/setuid.2:31 man-pages/man2/spu_create.2:25
@@ -245,7 +241,7 @@ msgstr ""
 #: man-pages/man2/getxattr.2:25 man-pages/man2/io_destroy.2:7
 #: man-pages/man2/setxattr.2:25 man-pages/man2/removexattr.2:25
 #: man-pages/man2/ioctl_tty.2:8 man-pages/man2/ioctl_fideduperange.2:23
-#: man-pages/man2/pivot_root.2:11 man-pages/man2/setfsuid.2:32
+#: man-pages/man2/pivot_root.2:27 man-pages/man2/setfsuid.2:32
 #: man-pages/man2/ioctl_ns.2:26 man-pages/man2/send.2:40
 #: man-pages/man2/msgctl.2:38 man-pages/man2/sigreturn.2:30
 #: man-pages/man2/setuid.2:31 man-pages/man2/spu_create.2:25
@@ -378,7 +374,7 @@ msgstr ""
 #: man-pages/man2/getxattr.2:26 man-pages/man2/io_destroy.2:8
 #: man-pages/man2/setxattr.2:26 man-pages/man2/removexattr.2:26
 #: man-pages/man2/ioctl_tty.2:9 man-pages/man2/ioctl_fideduperange.2:24
-#: man-pages/man2/pivot_root.2:12 man-pages/man2/setfsuid.2:33
+#: man-pages/man2/pivot_root.2:28 man-pages/man2/setfsuid.2:33
 #: man-pages/man2/ioctl_ns.2:27 man-pages/man2/send.2:41
 #: man-pages/man2/msgctl.2:39 man-pages/man2/sigreturn.2:31
 #: man-pages/man2/setuid.2:32 man-pages/man2/spu_create.2:26
@@ -518,7 +514,7 @@ msgstr ""
 #: man-pages/man2/getxattr.2:28 man-pages/man2/io_destroy.2:10
 #: man-pages/man2/setxattr.2:28 man-pages/man2/removexattr.2:28
 #: man-pages/man2/ioctl_tty.2:11 man-pages/man2/ioctl_fideduperange.2:26
-#: man-pages/man2/pivot_root.2:14 man-pages/man2/setfsuid.2:35
+#: man-pages/man2/pivot_root.2:30 man-pages/man2/setfsuid.2:35
 #: man-pages/man2/send.2:43 man-pages/man2/msgctl.2:41
 #: man-pages/man2/sigreturn.2:33 man-pages/man2/setuid.2:34
 #: man-pages/man2/spu_create.2:28 man-pages/man2/membarrier.2:28
@@ -688,7 +684,7 @@ msgstr ""
 #: man-pages/man2/getxattr.2:42 man-pages/man2/io_destroy.2:19
 #: man-pages/man2/setxattr.2:42 man-pages/man2/removexattr.2:39
 #: man-pages/man2/ioctl_tty.2:15 man-pages/man2/ioctl_fideduperange.2:33
-#: man-pages/man2/pivot_root.2:19 man-pages/man2/setfsuid.2:39
+#: man-pages/man2/pivot_root.2:35 man-pages/man2/setfsuid.2:39
 #: man-pages/man2/ioctl_ns.2:29 man-pages/man2/send.2:58
 #: man-pages/man2/msgctl.2:49 man-pages/man2/sigreturn.2:35
 #: man-pages/man2/setuid.2:40 man-pages/man2/spu_create.2:40
@@ -867,12 +863,12 @@ msgstr ""
 #: man-pages/man2/shmget.2:215 man-pages/man2/getxattr.2:104
 #: man-pages/man2/io_destroy.2:29 man-pages/man2/setxattr.2:109
 #: man-pages/man2/removexattr.2:78 man-pages/man2/ioctl_tty.2:531
-#: man-pages/man2/ioctl_fideduperange.2:146 man-pages/man2/pivot_root.2:107
+#: man-pages/man2/ioctl_fideduperange.2:146 man-pages/man2/pivot_root.2:94
 #: man-pages/man2/setfsuid.2:74 man-pages/man2/send.2:313
 #: man-pages/man2/msgctl.2:243 man-pages/man2/sigreturn.2:67
 #: man-pages/man2/setuid.2:73 man-pages/man2/spu_create.2:165
 #: man-pages/man2/membarrier.2:193 man-pages/man2/s390_guarded_storage.2:105
-#: man-pages/man2/delete_module.2:124 man-pages/man2/prctl.2:1381
+#: man-pages/man2/delete_module.2:124 man-pages/man2/prctl.2:1384
 #: man-pages/man2/getrusage.2:188 man-pages/man2/inotify_rm_watch.2:48
 #: man-pages/man2/seteuid.2:68 man-pages/man2/set_thread_area.2:132
 #: man-pages/man2/semget.2:156 man-pages/man2/pipe.2:149
@@ -896,7 +892,7 @@ msgstr ""
 #: man-pages/man2/alloc_hugepages.2:109 man-pages/man2/msync.2:71
 #: man-pages/man2/ioprio_set.2:152 man-pages/man2/getdomainname.2:83
 #: man-pages/man2/nanosleep.2:102 man-pages/man2/keyctl.2:1613
-#: man-pages/man2/sigwaitinfo.2:106 man-pages/man2/clone.2:982
+#: man-pages/man2/sigwaitinfo.2:106 man-pages/man2/clone.2:1018
 #: man-pages/man2/timer_delete.2:53 man-pages/man2/ioctl_ficlonerange.2:85
 #: man-pages/man2/iopl.2:67 man-pages/man2/cacheflush.2:53
 #: man-pages/man2/alarm.2:54 man-pages/man2/sysinfo.2:99
@@ -975,7 +971,7 @@ msgstr ""
 #: man-pages/man2/acct.2:73 man-pages/man2/getsockname.2:72
 #: man-pages/man2/rename.2:308 man-pages/man2/shutdown.2:74
 #: man-pages/man2/truncate.2:114 man-pages/man2/swapon.2:118
-#: man-pages/man2/chroot.2:121 man-pages/man2/pivot_root.2:111
+#: man-pages/man2/chroot.2:121 man-pages/man2/pivot_root.2:98
 #: man-pages/man2/setuid.2:78 man-pages/man2/getrusage.2:193
 #: man-pages/man2/seteuid.2:73 man-pages/man2/setreuid.2:101
 #: man-pages/man2/utime.2:128 man-pages/man2/uselib.2:56
@@ -1033,11 +1029,11 @@ msgstr ""
 #: man-pages/man2/getxattr.2:110 man-pages/man2/io_destroy.2:34
 #: man-pages/man2/setxattr.2:114 man-pages/man2/removexattr.2:83
 #: man-pages/man2/ioctl_tty.2:538 man-pages/man2/ioctl_fideduperange.2:151
-#: man-pages/man2/pivot_root.2:111 man-pages/man2/ioctl_ns.2:177
+#: man-pages/man2/pivot_root.2:98 man-pages/man2/ioctl_ns.2:177
 #: man-pages/man2/send.2:318 man-pages/man2/msgctl.2:272
 #: man-pages/man2/setuid.2:85 man-pages/man2/spu_create.2:172
 #: man-pages/man2/membarrier.2:220 man-pages/man2/s390_guarded_storage.2:113
-#: man-pages/man2/delete_module.2:129 man-pages/man2/prctl.2:1402
+#: man-pages/man2/delete_module.2:129 man-pages/man2/prctl.2:1407
 #: man-pages/man2/getrusage.2:193 man-pages/man2/inotify_rm_watch.2:55
 #: man-pages/man2/seteuid.2:80 man-pages/man2/set_thread_area.2:146
 #: man-pages/man2/semget.2:162 man-pages/man2/pipe.2:170
@@ -1060,7 +1056,7 @@ msgstr ""
 #: man-pages/man2/alloc_hugepages.2:118 man-pages/man2/msync.2:76
 #: man-pages/man2/ioprio_set.2:172 man-pages/man2/getdomainname.2:88
 #: man-pages/man2/nanosleep.2:110 man-pages/man2/keyctl.2:1663
-#: man-pages/man2/sigwaitinfo.2:115 man-pages/man2/clone.2:991
+#: man-pages/man2/sigwaitinfo.2:115 man-pages/man2/clone.2:1027
 #: man-pages/man2/timer_delete.2:60 man-pages/man2/ioctl_ficlonerange.2:90
 #: man-pages/man2/iopl.2:72 man-pages/man2/cacheflush.2:59
 #: man-pages/man2/sysinfo.2:106 man-pages/man2/ioctl_fat.2:200
@@ -1140,7 +1136,7 @@ msgstr ""
 #: man-pages/man2/setreuid.2:109 man-pages/man2/setreuid.2:116
 #: man-pages/man2/tee.2:99 man-pages/man2/mremap.2:151
 #: man-pages/man2/rt_sigqueueinfo.2:144 man-pages/man2/keyctl.2:1667
-#: man-pages/man2/sigwaitinfo.2:116 man-pages/man2/clone.2:992
+#: man-pages/man2/sigwaitinfo.2:116 man-pages/man2/clone.2:1028
 #: man-pages/man2/vmsplice.2:141 man-pages/man2/write.2:132
 #: man-pages/man2/madvise.2:452 man-pages/man2/sendfile.2:122
 #: man-pages/man2/connect.2:169 man-pages/man2/fork.2:222
@@ -1226,21 +1222,21 @@ msgstr ""
 #: man-pages/man2/socket.2:433 man-pages/man2/shmget.2:239
 #: man-pages/man2/shmget.2:247 man-pages/man2/io_destroy.2:38
 #: man-pages/man2/ioctl_tty.2:539 man-pages/man2/ioctl_fideduperange.2:162
-#: man-pages/man2/pivot_root.2:140 man-pages/man2/pivot_root.2:144
-#: man-pages/man2/pivot_root.2:147 man-pages/man2/pivot_root.2:152
-#: man-pages/man2/pivot_root.2:155 man-pages/man2/pivot_root.2:162
+#: man-pages/man2/pivot_root.2:127 man-pages/man2/pivot_root.2:131
+#: man-pages/man2/pivot_root.2:134 man-pages/man2/pivot_root.2:139
+#: man-pages/man2/pivot_root.2:142 man-pages/man2/pivot_root.2:149
 #: man-pages/man2/ioctl_ns.2:111 man-pages/man2/ioctl_ns.2:173
 #: man-pages/man2/send.2:375 man-pages/man2/msgctl.2:303
 #: man-pages/man2/setuid.2:108 man-pages/man2/spu_create.2:186
 #: man-pages/man2/membarrier.2:221 man-pages/man2/s390_guarded_storage.2:122
-#: man-pages/man2/prctl.2:1468 man-pages/man2/prctl.2:1473
-#: man-pages/man2/prctl.2:1485 man-pages/man2/prctl.2:1490
-#: man-pages/man2/prctl.2:1499 man-pages/man2/prctl.2:1509
-#: man-pages/man2/prctl.2:1549 man-pages/man2/prctl.2:1559
-#: man-pages/man2/prctl.2:1567 man-pages/man2/prctl.2:1578
-#: man-pages/man2/prctl.2:1587 man-pages/man2/prctl.2:1601
-#: man-pages/man2/prctl.2:1613 man-pages/man2/prctl.2:1624
-#: man-pages/man2/prctl.2:1636 man-pages/man2/prctl.2:1661
+#: man-pages/man2/prctl.2:1473 man-pages/man2/prctl.2:1478
+#: man-pages/man2/prctl.2:1490 man-pages/man2/prctl.2:1495
+#: man-pages/man2/prctl.2:1504 man-pages/man2/prctl.2:1514
+#: man-pages/man2/prctl.2:1554 man-pages/man2/prctl.2:1564
+#: man-pages/man2/prctl.2:1572 man-pages/man2/prctl.2:1583
+#: man-pages/man2/prctl.2:1592 man-pages/man2/prctl.2:1606
+#: man-pages/man2/prctl.2:1618 man-pages/man2/prctl.2:1629
+#: man-pages/man2/prctl.2:1641 man-pages/man2/prctl.2:1666
 #: man-pages/man2/getrusage.2:198 man-pages/man2/inotify_rm_watch.2:60
 #: man-pages/man2/seteuid.2:81 man-pages/man2/set_thread_area.2:150
 #: man-pages/man2/semget.2:186 man-pages/man2/semget.2:192
@@ -1277,20 +1273,22 @@ msgstr ""
 #: man-pages/man2/keyctl.2:1734 man-pages/man2/keyctl.2:1741
 #: man-pages/man2/keyctl.2:1764 man-pages/man2/keyctl.2:1770
 #: man-pages/man2/keyctl.2:1777 man-pages/man2/keyctl.2:1790
-#: man-pages/man2/sigwaitinfo.2:130 man-pages/man2/clone.2:996
-#: man-pages/man2/clone.2:1004 man-pages/man2/clone.2:1019
-#: man-pages/man2/clone.2:1029 man-pages/man2/clone.2:1046
-#: man-pages/man2/clone.2:1054 man-pages/man2/clone.2:1066
-#: man-pages/man2/clone.2:1075 man-pages/man2/clone.2:1085
-#: man-pages/man2/clone.2:1093 man-pages/man2/clone.2:1101
-#: man-pages/man2/clone.2:1109 man-pages/man2/clone.2:1117
-#: man-pages/man2/timer_delete.2:61 man-pages/man2/ioctl_ficlonerange.2:101
-#: man-pages/man2/iopl.2:73 man-pages/man2/cacheflush.2:67
-#: man-pages/man2/kcmp.2:267 man-pages/man2/sync_file_range.2:152
-#: man-pages/man2/vmsplice.2:151 man-pages/man2/write.2:183
-#: man-pages/man2/mbind.2:349 man-pages/man2/pkey_alloc.2:81
-#: man-pages/man2/utimensat.2:303 man-pages/man2/utimensat.2:307
-#: man-pages/man2/utimensat.2:318 man-pages/man2/sched_setscheduler.2:144
+#: man-pages/man2/sigwaitinfo.2:130 man-pages/man2/clone.2:1032
+#: man-pages/man2/clone.2:1040 man-pages/man2/clone.2:1055
+#: man-pages/man2/clone.2:1065 man-pages/man2/clone.2:1082
+#: man-pages/man2/clone.2:1090 man-pages/man2/clone.2:1102
+#: man-pages/man2/clone.2:1111 man-pages/man2/clone.2:1121
+#: man-pages/man2/clone.2:1129 man-pages/man2/clone.2:1137
+#: man-pages/man2/clone.2:1145 man-pages/man2/clone.2:1153
+#: man-pages/man2/clone.2:1160 man-pages/man2/clone.2:1165
+#: man-pages/man2/clone.2:1170 man-pages/man2/timer_delete.2:61
+#: man-pages/man2/ioctl_ficlonerange.2:101 man-pages/man2/iopl.2:73
+#: man-pages/man2/cacheflush.2:67 man-pages/man2/kcmp.2:267
+#: man-pages/man2/sync_file_range.2:152 man-pages/man2/vmsplice.2:151
+#: man-pages/man2/write.2:183 man-pages/man2/mbind.2:349
+#: man-pages/man2/pkey_alloc.2:81 man-pages/man2/utimensat.2:303
+#: man-pages/man2/utimensat.2:307 man-pages/man2/utimensat.2:318
+#: man-pages/man2/sched_setscheduler.2:144
 #: man-pages/man2/sched_setscheduler.2:151
 #: man-pages/man2/sched_setscheduler.2:156 man-pages/man2/chown.2:306
 #: man-pages/man2/madvise.2:458 man-pages/man2/madvise.2:466
@@ -1396,13 +1394,13 @@ msgstr ""
 #: man-pages/man2/open.2:1166 man-pages/man2/chroot.2:157
 #: man-pages/man2/shmget.2:273 man-pages/man2/setxattr.2:143
 #: man-pages/man2/ioctl_tty.2:549 man-pages/man2/ioctl_fideduperange.2:186
-#: man-pages/man2/pivot_root.2:170 man-pages/man2/ioctl_ns.2:97
+#: man-pages/man2/pivot_root.2:157 man-pages/man2/ioctl_ns.2:97
 #: man-pages/man2/msgctl.2:314 man-pages/man2/msgctl.2:332
 #: man-pages/man2/setuid.2:113 man-pages/man2/spu_create.2:233
 #: man-pages/man2/membarrier.2:240 man-pages/man2/delete_module.2:150
-#: man-pages/man2/prctl.2:1703 man-pages/man2/prctl.2:1715
-#: man-pages/man2/prctl.2:1723 man-pages/man2/prctl.2:1733
-#: man-pages/man2/prctl.2:1741 man-pages/man2/prctl.2:1749
+#: man-pages/man2/prctl.2:1708 man-pages/man2/prctl.2:1720
+#: man-pages/man2/prctl.2:1728 man-pages/man2/prctl.2:1738
+#: man-pages/man2/prctl.2:1746 man-pages/man2/prctl.2:1754
 #: man-pages/man2/seteuid.2:84 man-pages/man2/setreuid.2:135
 #: man-pages/man2/unshare.2:376 man-pages/man2/unshare.2:379
 #: man-pages/man2/utime.2:152 man-pages/man2/copy_file_range.2:175
@@ -1416,8 +1414,8 @@ msgstr ""
 #: man-pages/man2/syslog.2:360 man-pages/man2/symlink.2:199
 #: man-pages/man2/perf_event_open.2:3281 man-pages/man2/ioprio_set.2:182
 #: man-pages/man2/getdomainname.2:99 man-pages/man2/keyctl.2:1919
-#: man-pages/man2/keyctl.2:1929 man-pages/man2/clone.2:1159
-#: man-pages/man2/clone.2:1169 man-pages/man2/clone.2:1174
+#: man-pages/man2/keyctl.2:1929 man-pages/man2/clone.2:1210
+#: man-pages/man2/clone.2:1220 man-pages/man2/clone.2:1225
 #: man-pages/man2/ioctl_ficlonerange.2:118 man-pages/man2/iopl.2:80
 #: man-pages/man2/kcmp.2:276 man-pages/man2/write.2:227
 #: man-pages/man2/mbind.2:411 man-pages/man2/idle.2:56
@@ -1483,9 +1481,9 @@ msgstr ""
 #: man-pages/man2/open.2:1211 man-pages/man2/getxattr.2:140
 #: man-pages/man2/io_destroy.2:45 man-pages/man2/setxattr.2:159
 #: man-pages/man2/removexattr.2:99 man-pages/man2/ioctl_fideduperange.2:198
-#: man-pages/man2/pivot_root.2:175 man-pages/man2/setfsuid.2:77
+#: man-pages/man2/pivot_root.2:162 man-pages/man2/setfsuid.2:77
 #: man-pages/man2/spu_create.2:246 man-pages/man2/membarrier.2:244
-#: man-pages/man2/s390_guarded_storage.2:136 man-pages/man2/prctl.2:1776
+#: man-pages/man2/s390_guarded_storage.2:136 man-pages/man2/prctl.2:1781
 #: man-pages/man2/inotify_rm_watch.2:67 man-pages/man2/set_thread_area.2:163
 #: man-pages/man2/pipe.2:191 man-pages/man2/unshare.2:406
 #: man-pages/man2/setfsgid.2:66 man-pages/man2/clock_nanosleep.2:183
@@ -1573,13 +1571,13 @@ msgstr ""
 #: man-pages/man2/chroot.2:160 man-pages/man2/shmget.2:280
 #: man-pages/man2/getxattr.2:143 man-pages/man2/io_destroy.2:48
 #: man-pages/man2/setxattr.2:162 man-pages/man2/removexattr.2:102
-#: man-pages/man2/ioctl_fideduperange.2:203 man-pages/man2/pivot_root.2:178
+#: man-pages/man2/ioctl_fideduperange.2:203 man-pages/man2/pivot_root.2:165
 #: man-pages/man2/setfsuid.2:81 man-pages/man2/ioctl_ns.2:187
 #: man-pages/man2/send.2:423 man-pages/man2/msgctl.2:343
 #: man-pages/man2/sigreturn.2:70 man-pages/man2/setuid.2:120
 #: man-pages/man2/spu_create.2:250 man-pages/man2/membarrier.2:249
 #: man-pages/man2/s390_guarded_storage.2:139 man-pages/man2/delete_module.2:172
-#: man-pages/man2/prctl.2:1781 man-pages/man2/getrusage.2:215
+#: man-pages/man2/prctl.2:1786 man-pages/man2/getrusage.2:215
 #: man-pages/man2/inotify_rm_watch.2:69 man-pages/man2/seteuid.2:103
 #: man-pages/man2/set_thread_area.2:168 man-pages/man2/semget.2:219
 #: man-pages/man2/pipe.2:213 man-pages/man2/setreuid.2:151
@@ -1604,7 +1602,7 @@ msgstr ""
 #: man-pages/man2/msync.2:99 man-pages/man2/ioprio_set.2:199
 #: man-pages/man2/getdomainname.2:119 man-pages/man2/nanosleep.2:132
 #: man-pages/man2/keyctl.2:1952 man-pages/man2/sigwaitinfo.2:134
-#: man-pages/man2/clone.2:1213 man-pages/man2/timer_delete.2:67
+#: man-pages/man2/clone.2:1264 man-pages/man2/timer_delete.2:67
 #: man-pages/man2/ioctl_ficlonerange.2:137 man-pages/man2/iopl.2:88
 #: man-pages/man2/cacheflush.2:76 man-pages/man2/_syscall.2:87
 #: man-pages/man2/alarm.2:59 man-pages/man2/sysinfo.2:114
@@ -1705,7 +1703,7 @@ msgstr ""
 #: man-pages/man2/socket.2:469 man-pages/man2/select_tut.2:502
 #: man-pages/man2/chroot.2:165 man-pages/man2/shmget.2:288
 #: man-pages/man2/io_destroy.2:53 man-pages/man2/ioctl_fideduperange.2:205
-#: man-pages/man2/pivot_root.2:181 man-pages/man2/setfsuid.2:85
+#: man-pages/man2/pivot_root.2:168 man-pages/man2/setfsuid.2:85
 #: man-pages/man2/send.2:437 man-pages/man2/msgctl.2:346
 #: man-pages/man2/sigreturn.2:76 man-pages/man2/setuid.2:125
 #: man-pages/man2/spu_create.2:254 man-pages/man2/membarrier.2:256
@@ -1732,7 +1730,7 @@ msgstr ""
 #: man-pages/man2/msync.2:123 man-pages/man2/ioprio_set.2:201
 #: man-pages/man2/getdomainname.2:122 man-pages/man2/nanosleep.2:134
 #: man-pages/man2/keyctl.2:1954 man-pages/man2/sigwaitinfo.2:136
-#: man-pages/man2/clone.2:825 man-pages/man2/clone.2:1217
+#: man-pages/man2/clone.2:861 man-pages/man2/clone.2:1268
 #: man-pages/man2/ioctl_ficlonerange.2:139 man-pages/man2/iopl.2:92
 #: man-pages/man2/_syscall.2:89 man-pages/man2/alarm.2:61
 #: man-pages/man2/sysinfo.2:117 man-pages/man2/kcmp.2:305
@@ -1828,7 +1826,7 @@ msgstr ""
 #: man-pages/man2/setreuid.2:198 man-pages/man2/setfsgid.2:96
 #: man-pages/man2/access.2:340 man-pages/man2/chmod.2:357
 #: man-pages/man2/readv.2:359 man-pages/man2/sigwaitinfo.2:196
-#: man-pages/man2/clone.2:842 man-pages/man2/brk.2:150
+#: man-pages/man2/clone.2:878 man-pages/man2/brk.2:150
 #: man-pages/man2/nice.2:109 man-pages/man2/gettimeofday.2:214
 #: man-pages/man2/epoll_wait.2:253 man-pages/man2/sigprocmask.2:167
 #: man-pages/man2/fork.2:288 man-pages/man2/_exit.2:115
@@ -1887,12 +1885,12 @@ msgstr ""
 #: man-pages/man2/shmget.2:414 man-pages/man2/getxattr.2:154
 #: man-pages/man2/io_destroy.2:83 man-pages/man2/setxattr.2:170
 #: man-pages/man2/removexattr.2:110 man-pages/man2/ioctl_tty.2:574
-#: man-pages/man2/ioctl_fideduperange.2:213 man-pages/man2/pivot_root.2:399
+#: man-pages/man2/ioctl_fideduperange.2:213 man-pages/man2/pivot_root.2:411
 #: man-pages/man2/setfsuid.2:140 man-pages/man2/ioctl_ns.2:358
 #: man-pages/man2/send.2:466 man-pages/man2/msgctl.2:385
 #: man-pages/man2/sigreturn.2:157 man-pages/man2/setuid.2:163
 #: man-pages/man2/spu_create.2:270 man-pages/man2/s390_guarded_storage.2:174
-#: man-pages/man2/delete_module.2:210 man-pages/man2/prctl.2:1799
+#: man-pages/man2/delete_module.2:210 man-pages/man2/prctl.2:1804
 #: man-pages/man2/getrusage.2:266 man-pages/man2/inotify_rm_watch.2:71
 #: man-pages/man2/seteuid.2:145 man-pages/man2/set_thread_area.2:226
 #: man-pages/man2/semget.2:315 man-pages/man2/pipe.2:286
@@ -1903,7 +1901,7 @@ msgstr ""
 #: man-pages/man2/sched_yield.2:90 man-pages/man2/access.2:404
 #: man-pages/man2/intro.2:112 man-pages/man2/uselib.2:120
 #: man-pages/man2/kexec_load.2:341 man-pages/man2/arch_prctl.2:143
-#: man-pages/man2/mount.2:904 man-pages/man2/fanotify_init.2:307
+#: man-pages/man2/mount.2:924 man-pages/man2/fanotify_init.2:307
 #: man-pages/man2/ioctl.2:142 man-pages/man2/tee.2:214
 #: man-pages/man2/chmod.2:380 man-pages/man2/move_pages.2:246
 #: man-pages/man2/inotify_add_watch.2:143 man-pages/man2/chdir.2:142
@@ -1917,7 +1915,7 @@ msgstr ""
 #: man-pages/man2/perf_event_open.2:3448 man-pages/man2/msync.2:150
 #: man-pages/man2/ioprio_set.2:363 man-pages/man2/getdomainname.2:136
 #: man-pages/man2/nanosleep.2:230 man-pages/man2/keyctl.2:2230
-#: man-pages/man2/sigwaitinfo.2:238 man-pages/man2/clone.2:1398
+#: man-pages/man2/sigwaitinfo.2:238 man-pages/man2/clone.2:1449
 #: man-pages/man2/timer_delete.2:69 man-pages/man2/ioctl_ficlonerange.2:144
 #: man-pages/man2/iopl.2:111 man-pages/man2/_syscall.2:183
 #: man-pages/man2/alarm.2:86 man-pages/man2/sysinfo.2:122
@@ -2008,11 +2006,9 @@ msgstr ""
 
 #. type: TH
 #: man-pages/man2/fallocate.2:11 man-pages/man2/getrlimit.2:64
-#: man-pages/man2/io_submit.2:8 man-pages/man2/shutdown.2:40
-#: man-pages/man2/open.2:51 man-pages/man2/membarrier.2:25
-#: man-pages/man2/readv.2:32 man-pages/man2/wait.2:49
-#: man-pages/man2/syscall.2:42 man-pages/man2/ptrace.2:105
-#: man-pages/man2/wait4.2:33
+#: man-pages/man2/shutdown.2:40 man-pages/man2/open.2:51
+#: man-pages/man2/membarrier.2:25 man-pages/man2/readv.2:32
+#: man-pages/man2/wait.2:49 man-pages/man2/wait4.2:33
 #, no-wrap
 msgid "2018-04-30"
 msgstr ""
@@ -2201,9 +2197,9 @@ msgstr ""
 #: man-pages/man2/delete_module.2:90 man-pages/man2/delete_module.2:92
 #: man-pages/man2/delete_module.2:97 man-pages/man2/prctl.2:258
 #: man-pages/man2/prctl.2:260 man-pages/man2/prctl.2:263
-#: man-pages/man2/prctl.2:268 man-pages/man2/prctl.2:1516
-#: man-pages/man2/prctl.2:1521 man-pages/man2/prctl.2:1526
-#: man-pages/man2/prctl.2:1536 man-pages/man2/pipe.2:102
+#: man-pages/man2/prctl.2:268 man-pages/man2/prctl.2:1521
+#: man-pages/man2/prctl.2:1526 man-pages/man2/prctl.2:1531
+#: man-pages/man2/prctl.2:1541 man-pages/man2/pipe.2:102
 #: man-pages/man2/pipe.2:112 man-pages/man2/pipe.2:122
 #: man-pages/man2/copy_file_range.2:55 man-pages/man2/copy_file_range.2:62
 #: man-pages/man2/intro.2:44 man-pages/man2/intro.2:47
@@ -2535,7 +2531,7 @@ msgstr ""
 #: man-pages/man2/rename.2:449 man-pages/man2/shutdown.2:75
 #: man-pages/man2/truncate.2:187 man-pages/man2/open.2:1201
 #: man-pages/man2/ioctl_fideduperange.2:153 man-pages/man2/send.2:358
-#: man-pages/man2/prctl.2:1429 man-pages/man2/inotify_rm_watch.2:56
+#: man-pages/man2/prctl.2:1434 man-pages/man2/inotify_rm_watch.2:56
 #: man-pages/man2/copy_file_range.2:105 man-pages/man2/copy_file_range.2:108
 #: man-pages/man2/copy_file_range.2:114 man-pages/man2/access.2:258
 #: man-pages/man2/kexec_load.2:269 man-pages/man2/ioctl.2:95
@@ -2706,7 +2702,7 @@ msgstr ""
 #. type: TP
 #: man-pages/man2/fallocate.2:399 man-pages/man2/signalfd.2:333
 #: man-pages/man2/open.2:1069 man-pages/man2/spu_create.2:206
-#: man-pages/man2/prctl.2:1671 man-pages/man2/mount.2:763
+#: man-pages/man2/prctl.2:1676 man-pages/man2/mount.2:763
 #: man-pages/man2/move_pages.2:190 man-pages/man2/perf_event_open.2:3236
 #: man-pages/man2/s390_pci_mmio_write.2:91 man-pages/man2/timerfd_create.2:424
 #: man-pages/man2/eventfd.2:245 man-pages/man2/fanotify_mark.2:375
@@ -2777,7 +2773,7 @@ msgstr ""
 #: man-pages/man2/seccomp.2:754 man-pages/man2/ioctl_getfsmap.2:353
 #: man-pages/man2/open.2:1133 man-pages/man2/ioctl_fideduperange.2:182
 #: man-pages/man2/send.2:409 man-pages/man2/s390_guarded_storage.2:133
-#: man-pages/man2/prctl.2:1695 man-pages/man2/readv.2:314
+#: man-pages/man2/prctl.2:1700 man-pages/man2/readv.2:314
 #: man-pages/man2/perf_event_open.2:3265 man-pages/man2/keyctl.2:1894
 #: man-pages/man2/keyctl.2:1902 man-pages/man2/keyctl.2:1908
 #: man-pages/man2/ioctl_ficlonerange.2:114 man-pages/man2/fanotify_mark.2:422
@@ -2873,53 +2869,21 @@ msgid "SIGNALFD"
 msgstr ""
 
 #. type: TH
-#: man-pages/man2/signalfd.2:20 man-pages/man2/bind.2:68
-#: man-pages/man2/socketpair.2:42 man-pages/man2/seccomp.2:28
-#: man-pages/man2/memfd_create.2:21 man-pages/man2/request_key.2:12
-#: man-pages/man2/statx.2:31 man-pages/man2/readdir.2:30
-#: man-pages/man2/ioctl_userfaultfd.2:28 man-pages/man2/getdents.2:31
-#: man-pages/man2/sigaction.2:49 man-pages/man2/getpid.2:25
-#: man-pages/man2/rename.2:33 man-pages/man2/recvmmsg.2:31
-#: man-pages/man2/truncate.2:43 man-pages/man2/socket.2:43
-#: man-pages/man2/select_tut.2:32 man-pages/man2/chroot.2:33
-#: man-pages/man2/getxattr.2:25 man-pages/man2/removexattr.2:25
-#: man-pages/man2/ioctl_ns.2:26 man-pages/man2/setuid.2:31
-#: man-pages/man2/s390_guarded_storage.2:25 man-pages/man2/set_thread_area.2:9
-#: man-pages/man2/pipe.2:36 man-pages/man2/unshare.2:20
+#: man-pages/man2/signalfd.2:20 man-pages/man2/statx.2:31
+#: man-pages/man2/kill.2:44 man-pages/man2/io_submit.2:8
+#: man-pages/man2/sigaction.2:49 man-pages/man2/ioctl_fideduperange.2:23
 #: man-pages/man2/copy_file_range.2:25 man-pages/man2/sched_setparam.2:30
-#: man-pages/man2/kexec_load.2:27 man-pages/man2/tee.2:26
-#: man-pages/man2/inotify_add_watch.2:28 man-pages/man2/mremap.2:30
-#: man-pages/man2/syscalls.2:31 man-pages/man2/gettid.2:26
-#: man-pages/man2/perf_event_open.2:27 man-pages/man2/ioprio_set.2:24
-#: man-pages/man2/keyctl.2:28 man-pages/man2/_syscall.2:38
-#: man-pages/man2/ioctl_fat.2:24 man-pages/man2/kcmp.2:28
-#: man-pages/man2/vmsplice.2:26 man-pages/man2/listxattr.2:26
-#: man-pages/man2/write.2:39 man-pages/man2/chown.2:38
-#: man-pages/man2/madvise.2:35 man-pages/man2/sched_setattr.2:26
-#: man-pages/man2/getcpu.2:12 man-pages/man2/capget.2:15
-#: man-pages/man2/ustat.2:30 man-pages/man2/gettimeofday.2:40
-#: man-pages/man2/getuid.2:26 man-pages/man2/connect.2:67
-#: man-pages/man2/spu_run.2:26 man-pages/man2/timerfd_create.2:22
-#: man-pages/man2/subpage_prot.2:30 man-pages/man2/epoll_wait.2:22
-#: man-pages/man2/sendmmsg.2:28 man-pages/man2/add_key.2:12
-#: man-pages/man2/eventfd.2:22 man-pages/man2/posix_fadvise.2:29
-#: man-pages/man2/userfaultfd.2:27 man-pages/man2/stat.2:40
-#: man-pages/man2/select.2:38 man-pages/man2/lseek.2:47
-#: man-pages/man2/getgid.2:25 man-pages/man2/accept.2:41
-#: man-pages/man2/readahead.2:28 man-pages/man2/nfsservctl.2:5
-#: man-pages/man2/getgroups.2:32 man-pages/man2/readlink.2:44
-#: man-pages/man2/s390_runtime_instr.2:25 man-pages/man2/fcntl.2:68
-#: man-pages/man2/setns.2:8 man-pages/man2/inotify_init.2:29
-#: man-pages/man2/sysctl.2:30 man-pages/man2/open_by_handle_at.2:25
-#: man-pages/man2/epoll_ctl.2:20 man-pages/man2/adjtimex.2:29
-#: man-pages/man2/migrate_pages.2:18 man-pages/man2/fsync.2:38
-#: man-pages/man2/sched_setaffinity.2:34 man-pages/man2/reboot.2:28
-#: man-pages/man2/uname.2:27 man-pages/man2/sigsuspend.2:29
-#: man-pages/man2/futex.2:22 man-pages/man2/clock_getres.2:30
-#: man-pages/man2/timer_create.2:26 man-pages/man2/setgid.2:30
-#: man-pages/man2/s390_sthyi.2:25
+#: man-pages/man2/move_pages.2:20 man-pages/man2/inotify_add_watch.2:28
+#: man-pages/man2/rt_sigqueueinfo.2:25 man-pages/man2/syscalls.2:31
+#: man-pages/man2/perf_event_open.2:27 man-pages/man2/getdomainname.2:29
+#: man-pages/man2/kcmp.2:28 man-pages/man2/write.2:39
+#: man-pages/man2/gethostname.2:32 man-pages/man2/get_robust_list.2:30
+#: man-pages/man2/syscall.2:42 man-pages/man2/setns.2:8
+#: man-pages/man2/mmap.2:40 man-pages/man2/ptrace.2:105
+#: man-pages/man2/execve.2:37 man-pages/man2/sched_setaffinity.2:34
+#: man-pages/man2/uname.2:27 man-pages/man2/close.2:36
 #, no-wrap
-msgid "2019-03-06"
+msgid "2019-10-10"
 msgstr ""
 
 #. type: Plain text
@@ -3360,7 +3324,7 @@ msgstr ""
 #: man-pages/man2/chdir.2:107 man-pages/man2/mremap.2:210
 #: man-pages/man2/unlink.2:204 man-pages/man2/symlink.2:187
 #: man-pages/man2/msync.2:96 man-pages/man2/keyctl.2:1886
-#: man-pages/man2/clone.2:1124 man-pages/man2/sync_file_range.2:163
+#: man-pages/man2/clone.2:1175 man-pages/man2/sync_file_range.2:163
 #: man-pages/man2/vmsplice.2:159 man-pages/man2/mbind.2:408
 #: man-pages/man2/chown.2:257 man-pages/man2/madvise.2:507
 #: man-pages/man2/madvise.2:512 man-pages/man2/sendfile.2:155
@@ -3505,7 +3469,7 @@ msgstr ""
 #: man-pages/man2/fanotify_init.2:287 man-pages/man2/mremap.2:241
 #: man-pages/man2/unlink.2:302 man-pages/man2/perf_event_open.2:3320
 #: man-pages/man2/ioprio_set.2:354 man-pages/man2/nanosleep.2:196
-#: man-pages/man2/clone.2:1253 man-pages/man2/cacheflush.2:89
+#: man-pages/man2/clone.2:1304 man-pages/man2/cacheflush.2:89
 #: man-pages/man2/listxattr.2:165 man-pages/man2/write.2:298
 #: man-pages/man2/utimensat.2:490 man-pages/man2/sched_setscheduler.2:217
 #: man-pages/man2/sched_setattr.2:407 man-pages/man2/modify_ldt.2:198
@@ -3549,13 +3513,13 @@ msgstr ""
 #: man-pages/man2/ioctl_getfsmap.2:366 man-pages/man2/recvmmsg.2:192
 #: man-pages/man2/socket.2:488 man-pages/man2/select_tut.2:528
 #: man-pages/man2/getxattr.2:151 man-pages/man2/ioctl_tty.2:552
-#: man-pages/man2/pivot_root.2:265 man-pages/man2/ioctl_ns.2:189
+#: man-pages/man2/pivot_root.2:274 man-pages/man2/ioctl_ns.2:189
 #: man-pages/man2/send.2:461 man-pages/man2/spu_create.2:265
 #: man-pages/man2/membarrier.2:273 man-pages/man2/pipe.2:219
 #: man-pages/man2/unshare.2:448 man-pages/man2/copy_file_range.2:229
 #: man-pages/man2/tee.2:136 man-pages/man2/readv.2:411
 #: man-pages/man2/perf_event_open.2:3389 man-pages/man2/keyctl.2:1964
-#: man-pages/man2/clone.2:1301 man-pages/man2/_syscall.2:142
+#: man-pages/man2/clone.2:1352 man-pages/man2/_syscall.2:142
 #: man-pages/man2/ioctl_fat.2:246 man-pages/man2/kcmp.2:322
 #: man-pages/man2/listxattr.2:174 man-pages/man2/pkey_alloc.2:134
 #: man-pages/man2/chown.2:449 man-pages/man2/connect.2:279
@@ -3604,10 +3568,10 @@ msgstr ""
 #: man-pages/man2/signalfd.2:470 man-pages/man2/msgop.2:594
 #: man-pages/man2/seccomp.2:1010 man-pages/man2/request_key.2:511
 #: man-pages/man2/getdents.2:241 man-pages/man2/recvmmsg.2:225
-#: man-pages/man2/pivot_root.2:300 man-pages/man2/ioctl_ns.2:250
+#: man-pages/man2/pivot_root.2:312 man-pages/man2/ioctl_ns.2:250
 #: man-pages/man2/pipe.2:235 man-pages/man2/unshare.2:471
 #: man-pages/man2/tee.2:152 man-pages/man2/keyctl.2:2074
-#: man-pages/man2/clone.2:1311 man-pages/man2/ioctl_fat.2:433
+#: man-pages/man2/clone.2:1362 man-pages/man2/ioctl_fat.2:433
 #: man-pages/man2/kcmp.2:348 man-pages/man2/chown.2:458
 #: man-pages/man2/timerfd_create.2:504 man-pages/man2/mprotect.2:305
 #: man-pages/man2/add_key.2:238 man-pages/man2/eventfd.2:385
@@ -3729,7 +3693,7 @@ msgstr ""
 
 #. type: TH
 #: man-pages/man2/splice.2:26 man-pages/man2/setfsuid.2:32
-#: man-pages/man2/setfsgid.2:32 man-pages/man2/execve.2:37
+#: man-pages/man2/setfsgid.2:32
 #, no-wrap
 msgid "2019-05-09"
 msgstr ""
@@ -4070,6 +4034,49 @@ msgstr ""
 msgid "BIND"
 msgstr ""
 
+#. type: TH
+#: man-pages/man2/bind.2:68 man-pages/man2/socketpair.2:42
+#: man-pages/man2/seccomp.2:28 man-pages/man2/memfd_create.2:21
+#: man-pages/man2/request_key.2:12 man-pages/man2/readdir.2:30
+#: man-pages/man2/ioctl_userfaultfd.2:28 man-pages/man2/getdents.2:31
+#: man-pages/man2/getpid.2:25 man-pages/man2/rename.2:33
+#: man-pages/man2/recvmmsg.2:31 man-pages/man2/truncate.2:43
+#: man-pages/man2/socket.2:43 man-pages/man2/select_tut.2:32
+#: man-pages/man2/chroot.2:33 man-pages/man2/getxattr.2:25
+#: man-pages/man2/removexattr.2:25 man-pages/man2/ioctl_ns.2:26
+#: man-pages/man2/setuid.2:31 man-pages/man2/s390_guarded_storage.2:25
+#: man-pages/man2/set_thread_area.2:9 man-pages/man2/pipe.2:36
+#: man-pages/man2/unshare.2:20 man-pages/man2/kexec_load.2:27
+#: man-pages/man2/tee.2:26 man-pages/man2/mremap.2:30
+#: man-pages/man2/gettid.2:26 man-pages/man2/ioprio_set.2:24
+#: man-pages/man2/keyctl.2:28 man-pages/man2/_syscall.2:38
+#: man-pages/man2/ioctl_fat.2:24 man-pages/man2/vmsplice.2:26
+#: man-pages/man2/listxattr.2:26 man-pages/man2/chown.2:38
+#: man-pages/man2/madvise.2:35 man-pages/man2/sched_setattr.2:26
+#: man-pages/man2/getcpu.2:12 man-pages/man2/capget.2:15
+#: man-pages/man2/ustat.2:30 man-pages/man2/gettimeofday.2:40
+#: man-pages/man2/getuid.2:26 man-pages/man2/connect.2:67
+#: man-pages/man2/spu_run.2:26 man-pages/man2/timerfd_create.2:22
+#: man-pages/man2/subpage_prot.2:30 man-pages/man2/epoll_wait.2:22
+#: man-pages/man2/sendmmsg.2:28 man-pages/man2/add_key.2:12
+#: man-pages/man2/eventfd.2:22 man-pages/man2/posix_fadvise.2:29
+#: man-pages/man2/userfaultfd.2:27 man-pages/man2/stat.2:40
+#: man-pages/man2/select.2:38 man-pages/man2/lseek.2:47
+#: man-pages/man2/getgid.2:25 man-pages/man2/accept.2:41
+#: man-pages/man2/readahead.2:28 man-pages/man2/nfsservctl.2:5
+#: man-pages/man2/getgroups.2:32 man-pages/man2/readlink.2:44
+#: man-pages/man2/s390_runtime_instr.2:25 man-pages/man2/fcntl.2:68
+#: man-pages/man2/inotify_init.2:29 man-pages/man2/sysctl.2:30
+#: man-pages/man2/open_by_handle_at.2:25 man-pages/man2/epoll_ctl.2:20
+#: man-pages/man2/adjtimex.2:29 man-pages/man2/migrate_pages.2:18
+#: man-pages/man2/fsync.2:38 man-pages/man2/reboot.2:28
+#: man-pages/man2/sigsuspend.2:29 man-pages/man2/futex.2:22
+#: man-pages/man2/clock_getres.2:30 man-pages/man2/timer_create.2:26
+#: man-pages/man2/setgid.2:30 man-pages/man2/s390_sthyi.2:25
+#, no-wrap
+msgid "2019-03-06"
+msgstr ""
+
 #. type: Plain text
 #: man-pages/man2/bind.2:71
 msgid "bind - bind a name to a socket"
@@ -4155,7 +4162,7 @@ msgstr ""
 #: man-pages/man2/socket.2:423 man-pages/man2/chroot.2:124
 #: man-pages/man2/shmget.2:224 man-pages/man2/send.2:323
 #: man-pages/man2/msgctl.2:276 man-pages/man2/spu_create.2:173
-#: man-pages/man2/prctl.2:1403 man-pages/man2/prctl.2:1419
+#: man-pages/man2/prctl.2:1408 man-pages/man2/prctl.2:1424
 #: man-pages/man2/semget.2:166 man-pages/man2/utime.2:129
 #: man-pages/man2/utime.2:136 man-pages/man2/access.2:204
 #: man-pages/man2/uselib.2:62 man-pages/man2/mount.2:625
@@ -4295,7 +4302,7 @@ msgstr ""
 #: man-pages/man2/io_destroy.2:35 man-pages/man2/send.2:368
 #: man-pages/man2/msgctl.2:289 man-pages/man2/spu_create.2:181
 #: man-pages/man2/s390_guarded_storage.2:114 man-pages/man2/delete_module.2:143
-#: man-pages/man2/prctl.2:1451 man-pages/man2/prctl.2:1455
+#: man-pages/man2/prctl.2:1456 man-pages/man2/prctl.2:1460
 #: man-pages/man2/getrusage.2:194 man-pages/man2/set_thread_area.2:147
 #: man-pages/man2/pipe.2:171 man-pages/man2/clock_nanosleep.2:159
 #: man-pages/man2/access.2:237 man-pages/man2/arch_prctl.2:87
@@ -4466,7 +4473,7 @@ msgstr ""
 #: man-pages/man2/getdents.2:199 man-pages/man2/rename.2:395
 #: man-pages/man2/rename.2:455 man-pages/man2/truncate.2:161
 #: man-pages/man2/open.2:1115 man-pages/man2/open.2:1205
-#: man-pages/man2/chroot.2:152 man-pages/man2/pivot_root.2:167
+#: man-pages/man2/chroot.2:152 man-pages/man2/pivot_root.2:154
 #: man-pages/man2/spu_create.2:228 man-pages/man2/access.2:224
 #: man-pages/man2/access.2:266 man-pages/man2/mount.2:777
 #: man-pages/man2/chmod.2:283 man-pages/man2/chmod.2:333
@@ -4690,7 +4697,7 @@ msgstr ""
 #. type: TH
 #: man-pages/man2/msgop.2:39 man-pages/man2/poll.2:31
 #: man-pages/man2/msgget.2:35 man-pages/man2/shmget.2:38
-#: man-pages/man2/setxattr.2:25 man-pages/man2/pivot_root.2:11
+#: man-pages/man2/setxattr.2:25 man-pages/man2/pivot_root.2:27
 #: man-pages/man2/msgctl.2:38 man-pages/man2/prctl.2:54
 #: man-pages/man2/semget.2:36 man-pages/man2/intro.2:29
 #: man-pages/man2/mount.2:40 man-pages/man2/fanotify_init.2:24
@@ -5547,9 +5554,9 @@ msgstr ""
 #: man-pages/man2/msgop.2:709 man-pages/man2/getrlimit.2:834
 #: man-pages/man2/memfd_create.2:480 man-pages/man2/memfd_create.2:530
 #: man-pages/man2/request_key.2:544 man-pages/man2/getdents.2:307
-#: man-pages/man2/pivot_root.2:398 man-pages/man2/ioctl_ns.2:357
+#: man-pages/man2/pivot_root.2:410 man-pages/man2/ioctl_ns.2:357
 #: man-pages/man2/membarrier.2:325 man-pages/man2/membarrier.2:414
-#: man-pages/man2/keyctl.2:2229 man-pages/man2/clone.2:1397
+#: man-pages/man2/keyctl.2:2229 man-pages/man2/clone.2:1448
 #: man-pages/man2/ioctl_fat.2:348 man-pages/man2/ioctl_fat.2:412
 #: man-pages/man2/ioctl_fat.2:499 man-pages/man2/kcmp.2:427
 #: man-pages/man2/chown.2:496 man-pages/man2/spu_run.2:261
@@ -8904,8 +8911,8 @@ msgstr ""
 
 #. type: Plain text
 #: man-pages/man2/memfd_create.2:411 man-pages/man2/memfd_create.2:494
-#: man-pages/man2/pivot_root.2:319 man-pages/man2/unshare.2:490
-#: man-pages/man2/clone.2:1324 man-pages/man2/kcmp.2:363
+#: man-pages/man2/pivot_root.2:331 man-pages/man2/unshare.2:490
+#: man-pages/man2/clone.2:1375 man-pages/man2/kcmp.2:363
 #: man-pages/man2/userfaultfd.2:579 man-pages/man2/setns.2:317
 #: man-pages/man2/open_by_handle_at.2:553
 #: man-pages/man2/open_by_handle_at.2:626
@@ -9171,7 +9178,7 @@ msgstr ""
 #: man-pages/man2/io_setup.2:19 man-pages/man2/readdir.2:42
 #: man-pages/man2/io_submit.2:21 man-pages/man2/io_cancel.2:20
 #: man-pages/man2/io_getevents.2:22 man-pages/man2/set_tid_address.2:37
-#: man-pages/man2/io_destroy.2:19 man-pages/man2/pivot_root.2:19
+#: man-pages/man2/io_destroy.2:19 man-pages/man2/pivot_root.2:35
 #: man-pages/man2/spu_create.2:40 man-pages/man2/llseek.2:43
 #: man-pages/man2/perf_event_open.2:42 man-pages/man2/kcmp.2:41
 #: man-pages/man2/mq_getsetattr.2:40 man-pages/man2/modify_ldt.2:37
@@ -11355,8 +11362,8 @@ msgstr ""
 #. type: TP
 #: man-pages/man2/rmdir.2:55 man-pages/man2/ioctl_userfaultfd.2:340
 #: man-pages/man2/rename.2:328 man-pages/man2/swapon.2:119
-#: man-pages/man2/pivot_root.2:116 man-pages/man2/delete_module.2:130
-#: man-pages/man2/prctl.2:1440 man-pages/man2/kexec_load.2:275
+#: man-pages/man2/pivot_root.2:103 man-pages/man2/delete_module.2:130
+#: man-pages/man2/prctl.2:1445 man-pages/man2/kexec_load.2:275
 #: man-pages/man2/mount.2:657 man-pages/man2/mount.2:665
 #: man-pages/man2/unlink.2:169 man-pages/man2/msync.2:77
 #: man-pages/man2/sched_setattr.2:355 man-pages/man2/quotactl.2:693
@@ -11657,11 +11664,11 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/kill.2:180
+#: man-pages/man2/kill.2:181
 msgid ""
-"B<kill>(1), B<_exit>(2), B<signal>(2), B<tkill>(2), B<exit>(3), "
-"B<killpg>(3), B<sigqueue>(3), B<capabilities>(7), B<credentials>(7), "
-"B<signal>(7)"
+"B<kill>(1), B<_exit>(2), B<pidfd_send_signal>(2), B<signal>(2), B<tkill>(2), "
+"B<exit>(3), B<killpg>(3), B<sigqueue>(3), B<capabilities>(7), "
+"B<credentials>(7), B<signal>(7)"
 msgstr ""
 
 #. type: TH
@@ -16306,13 +16313,13 @@ msgid "See B<mprotect>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/sigaction.2:1055
+#: man-pages/man2/sigaction.2:1056
 msgid ""
-"B<kill>(1), B<kill>(2), B<pause>(2), B<restart_syscall>(2), B<seccomp>(2)  "
-"B<sigaltstack>(2), B<signal>(2), B<signalfd>(2), B<sigpending>(2), "
-"B<sigprocmask>(2), B<sigreturn>(2), B<sigsuspend>(2), B<wait>(2), "
-"B<killpg>(3), B<raise>(3), B<siginterrupt>(3), B<sigqueue>(3), "
-"B<sigsetops>(3), B<sigvec>(3), B<core>(5), B<signal>(7)"
+"B<kill>(1), B<kill>(2), B<pause>(2), B<pidfd_send_signal>(2)  "
+"B<restart_syscall>(2), B<seccomp>(2)  B<sigaltstack>(2), B<signal>(2), "
+"B<signalfd>(2), B<sigpending>(2), B<sigprocmask>(2), B<sigreturn>(2), "
+"B<sigsuspend>(2), B<wait>(2), B<killpg>(3), B<raise>(3), B<siginterrupt>(3), "
+"B<sigqueue>(3), B<sigsetops>(3), B<sigvec>(3), B<core>(5), B<signal>(7)"
 msgstr ""
 
 #. type: TH
@@ -19689,7 +19696,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/set_tid_address.2:105 man-pages/man2/pivot_root.2:184
+#: man-pages/man2/set_tid_address.2:105 man-pages/man2/pivot_root.2:171
 #: man-pages/man2/kcmp.2:308 man-pages/man2/modify_ldt.2:175
 #: man-pages/man2/subpage_prot.2:101 man-pages/man2/userfaultfd.2:457
 #: man-pages/man2/perfmonctl.2:205 man-pages/man2/futex.2:1703
@@ -21089,8 +21096,8 @@ msgstr ""
 
 #. type: TP
 #: man-pages/man2/open.2:1122 man-pages/man2/open.2:1127
-#: man-pages/man2/open.2:1130 man-pages/man2/prctl.2:1677
-#: man-pages/man2/prctl.2:1686 man-pages/man2/mount.2:783
+#: man-pages/man2/open.2:1130 man-pages/man2/prctl.2:1682
+#: man-pages/man2/prctl.2:1691 man-pages/man2/mount.2:783
 #: man-pages/man2/lseek.2:206
 #, no-wrap
 msgid "B<ENXIO>"
@@ -24584,7 +24591,7 @@ msgstr ""
 
 #. type: TP
 #: man-pages/man2/getxattr.2:129 man-pages/man2/setxattr.2:152
-#: man-pages/man2/prctl.2:1764 man-pages/man2/listxattr.2:143
+#: man-pages/man2/prctl.2:1769 man-pages/man2/listxattr.2:143
 #: man-pages/man2/quotactl.2:740 man-pages/man2/lookup_dcookie.2:70
 #: man-pages/man2/semctl.2:467 man-pages/man2/semop.2:371
 #, no-wrap
@@ -26149,56 +26156,36 @@ msgid ""
 msgstr ""
 
 #. type: TH
-#: man-pages/man2/pivot_root.2:11
+#: man-pages/man2/pivot_root.2:27
 #, no-wrap
 msgid "PIVOT_ROOT"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:14
-msgid "pivot_root - change the root filesystem"
+#: man-pages/man2/pivot_root.2:30
+msgid "pivot_root - change the root mount"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:16
+#: man-pages/man2/pivot_root.2:32
 msgid "B<int pivot_root(const char *>I<new_root>B<, const char *>I<put_old>B<);>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:27
+#: man-pages/man2/pivot_root.2:43
 msgid ""
-"B<pivot_root>()  changes the root filesystem in the mount namespace of the "
-"calling process.  More precisely, it moves the root filesystem to the "
-"directory I<put_old> and makes I<new_root> the new root filesystem.  The "
-"calling process must have the B<CAP_SYS_ADMIN> capability in the user "
-"namespace that owns the caller's mount namespace."
+"B<pivot_root>()  changes the root mount in the mount namespace of the "
+"calling process.  More precisely, it moves the root mount to the directory "
+"I<put_old> and makes I<new_root> the new root mount.  The calling process "
+"must have the B<CAP_SYS_ADMIN> capability in the user namespace that owns "
+"the caller's mount namespace."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:47
+#: man-pages/man2/pivot_root.2:56
 msgid ""
-"B<pivot_root>()  may or may not change the current root and the current "
-"working directory of any processes or threads that use the old root "
-"directory and which are in the same mount namespace as the caller of "
-"B<pivot_root>().  The caller of B<pivot_root>()  should ensure that "
-"processes with root or current working directory at the old root operate "
-"correctly in either case.  An easy way to ensure this is to change their "
-"root and current working directory to I<new_root> before invoking "
-"B<pivot_root>().  Note also that B<pivot_root>()  may or may not affect the "
-"calling process's current working directory.  It is therefore recommended to "
-"call B<chdir(\"/\")> immediately after B<pivot_root>()."
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man2/pivot_root.2:67
-msgid ""
-"The paragraph above is intentionally vague because at the time when "
-"B<pivot_root>()  was first implemented, it was unclear whether its affect on "
-"other process's root and current working directories\\(emand the caller's "
-"current working directory\\(emmight change in the future.  However, the "
-"behavior has remained consistent since this system call was first "
-"implemented: B<pivot_root>()  changes the root directory and the current "
-"working directory of each process or thread in the same mount namespace to "
+"B<pivot_root>()  changes the root directory and the current working "
+"directory of each process or thread in the same mount namespace to "
 "I<new_root> if they point to the old root directory.  (See also NOTES.)  On "
 "the other hand, B<pivot_root>()  does not change the caller's current "
 "working directory (unless it is on the old root directory), and thus it "
@@ -26206,14 +26193,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:69
+#: man-pages/man2/pivot_root.2:58
 msgid "The following restrictions apply:"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man2/pivot_root.2:69 man-pages/man2/pivot_root.2:74
-#: man-pages/man2/pivot_root.2:82 man-pages/man2/pivot_root.2:87
-#: man-pages/man2/pivot_root.2:93 man-pages/man2/pivot_root.2:105
+#: man-pages/man2/pivot_root.2:58 man-pages/man2/pivot_root.2:63
+#: man-pages/man2/pivot_root.2:68 man-pages/man2/pivot_root.2:74
+#: man-pages/man2/pivot_root.2:80 man-pages/man2/pivot_root.2:92
 #: man-pages/man2/syscall.2:186 man-pages/man2/syscall.2:187
 #: man-pages/man2/syscall.2:188 man-pages/man2/syscall.2:189
 #: man-pages/man2/syscall.2:190 man-pages/man2/syscall.2:191
@@ -26240,35 +26227,35 @@ msgid "-"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:74
+#: man-pages/man2/pivot_root.2:63
 msgid "I<new_root> and I<put_old> must be directories."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:82
+#: man-pages/man2/pivot_root.2:68
 msgid ""
-"I<new_root> and I<put_old> must not be on the same filesystem as the current "
-"root.  In particular, I<new_root> can't be I<\"/\"> (but can be a bind "
-"mounted directory on the current root filesystem)."
+"I<new_root> and I<put_old> must not be on the same mount as the current "
+"root."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:87
+#: man-pages/man2/pivot_root.2:74
 msgid ""
-"I<put_old> must be at or underneath I<new_root>; that is, adding a "
-"nonnegative number of I</..> to the string pointed to by I<put_old> must "
-"yield the same directory as I<new_root>."
+"I<put_old> must be at or underneath I<new_root>; that is, adding some "
+"nonnegative number of \"I</..>\" prefixes to the pathname pointed to by "
+"I<put_old> must yield the same directory as I<new_root>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:93
+#: man-pages/man2/pivot_root.2:80
 msgid ""
-"I<new_root> must be a mount point.  (If it is not otherwise a mount point, "
-"it suffices to bind mount I<new_root> on top of itself.)"
+"I<new_root> must be a path to a mount point, but can't be I<\"/\">.  A path "
+"that is not already a mount point can be converted into one by bind mounting "
+"the path onto itself."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:105
+#: man-pages/man2/pivot_root.2:92
 msgid ""
 "The propagation type of the parent mount of I<new_root> and the parent mount "
 "of the current root directory must not be B<MS_SHARED>; similarly, if "
@@ -26278,12 +26265,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:107
+#: man-pages/man2/pivot_root.2:94
 msgid "The current root directory must be a mount point."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:116
+#: man-pages/man2/pivot_root.2:103
 msgid ""
 "B<pivot_root>()  may fail with any of the same errors as B<stat>(2).  "
 "Additionally, it may fail with the following errors:"
@@ -26304,106 +26291,122 @@ msgstr ""
 #.  redundant text (although the check is in the kernel), since,
 #.  in another check, 'put_old' is required to be under 'new_root'.
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:140
+#: man-pages/man2/pivot_root.2:127
 msgid ""
-"I<new_root> or I<put_old> is on the current root filesystem.  (This error "
-"covers the pathological case where I<new_root> is I<\"/\">.)"
+"I<new_root> or I<put_old> is on the current root mount.  (This error covers "
+"the pathological case where I<new_root> is I<\"/\">.)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:144
+#: man-pages/man2/pivot_root.2:131
 msgid "I<new_root> is not a mount point."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:147
-msgid "I<put_old> is not underneath I<new_root>."
+#: man-pages/man2/pivot_root.2:134
+msgid "I<put_old> is not at or underneath I<new_root>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:152
+#: man-pages/man2/pivot_root.2:139
 msgid ""
 "The current root directory is not a mount point (because of an earlier "
 "B<chroot>(2))."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:155
-msgid "The current root is on the rootfs (initial ramfs) filesystem; see NOTES."
+#: man-pages/man2/pivot_root.2:142
+msgid "The current root is on the rootfs (initial ramfs) mount; see NOTES."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:162
+#: man-pages/man2/pivot_root.2:149
 msgid ""
 "Either the mount point at I<new_root>, or the parent mount of that mount "
 "point, has propagation type B<MS_SHARED>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:167
+#: man-pages/man2/pivot_root.2:154
 msgid "I<put_old> is a mount point and has the propagation type B<MS_SHARED>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:170
+#: man-pages/man2/pivot_root.2:157
 msgid "I<new_root> or I<put_old> is not a directory."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:175
+#: man-pages/man2/pivot_root.2:162
 msgid "The calling process does not have the B<CAP_SYS_ADMIN> capability."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:178
+#: man-pages/man2/pivot_root.2:165
 msgid "B<pivot_root>()  was introduced in Linux 2.3.41."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:181
+#: man-pages/man2/pivot_root.2:168
 msgid "B<pivot_root>()  is Linux-specific and hence is not portable."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:187
+#: man-pages/man2/pivot_root.2:174
 msgid ""
 "A command-line interface for this system call is provided by "
 "B<pivot_root>(8)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:197
+#: man-pages/man2/pivot_root.2:184
 msgid ""
 "B<pivot_root>()  allows the caller to switch to a new root filesystem while "
 "at the same time placing the old root mount at a location under I<new_root> "
 "from where it can subsequently be unmounted.  (The fact that it moves all "
 "processes that have a root directory or current working directory on the old "
-"root filesystem to the new root filesystem frees the old root filesystem of "
-"users, allowing it to be unmounted more easily.)"
+"root directory to the new root frees the old root directory of users, "
+"allowing the old root mount to be unmounted more easily.)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:206
+#: man-pages/man2/pivot_root.2:194
 msgid ""
-"A typical use of B<pivot_root>()  is during system startup, when the system "
-"mounts a temporary root filesystem (e.g., an B<initrd>), then mounts the "
-"real root filesystem, and eventually turns the latter into the current root "
-"of all relevant processes or threads.  A modern use is to set up a root "
+"One use of B<pivot_root>()  is during system startup, when the system mounts "
+"a temporary root filesystem (e.g., an B<initrd>(4)), then mounts the real "
+"root filesystem, and eventually turns the latter into the root directory of "
+"all relevant processes and threads.  A modern use is to set up a root "
 "filesystem during the creation of a container."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:215
+#: man-pages/man2/pivot_root.2:203
 msgid ""
 "The fact that B<pivot_root>()  modifies process root and current working "
 "directories in the manner noted in DESCRIPTION is necessary in order to "
-"prevent kernel threads from keeping the old root directory busy with their "
-"root and current working directory, even if they never access the filesystem "
-"in any way."
+"prevent kernel threads from keeping the old root mount busy with their root "
+"and current working directories, even if they never access the filesystem in "
+"any way."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:222
+#: man-pages/man2/pivot_root.2:216
+msgid ""
+"The rootfs (initial ramfs) cannot be B<pivot_root>()ed.  The recommended "
+"method of changing the root filesystem in this case is to delete everything "
+"in rootfs, overmount rootfs with the new root, attach "
+"I<stdin>/I<stdout>/I<stderr> to the new I</dev/console>, and exec the new "
+"B<init>(1).  Helper programs for this process exist; see B<switch_root>(8)."
+msgstr ""
+
+#. type: SS
+#: man-pages/man2/pivot_root.2:216
+#, no-wrap
+msgid "pivot_root(\".\", \".\")"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:224
 msgid ""
 "I<new_root> and I<put_old> may be the same directory.  In particular, the "
 "following sequence allows a pivot-root operation without needing to create "
@@ -26415,36 +26418,56 @@ msgstr ""
 #, no-wrap
 msgid ""
 "chdir(new_root);\n"
-"mount(\"\", \".\", MS_SLAVE | MS_REC, NULL);\n"
-"        /* Or: MS_PRIVATE | MS_REC */\n"
 "pivot_root(\".\", \".\");\n"
 "umount2(\".\", MNT_DETACH);\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:253
+#: man-pages/man2/pivot_root.2:251
 msgid ""
 "This sequence succeeds because the B<pivot_root>()  call stacks the old root "
-"mount point (I<old_root>)  on top of the new root mount point at I</>.  At "
-"that point, the calling process's root directory and current working "
-"directory refer to the new root mount point (I<new_root>).  During the "
-"subsequent B<umount>()  call, resolution of I<\".\"> starts with I<new_root> "
-"and then moves up the list of mounts stacked at I</>, with the result that "
-"I<old_root> is unmounted."
+"mount point on top of the new root mount point at I</>.  At that point, the "
+"calling process's root directory and current working directory refer to the "
+"new root mount point (I<new_root>).  During the subsequent B<umount>()  "
+"call, resolution of I<\".\"> starts with I<new_root> and then moves up the "
+"list of mounts stacked at I</>, with the result that old root mount point is "
+"unmounted."
+msgstr ""
+
+#. type: SS
+#: man-pages/man2/pivot_root.2:251
+#, no-wrap
+msgid "Historical notes"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:265
+#: man-pages/man2/pivot_root.2:253
+msgid "For many years, this manual page carried the following text:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:266
 msgid ""
-"The rootfs (initial ramfs) cannot be B<pivot_root>()ed.  The recommended "
-"method of changing the root filesystem in this case is to delete everything "
-"in rootfs, overmount rootfs with the new root, attach "
-"I<stdin>/I<stdout>/I<stderr> to the new I</dev/console>, and exec the new "
-"B<init>(1).  Helper programs for this process exist; see B<switch_root>(8)."
+"B<pivot_root>()  may or may not change the current root and the current "
+"working directory of any processes or threads which use the old root "
+"directory.  The caller of B<pivot_root>()  must ensure that processes with "
+"root or current working directory at the old root operate correctly in "
+"either case.  An easy way to ensure this is to change their root and current "
+"working directory to I<new_root> before invoking B<pivot_root>()."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:275
+#: man-pages/man2/pivot_root.2:274
+msgid ""
+"This text, written before the system call implementation was even finalized "
+"in the kernel, was probably intended to warn users at that time that the "
+"implementation might change before final release.  However, the behavior "
+"stated in DESCRIPTION has remained consistent since this system call was "
+"first implemented and will not change now."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/pivot_root.2:287
 msgid ""
 "The program below demonstrates the use of B<pivot_root>()  inside a mount "
 "namespace that is created using B<clone>(2).  After pivoting to the root "
@@ -26454,7 +26477,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:280
+#: man-pages/man2/pivot_root.2:292
 msgid ""
 "We demonstrate the program by creating a directory that will serve as the "
 "new root filesystem and placing a copy of the (statically linked)  "
@@ -26462,7 +26485,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:298
+#: man-pages/man2/pivot_root.2:310
 #, no-wrap
 msgid ""
 "$ B<mkdir /tmp/rootfs>\n"
@@ -26483,13 +26506,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:305
+#: man-pages/man2/pivot_root.2:317
 #, no-wrap
 msgid "/* pivot_root_demo.c */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:316
+#: man-pages/man2/pivot_root.2:328
 #, no-wrap
 msgid ""
 "#define _GNU_SOURCE\n"
@@ -26505,7 +26528,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:325
+#: man-pages/man2/pivot_root.2:337
 #, no-wrap
 msgid ""
 "static int\n"
@@ -26516,13 +26539,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:327
+#: man-pages/man2/pivot_root.2:339
 #, no-wrap
 msgid "#define STACK_SIZE (1024 * 1024)\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:335
+#: man-pages/man2/pivot_root.2:347
 #, no-wrap
 msgid ""
 "static int              /* Startup function for cloned child */\n"
@@ -26535,7 +26558,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:340
+#: man-pages/man2/pivot_root.2:352
 #, no-wrap
 msgid ""
 "    /* Ensure that \\(aqnew_root\\(aq and its parent mount don\\(aqt have\n"
@@ -26545,7 +26568,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:343
+#: man-pages/man2/pivot_root.2:355
 #, no-wrap
 msgid ""
 "    if (mount(NULL, \"/\", NULL, MS_REC | MS_PRIVATE, NULL) == 1)\n"
@@ -26553,13 +26576,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:345
+#: man-pages/man2/pivot_root.2:357
 #, no-wrap
 msgid "    /* Ensure that \\(aqnew_root\\(aq is a mount point */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:348
+#: man-pages/man2/pivot_root.2:360
 #, no-wrap
 msgid ""
 "    if (mount(new_root, new_root, NULL, MS_BIND, NULL) == -1)\n"
@@ -26567,13 +26590,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:350
+#: man-pages/man2/pivot_root.2:362
 #, no-wrap
 msgid "    /* Create directory to which old root will be pivoted */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:354
+#: man-pages/man2/pivot_root.2:366
 #, no-wrap
 msgid ""
 "    snprintf(path, sizeof(path), \"%s/%s\", new_root, put_old);\n"
@@ -26582,13 +26605,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:356
+#: man-pages/man2/pivot_root.2:368
 #, no-wrap
 msgid "    /* And pivot the root filesystem */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:359
+#: man-pages/man2/pivot_root.2:371
 #, no-wrap
 msgid ""
 "    if (pivot_root(new_root, path) == -1)\n"
@@ -26596,13 +26619,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:361
+#: man-pages/man2/pivot_root.2:373
 #, no-wrap
 msgid "    /* Switch the current working directory to \"/\" */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:364
+#: man-pages/man2/pivot_root.2:376
 #, no-wrap
 msgid ""
 "    if (chdir(\"/\") == -1)\n"
@@ -26610,13 +26633,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:366
+#: man-pages/man2/pivot_root.2:378
 #, no-wrap
 msgid "    /* Unmount old root and remove mount point */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:371
+#: man-pages/man2/pivot_root.2:383
 #, no-wrap
 msgid ""
 "    if (umount2(put_old, MNT_DETACH) == -1)\n"
@@ -26626,13 +26649,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:373
+#: man-pages/man2/pivot_root.2:385
 #, no-wrap
 msgid "    /* Execute the command specified in argv[1]... */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:377
+#: man-pages/man2/pivot_root.2:389
 #, no-wrap
 msgid ""
 "    execv(args[1], &args[1]);\n"
@@ -26641,7 +26664,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:382
+#: man-pages/man2/pivot_root.2:394
 #, no-wrap
 msgid ""
 "int\n"
@@ -26651,7 +26674,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:386
+#: man-pages/man2/pivot_root.2:398
 #, no-wrap
 msgid ""
 "    char *stack = malloc(STACK_SIZE);\n"
@@ -26660,7 +26683,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:390
+#: man-pages/man2/pivot_root.2:402
 #, no-wrap
 msgid ""
 "    if (clone(child, stack + STACK_SIZE,\n"
@@ -26669,13 +26692,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:392
+#: man-pages/man2/pivot_root.2:404
 #, no-wrap
 msgid "    /* Parent falls through to here; wait for child */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:395
+#: man-pages/man2/pivot_root.2:407
 #, no-wrap
 msgid ""
 "    if (wait(NULL) == -1)\n"
@@ -26683,7 +26706,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/pivot_root.2:407
+#: man-pages/man2/pivot_root.2:419
 msgid ""
 "B<chdir>(2), B<chroot>(2), B<mount>(2), B<stat>(2), B<initrd>(4), "
 "B<mount_namespaces>(7), B<pivot_root>(8), B<switch_root>(8)"
@@ -29781,7 +29804,7 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/delete_module.2:196 man-pages/man2/clone.2:974
+#: man-pages/man2/delete_module.2:196 man-pages/man2/clone.2:1010
 #: man-pages/man2/init_module.2:289
 #, no-wrap
 msgid "Linux 2.4 and earlier"
@@ -30312,32 +30335,32 @@ msgid "B<PR_GET_FP_MODE> (since Linux 4.0, only on MIPS)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:424
+#: man-pages/man2/prctl.2:425
 msgid ""
-"Get the current floating-point mode (see the description of "
-"B<PR_SET_FP_MODE> for details)."
+"Return (as the function result)  the current floating-point mode (see the "
+"description of B<PR_SET_FP_MODE> for details)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:427
+#: man-pages/man2/prctl.2:428
 msgid ""
 "On success, the call returns a bit mask which represents the current "
 "floating-point mode."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:435 man-pages/man2/keyctl.2:1206
+#: man-pages/man2/prctl.2:436 man-pages/man2/keyctl.2:1206
 msgid "The arguments I<arg2>, I<arg3>, I<arg4>, and I<arg5> are ignored."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:435
+#: man-pages/man2/prctl.2:436
 #, no-wrap
 msgid "B<PR_SET_FPEMU> (since Linux 2.4.18, 2.5.9, only on ia64)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:445
+#: man-pages/man2/prctl.2:446
 msgid ""
 "Set floating-point emulation control bits to I<arg2>.  Pass "
 "B<PR_FPEMU_NOPRINT> to silently emulate floating-point operation accesses, "
@@ -30346,26 +30369,26 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:445
+#: man-pages/man2/prctl.2:446
 #, no-wrap
 msgid "B<PR_GET_FPEMU> (since Linux 2.4.18, 2.5.9, only on ia64)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:450
+#: man-pages/man2/prctl.2:451
 msgid ""
 "Return floating-point emulation control bits, in the location pointed to by "
 "I<(int\\ *) arg2>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:450
+#: man-pages/man2/prctl.2:451
 #, no-wrap
 msgid "B<PR_SET_FPEXC> (since Linux 2.4.21, 2.5.32, only on PowerPC)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:463
+#: man-pages/man2/prctl.2:464
 msgid ""
 "Set floating-point exception mode to I<arg2>.  Pass B<PR_FP_EXC_SW_ENABLE> "
 "to use FPEXC for FP exception enables, B<PR_FP_EXC_DIV> for floating-point "
@@ -30379,26 +30402,26 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:463
+#: man-pages/man2/prctl.2:464
 #, no-wrap
 msgid "B<PR_GET_FPEXC> (since Linux 2.4.21, 2.5.32, only on PowerPC)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:468
+#: man-pages/man2/prctl.2:469
 msgid ""
 "Return floating-point exception mode, in the location pointed to by I<(int\\ "
 "*) arg2>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:468
+#: man-pages/man2/prctl.2:469
 #, no-wrap
 msgid "B<PR_SET_KEEPCAPS> (since Linux 2.2.18)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:478
+#: man-pages/man2/prctl.2:479
 msgid ""
 "Set the state of the calling thread's \"keep capabilities\" flag.  The "
 "effect of this flag is described in B<capabilities>(7).  I<arg2> must be "
@@ -30407,13 +30430,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:478
+#: man-pages/man2/prctl.2:479
 #, no-wrap
 msgid "B<PR_GET_KEEPCAPS> (since Linux 2.2.18)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:485
+#: man-pages/man2/prctl.2:486
 msgid ""
 "Return (as the function result) the current state of the calling thread's "
 "\"keep capabilities\" flag.  See B<capabilities>(7)  for a description of "
@@ -30421,13 +30444,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:485
+#: man-pages/man2/prctl.2:486
 #, no-wrap
 msgid "B<PR_MCE_KILL> (since Linux 2.6.32)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:525
+#: man-pages/man2/prctl.2:526
 msgid ""
 "Set the machine check memory corruption kill policy for the calling thread.  "
 "If I<arg2> is B<PR_MCE_KILL_CLEAR>, clear the thread memory corruption kill "
@@ -30446,27 +30469,27 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:525
+#: man-pages/man2/prctl.2:526
 #, no-wrap
 msgid "B<PR_MCE_KILL_GET> (since Linux 2.6.32)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:531
+#: man-pages/man2/prctl.2:533
 msgid ""
-"Return the current per-process machine check kill policy.  All unused "
-"B<prctl>()  arguments must be zero."
+"Return (as the function result)  the current per-process machine check kill "
+"policy.  All unused B<prctl>()  arguments must be zero."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:531
+#: man-pages/man2/prctl.2:533
 #, no-wrap
 msgid "B<PR_SET_MM> (since Linux 3.3)"
 msgstr ""
 
 #.  commit 028ee4be34a09a6d48bdf30ab991ae933a7bc036
 #. type: Plain text
-#: man-pages/man2/prctl.2:541
+#: man-pages/man2/prctl.2:543
 msgid ""
 "Modify certain kernel memory map descriptor fields of the calling process.  "
 "Usually these fields are set by the kernel and dynamic loader (see "
@@ -30476,7 +30499,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:555
+#: man-pages/man2/prctl.2:557
 msgid ""
 "The calling process must have the B<CAP_SYS_RESOURCE> capability.  The value "
 "in I<arg2> is one of the options below, while I<arg3> provides a new value "
@@ -30485,20 +30508,20 @@ msgstr ""
 
 #.  commit 52b3694157e3aa6df871e283115652ec6f2d31e0
 #. type: Plain text
-#: man-pages/man2/prctl.2:561
+#: man-pages/man2/prctl.2:563
 msgid ""
 "Before Linux 3.10, this feature is available only if the kernel is built "
 "with the B<CONFIG_CHECKPOINT_RESTORE> option enabled."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:562
+#: man-pages/man2/prctl.2:564
 #, no-wrap
 msgid "B<PR_SET_MM_START_CODE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:571
+#: man-pages/man2/prctl.2:573
 msgid ""
 "Set the address above which the program text can run.  The corresponding "
 "memory area must be readable and executable, but not writable or shareable "
@@ -30506,26 +30529,26 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:571
+#: man-pages/man2/prctl.2:573
 #, no-wrap
 msgid "B<PR_SET_MM_END_CODE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:576
+#: man-pages/man2/prctl.2:578
 msgid ""
 "Set the address below which the program text can run.  The corresponding "
 "memory area must be readable and executable, but not writable or shareable."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:576
+#: man-pages/man2/prctl.2:578
 #, no-wrap
 msgid "B<PR_SET_MM_START_DATA>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:582
+#: man-pages/man2/prctl.2:584
 msgid ""
 "Set the address above which initialized and uninitialized (bss) data are "
 "placed.  The corresponding memory area must be readable and writable, but "
@@ -30533,13 +30556,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:582
+#: man-pages/man2/prctl.2:584
 #, no-wrap
 msgid "B<PR_SET_MM_END_DATA>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:588
+#: man-pages/man2/prctl.2:590
 msgid ""
 "Set the address below which initialized and uninitialized (bss) data are "
 "placed.  The corresponding memory area must be readable and writable, but "
@@ -30547,26 +30570,26 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:588
+#: man-pages/man2/prctl.2:590
 #, no-wrap
 msgid "B<PR_SET_MM_START_STACK>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:592
+#: man-pages/man2/prctl.2:594
 msgid ""
 "Set the start address of the stack.  The corresponding memory area must be "
 "readable and writable."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:592
+#: man-pages/man2/prctl.2:594
 #, no-wrap
 msgid "B<PR_SET_MM_START_BRK>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:604
+#: man-pages/man2/prctl.2:606
 msgid ""
 "Set the address above which the program heap can be expanded with B<brk>(2)  "
 "call.  The address must be greater than the ending address of the current "
@@ -30576,13 +30599,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:604
+#: man-pages/man2/prctl.2:606
 #, no-wrap
 msgid "B<PR_SET_MM_BRK>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:612
+#: man-pages/man2/prctl.2:614
 msgid ""
 "Set the current B<brk>(2)  value.  The requirements for the address are the "
 "same as for the B<PR_SET_MM_START_BRK> option."
@@ -30590,56 +30613,56 @@ msgstr ""
 
 #.  commit fe8c7f5cbf91124987106faa3bdf0c8b955c4cf7
 #. type: Plain text
-#: man-pages/man2/prctl.2:615
+#: man-pages/man2/prctl.2:617
 msgid "The following options are available since Linux 3.5."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:615
+#: man-pages/man2/prctl.2:617
 #, no-wrap
 msgid "B<PR_SET_MM_ARG_START>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:618
+#: man-pages/man2/prctl.2:620
 msgid "Set the address above which the program command line is placed."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:618
+#: man-pages/man2/prctl.2:620
 #, no-wrap
 msgid "B<PR_SET_MM_ARG_END>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:621
+#: man-pages/man2/prctl.2:623
 msgid "Set the address below which the program command line is placed."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:621
+#: man-pages/man2/prctl.2:623
 #, no-wrap
 msgid "B<PR_SET_MM_ENV_START>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:624
+#: man-pages/man2/prctl.2:626
 msgid "Set the address above which the program environment is placed."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:624
+#: man-pages/man2/prctl.2:626
 #, no-wrap
 msgid "B<PR_SET_MM_ENV_END>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:627
+#: man-pages/man2/prctl.2:629
 msgid "Set the address below which the program environment is placed."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:640
+#: man-pages/man2/prctl.2:642
 msgid ""
 "The address passed with B<PR_SET_MM_ARG_START>, B<PR_SET_MM_ARG_END>, "
 "B<PR_SET_MM_ENV_START>, and B<PR_SET_MM_ENV_END> should belong to a process "
@@ -30649,27 +30672,27 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:640
+#: man-pages/man2/prctl.2:642
 #, no-wrap
 msgid "B<PR_SET_MM_AUXV>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:649
+#: man-pages/man2/prctl.2:651
 msgid ""
 "Set a new auxiliary vector.  The I<arg3> argument should provide the address "
 "of the vector.  The I<arg4> is the size of the vector."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:649
+#: man-pages/man2/prctl.2:651
 #, no-wrap
 msgid "B<PR_SET_MM_EXE_FILE>"
 msgstr ""
 
 #.  commit b32dfe377102ce668775f8b6b1461f7ad428f8b6
 #. type: Plain text
-#: man-pages/man2/prctl.2:661
+#: man-pages/man2/prctl.2:663
 msgid ""
 "Supersede the I</proc/pid/exe> symbolic link with a new one pointing to a "
 "new executable file identified by the file descriptor provided in I<arg3> "
@@ -30678,7 +30701,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:668
+#: man-pages/man2/prctl.2:670
 msgid ""
 "To change the symbolic link, one needs to unmap all existing executable "
 "memory areas, including those created by the kernel itself (for example the "
@@ -30688,7 +30711,7 @@ msgstr ""
 
 #.  commit 3fb4afd9a504c2386b8435028d43283216bf588e
 #. type: Plain text
-#: man-pages/man2/prctl.2:679
+#: man-pages/man2/prctl.2:681
 msgid ""
 "In Linux 4.9 and earlier, the B<PR_SET_MM_EXE_FILE> operation can be "
 "performed only once in a process's lifetime; attempting to perform the "
@@ -30700,18 +30723,18 @@ msgstr ""
 
 #.  commit f606b77f1a9e362451aca8f81d8f36a3a112139e
 #. type: Plain text
-#: man-pages/man2/prctl.2:682
+#: man-pages/man2/prctl.2:684
 msgid "The following options are available since Linux 3.18."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:682
+#: man-pages/man2/prctl.2:684
 #, no-wrap
 msgid "B<PR_SET_MM_MAP>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:690
+#: man-pages/man2/prctl.2:692
 msgid ""
 "Provides one-shot access to all the addresses by passing in a I<struct "
 "prctl_mm_map> (as defined in I<E<lt>linux/prctl.hE<gt>>).  The I<arg4> "
@@ -30719,20 +30742,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:694 man-pages/man2/prctl.2:707
+#: man-pages/man2/prctl.2:696 man-pages/man2/prctl.2:709
 msgid ""
 "This feature is available only if the kernel is built with the "
 "B<CONFIG_CHECKPOINT_RESTORE> option enabled."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:694
+#: man-pages/man2/prctl.2:696
 #, no-wrap
 msgid "B<PR_SET_MM_MAP_SIZE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:703
+#: man-pages/man2/prctl.2:705
 msgid ""
 "Returns the size of the I<struct prctl_mm_map> the kernel expects.  This "
 "allows user space to find a compatible struct.  The I<arg4> argument should "
@@ -30740,7 +30763,7 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:708
+#: man-pages/man2/prctl.2:710
 #, no-wrap
 msgid "B<PR_MPX_ENABLE_MANAGEMENT>, B<PR_MPX_DISABLE_MANAGEMENT> (since Linux 3.19) "
 msgstr ""
@@ -30750,7 +30773,7 @@ msgstr ""
 #.  See also https://gcc.gnu.org/wiki/Intel%20MPX%20support%20in%20the%20GCC%20compiler
 #.  commit e9d1b4f3c60997fe197bf0243cb4a41a44387a88
 #. type: Plain text
-#: man-pages/man2/prctl.2:723
+#: man-pages/man2/prctl.2:725
 msgid ""
 "Enable or disable kernel management of Memory Protection eXtensions (MPX)  "
 "bounds tables.  The I<arg2>, I<arg3>, I<arg4>, and I<arg5> arguments must be "
@@ -30758,7 +30781,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:736
+#: man-pages/man2/prctl.2:738
 msgid ""
 "MPX is a hardware-assisted mechanism for performing bounds checking on "
 "pointers.  It consists of a set of registers storing bounds information and "
@@ -30771,7 +30794,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:746
+#: man-pages/man2/prctl.2:748
 msgid ""
 "When management is enabled, the kernel will take over allocation and freeing "
 "of the bounds tables.  It does this by trapping the #BR exceptions that "
@@ -30783,7 +30806,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:753
+#: man-pages/man2/prctl.2:755
 msgid ""
 "Before enabling MPX management using B<PR_MPX_ENABLE_MANAGEMENT>, the "
 "application must first have allocated a user-space buffer for the bounds "
@@ -30792,7 +30815,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:760
+#: man-pages/man2/prctl.2:762
 msgid ""
 "These calls fail if the CPU or kernel does not support MPX.  Kernel support "
 "for MPX is enabled via the B<CONFIG_X86_INTEL_MPX> configuration option.  "
@@ -30801,25 +30824,25 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:764
+#: man-pages/man2/prctl.2:766
 #, no-wrap
 msgid "cat /proc/cpuinfo | grep ' mpx '\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:769
+#: man-pages/man2/prctl.2:771
 msgid ""
 "A thread may not switch in or out of long (64-bit) mode while MPX is "
 "enabled."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:771
+#: man-pages/man2/prctl.2:773
 msgid "All threads in a process are affected by these calls."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:780
+#: man-pages/man2/prctl.2:782
 msgid ""
 "The child of a B<fork>(2)  inherits the state of MPX management.  During "
 "B<execve>(2), MPX management is reset to a state as if "
@@ -30827,21 +30850,21 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:783
+#: man-pages/man2/prctl.2:785
 msgid ""
 "For further information on Intel MPX, see the kernel source file "
 "I<Documentation/x86/intel_mpx.txt>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:783
+#: man-pages/man2/prctl.2:785
 #, no-wrap
 msgid "B<PR_SET_NAME> (since Linux 2.6.9)"
 msgstr ""
 
 #.  TASK_COMM_LEN in include/linux/sched.h
 #. type: Plain text
-#: man-pages/man2/prctl.2:802
+#: man-pages/man2/prctl.2:804
 msgid ""
 "Set the name of the calling thread, using the value in the location pointed "
 "to by I<(char\\ *) arg2>.  The name can be up to 16 bytes long, including "
@@ -30854,13 +30877,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:802
+#: man-pages/man2/prctl.2:804
 #, no-wrap
 msgid "B<PR_GET_NAME> (since Linux 2.6.11)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:809
+#: man-pages/man2/prctl.2:811
 msgid ""
 "Return the name of the calling thread, in the buffer pointed to by I<(char\\ "
 "*) arg2>.  The buffer should allow space for up to 16 bytes; the returned "
@@ -30868,13 +30891,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:809
+#: man-pages/man2/prctl.2:811
 #, no-wrap
 msgid "B<PR_SET_NO_NEW_PRIVS> (since Linux 3.5)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:834
+#: man-pages/man2/prctl.2:836
 msgid ""
 "Set the calling thread's I<no_new_privs> attribute to the value in I<arg2>.  "
 "With I<no_new_privs> set to 1, B<execve>(2)  promises not to grant "
@@ -30887,7 +30910,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:843
+#: man-pages/man2/prctl.2:845
 msgid ""
 "Since Linux 4.10, the value of a thread's I<no_new_privs> attribute can be "
 "viewed via the I<NoNewPrivs> field in the I</proc/[pid]/status> file."
@@ -30895,7 +30918,7 @@ msgstr ""
 
 #.  commit 40fde647ccb0ae8c11d256d271e24d385eed595b
 #. type: Plain text
-#: man-pages/man2/prctl.2:852
+#: man-pages/man2/prctl.2:854
 msgid ""
 "For more information, see the kernel source file "
 "I<Documentation/userspace-api/no_new_privs.rst> (or "
@@ -30904,13 +30927,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:852
+#: man-pages/man2/prctl.2:854
 #, no-wrap
 msgid "B<PR_GET_NO_NEW_PRIVS> (since Linux 3.5)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:863
+#: man-pages/man2/prctl.2:865
 msgid ""
 "Return (as the function result) the value of the I<no_new_privs> attribute "
 "for the calling thread.  A value of 0 indicates the regular B<execve>(2)  "
@@ -30919,13 +30942,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:863
+#: man-pages/man2/prctl.2:865
 #, no-wrap
 msgid "B<PR_SET_PDEATHSIG> (since Linux 2.1.57)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:870
+#: man-pages/man2/prctl.2:872
 msgid ""
 "Set the parent-death signal of the calling process to I<arg2> (either a "
 "signal value in the range 1..maxsig, or 0 to clear).  This is the signal "
@@ -30934,7 +30957,7 @@ msgstr ""
 
 #.  https://bugzilla.kernel.org/show_bug.cgi?id=43300
 #. type: Plain text
-#: man-pages/man2/prctl.2:880
+#: man-pages/man2/prctl.2:882
 msgid ""
 "I<Warning>: the \"parent\" in this case is considered to be the I<thread> "
 "that created this process.  In other words, the signal will be sent when "
@@ -30943,7 +30966,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:890
+#: man-pages/man2/prctl.2:892
 msgid ""
 "The parent-death signal is sent upon subsequent termination of the parent "
 "thread and also upon termination of each subreaper process (see the "
@@ -30954,7 +30977,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:901
+#: man-pages/man2/prctl.2:903
 msgid ""
 "The parent-death signal is process-directed (see B<signal>(7))  and, if the "
 "child installs a handler using the B<sigaction>(2)  B<SA_SIGINFO> flag, the "
@@ -30964,7 +30987,7 @@ msgstr ""
 
 #.  commit d2d56c5f51028cb9f3d800882eb6f4cbd3f9099f
 #. type: Plain text
-#: man-pages/man2/prctl.2:912
+#: man-pages/man2/prctl.2:914
 msgid ""
 "The parent-death signal setting is cleared for the child of a B<fork>(2).  "
 "It is also (since Linux 2.4.36 / 2.6.23)  cleared when executing a "
@@ -30974,20 +30997,20 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:912
+#: man-pages/man2/prctl.2:914
 #, no-wrap
 msgid "B<PR_GET_PDEATHSIG> (since Linux 2.3.15)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:917
+#: man-pages/man2/prctl.2:919
 msgid ""
 "Return the current value of the parent process death signal, in the location "
 "pointed to by I<(int\\ *) arg2>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:917
+#: man-pages/man2/prctl.2:919
 #, no-wrap
 msgid "B<PR_SET_PTRACER> (since Linux 3.4)"
 msgstr ""
@@ -30995,7 +31018,7 @@ msgstr ""
 #.  commit 2d514487faf188938a4ee4fb3464eeecfbdcf8eb
 #.  commit bf06189e4d14641c0148bea16e9dd24943862215
 #. type: Plain text
-#: man-pages/man2/prctl.2:942
+#: man-pages/man2/prctl.2:944
 msgid ""
 "This is meaningful only when the Yama LSM is enabled and in mode 1 "
 "(\"restricted ptrace\", visible via I</proc/sys/kernel/yama/ptrace_scope>).  "
@@ -31010,7 +31033,7 @@ msgstr ""
 
 #.  commit 90bb766440f2147486a2acc3e793d7b8348b0c22
 #. type: Plain text
-#: man-pages/man2/prctl.2:949
+#: man-pages/man2/prctl.2:951
 msgid ""
 "For further information, see the kernel source file "
 "I<Documentation/admin-guide/LSM/Yama.rst> (or "
@@ -31018,7 +31041,7 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:949
+#: man-pages/man2/prctl.2:951
 #, no-wrap
 msgid "B<PR_SET_SECCOMP> (since Linux 2.6.23)"
 msgstr ""
@@ -31027,7 +31050,7 @@ msgstr ""
 #.  [PATCH 0 of 2] seccomp updates
 #.  andrea@cpushare.com
 #. type: Plain text
-#: man-pages/man2/prctl.2:960
+#: man-pages/man2/prctl.2:962
 msgid ""
 "Set the secure computing (seccomp) mode for the calling thread, to limit the "
 "available system calls.  The more recent B<seccomp>(2)  system call provides "
@@ -31035,14 +31058,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:965
+#: man-pages/man2/prctl.2:967
 msgid ""
 "The seccomp mode is selected via I<arg2>.  (The seccomp constants are "
 "defined in I<E<lt>linux/seccomp.hE<gt>>.)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:988
+#: man-pages/man2/prctl.2:990
 msgid ""
 "With I<arg2> set to B<SECCOMP_MODE_STRICT>, the only system calls that the "
 "thread is permitted to make are B<read>(2), B<write>(2), B<_exit>(2)  (but "
@@ -31054,7 +31077,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1003
+#: man-pages/man2/prctl.2:1005
 msgid ""
 "With I<arg2> set to B<SECCOMP_MODE_FILTER> (since Linux 3.5), the system "
 "calls allowed are defined by a pointer to a Berkeley Packet Filter passed in "
@@ -31065,7 +31088,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1018
+#: man-pages/man2/prctl.2:1020
 msgid ""
 "If B<SECCOMP_MODE_FILTER> filters permit B<fork>(2), then the seccomp mode "
 "is inherited by children created by B<fork>(2); if B<execve>(2)  is "
@@ -31076,7 +31099,7 @@ msgstr ""
 
 #.  commit c061f33f35be0ccc80f4b8e0aea5dfd2ed7e01a3
 #. type: Plain text
-#: man-pages/man2/prctl.2:1025
+#: man-pages/man2/prctl.2:1027
 msgid ""
 "For further information, see the kernel source file "
 "I<Documentation/userspace-api/seccomp_filter.rst> (or "
@@ -31084,13 +31107,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:1025
+#: man-pages/man2/prctl.2:1027
 #, no-wrap
 msgid "B<PR_GET_SECCOMP> (since Linux 2.6.23)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1043
+#: man-pages/man2/prctl.2:1045
 msgid ""
 "Return (as the function result)  the secure computing mode of the calling "
 "thread.  If the caller is not in secure computing mode, this operation "
@@ -31103,7 +31126,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1051
+#: man-pages/man2/prctl.2:1053
 msgid ""
 "Since Linux 3.8, the I<Seccomp> field of the I</proc/[pid]/status> file "
 "provides a method of obtaining the same information, without the risk that "
@@ -31111,103 +31134,104 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:1051
+#: man-pages/man2/prctl.2:1053
 #, no-wrap
 msgid "B<PR_SET_SECUREBITS> (since Linux 2.6.26)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1057
+#: man-pages/man2/prctl.2:1059
 msgid ""
 "Set the \"securebits\" flags of the calling thread to the value supplied in "
 "I<arg2>.  See B<capabilities>(7)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:1057
+#: man-pages/man2/prctl.2:1059
 #, no-wrap
 msgid "B<PR_GET_SECUREBITS> (since Linux 2.6.26)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1063
+#: man-pages/man2/prctl.2:1065
 msgid ""
 "Return (as the function result)  the \"securebits\" flags of the calling "
 "thread.  See B<capabilities>(7)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:1063
+#: man-pages/man2/prctl.2:1065
 #, no-wrap
 msgid "B<PR_GET_SPECULATION_CTRL> (since Linux 4.17)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1071
+#: man-pages/man2/prctl.2:1074
 msgid ""
-"Returns the state of the speculation misfeature specified in I<arg2>.  "
-"Currently, the only permitted value for this argument is "
-"B<PR_SPEC_STORE_BYPASS> (otherwise the call fails with the error B<ENODEV>)."
+"Return (as the function result)  the state of the speculation misfeature "
+"specified in I<arg2>.  Currently, the only permitted value for this argument "
+"is B<PR_SPEC_STORE_BYPASS> (otherwise the call fails with the error "
+"B<ENODEV>)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1073
+#: man-pages/man2/prctl.2:1076
 msgid "The return value uses bits 0-3 with the following meaning:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:1074
+#: man-pages/man2/prctl.2:1077
 #, no-wrap
 msgid "B<PR_SPEC_PRCTL>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1078
+#: man-pages/man2/prctl.2:1081
 msgid "Mitigation can be controlled per thread by B<PR_SET_SPECULATION_CTRL>"
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:1078 man-pages/man2/prctl.2:1124
+#: man-pages/man2/prctl.2:1081 man-pages/man2/prctl.2:1127
 #, no-wrap
 msgid "B<PR_SPEC_ENABLE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1081 man-pages/man2/prctl.2:1127
+#: man-pages/man2/prctl.2:1084 man-pages/man2/prctl.2:1130
 msgid "The speculation feature is enabled, mitigation is disabled."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:1081 man-pages/man2/prctl.2:1127
+#: man-pages/man2/prctl.2:1084 man-pages/man2/prctl.2:1130
 #, no-wrap
 msgid "B<PR_SPEC_DISABLE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1084 man-pages/man2/prctl.2:1130
+#: man-pages/man2/prctl.2:1087 man-pages/man2/prctl.2:1133
 msgid "The speculation feature is disabled, mitigation is enabled"
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:1084 man-pages/man2/prctl.2:1130
+#: man-pages/man2/prctl.2:1087 man-pages/man2/prctl.2:1133
 #, no-wrap
 msgid "B<PR_SPEC_FORCE_DISABLE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1089
+#: man-pages/man2/prctl.2:1092
 msgid "Same as B<PR_SPEC_DISABLE> but cannot be undone."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1093
+#: man-pages/man2/prctl.2:1096
 msgid ""
 "If all bits are 0, then the CPU is not affected by the speculation "
 "misfeature."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1100
+#: man-pages/man2/prctl.2:1103
 msgid ""
 "If B<PR_SPEC_PRCTL> is set, then per-thread control of the mitigation is "
 "available.  If not set, B<prctl>()  for the speculation misfeature will "
@@ -31215,14 +31239,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1108
+#: man-pages/man2/prctl.2:1111
 msgid ""
 "The I<arg3>, I<arg4>, and I<arg5> arguments must be specified as 0; "
 "otherwise the call fails with the error B<EINVAL>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:1108
+#: man-pages/man2/prctl.2:1111
 #, no-wrap
 msgid "B<PR_SET_SPECULATION_CTRL> (since Linux 4.17)"
 msgstr ""
@@ -31230,7 +31254,7 @@ msgstr ""
 #.  commit b617cfc858161140d69cc0b5cc211996b557a1c7
 #.  commit 356e4bfff2c5489e016fdb925adbf12a1e3950ee
 #. type: Plain text
-#: man-pages/man2/prctl.2:1123
+#: man-pages/man2/prctl.2:1126
 msgid ""
 "Sets the state of the speculation misfeature specified in I<arg2>.  "
 "Currently, the only permitted value for this argument is "
@@ -31240,28 +31264,28 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1140
+#: man-pages/man2/prctl.2:1143
 msgid ""
 "Same as B<PR_SPEC_DISABLE> but cannot be undone.  A subsequent B<prctl(..., "
 "PR_SPEC_ENABLE)> will fail with the error B<EPERM>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1146
+#: man-pages/man2/prctl.2:1149
 msgid ""
 "Any other value in I<arg3> will result in the call failing with the error "
 "B<ERANGE>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1153
+#: man-pages/man2/prctl.2:1156
 msgid ""
 "The I<arg4> and I<arg5> arguments must be specified as 0; otherwise the call "
 "fails with the error B<EINVAL>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1163
+#: man-pages/man2/prctl.2:1166
 msgid ""
 "The speculation feature can also be controlled by the "
 "B<spec_store_bypass_disable> boot parameter.  This parameter may enforce a "
@@ -31271,14 +31295,14 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:1163
+#: man-pages/man2/prctl.2:1166
 #, no-wrap
 msgid "B<PR_SET_THP_DISABLE> (since Linux 3.15)"
 msgstr ""
 
 #.  commit a0715cc22601e8830ace98366c0c2bd8da52af52
 #. type: Plain text
-#: man-pages/man2/prctl.2:1180
+#: man-pages/man2/prctl.2:1183
 msgid ""
 "Set the state of the \"THP disable\" flag for the calling thread.  If "
 "I<arg2> has a nonzero value, the flag is set, otherwise it is cleared.  "
@@ -31290,13 +31314,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:1180
+#: man-pages/man2/prctl.2:1183
 #, no-wrap
 msgid "B<PR_TASK_PERF_EVENTS_DISABLE> (since Linux 2.6.31)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1189
+#: man-pages/man2/prctl.2:1192
 msgid ""
 "Disable all performance counters attached to the calling process, regardless "
 "of whether the counters were created by this process or another process.  "
@@ -31307,20 +31331,20 @@ msgstr ""
 
 #.  commit 1d1c7ddbfab358445a542715551301b7fc363e28
 #. type: Plain text
-#: man-pages/man2/prctl.2:1196
+#: man-pages/man2/prctl.2:1199
 msgid ""
 "Originally called B<PR_TASK_PERF_COUNTERS_DISABLE>; renamed (retaining the "
 "same numerical value)  in Linux 2.6.32."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:1196
+#: man-pages/man2/prctl.2:1199
 #, no-wrap
 msgid "B<PR_TASK_PERF_EVENTS_ENABLE> (since Linux 2.6.31)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1201
+#: man-pages/man2/prctl.2:1204
 msgid ""
 "The converse of B<PR_TASK_PERF_EVENTS_DISABLE>; enable performance counters "
 "attached to the calling process."
@@ -31329,36 +31353,36 @@ msgstr ""
 #.  commit 1d1c7ddbfab358445a542715551301b7fc363e28
 #.  commit cdd6c482c9ff9c55475ee7392ec8f672eddb7be6
 #. type: Plain text
-#: man-pages/man2/prctl.2:1209
+#: man-pages/man2/prctl.2:1212
 msgid "Originally called B<PR_TASK_PERF_COUNTERS_ENABLE>; renamed in Linux 2.6.32."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:1209
+#: man-pages/man2/prctl.2:1212
 #, no-wrap
 msgid "B<PR_GET_THP_DISABLE> (since Linux 3.15)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1214
+#: man-pages/man2/prctl.2:1217
 msgid ""
-"Return (via the function result) the current setting of the \"THP disable\" "
+"Return (as the function result) the current setting of the \"THP disable\" "
 "flag for the calling thread: either 1, if the flag is set, or 0, if it is "
 "not."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:1214
+#: man-pages/man2/prctl.2:1217
 #, no-wrap
 msgid "B<PR_GET_TID_ADDRESS> (since Linux 3.5)"
 msgstr ""
 
 #.  commit 300f786b2683f8bb1ec0afb6e1851183a479c86d
 #. type: Plain text
-#: man-pages/man2/prctl.2:1235
+#: man-pages/man2/prctl.2:1238
 msgid ""
-"Retrieve the I<clear_child_tid> address set by B<set_tid_address>(2)  and "
-"the B<clone>(2)  B<CLONE_CHILD_CLEARTID> flag, in the location pointed to by "
+"Return the I<clear_child_tid> address set by B<set_tid_address>(2)  and the "
+"B<clone>(2)  B<CLONE_CHILD_CLEARTID> flag, in the location pointed to by "
 "I<(int\\ **)\\ arg2>.  This feature is available only if the kernel is built "
 "with the B<CONFIG_CHECKPOINT_RESTORE> option enabled.  Note that since the "
 "B<prctl>()  system call does not have a compat implementation for the AMD64 "
@@ -31368,7 +31392,7 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:1235
+#: man-pages/man2/prctl.2:1238
 #, no-wrap
 msgid "B<PR_SET_TIMERSLACK> (since Linux 2.6.28)"
 msgstr ""
@@ -31376,7 +31400,7 @@ msgstr ""
 #.  See https://lwn.net/Articles/369549/
 #.  commit 6976675d94042fbd446231d1bd8b7de71a980ada
 #. type: Plain text
-#: man-pages/man2/prctl.2:1253
+#: man-pages/man2/prctl.2:1256
 msgid ""
 "Each thread has two associated timer slack values: a \"default\" value, and "
 "a \"current\" value.  This operation sets the \"current\" timer slack value "
@@ -31389,7 +31413,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1260
+#: man-pages/man2/prctl.2:1263
 msgid ""
 "The \"current\" timer slack is used by the kernel to group timer expirations "
 "for the calling thread that are close to one another; as a consequence, "
@@ -31400,7 +31424,7 @@ msgstr ""
 
 #.  List obtained by grepping for futex usage in glibc source
 #. type: Plain text
-#: man-pages/man2/prctl.2:1280
+#: man-pages/man2/prctl.2:1283
 msgid ""
 "The timer expirations affected by timer slack are those set by B<select>(2), "
 "B<pselect>(2), B<poll>(2), B<ppoll>(2), B<epoll_wait>(2), B<epoll_pwait>(2), "
@@ -31412,14 +31436,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1284
+#: man-pages/man2/prctl.2:1287
 msgid ""
 "Timer slack is not applied to threads that are scheduled under a real-time "
 "scheduling policy (see B<sched_setscheduler>(2))."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1299
+#: man-pages/man2/prctl.2:1302
 msgid ""
 "When a new thread is created, the two timer slack values are made the same "
 "as the \"current\" value of the creating thread.  Thereafter, a thread can "
@@ -31431,7 +31455,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1305
+#: man-pages/man2/prctl.2:1308
 msgid ""
 "Since Linux 4.6, the \"current\" timer slack value of any process can be "
 "examined and changed via the file I</proc/[pid]/timerslack_ns>.  See "
@@ -31439,20 +31463,20 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:1305
+#: man-pages/man2/prctl.2:1308
 #, no-wrap
 msgid "B<PR_GET_TIMERSLACK> (since Linux 2.6.28)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1309
+#: man-pages/man2/prctl.2:1312
 msgid ""
 "Return (as the function result)  the \"current\" timer slack value of the "
 "calling thread."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:1309
+#: man-pages/man2/prctl.2:1312
 #, no-wrap
 msgid "B<PR_SET_TIMING> (since Linux 2.6.0)"
 msgstr ""
@@ -31464,7 +31488,7 @@ msgstr ""
 #.  and looking at the patch history, it appears
 #.  that it never did anything.
 #. type: Plain text
-#: man-pages/man2/prctl.2:1327
+#: man-pages/man2/prctl.2:1330
 msgid ""
 "Set whether to use (normal, traditional) statistical process timing or "
 "accurate timestamp-based process timing, by passing B<PR_TIMING_STATISTICAL> "
@@ -31474,27 +31498,27 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:1327
+#: man-pages/man2/prctl.2:1330
 #, no-wrap
 msgid "B<PR_GET_TIMING> (since Linux 2.6.0)"
 msgstr ""
 
 #.  Precisely: Linux 2.6.0-test4
 #. type: Plain text
-#: man-pages/man2/prctl.2:1332
+#: man-pages/man2/prctl.2:1335
 msgid ""
 "Return (as the function result) which process timing method is currently in "
 "use."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:1332
+#: man-pages/man2/prctl.2:1335
 #, no-wrap
 msgid "B<PR_SET_TSC> (since Linux 2.6.26, x86 only)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1345
+#: man-pages/man2/prctl.2:1348
 msgid ""
 "Set the state of the flag determining whether the timestamp counter can be "
 "read by the process.  Pass B<PR_TSC_ENABLE> to I<arg2> to allow it to be "
@@ -31503,20 +31527,20 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:1345
+#: man-pages/man2/prctl.2:1348
 #, no-wrap
 msgid "B<PR_GET_TSC> (since Linux 2.6.26, x86 only)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1351
+#: man-pages/man2/prctl.2:1354
 msgid ""
 "Return the state of the flag determining whether the timestamp counter can "
 "be read, in the location pointed to by I<(int\\ *) arg2>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:1351
+#: man-pages/man2/prctl.2:1354
 #, no-wrap
 msgid "B<PR_SET_UNALIGN>"
 msgstr ""
@@ -31524,7 +31548,7 @@ msgstr ""
 #.  sh: 94ea5e449ae834af058ef005d16a8ad44fcf13d6
 #.  tile: 2f9ac29eec71a696cb0dcc5fb82c0f8d4dac28c9
 #. type: Plain text
-#: man-pages/man2/prctl.2:1374
+#: man-pages/man2/prctl.2:1377
 msgid ""
 "(Only on: ia64, since Linux 2.3.48; parisc, since Linux 2.6.15; PowerPC, "
 "since Linux 2.6.18; Alpha, since Linux 2.6.22; sh, since Linux 2.6.34; tile, "
@@ -31538,25 +31562,26 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/prctl.2:1374
+#: man-pages/man2/prctl.2:1377
 #, no-wrap
 msgid "B<PR_GET_UNALIGN>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1381
+#: man-pages/man2/prctl.2:1384
 msgid ""
-"(see B<PR_SET_UNALIGN> for information on versions and architectures)  "
+"(See B<PR_SET_UNALIGN> for information on versions and architectures.)  "
 "Return unaligned access control bits, in the location pointed to by "
 "I<(unsigned int\\ *) arg2>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1402
+#: man-pages/man2/prctl.2:1407
 msgid ""
-"On success, B<PR_GET_DUMPABLE>, B<PR_GET_KEEPCAPS>, B<PR_GET_NO_NEW_PRIVS>, "
-"B<PR_GET_THP_DISABLE>, B<PR_CAPBSET_READ>, B<PR_GET_TIMING>, "
-"B<PR_GET_TIMERSLACK>, B<PR_GET_SECUREBITS>, B<PR_MCE_KILL_GET>, "
+"On success, B<PR_GET_DUMPABLE>, B<PR_GET_FP_MODE>, B<PR_GET_KEEPCAPS>, "
+"B<PR_GET_NO_NEW_PRIVS>, B<PR_GET_THP_DISABLE>, B<PR_CAPBSET_READ>, "
+"B<PR_GET_TIMING>, B<PR_GET_TIMERSLACK>, B<PR_GET_SECUREBITS>, "
+"B<PR_GET_SPECULATION_CTRL>, B<PR_MCE_KILL_GET>, "
 "B<PR_CAP_AMBIENT>+B<PR_CAP_AMBIENT_IS_SET>, and (if it returns)  "
 "B<PR_GET_SECCOMP> return the nonnegative values described above.  All other "
 "I<option> values return 0 on success.  On error, -1 is returned, and "
@@ -31564,7 +31589,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1419
+#: man-pages/man2/prctl.2:1424
 msgid ""
 "I<option> is B<PR_SET_SECCOMP> and I<arg2> is B<SECCOMP_MODE_FILTER>, but "
 "the process does not have the B<CAP_SYS_ADMIN> capability or has not set the "
@@ -31573,21 +31598,21 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1429
+#: man-pages/man2/prctl.2:1434
 msgid ""
 "I<option> is B<PR_SET_MM>, and I<arg3> is B<PR_SET_MM_EXE_FILE>, the file is "
 "not executable."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1440
+#: man-pages/man2/prctl.2:1445
 msgid ""
 "I<option> is B<PR_SET_MM>, I<arg3> is B<PR_SET_MM_EXE_FILE>, and the file "
 "descriptor passed in I<arg4> is not valid."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1451
+#: man-pages/man2/prctl.2:1456
 msgid ""
 "I<option> is B<PR_SET_MM>, I<arg3> is B<PR_SET_MM_EXE_FILE>, and this the "
 "second attempt to change the I</proc/pid/exe> symbolic link, which is "
@@ -31595,12 +31620,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1455
+#: man-pages/man2/prctl.2:1460
 msgid "I<arg2> is an invalid address."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1468
+#: man-pages/man2/prctl.2:1473
 msgid ""
 "I<option> is B<PR_SET_SECCOMP>, I<arg2> is B<SECCOMP_MODE_FILTER>, the "
 "system was built with B<CONFIG_SECCOMP_FILTER>, and I<arg3> is an invalid "
@@ -31608,55 +31633,55 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1473
+#: man-pages/man2/prctl.2:1478
 msgid "The value of I<option> is not recognized."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1485
+#: man-pages/man2/prctl.2:1490
 msgid ""
 "I<option> is B<PR_MCE_KILL> or B<PR_MCE_KILL_GET> or B<PR_SET_MM>, and "
 "unused B<prctl>()  arguments were not specified as zero."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1490
+#: man-pages/man2/prctl.2:1495
 msgid "I<arg2> is not valid value for this I<option>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1499
+#: man-pages/man2/prctl.2:1504
 msgid ""
 "I<option> is B<PR_SET_SECCOMP> or B<PR_GET_SECCOMP>, and the kernel was not "
 "configured with B<CONFIG_SECCOMP>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1509
+#: man-pages/man2/prctl.2:1514
 msgid ""
 "I<option> is B<PR_SET_SECCOMP>, I<arg2> is B<SECCOMP_MODE_FILTER>, and the "
 "kernel was not configured with B<CONFIG_SECCOMP_FILTER>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1515
+#: man-pages/man2/prctl.2:1520
 msgid "I<option> is B<PR_SET_MM>, and one of the following is true"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1521
+#: man-pages/man2/prctl.2:1526
 msgid "I<arg4> or I<arg5> is nonzero;"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1526
+#: man-pages/man2/prctl.2:1531
 msgid ""
 "I<arg3> is greater than B<TASK_SIZE> (the limit on the size of the user "
 "address space for this architecture);"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1536
+#: man-pages/man2/prctl.2:1541
 msgid ""
 "I<arg2> is B<PR_SET_MM_START_CODE>, B<PR_SET_MM_END_CODE>, "
 "B<PR_SET_MM_START_DATA>, B<PR_SET_MM_END_DATA>, or B<PR_SET_MM_START_STACK>, "
@@ -31664,7 +31689,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1548
+#: man-pages/man2/prctl.2:1553
 msgid ""
 "I<arg2> is B<PR_SET_MM_START_BRK> or B<PR_SET_MM_BRK>, and I<arg3> is less "
 "than or equal to the end of the data segment or specifies a value that would "
@@ -31672,59 +31697,59 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1559
+#: man-pages/man2/prctl.2:1564
 msgid ""
 "I<option> is B<PR_SET_PTRACER> and I<arg2> is not 0, B<PR_SET_PTRACER_ANY>, "
 "or the PID of an existing process."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1567
+#: man-pages/man2/prctl.2:1572
 msgid "I<option> is B<PR_SET_PDEATHSIG> and I<arg2> is not a valid signal number."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1578
+#: man-pages/man2/prctl.2:1583
 msgid ""
 "I<option> is B<PR_SET_DUMPABLE> and I<arg2> is neither B<SUID_DUMP_DISABLE> "
 "nor B<SUID_DUMP_USER>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1587
+#: man-pages/man2/prctl.2:1592
 msgid "I<option> is B<PR_SET_TIMING> and I<arg2> is not B<PR_TIMING_STATISTICAL>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1601
+#: man-pages/man2/prctl.2:1606
 msgid ""
 "I<option> is B<PR_SET_NO_NEW_PRIVS> and I<arg2> is not equal to 1 or "
 "I<arg3>, I<arg4>, or I<arg5> is nonzero."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1613
+#: man-pages/man2/prctl.2:1618
 msgid ""
 "I<option> is B<PR_GET_NO_NEW_PRIVS> and I<arg2>, I<arg3>, I<arg4>, or "
 "I<arg5> is nonzero."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1624
+#: man-pages/man2/prctl.2:1629
 msgid ""
 "I<option> is B<PR_SET_THP_DISABLE> and I<arg3>, I<arg4>, or I<arg5> is "
 "nonzero."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1636
+#: man-pages/man2/prctl.2:1641
 msgid ""
 "I<option> is B<PR_GET_THP_DISABLE> and I<arg2>, I<arg3>, I<arg4>, or I<arg5> "
 "is nonzero."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1661
+#: man-pages/man2/prctl.2:1666
 msgid ""
 "I<option> is B<PR_CAP_AMBIENT> and an unused argument (I<arg4>, I<arg5>, or, "
 "in the case of B<PR_CAP_AMBIENT_CLEAR_ALL>, I<arg3>)  is nonzero; or I<arg2> "
@@ -31734,21 +31759,21 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1671
+#: man-pages/man2/prctl.2:1676
 msgid ""
 "I<option> was B<PR_GET_SPECULATION_CTRL> or B<PR_SET_SPECULATION_CTRL> and "
 "unused arguments to B<prctl>()  are not 0."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1677
+#: man-pages/man2/prctl.2:1682
 msgid ""
 "I<option> was B<PR_SET_SPECULATION_CTRL> the kernel or CPU does not support "
 "the requested speculation misfeature."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1686
+#: man-pages/man2/prctl.2:1691
 msgid ""
 "I<option> was B<PR_MPX_ENABLE_MANAGEMENT> or B<PR_MPX_DISABLE_MANAGEMENT> "
 "and the kernel or the CPU does not support MPX management.  Check that the "
@@ -31756,7 +31781,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1695
+#: man-pages/man2/prctl.2:1700
 msgid ""
 "I<option> was B<PR_SET_SPECULATION_CTRL> implies that the control of the "
 "selected speculation misfeature is not possible.  See "
@@ -31765,14 +31790,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1703
+#: man-pages/man2/prctl.2:1708
 msgid ""
 "I<option> is B<PR_SET_FP_MODE> and I<arg2> has an invalid or unsupported "
 "value."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1715
+#: man-pages/man2/prctl.2:1720
 msgid ""
 "I<option> is B<PR_SET_SECUREBITS>, and the caller does not have the "
 "B<CAP_SETPCAP> capability, or tried to unset a \"locked\" flag, or tried to "
@@ -31780,35 +31805,35 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1723
+#: man-pages/man2/prctl.2:1728
 msgid ""
 "I<option> is B<PR_SET_SPECULATION_CTRL> wherein the speculation was disabled "
 "with B<PR_SPEC_FORCE_DISABLE> and caller tried to enable it again."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1733
+#: man-pages/man2/prctl.2:1738
 msgid ""
 "I<option> is B<PR_SET_KEEPCAPS>, and the caller's B<SECBIT_KEEP_CAPS_LOCKED> "
 "flag is set (see B<capabilities>(7))."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1741
+#: man-pages/man2/prctl.2:1746
 msgid ""
 "I<option> is B<PR_CAPBSET_DROP>, and the caller does not have the "
 "B<CAP_SETPCAP> capability."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1749
+#: man-pages/man2/prctl.2:1754
 msgid ""
 "I<option> is B<PR_SET_MM>, and the caller does not have the "
 "B<CAP_SYS_RESOURCE> capability."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1764
+#: man-pages/man2/prctl.2:1769
 msgid ""
 "I<option> is B<PR_CAP_AMBIENT> and I<arg2> is B<PR_CAP_AMBIENT_RAISE>, but "
 "either the capability specified in I<arg3> is not present in the process's "
@@ -31817,7 +31842,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1776
+#: man-pages/man2/prctl.2:1781
 msgid ""
 "I<option> was B<PR_SET_SPECULATION_CTRL> and I<arg3> is neither "
 "B<PR_SPEC_ENABLE>, B<PR_SPEC_DISABLE>, nor B<PR_SPEC_FORCE_DISABLE>."
@@ -31825,12 +31850,12 @@ msgstr ""
 
 #.  The library interface was added in glibc 2.0.6
 #. type: Plain text
-#: man-pages/man2/prctl.2:1781
+#: man-pages/man2/prctl.2:1786
 msgid "The B<prctl>()  system call was introduced in Linux 2.1.57."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1788
+#: man-pages/man2/prctl.2:1793
 msgid ""
 "This call is Linux-specific.  IRIX has a B<prctl>()  system call (also "
 "introduced in Linux 2.1.44 as irix_prctl on the MIPS architecture), with "
@@ -31838,13 +31863,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1792
+#: man-pages/man2/prctl.2:1797
 #, no-wrap
 msgid "B<ptrdiff_t prctl(int >I<option>B<, int >I<arg2>B<, int >I<arg3>B<);>\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1799
+#: man-pages/man2/prctl.2:1804
 msgid ""
 "and options to get the maximum number of processes per user, get the maximum "
 "number of processors the calling process can use, find out whether a "
@@ -31853,7 +31878,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/prctl.2:1801
+#: man-pages/man2/prctl.2:1806
 msgid "B<signal>(2), B<core>(5)"
 msgstr ""
 
@@ -33754,35 +33779,35 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/unshare.2:300 man-pages/man2/clone.2:1085
+#: man-pages/man2/unshare.2:300 man-pages/man2/clone.2:1121
 msgid ""
 "B<CLONE_NEWIPC> was specified in I<flags>, but the kernel was not configured "
 "with the B<CONFIG_SYSVIPC> and B<CONFIG_IPC_NS> options."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/unshare.2:308 man-pages/man2/clone.2:1093
+#: man-pages/man2/unshare.2:308 man-pages/man2/clone.2:1129
 msgid ""
 "B<CLONE_NEWNET> was specified in I<flags>, but the kernel was not configured "
 "with the B<CONFIG_NET_NS> option."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/unshare.2:316 man-pages/man2/clone.2:1101
+#: man-pages/man2/unshare.2:316 man-pages/man2/clone.2:1137
 msgid ""
 "B<CLONE_NEWPID> was specified in I<flags>, but the kernel was not configured "
 "with the B<CONFIG_PID_NS> option."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/unshare.2:324 man-pages/man2/clone.2:1109
+#: man-pages/man2/unshare.2:324 man-pages/man2/clone.2:1145
 msgid ""
 "B<CLONE_NEWUSER> was specified in I<flags>, but the kernel was not "
 "configured with the B<CONFIG_USER_NS> option."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/unshare.2:332 man-pages/man2/clone.2:1117
+#: man-pages/man2/unshare.2:332 man-pages/man2/clone.2:1153
 msgid ""
 "B<CLONE_NEWUTS> was specified in I<flags>, but the kernel was not configured "
 "with the B<CONFIG_UTS_NS> option."
@@ -33803,27 +33828,27 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/unshare.2:346 man-pages/man2/clone.2:1129
+#: man-pages/man2/unshare.2:346 man-pages/man2/clone.2:1180
 #, no-wrap
 msgid "B<ENOSPC> (since Linux 3.7)"
 msgstr ""
 
 #.  commit f2302505775fd13ba93f034206f1e2a587017929
 #. type: Plain text
-#: man-pages/man2/unshare.2:354 man-pages/man2/clone.2:1137
+#: man-pages/man2/unshare.2:354 man-pages/man2/clone.2:1188
 msgid ""
 "B<CLONE_NEWPID> was specified in flags, but the limit on the nesting depth "
 "of PID namespaces would have been exceeded; see B<pid_namespaces>(7)."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/unshare.2:354 man-pages/man2/clone.2:1137
+#: man-pages/man2/unshare.2:354 man-pages/man2/clone.2:1188
 #, no-wrap
 msgid "B<ENOSPC> (since Linux 4.9; beforehand B<EUSERS>)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/unshare.2:363 man-pages/man2/clone.2:1146
+#: man-pages/man2/unshare.2:363 man-pages/man2/clone.2:1197
 msgid ""
 "B<CLONE_NEWUSER> was specified in I<flags>, and the call would cause the "
 "limit on the number of nested user namespaces to be exceeded.  See "
@@ -33831,20 +33856,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/unshare.2:366 man-pages/man2/clone.2:1149
+#: man-pages/man2/unshare.2:366 man-pages/man2/clone.2:1200
 msgid ""
 "From Linux 3.11 to Linux 4.8, the error diagnosed in this case was "
 "B<EUSERS>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/unshare.2:366 man-pages/man2/clone.2:1149
+#: man-pages/man2/unshare.2:366 man-pages/man2/clone.2:1200
 #, no-wrap
 msgid "B<ENOSPC> (since Linux 4.9)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/unshare.2:376 man-pages/man2/clone.2:1159
+#: man-pages/man2/unshare.2:376 man-pages/man2/clone.2:1210
 msgid ""
 "One of the values in I<flags> specified the creation of a new user "
 "namespace, but doing so would have caused the limit defined by the "
@@ -33858,7 +33883,7 @@ msgid "The calling process did not have the required privileges for this operati
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/unshare.2:387 man-pages/man2/clone.2:1182
+#: man-pages/man2/unshare.2:387 man-pages/man2/clone.2:1233
 msgid ""
 "B<CLONE_NEWUSER> was specified in I<flags>, but either the effective user ID "
 "or the effective group ID of the caller does not have a mapping in the "
@@ -33866,7 +33891,7 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/unshare.2:387 man-pages/man2/clone.2:1182
+#: man-pages/man2/unshare.2:387 man-pages/man2/clone.2:1233
 #, no-wrap
 msgid "B<EPERM> (since Linux 3.9)"
 msgstr ""
@@ -33874,7 +33899,7 @@ msgstr ""
 #.  commit 3151527ee007b73a0ebd296010f1c0454a919c7d
 #.  FIXME What is the rationale for this restriction?
 #. type: Plain text
-#: man-pages/man2/unshare.2:397 man-pages/man2/clone.2:1192
+#: man-pages/man2/unshare.2:397 man-pages/man2/clone.2:1243
 msgid ""
 "B<CLONE_NEWUSER> was specified in I<flags> and the caller is in a chroot "
 "environment (i.e., the caller's root directory does not match the root "
@@ -33895,7 +33920,7 @@ msgstr ""
 #.  .BR clone ()
 #.  as described in this manual page.
 #. type: Plain text
-#: man-pages/man2/unshare.2:406 man-pages/man2/clone.2:1213
+#: man-pages/man2/unshare.2:406 man-pages/man2/clone.2:1264
 msgid ""
 "B<CLONE_NEWUSER> was specified in I<flags>, and the limit on the number of "
 "nested user namespaces would be exceeded.  See the discussion of the "
@@ -36896,12 +36921,12 @@ msgstr ""
 #: man-pages/man2/mount.2:319
 msgid ""
 "The following flags are per-superblock: B<MS_DIRSYNC>, B<MS_LAZYTIME>, "
-"B<MS_MANDLOCK>, B<MS_MS_SILENT>, and B<MS_SYNCHRONOUS>.  The initial "
-"settings of these flags are determined on the first mount of the filesystem, "
-"and will be shared by all subsequent mounts of the same filesystem.  "
-"Subsequently, the settings of the flags can be changed via a remount "
-"operation (see below).  Such changes will be visible via all mount points "
-"associated with the filesystem."
+"B<MS_MANDLOCK>, B<MS_SILENT>, and B<MS_SYNCHRONOUS>.  The initial settings "
+"of these flags are determined on the first mount of the filesystem, and will "
+"be shared by all subsequent mounts of the same filesystem.  Subsequently, "
+"the settings of the flags can be changed via a remount operation (see "
+"below).  Such changes will be visible via all mount points associated with "
+"the filesystem."
 msgstr ""
 
 #. type: Plain text
@@ -37462,33 +37487,33 @@ msgid ""
 "this case."
 msgstr ""
 
-#. type: SS
-#: man-pages/man2/mount.2:852
+#. type: TP
+#: man-pages/man2/mount.2:852 man-pages/man2/setns.2:124
 #, no-wrap
-msgid "Per-process namespaces"
+msgid "Mount namespaces"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/mount.2:863
+#: man-pages/man2/mount.2:862
 msgid ""
-"Starting with kernel 2.4.19, Linux provides per-process mount namespaces.  A "
-"mount namespace is the set of filesystem mounts that are visible to a "
-"process.  Mount-point namespaces can be (and usually are)  shared between "
-"multiple processes, and changes to the namespace (i.e., mounts and unmounts) "
-"by one process are visible to all other processes sharing the same "
-"namespace.  (The pre-2.4.19 Linux situation can be considered as one in "
-"which a single namespace was shared by every process on the system.)"
+"Starting with kernel 2.4.19, Linux provides mount namespaces.  A mount "
+"namespace is the set of filesystem mounts that are visible to a process.  "
+"Mount namespaces can be (and usually are)  shared between multiple "
+"processes, and changes to the namespace (i.e., mounts and unmounts) by one "
+"process are visible to all other processes sharing the same namespace.  (The "
+"pre-2.4.19 Linux situation can be considered as one in which a single "
+"namespace was shared by every process on the system.)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/mount.2:869
+#: man-pages/man2/mount.2:868
 msgid ""
 "A child process created by B<fork>(2)  shares its parent's mount namespace; "
 "the mount namespace is preserved across an B<execve>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/mount.2:889
+#: man-pages/man2/mount.2:888
 msgid ""
 "A process can obtain a private mount namespace if: it was created using the "
 "B<clone>(2)  B<CLONE_NEWNS> flag, in which case its new namespace is "
@@ -37502,18 +37527,61 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
+#: man-pages/man2/mount.2:892
+msgid "For further details on mount namespaces, see B<mount_namespaces>(7)."
+msgstr ""
+
+#. type: SS
+#: man-pages/man2/mount.2:892
+#, no-wrap
+msgid "Parental relationship between mount points"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/mount.2:896
+msgid ""
+"Each mount point has a parent mount point.  The overall parental "
+"relationship of all mount points defines the single directory hierarchy seen "
+"by the processes within a mount namespace."
+msgstr ""
+
+#. type: Plain text
 #: man-pages/man2/mount.2:904
+msgid ""
+"The parent of a new mount point is defined when the mount point is created.  "
+"In the usual case, the parent of a new mount is the mount point of the "
+"filesystem containing the directory or file at which the new mount is "
+"attached.  In the case where a new mount is stacked on top of an existing "
+"mount, the parent of the new mount is the previous mount that was stacked at "
+"that location."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/mount.2:909
+msgid ""
+"The parental relationship between mount points can be discovered via the "
+"I</proc/[pid]/mountinfo> file (see below)."
+msgstr ""
+
+#. type: SS
+#: man-pages/man2/mount.2:909
+#, no-wrap
+msgid "/proc/[pid]/mounts and /proc/[pid]/mountinfo"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/mount.2:924
 msgid ""
 "The Linux-specific I</proc/[pid]/mounts> file exposes the list of mount "
 "points in the mount namespace of the process with the specified ID.  The "
 "I</proc/[pid]/mountinfo> file exposes even more information about mount "
 "points, including the propagation type and mount ID information that makes "
 "it possible to discover the parental relationship between mount points.  See "
-"B<proc>(5)  and B<mount_namespaces>(7)  for details of these files."
+"B<proc>(5)  and B<mount_namespaces>(7)  for details of this file."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/mount.2:915
+#: man-pages/man2/mount.2:935
 msgid ""
 "B<mountpoint>(1), B<chroot>(2), B<ioctl_iflags>(2), B<pivot_root>(2), "
 "B<umount>(2), B<mount_namespaces>(7), B<path_resolution>(7), B<findmnt>(8), "
@@ -40467,10 +40535,10 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/rt_sigqueueinfo.2:207
+#: man-pages/man2/rt_sigqueueinfo.2:208
 msgid ""
-"B<kill>(2), B<sigaction>(2), B<sigprocmask>(2), B<tgkill>(2), "
-"B<pthread_sigqueue>(3), B<sigqueue>(3), B<signal>(7)"
+"B<kill>(2), B<pidfd_send_signal>(2), B<sigaction>(2), B<sigprocmask>(2), "
+"B<tgkill>(2), B<pthread_sigqueue>(3), B<sigqueue>(3), B<signal>(7)"
 msgstr ""
 
 #. type: TH
@@ -52385,8 +52453,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/perf_event_open.2:3454
+#: man-pages/man2/perf_event_open.2:3455
 msgid "B<perf>(1), B<fcntl>(2), B<mmap>(2), B<open>(2), B<prctl>(2), B<read>(2)"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/perf_event_open.2:3457
+msgid "I<Documentation/admin-guide/perf-security.rst> in the kernel source tree"
 msgstr ""
 
 #. type: TH
@@ -57059,29 +57132,69 @@ msgstr ""
 #. type: TP
 #: man-pages/man2/clone.2:541
 #, no-wrap
+msgid "B<CLONE_PIDFD> (since Linux 5.2)"
+msgstr ""
+
+#.  commit b3e5838252665ee4cfa76b82bdf1198dca81e5be
+#. type: Plain text
+#: man-pages/man2/clone.2:555
+msgid ""
+"If B<CLONE_PIDFD> is set, B<clone>()  stores a PID file descriptor referring "
+"to the child process at the location I<ptid> in the parent's memory.  The "
+"close-on-exec flag is set on this new file descriptor.  PID file descriptors "
+"can be used for the purposes described in B<pidfd_open>(2)."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/clone.2:562
+msgid ""
+"Since the I<ptid> argument is used to return the PID file descriptor, "
+"B<CLONE_PIDFD> cannot be used with B<CLONE_PARENT_SETTID.>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/clone.2:567
+msgid ""
+"It is currently not possible to use this flag together with B<CLONE_THREAD.> "
+"This means that the process identified by the PID file descriptor will "
+"always be a thread-group leader."
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/clone.2:577
+msgid ""
+"For a while there was a B<CLONE_DETACHED> flag.  This flag is usually "
+"ignored when passed along with other flags.  However, when passed alongside "
+"B<CLONE_PIDFD>, an error is returned.  This ensures that this flag can be "
+"reused for further PID file descriptor features in the future."
+msgstr ""
+
+#. type: TP
+#: man-pages/man2/clone.2:577
+#, no-wrap
 msgid "B<CLONE_PTRACE> (since Linux 2.2)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:548
+#: man-pages/man2/clone.2:584
 msgid ""
 "If B<CLONE_PTRACE> is specified, and the calling process is being traced, "
 "then trace the child also (see B<ptrace>(2))."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:548
+#: man-pages/man2/clone.2:584
 #, no-wrap
 msgid "B<CLONE_SETTLS> (since Linux 2.5.32)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:552
+#: man-pages/man2/clone.2:588
 msgid "The TLS (Thread Local Storage) descriptor is set to I<newtls>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:569
+#: man-pages/man2/clone.2:605
 msgid ""
 "The interpretation of I<newtls> and the resulting effect is architecture "
 "dependent.  On x86, I<newtls> is interpreted as a I<struct user_desc\\ *> "
@@ -57092,13 +57205,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:569
+#: man-pages/man2/clone.2:605
 #, no-wrap
 msgid "B<CLONE_SIGHAND> (since Linux 2.0)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:585
+#: man-pages/man2/clone.2:621
 msgid ""
 "If B<CLONE_SIGHAND> is set, the calling process and the child process share "
 "the same table of signal handlers.  If the calling process or child process "
@@ -57110,7 +57223,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:596
+#: man-pages/man2/clone.2:632
 msgid ""
 "If B<CLONE_SIGHAND> is not set, the child process inherits a copy of the "
 "signal handlers of the calling process at the time B<clone>()  is called.  "
@@ -57120,21 +57233,21 @@ msgstr ""
 
 #.  Precisely: Linux 2.6.0-test6
 #. type: Plain text
-#: man-pages/man2/clone.2:605
+#: man-pages/man2/clone.2:641
 msgid ""
 "Since Linux 2.6.0, I<flags> must also include B<CLONE_VM> if "
 "B<CLONE_SIGHAND> is specified"
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:605
+#: man-pages/man2/clone.2:641
 #, no-wrap
 msgid "B<CLONE_STOPPED> (since Linux 2.6.0)"
 msgstr ""
 
 #.  Precisely: Linux 2.6.0-test2
 #. type: Plain text
-#: man-pages/man2/clone.2:615
+#: man-pages/man2/clone.2:651
 msgid ""
 "If B<CLONE_STOPPED> is set, then the child is initially stopped (as though "
 "it was sent a B<SIGSTOP> signal), and must be resumed by sending it a "
@@ -57143,7 +57256,7 @@ msgstr ""
 
 #.  glibc 2.8 removed this defn from bits/sched.h
 #. type: Plain text
-#: man-pages/man2/clone.2:627
+#: man-pages/man2/clone.2:663
 msgid ""
 "This flag was I<deprecated> from Linux 2.6.25 onward, and was I<removed> "
 "altogether in Linux 2.6.38.  Since then, the kernel silently ignores it "
@@ -57152,13 +57265,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:627
+#: man-pages/man2/clone.2:663
 #, no-wrap
 msgid "B<CLONE_SYSVSEM> (since Linux 2.5.10)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:645
+#: man-pages/man2/clone.2:681
 msgid ""
 "If B<CLONE_SYSVSEM> is set, then the child and the calling process share a "
 "single list of System V semaphore adjustment (I<semadj>)  values (see "
@@ -57170,14 +57283,14 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:645
+#: man-pages/man2/clone.2:681
 #, no-wrap
 msgid "B<CLONE_THREAD> (since Linux 2.4.0)"
 msgstr ""
 
 #.  Precisely: Linux 2.6.0-test8
 #. type: Plain text
-#: man-pages/man2/clone.2:655
+#: man-pages/man2/clone.2:691
 msgid ""
 "If B<CLONE_THREAD> is set, the child is placed in the same thread group as "
 "the calling process.  To make the remainder of the discussion of "
@@ -57186,7 +57299,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:663
+#: man-pages/man2/clone.2:699
 msgid ""
 "Thread groups were a feature added in Linux 2.4 to support the POSIX threads "
 "notion of a set of threads that share a single PID.  Internally, this shared "
@@ -57195,7 +57308,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:672
+#: man-pages/man2/clone.2:708
 msgid ""
 "The threads within a group can be distinguished by their (system-wide)  "
 "unique thread IDs (TID).  A new thread's TID is available as the function "
@@ -57204,7 +57317,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:682
+#: man-pages/man2/clone.2:718
 msgid ""
 "When a call is made to B<clone>()  without specifying B<CLONE_THREAD>, then "
 "the resulting thread is placed in a new thread group whose TGID is the same "
@@ -57212,7 +57325,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:704
+#: man-pages/man2/clone.2:740
 msgid ""
 "A new thread created with B<CLONE_THREAD> has the same parent process as the "
 "caller of B<clone>()  (i.e., like B<CLONE_PARENT>), so that calls to "
@@ -57224,14 +57337,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:709
+#: man-pages/man2/clone.2:745
 msgid ""
 "After all of the threads in a thread group terminate the parent process of "
 "the thread group is sent a B<SIGCHLD> (or other termination) signal."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:714
+#: man-pages/man2/clone.2:750
 msgid ""
 "If any of the threads in a thread group performs an B<execve>(2), then all "
 "threads other than the thread group leader are terminated, and the new "
@@ -57239,7 +57352,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:720
+#: man-pages/man2/clone.2:756
 msgid ""
 "If one of the threads in a thread group creates a child using B<fork>(2), "
 "then any thread in the group can B<wait>(2)  for that child."
@@ -57247,7 +57360,7 @@ msgstr ""
 
 #.  Precisely: Linux 2.6.0-test6
 #. type: Plain text
-#: man-pages/man2/clone.2:734
+#: man-pages/man2/clone.2:770
 msgid ""
 "Since Linux 2.5.35, I<flags> must also include B<CLONE_SIGHAND> if "
 "B<CLONE_THREAD> is specified (and note that, since Linux 2.6.0, "
@@ -57255,7 +57368,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:739
+#: man-pages/man2/clone.2:775
 msgid ""
 "Signal dispositions and actions are process-wide: if an unhandled signal is "
 "delivered to a thread, then it will affect (terminate, stop, continue, be "
@@ -57263,12 +57376,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:742
+#: man-pages/man2/clone.2:778
 msgid "Each thread has its own signal mask, as set by B<sigprocmask>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:764
+#: man-pages/man2/clone.2:800
 msgid ""
 "A signal may be process-directed or thread-directed.  A process-directed "
 "signal is targeted at a thread group (i.e., a TGID), and is delivered to an "
@@ -57284,7 +57397,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:769
+#: man-pages/man2/clone.2:805
 msgid ""
 "A call to B<sigpending>(2)  returns a signal set that is the union of the "
 "pending process-directed signals and the signals that are pending for the "
@@ -57292,7 +57405,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:778
+#: man-pages/man2/clone.2:814
 msgid ""
 "If a process-directed signal is delivered to a thread group, and the thread "
 "group has installed a handler for the signal, then the handler will be "
@@ -57303,26 +57416,26 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:778
+#: man-pages/man2/clone.2:814
 #, no-wrap
 msgid "B<CLONE_UNTRACED> (since Linux 2.5.46)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:785
+#: man-pages/man2/clone.2:821
 msgid ""
 "If B<CLONE_UNTRACED> is specified, then a tracing process cannot force "
 "B<CLONE_PTRACE> on this child process."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:785
+#: man-pages/man2/clone.2:821
 #, no-wrap
 msgid "B<CLONE_VFORK> (since Linux 2.2)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:797
+#: man-pages/man2/clone.2:833
 msgid ""
 "If B<CLONE_VFORK> is set, the execution of the calling process is suspended "
 "until the child releases its virtual memory resources via a call to "
@@ -57330,7 +57443,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:803
+#: man-pages/man2/clone.2:839
 msgid ""
 "If B<CLONE_VFORK> is not set, then both the calling process and the child "
 "are schedulable after the call, and an application should not rely on "
@@ -57338,13 +57451,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:803
+#: man-pages/man2/clone.2:839
 #, no-wrap
 msgid "B<CLONE_VM> (since Linux 2.0)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:816
+#: man-pages/man2/clone.2:852
 msgid ""
 "If B<CLONE_VM> is set, the calling process and the child process run in the "
 "same memory space.  In particular, memory writes performed by the calling "
@@ -57355,7 +57468,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:825
+#: man-pages/man2/clone.2:861
 msgid ""
 "If B<CLONE_VM> is not set, the child process runs in a separate copy of the "
 "memory space of the calling process at the time of B<clone>().  Memory "
@@ -57364,7 +57477,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:842
+#: man-pages/man2/clone.2:878
 msgid ""
 "Note that the glibc B<clone>()  wrapper function makes some changes in the "
 "memory pointed to by I<child_stack> (changes required to set the stack up "
@@ -57375,7 +57488,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:856
+#: man-pages/man2/clone.2:892
 msgid ""
 "The raw B<clone>()  system call corresponds more closely to B<fork>(2)  in "
 "that execution in the child continues from the point of the call.  As such, "
@@ -57384,7 +57497,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:874
+#: man-pages/man2/clone.2:910
 msgid ""
 "Another difference for the raw B<clone>()  system call is that the "
 "I<child_stack> argument may be NULL, in which case the child uses a "
@@ -57397,7 +57510,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:878
+#: man-pages/man2/clone.2:914
 msgid ""
 "The order of the arguments also differs in the raw system call, and there "
 "are variations in the arguments across architectures, as detailed in the "
@@ -57405,14 +57518,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:881
+#: man-pages/man2/clone.2:917
 msgid ""
 "The raw system call interface on x86-64 and some other architectures "
 "(including sh, tile, ia-64, and alpha) is:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:887
+#: man-pages/man2/clone.2:923
 #, no-wrap
 msgid ""
 "B<long clone(unsigned long >I<flags>B<, void *>I<child_stack>B<,>\n"
@@ -57422,7 +57535,7 @@ msgstr ""
 
 #.  CONFIG_CLONE_BACKWARDS
 #. type: Plain text
-#: man-pages/man2/clone.2:895
+#: man-pages/man2/clone.2:931
 msgid ""
 "On x86-32, and several other common architectures (including score, ARM, ARM "
 "64, PA-RISC, arc, Power PC, xtensa, and MIPS), the order of the last two "
@@ -57430,7 +57543,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:901
+#: man-pages/man2/clone.2:937
 #, no-wrap
 msgid ""
 "B<long clone(unsigned long >I<flags>B<, void *>I<child_stack>B<,>\n"
@@ -57440,14 +57553,14 @@ msgstr ""
 
 #.  CONFIG_CLONE_BACKWARDS2
 #. type: Plain text
-#: man-pages/man2/clone.2:907
+#: man-pages/man2/clone.2:943
 msgid ""
 "On the cris and s390 architectures, the order of the first two arguments is "
 "reversed:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:913
+#: man-pages/man2/clone.2:949
 #, no-wrap
 msgid ""
 "B<long clone(void *>I<child_stack>B<, unsigned long >I<flags>B<,>\n"
@@ -57457,12 +57570,12 @@ msgstr ""
 
 #.  CONFIG_CLONE_BACKWARDS3
 #. type: Plain text
-#: man-pages/man2/clone.2:919
+#: man-pages/man2/clone.2:955
 msgid "On the microblaze architecture, an additional argument is supplied:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:926
+#: man-pages/man2/clone.2:962
 #, no-wrap
 msgid ""
 "B<long clone(unsigned long >I<flags>B<, void *>I<child_stack>B<,>\n"
@@ -57472,7 +57585,7 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man2/clone.2:929
+#: man-pages/man2/clone.2:965
 #, no-wrap
 msgid "blackfin, m68k, and sparc"
 msgstr ""
@@ -57481,7 +57594,7 @@ msgstr ""
 #.      these arches don't define __ARCH_WANT_SYS_CLONE:
 #.      blackfin ia64 m68k sparc
 #. type: Plain text
-#: man-pages/man2/clone.2:936
+#: man-pages/man2/clone.2:972
 msgid ""
 "The argument-passing conventions on blackfin, m68k, and sparc are different "
 "from the descriptions above.  For details, see the kernel (and glibc) "
@@ -57489,19 +57602,19 @@ msgid ""
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man2/clone.2:936 man-pages/man2/syscall.2:192
+#: man-pages/man2/clone.2:972 man-pages/man2/syscall.2:192
 #: man-pages/man2/syscall.2:323
 #, no-wrap
 msgid "ia64"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:938
+#: man-pages/man2/clone.2:974
 msgid "On ia64, a different interface is used:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:946
+#: man-pages/man2/clone.2:982
 #, no-wrap
 msgid ""
 "B<int __clone2(int (*>I<fn>B<)(void *), >\n"
@@ -57512,7 +57625,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:954
+#: man-pages/man2/clone.2:990
 msgid ""
 "The prototype shown above is for the glibc wrapper function; for the system "
 "call itself, the prototype can be described as follows (it is identical to "
@@ -57520,7 +57633,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:961
+#: man-pages/man2/clone.2:997
 #, no-wrap
 msgid ""
 "B<long clone2(unsigned long >I<flags>B<, void *>I<child_stack_base>B<,>\n"
@@ -57530,7 +57643,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:974
+#: man-pages/man2/clone.2:1010
 msgid ""
 "B<__clone2>()  operates in the same way as B<clone>(), except that "
 "I<child_stack_base> points to the lowest address of the child's stack area, "
@@ -57539,7 +57652,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:982
+#: man-pages/man2/clone.2:1018
 msgid ""
 "In Linux 2.4 and earlier, B<clone>()  does not take arguments I<ptid>, "
 "I<tls>, and I<ctid>."
@@ -57548,7 +57661,7 @@ msgstr ""
 #.  gettid(2) returns current->pid;
 #.  getpid(2) returns current->tgid;
 #. type: Plain text
-#: man-pages/man2/clone.2:991
+#: man-pages/man2/clone.2:1027
 msgid ""
 "On success, the thread ID of the child process is returned in the caller's "
 "thread of execution.  On failure, -1 is returned in the caller's context, no "
@@ -57556,13 +57669,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:996
+#: man-pages/man2/clone.2:1032
 msgid "Too many processes are already running; see B<fork>(2)."
 msgstr ""
 
 #.  Precisely: Linux 2.6.0-test6
 #. type: Plain text
-#: man-pages/man2/clone.2:1004
+#: man-pages/man2/clone.2:1040
 msgid ""
 "B<CLONE_SIGHAND> was specified, but B<CLONE_VM> was not.  (Since Linux "
 "2.6.0.)"
@@ -57577,14 +57690,14 @@ msgstr ""
 #.  was specified.
 #.  (Since Linux 2.6.0-test6.)
 #. type: Plain text
-#: man-pages/man2/clone.2:1019
+#: man-pages/man2/clone.2:1055
 msgid ""
 "B<CLONE_THREAD> was specified, but B<CLONE_SIGHAND> was not.  (Since Linux "
 "2.5.35.)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1029
+#: man-pages/man2/clone.2:1065
 msgid ""
 "B<CLONE_THREAD> was specified, but the current process previously called "
 "B<unshare>(2)  with the B<CLONE_NEWPID> flag or used B<setns>(2)  to "
@@ -57593,49 +57706,64 @@ msgstr ""
 
 #.  commit e66eded8309ebf679d3d3c1f5820d1f2ca332c71
 #. type: Plain text
-#: man-pages/man2/clone.2:1038
+#: man-pages/man2/clone.2:1074
 msgid "Both B<CLONE_FS> and B<CLONE_NEWNS> were specified in I<flags>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:1038
+#: man-pages/man2/clone.2:1074
 #, no-wrap
 msgid "B<EINVAL> (since Linux 3.9)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1046
+#: man-pages/man2/clone.2:1082
 msgid "Both B<CLONE_NEWUSER> and B<CLONE_FS> were specified in I<flags>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1054
+#: man-pages/man2/clone.2:1090
 msgid "Both B<CLONE_NEWIPC> and B<CLONE_SYSVSEM> were specified in I<flags>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1066
+#: man-pages/man2/clone.2:1102
 msgid ""
 "One (or both) of B<CLONE_NEWPID> or B<CLONE_NEWUSER> and one (or both) of "
 "B<CLONE_THREAD> or B<CLONE_PARENT> were specified in I<flags>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1075
+#: man-pages/man2/clone.2:1111
 msgid ""
 "Returned by the glibc B<clone>()  wrapper function when I<fn> or "
 "I<child_stack> is specified as NULL."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1124
+#: man-pages/man2/clone.2:1160
 msgid ""
 "I<child_stack> is not aligned to a suitable boundary for this architecture.  "
 "For example, on aarch64, I<child_stack> must be a multiple of 16."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1129
+#: man-pages/man2/clone.2:1165
+msgid "B<CLONE_PIDFD> was specified together with B<CLONE_DETACHED.>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/clone.2:1170
+msgid "B<CLONE_PIDFD> was specified together with B<CLONE_PARENT_SETTID.>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/clone.2:1175
+msgid "B<CLONE_PIDFD> was specified together with B<CLONE_THREAD.>"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man2/clone.2:1180
 msgid ""
 "Cannot allocate sufficient memory to allocate a task structure for the "
 "child, or to copy those parts of the caller's context that need to be "
@@ -57643,7 +57771,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1169
+#: man-pages/man2/clone.2:1220
 msgid ""
 "B<CLONE_NEWCGROUP>, B<CLONE_NEWIPC>, B<CLONE_NEWNET>, B<CLONE_NEWNS>, "
 "B<CLONE_NEWPID>, or B<CLONE_NEWUTS> was specified by an unprivileged process "
@@ -57651,41 +57779,41 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1174
+#: man-pages/man2/clone.2:1225
 msgid ""
 "B<CLONE_PID> was specified by a process other than process 0.  (This error "
 "occurs only on Linux 2.5.15 and earlier.)"
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:1192 man-pages/man2/fork.2:274
+#: man-pages/man2/clone.2:1243 man-pages/man2/fork.2:274
 #, no-wrap
 msgid "B<ERESTARTNOINTR> (since Linux 2.6.17)"
 msgstr ""
 
 #.  commit 4a2c7a7837da1b91468e50426066d988050e4d56
 #. type: Plain text
-#: man-pages/man2/clone.2:1197 man-pages/man2/fork.2:279
+#: man-pages/man2/clone.2:1248 man-pages/man2/fork.2:279
 msgid ""
 "System call was interrupted by a signal and will be restarted.  (This can be "
 "seen only during a trace.)"
 msgstr ""
 
 #. type: TP
-#: man-pages/man2/clone.2:1197
+#: man-pages/man2/clone.2:1248
 #, no-wrap
 msgid "B<EUSERS> (Linux 3.11 to Linux 4.8)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1217
+#: man-pages/man2/clone.2:1268
 msgid ""
 "B<clone>()  is Linux-specific and should not be used in programs intended to "
 "be portable."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1223
+#: man-pages/man2/clone.2:1274
 msgid ""
 "The B<kcmp>(2)  system call can be used to test whether two processes share "
 "various resources such as a file descriptor table, System V semaphore undo "
@@ -57693,14 +57821,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1229
+#: man-pages/man2/clone.2:1280
 msgid ""
 "Handlers registered using B<pthread_atfork>(3)  are not executed during a "
 "call to B<clone>()."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1239
+#: man-pages/man2/clone.2:1290
 msgid ""
 "In the Linux 2.4.x series, B<CLONE_THREAD> generally does not make the "
 "parent of the new thread the same as the parent of the calling process.  "
@@ -57709,7 +57837,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1248
+#: man-pages/man2/clone.2:1299
 msgid ""
 "For a while there was B<CLONE_DETACHED> (introduced in 2.5.32): parent wants "
 "no child-exit signal.  In Linux 2.6.2, the need to give this flag together "
@@ -57718,14 +57846,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1253
+#: man-pages/man2/clone.2:1304
 msgid ""
 "On i386, B<clone>()  should not be called through vsyscall, but directly "
 "through I<int $0x80>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1284
+#: man-pages/man2/clone.2:1335
 msgid ""
 "GNU C library versions 2.3.4 up to and including 2.24 contained a wrapper "
 "function for B<getpid>(2)  that performed caching of PIDs.  This caching "
@@ -57744,32 +57872,32 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1288
+#: man-pages/man2/clone.2:1339
 #, no-wrap
 msgid "#include E<lt>syscall.hE<gt>\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1290
+#: man-pages/man2/clone.2:1341
 #, no-wrap
 msgid "pid_t mypid;\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1292
+#: man-pages/man2/clone.2:1343
 #, no-wrap
 msgid "mypid = syscall(SYS_getpid);\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1301
+#: man-pages/man2/clone.2:1352
 msgid ""
 "Because of the stale-cache problem, as well as other problems noted in "
 "B<getpid>(2), the PID caching feature was removed in glibc 2.25."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1311
+#: man-pages/man2/clone.2:1362
 msgid ""
 "The following program demonstrates the use of B<clone>()  to create a child "
 "process that executes in a separate UTS namespace.  The child changes the "
@@ -57780,7 +57908,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1321
+#: man-pages/man2/clone.2:1372
 #, no-wrap
 msgid ""
 "#define _GNU_SOURCE\n"
@@ -57794,7 +57922,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1329
+#: man-pages/man2/clone.2:1380
 #, no-wrap
 msgid ""
 "static int              /* Start function for cloned child */\n"
@@ -57804,13 +57932,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1331
+#: man-pages/man2/clone.2:1382
 #, no-wrap
 msgid "    /* Change hostname in UTS namespace of child */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1334
+#: man-pages/man2/clone.2:1385
 #, no-wrap
 msgid ""
 "    if (sethostname(arg, strlen(arg)) == -1)\n"
@@ -57818,13 +57946,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1336
+#: man-pages/man2/clone.2:1387
 #, no-wrap
 msgid "    /* Retrieve and display hostname */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1340
+#: man-pages/man2/clone.2:1391
 #, no-wrap
 msgid ""
 "    if (uname(&uts) == -1)\n"
@@ -57833,7 +57961,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1344
+#: man-pages/man2/clone.2:1395
 #, no-wrap
 msgid ""
 "    /* Keep the namespace open for a while, by sleeping.\n"
@@ -57842,13 +57970,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1346
+#: man-pages/man2/clone.2:1397
 #, no-wrap
 msgid "    sleep(200);\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1349
+#: man-pages/man2/clone.2:1400
 #, no-wrap
 msgid ""
 "    return 0;           /* Child terminates now */\n"
@@ -57856,13 +57984,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1351
+#: man-pages/man2/clone.2:1402
 #, no-wrap
 msgid "#define STACK_SIZE (1024 * 1024)    /* Stack size for cloned child */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1359
+#: man-pages/man2/clone.2:1410
 #, no-wrap
 msgid ""
 "int\n"
@@ -57875,7 +58003,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1364
+#: man-pages/man2/clone.2:1415
 #, no-wrap
 msgid ""
 "    if (argc E<lt> 2) {\n"
@@ -57886,13 +58014,13 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1366
+#: man-pages/man2/clone.2:1417
 #, no-wrap
 msgid "    /* Allocate stack for child */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1371
+#: man-pages/man2/clone.2:1422
 #, no-wrap
 msgid ""
 "    stack = malloc(STACK_SIZE);\n"
@@ -57902,7 +58030,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1374
+#: man-pages/man2/clone.2:1425
 #, no-wrap
 msgid ""
 "    /* Create child that has its own UTS namespace;\n"
@@ -57910,7 +58038,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1379
+#: man-pages/man2/clone.2:1430
 #, no-wrap
 msgid ""
 "    pid = clone(childFunc, stackTop, CLONE_NEWUTS | SIGCHLD, argv[1]);\n"
@@ -57920,19 +58048,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1381 man-pages/man2/futex.2:1875
+#: man-pages/man2/clone.2:1432 man-pages/man2/futex.2:1875
 #, no-wrap
 msgid "    /* Parent falls through to here */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1383
+#: man-pages/man2/clone.2:1434
 #, no-wrap
 msgid "    sleep(1);           /* Give child time to change its hostname */\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1386
+#: man-pages/man2/clone.2:1437
 #, no-wrap
 msgid ""
 "    /* Display hostname in parent\\(aqs UTS namespace. This will be\n"
@@ -57940,7 +58068,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1390
+#: man-pages/man2/clone.2:1441
 #, no-wrap
 msgid ""
 "    if (uname(&uts) == -1)\n"
@@ -57949,7 +58077,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1394
+#: man-pages/man2/clone.2:1445
 #, no-wrap
 msgid ""
 "    if (waitpid(pid, NULL, 0) == -1)    /* Wait for child */\n"
@@ -57958,12 +58086,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man2/clone.2:1412
+#: man-pages/man2/clone.2:1464
 msgid ""
 "B<fork>(2), B<futex>(2), B<getpid>(2), B<gettid>(2), B<kcmp>(2), "
-"B<set_thread_area>(2), B<set_tid_address>(2), B<setns>(2), B<tkill>(2), "
-"B<unshare>(2), B<wait>(2), B<capabilities>(7), B<namespaces>(7), "
-"B<pthreads>(7)"
+"B<pidfd_open>(2), B<set_thread_area>(2), B<set_tid_address>(2), B<setns>(2), "
+"B<tkill>(2), B<unshare>(2), B<wait>(2), B<capabilities>(7), "
+"B<namespaces>(7), B<pthreads>(7)"
 msgstr ""
 
 #. type: TH
@@ -95855,12 +95983,6 @@ msgstr ""
 msgid "For further details on user namespaces, see B<user_namespaces>(7)."
 msgstr ""
 
-#. type: TP
-#: man-pages/man2/setns.2:124
-#, no-wrap
-msgid "Mount namespaces"
-msgstr ""
-
 #. type: Plain text
 #: man-pages/man2/setns.2:133
 msgid ""
@@ -96165,12 +96287,6 @@ msgstr ""
 #: man-pages/man2/mmap.2:40
 #, no-wrap
 msgid "MMAP"
-msgstr ""
-
-#. type: TH
-#: man-pages/man2/mmap.2:40
-#, no-wrap
-msgid "2019-02-27"
 msgstr ""
 
 #. type: Plain text

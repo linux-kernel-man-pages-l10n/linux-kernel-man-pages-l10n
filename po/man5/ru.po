@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linux_kernel_man_pages_l10n 5.03\n"
 "Report-Msgid-Bugs-To: https://github.com/test/test\n"
-"POT-Creation-Date: 2021-11-07 03:03+0300\n"
+"POT-Creation-Date: 2021-11-07 03:48+0300\n"
 "PO-Revision-Date: 2021-11-07 03:03+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -28,8 +28,7 @@ msgstr "TZFILE"
 #: man-pages/man5/tzfile.5:6 man-pages/man5/tmpfs.5:25
 #: man-pages/man5/charmap.5:19 man-pages/man5/locale.5:25
 #: man-pages/man5/termcap.5:31 man-pages/man5/repertoiremap.5:23
-#: man-pages/man5/core.5:25 man-pages/man5/host.conf.5:26
-#: man-pages/man5/resolv.conf.5:23
+#: man-pages/man5/host.conf.5:26
 #, no-wrap
 msgid "2019-03-06"
 msgstr "2019-03-06"
@@ -26965,6 +26964,13 @@ msgstr "B<chsh>(1), B<getusershell>(3), B<pam_shells>(8)"
 #, no-wrap
 msgid "CORE"
 msgstr "CORE"
+
+#. type: TH
+#: man-pages/man5/core.5:25 man-pages/man5/resolv.conf.5:23
+#, fuzzy, no-wrap
+#| msgid "2019-03-06"
+msgid "2019-10-10"
+msgstr "2019-03-06"
 
 #. type: Plain text
 #: man-pages/man5/core.5:28

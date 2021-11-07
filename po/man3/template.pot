@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linux_kernel_man_pages_l10n 5.03\n"
 "Report-Msgid-Bugs-To: https://github.com/test/test\n"
-"POT-Creation-Date: 2021-11-07 03:02+0300\n"
+"POT-Creation-Date: 2021-11-07 03:47+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,9 +24,9 @@ msgid "RAND"
 msgstr ""
 
 #. type: TH
-#: man-pages/man3/rand.3:41 man-pages/man3/pthread_mutexattr_setrobust.3:26
-#: man-pages/man3/pthread_getcpuclockid.3:26 man-pages/man3/ctermid.3:26
-#: man-pages/man3/if_nameindex.3:26 man-pages/man3/nl_langinfo.3:18
+#: man-pages/man3/rand.3:41 man-pages/man3/pthread_getcpuclockid.3:26
+#: man-pages/man3/ctermid.3:26 man-pages/man3/if_nameindex.3:26
+#: man-pages/man3/nl_langinfo.3:18
 #: man-pages/man3/pthread_rwlockattr_setkind_np.3:25 man-pages/man3/strcpy.3:35
 #: man-pages/man3/fmemopen.3:7 man-pages/man3/getpass.3:24
 #: man-pages/man3/getaddrinfo_a.3:30 man-pages/man3/trunc.3:25
@@ -39,8 +39,7 @@ msgstr ""
 #: man-pages/man3/pthread_getattr_default_np.3:25 man-pages/man3/offsetof.3:28
 #: man-pages/man3/malloc_hook.3:10 man-pages/man3/cacosh.3:8
 #: man-pages/man3/termios.3:40 man-pages/man3/catan.3:8
-#: man-pages/man3/getpwnam.3:37 man-pages/man3/errno.3:31
-#: man-pages/man3/mallopt.3:26 man-pages/man3/printf.3:34
+#: man-pages/man3/getpwnam.3:37 man-pages/man3/mallopt.3:26
 #: man-pages/man3/strlen.3:30 man-pages/man3/strnlen.3:13
 #: man-pages/man3/getdate.3:30 man-pages/man3/getaddrinfo.3:44
 #: man-pages/man3/__ppc_get_timebase.3:25 man-pages/man3/malloc.3:33
@@ -56,49 +55,48 @@ msgstr ""
 #: man-pages/man3/getline.3:26 man-pages/man3/wprintf.3:16
 #: man-pages/man3/wcpcpy.3:15 man-pages/man3/wcscat.3:16
 #: man-pages/man3/getopt.3:41 man-pages/man3/makecontext.3:28
-#: man-pages/man3/strtol.3:31 man-pages/man3/getsubopt.3:25
-#: man-pages/man3/memchr.3:32 man-pages/man3/strxfrm.3:30
-#: man-pages/man3/resolver.3:33 man-pages/man3/pthread_sigmask.3:26
-#: man-pages/man3/hsearch.3:35 man-pages/man3/CPU_SET.3:27
-#: man-pages/man3/cacos.3:8 man-pages/man3/glob.3:34
-#: man-pages/man3/getservent_r.3:26 man-pages/man3/get_nprocs_conf.3:26
-#: man-pages/man3/strtoul.3:33 man-pages/man3/pthread_getattr_np.3:26
-#: man-pages/man3/string.3:30 man-pages/man3/inet_net_pton.3:26
-#: man-pages/man3/cmsg.3:11 man-pages/man3/mallinfo.3:26
-#: man-pages/man3/mbsnrtowcs.3:15 man-pages/man3/readdir.3:36
-#: man-pages/man3/xcrypt.3:13 man-pages/man3/wcstok.3:16
-#: man-pages/man3/posix_spawn.3:31 man-pages/man3/clock_getcpuclockid.3:26
-#: man-pages/man3/ftw.3:36 man-pages/man3/strdup.3:31
-#: man-pages/man3/mbstowcs.3:18 man-pages/man3/stpncpy.3:14
-#: man-pages/man3/fopencookie.3:26 man-pages/man3/rpmatch.3:29
-#: man-pages/man3/putenv.3:36 man-pages/man3/confstr.3:33
-#: man-pages/man3/wcscpy.3:16 man-pages/man3/matherr.3:27
-#: man-pages/man3/mbrtowc.3:17 man-pages/man3/inet.3:42
-#: man-pages/man3/basename.3:27 man-pages/man3/strstr.3:33
-#: man-pages/man3/bsd_signal.3:25 man-pages/man3/getlogin.3:28
-#: man-pages/man3/wcsnlen.3:15 man-pages/man3/perror.3:31
-#: man-pages/man3/wcsncat.3:16 man-pages/man3/dlsym.3:25
-#: man-pages/man3/setbuf.3:48 man-pages/man3/getnameinfo.3:10
-#: man-pages/man3/gnu_get_libc_version.3:26 man-pages/man3/ferror.3:44
-#: man-pages/man3/backtrace.3:27 man-pages/man3/mbtowc.3:16
-#: man-pages/man3/catanh.3:8 man-pages/man3/bswap.3:25
-#: man-pages/man3/fgetws.3:18 man-pages/man3/pthread_setschedparam.3:26
-#: man-pages/man3/wcpncpy.3:15 man-pages/man3/duplocale.3:26
-#: man-pages/man3/rtime.3:12 man-pages/man3/strerror.3:39
-#: man-pages/man3/asprintf.3:27 man-pages/man3/wcsrtombs.3:16
-#: man-pages/man3/mbsrtowcs.3:16 man-pages/man3/des_crypt.3:14
-#: man-pages/man3/bzero.3:25 man-pages/man3/sem_wait.3:26
-#: man-pages/man3/pthread_attr_init.3:26 man-pages/man3/iswspace.3:16
-#: man-pages/man3/index.3:31 man-pages/man3/stpcpy.3:25
-#: man-pages/man3/catgets.3:26 man-pages/man3/wcstombs.3:16
-#: man-pages/man3/end.3:26 man-pages/man3/argz_add.3:10
-#: man-pages/man3/wcsncmp.3:16 man-pages/man3/strcmp.3:32
-#: man-pages/man3/strfromd.3:32 man-pages/man3/pthread_cleanup_push.3:26
-#: man-pages/man3/mq_getattr.3:26 man-pages/man3/alloca.3:43
-#: man-pages/man3/inet_pton.3:27 man-pages/man3/setaliasent.3:9
-#: man-pages/man3/iswblank.3:16 man-pages/man3/strtok.3:32
-#: man-pages/man3/scanf.3:52 man-pages/man3/regex.3:30
-#: man-pages/man3/lockf.3:28 man-pages/man3/pthread_setaffinity_np.3:26
+#: man-pages/man3/getsubopt.3:25 man-pages/man3/memchr.3:32
+#: man-pages/man3/strxfrm.3:30 man-pages/man3/resolver.3:33
+#: man-pages/man3/pthread_sigmask.3:26 man-pages/man3/hsearch.3:35
+#: man-pages/man3/CPU_SET.3:27 man-pages/man3/cacos.3:8
+#: man-pages/man3/glob.3:34 man-pages/man3/getservent_r.3:26
+#: man-pages/man3/get_nprocs_conf.3:26 man-pages/man3/strtoul.3:33
+#: man-pages/man3/pthread_getattr_np.3:26 man-pages/man3/string.3:30
+#: man-pages/man3/inet_net_pton.3:26 man-pages/man3/cmsg.3:11
+#: man-pages/man3/mallinfo.3:26 man-pages/man3/mbsnrtowcs.3:15
+#: man-pages/man3/readdir.3:36 man-pages/man3/xcrypt.3:13
+#: man-pages/man3/wcstok.3:16 man-pages/man3/posix_spawn.3:31
+#: man-pages/man3/clock_getcpuclockid.3:26 man-pages/man3/ftw.3:36
+#: man-pages/man3/strdup.3:31 man-pages/man3/mbstowcs.3:18
+#: man-pages/man3/stpncpy.3:14 man-pages/man3/fopencookie.3:26
+#: man-pages/man3/rpmatch.3:29 man-pages/man3/putenv.3:36
+#: man-pages/man3/confstr.3:33 man-pages/man3/wcscpy.3:16
+#: man-pages/man3/matherr.3:27 man-pages/man3/mbrtowc.3:17
+#: man-pages/man3/inet.3:42 man-pages/man3/basename.3:27
+#: man-pages/man3/strstr.3:33 man-pages/man3/bsd_signal.3:25
+#: man-pages/man3/getlogin.3:28 man-pages/man3/wcsnlen.3:15
+#: man-pages/man3/perror.3:31 man-pages/man3/wcsncat.3:16
+#: man-pages/man3/dlsym.3:25 man-pages/man3/setbuf.3:48
+#: man-pages/man3/getnameinfo.3:10 man-pages/man3/gnu_get_libc_version.3:26
+#: man-pages/man3/ferror.3:44 man-pages/man3/backtrace.3:27
+#: man-pages/man3/mbtowc.3:16 man-pages/man3/catanh.3:8
+#: man-pages/man3/bswap.3:25 man-pages/man3/fgetws.3:18
+#: man-pages/man3/pthread_setschedparam.3:26 man-pages/man3/wcpncpy.3:15
+#: man-pages/man3/duplocale.3:26 man-pages/man3/rtime.3:12
+#: man-pages/man3/strerror.3:39 man-pages/man3/asprintf.3:27
+#: man-pages/man3/wcsrtombs.3:16 man-pages/man3/mbsrtowcs.3:16
+#: man-pages/man3/des_crypt.3:14 man-pages/man3/bzero.3:25
+#: man-pages/man3/sem_wait.3:26 man-pages/man3/pthread_attr_init.3:26
+#: man-pages/man3/iswspace.3:16 man-pages/man3/index.3:31
+#: man-pages/man3/stpcpy.3:25 man-pages/man3/catgets.3:26
+#: man-pages/man3/wcstombs.3:16 man-pages/man3/end.3:26
+#: man-pages/man3/argz_add.3:10 man-pages/man3/wcsncmp.3:16
+#: man-pages/man3/strcmp.3:32 man-pages/man3/strfromd.3:32
+#: man-pages/man3/pthread_cleanup_push.3:26 man-pages/man3/mq_getattr.3:26
+#: man-pages/man3/alloca.3:43 man-pages/man3/inet_pton.3:27
+#: man-pages/man3/setaliasent.3:9 man-pages/man3/iswblank.3:16
+#: man-pages/man3/scanf.3:52 man-pages/man3/lockf.3:28
+#: man-pages/man3/pthread_setaffinity_np.3:26
 #: man-pages/man3/pthread_setname_np.3:26 man-pages/man3/strverscmp.3:26
 #: man-pages/man3/newlocale.3:26 man-pages/man3/ctime.3:35
 #: man-pages/man3/mcheck.3:25 man-pages/man3/dl_iterate_phdr.3:25
@@ -1612,7 +1610,7 @@ msgstr ""
 #: man-pages/man3/exp10.3:53 man-pages/man3/fexecve.3:69
 #: man-pages/man3/memcpy.3:49 man-pages/man3/pthread_exit.3:71
 #: man-pages/man3/pthread_setschedprio.3:53 man-pages/man3/mbsnrtowcs.3:157
-#: man-pages/man3/pthread_setcancelstate.3:92 man-pages/man3/fdim.3:38
+#: man-pages/man3/pthread_setcancelstate.3:97 man-pages/man3/fdim.3:38
 #: man-pages/man3/atof.3:57 man-pages/man3/readdir.3:164
 #: man-pages/man3/sem_post.3:45 man-pages/man3/mq_close.3:48
 #: man-pages/man3/xcrypt.3:65 man-pages/man3/asin.3:68
@@ -1873,7 +1871,7 @@ msgstr ""
 #: man-pages/man3/memcpy.3:53 man-pages/man3/pthread_exit.3:75
 #: man-pages/man3/mallinfo.3:117 man-pages/man3/pthread_setschedprio.3:83
 #: man-pages/man3/significand.3:52 man-pages/man3/mbsnrtowcs.3:170
-#: man-pages/man3/pthread_setcancelstate.3:113 man-pages/man3/csinh.3:31
+#: man-pages/man3/pthread_setcancelstate.3:118 man-pages/man3/csinh.3:31
 #: man-pages/man3/casinh.3:35 man-pages/man3/fdim.3:77 man-pages/man3/atof.3:59
 #: man-pages/man3/readdir.3:191 man-pages/man3/sem_post.3:61
 #: man-pages/man3/mq_close.3:60 man-pages/man3/xcrypt.3:73
@@ -2137,7 +2135,7 @@ msgstr ""
 #: man-pages/man3/memcpy.3:56 man-pages/man3/pthread_exit.3:78
 #: man-pages/man3/mallinfo.3:120 man-pages/man3/pthread_setschedprio.3:86
 #: man-pages/man3/significand.3:55 man-pages/man3/mbsnrtowcs.3:173
-#: man-pages/man3/pthread_setcancelstate.3:116 man-pages/man3/csinh.3:34
+#: man-pages/man3/pthread_setcancelstate.3:121 man-pages/man3/csinh.3:34
 #: man-pages/man3/casinh.3:38 man-pages/man3/fdim.3:80 man-pages/man3/atof.3:62
 #: man-pages/man3/readdir.3:194 man-pages/man3/sem_post.3:64
 #: man-pages/man3/mq_close.3:63 man-pages/man3/xcrypt.3:76
@@ -2400,7 +2398,7 @@ msgstr ""
 #: man-pages/man3/memcpy.3:60 man-pages/man3/pthread_exit.3:82
 #: man-pages/man3/mallinfo.3:124 man-pages/man3/pthread_setschedprio.3:90
 #: man-pages/man3/significand.3:59 man-pages/man3/mbsnrtowcs.3:177
-#: man-pages/man3/pthread_setcancelstate.3:121 man-pages/man3/csinh.3:38
+#: man-pages/man3/pthread_setcancelstate.3:126 man-pages/man3/csinh.3:38
 #: man-pages/man3/casinh.3:42 man-pages/man3/fdim.3:84 man-pages/man3/atof.3:66
 #: man-pages/man3/readdir.3:198 man-pages/man3/sem_post.3:68
 #: man-pages/man3/mq_close.3:67 man-pages/man3/xcrypt.3:80
@@ -2664,7 +2662,7 @@ msgstr ""
 #: man-pages/man3/memcpy.3:60 man-pages/man3/pthread_exit.3:82
 #: man-pages/man3/mallinfo.3:124 man-pages/man3/pthread_setschedprio.3:90
 #: man-pages/man3/significand.3:59 man-pages/man3/mbsnrtowcs.3:177
-#: man-pages/man3/pthread_setcancelstate.3:121 man-pages/man3/csinh.3:38
+#: man-pages/man3/pthread_setcancelstate.3:126 man-pages/man3/csinh.3:38
 #: man-pages/man3/casinh.3:42 man-pages/man3/fdim.3:84 man-pages/man3/atof.3:66
 #: man-pages/man3/readdir.3:198 man-pages/man3/sem_post.3:68
 #: man-pages/man3/mq_close.3:67 man-pages/man3/xcrypt.3:80
@@ -2930,7 +2928,7 @@ msgstr ""
 #: man-pages/man3/memcpy.3:60 man-pages/man3/pthread_exit.3:82
 #: man-pages/man3/mallinfo.3:124 man-pages/man3/pthread_setschedprio.3:90
 #: man-pages/man3/significand.3:59 man-pages/man3/mbsnrtowcs.3:177
-#: man-pages/man3/pthread_setcancelstate.3:121 man-pages/man3/csinh.3:38
+#: man-pages/man3/pthread_setcancelstate.3:126 man-pages/man3/csinh.3:38
 #: man-pages/man3/casinh.3:42 man-pages/man3/fdim.3:84 man-pages/man3/atof.3:66
 #: man-pages/man3/readdir.3:198 man-pages/man3/sem_post.3:68
 #: man-pages/man3/mq_close.3:67 man-pages/man3/xcrypt.3:80
@@ -3222,7 +3220,7 @@ msgstr ""
 #: man-pages/man3/fexecve.3:116 man-pages/man3/memcpy.3:63
 #: man-pages/man3/pthread_exit.3:85 man-pages/man3/mallinfo.3:127
 #: man-pages/man3/pthread_setschedprio.3:93 man-pages/man3/significand.3:66
-#: man-pages/man3/mbsnrtowcs.3:180 man-pages/man3/pthread_setcancelstate.3:125
+#: man-pages/man3/mbsnrtowcs.3:180 man-pages/man3/pthread_setcancelstate.3:130
 #: man-pages/man3/csinh.3:43 man-pages/man3/casinh.3:47
 #: man-pages/man3/fdim.3:89 man-pages/man3/atof.3:69
 #: man-pages/man3/readdir.3:201 man-pages/man3/sem_post.3:71
@@ -3484,7 +3482,7 @@ msgstr ""
 #: man-pages/man3/exp10.3:82 man-pages/man3/fexecve.3:116
 #: man-pages/man3/memcpy.3:63 man-pages/man3/pthread_exit.3:85
 #: man-pages/man3/pthread_setschedprio.3:93 man-pages/man3/significand.3:66
-#: man-pages/man3/pthread_setcancelstate.3:127 man-pages/man3/csinh.3:43
+#: man-pages/man3/pthread_setcancelstate.3:132 man-pages/man3/csinh.3:43
 #: man-pages/man3/casinh.3:47 man-pages/man3/fdim.3:89
 #: man-pages/man3/sem_post.3:71 man-pages/man3/mq_close.3:70
 #: man-pages/man3/xcrypt.3:85 man-pages/man3/asin.3:117
@@ -3729,7 +3727,7 @@ msgstr ""
 #: man-pages/man3/cmsg.3:153 man-pages/man3/pthread_exit.3:87
 #: man-pages/man3/mallinfo.3:143 man-pages/man3/pthread_setschedprio.3:95
 #: man-pages/man3/significand.3:69 man-pages/man3/rtnetlink.3:82
-#: man-pages/man3/mbsnrtowcs.3:183 man-pages/man3/pthread_setcancelstate.3:137
+#: man-pages/man3/mbsnrtowcs.3:183 man-pages/man3/pthread_setcancelstate.3:142
 #: man-pages/man3/csinh.3:46 man-pages/man3/queue.3:1235
 #: man-pages/man3/casinh.3:49 man-pages/man3/fdim.3:91 man-pages/man3/atof.3:71
 #: man-pages/man3/readdir.3:224 man-pages/man3/sem_post.3:73
@@ -3961,7 +3959,7 @@ msgstr ""
 #: man-pages/man3/fexecve.3:124 man-pages/man3/memcpy.3:67
 #: man-pages/man3/cmsg.3:158 man-pages/man3/pthread_exit.3:89
 #: man-pages/man3/pthread_setschedprio.3:97 man-pages/man3/mbsnrtowcs.3:185
-#: man-pages/man3/pthread_setcancelstate.3:139 man-pages/man3/readdir.3:226
+#: man-pages/man3/pthread_setcancelstate.3:144 man-pages/man3/readdir.3:226
 #: man-pages/man3/sem_post.3:75 man-pages/man3/mq_close.3:74
 #: man-pages/man3/wcstok.3:93 man-pages/man3/catopen.3:172
 #: man-pages/man3/ttyname.3:96 man-pages/man3/posix_spawn.3:512
@@ -4095,7 +4093,7 @@ msgstr ""
 #: man-pages/man3/strtoul.3:220 man-pages/man3/pthread_getattr_np.3:115
 #: man-pages/man3/pthread_detach.3:106 man-pages/man3/inet_net_pton.3:247
 #: man-pages/man3/cmsg.3:172 man-pages/man3/mallinfo.3:167
-#: man-pages/man3/rtnetlink.3:86 man-pages/man3/pthread_setcancelstate.3:200
+#: man-pages/man3/rtnetlink.3:86 man-pages/man3/pthread_setcancelstate.3:205
 #: man-pages/man3/sem_post.3:79 man-pages/man3/wcstok.3:98
 #: man-pages/man3/posix_spawn.3:566 man-pages/man3/clock_getcpuclockid.3:112
 #: man-pages/man3/ftw.3:458 man-pages/man3/mbstowcs.3:121
@@ -4391,7 +4389,7 @@ msgstr ""
 #: man-pages/man3/pthread_exit.3:117 man-pages/man3/mallinfo.3:310
 #: man-pages/man3/pthread_setschedprio.3:103 man-pages/man3/significand.3:75
 #: man-pages/man3/rtnetlink.3:124 man-pages/man3/mbsnrtowcs.3:196
-#: man-pages/man3/pthread_setcancelstate.3:203 man-pages/man3/csinh.3:48
+#: man-pages/man3/pthread_setcancelstate.3:208 man-pages/man3/csinh.3:48
 #: man-pages/man3/queue.3:1241 man-pages/man3/casinh.3:51
 #: man-pages/man3/fdim.3:93 man-pages/man3/atof.3:73
 #: man-pages/man3/readdir.3:301 man-pages/man3/sem_post.3:82
@@ -4551,6 +4549,18 @@ msgstr ""
 #: man-pages/man3/pthread_mutexattr_setrobust.3:26
 #, no-wrap
 msgid "PTHREAD_MUTEXATTR_SETROBUST"
+msgstr ""
+
+#. type: TH
+#: man-pages/man3/pthread_mutexattr_setrobust.3:26
+#: man-pages/man3/pthread_mutexattr_init.3:25 man-pages/man3/errno.3:31
+#: man-pages/man3/printf.3:34 man-pages/man3/strtol.3:31
+#: man-pages/man3/getauxval.3:27 man-pages/man3/fexecve.3:25
+#: man-pages/man3/pthread_setcancelstate.3:26 man-pages/man3/ttyname.3:27
+#: man-pages/man3/strtok.3:32 man-pages/man3/regex.3:30
+#: man-pages/man3/pthread_mutex_consistent.3:26
+#, no-wrap
+msgid "2019-10-10"
 msgstr ""
 
 #. type: TH
@@ -4871,7 +4881,7 @@ msgstr ""
 #: man-pages/man3/bindresvport.3:75 man-pages/man3/exp10.3:60
 #: man-pages/man3/fexecve.3:76 man-pages/man3/pthread_exit.3:73
 #: man-pages/man3/pthread_setschedprio.3:61
-#: man-pages/man3/pthread_setcancelstate.3:95 man-pages/man3/fdim.3:55
+#: man-pages/man3/pthread_setcancelstate.3:100 man-pages/man3/fdim.3:55
 #: man-pages/man3/readdir.3:187 man-pages/man3/sem_post.3:52
 #: man-pages/man3/mq_close.3:54 man-pages/man3/asin.3:90
 #: man-pages/man3/mkdtemp.3:75 man-pages/man3/ttyname.3:62
@@ -4977,8 +4987,8 @@ msgstr ""
 #: man-pages/man3/shm_open.3:213 man-pages/man3/usleep.3:86
 #: man-pages/man3/pthread_detach.3:55 man-pages/man3/fexecve.3:80
 #: man-pages/man3/pthread_setschedprio.3:62
-#: man-pages/man3/pthread_setcancelstate.3:99
-#: man-pages/man3/pthread_setcancelstate.3:107 man-pages/man3/sem_post.3:53
+#: man-pages/man3/pthread_setcancelstate.3:104
+#: man-pages/man3/pthread_setcancelstate.3:112 man-pages/man3/sem_post.3:53
 #: man-pages/man3/mkdtemp.3:76 man-pages/man3/pthread_sigqueue.3:78
 #: man-pages/man3/sem_getvalue.3:61 man-pages/man3/recno.3:218
 #: man-pages/man3/putpwent.3:82 man-pages/man3/sysconf.3:367
@@ -5421,23 +5431,22 @@ msgstr ""
 #: man-pages/man3/towlower.3:17 man-pages/man3/fseeko.3:25
 #: man-pages/man3/open_memstream.3:9 man-pages/man3/malloc_get_state.3:25
 #: man-pages/man3/err.3:39 man-pages/man3/j0.3:36 man-pages/man3/gets.3:29
-#: man-pages/man3/malloc_usable_size.3:25 man-pages/man3/getauxval.3:27
-#: man-pages/man3/putgrent.3:7 man-pages/man3/shm_open.3:26
-#: man-pages/man3/usleep.3:33 man-pages/man3/pthread_detach.3:26
-#: man-pages/man3/bindresvport.3:30 man-pages/man3/exp10.3:35
-#: man-pages/man3/fexecve.3:25 man-pages/man3/memcpy.3:31
+#: man-pages/man3/malloc_usable_size.3:25 man-pages/man3/putgrent.3:7
+#: man-pages/man3/shm_open.3:26 man-pages/man3/usleep.3:33
+#: man-pages/man3/pthread_detach.3:26 man-pages/man3/bindresvport.3:30
+#: man-pages/man3/exp10.3:35 man-pages/man3/memcpy.3:31
 #: man-pages/man3/pthread_exit.3:26 man-pages/man3/significand.3:9
-#: man-pages/man3/pthread_setcancelstate.3:26 man-pages/man3/csinh.3:7
-#: man-pages/man3/fdim.3:9 man-pages/man3/mq_close.3:26
-#: man-pages/man3/asin.3:35 man-pages/man3/ccos.3:7 man-pages/man3/sqrt.3:34
-#: man-pages/man3/atan.3:35 man-pages/man3/wordexp.3:24
-#: man-pages/man3/fabs.3:32 man-pages/man3/pthread_sigqueue.3:25
-#: man-pages/man3/sem_getvalue.3:26 man-pages/man3/profil.3:28
-#: man-pages/man3/getgrent.3:30 man-pages/man3/posix_openpt.3:25
-#: man-pages/man3/recno.3:36 man-pages/man3/putpwent.3:30
-#: man-pages/man3/sleep.3:26 man-pages/man3/logb.3:29
-#: man-pages/man3/envz_add.3:10 man-pages/man3/ualarm.3:24
-#: man-pages/man3/csqrt.3:7 man-pages/man3/tmpnam.3:27 man-pages/man3/acos.3:35
+#: man-pages/man3/csinh.3:7 man-pages/man3/fdim.3:9
+#: man-pages/man3/mq_close.3:26 man-pages/man3/asin.3:35
+#: man-pages/man3/ccos.3:7 man-pages/man3/sqrt.3:34 man-pages/man3/atan.3:35
+#: man-pages/man3/wordexp.3:24 man-pages/man3/fabs.3:32
+#: man-pages/man3/pthread_sigqueue.3:25 man-pages/man3/sem_getvalue.3:26
+#: man-pages/man3/profil.3:28 man-pages/man3/getgrent.3:30
+#: man-pages/man3/posix_openpt.3:25 man-pages/man3/recno.3:36
+#: man-pages/man3/putpwent.3:30 man-pages/man3/sleep.3:26
+#: man-pages/man3/logb.3:29 man-pages/man3/envz_add.3:10
+#: man-pages/man3/ualarm.3:24 man-pages/man3/csqrt.3:7
+#: man-pages/man3/tmpnam.3:27 man-pages/man3/acos.3:35
 #: man-pages/man3/gethostbyname.3:38 man-pages/man3/pthread_atfork.3:26
 #: man-pages/man3/signbit.3:11 man-pages/man3/fmod.3:35
 #: man-pages/man3/sigset.3:26 man-pages/man3/strcoll.3:30
@@ -6877,7 +6886,7 @@ msgstr ""
 #: man-pages/man3/pthread_sigmask.3:83 man-pages/man3/shm_open.3:266
 #: man-pages/man3/pthread_detach.3:79 man-pages/man3/pthread_exit.3:89
 #: man-pages/man3/pthread_setschedprio.3:97
-#: man-pages/man3/pthread_setcancelstate.3:139 man-pages/man3/mq_close.3:74
+#: man-pages/man3/pthread_setcancelstate.3:144 man-pages/man3/mq_close.3:74
 #: man-pages/man3/catopen.3:172 man-pages/man3/posix_spawn.3:512
 #: man-pages/man3/clock_getcpuclockid.3:102 man-pages/man3/wordexp.3:223
 #: man-pages/man3/sem_getvalue.3:79 man-pages/man3/posix_openpt.3:91
@@ -12867,7 +12876,7 @@ msgstr ""
 #: man-pages/man3/pthread_attr_setstack.3:88
 #: man-pages/man3/pthread_attr_setstackaddr.3:77
 #: man-pages/man3/pthread_attr_setstacksize.3:64
-#: man-pages/man3/pthread_setcancelstate.3:95
+#: man-pages/man3/pthread_setcancelstate.3:100
 #: man-pages/man3/pthread_attr_setscope.3:106
 #: man-pages/man3/pthread_attr_setschedpolicy.3:86
 #: man-pages/man3/pthread_attr_init.3:71
@@ -16476,13 +16485,6 @@ msgstr ""
 #: man-pages/man3/pthread_mutexattr_init.3:25
 #, no-wrap
 msgid "PTHREAD_MUTEXATTR_INIT"
-msgstr ""
-
-#. type: TH
-#: man-pages/man3/pthread_mutexattr_init.3:25
-#: man-pages/man3/pthread_mutex_consistent.3:26
-#, no-wrap
-msgid "2017-08-20"
 msgstr ""
 
 #. type: Plain text
@@ -58067,14 +58069,22 @@ msgid ""
 "cancelability type in all new threads, including the initial thread."
 msgstr ""
 
+#. type: Plain text
+#: man-pages/man3/pthread_setcancelstate.3:87
+msgid ""
+"Even with deferred cancellation, a cancellation point in an asynchronous "
+"signal handler may still be acted upon and the effect is as if it was an "
+"asynchronous cancellation."
+msgstr ""
+
 #. type: TP
-#: man-pages/man3/pthread_setcancelstate.3:82
+#: man-pages/man3/pthread_setcancelstate.3:87
 #, no-wrap
 msgid "B<PTHREAD_CANCEL_ASYNCHRONOUS>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/pthread_setcancelstate.3:88
+#: man-pages/man3/pthread_setcancelstate.3:93
 msgid ""
 "The thread can be canceled at any time.  (Typically, it will be canceled "
 "immediately upon receiving a cancellation request, but the system doesn't "
@@ -58082,37 +58092,37 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/pthread_setcancelstate.3:92
+#: man-pages/man3/pthread_setcancelstate.3:97
 msgid ""
 "The set-and-get operation performed by each of these functions is atomic "
 "with respect to other threads in the process calling the same function."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/pthread_setcancelstate.3:99
+#: man-pages/man3/pthread_setcancelstate.3:104
 msgid "The B<pthread_setcancelstate>()  can fail with the following error:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/pthread_setcancelstate.3:103
+#: man-pages/man3/pthread_setcancelstate.3:108
 msgid "Invalid value for I<state>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/pthread_setcancelstate.3:107
+#: man-pages/man3/pthread_setcancelstate.3:112
 msgid "The B<pthread_setcanceltype>()  can fail with the following error:"
 msgstr ""
 
 #.  .SH VERSIONS
 #.  Available since glibc 2.0
 #. type: Plain text
-#: man-pages/man3/pthread_setcancelstate.3:113
+#: man-pages/man3/pthread_setcancelstate.3:118
 msgid "Invalid value for I<type>."
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/pthread_setcancelstate.3:125
-#: man-pages/man3/pthread_setcancelstate.3:131
+#: man-pages/man3/pthread_setcancelstate.3:130
+#: man-pages/man3/pthread_setcancelstate.3:136
 #, no-wrap
 msgid ""
 "B<pthread_setcancelstate>(),\n"
@@ -58120,26 +58130,26 @@ msgid ""
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/pthread_setcancelstate.3:131
+#: man-pages/man3/pthread_setcancelstate.3:136
 #, no-wrap
 msgid "Async-cancel-safety"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man3/pthread_setcancelstate.3:133
+#: man-pages/man3/pthread_setcancelstate.3:138
 #, no-wrap
 msgid "AC-Safe"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/pthread_setcancelstate.3:142
+#: man-pages/man3/pthread_setcancelstate.3:147
 msgid ""
 "For details of what happens when a thread is canceled, see "
 "B<pthread_cancel>(3)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/pthread_setcancelstate.3:149
+#: man-pages/man3/pthread_setcancelstate.3:154
 msgid ""
 "Briefly disabling cancelability is useful if a thread performs some critical "
 "action that must not be interrupted by a cancellation request.  Beware of "
@@ -58149,13 +58159,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man3/pthread_setcancelstate.3:149
+#: man-pages/man3/pthread_setcancelstate.3:154
 #, no-wrap
 msgid "Asynchronous cancelability"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/pthread_setcancelstate.3:168
+#: man-pages/man3/pthread_setcancelstate.3:173
 msgid ""
 "Setting the cancelability type to B<PTHREAD_CANCEL_ASYNCHRONOUS> is rarely "
 "useful.  Since the thread could be canceled at I<any> time, it cannot safely "
@@ -58171,7 +58181,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/pthread_setcancelstate.3:179
+#: man-pages/man3/pthread_setcancelstate.3:184
 msgid ""
 "Functions that can be safely asynchronously canceled are called "
 "I<async-cancel-safe functions>.  POSIX.1-2001 and POSIX.1-2008 require only "
@@ -58181,21 +58191,21 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/pthread_setcancelstate.3:182
+#: man-pages/man3/pthread_setcancelstate.3:187
 msgid ""
 "One of the few circumstances in which asynchronous cancelability is useful "
 "is for cancellation of a thread that is in a pure compute-bound loop."
 msgstr ""
 
 #. type: SS
-#: man-pages/man3/pthread_setcancelstate.3:182 man-pages/man3/sleep.3:68
+#: man-pages/man3/pthread_setcancelstate.3:187 man-pages/man3/sleep.3:68
 #, no-wrap
 msgid "Portability notes"
 msgstr ""
 
 #.  It looks like at least Solaris, FreeBSD and Tru64 support this.
 #. type: Plain text
-#: man-pages/man3/pthread_setcancelstate.3:200
+#: man-pages/man3/pthread_setcancelstate.3:205
 msgid ""
 "The Linux threading implementations permit the I<oldstate> argument of "
 "B<pthread_setcancelstate>()  to be NULL, in which case the information about "
@@ -58207,12 +58217,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/pthread_setcancelstate.3:203
+#: man-pages/man3/pthread_setcancelstate.3:208
 msgid "See B<pthread_cancel>(3)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man3/pthread_setcancelstate.3:207
+#: man-pages/man3/pthread_setcancelstate.3:212
 msgid ""
 "B<pthread_cancel>(3), B<pthread_cleanup_push>(3), B<pthread_testcancel>(3), "
 "B<pthreads>(7)"
@@ -60881,12 +60891,6 @@ msgstr ""
 #: man-pages/man3/ttyname.3:27
 #, no-wrap
 msgid "TTYNAME"
-msgstr ""
-
-#. type: TH
-#: man-pages/man3/ttyname.3:27
-#, no-wrap
-msgid "2017-05-03"
 msgstr ""
 
 #. type: Plain text

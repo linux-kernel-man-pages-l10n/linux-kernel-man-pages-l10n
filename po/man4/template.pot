@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linux_kernel_man_pages_l10n 5.03\n"
 "Report-Msgid-Bugs-To: https://github.com/test/test\n"
-"POT-Creation-Date: 2021-11-07 03:03+0300\n"
+"POT-Creation-Date: 2021-11-07 03:48+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -6684,7 +6684,7 @@ msgstr ""
 #. type: TH
 #: man-pages/man4/smartpqi.4:9
 #, no-wrap
-msgid "2017-10-19"
+msgid "2019-10-10"
 msgstr ""
 
 #. type: Plain text

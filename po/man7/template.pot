@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linux_kernel_man_pages_l10n 5.03\n"
 "Report-Msgid-Bugs-To: https://github.com/test/test\n"
-"POT-Creation-Date: 2021-11-07 03:03+0300\n"
+"POT-Creation-Date: 2021-11-07 03:48+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -488,10 +488,11 @@ msgstr ""
 #: man-pages/man7/feature_test_macros.7:190
 #: man-pages/man7/feature_test_macros.7:702
 #: man-pages/man7/feature_test_macros.7:705
-#: man-pages/man7/mount_namespaces.7:72 man-pages/man7/mount_namespaces.7:77
-#: man-pages/man7/mount_namespaces.7:84 man-pages/man7/mount_namespaces.7:97
-#: man-pages/man7/mount_namespaces.7:118 man-pages/man7/mount_namespaces.7:231
-#: man-pages/man7/mount_namespaces.7:233 man-pages/man7/man-pages.7:627
+#: man-pages/man7/mount_namespaces.7:60 man-pages/man7/mount_namespaces.7:65
+#: man-pages/man7/mount_namespaces.7:83 man-pages/man7/mount_namespaces.7:92
+#: man-pages/man7/mount_namespaces.7:99 man-pages/man7/mount_namespaces.7:112
+#: man-pages/man7/mount_namespaces.7:133 man-pages/man7/mount_namespaces.7:246
+#: man-pages/man7/mount_namespaces.7:248 man-pages/man7/man-pages.7:627
 #: man-pages/man7/man-pages.7:911 man-pages/man7/man-pages.7:913
 #: man-pages/man7/man-pages.7:919 man-pages/man7/man-pages.7:922
 #: man-pages/man7/man-pages.7:925 man-pages/man7/man-pages.7:928
@@ -501,136 +502,137 @@ msgstr ""
 #: man-pages/man7/ascii.7:97 man-pages/man7/fanotify.7:653
 #: man-pages/man7/fanotify.7:662 man-pages/man7/fanotify.7:671
 #: man-pages/man7/signal-safety.7:289 man-pages/man7/signal-safety.7:296
-#: man-pages/man7/signal-safety.7:304 man-pages/man7/signal-safety.7:320
-#: man-pages/man7/signal-safety.7:330 man-pages/man7/nptl.7:49
-#: man-pages/man7/nptl.7:52 man-pages/man7/nptl.7:60 man-pages/man7/nptl.7:66
-#: man-pages/man7/nptl.7:75 man-pages/man7/inotify.7:40
-#: man-pages/man7/inotify.7:51 man-pages/man7/inotify.7:64
-#: man-pages/man7/inotify.7:70 man-pages/man7/inotify.7:73
-#: man-pages/man7/inotify.7:279 man-pages/man7/inotify.7:282
-#: man-pages/man7/capabilities.7:104 man-pages/man7/capabilities.7:107
-#: man-pages/man7/capabilities.7:110 man-pages/man7/capabilities.7:121
-#: man-pages/man7/capabilities.7:131 man-pages/man7/capabilities.7:135
-#: man-pages/man7/capabilities.7:137 man-pages/man7/capabilities.7:139
-#: man-pages/man7/capabilities.7:143 man-pages/man7/capabilities.7:156
-#: man-pages/man7/capabilities.7:159 man-pages/man7/capabilities.7:218
-#: man-pages/man7/capabilities.7:220 man-pages/man7/capabilities.7:222
-#: man-pages/man7/capabilities.7:224 man-pages/man7/capabilities.7:226
-#: man-pages/man7/capabilities.7:228 man-pages/man7/capabilities.7:230
-#: man-pages/man7/capabilities.7:232 man-pages/man7/capabilities.7:234
-#: man-pages/man7/capabilities.7:260 man-pages/man7/capabilities.7:262
-#: man-pages/man7/capabilities.7:271 man-pages/man7/capabilities.7:273
-#: man-pages/man7/capabilities.7:275 man-pages/man7/capabilities.7:308
-#: man-pages/man7/capabilities.7:314 man-pages/man7/capabilities.7:316
-#: man-pages/man7/capabilities.7:331 man-pages/man7/capabilities.7:342
-#: man-pages/man7/capabilities.7:348 man-pages/man7/capabilities.7:353
-#: man-pages/man7/capabilities.7:359 man-pages/man7/capabilities.7:363
-#: man-pages/man7/capabilities.7:370 man-pages/man7/capabilities.7:373
-#: man-pages/man7/capabilities.7:381 man-pages/man7/capabilities.7:383
-#: man-pages/man7/capabilities.7:392 man-pages/man7/capabilities.7:401
-#: man-pages/man7/capabilities.7:404 man-pages/man7/capabilities.7:408
-#: man-pages/man7/capabilities.7:416 man-pages/man7/capabilities.7:419
-#: man-pages/man7/capabilities.7:422 man-pages/man7/capabilities.7:429
-#: man-pages/man7/capabilities.7:434 man-pages/man7/capabilities.7:440
-#: man-pages/man7/capabilities.7:444 man-pages/man7/capabilities.7:448
-#: man-pages/man7/capabilities.7:452 man-pages/man7/capabilities.7:456
-#: man-pages/man7/capabilities.7:463 man-pages/man7/capabilities.7:469
-#: man-pages/man7/capabilities.7:471 man-pages/man7/capabilities.7:476
-#: man-pages/man7/capabilities.7:483 man-pages/man7/capabilities.7:485
-#: man-pages/man7/capabilities.7:502 man-pages/man7/capabilities.7:505
-#: man-pages/man7/capabilities.7:514 man-pages/man7/capabilities.7:520
-#: man-pages/man7/capabilities.7:529 man-pages/man7/capabilities.7:534
-#: man-pages/man7/capabilities.7:540 man-pages/man7/capabilities.7:543
-#: man-pages/man7/capabilities.7:546 man-pages/man7/capabilities.7:557
-#: man-pages/man7/capabilities.7:561 man-pages/man7/capabilities.7:578
-#: man-pages/man7/capabilities.7:581 man-pages/man7/capabilities.7:585
-#: man-pages/man7/capabilities.7:590 man-pages/man7/capabilities.7:599
-#: man-pages/man7/capabilities.7:604 man-pages/man7/capabilities.7:607
-#: man-pages/man7/capabilities.7:612 man-pages/man7/capabilities.7:615
-#: man-pages/man7/capabilities.7:618 man-pages/man7/capabilities.7:621
-#: man-pages/man7/capabilities.7:624 man-pages/man7/capabilities.7:629
-#: man-pages/man7/capabilities.7:631 man-pages/man7/capabilities.7:637
-#: man-pages/man7/capabilities.7:645 man-pages/man7/capabilities.7:647
-#: man-pages/man7/capabilities.7:651 man-pages/man7/capabilities.7:653
-#: man-pages/man7/capabilities.7:656 man-pages/man7/capabilities.7:660
-#: man-pages/man7/capabilities.7:662 man-pages/man7/capabilities.7:664
-#: man-pages/man7/capabilities.7:666 man-pages/man7/capabilities.7:675
-#: man-pages/man7/capabilities.7:682 man-pages/man7/capabilities.7:689
-#: man-pages/man7/capabilities.7:694 man-pages/man7/capabilities.7:699
-#: man-pages/man7/capabilities.7:704 man-pages/man7/capabilities.7:729
-#: man-pages/man7/capabilities.7:736 man-pages/man7/capabilities.7:775
-#: man-pages/man7/capabilities.7:780 man-pages/man7/capabilities.7:788
-#: man-pages/man7/capabilities.7:796 man-pages/man7/capabilities.7:814
-#: man-pages/man7/capabilities.7:1135 man-pages/man7/capabilities.7:1141
-#: man-pages/man7/capabilities.7:1293 man-pages/man7/capabilities.7:1301
-#: man-pages/man7/capabilities.7:1742 man-pages/man7/capabilities.7:1747
-#: man-pages/man7/user_namespaces.7:254 man-pages/man7/user_namespaces.7:257
-#: man-pages/man7/user_namespaces.7:260 man-pages/man7/user_namespaces.7:263
-#: man-pages/man7/user_namespaces.7:266 man-pages/man7/user_namespaces.7:269
-#: man-pages/man7/user_namespaces.7:272 man-pages/man7/user_namespaces.7:515
-#: man-pages/man7/user_namespaces.7:518 man-pages/man7/user_namespaces.7:520
-#: man-pages/man7/user_namespaces.7:535 man-pages/man7/user_namespaces.7:548
-#: man-pages/man7/user_namespaces.7:575 man-pages/man7/user_namespaces.7:589
-#: man-pages/man7/user_namespaces.7:900 man-pages/man7/user_namespaces.7:902
-#: man-pages/man7/environ.7:176 man-pages/man7/environ.7:185
-#: man-pages/man7/environ.7:192 man-pages/man7/environ.7:197
-#: man-pages/man7/environ.7:201 man-pages/man7/environ.7:207
-#: man-pages/man7/environ.7:213 man-pages/man7/environ.7:224
-#: man-pages/man7/environ.7:228 man-pages/man7/environ.7:231
-#: man-pages/man7/signal.7:150 man-pages/man7/signal.7:158
-#: man-pages/man7/signal.7:398 man-pages/man7/signal.7:406
-#: man-pages/man7/signal.7:539 man-pages/man7/signal.7:541
-#: man-pages/man7/signal.7:561 man-pages/man7/signal.7:577
-#: man-pages/man7/signal.7:581 man-pages/man7/signal.7:588
-#: man-pages/man7/signal.7:606 man-pages/man7/signal.7:616
-#: man-pages/man7/signal.7:623 man-pages/man7/signal.7:630
-#: man-pages/man7/signal.7:632 man-pages/man7/signal.7:636
-#: man-pages/man7/signal.7:639 man-pages/man7/signal.7:648
-#: man-pages/man7/signal.7:667 man-pages/man7/signal.7:681
-#: man-pages/man7/signal.7:692 man-pages/man7/signal.7:699
-#: man-pages/man7/signal.7:708 man-pages/man7/signal.7:716
-#: man-pages/man7/signal.7:722 man-pages/man7/signal.7:740
-#: man-pages/man7/signal.7:754 man-pages/man7/signal.7:768
-#: man-pages/man7/signal.7:771 man-pages/man7/signal.7:774
-#: man-pages/man7/signal.7:777 man-pages/man7/signal.7:784
-#: man-pages/man7/signal.7:790 man-pages/man7/signal.7:794
-#: man-pages/man7/unicode.7:218 man-pages/man7/unicode.7:228
-#: man-pages/man7/unicode.7:232 man-pages/man7/unicode.7:242
-#: man-pages/man7/unicode.7:248 man-pages/man7/unicode.7:254
-#: man-pages/man7/packet.7:131 man-pages/man7/packet.7:138
-#: man-pages/man7/packet.7:148 man-pages/man7/packet.7:165
-#: man-pages/man7/packet.7:290 man-pages/man7/packet.7:298
-#: man-pages/man7/packet.7:302 man-pages/man7/packet.7:305
-#: man-pages/man7/packet.7:309 man-pages/man7/packet.7:312
-#: man-pages/man7/epoll.7:44 man-pages/man7/epoll.7:51
-#: man-pages/man7/epoll.7:64 man-pages/man7/epoll.7:73
-#: man-pages/man7/epoll.7:79 man-pages/man7/namespaces.7:277
-#: man-pages/man7/namespaces.7:279 man-pages/man7/namespaces.7:282
-#: man-pages/man7/namespaces.7:286 man-pages/man7/namespaces.7:288
-#: man-pages/man7/namespaces.7:291 man-pages/man7/namespaces.7:298
-#: man-pages/man7/namespaces.7:305 man-pages/man7/namespaces.7:373
-#: man-pages/man7/namespaces.7:377 man-pages/man7/namespaces.7:380
-#: man-pages/man7/namespaces.7:382 man-pages/man7/namespaces.7:387
-#: man-pages/man7/namespaces.7:393 man-pages/man7/cgroups.7:1001
-#: man-pages/man7/cgroups.7:1011 man-pages/man7/cgroups.7:1038
-#: man-pages/man7/cgroups.7:1046 man-pages/man7/cgroups.7:1095
-#: man-pages/man7/cgroups.7:1099 man-pages/man7/cgroups.7:1109
-#: man-pages/man7/cgroups.7:1114 man-pages/man7/cgroups.7:1135
-#: man-pages/man7/cgroups.7:1138 man-pages/man7/cgroups.7:1165
-#: man-pages/man7/cgroups.7:1171 man-pages/man7/cgroups.7:1175
-#: man-pages/man7/cgroups.7:1230 man-pages/man7/cgroups.7:1243
-#: man-pages/man7/cgroups.7:1265 man-pages/man7/cgroups.7:1270
-#: man-pages/man7/cgroups.7:1277 man-pages/man7/cgroups.7:1321
-#: man-pages/man7/cgroups.7:1326 man-pages/man7/cgroups.7:1385
-#: man-pages/man7/cgroups.7:1389 man-pages/man7/cgroups.7:1395
-#: man-pages/man7/cgroups.7:1438 man-pages/man7/cgroups.7:1446
-#: man-pages/man7/cgroups.7:1469 man-pages/man7/cgroups.7:1481
-#: man-pages/man7/cgroups.7:1487 man-pages/man7/cgroups.7:1505
-#: man-pages/man7/cgroups.7:1509 man-pages/man7/cgroups.7:1534
-#: man-pages/man7/cgroups.7:1541 man-pages/man7/cgroups.7:1557
-#: man-pages/man7/cgroups.7:1560 man-pages/man7/random.7:41
-#: man-pages/man7/random.7:50 man-pages/man7/ipc_namespaces.7:51
-#: man-pages/man7/ipc_namespaces.7:54 man-pages/man7/ipc_namespaces.7:67
+#: man-pages/man7/signal-safety.7:304 man-pages/man7/signal-safety.7:317
+#: man-pages/man7/signal-safety.7:325 man-pages/man7/signal-safety.7:335
+#: man-pages/man7/nptl.7:49 man-pages/man7/nptl.7:52 man-pages/man7/nptl.7:60
+#: man-pages/man7/nptl.7:66 man-pages/man7/nptl.7:75
+#: man-pages/man7/inotify.7:40 man-pages/man7/inotify.7:51
+#: man-pages/man7/inotify.7:64 man-pages/man7/inotify.7:70
+#: man-pages/man7/inotify.7:73 man-pages/man7/inotify.7:279
+#: man-pages/man7/inotify.7:282 man-pages/man7/capabilities.7:104
+#: man-pages/man7/capabilities.7:107 man-pages/man7/capabilities.7:110
+#: man-pages/man7/capabilities.7:121 man-pages/man7/capabilities.7:131
+#: man-pages/man7/capabilities.7:135 man-pages/man7/capabilities.7:137
+#: man-pages/man7/capabilities.7:139 man-pages/man7/capabilities.7:143
+#: man-pages/man7/capabilities.7:156 man-pages/man7/capabilities.7:159
+#: man-pages/man7/capabilities.7:218 man-pages/man7/capabilities.7:220
+#: man-pages/man7/capabilities.7:222 man-pages/man7/capabilities.7:224
+#: man-pages/man7/capabilities.7:226 man-pages/man7/capabilities.7:228
+#: man-pages/man7/capabilities.7:230 man-pages/man7/capabilities.7:232
+#: man-pages/man7/capabilities.7:234 man-pages/man7/capabilities.7:260
+#: man-pages/man7/capabilities.7:262 man-pages/man7/capabilities.7:271
+#: man-pages/man7/capabilities.7:273 man-pages/man7/capabilities.7:275
+#: man-pages/man7/capabilities.7:308 man-pages/man7/capabilities.7:314
+#: man-pages/man7/capabilities.7:316 man-pages/man7/capabilities.7:331
+#: man-pages/man7/capabilities.7:342 man-pages/man7/capabilities.7:348
+#: man-pages/man7/capabilities.7:353 man-pages/man7/capabilities.7:359
+#: man-pages/man7/capabilities.7:363 man-pages/man7/capabilities.7:370
+#: man-pages/man7/capabilities.7:373 man-pages/man7/capabilities.7:381
+#: man-pages/man7/capabilities.7:383 man-pages/man7/capabilities.7:392
+#: man-pages/man7/capabilities.7:401 man-pages/man7/capabilities.7:404
+#: man-pages/man7/capabilities.7:408 man-pages/man7/capabilities.7:416
+#: man-pages/man7/capabilities.7:419 man-pages/man7/capabilities.7:422
+#: man-pages/man7/capabilities.7:429 man-pages/man7/capabilities.7:434
+#: man-pages/man7/capabilities.7:440 man-pages/man7/capabilities.7:444
+#: man-pages/man7/capabilities.7:448 man-pages/man7/capabilities.7:452
+#: man-pages/man7/capabilities.7:456 man-pages/man7/capabilities.7:463
+#: man-pages/man7/capabilities.7:469 man-pages/man7/capabilities.7:471
+#: man-pages/man7/capabilities.7:476 man-pages/man7/capabilities.7:483
+#: man-pages/man7/capabilities.7:485 man-pages/man7/capabilities.7:502
+#: man-pages/man7/capabilities.7:505 man-pages/man7/capabilities.7:514
+#: man-pages/man7/capabilities.7:520 man-pages/man7/capabilities.7:529
+#: man-pages/man7/capabilities.7:534 man-pages/man7/capabilities.7:540
+#: man-pages/man7/capabilities.7:543 man-pages/man7/capabilities.7:546
+#: man-pages/man7/capabilities.7:557 man-pages/man7/capabilities.7:561
+#: man-pages/man7/capabilities.7:578 man-pages/man7/capabilities.7:581
+#: man-pages/man7/capabilities.7:585 man-pages/man7/capabilities.7:590
+#: man-pages/man7/capabilities.7:599 man-pages/man7/capabilities.7:604
+#: man-pages/man7/capabilities.7:607 man-pages/man7/capabilities.7:612
+#: man-pages/man7/capabilities.7:615 man-pages/man7/capabilities.7:618
+#: man-pages/man7/capabilities.7:621 man-pages/man7/capabilities.7:624
+#: man-pages/man7/capabilities.7:629 man-pages/man7/capabilities.7:631
+#: man-pages/man7/capabilities.7:637 man-pages/man7/capabilities.7:645
+#: man-pages/man7/capabilities.7:647 man-pages/man7/capabilities.7:651
+#: man-pages/man7/capabilities.7:653 man-pages/man7/capabilities.7:656
+#: man-pages/man7/capabilities.7:660 man-pages/man7/capabilities.7:662
+#: man-pages/man7/capabilities.7:664 man-pages/man7/capabilities.7:666
+#: man-pages/man7/capabilities.7:675 man-pages/man7/capabilities.7:682
+#: man-pages/man7/capabilities.7:689 man-pages/man7/capabilities.7:694
+#: man-pages/man7/capabilities.7:699 man-pages/man7/capabilities.7:704
+#: man-pages/man7/capabilities.7:729 man-pages/man7/capabilities.7:736
+#: man-pages/man7/capabilities.7:775 man-pages/man7/capabilities.7:780
+#: man-pages/man7/capabilities.7:788 man-pages/man7/capabilities.7:796
+#: man-pages/man7/capabilities.7:814 man-pages/man7/capabilities.7:1135
+#: man-pages/man7/capabilities.7:1141 man-pages/man7/capabilities.7:1293
+#: man-pages/man7/capabilities.7:1301 man-pages/man7/capabilities.7:1742
+#: man-pages/man7/capabilities.7:1747 man-pages/man7/user_namespaces.7:254
+#: man-pages/man7/user_namespaces.7:257 man-pages/man7/user_namespaces.7:260
+#: man-pages/man7/user_namespaces.7:263 man-pages/man7/user_namespaces.7:266
+#: man-pages/man7/user_namespaces.7:269 man-pages/man7/user_namespaces.7:272
+#: man-pages/man7/user_namespaces.7:515 man-pages/man7/user_namespaces.7:518
+#: man-pages/man7/user_namespaces.7:520 man-pages/man7/user_namespaces.7:535
+#: man-pages/man7/user_namespaces.7:548 man-pages/man7/user_namespaces.7:575
+#: man-pages/man7/user_namespaces.7:589 man-pages/man7/user_namespaces.7:900
+#: man-pages/man7/user_namespaces.7:902 man-pages/man7/environ.7:176
+#: man-pages/man7/environ.7:185 man-pages/man7/environ.7:192
+#: man-pages/man7/environ.7:197 man-pages/man7/environ.7:201
+#: man-pages/man7/environ.7:207 man-pages/man7/environ.7:213
+#: man-pages/man7/environ.7:224 man-pages/man7/environ.7:228
+#: man-pages/man7/environ.7:231 man-pages/man7/signal.7:150
+#: man-pages/man7/signal.7:158 man-pages/man7/signal.7:398
+#: man-pages/man7/signal.7:406 man-pages/man7/signal.7:539
+#: man-pages/man7/signal.7:541 man-pages/man7/signal.7:561
+#: man-pages/man7/signal.7:577 man-pages/man7/signal.7:581
+#: man-pages/man7/signal.7:588 man-pages/man7/signal.7:606
+#: man-pages/man7/signal.7:616 man-pages/man7/signal.7:623
+#: man-pages/man7/signal.7:630 man-pages/man7/signal.7:632
+#: man-pages/man7/signal.7:636 man-pages/man7/signal.7:639
+#: man-pages/man7/signal.7:648 man-pages/man7/signal.7:667
+#: man-pages/man7/signal.7:681 man-pages/man7/signal.7:692
+#: man-pages/man7/signal.7:699 man-pages/man7/signal.7:708
+#: man-pages/man7/signal.7:716 man-pages/man7/signal.7:722
+#: man-pages/man7/signal.7:740 man-pages/man7/signal.7:754
+#: man-pages/man7/signal.7:768 man-pages/man7/signal.7:771
+#: man-pages/man7/signal.7:774 man-pages/man7/signal.7:777
+#: man-pages/man7/signal.7:784 man-pages/man7/signal.7:790
+#: man-pages/man7/signal.7:794 man-pages/man7/unicode.7:218
+#: man-pages/man7/unicode.7:228 man-pages/man7/unicode.7:232
+#: man-pages/man7/unicode.7:242 man-pages/man7/unicode.7:248
+#: man-pages/man7/unicode.7:254 man-pages/man7/packet.7:131
+#: man-pages/man7/packet.7:138 man-pages/man7/packet.7:148
+#: man-pages/man7/packet.7:165 man-pages/man7/packet.7:290
+#: man-pages/man7/packet.7:298 man-pages/man7/packet.7:302
+#: man-pages/man7/packet.7:305 man-pages/man7/packet.7:309
+#: man-pages/man7/packet.7:312 man-pages/man7/epoll.7:44
+#: man-pages/man7/epoll.7:51 man-pages/man7/epoll.7:64
+#: man-pages/man7/epoll.7:73 man-pages/man7/epoll.7:79
+#: man-pages/man7/namespaces.7:298 man-pages/man7/namespaces.7:300
+#: man-pages/man7/namespaces.7:303 man-pages/man7/namespaces.7:307
+#: man-pages/man7/namespaces.7:309 man-pages/man7/namespaces.7:312
+#: man-pages/man7/namespaces.7:319 man-pages/man7/namespaces.7:326
+#: man-pages/man7/namespaces.7:351 man-pages/man7/namespaces.7:355
+#: man-pages/man7/namespaces.7:358 man-pages/man7/namespaces.7:360
+#: man-pages/man7/namespaces.7:365 man-pages/man7/namespaces.7:371
+#: man-pages/man7/cgroups.7:1001 man-pages/man7/cgroups.7:1011
+#: man-pages/man7/cgroups.7:1038 man-pages/man7/cgroups.7:1046
+#: man-pages/man7/cgroups.7:1095 man-pages/man7/cgroups.7:1099
+#: man-pages/man7/cgroups.7:1109 man-pages/man7/cgroups.7:1114
+#: man-pages/man7/cgroups.7:1135 man-pages/man7/cgroups.7:1138
+#: man-pages/man7/cgroups.7:1165 man-pages/man7/cgroups.7:1171
+#: man-pages/man7/cgroups.7:1175 man-pages/man7/cgroups.7:1230
+#: man-pages/man7/cgroups.7:1243 man-pages/man7/cgroups.7:1265
+#: man-pages/man7/cgroups.7:1270 man-pages/man7/cgroups.7:1277
+#: man-pages/man7/cgroups.7:1321 man-pages/man7/cgroups.7:1326
+#: man-pages/man7/cgroups.7:1385 man-pages/man7/cgroups.7:1389
+#: man-pages/man7/cgroups.7:1395 man-pages/man7/cgroups.7:1438
+#: man-pages/man7/cgroups.7:1446 man-pages/man7/cgroups.7:1469
+#: man-pages/man7/cgroups.7:1481 man-pages/man7/cgroups.7:1487
+#: man-pages/man7/cgroups.7:1505 man-pages/man7/cgroups.7:1509
+#: man-pages/man7/cgroups.7:1534 man-pages/man7/cgroups.7:1541
+#: man-pages/man7/cgroups.7:1557 man-pages/man7/cgroups.7:1560
+#: man-pages/man7/random.7:41 man-pages/man7/random.7:50
+#: man-pages/man7/ipc_namespaces.7:51 man-pages/man7/ipc_namespaces.7:54
+#: man-pages/man7/ipc_namespaces.7:67
 #, no-wrap
 msgid "*"
 msgstr ""
@@ -748,7 +750,7 @@ msgstr ""
 #: man-pages/man7/credentials.7:287 man-pages/man7/locale.7:373
 #: man-pages/man7/rtld-audit.7:462 man-pages/man7/cgroup_namespaces.7:183
 #: man-pages/man7/feature_test_macros.7:748
-#: man-pages/man7/mount_namespaces.7:1027 man-pages/man7/fanotify.7:600
+#: man-pages/man7/mount_namespaces.7:1042 man-pages/man7/fanotify.7:600
 #: man-pages/man7/xattr.7:172 man-pages/man7/pid_namespaces.7:388
 #: man-pages/man7/nptl.7:114 man-pages/man7/inotify.7:603
 #: man-pages/man7/capabilities.7:1673 man-pages/man7/sock_diag.7:638
@@ -779,7 +781,7 @@ msgstr ""
 #: man-pages/man7/ip.7:1224 man-pages/man7/sched.7:951 man-pages/man7/man.7:431
 #: man-pages/man7/cgroup_namespaces.7:185
 #: man-pages/man7/feature_test_macros.7:771
-#: man-pages/man7/mount_namespaces.7:1030 man-pages/man7/intro.7:36
+#: man-pages/man7/mount_namespaces.7:1045 man-pages/man7/intro.7:36
 #: man-pages/man7/iso_8859-8.7:126 man-pages/man7/math_error.7:187
 #: man-pages/man7/user-session-keyring.7:80 man-pages/man7/iso_8859-4.7:160
 #: man-pages/man7/ddp.7:223 man-pages/man7/iso_8859-15.7:161
@@ -839,7 +841,7 @@ msgstr ""
 #: man-pages/man7/sched.7:966 man-pages/man7/man.7:514
 #: man-pages/man7/uts_namespaces.7:55 man-pages/man7/cgroup_namespaces.7:259
 #: man-pages/man7/feature_test_macros.7:904
-#: man-pages/man7/mount_namespaces.7:1089 man-pages/man7/intro.7:41
+#: man-pages/man7/mount_namespaces.7:1124 man-pages/man7/intro.7:41
 #: man-pages/man7/armscii-8.7:136 man-pages/man7/iso_8859-8.7:130
 #: man-pages/man7/math_error.7:256 man-pages/man7/user-session-keyring.7:88
 #: man-pages/man7/mailaddr.7:114 man-pages/man7/session-keyring.7:103
@@ -851,7 +853,7 @@ msgstr ""
 #: man-pages/man7/path_resolution.7:254 man-pages/man7/xattr.7:188
 #: man-pages/man7/process-keyring.7:51 man-pages/man7/spufs.7:766
 #: man-pages/man7/vsock.7:218 man-pages/man7/pid_namespaces.7:393
-#: man-pages/man7/signal-safety.7:337 man-pages/man7/fifo.7:67
+#: man-pages/man7/signal-safety.7:342 man-pages/man7/fifo.7:67
 #: man-pages/man7/persistent-keyring.7:115 man-pages/man7/hostname.7:108
 #: man-pages/man7/nptl.7:128 man-pages/man7/inotify.7:1110
 #: man-pages/man7/capabilities.7:1753 man-pages/man7/sock_diag.7:838
@@ -864,7 +866,7 @@ msgstr ""
 #: man-pages/man7/thread-keyring.7:46 man-pages/man7/pty.7:163
 #: man-pages/man7/signal.7:835 man-pages/man7/numa.7:183
 #: man-pages/man7/iso_8859-7.7:166 man-pages/man7/icmp.7:196
-#: man-pages/man7/aio.7:450 man-pages/man7/pthreads.7:899
+#: man-pages/man7/aio.7:450 man-pages/man7/pthreads.7:909
 #: man-pages/man7/raw.7:275 man-pages/man7/inode.7:477
 #: man-pages/man7/unicode.7:262 man-pages/man7/udplite.7:147
 #: man-pages/man7/packet.7:633 man-pages/man7/iso_8859-14.7:162
@@ -878,7 +880,7 @@ msgstr ""
 #: man-pages/man7/netdevice.7:373 man-pages/man7/charsets.7:330
 #: man-pages/man7/glob.7:208 man-pages/man7/vdso.7:582
 #: man-pages/man7/iso_8859-3.7:155 man-pages/man7/socket.7:1147
-#: man-pages/man7/namespaces.7:402 man-pages/man7/hier.7:644
+#: man-pages/man7/namespaces.7:380 man-pages/man7/hier.7:644
 #: man-pages/man7/posixoptions.7:1031 man-pages/man7/sigevent.7:131
 #: man-pages/man7/futex.7:115 man-pages/man7/standards.7:281
 #: man-pages/man7/cgroups.7:1764 man-pages/man7/random.7:226
@@ -2470,7 +2472,7 @@ msgstr ""
 #. type: SH
 #: man-pages/man7/unix.7:754 man-pages/man7/arp.7:272
 #: man-pages/man7/netlink.7:471 man-pages/man7/cpuset.7:1338
-#: man-pages/man7/mount_namespaces.7:1025 man-pages/man7/ddp.7:218
+#: man-pages/man7/mount_namespaces.7:1040 man-pages/man7/ddp.7:218
 #: man-pages/man7/fanotify.7:596 man-pages/man7/vsock.7:214
 #: man-pages/man7/inotify.7:595 man-pages/man7/sock_diag.7:621
 #: man-pages/man7/icmp.7:166 man-pages/man7/aio.7:163 man-pages/man7/raw.7:181
@@ -2638,12 +2640,12 @@ msgstr ""
 #: man-pages/man7/rtld-audit.7:503 man-pages/man7/mq_overview.7:393
 #: man-pages/man7/netlink.7:485 man-pages/man7/cpuset.7:1365
 #: man-pages/man7/feature_test_macros.7:790
-#: man-pages/man7/mount_namespaces.7:1086 man-pages/man7/man-pages.7:977
+#: man-pages/man7/mount_namespaces.7:1121 man-pages/man7/man-pages.7:977
 #: man-pages/man7/fanotify.7:681 man-pages/man7/spufs.7:759
 #: man-pages/man7/pid_namespaces.7:390 man-pages/man7/inotify.7:880
 #: man-pages/man7/sock_diag.7:640 man-pages/man7/sem_overview.7:147
 #: man-pages/man7/user_namespaces.7:981 man-pages/man7/pkeys.7:165
-#: man-pages/man7/aio.7:196 man-pages/man7/namespaces.7:397
+#: man-pages/man7/aio.7:196 man-pages/man7/namespaces.7:375
 #, no-wrap
 msgid "EXAMPLE"
 msgstr ""
@@ -3551,7 +3553,7 @@ msgstr ""
 #: man-pages/man7/koi8-r.7:41 man-pages/man7/iso_8859-1.7:64
 #: man-pages/man7/netlink.7:210 man-pages/man7/netlink.7:225
 #: man-pages/man7/netlink.7:250 man-pages/man7/iso_8859-2.7:65
-#: man-pages/man7/mount_namespaces.7:757 man-pages/man7/mount_namespaces.7:801
+#: man-pages/man7/mount_namespaces.7:772 man-pages/man7/mount_namespaces.7:816
 #: man-pages/man7/armscii-8.7:40 man-pages/man7/iso_8859-8.7:64
 #: man-pages/man7/iso_8859-4.7:62 man-pages/man7/iso_8859-15.7:63
 #: man-pages/man7/ascii.7:54 man-pages/man7/iso_8859-10.7:62
@@ -6829,8 +6831,10 @@ msgstr ""
 #: man-pages/man7/koi8-r.7:104 man-pages/man7/koi8-r.7:109
 #: man-pages/man7/netlink.7:234 man-pages/man7/iso_8859-5.7:71
 #: man-pages/man7/iso_8859-7.7:96 man-pages/man7/cp1251.7:95
-#: man-pages/man7/socket.7:198 man-pages/man7/koi8-u.7:84
-#: man-pages/man7/koi8-u.7:104 man-pages/man7/koi8-u.7:114
+#: man-pages/man7/socket.7:198 man-pages/man7/namespaces.7:59
+#: man-pages/man7/namespaces.7:64 man-pages/man7/namespaces.7:72
+#: man-pages/man7/koi8-u.7:84 man-pages/man7/koi8-u.7:104
+#: man-pages/man7/koi8-u.7:114
 #, no-wrap
 msgid ".br\n"
 msgstr ""
@@ -10102,12 +10106,11 @@ msgstr ""
 #: man-pages/man7/utf-8.7:29 man-pages/man7/locale.7:31
 #: man-pages/man7/complex.7:7 man-pages/man7/rtld-audit.7:28
 #: man-pages/man7/ip.7:48 man-pages/man7/man.7:34
-#: man-pages/man7/feature_test_macros.7:25 man-pages/man7/man-pages.7:30
-#: man-pages/man7/pid_namespaces.7:27 man-pages/man7/inotify.7:27
-#: man-pages/man7/sock_diag.7:24 man-pages/man7/bpf-helpers.7:31
-#: man-pages/man7/pkeys.7:25 man-pages/man7/aio.7:26
-#: man-pages/man7/pthreads.7:26 man-pages/man7/unicode.7:29
-#: man-pages/man7/tcp.7:96 man-pages/man7/epoll.7:21 man-pages/man7/udp.7:12
+#: man-pages/man7/feature_test_macros.7:25 man-pages/man7/pid_namespaces.7:27
+#: man-pages/man7/inotify.7:27 man-pages/man7/sock_diag.7:24
+#: man-pages/man7/bpf-helpers.7:31 man-pages/man7/pkeys.7:25
+#: man-pages/man7/aio.7:26 man-pages/man7/unicode.7:29 man-pages/man7/tcp.7:96
+#: man-pages/man7/epoll.7:21 man-pages/man7/udp.7:12
 #: man-pages/man7/charsets.7:17 man-pages/man7/cgroups.7:26
 #, no-wrap
 msgid "2019-03-06"
@@ -14165,16 +14168,16 @@ msgstr ""
 
 #. type: TH
 #: man-pages/man7/keyrings.7:13 man-pages/man7/arp.7:13
-#: man-pages/man7/mq_overview.7:26 man-pages/man7/netlink.7:11
-#: man-pages/man7/cpuset.7:25 man-pages/man7/math_error.7:26
-#: man-pages/man7/session-keyring.7:12 man-pages/man7/ddp.7:12
-#: man-pages/man7/spufs.7:27 man-pages/man7/bootparam.7:28
-#: man-pages/man7/environ.7:34 man-pages/man7/units.7:26
-#: man-pages/man7/pipe.7:25 man-pages/man7/pty.7:25 man-pages/man7/raw.7:13
-#: man-pages/man7/udplite.7:27 man-pages/man7/packet.7:12
-#: man-pages/man7/uri.7:48 man-pages/man7/ipv6.7:86 man-pages/man7/x25.7:12
-#: man-pages/man7/suffixes.7:39 man-pages/man7/rtnetlink.7:15
-#: man-pages/man7/netdevice.7:18 man-pages/man7/futex.7:11
+#: man-pages/man7/netlink.7:11 man-pages/man7/cpuset.7:25
+#: man-pages/man7/math_error.7:26 man-pages/man7/session-keyring.7:12
+#: man-pages/man7/ddp.7:12 man-pages/man7/spufs.7:27
+#: man-pages/man7/bootparam.7:28 man-pages/man7/environ.7:34
+#: man-pages/man7/units.7:26 man-pages/man7/pipe.7:25 man-pages/man7/pty.7:25
+#: man-pages/man7/raw.7:13 man-pages/man7/udplite.7:27
+#: man-pages/man7/packet.7:12 man-pages/man7/uri.7:48 man-pages/man7/ipv6.7:86
+#: man-pages/man7/x25.7:12 man-pages/man7/suffixes.7:39
+#: man-pages/man7/rtnetlink.7:15 man-pages/man7/netdevice.7:18
+#: man-pages/man7/futex.7:11
 #, no-wrap
 msgid "2017-09-15"
 msgstr ""
@@ -16461,6 +16464,14 @@ msgstr ""
 #: man-pages/man7/mq_overview.7:26
 #, no-wrap
 msgid "MQ_OVERVIEW"
+msgstr ""
+
+#. type: TH
+#: man-pages/man7/mq_overview.7:26 man-pages/man7/man-pages.7:30
+#: man-pages/man7/sysvipc.7:40 man-pages/man7/signal-safety.7:25
+#: man-pages/man7/pthreads.7:26 man-pages/man7/operator.7:40
+#, no-wrap
+msgid "2019-10-10"
 msgstr ""
 
 #. type: Plain text
@@ -24317,21 +24328,20 @@ msgstr ""
 #. type: TP
 #: man-pages/man7/man.7:271
 #, no-wrap
-msgid "B<\\&.UE>"
+msgid "B<\\&.UE .RI [ trailer ]>"
 msgstr ""
 
 #. type: Plain text
 #: man-pages/man7/man.7:288
 msgid ""
-"[I<trailer>] Terminate the link text of the preceding B<\\&.UR> macro, with "
-"the optional I<trailer> (if present, usually a closing parenthesis and/or "
-"end-of-sentence punctuation) immediately following.  For non-HTML output "
-"devices (e.g., B<man -Tutf8>), the link text is followed by the URL in angle "
-"brackets; if there is no link text, the URL is printed as its own link text, "
-"surrounded by angle brackets.  (Angle brackets may not be available on all "
-"output devices.)  For the HTML output device, the link text is hyperlinked "
-"to the URL; if there is no link text, the URL is printed as its own link "
-"text."
+"Terminate the link text of the preceding B<\\&.UR> macro, with the optional "
+"I<trailer> (if present, usually a closing parenthesis and/or end-of-sentence "
+"punctuation) immediately following.  For non-HTML output devices (e.g., "
+"B<man -Tutf8>), the link text is followed by the URL in angle brackets; if "
+"there is no link text, the URL is printed as its own link text, surrounded "
+"by angle brackets.  (Angle brackets may not be available on all output "
+"devices.)  For the HTML output device, the link text is hyperlinked to the "
+"URL; if there is no link text, the URL is printed as its own link text."
 msgstr ""
 
 #. type: Plain text
@@ -24884,7 +24894,7 @@ msgstr ""
 
 #. type: Plain text
 #: man-pages/man7/cgroup_namespaces.7:185
-#: man-pages/man7/mount_namespaces.7:1030 man-pages/man7/pid_namespaces.7:390
+#: man-pages/man7/mount_namespaces.7:1045 man-pages/man7/pid_namespaces.7:390
 #: man-pages/man7/user_namespaces.7:952
 msgid "Namespaces are a Linux-specific feature."
 msgstr ""
@@ -26193,41 +26203,65 @@ msgid ""
 "see the same view in these files.)"
 msgstr ""
 
-#
-#.  ============================================================
+#. type: Plain text
+#: man-pages/man7/mount_namespaces.7:60
+msgid ""
+"A new mount namespace is created using either B<clone>(2)  or B<unshare>(2)  "
+"with the B<CLONE_NEWNS> flag.  When a new mount namespace is created, its "
+"mount point list is initialized as follows:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/mount_namespaces.7:65
+msgid ""
+"If the namespace is created using B<clone>(2), the mount point list of the "
+"child's namespace is a copy of the mount point list in the parent's "
+"namespace."
+msgstr ""
+
 #. type: Plain text
 #: man-pages/man7/mount_namespaces.7:70
 msgid ""
-"When a process creates a new mount namespace using B<clone>(2)  or "
-"B<unshare>(2)  with the B<CLONE_NEWNS> flag, the mount point list for the "
-"new namespace is a I<copy> of the caller's mount point list.  Subsequent "
-"modifications to the mount point list (B<mount>(2)  and B<umount>(2))  in "
-"either mount namespace will not (by default) affect the mount point list "
-"seen in the other namespace (but see the following discussion of shared "
-"subtrees)."
+"If the namespace is created using B<unshare>(2), the mount point list of the "
+"new namespace is a copy of the mount point list in the caller's previous "
+"mount namespace."
+msgstr ""
+
+#
+#.  ============================================================
+#. type: Plain text
+#: man-pages/man7/mount_namespaces.7:81
+msgid ""
+"Subsequent modifications to the mount point list (B<mount>(2)  and "
+"B<umount>(2))  in either mount namespace will not (by default) affect the "
+"mount point list seen in the other namespace (but see the following "
+"discussion of shared subtrees)."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/mount_namespaces.7:70
+#: man-pages/man7/mount_namespaces.7:81
 #, no-wrap
 msgid "Restrictions on mount namespaces"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:72
+#: man-pages/man7/mount_namespaces.7:83
 msgid "Note the following points with respect to mount namespaces:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:77
+#: man-pages/man7/mount_namespaces.7:92
 msgid ""
-"A mount namespace has an owner user namespace.  A mount namespace whose "
-"owner user namespace is different from the owner user namespace of its "
-"parent mount namespace is considered a less privileged mount namespace."
+"Each mount namespace has an owner user namespace.  As explained above, when "
+"a new mount namespace is created, its mount point list is initialized as a "
+"copy of the mount point list of another mount namespace.  If the new "
+"namespace and the namespace from which the mount point list was copied are "
+"owned by different user namespaces, then the new mount namespace is "
+"considered I<less privileged>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:84
+#: man-pages/man7/mount_namespaces.7:99
 msgid ""
 "When creating a less privileged mount namespace, shared mounts are reduced "
 "to slave mounts.  (Shared and slave mounts are discussed below.)  This "
@@ -26238,7 +26272,7 @@ msgstr ""
 #.  FIXME .
 #. 	What does "come as a single unit from more privileged mount" mean?
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:97
+#: man-pages/man7/mount_namespaces.7:112
 msgid ""
 "Mounts that come as a single unit from more privileged mount are locked "
 "together and may not be separated in a less privileged mount namespace.  "
@@ -26253,7 +26287,7 @@ msgstr ""
 #
 #.       mnt: Correct permission checks in do_remount
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:118
+#: man-pages/man7/mount_namespaces.7:133
 msgid ""
 "The B<mount>(2)  flags B<MS_RDONLY>, B<MS_NOSUID>, B<MS_NOEXEC>, and the "
 "\"atime\" flags (B<MS_NOATIME>, B<MS_NODIRATIME>, B<MS_RELATIME>)  settings "
@@ -26264,7 +26298,7 @@ msgstr ""
 
 #.  (As of 3.18-rc1 (in Al Viro's 2014-08-30 vfs.git#for-next tree))
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:127
+#: man-pages/man7/mount_namespaces.7:142
 msgid ""
 "A file or directory that is a mount point in one namespace that is not a "
 "mount point in another namespace, may be renamed, unlinked, or removed "
@@ -26280,7 +26314,7 @@ msgstr ""
 #
 #.          vfs: Lazily remove mounts on unlinked files and directories.
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:143
+#: man-pages/man7/mount_namespaces.7:158
 msgid ""
 "Previously (before Linux 3.18), attempting to unlink, rename, or remove a "
 "file or directory that was a mount point in another mount namespace would "
@@ -26291,13 +26325,13 @@ msgid ""
 msgstr ""
 
 #. type: SH
-#: man-pages/man7/mount_namespaces.7:143
+#: man-pages/man7/mount_namespaces.7:158
 #, no-wrap
 msgid "SHARED SUBTREES"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:158
+#: man-pages/man7/mount_namespaces.7:173
 msgid ""
 "After the implementation of mount namespaces was completed, experience "
 "showed that the isolation that they provided was, in some cases, too great.  "
@@ -26310,20 +26344,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:163
+#: man-pages/man7/mount_namespaces.7:178
 msgid ""
 "Each mount point is marked (via B<mount>(2))  as having one of the following "
 "I<propagation types>:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/mount_namespaces.7:163
+#: man-pages/man7/mount_namespaces.7:178
 #, no-wrap
 msgid "B<MS_SHARED>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:173
+#: man-pages/man7/mount_namespaces.7:188
 msgid ""
 "This mount point shares events with members of a peer group.  Mount and "
 "unmount events immediately under this mount point will propagate to the "
@@ -26335,26 +26369,26 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/mount_namespaces.7:173
+#: man-pages/man7/mount_namespaces.7:188
 #, no-wrap
 msgid "B<MS_PRIVATE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:177
+#: man-pages/man7/mount_namespaces.7:192
 msgid ""
 "This mount point is private; it does not have a peer group.  Mount and "
 "unmount events do not propagate into or out of this mount point."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/mount_namespaces.7:177
+#: man-pages/man7/mount_namespaces.7:192
 #, no-wrap
 msgid "B<MS_SLAVE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:182
+#: man-pages/man7/mount_namespaces.7:197
 msgid ""
 "Mount and unmount events propagate into this mount point from a (master) "
 "shared peer group.  Mount and unmount events under this mount point do not "
@@ -26362,7 +26396,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:187
+#: man-pages/man7/mount_namespaces.7:202
 msgid ""
 "Note that a mount point can be the slave of another peer group while at the "
 "same time sharing mount and unmount events with a peer group of which it is "
@@ -26371,13 +26405,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/mount_namespaces.7:187
+#: man-pages/man7/mount_namespaces.7:202
 #, no-wrap
 msgid "B<MS_UNBINDABLE>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:196
+#: man-pages/man7/mount_namespaces.7:211
 msgid ""
 "This is like a private mount, and in addition this mount can't be bind "
 "mounted.  Attempts to bind mount this mount (B<mount>(2)  with the "
@@ -26385,7 +26419,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:207
+#: man-pages/man7/mount_namespaces.7:222
 msgid ""
 "When a recursive bind mount (B<mount>(2)  with the B<MS_BIND> and B<MS_REC> "
 "flags) is performed on a directory subtree, any bind mounts within the "
@@ -26394,12 +26428,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:210
+#: man-pages/man7/mount_namespaces.7:225
 msgid "For a discussion of the propagation type assigned to a new mount, see NOTES."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:216
+#: man-pages/man7/mount_namespaces.7:231
 msgid ""
 "The propagation type is a per-mount-point setting; some mount points may be "
 "marked as shared (with each shared mount point being a member of a distinct "
@@ -26407,7 +26441,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:227
+#: man-pages/man7/mount_namespaces.7:242
 msgid ""
 "Note that a mount's propagation type determines whether mounts and unmounts "
 "of mount points I<immediately under> the mount point are propagated.  Thus, "
@@ -26418,33 +26452,33 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:231
+#: man-pages/man7/mount_namespaces.7:246
 msgid ""
 "Members are added to a I<peer group> when a mount point is marked as shared "
 "and either:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:233
+#: man-pages/man7/mount_namespaces.7:248
 msgid ""
 "the mount point is replicated during the creation of a new mount namespace; "
 "or"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:235
+#: man-pages/man7/mount_namespaces.7:250
 msgid "a new bind mount is created from the mount point."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:238
+#: man-pages/man7/mount_namespaces.7:253
 msgid ""
 "In both of these cases, the new mount point joins the peer group of which "
 "the existing mount point is a member."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:244
+#: man-pages/man7/mount_namespaces.7:259
 msgid ""
 "A new peer group is also created when a child mount point is created under "
 "an existing mount point that is marked as shared.  In this case, the new "
@@ -26454,7 +26488,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:249
+#: man-pages/man7/mount_namespaces.7:264
 msgid ""
 "A mount ceases to be a member of a peer group when either the mount is "
 "explicitly unmounted, or when the mount is implicitly unmounted because a "
@@ -26462,7 +26496,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:258
+#: man-pages/man7/mount_namespaces.7:273
 msgid ""
 "The propagation type of the mount points in a mount namespace can be "
 "discovered via the \"optional fields\" exposed in I</proc/[pid]/mountinfo>.  "
@@ -26471,13 +26505,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/mount_namespaces.7:258
+#: man-pages/man7/mount_namespaces.7:273
 #, no-wrap
 msgid "I<shared:X>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:267
+#: man-pages/man7/mount_namespaces.7:282
 msgid ""
 "This mount point is shared in peer group I<X>.  Each peer group has a unique "
 "ID that is automatically generated by the kernel, and all mount points in "
@@ -26487,25 +26521,25 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/mount_namespaces.7:267
+#: man-pages/man7/mount_namespaces.7:282
 #, no-wrap
 msgid "I<master:X>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:271
+#: man-pages/man7/mount_namespaces.7:286
 msgid "This mount is a slave to shared peer group I<X>."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/mount_namespaces.7:271
+#: man-pages/man7/mount_namespaces.7:286
 #, no-wrap
 msgid "I<propagate_from:X> (since Linux 2.6.26)"
 msgstr ""
 
 #.  commit 97e7e0f71d6d948c25f11f0a33878d9356d9579e
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:292
+#: man-pages/man7/mount_namespaces.7:307
 msgid ""
 "This mount is a slave and receives propagation from shared peer group I<X>.  "
 "This tag will always appear in conjunction with a I<master:X> tag.  Here, "
@@ -26516,29 +26550,29 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/mount_namespaces.7:292
+#: man-pages/man7/mount_namespaces.7:307
 #, no-wrap
 msgid "I<unbindable>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:295
+#: man-pages/man7/mount_namespaces.7:310
 msgid "This is an unbindable mount."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:297
+#: man-pages/man7/mount_namespaces.7:312
 msgid "If none of the above tags is present, then this is a private mount."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/mount_namespaces.7:297
+#: man-pages/man7/mount_namespaces.7:312
 #, no-wrap
 msgid "MS_SHARED and MS_PRIVATE example"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:302
+#: man-pages/man7/mount_namespaces.7:317
 msgid ""
 "Suppose that on a terminal in the initial mount namespace, we mark one mount "
 "point as shared and another as private, and then view the mounts in "
@@ -26546,7 +26580,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:310
+#: man-pages/man7/mount_namespaces.7:325
 #, no-wrap
 msgid ""
 "sh1# B<mount --make-shared /mntS>\n"
@@ -26558,7 +26592,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:329
+#: man-pages/man7/mount_namespaces.7:344
 msgid ""
 "From the I</proc/self/mountinfo> output, we see that I</mntS> is a shared "
 "mount in peer group 1, and that I</mntP> has no optional tags, indicating "
@@ -26570,7 +26604,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:334
+#: man-pages/man7/mount_namespaces.7:349
 #, no-wrap
 msgid ""
 "sh1# B<cat /proc/self/mountinfo | awk \\(aq$1 == 61\\(aq | sed \\(aqs/ - "
@@ -26579,14 +26613,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:340
+#: man-pages/man7/mount_namespaces.7:355
 msgid ""
 "On a second terminal, we create a new mount namespace where we run a second "
 "shell and inspect the mounts:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:347
+#: man-pages/man7/mount_namespaces.7:362
 #, no-wrap
 msgid ""
 "$ B<PS1=\\(aqsh2# \\(aq sudo unshare -m --propagation unchanged sh>\n"
@@ -26598,7 +26632,7 @@ msgstr ""
 
 #.  Since util-linux 2.27
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:361
+#: man-pages/man7/mount_namespaces.7:376
 msgid ""
 "The new mount namespace received a copy of the initial mount namespace's "
 "mount points.  These new mount points maintain the same propagation types, "
@@ -26608,14 +26642,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:367
+#: man-pages/man7/mount_namespaces.7:382
 msgid ""
 "In the second terminal, we then create submounts under each of I</mntS> and "
 "I</mntP> and inspect the set-up:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:379
+#: man-pages/man7/mount_namespaces.7:394
 #, no-wrap
 msgid ""
 "sh2# B<mkdir /mntS/a>\n"
@@ -26631,7 +26665,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:387
+#: man-pages/man7/mount_namespaces.7:402
 msgid ""
 "From the above, it can be seen that I</mntS/a> was created as shared "
 "(inheriting this setting from its parent mount) and I</mntP/b> was created "
@@ -26639,7 +26673,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:395
+#: man-pages/man7/mount_namespaces.7:410
 msgid ""
 "Returning to the first terminal and inspecting the set-up, we see that the "
 "new mount created under the shared mount point I</mntS> propagated to its "
@@ -26648,7 +26682,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:402
+#: man-pages/man7/mount_namespaces.7:417
 #, no-wrap
 msgid ""
 "sh1# B<cat /proc/self/mountinfo | grep \\(aq/mnt\\(aq | sed \\(aqs/ - "
@@ -26659,13 +26693,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/mount_namespaces.7:405
+#: man-pages/man7/mount_namespaces.7:420
 #, no-wrap
 msgid "MS_SLAVE example"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:414
+#: man-pages/man7/mount_namespaces.7:429
 msgid ""
 "Making a mount point a slave allows it to receive propagated mount and "
 "unmount events from a master shared peer group, while preventing it from "
@@ -26677,14 +26711,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:417
+#: man-pages/man7/mount_namespaces.7:432
 msgid ""
 "We can demonstrate the effect of slaving by first marking two mount points "
 "as shared in the initial mount namespace:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:425
+#: man-pages/man7/mount_namespaces.7:440
 #, no-wrap
 msgid ""
 "sh1# B<mount --make-shared /mntX>\n"
@@ -26696,14 +26730,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:430
+#: man-pages/man7/mount_namespaces.7:445
 msgid ""
 "On a second terminal, we create a new mount namespace and inspect the mount "
 "points:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:437
+#: man-pages/man7/mount_namespaces.7:452
 #, no-wrap
 msgid ""
 "sh2# B<unshare -m --propagation unchanged sh>\n"
@@ -26714,12 +26748,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:441
+#: man-pages/man7/mount_namespaces.7:456
 msgid "In the new mount namespace, we then mark one of the mount points as a slave:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:448
+#: man-pages/man7/mount_namespaces.7:463
 #, no-wrap
 msgid ""
 "sh2# B<mount --make-slave /mntY>\n"
@@ -26730,21 +26764,21 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:455
+#: man-pages/man7/mount_namespaces.7:470
 msgid ""
 "From the above output, we see that I</mntY> is now a slave mount that is "
 "receiving propagation events from the shared peer group with the ID 2."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:460
+#: man-pages/man7/mount_namespaces.7:475
 msgid ""
 "Continuing in the new namespace, we create submounts under each of I</mntX> "
 "and I</mntY>:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:467
+#: man-pages/man7/mount_namespaces.7:482
 #, no-wrap
 msgid ""
 "sh2# B<mkdir /mntX/a>\n"
@@ -26754,7 +26788,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:477
+#: man-pages/man7/mount_namespaces.7:492
 msgid ""
 "When we inspect the state of the mount points in the new mount namespace, we "
 "see that I</mntX/a> was created as a new shared mount (inheriting the "
@@ -26763,7 +26797,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:485
+#: man-pages/man7/mount_namespaces.7:500
 #, no-wrap
 msgid ""
 "sh2# B<cat /proc/self/mountinfo | grep \\(aq/mnt\\(aq | sed \\(aqs/ - "
@@ -26775,7 +26809,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:496
+#: man-pages/man7/mount_namespaces.7:511
 msgid ""
 "Returning to the first terminal (in the initial mount namespace), we see "
 "that the mount I</mntX/a> propagated to the peer (the shared I</mntX>), but "
@@ -26783,7 +26817,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:503
+#: man-pages/man7/mount_namespaces.7:518
 #, no-wrap
 msgid ""
 "sh1# B<cat /proc/self/mountinfo | grep \\(aq/mnt\\(aq | sed \\(aqs/ - "
@@ -26794,12 +26828,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:509
+#: man-pages/man7/mount_namespaces.7:524
 msgid "Now we create a new mount point under I</mntY> in the first shell:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:519
+#: man-pages/man7/mount_namespaces.7:534
 #, no-wrap
 msgid ""
 "sh1# B<mkdir /mntY/c>\n"
@@ -26812,7 +26846,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:526
+#: man-pages/man7/mount_namespaces.7:541
 msgid ""
 "When we examine the mount points in the second mount namespace, we see that "
 "in this case the new mount has been propagated to the slave mount point, and "
@@ -26820,7 +26854,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:535
+#: man-pages/man7/mount_namespaces.7:550
 #, no-wrap
 msgid ""
 "sh2# B<cat /proc/self/mountinfo | grep \\(aq/mnt\\(aq | sed \\(aqs/ - "
@@ -26833,13 +26867,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/mount_namespaces.7:538
+#: man-pages/man7/mount_namespaces.7:553
 #, no-wrap
 msgid "MS_UNBINDABLE example"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:543
+#: man-pages/man7/mount_namespaces.7:558
 msgid ""
 "One of the primary purposes of unbindable mounts is to avoid the \"mount "
 "point explosion\" problem when repeatedly performing bind mounts of a "
@@ -26848,12 +26882,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:545
+#: man-pages/man7/mount_namespaces.7:560
 msgid "Suppose we have a system with the following mount points:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:552
+#: man-pages/man7/mount_namespaces.7:567
 #, no-wrap
 msgid ""
 "# B<mount | awk \\(aq{print $1, $2, $3}\\(aq>\n"
@@ -26863,7 +26897,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:558
+#: man-pages/man7/mount_namespaces.7:573
 msgid ""
 "Suppose furthermore that we wish to recursively bind mount the root "
 "directory under several users' home directories.  We do this for the first "
@@ -26871,7 +26905,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:569
+#: man-pages/man7/mount_namespaces.7:584
 #, no-wrap
 msgid ""
 "# B<mount --rbind / /home/cecilia/>\n"
@@ -26885,14 +26919,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:574
+#: man-pages/man7/mount_namespaces.7:589
 msgid ""
 "When we repeat this operation for the second user, we start to see the "
 "explosion problem:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:591
+#: man-pages/man7/mount_namespaces.7:606
 #, no-wrap
 msgid ""
 "# B<mount --rbind / /home/henry>\n"
@@ -26912,7 +26946,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:605
+#: man-pages/man7/mount_namespaces.7:620
 msgid ""
 "Under I</home/henry>, we have not only recursively added the I</mntX> and "
 "I</mntY> mounts, but also the recursive mounts of those directories under "
@@ -26922,7 +26956,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:634
+#: man-pages/man7/mount_namespaces.7:649
 #, no-wrap
 msgid ""
 "# B<mount --rbind / /home/otto>\n"
@@ -26954,7 +26988,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:642
+#: man-pages/man7/mount_namespaces.7:657
 msgid ""
 "The mount explosion problem in the above scenario can be avoided by making "
 "each of the new mounts unbindable.  The effect of doing this is that "
@@ -26963,18 +26997,18 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:646
+#: man-pages/man7/mount_namespaces.7:661
 #, no-wrap
 msgid "# B<mount --rbind --make-unbindable / /home/cecilia>\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:650
+#: man-pages/man7/mount_namespaces.7:665
 msgid "Before going further, we show that unbindable mounts are indeed unbindable:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:657
+#: man-pages/man7/mount_namespaces.7:672
 #, no-wrap
 msgid ""
 "# B<mkdir /mntZ>\n"
@@ -26984,7 +27018,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:660
+#: man-pages/man7/mount_namespaces.7:675
 #, no-wrap
 msgid ""
 "       In some cases useful info is found in syslog - try\n"
@@ -26992,12 +27026,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:664
+#: man-pages/man7/mount_namespaces.7:679
 msgid "Now we create unbindable recursive bind mounts for the other two users:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:669
+#: man-pages/man7/mount_namespaces.7:684
 #, no-wrap
 msgid ""
 "# B<mount --rbind --make-unbindable / /home/henry>\n"
@@ -27005,7 +27039,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:676
+#: man-pages/man7/mount_namespaces.7:691
 msgid ""
 "Upon examining the list of mount points, we see there has been no explosion "
 "of mount points, because the unbindable mounts were not replicated under "
@@ -27013,7 +27047,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:692
+#: man-pages/man7/mount_namespaces.7:707
 #, no-wrap
 msgid ""
 "# B<mount | awk \\(aq{print $1, $2, $3}\\(aq>\n"
@@ -27032,13 +27066,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/mount_namespaces.7:695
+#: man-pages/man7/mount_namespaces.7:710
 #, no-wrap
 msgid "Propagation type transitions"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:704
+#: man-pages/man7/mount_namespaces.7:719
 msgid ""
 "The following table shows the effect that applying a new propagation type "
 "(i.e., I<mount --make-xxxx>)  has on the existing propagation type of a "
@@ -27048,159 +27082,159 @@ msgid ""
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:707
+#: man-pages/man7/mount_namespaces.7:722
 #, no-wrap
 msgid "make-shared"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:707
+#: man-pages/man7/mount_namespaces.7:722
 #, no-wrap
 msgid "make-slave"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:707
+#: man-pages/man7/mount_namespaces.7:722
 #, no-wrap
 msgid "make-priv"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:707
+#: man-pages/man7/mount_namespaces.7:722
 #, no-wrap
 msgid "make-unbind"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:708 man-pages/man7/mount_namespaces.7:711
-#: man-pages/man7/mount_namespaces.7:712 man-pages/man7/mount_namespaces.7:756
-#: man-pages/man7/mount_namespaces.7:758 man-pages/man7/mount_namespaces.7:759
-#: man-pages/man7/mount_namespaces.7:800 man-pages/man7/mount_namespaces.7:802
-#: man-pages/man7/mount_namespaces.7:803
+#: man-pages/man7/mount_namespaces.7:723 man-pages/man7/mount_namespaces.7:726
+#: man-pages/man7/mount_namespaces.7:727 man-pages/man7/mount_namespaces.7:771
+#: man-pages/man7/mount_namespaces.7:773 man-pages/man7/mount_namespaces.7:774
+#: man-pages/man7/mount_namespaces.7:815 man-pages/man7/mount_namespaces.7:817
+#: man-pages/man7/mount_namespaces.7:818
 #, no-wrap
 msgid "shared"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:708
+#: man-pages/man7/mount_namespaces.7:723
 #, no-wrap
 msgid "slave/priv [1]"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:708 man-pages/man7/mount_namespaces.7:709
-#: man-pages/man7/mount_namespaces.7:710 man-pages/man7/mount_namespaces.7:711
-#: man-pages/man7/mount_namespaces.7:712
+#: man-pages/man7/mount_namespaces.7:723 man-pages/man7/mount_namespaces.7:724
+#: man-pages/man7/mount_namespaces.7:725 man-pages/man7/mount_namespaces.7:726
+#: man-pages/man7/mount_namespaces.7:727
 #, no-wrap
 msgid "priv"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:708 man-pages/man7/mount_namespaces.7:709
-#: man-pages/man7/mount_namespaces.7:710 man-pages/man7/mount_namespaces.7:711
-#: man-pages/man7/mount_namespaces.7:712 man-pages/man7/mount_namespaces.7:756
-#: man-pages/man7/mount_namespaces.7:800
+#: man-pages/man7/mount_namespaces.7:723 man-pages/man7/mount_namespaces.7:724
+#: man-pages/man7/mount_namespaces.7:725 man-pages/man7/mount_namespaces.7:726
+#: man-pages/man7/mount_namespaces.7:727 man-pages/man7/mount_namespaces.7:771
+#: man-pages/man7/mount_namespaces.7:815
 #, no-wrap
 msgid "unbind"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:709 man-pages/man7/mount_namespaces.7:710
-#: man-pages/man7/mount_namespaces.7:756 man-pages/man7/mount_namespaces.7:759
-#: man-pages/man7/mount_namespaces.7:800 man-pages/man7/mount_namespaces.7:803
+#: man-pages/man7/mount_namespaces.7:724 man-pages/man7/mount_namespaces.7:725
+#: man-pages/man7/mount_namespaces.7:771 man-pages/man7/mount_namespaces.7:774
+#: man-pages/man7/mount_namespaces.7:815 man-pages/man7/mount_namespaces.7:818
 #, no-wrap
 msgid "slave"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:709 man-pages/man7/mount_namespaces.7:710
-#: man-pages/man7/mount_namespaces.7:758 man-pages/man7/mount_namespaces.7:802
+#: man-pages/man7/mount_namespaces.7:724 man-pages/man7/mount_namespaces.7:725
+#: man-pages/man7/mount_namespaces.7:773 man-pages/man7/mount_namespaces.7:817
 #, no-wrap
 msgid "slave+shared"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:709
+#: man-pages/man7/mount_namespaces.7:724
 #, no-wrap
 msgid "slave [2]"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:711 man-pages/man7/mount_namespaces.7:756
-#: man-pages/man7/mount_namespaces.7:759 man-pages/man7/mount_namespaces.7:800
-#: man-pages/man7/mount_namespaces.7:803
+#: man-pages/man7/mount_namespaces.7:726 man-pages/man7/mount_namespaces.7:771
+#: man-pages/man7/mount_namespaces.7:774 man-pages/man7/mount_namespaces.7:815
+#: man-pages/man7/mount_namespaces.7:818
 #, no-wrap
 msgid "private"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:711
+#: man-pages/man7/mount_namespaces.7:726
 #, no-wrap
 msgid "priv [2]"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:712 man-pages/man7/mount_namespaces.7:803
+#: man-pages/man7/mount_namespaces.7:727 man-pages/man7/mount_namespaces.7:818
 #, no-wrap
 msgid "unbindable"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:712
+#: man-pages/man7/mount_namespaces.7:727
 #, no-wrap
 msgid "unbind [2]"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:716
+#: man-pages/man7/mount_namespaces.7:731
 msgid "Note the following details to the table:"
 msgstr ""
 
 #. type: IP
-#: man-pages/man7/mount_namespaces.7:716 man-pages/man7/operator.7:50
+#: man-pages/man7/mount_namespaces.7:731 man-pages/man7/operator.7:50
 #: man-pages/man7/operator.7:70
 #, no-wrap
 msgid "[1]"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:719
+#: man-pages/man7/mount_namespaces.7:734
 msgid ""
 "If a shared mount is the only mount in its peer group, making it a slave "
 "automatically makes it private."
 msgstr ""
 
 #. type: IP
-#: man-pages/man7/mount_namespaces.7:719 man-pages/man7/operator.7:51
+#: man-pages/man7/mount_namespaces.7:734 man-pages/man7/operator.7:51
 #: man-pages/man7/operator.7:73
 #, no-wrap
 msgid "[2]"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:722
+#: man-pages/man7/mount_namespaces.7:737
 msgid "Slaving a nonshared mount has no effect on the mount."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/mount_namespaces.7:722
+#: man-pages/man7/mount_namespaces.7:737
 #, no-wrap
 msgid "Bind (MS_BIND) semantics"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:724 man-pages/man7/mount_namespaces.7:772
+#: man-pages/man7/mount_namespaces.7:739 man-pages/man7/mount_namespaces.7:787
 msgid "Suppose that the following command is performed:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:728
+#: man-pages/man7/mount_namespaces.7:743
 #, no-wrap
 msgid "mount --bind A/a B/b\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:750
+#: man-pages/man7/mount_namespaces.7:765
 msgid ""
 "Here, I<A> is the source mount point, I<B> is the destination mount point, "
 "I<a> is a subdirectory path under the mount point I<A>, and I<b> is a "
@@ -27210,38 +27244,38 @@ msgid ""
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:755 man-pages/man7/mount_namespaces.7:799
+#: man-pages/man7/mount_namespaces.7:770 man-pages/man7/mount_namespaces.7:814
 #, no-wrap
 msgid "source(A)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:758 man-pages/man7/mount_namespaces.7:802
+#: man-pages/man7/mount_namespaces.7:773 man-pages/man7/mount_namespaces.7:817
 #, no-wrap
 msgid "dest(B)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:758 man-pages/man7/mount_namespaces.7:802
+#: man-pages/man7/mount_namespaces.7:773 man-pages/man7/mount_namespaces.7:817
 #, no-wrap
 msgid "shared    |"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:758 man-pages/man7/mount_namespaces.7:759
-#: man-pages/man7/mount_namespaces.7:802
+#: man-pages/man7/mount_namespaces.7:773 man-pages/man7/mount_namespaces.7:774
+#: man-pages/man7/mount_namespaces.7:817
 #, no-wrap
 msgid "invalid"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/mount_namespaces.7:759 man-pages/man7/mount_namespaces.7:803
+#: man-pages/man7/mount_namespaces.7:774 man-pages/man7/mount_namespaces.7:818
 #, no-wrap
 msgid "nonshared |"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:765
+#: man-pages/man7/mount_namespaces.7:780
 msgid ""
 "Note that a recursive bind of a subtree follows the same semantics as for a "
 "bind operation on each mount in the subtree.  (Unbindable mounts are "
@@ -27249,26 +27283,26 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:770 man-pages/man7/mount_namespaces.7:812
+#: man-pages/man7/mount_namespaces.7:785 man-pages/man7/mount_namespaces.7:827
 msgid ""
 "For further details, see I<Documentation/filesystems/sharedsubtree.txt> in "
 "the kernel source tree."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/mount_namespaces.7:770
+#: man-pages/man7/mount_namespaces.7:785
 #, no-wrap
 msgid "Move (MS_MOVE) semantics"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:776
+#: man-pages/man7/mount_namespaces.7:791
 #, no-wrap
 msgid "mount --move A B/b\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:794
+#: man-pages/man7/mount_namespaces.7:809
 msgid ""
 "Here, I<A> is the source mount point, I<B> is the destination mount point, "
 "and I<b> is a subdirectory path under the mount point I<B>.  The propagation "
@@ -27277,29 +27311,29 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:807
+#: man-pages/man7/mount_namespaces.7:822
 msgid "Note: moving a mount that resides under a shared mount is invalid."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/mount_namespaces.7:812
+#: man-pages/man7/mount_namespaces.7:827
 #, no-wrap
 msgid "Mount semantics"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:814
+#: man-pages/man7/mount_namespaces.7:829
 msgid "Suppose that we use the following command to create a mount point:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:818
+#: man-pages/man7/mount_namespaces.7:833
 #, no-wrap
 msgid "mount device B/b\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:833
+#: man-pages/man7/mount_namespaces.7:848
 msgid ""
 "Here, I<B> is the destination mount point, and I<b> is a subdirectory path "
 "under the mount point I<B>.  The propagation type of the resulting mount, "
@@ -27308,24 +27342,24 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/mount_namespaces.7:833
+#: man-pages/man7/mount_namespaces.7:848
 #, no-wrap
 msgid "Unmount semantics"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:835
+#: man-pages/man7/mount_namespaces.7:850
 msgid "Suppose that we use the following command to tear down a mount point:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:839
+#: man-pages/man7/mount_namespaces.7:854
 #, no-wrap
 msgid "unmount A\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:860
+#: man-pages/man7/mount_namespaces.7:875
 msgid ""
 "Here, I<A> is a mount point on I<B/b>, where I<B> is the parent mount and "
 "I<b> is a subdirectory path under the mount point I<B>.  If B<B> is shared, "
@@ -27335,13 +27369,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/mount_namespaces.7:860
+#: man-pages/man7/mount_namespaces.7:875
 #, no-wrap
 msgid "The /proc/[pid]/mountinfo propagate_from tag"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:870
+#: man-pages/man7/mount_namespaces.7:885
 msgid ""
 "The I<propagate_from:X> tag is shown in the optional fields of a "
 "I</proc/[pid]/mountinfo> record in cases where a process can't see a slave's "
@@ -27351,7 +27385,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:885
+#: man-pages/man7/mount_namespaces.7:900
 msgid ""
 "In the following example, we first create a two-link master-slave chain "
 "between the mounts I</mnt>, I</tmp/etc>, and I</mnt/tmp/etc>.  Then the "
@@ -27362,7 +27396,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:898
+#: man-pages/man7/mount_namespaces.7:913
 msgid ""
 "First, we bind mount the root directory onto I</mnt> and then bind mount "
 "I</proc> at I</mnt/proc> so that after the later B<chroot>(1)  the "
@@ -27371,7 +27405,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:904
+#: man-pages/man7/mount_namespaces.7:919
 #, no-wrap
 msgid ""
 "# B<mkdir -p /mnt/proc>\n"
@@ -27380,14 +27414,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:910
+#: man-pages/man7/mount_namespaces.7:925
 msgid ""
 "Next, we ensure that the I</mnt> mount is a shared mount in a new peer group "
 "(with no peers):"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:918
+#: man-pages/man7/mount_namespaces.7:933
 #, no-wrap
 msgid ""
 "# B<mount --make-private /mnt>  # Isolate from any previous peer group\n"
@@ -27399,12 +27433,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:925
+#: man-pages/man7/mount_namespaces.7:940
 msgid "Next, we bind mount I</mnt/etc> onto I</tmp/etc>:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:934
+#: man-pages/man7/mount_namespaces.7:949
 #, no-wrap
 msgid ""
 "# B<mkdir -p /tmp/etc>\n"
@@ -27417,7 +27451,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:946
+#: man-pages/man7/mount_namespaces.7:961
 msgid ""
 "Initially, these two mount points are in the same peer group, but we then "
 "make the I</tmp/etc> a slave of I</mnt/etc>, and then make I</tmp/etc> "
@@ -27426,7 +27460,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:955
+#: man-pages/man7/mount_namespaces.7:970
 #, no-wrap
 msgid ""
 "# B<mount --make-slave /tmp/etc>\n"
@@ -27439,7 +27473,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:967
+#: man-pages/man7/mount_namespaces.7:982
 msgid ""
 "Then we bind mount I</tmp/etc> onto I</mnt/tmp/etc>.  Again, the two mount "
 "points are initially in the same peer group, but we then make "
@@ -27447,7 +27481,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:978
+#: man-pages/man7/mount_namespaces.7:993
 #, no-wrap
 msgid ""
 "# B<mkdir -p /mnt/tmp/etc>\n"
@@ -27462,34 +27496,34 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:987
+#: man-pages/man7/mount_namespaces.7:1002
 msgid ""
 "From the above, we see that I</mnt> is the master of the slave I</tmp/etc>, "
 "which in turn is the master of the slave I</mnt/tmp/etc>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:994
+#: man-pages/man7/mount_namespaces.7:1009
 msgid ""
 "We then B<chroot>(1)  to the I</mnt> directory, which renders the mount with "
 "ID 267 unreachable from the (new) root directory:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:998
+#: man-pages/man7/mount_namespaces.7:1013
 #, no-wrap
 msgid "# B<chroot /mnt>\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1003
+#: man-pages/man7/mount_namespaces.7:1018
 msgid ""
 "When we examine the state of the mounts inside the chroot-ed environment, we "
 "see the following:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1010
+#: man-pages/man7/mount_namespaces.7:1025
 #, no-wrap
 msgid ""
 "# B<cat /proc/self/mountinfo | sed \\(aqs/ - .*//\\(aq>\n"
@@ -27499,7 +27533,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1025
+#: man-pages/man7/mount_namespaces.7:1040
 msgid ""
 "Above, we see that the mount with ID 273 is a slave whose master is the peer "
 "group 105.  The mount point for that master is unreachable, and so a "
@@ -27510,12 +27544,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1027
+#: man-pages/man7/mount_namespaces.7:1042
 msgid "Mount namespaces first appeared in Linux 2.4.19."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1040
+#: man-pages/man7/mount_namespaces.7:1055
 msgid ""
 "The propagation type assigned to a new mount point depends on the "
 "propagation type of the parent mount.  If the mount point has a parent "
@@ -27526,7 +27560,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1053
+#: man-pages/man7/mount_namespaces.7:1068
 msgid ""
 "Notwithstanding the fact that the default propagation type for new mount "
 "points is in many cases B<MS_PRIVATE>, B<MS_SHARED> is typically more "
@@ -27536,7 +27570,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1068
+#: man-pages/man7/mount_namespaces.7:1083
 msgid ""
 "Since, when one uses B<unshare>(1)  to create a mount namespace, the goal is "
 "commonly to provide full isolation of the mount points in the new namespace, "
@@ -27547,20 +27581,36 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1072
+#: man-pages/man7/mount_namespaces.7:1087
 #, no-wrap
 msgid "mount --make-rprivate /\n"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1079
+#: man-pages/man7/mount_namespaces.7:1094
 msgid ""
 "To prevent this, one can use the I<--propagation\\ unchanged> option to "
 "B<unshare>(1)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1086
+#: man-pages/man7/mount_namespaces.7:1108
+msgid ""
+"An application that creates a new mount namespace directly using B<clone>(2)  "
+"or B<unshare>(2)  may desire to prevent propagation of mount events to other "
+"mount namespaces (as is is done by B<unshare>(1)).  This can be done by "
+"changing the propagation type of mount points in the new namespace to either "
+"B<MS_SLAVE> or B<MS_PRIVATE>.  using a call such as the following:"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/mount_namespaces.7:1112
+#, no-wrap
+msgid "mount(NULL, \"/\", MS_SLAVE | MS_REC, NULL);\n"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/mount_namespaces.7:1121
 msgid ""
 "For a discussion of propagation types when moving mounts (B<MS_MOVE>)  and "
 "creating bind mounts (B<MS_BIND>), see "
@@ -27568,12 +27618,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1089
+#: man-pages/man7/mount_namespaces.7:1124
 msgid "See B<pivot_root>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1102
+#: man-pages/man7/mount_namespaces.7:1137
 msgid ""
 "B<unshare>(1), B<clone>(2), B<mount>(2), B<pivot_root>(2), B<setns>(2), "
 "B<umount>(2), B<unshare>(2), B<proc>(5), B<namespaces>(7), "
@@ -27581,7 +27631,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/mount_namespaces.7:1104
+#: man-pages/man7/mount_namespaces.7:1139
 msgid "I<Documentation/filesystems/sharedsubtree.txt> in the kernel source tree."
 msgstr ""
 
@@ -27780,19 +27830,19 @@ msgstr ""
 #: man-pages/man7/pthreads.7:84 man-pages/man7/pthreads.7:88
 #: man-pages/man7/pthreads.7:91 man-pages/man7/pthreads.7:95
 #: man-pages/man7/pthreads.7:98 man-pages/man7/pthreads.7:103
-#: man-pages/man7/pthreads.7:106 man-pages/man7/pthreads.7:687
-#: man-pages/man7/pthreads.7:694 man-pages/man7/pthreads.7:706
-#: man-pages/man7/pthreads.7:716 man-pages/man7/pthreads.7:720
-#: man-pages/man7/pthreads.7:729 man-pages/man7/pthreads.7:739
-#: man-pages/man7/pthreads.7:746 man-pages/man7/pthreads.7:753
-#: man-pages/man7/pthreads.7:755 man-pages/man7/pthreads.7:758
-#: man-pages/man7/pthreads.7:764 man-pages/man7/pthreads.7:767
-#: man-pages/man7/pthreads.7:769 man-pages/man7/pthreads.7:771
-#: man-pages/man7/pthreads.7:781 man-pages/man7/pthreads.7:803
-#: man-pages/man7/pthreads.7:812 man-pages/man7/pthreads.7:818
-#: man-pages/man7/pthreads.7:820 man-pages/man7/pthreads.7:822
-#: man-pages/man7/pthreads.7:826 man-pages/man7/pthreads.7:831
-#: man-pages/man7/pthreads.7:839 man-pages/man7/rtnetlink.7:99
+#: man-pages/man7/pthreads.7:106 man-pages/man7/pthreads.7:697
+#: man-pages/man7/pthreads.7:704 man-pages/man7/pthreads.7:716
+#: man-pages/man7/pthreads.7:726 man-pages/man7/pthreads.7:730
+#: man-pages/man7/pthreads.7:739 man-pages/man7/pthreads.7:749
+#: man-pages/man7/pthreads.7:756 man-pages/man7/pthreads.7:763
+#: man-pages/man7/pthreads.7:765 man-pages/man7/pthreads.7:768
+#: man-pages/man7/pthreads.7:774 man-pages/man7/pthreads.7:777
+#: man-pages/man7/pthreads.7:779 man-pages/man7/pthreads.7:781
+#: man-pages/man7/pthreads.7:791 man-pages/man7/pthreads.7:813
+#: man-pages/man7/pthreads.7:822 man-pages/man7/pthreads.7:828
+#: man-pages/man7/pthreads.7:830 man-pages/man7/pthreads.7:832
+#: man-pages/man7/pthreads.7:836 man-pages/man7/pthreads.7:841
+#: man-pages/man7/pthreads.7:849 man-pages/man7/rtnetlink.7:99
 #: man-pages/man7/rtnetlink.7:166 man-pages/man7/rtnetlink.7:315
 #: man-pages/man7/rtnetlink.7:433
 #, no-wrap
@@ -29458,9 +29508,8 @@ msgstr ""
 
 #. type: TH
 #: man-pages/man7/user-session-keyring.7:12 man-pages/man7/process-keyring.7:12
-#: man-pages/man7/signal-safety.7:25 man-pages/man7/persistent-keyring.7:12
-#: man-pages/man7/thread-keyring.7:12 man-pages/man7/random.7:31
-#: man-pages/man7/user-keyring.7:12
+#: man-pages/man7/persistent-keyring.7:12 man-pages/man7/thread-keyring.7:12
+#: man-pages/man7/random.7:31 man-pages/man7/user-keyring.7:12
 #, no-wrap
 msgid "2017-03-13"
 msgstr ""
@@ -35286,8 +35335,8 @@ msgstr ""
 #. type: IP
 #: man-pages/man7/ascii.7:98 man-pages/man7/user_namespaces.7:584
 #: man-pages/man7/user_namespaces.7:593 man-pages/man7/user_namespaces.7:601
-#: man-pages/man7/user_namespaces.7:604 man-pages/man7/namespaces.7:310
-#: man-pages/man7/namespaces.7:312 man-pages/man7/namespaces.7:318
+#: man-pages/man7/user_namespaces.7:604 man-pages/man7/namespaces.7:331
+#: man-pages/man7/namespaces.7:333 man-pages/man7/namespaces.7:339
 #, no-wrap
 msgid "+"
 msgstr ""
@@ -37659,12 +37708,6 @@ msgstr ""
 msgid "SVIPC"
 msgstr ""
 
-#. type: TH
-#: man-pages/man7/sysvipc.7:40
-#, no-wrap
-msgid "2016-03-15"
-msgstr ""
-
 #. type: Plain text
 #: man-pages/man7/sysvipc.7:43
 msgid "sysvipc - System V interprocess communication mechanisms"
@@ -38463,7 +38506,7 @@ msgid "One cannot walk down past the root: \"/..\" is the same as \"/\"."
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/path_resolution.7:149 man-pages/man7/namespaces.7:46
+#: man-pages/man7/path_resolution.7:149 man-pages/man7/namespaces.7:67
 #, no-wrap
 msgid "Mount points"
 msgstr ""
@@ -40532,10 +40575,8 @@ msgid ""
 "receiving process's PID namespace."
 msgstr ""
 
-#
-#.  ==================== UTS namespaces ====================
 #. type: Plain text
-#: man-pages/man7/pid_namespaces.7:393 man-pages/man7/namespaces.7:362
+#: man-pages/man7/pid_namespaces.7:393
 msgid "See B<user_namespaces>(7)."
 msgstr ""
 
@@ -41859,20 +41900,29 @@ msgid ""
 "remove B<fork>(2)  from the list of async-signal-safe functions."
 msgstr ""
 
+#. type: Plain text
+#: man-pages/man7/signal-safety.7:322
+msgid ""
+"Asynchronous signal handlers that call functions which are cancellation "
+"points and nest over regions of deferred cancellation may trigger "
+"cancellation whose behavior is as if asynchronous cancellation had occurred "
+"and may cause application state to become inconsistent."
+msgstr ""
+
 #. type: SS
-#: man-pages/man7/signal-safety.7:317
+#: man-pages/man7/signal-safety.7:322
 #, no-wrap
 msgid "Deviations in the GNU C library"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal-safety.7:320
+#: man-pages/man7/signal-safety.7:325
 msgid "The following known deviations from the standard occur in the GNU C library:"
 msgstr ""
 
 #.  https://sourceware.org/bugzilla/show_bug.cgi?id=19534
 #. type: Plain text
-#: man-pages/man7/signal-safety.7:330
+#: man-pages/man7/signal-safety.7:335
 msgid ""
 "Before glibc 2.24, B<execl>(3)  and B<execle>(3)  employed B<realloc>(3)  "
 "internally and were consequently not async-signal-safe.  This was fixed in "
@@ -41881,14 +41931,14 @@ msgstr ""
 
 #.  FIXME . https://sourceware.org/bugzilla/show_bug.cgi?id=13172
 #. type: Plain text
-#: man-pages/man7/signal-safety.7:337
+#: man-pages/man7/signal-safety.7:342
 msgid ""
 "The glibc implementation of B<aio_suspend>(3)  is not async-signal-safe "
 "because it uses B<pthread_mutex_lock>(3)  internally."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal-safety.7:340
+#: man-pages/man7/signal-safety.7:345
 msgid "B<sigaction>(2), B<signal>(7), B<standards>(7)"
 msgstr ""
 
@@ -42197,7 +42247,7 @@ msgid "E<.UR http://www.ietf.org\\:/rfc\\:/rfc1178.txt> IETF RFC\\ 1178 E<.UE>"
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/nptl.7:26 man-pages/man7/pthreads.7:790
+#: man-pages/man7/nptl.7:26 man-pages/man7/pthreads.7:800
 #, no-wrap
 msgid "NPTL"
 msgstr ""
@@ -58729,17 +58779,17 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/signal.7:871
+#: man-pages/man7/signal.7:872
 msgid ""
 "B<kill>(1), B<clone>(2), B<getrlimit>(2), B<kill>(2), B<restart_syscall>(2), "
-"B<rt_sigqueueinfo>(2), B<setitimer>(2), B<setrlimit>(2), B<sgetmask>(2), "
-"B<sigaction>(2), B<sigaltstack>(2), B<signal>(2), B<signalfd>(2), "
-"B<sigpending>(2), B<sigprocmask>(2), B<sigreturn>(2), B<sigsuspend>(2), "
-"B<sigwaitinfo>(2), B<abort>(3), B<bsd_signal>(3), B<killpg>(3), "
-"B<longjmp>(3), B<pthread_sigqueue>(3), B<raise>(3), B<sigqueue>(3), "
-"B<sigset>(3), B<sigsetops>(3), B<sigvec>(3), B<sigwait>(3), B<strsignal>(3), "
-"B<sysv_signal>(3), B<core>(5), B<proc>(5), B<nptl>(7), B<pthreads>(7), "
-"B<sigevent>(7)"
+"B<rt_sigqueueinfo>(2), B<pidfd_send_signal>(2), B<setitimer>(2), "
+"B<setrlimit>(2), B<sgetmask>(2), B<sigaction>(2), B<sigaltstack>(2), "
+"B<signal>(2), B<signalfd>(2), B<sigpending>(2), B<sigprocmask>(2), "
+"B<sigreturn>(2), B<sigsuspend>(2), B<sigwaitinfo>(2), B<abort>(3), "
+"B<bsd_signal>(3), B<killpg>(3), B<longjmp>(3), B<pthread_sigqueue>(3), "
+"B<raise>(3), B<sigqueue>(3), B<sigset>(3), B<sigsetops>(3), B<sigvec>(3), "
+"B<sigwait>(3), B<strsignal>(3), B<sysv_signal>(3), B<core>(5), B<proc>(5), "
+"B<nptl>(7), B<pthreads>(7), B<sigevent>(7)"
 msgstr ""
 
 #. type: TH
@@ -61807,6 +61857,15 @@ msgid ""
 "wscanf()\n"
 msgstr ""
 
+#. type: Plain text
+#: man-pages/man7/pthreads.7:567
+msgid ""
+"An implementation may also mark other functions not specified in the "
+"standard as cancellation points.  In particular, an implementation is likely "
+"to mark any nonstandard function that may block as a cancellation point.  "
+"(This includes most functions that can touch files.)"
+msgstr ""
+
 #.  So, scanning "cancellation point" comments in the glibc 2.8 header
 #.  files, it looks as though at least the following nonstandard
 #.  functions are cancellation points:
@@ -61898,61 +61957,64 @@ msgstr ""
 #.  vsyslog
 #.  vwscanf
 #. type: Plain text
-#: man-pages/man7/pthreads.7:657
+#: man-pages/man7/pthreads.7:667
 msgid ""
-"An implementation may also mark other functions not specified in the "
-"standard as cancellation points.  In particular, an implementation is likely "
-"to mark any nonstandard function that may block as a cancellation point.  "
-"(This includes most functions that can touch files.)"
+"It should be noted that even if an application is not using asynchronous "
+"cancellation, that calling a function from the above list from an "
+"asynchronous signal handler may cause the equivalent of asynchronous "
+"cancellation.  The underlying user code may not expect asynchronous "
+"cancellation and the state of the user data may become inconsistent.  "
+"Therefore signals should be used with caution when entering a region of "
+"deferred cancellation."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/pthreads.7:657
+#: man-pages/man7/pthreads.7:667
 #, no-wrap
 msgid "Compiling on Linux"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:660
+#: man-pages/man7/pthreads.7:670
 msgid ""
 "On Linux, programs that use the Pthreads API should be compiled using I<cc "
 "-pthread>."
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/pthreads.7:660
+#: man-pages/man7/pthreads.7:670
 #, no-wrap
 msgid "Linux implementations of POSIX threads"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:663
+#: man-pages/man7/pthreads.7:673
 msgid ""
 "Over time, two threading implementations have been provided by the GNU C "
 "library on Linux:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/pthreads.7:663
+#: man-pages/man7/pthreads.7:673
 #, no-wrap
 msgid "B<LinuxThreads>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:667
+#: man-pages/man7/pthreads.7:677
 msgid ""
 "This is the original Pthreads implementation.  Since glibc 2.4, this "
 "implementation is no longer supported."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/pthreads.7:667
+#: man-pages/man7/pthreads.7:677
 #, no-wrap
 msgid "B<NPTL> (Native POSIX Threads Library)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:675
+#: man-pages/man7/pthreads.7:685
 msgid ""
 "This is the modern Pthreads implementation.  By comparison with "
 "LinuxThreads, NPTL provides closer conformance to the requirements of the "
@@ -61962,7 +62024,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:685
+#: man-pages/man7/pthreads.7:695
 msgid ""
 "Both of these are so-called 1:1 implementations, meaning that each thread "
 "maps to a kernel scheduling entity.  Both threading implementations employ "
@@ -61972,18 +62034,18 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/pthreads.7:685
+#: man-pages/man7/pthreads.7:695
 #, no-wrap
 msgid "LinuxThreads"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:687
+#: man-pages/man7/pthreads.7:697
 msgid "The notable features of this implementation are the following:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:694
+#: man-pages/man7/pthreads.7:704
 msgid ""
 "In addition to the main (initial) thread, and the threads that the program "
 "creates using B<pthread_create>(3), the implementation creates a \"manager\" "
@@ -61992,7 +62054,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:706
+#: man-pages/man7/pthreads.7:716
 msgid ""
 "Signals are used internally by the implementation.  On Linux 2.2 and later, "
 "the first three real-time signals are used (see also B<signal>(7)).  On "
@@ -62001,7 +62063,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:713
+#: man-pages/man7/pthreads.7:723
 msgid ""
 "Threads do not share process IDs.  (In effect, LinuxThreads threads are "
 "implemented as processes which share more information than usual, but which "
@@ -62010,19 +62072,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:716
+#: man-pages/man7/pthreads.7:726
 msgid ""
 "The LinuxThreads implementation deviates from the POSIX.1 specification in a "
 "number of ways, including the following:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:720
+#: man-pages/man7/pthreads.7:730
 msgid "Calls to B<getpid>(2)  return a different value in each thread."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:729
+#: man-pages/man7/pthreads.7:739
 msgid ""
 "Calls to B<getppid>(2)  in threads other than the main thread return the "
 "process ID of the manager thread; instead B<getppid>(2)  in these threads "
@@ -62030,7 +62092,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:739
+#: man-pages/man7/pthreads.7:749
 msgid ""
 "When one thread creates a new child process using B<fork>(2), any thread "
 "should be able to B<wait>(2)  on the child.  However, the implementation "
@@ -62038,7 +62100,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:746
+#: man-pages/man7/pthreads.7:756
 msgid ""
 "When a thread calls B<execve>(2), all other threads are terminated (as "
 "required by POSIX.1).  However, the resulting process has the same PID as "
@@ -62047,7 +62109,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:753
+#: man-pages/man7/pthreads.7:763
 msgid ""
 "Threads do not share user and group IDs.  This can cause complications with "
 "set-user-ID programs and can cause failures in Pthreads functions if an "
@@ -62055,29 +62117,29 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:755
+#: man-pages/man7/pthreads.7:765
 msgid "Threads do not share a common session ID and process group ID."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:758
+#: man-pages/man7/pthreads.7:768
 msgid "Threads do not share record locks created using B<fcntl>(2)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:764
+#: man-pages/man7/pthreads.7:774
 msgid ""
 "The information returned by B<times>(2)  and B<getrusage>(2)  is per-thread "
 "rather than process-wide."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:767
+#: man-pages/man7/pthreads.7:777
 msgid "Threads do not share semaphore undo values (see B<semop>(2))."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:769
+#: man-pages/man7/pthreads.7:779
 msgid "Threads do not share interval timers."
 msgstr ""
 
@@ -62087,12 +62149,12 @@ msgstr ""
 #.  "make setpriority POSIX compliant; introduce PRIO_THREAD extension"
 #.  Monitor this to see if it makes it into mainline.
 #. type: Plain text
-#: man-pages/man7/pthreads.7:771 man-pages/man7/pthreads.7:810
+#: man-pages/man7/pthreads.7:781 man-pages/man7/pthreads.7:820
 msgid "Threads do not share a common nice value."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:781
+#: man-pages/man7/pthreads.7:791
 msgid ""
 "POSIX.1 distinguishes the notions of signals that are directed to the "
 "process as a whole and signals that are directed to individual threads.  "
@@ -62103,7 +62165,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:790
+#: man-pages/man7/pthreads.7:800
 msgid ""
 "Threads have distinct alternate signal stack settings.  However, a new "
 "thread's alternate signal stack settings are copied from the thread that "
@@ -62114,7 +62176,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:795
+#: man-pages/man7/pthreads.7:805
 msgid ""
 "With NPTL, all of the threads in a process are placed in the same thread "
 "group; all members of a thread group share the same PID.  NPTL does not "
@@ -62122,55 +62184,55 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:801
+#: man-pages/man7/pthreads.7:811
 msgid ""
 "NPTL makes internal use of the first two real-time signals; these signals "
 "cannot be used in applications.  See B<nptl>(7)  for further details."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:803
+#: man-pages/man7/pthreads.7:813
 msgid "NPTL still has at least one nonconformance with POSIX.1:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:812
+#: man-pages/man7/pthreads.7:822
 msgid "Some NPTL nonconformances occur only with older kernels:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:818
+#: man-pages/man7/pthreads.7:828
 msgid ""
 "The information returned by B<times>(2)  and B<getrusage>(2)  is per-thread "
 "rather than process-wide (fixed in kernel 2.6.9)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:820
+#: man-pages/man7/pthreads.7:830
 msgid "Threads do not share resource limits (fixed in kernel 2.6.10)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:822
+#: man-pages/man7/pthreads.7:832
 msgid "Threads do not share interval timers (fixed in kernel 2.6.12)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:826
+#: man-pages/man7/pthreads.7:836
 msgid ""
 "Only the main thread is permitted to start a new session using B<setsid>(2)  "
 "(fixed in kernel 2.6.16)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:831
+#: man-pages/man7/pthreads.7:841
 msgid ""
 "Only the main thread is permitted to make the process into a process group "
 "leader using B<setpgid>(2)  (fixed in kernel 2.6.16)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:837
+#: man-pages/man7/pthreads.7:847
 msgid ""
 "Threads have distinct alternate signal stack settings.  However, a new "
 "thread's alternate signal stack settings are copied from the thread that "
@@ -62179,12 +62241,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:839
+#: man-pages/man7/pthreads.7:849
 msgid "Note the following further points about the NPTL implementation:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:853
+#: man-pages/man7/pthreads.7:863
 msgid ""
 "If the stack size soft resource limit (see the description of "
 "B<RLIMIT_STACK> in B<setrlimit>(2))  is set to a value other than "
@@ -62195,20 +62257,20 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/pthreads.7:853
+#: man-pages/man7/pthreads.7:863
 #, no-wrap
 msgid "Determining the threading implementation"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:858
+#: man-pages/man7/pthreads.7:868
 msgid ""
 "Since glibc 2.3.2, the B<getconf>(1)  command can be used to determine the "
 "system's threading implementation, for example:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:863
+#: man-pages/man7/pthreads.7:873
 #, no-wrap
 msgid ""
 "bash$ getconf GNU_LIBPTHREAD_VERSION\n"
@@ -62216,14 +62278,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:868
+#: man-pages/man7/pthreads.7:878
 msgid ""
 "With older glibc versions, a command such as the following should be "
 "sufficient to determine the default threading implementation:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:874
+#: man-pages/man7/pthreads.7:884
 #, no-wrap
 msgid ""
 "bash$ $( ldd /bin/ls | grep libc.so | awk \\(aq{print $3}\\(aq ) | \\e\n"
@@ -62232,13 +62294,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/pthreads.7:876
+#: man-pages/man7/pthreads.7:886
 #, no-wrap
 msgid "Selecting the threading implementation: LD_ASSUME_KERNEL"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:891
+#: man-pages/man7/pthreads.7:901
 msgid ""
 "On systems with a glibc that supports both LinuxThreads and NPTL (i.e., "
 "glibc 2.3.I<x>), the B<LD_ASSUME_KERNEL> environment variable can be used to "
@@ -62252,7 +62314,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:897
+#: man-pages/man7/pthreads.7:907
 #, no-wrap
 msgid ""
 "bash$ $( LD_ASSUME_KERNEL=2.2.5 ldd /bin/ls | grep libc.so | \\e\n"
@@ -62262,14 +62324,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:912
+#: man-pages/man7/pthreads.7:922
 msgid ""
 "B<clone>(2), B<fork>(2), B<futex>(2), B<gettid>(2), B<proc>(5), "
 "B<attributes>(7), B<futex>(7), B<nptl>(7), B<sigevent>(7), B<signal>(7)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/pthreads.7:940
+#: man-pages/man7/pthreads.7:950
 msgid ""
 "Various Pthreads manual pages, for example: B<pthread_atfork>(3), "
 "B<pthread_attr_init>(3), B<pthread_cancel>(3), B<pthread_cleanup_push>(3), "
@@ -80574,178 +80636,256 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:39
-msgid "Linux provides the following namespaces:"
+#: man-pages/man7/namespaces.7:43
+msgid ""
+"This page provides pointers to information on the various namespace types, "
+"describes the associated I</proc> files, and summarizes the APIs for working "
+"with namespaces."
+msgstr ""
+
+#. type: SS
+#: man-pages/man7/namespaces.7:43
+#, no-wrap
+msgid "Namespace types"
+msgstr ""
+
+#. type: Plain text
+#: man-pages/man7/namespaces.7:52
+msgid ""
+"The following table shows the namespace types available on Linux.  The "
+"second column of the table shows the flag value that is used to specify the "
+"namespace type in various APIs.  The third column identifies the manual page "
+"that provides details on the namespace type.  The last column is a summary "
+"of the resources that are isolated by the namespace type."
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/namespaces.7:42
+#: man-pages/man7/namespaces.7:55
 #, no-wrap
 msgid "Namespace"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/namespaces.7:42
+#: man-pages/man7/namespaces.7:55
 #, no-wrap
-msgid "Constant"
+msgid "Flag"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/namespaces.7:42
+#: man-pages/man7/namespaces.7:55
+#, no-wrap
+msgid "Page"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:55
 #, no-wrap
 msgid "Isolates"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/namespaces.7:43
+#: man-pages/man7/namespaces.7:56
 #, no-wrap
 msgid "Cgroup"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/namespaces.7:43
+#: man-pages/man7/namespaces.7:56
 #, no-wrap
 msgid "CLONE_NEWCGROUP"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/namespaces.7:43
+#: man-pages/man7/namespaces.7:56
+#, no-wrap
+msgid "B<cgroup_namespaces>(7)"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:56
 #, no-wrap
 msgid "Cgroup root directory"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/namespaces.7:44
+#: man-pages/man7/namespaces.7:57
 #, no-wrap
 msgid "IPC"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/namespaces.7:44
+#: man-pages/man7/namespaces.7:57
 #, no-wrap
 msgid "CLONE_NEWIPC"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/namespaces.7:44
+#: man-pages/man7/namespaces.7:57
 #, no-wrap
-msgid "System V IPC, POSIX message queues"
+msgid "B<ipc_namespaces>(7)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/namespaces.7:45
+#: man-pages/man7/namespaces.7:59
+#, no-wrap
+msgid "System V IPC,\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:61
+#, no-wrap
+msgid "POSIX message queues"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:62
 #, no-wrap
 msgid "Network"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/namespaces.7:45
+#: man-pages/man7/namespaces.7:62
 #, no-wrap
 msgid "CLONE_NEWNET"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/namespaces.7:45
+#: man-pages/man7/namespaces.7:62
 #, no-wrap
-msgid "Network devices, stacks, ports, etc."
+msgid "B<network_namespaces>(7)"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/namespaces.7:46
+#: man-pages/man7/namespaces.7:64
+#, no-wrap
+msgid "Network devices,\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:66
+#, no-wrap
+msgid "stacks, ports, etc."
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:67
 #, no-wrap
 msgid "Mount"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/namespaces.7:46
+#: man-pages/man7/namespaces.7:67
 #, no-wrap
 msgid "CLONE_NEWNS"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/namespaces.7:47
+#: man-pages/man7/namespaces.7:67
+#, no-wrap
+msgid "B<mount_namespaces>(7)"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:68
 #, no-wrap
 msgid "PID"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/namespaces.7:47
+#: man-pages/man7/namespaces.7:68
 #, no-wrap
 msgid "CLONE_NEWPID"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/namespaces.7:47
+#: man-pages/man7/namespaces.7:68
+#, no-wrap
+msgid "B<pid_namespaces>(7)"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:68
 #, no-wrap
 msgid "Process IDs"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/namespaces.7:48
+#: man-pages/man7/namespaces.7:69
 #, no-wrap
 msgid "User"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/namespaces.7:48
+#: man-pages/man7/namespaces.7:69
 #, no-wrap
 msgid "CLONE_NEWUSER"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/namespaces.7:48
+#: man-pages/man7/namespaces.7:69
+#, no-wrap
+msgid "B<user_namespaces>(7)"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:69
 #, no-wrap
 msgid "User and group IDs"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/namespaces.7:49
+#: man-pages/man7/namespaces.7:70
 #, no-wrap
 msgid "UTS"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/namespaces.7:49
+#: man-pages/man7/namespaces.7:70
 #, no-wrap
 msgid "CLONE_NEWUTS"
 msgstr ""
 
 #. type: tbl table
-#: man-pages/man7/namespaces.7:49
+#: man-pages/man7/namespaces.7:70
 #, no-wrap
-msgid "Hostname and NIS domain name"
+msgid "B<uts_namespaces>(7)"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:72
+#, no-wrap
+msgid "Hostname and NIS\n"
+msgstr ""
+
+#. type: tbl table
+#: man-pages/man7/namespaces.7:74
+#, no-wrap
+msgid "domain name"
 msgstr ""
 
 #
 #.  ==================== The namespaces API ====================
-#. type: Plain text
-#: man-pages/man7/namespaces.7:58
-msgid ""
-"This page describes the various namespaces and the associated I</proc> "
-"files, and summarizes the APIs for working with namespaces."
-msgstr ""
-
 #. type: SS
-#: man-pages/man7/namespaces.7:58
+#: man-pages/man7/namespaces.7:79
 #, no-wrap
 msgid "The namespaces API"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:63
+#: man-pages/man7/namespaces.7:84
 msgid ""
 "As well as various I</proc> files described below, the namespaces API "
 "includes the following system calls:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/namespaces.7:63
+#: man-pages/man7/namespaces.7:84
 #, no-wrap
 msgid "B<clone>(2)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:76
+#: man-pages/man7/namespaces.7:97
 msgid ""
 "The B<clone>(2)  system call creates a new process.  If the I<flags> "
 "argument of the call specifies one or more of the B<CLONE_NEW*> flags listed "
@@ -80755,13 +80895,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/namespaces.7:76
+#: man-pages/man7/namespaces.7:97
 #, no-wrap
 msgid "B<setns>(2)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:85
+#: man-pages/man7/namespaces.7:106
 msgid ""
 "The B<setns>(2)  system call allows the calling process to join an existing "
 "namespace.  The namespace to join is specified via a file descriptor that "
@@ -80769,13 +80909,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/namespaces.7:85
+#: man-pages/man7/namespaces.7:106
 #, no-wrap
 msgid "B<unshare>(2)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:98
+#: man-pages/man7/namespaces.7:119
 msgid ""
 "The B<unshare>(2)  system call moves the calling process to a new "
 "namespace.  If the I<flags> argument of the call specifies one or more of "
@@ -80786,13 +80926,13 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/namespaces.7:98
+#: man-pages/man7/namespaces.7:119
 #, no-wrap
 msgid "B<ioctl>(2)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:105
+#: man-pages/man7/namespaces.7:126
 msgid ""
 "Various B<ioctl>(2)  operations can be used to discover information about "
 "namespaces.  These operations are described in B<ioctl_ns>(2)."
@@ -80801,7 +80941,7 @@ msgstr ""
 #
 #.  ==================== The /proc/[pid]/ns/ directory ====================
 #. type: Plain text
-#: man-pages/man7/namespaces.7:121
+#: man-pages/man7/namespaces.7:142
 msgid ""
 "Creation of new namespaces using B<clone>(2)  and B<unshare>(2)  in most "
 "cases requires the B<CAP_SYS_ADMIN> capability, since, in the new namespace, "
@@ -80812,21 +80952,21 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/namespaces.7:121
+#: man-pages/man7/namespaces.7:142
 #, no-wrap
 msgid "The /proc/[pid]/ns/ directory"
 msgstr ""
 
 #.  See commit 6b4e306aa3dc94a0545eb9279475b1ab6209a31f
 #. type: Plain text
-#: man-pages/man7/namespaces.7:128
+#: man-pages/man7/namespaces.7:149
 msgid ""
 "Each process has a I</proc/[pid]/ns/> subdirectory containing one entry for "
 "each namespace that supports being manipulated by B<setns>(2):"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:141
+#: man-pages/man7/namespaces.7:162
 #, no-wrap
 msgid ""
 "$ B<ls -l /proc/$$/ns>\n"
@@ -80843,7 +80983,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:151
+#: man-pages/man7/namespaces.7:172
 msgid ""
 "Bind mounting (see B<mount>(2))  one of the files in this directory to "
 "somewhere else in the filesystem keeps the corresponding namespace of the "
@@ -80852,7 +80992,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:162
+#: man-pages/man7/namespaces.7:183
 msgid ""
 "Opening one of the files in this directory (or a file that is bind mounted "
 "to one of these files)  returns a file handle for the corresponding "
@@ -80864,7 +81004,7 @@ msgstr ""
 
 #.  commit bf056bfa80596a5d14b26b17276a56a0dcb080e5
 #. type: Plain text
-#: man-pages/man7/namespaces.7:178
+#: man-pages/man7/namespaces.7:199
 msgid ""
 "In Linux 3.7 and earlier, these files were visible as hard links.  Since "
 "Linux 3.8, they appear as symbolic links.  If two processes are in the same "
@@ -80876,7 +81016,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:183
+#: man-pages/man7/namespaces.7:204
 #, no-wrap
 msgid ""
 "$ B<readlink /proc/$$/ns/uts>\n"
@@ -80884,64 +81024,64 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:187
+#: man-pages/man7/namespaces.7:208
 msgid "The symbolic links in this subdirectory are as follows:"
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/namespaces.7:187
+#: man-pages/man7/namespaces.7:208
 #, no-wrap
 msgid "I</proc/[pid]/ns/cgroup> (since Linux 4.6)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:190
+#: man-pages/man7/namespaces.7:211
 msgid "This file is a handle for the cgroup namespace of the process."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/namespaces.7:190
+#: man-pages/man7/namespaces.7:211
 #, no-wrap
 msgid "I</proc/[pid]/ns/ipc> (since Linux 3.0)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:193
+#: man-pages/man7/namespaces.7:214
 msgid "This file is a handle for the IPC namespace of the process."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/namespaces.7:193
+#: man-pages/man7/namespaces.7:214
 #, no-wrap
 msgid "I</proc/[pid]/ns/mnt> (since Linux 3.8)"
 msgstr ""
 
 #.  commit 8823c079ba7136dc1948d6f6dcb5f8022bde438e
 #. type: Plain text
-#: man-pages/man7/namespaces.7:197
+#: man-pages/man7/namespaces.7:218
 msgid "This file is a handle for the mount namespace of the process."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/namespaces.7:197
+#: man-pages/man7/namespaces.7:218
 #, no-wrap
 msgid "I</proc/[pid]/ns/net> (since Linux 3.0)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:200
+#: man-pages/man7/namespaces.7:221
 msgid "This file is a handle for the network namespace of the process."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/namespaces.7:200
+#: man-pages/man7/namespaces.7:221
 #, no-wrap
 msgid "I</proc/[pid]/ns/pid> (since Linux 3.8)"
 msgstr ""
 
 #.  commit 57e8391d327609cbf12d843259c968b9e5c1838f
 #. type: Plain text
-#: man-pages/man7/namespaces.7:206
+#: man-pages/man7/namespaces.7:227
 msgid ""
 "This file is a handle for the PID namespace of the process.  This handle is "
 "permanent for the lifetime of the process (i.e., a process's PID namespace "
@@ -80949,14 +81089,14 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/namespaces.7:206
+#: man-pages/man7/namespaces.7:227
 #, no-wrap
 msgid "I</proc/[pid]/ns/pid_for_children> (since Linux 4.12)"
 msgstr ""
 
 #.  commit eaa0d190bfe1ed891b814a52712dcd852554cb08
 #. type: Plain text
-#: man-pages/man7/namespaces.7:224
+#: man-pages/man7/namespaces.7:245
 msgid ""
 "This file is a handle for the PID namespace of child processes created by "
 "this process.  This can change as a consequence of calls to B<unshare>(2)  "
@@ -80967,32 +81107,32 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/namespaces.7:224
+#: man-pages/man7/namespaces.7:245
 #, no-wrap
 msgid "I</proc/[pid]/ns/user> (since Linux 3.8)"
 msgstr ""
 
 #.  commit cde1975bc242f3e1072bde623ef378e547b73f91
 #. type: Plain text
-#: man-pages/man7/namespaces.7:228
+#: man-pages/man7/namespaces.7:249
 msgid "This file is a handle for the user namespace of the process."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/namespaces.7:228
+#: man-pages/man7/namespaces.7:249
 #, no-wrap
 msgid "I</proc/[pid]/ns/uts> (since Linux 3.0)"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:231
+#: man-pages/man7/namespaces.7:252
 msgid "This file is a handle for the UTS namespace of the process."
 msgstr ""
 
 #
 #.  ==================== The /proc/sys/user directory ====================
 #. type: Plain text
-#: man-pages/man7/namespaces.7:241
+#: man-pages/man7/namespaces.7:262
 msgid ""
 "Permission to dereference or read (B<readlink>(2))  these symbolic links is "
 "governed by a ptrace access mode B<PTRACE_MODE_READ_FSCREDS> check; see "
@@ -81000,13 +81140,13 @@ msgid ""
 msgstr ""
 
 #. type: SS
-#: man-pages/man7/namespaces.7:241
+#: man-pages/man7/namespaces.7:262
 #, no-wrap
 msgid "The /proc/sys/user directory"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:247
+#: man-pages/man7/namespaces.7:268
 msgid ""
 "The files in the I</proc/sys/user> directory (which is present since Linux "
 "4.9) expose limits on the number of namespaces of various types that can be "
@@ -81014,141 +81154,141 @@ msgid ""
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/namespaces.7:247
+#: man-pages/man7/namespaces.7:268
 #, no-wrap
 msgid "I<max_cgroup_namespaces>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:251
+#: man-pages/man7/namespaces.7:272
 msgid ""
 "The value in this file defines a per-user limit on the number of cgroup "
 "namespaces that may be created in the user namespace."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/namespaces.7:251
+#: man-pages/man7/namespaces.7:272
 #, no-wrap
 msgid "I<max_ipc_namespaces>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:255
+#: man-pages/man7/namespaces.7:276
 msgid ""
 "The value in this file defines a per-user limit on the number of ipc "
 "namespaces that may be created in the user namespace."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/namespaces.7:255
+#: man-pages/man7/namespaces.7:276
 #, no-wrap
 msgid "I<max_mnt_namespaces>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:259
+#: man-pages/man7/namespaces.7:280
 msgid ""
 "The value in this file defines a per-user limit on the number of mount "
 "namespaces that may be created in the user namespace."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/namespaces.7:259
+#: man-pages/man7/namespaces.7:280
 #, no-wrap
 msgid "I<max_net_namespaces>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:263
+#: man-pages/man7/namespaces.7:284
 msgid ""
 "The value in this file defines a per-user limit on the number of network "
 "namespaces that may be created in the user namespace."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/namespaces.7:263
+#: man-pages/man7/namespaces.7:284
 #, no-wrap
 msgid "I<max_pid_namespaces>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:267
+#: man-pages/man7/namespaces.7:288
 msgid ""
 "The value in this file defines a per-user limit on the number of pid "
 "namespaces that may be created in the user namespace."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/namespaces.7:267
+#: man-pages/man7/namespaces.7:288
 #, no-wrap
 msgid "I<max_user_namespaces>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:271
+#: man-pages/man7/namespaces.7:292
 msgid ""
 "The value in this file defines a per-user limit on the number of user "
 "namespaces that may be created in the user namespace."
 msgstr ""
 
 #. type: TP
-#: man-pages/man7/namespaces.7:271
+#: man-pages/man7/namespaces.7:292
 #, no-wrap
 msgid "I<max_uts_namespaces>"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:275
+#: man-pages/man7/namespaces.7:296
 msgid ""
 "The value in this file defines a per-user limit on the number of uts "
 "namespaces that may be created in the user namespace."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:277
+#: man-pages/man7/namespaces.7:298
 msgid "Note the following details about these files:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:279
+#: man-pages/man7/namespaces.7:300
 msgid "The values in these files are modifiable by privileged processes."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:282
+#: man-pages/man7/namespaces.7:303
 msgid ""
 "The values exposed by these files are the limits for the user namespace in "
 "which the opening process resides."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:286
+#: man-pages/man7/namespaces.7:307
 msgid ""
 "The limits are per-user.  Each user in the same user namespace can create "
 "namespaces up to the defined limit."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:288
+#: man-pages/man7/namespaces.7:309
 msgid "The limits apply to all users, including UID 0."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:291
+#: man-pages/man7/namespaces.7:312
 msgid ""
 "These limits apply in addition to any other per-namespace limits (such as "
 "those for PID and user namespaces) that may be enforced."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:298
+#: man-pages/man7/namespaces.7:319
 msgid ""
 "Upon encountering these limits, B<clone>(2)  and B<unshare>(2)  fail with "
 "the error B<ENOSPC>."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:305
+#: man-pages/man7/namespaces.7:326
 msgid ""
 "For the initial user namespace, the default value in each of these files is "
 "half the limit on the number of threads that may be created "
@@ -81157,19 +81297,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:309
+#: man-pages/man7/namespaces.7:330
 msgid ""
 "When a namespace is created, the object is also accounted against ancestor "
 "namespaces.  More precisely:"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:312
+#: man-pages/man7/namespaces.7:333
 msgid "Each user namespace has a creator UID."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:318
+#: man-pages/man7/namespaces.7:339
 msgid ""
 "When a namespace is created, it is accounted against the creator UIDs in "
 "each of the ancestor user namespaces, and the kernel ensures that the "
@@ -81178,105 +81318,21 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:322
+#: man-pages/man7/namespaces.7:344
 msgid ""
 "The aforementioned point ensures that creating a new user namespace cannot "
 "be used as a means to escape the limits in force in the current user "
 "namespace."
 msgstr ""
 
-#
-#.  ==================== Cgroup namespaces ====================
-#. type: SS
-#: man-pages/man7/namespaces.7:326
-#, no-wrap
-msgid "Cgroup namespaces (CLONE_NEWCGROUP)"
-msgstr ""
-
-#
-#.  ==================== IPC namespaces ====================
-#. type: Plain text
-#: man-pages/man7/namespaces.7:332
-msgid "See B<cgroup_namespaces>(7)."
-msgstr ""
-
-#. type: SS
-#: man-pages/man7/namespaces.7:332
-#, no-wrap
-msgid "IPC namespaces (CLONE_NEWIPC)"
-msgstr ""
-
-#
-#.  ==================== Network namespaces ====================
-#. type: Plain text
-#: man-pages/man7/namespaces.7:338
-msgid "See B<ipc_namespaces>(7)."
-msgstr ""
-
-#. type: SS
-#: man-pages/man7/namespaces.7:338
-#, no-wrap
-msgid "Network namespaces (CLONE_NEWNET)"
-msgstr ""
-
-#
-#.  ==================== Mount namespaces ====================
-#. type: Plain text
-#: man-pages/man7/namespaces.7:344
-msgid "See B<network_namespaces>(7)."
-msgstr ""
-
 #. type: SS
 #: man-pages/man7/namespaces.7:344
-#, no-wrap
-msgid "Mount namespaces (CLONE_NEWNS)"
-msgstr ""
-
-#
-#.  ==================== PID namespaces ====================
-#. type: Plain text
-#: man-pages/man7/namespaces.7:350
-msgid "See B<mount_namespaces>(7)."
-msgstr ""
-
-#. type: SS
-#: man-pages/man7/namespaces.7:350
-#, no-wrap
-msgid "PID namespaces (CLONE_NEWPID)"
-msgstr ""
-
-#
-#.  ==================== User namespaces ====================
-#. type: Plain text
-#: man-pages/man7/namespaces.7:356
-msgid "See B<pid_namespaces>(7)."
-msgstr ""
-
-#. type: SS
-#: man-pages/man7/namespaces.7:356
-#, no-wrap
-msgid "User namespaces (CLONE_NEWUSER)"
-msgstr ""
-
-#. type: SS
-#: man-pages/man7/namespaces.7:362
-#, no-wrap
-msgid "UTS namespaces (CLONE_NEWUTS)"
-msgstr ""
-
-#. type: Plain text
-#: man-pages/man7/namespaces.7:366
-msgid "See B<uts_namespaces>(7)."
-msgstr ""
-
-#. type: SS
-#: man-pages/man7/namespaces.7:366
 #, no-wrap
 msgid "Namespace lifetime"
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:373
+#: man-pages/man7/namespaces.7:351
 msgid ""
 "Absent any other factors, a namespace is automatically torn down when the "
 "last process in the namespace terminates or leaves the namespace.  However, "
@@ -81286,52 +81342,52 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:377
+#: man-pages/man7/namespaces.7:355
 msgid ""
 "An open file descriptor or a bind mount exists for the corresponding "
 "I</proc/[pid]/ns/*> file."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:380
+#: man-pages/man7/namespaces.7:358
 msgid ""
 "The namespace is hierarchical (i.e., a PID or user namespace), and has a "
 "child namespace."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:382
+#: man-pages/man7/namespaces.7:360
 msgid "It is a user namespace that owns one or more nonuser namespaces."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:387
+#: man-pages/man7/namespaces.7:365
 msgid ""
 "It is a PID namespace, and there is a process that refers to the namespace "
 "via a I</proc/[pid]/ns/pid_for_children> symbolic link."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:393
+#: man-pages/man7/namespaces.7:371
 msgid ""
 "It is an IPC namespace, and a corresponding mount of an I<mqueue> filesystem "
 "(see B<mq_overview>(7))  refers to this namespace."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:397
+#: man-pages/man7/namespaces.7:375
 msgid ""
 "It is a PID namespace, and a corresponding mount of a B<proc>(5)  filesystem "
 "refers to this namespace."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:402
+#: man-pages/man7/namespaces.7:380
 msgid "See B<clone>(2)  and B<user_namespaces>(7)."
 msgstr ""
 
 #. type: Plain text
-#: man-pages/man7/namespaces.7:422
+#: man-pages/man7/namespaces.7:400
 msgid ""
 "B<nsenter>(1), B<readlink>(1), B<unshare>(1), B<clone>(2), B<ioctl_ns>(2), "
 "B<setns>(2), B<unshare>(2), B<proc>(5), B<capabilities>(7), "
@@ -89230,12 +89286,6 @@ msgstr ""
 #: man-pages/man7/operator.7:40
 #, no-wrap
 msgid "OPERATOR"
-msgstr ""
-
-#. type: TH
-#: man-pages/man7/operator.7:40
-#, no-wrap
-msgid "2011-09-09"
 msgstr ""
 
 #. type: Plain text

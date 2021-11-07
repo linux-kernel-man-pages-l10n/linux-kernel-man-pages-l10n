@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linux_kernel_man_pages_l10n 5.03\n"
 "Report-Msgid-Bugs-To: https://github.com/test/test\n"
-"POT-Creation-Date: 2021-11-07 03:03+0300\n"
+"POT-Creation-Date: 2021-11-07 03:48+0300\n"
 "PO-Revision-Date: 2021-11-07 03:03+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -7938,9 +7938,10 @@ msgstr "SMARTPQI"
 
 #. type: TH
 #: man-pages/man4/smartpqi.4:9
-#, no-wrap
-msgid "2017-10-19"
-msgstr "2017-10-19"
+#, fuzzy, no-wrap
+#| msgid "2019-03-06"
+msgid "2019-10-10"
+msgstr "2019-03-06"
 
 #. type: Plain text
 #: man-pages/man4/smartpqi.4:12
@@ -16018,3 +16019,7 @@ msgstr ""
 #: man-pages/man4/intro.4:41
 msgid "B<mknod>(1), B<mknod>(2), B<standards>(7)"
 msgstr "B<mknod>(1), B<mknod>(2), B<standards>(7)"
+
+#, no-wrap
+#~ msgid "2017-10-19"
+#~ msgstr "2017-10-19"

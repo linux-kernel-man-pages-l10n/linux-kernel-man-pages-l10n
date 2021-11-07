@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linux_kernel_man_pages_l10n 5.03\n"
 "Report-Msgid-Bugs-To: https://github.com/test/test\n"
-"POT-Creation-Date: 2021-11-07 03:02+0300\n"
+"POT-Creation-Date: 2021-11-07 03:47+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -433,8 +433,7 @@ msgstr ""
 #: man-pages/man1/ldd.1:14 man-pages/man1/memusagestat.1:23
 #: man-pages/man1/getent.1:25 man-pages/man1/memusage.1:24
 #: man-pages/man1/sprof.1:25 man-pages/man1/iconv.1:26
-#: man-pages/man1/locale.1:25 man-pages/man1/localedef.1:34
-#: man-pages/man1/time.1:9
+#: man-pages/man1/locale.1:25 man-pages/man1/time.1:9
 #, no-wrap
 msgid "2019-03-06"
 msgstr ""
@@ -2846,6 +2845,12 @@ msgstr ""
 #: man-pages/man1/localedef.1:34
 #, no-wrap
 msgid "LOCALEDEF"
+msgstr ""
+
+#. type: TH
+#: man-pages/man1/localedef.1:34
+#, no-wrap
+msgid "2019-10-10"
 msgstr ""
 
 #. type: Plain text
